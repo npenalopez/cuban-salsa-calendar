@@ -21,7 +21,7 @@ const STORAGE_KEY = 'cuban-salsa-festivals';
 const SEED_VERSION_KEY = 'cuban-salsa-festivals-seed-version';
 // Bump this string whenever `initialFestivals` in src/app/data/festivals.ts
 // changes — local caches with a different version are replaced on load.
-const SEED_VERSION = '2026-05-09-v4-131-festivals';
+const SEED_VERSION = '2026-05-09-v5-131-festivals-v6audit';
 
 class FestivalStorage {
   // ───── Lifecycle (no-ops kept for API compatibility) ─────
