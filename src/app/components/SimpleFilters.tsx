@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { X, MapPin } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
 import { Festival } from '../data/festivals';
-import { getPrimaryMonth } from '../utils/dateUtils';
+import { getPrimaryMonth, isFestivalPast } from '../utils/dateUtils';
 import { countUniqueFestivals } from '../utils/festivalNormalization';
 import { ImprovedAutocompleteSearch } from './ImprovedAutocompleteSearch';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -83,6 +83,13 @@ export function SimpleFilters({
       // Ensure dates can be parsed to a valid month (same as App.tsx)
       const primaryMonth = getPrimaryMonth(festival.dates);
       if (!primaryMonth) {
+        return false;
+      }
+
+      // Past festivals are excluded from the calendar grid — keep the
+      // chip counts in sync so e.g. "Apr (12)" can't claim 12 entries
+      // when every April date is in the past.
+      if (isFestivalPast(festival.dates)) {
         return false;
       }
 
