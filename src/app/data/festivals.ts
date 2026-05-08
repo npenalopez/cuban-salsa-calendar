@@ -218,9 +218,13 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://tickets.baila-augsburg.de/event/son-weekend-2026/",
       "instagram": "@paraelalmadivertir",
-      "description": "Cuban Son Weekend by baila Augsburg. Whisks dancers to 1920s Cuba with two days/nights of dance, music. Includes Beginner Bootcamp and Show Bootcamp. Organized by Ariel & Sofia (¡baila! social dance studio).",
+      "description": "Cuban Son Weekend by baila Augsburg. Whisks dancers to 1920s Cuba with two days/nights of Son dance, music. Includes Beginner Bootcamp and Show Bootcamp. Beginner Level + Open Level workshops. Organized by Ariel & Sofia (¡baila! social dance studio).",
       "artists": [
-        "-"
+        "Ariel López",
+        "Sofia de Endaya",
+        "DJ Tom Nka",
+        "DJ Yala",
+        "DJ Jack el Calvo"
       ],
       "coordinates": [
         48.3705,
@@ -306,9 +310,11 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://unidanza.de",
       "instagram": "@unidanza.hamburg",
-      "description": "The Afro Cuban Dance Festival in Hamburg. 100+ workshops, 40 Cuban Salsa and Afro/Rumba artists, 3 parties, shows. Tagline: #undz26.",
+      "description": "The Afro Cuban Dance Festival in Hamburg. 100+ workshops, 40 Cuban Salsa and Afro/Rumba artists, 3 parties, shows. Tagline: #undz26. Confirmed names from social media: FredyClan Garcia II, Nathanaël Mergui. Full lineup announcement on Instagram @unidanza.hamburg.",
       "artists": [
-        "-"
+        "FredyClan Garcia II",
+        "Nathanaël Mergui",
+        "40+ Cuban Salsa and Afro/Rumba artists - full 2026 lineup TBA"
       ],
       "coordinates": [
         53.5511,
@@ -354,9 +360,19 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://alocubano.se",
       "instagram": "@alocubano",
-      "description": "AloCubano Havana edition. Established by Julio Espinal from Santiago de Cuba. Premium Cuban festival with Latin craze - cuban, salsa, afro, reggaeton, rueda, reparto, son, afrobeats, dembow. Family that unites.",
+      "description": "AloCubano Havana - 'Dance Tour' edition. Established by Julio Espinal from Santiago de Cuba. The source - Cuban culture where it was born. Workshops, socials, real vibe with top Cuban dance maestros from the AloCubano family. February-March 2026. Premium Cuban festival - cuban, salsa, afro, reggaeton, rueda, reparto, son.",
       "artists": [
-        "-"
+        "Julio Espinal (founder)",
+        "Yoyo Flow",
+        "Barbara Jimenez",
+        "Yoannis Tamayo",
+        "Pedrito & Giusy",
+        "Mercedes Sayut",
+        "Adonis Santiago",
+        "FredyClan",
+        "DJ Flecha",
+        "DJ Maquina de Cuba (Javier La Rosa)",
+        "Live Cuban orchestras (TBA)"
       ],
       "coordinates": [
         23.1136,
@@ -378,9 +394,20 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://www.arrebatatefestival.com",
       "instagram": "@arrebatate",
-      "description": "8th edition. Craziest Cuban festival in the heart of Europe. February 20-23, 2026. Salsa, Afro, Son, Rumba workshops with top Cuban artists. Bootcamps: Master Afro Bootcamp with Yeni Molinet, Rueda de Casino Bootcamp with Mahmoud Morsy & Isabella.",
+      "description": "8th edition. Craziest Cuban festival in the heart of Europe. February 20-23, 2026. Salsa, Afro, Son, Rumba workshops with top Cuban artists. Bootcamps: Master Afro Bootcamp with Yeni Molinet, Rueda de Casino Bootcamp with Mahmoud Morsy & Isabella (champions of Rueda de Casino). Official Partner Hotel: Ibis Budapest Stadium.",
       "artists": [
-        "-"
+        "Lorenys & Manolo",
+        "Ckiky Cuba",
+        "Pedrito & Giusy",
+        "Yusimi Rodriguez",
+        "Diana Rodriguez",
+        "Yeni Molinet",
+        "Andreas y Melina",
+        "Ale y Sofi",
+        "Ania Seruga",
+        "Mahmoud Morsy & Isabella",
+        "DJ Rafi",
+        "DJ Csedi"
       ],
       "coordinates": [
         47.4979,
@@ -604,7 +631,7 @@ export const festivals: Festival[] = [
       "instagram": "@meneateviena",
       "description": "4th edition. International Afro-Cuban dance festival in Vienna. Timba, salsa, son, casino, rumba, afro, reggaeton. Live concert by Maykel Blanco y su Salsa Mayor (not in fullpass). Workshops at wolke19, Welcome Party with DJ Wasia, Timba Gala with DJ La Pantera, Farewell Party at Fanialive. Son Bootcamp with Alexei & Emilia.",
       "artists": [
-        "Maykel Blanco y su Salsa Mayor (LIVE)",
+        "Maykel Blanco y su Salsa Mayor (LIVE concert)",
         "Alexei & Emilia",
         "DJ Wasia",
         "DJ La Pantera"
@@ -722,9 +749,14 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://afrocubandancefestival.com",
       "instagram": "@afrocubandancefestival",
-      "description": "International Afro-Cuban Dance Festival in Havana. Most all-inclusive, immersive Afro-Cuban experience - 50 hours of intensive training with Live Music. Classes use the energy of Conjunto Folklórico Nacional de Cuba. Run by Luanda Pau and Maestro Domingo Pau.",
+      "description": "International Afro-Cuban Dance Festival in Havana. Most all-inclusive, immersive Afro-Cuban experience - 50 hours of intensive training with Live Music. Classes use the energy of Conjunto Folklórico Nacional de Cuba. Run by Luanda Pau and Maestro Domingo Pau, who select the team based on dedication to Afro-Cuban culture and professional experience. Artists hail from Havana's prestigious institutions.",
       "artists": [
-        "-"
+        "Luanda Pau (curator)",
+        "Maestro Domingo Pau (curator)",
+        "Conjunto Folklórico Nacional de Cuba (artists from)",
+        "Academia de Danza Carlos Acosta (artists from)",
+        "Cabaret Tropicana de Cuba (artists from)",
+        "Top Afro-Cuban dance teachers, musicians and assistants from prestigious Havana institutions"
       ],
       "coordinates": [
         23.1136,
@@ -832,9 +864,9 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "",
       "instagram": "@mananaljubljana",
-      "description": "9th edition. Cuban dance festival in Ljubljana. Unique 'one instructor couple per day' approach for deep learning. Organized by @cubanaljubljana.",
+      "description": "9th edition. Cuban dance festival in Ljubljana. Unique 'one instructor couple per day' approach for deep learning - dancers don't choose workshops, each day is dedicated to ONE INSTRUCTOR COUPLE. Helps dancers learn dance style and attitude deeply for quick improvement. Organized by @cubanaljubljana. Dates April 17-19, 2026.",
       "artists": [
-        "-"
+        "1 instructor couple per day - announcements via @mananaljubljana (organized by @cubanaljubljana)"
       ],
       "coordinates": [
         46.0569,
@@ -856,9 +888,10 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://ruedalibre.co.uk",
       "instagram": "@ruedalibre",
-      "description": "Rueda de casino specialist weekend organized by Rueda Libre London.",
+      "description": "3rd edition. Workshops | Parties | Live Music | Rumba Abierta | Casino Boot Camp | Rueda Olympics. 19+ world-class artists + DJs. 3 full days of workshops with live music across all levels. Casino Boot Camp by Ramses and Sandra. 2 epic parties at Saw Swee Hock Student Centre, central London. Friendly, inclusive community by Rueda Libre. Quality Cuban dance with great artists in welcoming and safe space.",
       "artists": [
-        "-"
+        "Ramses & Sandra (Casino Boot Camp)",
+        "19+ world-class Cuban artists + DJs (full lineup TBA on @rueda.libre.ldn)"
       ],
       "coordinates": [
         51.5074,
@@ -1064,9 +1097,9 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "",
       "instagram": "@bostoncubandance",
-      "description": "New England's Cuban salsa weekend - workshops, rueda, and Afro-Cuban classes.",
+      "description": "2026 Boston Cuban Dance Festival - May 1-3, 2026 at Lesley University - Washburn Hall, Cambridge, MA. Cuban dance workshops, social dancing, performances. Verified Instagram @bostoncubandance.",
       "artists": [
-        "-"
+        "Full lineup announced via @bostoncubandance Instagram"
       ],
       "coordinates": [
         42.3601,
@@ -1112,9 +1145,26 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://cubanero.net",
       "instagram": "@cubanerosalsa",
-      "description": "19th edition. World's best artists and performers, 40+ workshops in 4 different locations, 4 great parties, an open-air live concert, show performances. Located in Novi Sad, Serbia.",
+      "description": "19th edition. The biggest Salsa Festival in Serbia. International Festival of Cuban Music and Dance. 40+ workshops in 4 different locations (Allegro Dance, Centre, Studio M, Cafe Havana, Svetozar Markovic Gymnasium, Katolicka Porta Square, Ernesto Cafe), 4 evening parties, 4 open-air hotspot parties, live concert. Cuban Salsa x Afro x Bachata x Kizomba x Reggaeton. 2025 proxy lineup shown - 2026 announcements via @cubanerosalsa Instagram.",
       "artists": [
-        "-"
+        "Mixael Cabrera y su Team Barcelona (LIVE concert - 2025 proxy)",
+        "Diana Rodriguez (2025 proxy)",
+        "Yusimi Moya (2025 proxy)",
+        "Yeni Molinet (2025 proxy)",
+        "Osmani Segura (2025 proxy)",
+        "Yoannis Tamayo (2025 proxy)",
+        "FredyClan (2025 proxy)",
+        "Danger & Marielkis (2025 proxy)",
+        "Anitaa Jimenez (2025 proxy)",
+        "Nemanja Lazovic (2025 proxy)",
+        "Ivan & Ivana (2025 proxy)",
+        "Jan Bervar (2025 proxy)",
+        "DJ Leo D Cuba (proxy)",
+        "DJ Assane (proxy)",
+        "DJ El Gato (proxy)",
+        "DJ Timbalero (proxy)",
+        "DJ Don Marko (proxy)",
+        "DJ Indio (proxy)"
       ],
       "coordinates": [
         45.2671,
@@ -1138,7 +1188,7 @@ export const festivals: Festival[] = [
       "instagram": "-",
       "description": "21st edition. All-inclusive dance holiday at the 4-star superior beachfront Bibione Palace Hotel on the Adriatic coast. Workshops in salsa, bachata, rueda de casino, evening show nights, pool-terrace chill-out parties. Friday Meet & Greet, Saturday show night, Sunday morning workshops + poolside chill-out. Note: Facebook /salsaonthebeach.",
       "artists": [
-        "-"
+        "Bachata, Salsa Romantica focus for 21st edition - lineup TBA. Note: original organizer dealing with serious illness."
       ],
       "coordinates": [
         45.6396,
@@ -1184,9 +1234,9 @@ export const festivals: Festival[] = [
       "price": "CHF 130+",
       "website": "https://salazarruedafestival.com",
       "instagram": "@salazar.ruedafestival",
-      "description": "3rd International Rueda Festival in Switzerland. 100% Rueda de Casino. 26 workshops with 15 international top artists, 2 themed parties + Gala-Party Saturday (dresscode elegant), bootcamp, contest. Run at Sabor Latino dance venue.",
+      "description": "3rd International Rueda Festival in Switzerland. 100% Rueda de Casino. 26 workshops with 15 international top artists, 2 themed parties + Gala-Party Saturday (dresscode elegant), bootcamp, contest. Run at Sabor Latino dance venue. Founded by @reynaldo_salazar_.",
       "artists": [
-        "-"
+        "15 international top Rueda de Casino artists (announcements via @salazar.ruedafestival)"
       ],
       "coordinates": [
         47.5022,
@@ -1234,9 +1284,22 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://godancefestival.com/event/tenerife-dance-festival-2026/",
       "instagram": "@tenerife_dance_festival",
-      "description": "Holiday Experience Festival. 50+ artists, 50+ hours of workshops (BACHATA, SALSA and special). Pool parties, outdoor workshops, social dances, night party till 6am, boat party with whale/dolphin viewing, day tour, dance competition. 4-star hotel. Music policy: 6-8 bachatas per 2 salsas. Note: predominantly bachata festival with some salsa rooms. Organized by Leandro y Jomante.",
+      "description": "Holiday Experience Festival. 50+ artists, 50+ hours of workshops (BACHATA, SALSA and special). Pool parties, outdoor workshops, social dances, night party till 6am, boat party with whale/dolphin viewing, day tour, dance competition. 4-star hotel. Music policy: 6-8 bachatas per 2 salsas. Note: predominantly bachata festival with some salsa rooms. Cuban salsa room artists listed. Organized by Leandro y Jomante.",
       "artists": [
-        "-"
+        "Alex Toledo (Cuban Salsa)",
+        "Nicolo Do Angelo",
+        "Nico Silva",
+        "Marco Lorusso",
+        "Cristo y Emma",
+        "Mahmoud Derouiche",
+        "Jose Cuellar",
+        "Adan y Cristina",
+        "DJ Dia",
+        "DJ Vireack",
+        "DJ Leo",
+        "DJ Polo",
+        "DJ Toxica",
+        "DJ Carlos Guillen"
       ],
       "coordinates": [
         28.4636,
@@ -1260,7 +1323,9 @@ export const festivals: Festival[] = [
       "instagram": "@bailasiempre",
       "description": "BailaSiempre Salsa Weekend at Baila Siempre Dance Studio, Kometvej 4, 8700 Horsens. Workshops, pre-party, shows, parties with national/international instructors and DJs. Organizers: Tenna Qvist and Erodys Castillo.",
       "artists": [
-        "-"
+        "Tenna Qvist (organizer)",
+        "Erodys Castillo (organizer)",
+        "International instructors (TBA - 2026 announcements via salsaweekend.dk)"
       ],
       "coordinates": [
         55.8608,
@@ -1316,9 +1381,9 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://www.bailanewyork.com",
       "instagram": "@bailanydancefest_",
-      "description": "Baila NY Afro-Caribbean Dance Fest. 3rd edition. NYC's first dance festival rooted in tradition. 80+ hours of parallel workshops + bootcamps in 4 rooms: Cuban, Mambo/Salsa, Bachata, Konpa/Kizomba. Live concerts and 4 social rooms. Organized by JukanBaila.",
+      "description": "Baila NY Afro-Caribbean Dance Fest. 3rd edition. NYC's first dance festival rooted in tradition. 80+ hours of parallel workshops + bootcamps in 4 rooms: Cuban, Mambo/Salsa, Bachata, Konpa/Kizomba. Live concerts and 4 social rooms. Organized by JukanBaila. Cuban lineup announcements ongoing - check @bailanydancefest_ Instagram.",
       "artists": [
-        "-"
+        "Cuban room artists - announcements via @bailanydancefest_ - 2026 Cuban Lineup teased on Instagram"
       ],
       "coordinates": [
         40.7128,
@@ -1392,7 +1457,7 @@ export const festivals: Festival[] = [
       "instagram": "@montpelruedafestival",
       "description": "5th edition. Organized by Rueda Social Club. 27 hours of workshops in Rueda de Casino, salsa, Cuban dances. 3 dance halls, rueda challenge, giant rueda downtown, 100% salsa cubana parties, beach party.",
       "artists": [
-        "-"
+        "International Rueda de Casino instructors (announcements via @montpelruedafestival)"
       ],
       "coordinates": [
         43.6108,
@@ -1535,7 +1600,7 @@ export const festivals: Festival[] = [
       "instagram": "@cubososijek",
       "description": "CubOs - Cuban dance and gastronomic event combining Cuban music/dance tradition with Slavonian hospitality. June 19-21, 2026 in Osijek, Croatia.",
       "artists": [
-        "-"
+        "TBA - announcements via Facebook /cubososijek"
       ],
       "coordinates": [
         45.555,
@@ -1647,7 +1712,7 @@ export const festivals: Festival[] = [
       "instagram": "@unabullaottawa",
       "description": "4th edition of UNA BULLA: Cuban Salsa Extravaganza. 3-day dance festival in Ottawa featuring workshops, performances, and social dancing. Focus on Cuban Salsa, Casino Rueda, Afro-Cuban dance. Organized by Ottawa Casino Rueda.",
       "artists": [
-        "-"
+        "International Cuban dance teachers (TBA - 2026 announcements pending)"
       ],
       "coordinates": [
         45.4215,
@@ -1904,9 +1969,19 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://bachaturo.com",
       "instagram": "@bachaturo",
-      "description": "16th edition. One of the largest SBKZ festivals in Europe. 100+ workshops in 12 rooms with dedicated Cuban room. Top international teachers in Bachata, Salsa, Kizomba, Cuban. Massive International Congress Center in Katowice. Tickets via bachaturo.com.",
+      "description": "16th edition. One of the largest SBKZ festivals in Europe. 90+ international artists, 120+ hours of workshops, minimum 10 workshop rooms. 5 dance floors for evening parties – Bachata, Salsa, Cubana, Kizomba, UrbanKiz. Held at MCK – Katowice International Conference Centre + Spodek Arena. Pre-party August 13 (bachata only). Top Cuban room artists - check bachaturo.com/artists for confirmed Cuban-specific artists.",
       "artists": [
-        "-"
+        "(Bachata stage) Ataca & Alemana",
+        "(Bachata) Marco & Sara",
+        "(Bachata) Daniel Sanchez",
+        "(Bachata) Ronald & Alba",
+        "(Bachata) Cornel & Rithika",
+        "(Bachata) Pablo & Raquel",
+        "(Bachata) Gero & Migle",
+        "(Bachata) Antoni & Belen",
+        "(Bachata) Alex & Desiree",
+        "(Bachata) Carolina Rosa",
+        "(Cuban room artists - lineup TBA - announcements via @bachaturo)"
       ],
       "coordinates": [
         50.2649,
@@ -2138,9 +2213,21 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://alocubano.se/warsaw/lineup",
       "instagram": "@alocubano",
-      "description": "AloCubano Krakow edition. 700+ dancers from 30+ countries, 28+ workshops, 30+ World's Top Instructors & DJs. Friday-Monday: workshops by day + 3 famous night parties + secret after parties. CUBAN & LATIN Explosion. Live music classes, stage dance shows, bootcamps, master classes. Established by Julio Espinal from Santiago de Cuba.",
+      "description": "AloCubano Krakow - 'The Cuban Festival in the Royal Heart of Europe'. 700+ dancers from 30+ countries, 28+ workshops in 3 powerful days. All-in-one venue at Hotel Galaxy. Parties until 4 AM Friday-Sunday. No live music breaks - non-stop dancing energy. All Cuban styles: Salsa Cubana, Rumba, Afro, Timba, Reparto. Day parties + Night parties. Top Cuban DJs.",
       "artists": [
-        "Maykel Blanco"
+        "Yoyo Flow",
+        "Maykel Fonts",
+        "Barbara Jimenez",
+        "Yoannis Tamayo",
+        "Adonis Santiago",
+        "Seo Fernandez",
+        "FredyClan",
+        "Mercedes Sayut",
+        "Pedrito & Giusy",
+        "Ola & Piotrek",
+        "DJ Flecha",
+        "DJ Maquina de Cuba (Javier La Rosa)",
+        "DJ El Honguito"
       ],
       "coordinates": [
         50.0647,
@@ -2162,9 +2249,20 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://www.billetweb.fr/cubanflow-festival",
       "instagram": "@cubanflowfestival",
-      "description": "Cuban Flow Festival in Anglet, France. Imagined and created by Alain Rueda and Katerina Mik. Cuban dance festival to connect with Cuban music and dance, with masterclasses and energy-filled workshops adapted to all levels. Sunday includes live music classes (piano, congas, timbales, brass).",
+      "description": "3rd edition. Cuban Flow Festival in Anglet, France. Imagined and created by Alain Rueda and Katerina Mik. Cuban dance festival to connect with Cuban music and dance, with masterclasses and energy-filled workshops adapted to all levels. Sunday includes live music classes (piano, congas, timbales, brass). 2025 lineup shown as proxy - 2026 announcements via @cubanflowfestival.",
       "artists": [
-        "-"
+        "Alain Rueda & Katerina Mik (organizers)",
+        "Mixael Cabrera y su Team Barcelona (live concert - 2025 proxy)",
+        "Lorenys & Manolo (proxy)",
+        "Florine & Yacin (proxy)",
+        "Kevin & Geisa (proxy)",
+        "Neilys & Michel (proxy)",
+        "Yordanis Aguero Delgado (proxy)",
+        "Hector Oviedo (proxy)",
+        "Di Da (proxy)",
+        "DJ Leo Abreu (proxy)",
+        "DJ Harold (proxy)",
+        "DJ Jack El Calvo (proxy)"
       ],
       "coordinates": [
         43.4845,
@@ -2212,7 +2310,7 @@ export const festivals: Festival[] = [
       "instagram": "@damecubafestival",
       "description": "Dame Cuba Festival Tenerife. Same organizer as Dame Cuba Frankfurt. October 9-11, 2026.",
       "artists": [
-        "-"
+        "Same brand as Dame Cuba Frankfurt - lineup announcements via @damecubafestival"
       ],
       "coordinates": [
         28.2916,
@@ -2345,9 +2443,14 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://www.facebook.com/festival.international.cubano.orange",
       "instagram": "@fic_festival_cubano",
-      "description": "Festival International Cubano (FIC) in Orange, France. 10K Instagram followers. Salsa y Afro Cuban Culture 100%. 50 hours of classes. Organized at Orange in Provence. Major Afro-Cuban festival in France.",
+      "description": "Festival International Cubano (FIC) - the leading Cuban festival in Europe. Annual since 2014, organized by Yoann Henry, president of Association Passion Timba. 4-day program with 28 nationalities, 3 Cuban bands, dance classes by world's best teachers, multiple Cuban concerts. Espace Daudet venue. Friday: outdoor before-party + Columbia contest + Cuban concert. Saturday: workshops + outdoor before-party + artist shows. Sunday: workshops + Battle DJs + Cuban concert. 2026 special guests Sueño de Cristal and Tania Pantoja announced. Historical proxy from 2024.",
       "artists": [
-        "-"
+        "Sueño de Cristal (special guest 2026)",
+        "Tania Pantoja (special guest 2026)",
+        "Maykel Blanco y su Salsa Mayor (2024 proxy - regularly performs at FIC)",
+        "Yasser Ramos y Tumbao Mayombe (2024 proxy)",
+        "Ivan y La Llegada (2024 proxy)",
+        "Multiple Cuban Maestros across 4 days (full 2026 lineup announcing via FB)"
       ],
       "coordinates": [
         44.1389,
@@ -2562,7 +2665,8 @@ export const festivals: Festival[] = [
       "description": "el Sol Festival Fall Edition - mixed-style salsa festival - one of the biggest Polish dance brands. 100+ hours of workshops in 3 dance styles. Run by @elsolfestivals brand which also runs Bachata Festival, Warsaw Zouk Festival, etc. Strong Cuban presence.",
       "artists": [
         "Maykel Fonts",
-        "Marco Ferrigno"
+        "Marco Ferrigno",
+        "Top Cuban instructors (TBA via @elsolfestivals - 35K followers)"
       ],
       "coordinates": [
         52.2297,
@@ -2656,9 +2760,10 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "https://tickets.baila-augsburg.de",
       "instagram": "@baila.augsburg",
-      "description": "La Descarga - Cuban Meets Dominican Festival. 3rd edition. By baila Augsburg. Caribbean energy weekend. Friday: 5pm bootcamp. Workshops + socials. Sunday wraps ~5-6pm. Timba meets Bachata, Son meets Merengue, Bolero, Chachachá, Reggaetón.",
+      "description": "3rd edition of La Descarga - Cuban Meets Dominican Festival. By baila Augsburg. Caribbean energy weekend. Friday: 5pm bootcamp. Workshops + socials. Sunday wraps ~5-6pm. Timba meets Bachata, Son meets Merengue, Bolero, Chachachá, Reggaetón.",
       "artists": [
-        "-"
+        "Cuban + Dominican instructors (TBA via @baila.augsburg)",
+        "Timba meets Bachata, Son meets Merengue with Bolero, Chachachá, Reggaetón influences"
       ],
       "coordinates": [
         48.3705,
@@ -3307,10 +3412,12 @@ export const festivals: Festival[] = [
       "price": "-",
       "website": "",
       "instagram": "@franciacubafestival",
-      "description": "Francia Cuba Festival - 50 Workshops, 3 Nights, 4 Halls. Salsa, Reggaeton, Afro Rumba, Rueda, plus Bachata, Kompa, Kizomba, Semba. Organized by Philippe Gomis (DJ Phil Gomis). Hotel: Séjours & affaires Apparthotel.",
+      "description": "Francia Cuba Festival - 50 Workshops, 3 Nights, 4 Halls. Salsa, Reggaeton, Afro Rumba, Rueda, plus Bachata, Kompa, Kizomba, Semba. 4 rooms 4 atmospheres: Salsa Cuba, Salsa Son & Retro, Tropical Hall, Bachata Kizomba. Organized by Philippe Gomis. Hotel: Séjours & affaires Apparthotel.",
       "artists": [
         "Grupo Olori (percussion)",
-        "DJ Phil Gomis"
+        "Philippe Gomis (DJ Phil Gomis - organizer)",
+        "Cuba room workshops (TBA)",
+        "DEEJAY CUBA, DJ KOMPA, DJ BACHATA, DJ KIZOMBA"
       ],
       "coordinates": [
         48.8566,
@@ -3552,6 +3659,87 @@ export const festivals: Festival[] = [
       "category": "Festival",
       "months": [
         "TBC"
+      ]
+    },
+    {
+      "id": "alocubano-benidorm-2026",
+      "name": "AloCubano Salsa Festival Benidorm",
+      "city": "Benidorm",
+      "country": "Spain",
+      "continent": "Europe",
+      "dates": "April 9-13, 2026",
+      "price": "-",
+      "website": "https://alocubano.se/benidorm/",
+      "instagram": "@alocubano",
+      "description": "AloCubano Benidorm 2026 ★ MAYKEL BLANCO LIVE! 'The Cuban Festival in the Miami of Europe'. Set at the legendary Gran Hotel Bali - all-in-one resort experience. 4 unforgettable days of workshops, pool parties, night fiestas. 2 dance floors by night - 1000m² Pure Cuban + 500m² Bachata. 26+ workshops in Cuban styles: Salsa Cubana, Rumba, Afro, Timba, Reparto. Dazzling shows, competitions, animations. Parties until sunrise with DJs from Cuba's finest scene. Established by Julio Espinal from Santiago de Cuba.",
+      "artists": [
+        "Maykel Blanco y su Salsa Mayor (LIVE CONCERT)",
+        "Yoyo Flow",
+        "Reynaldo Salazar",
+        "Barbara Jimenez",
+        "Pedrito & Giusy",
+        "Addy Mendoza",
+        "Keke El Peluche",
+        "Mercedes Sayut",
+        "Yoannis Tamayo & Anitaa",
+        "Yohan & Elaine",
+        "Neilys Marrero",
+        "Cristian Ivorra",
+        "Paolo Suarez",
+        "Joan Pich",
+        "B Dance Team",
+        "Luis & Vanessa",
+        "Abel & Helia",
+        "Carlita",
+        "Moyses & Lucia",
+        "DJ Flecha (Joel Verdecia)",
+        "DJ Maquina de Cuba (Javier La Rosa)",
+        "DJ Raymon",
+        "Rey Ceballo",
+        "Eddy Aguero",
+        "Adriano Brizuela",
+        "Kachi (Classes Live)",
+        "Rey Silveira (Classes Live)"
+      ],
+      "coordinates": [
+        38.5411,
+        -0.1226
+      ],
+      "venue": "Gran Hotel Bali, C. del Actor Luis Prendes 4, Benidorm, Alicante",
+      "category": "Festival",
+      "yearsActive": "1",
+      "months": [
+        "April"
+      ]
+    },
+    {
+      "id": "cubaneando-cuban-fest-tenerife-2026",
+      "name": "Cubaneando Cuban Fest Tenerife",
+      "city": "El Médano",
+      "country": "Spain",
+      "continent": "Europe",
+      "dates": "March 20-22, 2026",
+      "price": "Early Bird 71.10€ / Full Pass 80.10€",
+      "website": "https://www.tomaticket.es/en-es/tickets-cubaneando-cuban-fest-tenerife",
+      "instagram": "-",
+      "description": "Cuban festival in Tenerife featuring concert and Cuban dance. 3 days from 15:00 onwards. Featuring multiple Cuban artists and DJs.",
+      "artists": [
+        "Alicia Ruiz",
+        "Jorge Camagüey",
+        "Cubaneando",
+        "Yeni Molinet",
+        "Hector Oviedo",
+        "Pedrito Cuba",
+        "DJ Arokán"
+      ],
+      "coordinates": [
+        28.0431,
+        -16.5358
+      ],
+      "venue": "El Médano, Tenerife",
+      "category": "Festival",
+      "months": [
+        "March"
       ]
     }
 ];
