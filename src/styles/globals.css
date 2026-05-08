@@ -1,0 +1,5326 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: #2d1810;
+  --card: #ffffff;
+  --card-foreground: #2d1810;
+  --popover: #ffffff;
+  --popover-foreground: #2d1810;
+  --primary: #dc2626;
+  --primary-foreground: #ffffff;
+  --secondary: #fef7f0;
+  --secondary-foreground: #7c2d12;
+  --muted: #f5f5f4;
+  --muted-foreground: #78716c;
+  --accent: #ea580c;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e7e5e4;
+  --input: transparent;
+  --input-background: #ffffff;
+  --switch-background: #e7e5e4;
+  --font-weight-medium: 600;
+  --font-weight-normal: 500;
+  --ring: #dc2626;
+  --chart-1: #dc2626;
+  --chart-2: #ea580c;
+  --chart-3: #d97706;
+  --chart-4: #059669;
+  --chart-5: #0d9488;
+  --radius: 1rem;
+  
+  /* Cuban-Inspired Color Palette */
+  --cuban-red: #dc2626;
+  --cuban-red-light: #ef4444;
+  --cuban-red-dark: #b91c1c;
+  --cuban-orange: #ea580c;
+  --cuban-orange-light: #f97316;
+  --cuban-orange-dark: #c2410c;
+  --cuban-blue: #0284c7;
+  --cuban-blue-light: #0ea5e9;
+  --cuban-blue-dark: #0369a1;
+  --cuban-green: #059669;
+  --cuban-green-light: #10b981;
+  --cuban-green-dark: #047857;
+  --cuban-gold: #eab308;
+  --cuban-gold-light: #f59e0b;
+  --cuban-gold-dark: #ca8a04;
+  --cuban-warm: #ffffff;
+  --cuban-cream: #ffffff;
+  --cuban-sand: #f5f5f4;
+  --cuban-blue-subtle: #e0f2fe;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #374151;
+  --sidebar-primary: #ff6b6b;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f8f9ff;
+  --sidebar-accent-foreground: #374151;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #ff6b6b;
+  
+  /* Cuban Festival Theme */
+  --festival-primary: var(--cuban-red);
+  --festival-primary-light: var(--cuban-red-light);
+  --festival-primary-dark: var(--cuban-red-dark);
+  --festival-accent: var(--cuban-orange);
+  --festival-accent-light: var(--cuban-orange-light);
+  --festival-accent-dark: var(--cuban-orange-dark);
+  --festival-blue: var(--cuban-blue);
+  --festival-green: var(--cuban-green);
+  --festival-gold: var(--cuban-gold);
+  
+  /* Modern Neutral System */
+  --modern-bg: #ffffff;
+  --modern-surface: #ffffff;
+  --modern-border: #e7e5e4;
+  --modern-text: #57534e;
+  --modern-text-light: #78716c;
+  --modern-text-dark: #2d1810;
+  --surface-white: #ffffff;
+  
+  /* Cuban Pattern Colors */
+  --pattern-red: rgba(220, 38, 38, 0.1);
+  --pattern-orange: rgba(234, 88, 12, 0.08);
+  --pattern-blue: rgba(3, 105, 161, 0.06);
+  
+  /* Cuban Shadow System */
+  --shadow-subtle: 0 1px 2px 0 rgba(45, 24, 16, 0.08);
+  --shadow-soft: 0 1px 3px 0 rgba(45, 24, 16, 0.12);
+  --shadow-medium: 0 4px 6px -1px rgba(45, 24, 16, 0.15);
+  --shadow-large: 0 8px 16px -4px rgba(45, 24, 16, 0.18);
+  --shadow-colored: 0 4px 14px 0 rgba(220, 38, 38, 0.15);
+  --shadow-warm: 0 4px 14px 0 rgba(234, 88, 12, 0.12);
+  
+  /* Responsive Spacing System */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 0.75rem;
+  --spacing-lg: 1rem;
+  --spacing-xl: 1.25rem;
+  --spacing-2xl: 1.5rem;
+  --spacing-3xl: 2rem;
+  --spacing-4xl: 2.5rem;
+  --spacing-5xl: 3rem;
+  --spacing-6xl: 4rem;
+  
+  /* Mobile-First Layout System */
+  --header-height: 4rem;
+  --header-height-sm: 4.5rem;
+  --filter-height: 3rem;
+  --card-padding: 1rem;
+  --card-padding-sm: 1.25rem;
+  --card-gap: 0.75rem;
+  --card-gap-sm: 1rem;
+  
+  /* Cuban Border Radius System */
+  --radius-xs: 0.375rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.25rem;
+  --radius-2xl: 1.5rem;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* Cuban Color System for Tailwind */
+  --color-cuban-red: var(--cuban-red);
+  --color-cuban-red-light: var(--cuban-red-light);
+  --color-cuban-red-dark: var(--cuban-red-dark);
+  --color-cuban-orange: var(--cuban-orange);
+  --color-cuban-orange-light: var(--cuban-orange-light);
+  --color-cuban-orange-dark: var(--cuban-orange-dark);
+  --color-cuban-blue: var(--cuban-blue);
+  --color-cuban-blue-light: var(--cuban-blue-light);
+  --color-cuban-blue-dark: var(--cuban-blue-dark);
+  --color-cuban-green: var(--cuban-green);
+  --color-cuban-green-light: var(--cuban-green-light);
+  --color-cuban-green-dark: var(--cuban-green-dark);
+  --color-cuban-gold: var(--cuban-gold);
+  --color-cuban-gold-light: var(--cuban-gold-light);
+  --color-cuban-gold-dark: var(--cuban-gold-dark);
+  --color-cuban-warm: var(--cuban-warm);
+  --color-cuban-cream: var(--cuban-cream);
+  --color-cuban-sand: var(--cuban-sand);
+  --color-cuban-blue-subtle: var(--cuban-blue-subtle);
+  
+  /* Custom breakpoints for enhanced mobile optimization */
+  --breakpoint-xs: 475px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Cuban-inspired typography system
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: 1.875rem;
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.025em;
+      color: var(--modern-text-dark);
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: -0.015em;
+      color: var(--modern-text-dark);
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: -0.01em;
+      color: var(--modern-text-dark);
+    }
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--modern-text);
+    }
+
+    p {
+      font-size: 0.875rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--modern-text);
+    }
+
+    label {
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--modern-text);
+    }
+
+    button {
+      font-size: 0.875rem;
+      font-weight: 600;
+      line-height: 1.5;
+      letter-spacing: 0.01em;
+    }
+
+    input {
+      font-size: 0.875rem;
+      font-weight: 500;
+      line-height: 1.5;
+      color: var(--modern-text-dark);
+    }
+  }
+  
+  /* Desktop Em-Based Typography System */
+  @media (min-width: 1024px) {
+    :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+      h1 {
+        font-size: 1.875em;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -0.025em;
+        color: var(--modern-text-dark);
+      }
+
+      h2 {
+        font-size: 1.5em;
+        font-weight: 600;
+        line-height: 1.3;
+        letter-spacing: -0.015em;
+        color: var(--modern-text-dark);
+      }
+
+      h3 {
+        font-size: 1.25em;
+        font-weight: 600;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+        color: var(--modern-text-dark);
+      }
+
+      h4 {
+        font-size: 1em;
+        font-weight: 600;
+        line-height: 1.5;
+        color: var(--modern-text);
+      }
+
+      p {
+        font-size: 0.875em;
+        font-weight: 400;
+        line-height: 1.6;
+        color: var(--modern-text);
+      }
+
+      label {
+        font-size: 0.875em;
+        font-weight: 600;
+        line-height: 1.5;
+        color: var(--modern-text);
+      }
+
+      button {
+        font-size: 0.875em;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: 0.01em;
+      }
+
+      input {
+        font-size: 0.875em;
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--modern-text-dark);
+      }
+    }
+  }
+  
+  /* Cuban Display Typography */
+  .cuban-display {
+    font-size: 2.25rem;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, var(--cuban-red) 0%, var(--cuban-orange) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .cuban-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    color: var(--cuban-red);
+  }
+  
+  .cuban-subtitle {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--modern-text-dark);
+    letter-spacing: 0.005em;
+  }
+  
+  .cuban-body {
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--modern-text);
+  }
+  
+  .cuban-caption {
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--modern-text-light);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Desktop Em-Based Cuban Typography */
+  @media (min-width: 1024px) {
+    .cuban-display {
+      font-size: 2.25em;
+    }
+    
+    .cuban-title {
+      font-size: 1.5em;
+    }
+    
+    .cuban-subtitle {
+      font-size: 1em;
+    }
+    
+    .cuban-body {
+      font-size: 0.875em;
+    }
+    
+    .cuban-caption {
+      font-size: 0.75em;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .cuban-display {
+      font-size: 1.875rem;
+    }
+    
+    .cuban-title {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* Cuban Festival Visual Identity */
+@layer base {
+  /* Cuban Pattern Background */
+  .cuban-pattern-bg {
+    background-image: 
+      radial-gradient(circle at 25px 25px, var(--pattern-red) 2px, transparent 0),
+      radial-gradient(circle at 75px 75px, var(--pattern-orange) 1px, transparent 0),
+      radial-gradient(circle at 50px 100px, var(--pattern-blue) 1px, transparent 0);
+    background-size: 100px 100px, 150px 150px, 200px 200px;
+    background-position: 0 0, 25px 25px, 50px 50px;
+  }
+  
+  /* Cuban Gradient Overlays */
+  .cuban-gradient-primary {
+    background: linear-gradient(135deg, var(--cuban-red) 0%, var(--cuban-orange) 100%);
+  }
+  
+  .cuban-gradient-warm {
+    background: linear-gradient(135deg, var(--cuban-warm) 0%, var(--cuban-cream) 100%);
+  }
+  
+  .cuban-gradient-card {
+    background: linear-gradient(135deg, #ffffff 0%, var(--cuban-cream) 100%);
+  }
+  
+  /* Loading spinner with Cuban colors */
+  .cuban-spinner {
+    border: 3px solid var(--cuban-warm);
+    border-top: 3px solid var(--cuban-red);
+    border-radius: 50%;
+    animation: cubanSpin 1s linear infinite;
+  }
+  
+  @keyframes cubanSpin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Cuban accent spinner */
+  .cuban-accent-spinner {
+    border: 2px solid transparent;
+    border-top: 2px solid var(--cuban-orange);
+    border-right: 2px solid var(--cuban-red);
+    border-radius: 50%;
+    animation: cubanSpin 0.8s ease-in-out infinite;
+  }
+
+  /* Subtle hover effects */
+  .festival-card {
+    transition: border-color 0.2s ease;
+  }
+  
+  .festival-card:hover {
+    border-color: var(--border);
+  }
+
+  /* Simple fade in */
+  .festival-list-item {
+    animation: fade-in 0.3s ease-out;
+  }
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  /* Text truncation utilities */
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  /* Mobile touch optimizations */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  /* Smooth scrolling for calendar navigation */
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+  }
+  
+  @media (min-width: 640px) {
+    html {
+      scroll-padding-top: var(--header-height-sm);
+    }
+  }
+
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    /* Improve touch target sizes */
+    button, [role="button"] {
+      min-height: 44px;
+    }
+    
+    /* Better spacing for mobile calendar cards */
+    .calendar-card {
+      padding: 1rem;
+    }
+    
+    /* Prevent zoom on input focus on mobile Safari */
+    input[type="text"], 
+    input[type="search"], 
+    select {
+      font-size: 16px;
+    }
+  }
+
+  /* Scrollbar styling */
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Enhanced horizontal scroll for month filter */
+  .scrollbar-none {
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+  
+  .scrollbar-none > * {
+    scroll-snap-align: start;
+  }
+
+  /* Desktop Em-Based Component Typography */
+  @media (min-width: 1024px) {
+    /* Festival Card Text */
+    .festival-card h3,
+    .festival-card-modern h3,
+    .cuban-festival-card h3 {
+      font-size: 1.125em !important;
+    }
+    
+    .festival-card p,
+    .festival-card-modern p,
+    .cuban-festival-card p {
+      font-size: 0.875em !important;
+    }
+    
+    /* Button Text */
+    .festival-card button,
+    .festival-card-modern button,
+    .cuban-action-button,
+    .minimal-button,
+    .modern-button-secondary {
+      font-size: 0.875em !important;
+    }
+    
+    /* Filter Text */
+    .simple-filter-button,
+    .cuban-filter-button,
+    .month-filter-button {
+      font-size: 0.75em !important;
+    }
+    
+    /* Search Input Text */
+    .enhanced-search-input,
+    .cuban-search-input,
+    .search-input-enhanced {
+      font-size: 1em !important;
+    }
+    
+    /* Results Counter */
+    .results-counter {
+      font-size: 0.75em !important;
+    }
+    
+    /* Badge Text */
+    .cuban-date-badge,
+    .modern-date-badge,
+    .travel-time-badge {
+      font-size: 0.75em !important;
+    }
+    
+    .cuban-date-badge .day {
+      font-size: 1.125em !important;
+    }
+    
+    .cuban-date-badge .month {
+      font-size: 0.625em !important;
+    }
+    
+    /* Dialog and Modal Text */
+    [data-slot="dialog-title"] {
+      font-size: 1.25em !important;
+    }
+    
+    [data-slot="dialog-description"] {
+      font-size: 0.875em !important;
+    }
+    
+    /* Tooltip Text */
+    [data-slot="tooltip-content"],
+    .tooltip-content,
+    [role="tooltip"] {
+      font-size: 0.875em !important;
+    }
+    
+    /* Artist Rankings Text */
+    .artist-card h4,
+    .minimal-artist-card h4 {
+      font-size: 1em !important;
+    }
+    
+    .artist-card p,
+    .minimal-artist-card p {
+      font-size: 0.75em !important;
+    }
+    
+    /* Location Text */
+    .festival-location,
+    .location-badge {
+      font-size: 0.75em !important;
+    }
+    
+    /* Navigation Text */
+    .nav-button,
+    .header-button {
+      font-size: 0.875em !important;
+    }
+    
+    /* Form Labels */
+    .form-label,
+    [data-slot="label"] {
+      font-size: 0.875em !important;
+    }
+    
+    /* Table Text */
+    .festival-table td,
+    .festival-table th {
+      font-size: 0.875em !important;
+    }
+    
+    /* List Item Text */
+    .festival-list-item,
+    .continent-item {
+      font-size: 0.875em !important;
+    }
+    
+    /* Calendar Export Text */
+    .calendar-dropdown-item {
+      font-size: 0.875em !important;
+    }
+    
+    /* Management Interface Text */
+    .management-header h1 {
+      font-size: 1.5em !important;
+    }
+    
+    .management-section h2 {
+      font-size: 1.25em !important;
+    }
+    
+    /* Loading Text */
+    .loading-text {
+      font-size: 0.875em !important;
+    }
+    
+    /* Error and Empty State Text */
+    .error-message {
+      font-size: 0.875em !important;
+    }
+    
+    .empty-state h3 {
+      font-size: 1.125em !important;
+    }
+    
+    .empty-state p {
+      font-size: 0.875em !important;
+    }
+  }
+  
+  /* Large Desktop Em-Based Typography (1280px+) */
+  @media (min-width: 1280px) {
+    :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+      h1 {
+        font-size: 2em;
+      }
+
+      h2 {
+        font-size: 1.625em;
+      }
+
+      h3 {
+        font-size: 1.375em;
+      }
+
+      h4 {
+        font-size: 1.125em;
+      }
+
+      p {
+        font-size: 1em;
+      }
+
+      label {
+        font-size: 1em;
+      }
+
+      button {
+        font-size: 1em;
+      }
+
+      input {
+        font-size: 1em;
+      }
+    }
+    
+    /* Large Desktop Component Scaling */
+    .festival-card h3,
+    .festival-card-modern h3,
+    .cuban-festival-card h3 {
+      font-size: 1.25em !important;
+    }
+    
+    .festival-card p,
+    .festival-card-modern p,
+    .cuban-festival-card p {
+      font-size: 1em !important;
+    }
+    
+    .enhanced-search-input,
+    .cuban-search-input,
+    .search-input-enhanced {
+      font-size: 1.125em !important;
+    }
+    
+    .simple-filter-button,
+    .cuban-filter-button,
+    .month-filter-button {
+      font-size: 0.875em !important;
+    }
+    
+    .results-counter {
+      font-size: 0.875em !important;
+    }
+    
+    /* Large Desktop Cuban Typography */
+    .cuban-display {
+      font-size: 2.5em;
+    }
+    
+    .cuban-title {
+      font-size: 1.75em;
+    }
+    
+    .cuban-subtitle {
+      font-size: 1.125em;
+    }
+    
+    .cuban-body {
+      font-size: 1em;
+    }
+    
+    .cuban-caption {
+      font-size: 0.875em;
+    }
+  }
+  
+  /* Ultra-Large Desktop Em-Based Typography (1536px+) */
+  @media (min-width: 1536px) {
+    :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+      h1 {
+        font-size: 2.25em;
+      }
+
+      h2 {
+        font-size: 1.875em;
+      }
+
+      h3 {
+        font-size: 1.5em;
+      }
+
+      h4 {
+        font-size: 1.25em;
+      }
+
+      p {
+        font-size: 1.125em;
+      }
+
+      label {
+        font-size: 1.125em;
+      }
+
+      button {
+        font-size: 1.125em;
+      }
+
+      input {
+        font-size: 1.125em;
+      }
+    }
+    
+    /* Ultra-Large Desktop Component Scaling */
+    .festival-card h3,
+    .festival-card-modern h3,
+    .cuban-festival-card h3 {
+      font-size: 1.375em !important;
+    }
+    
+    .festival-card p,
+    .festival-card-modern p,
+    .cuban-festival-card p {
+      font-size: 1.125em !important;
+    }
+    
+    .enhanced-search-input,
+    .cuban-search-input,
+    .search-input-enhanced {
+      font-size: 1.25em !important;
+    }
+    
+    .simple-filter-button,
+    .cuban-filter-button,
+    .month-filter-button {
+      font-size: 1em !important;
+    }
+    
+    .results-counter {
+      font-size: 1em !important;
+    }
+  }
+
+  /* Enhanced month filter animations */
+  @keyframes cubanMonthPulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 2px 8px rgba(220, 38, 38, 0.08);
+    }
+    50% {
+      transform: scale(1.02);
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+    }
+  }
+
+  @keyframes cubanActiveShimmer {
+    0% {
+      left: -100%;
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
+  }
+
+  /* Mobile month filter enhancements */
+  @media (max-width: 640px) {
+    .month-filter-button {
+      min-height: 48px; /* Better touch targets */
+      font-size: 14px;
+    }
+    
+    /* Improved scroll padding for mobile */
+    .month-filter-scroll {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      scroll-padding-left: 1rem;
+      scroll-padding-right: 1rem;
+    }
+    
+    /* Enhanced mobile search input */
+    .mobile-search-enhanced {
+      height: 48px;
+      font-size: 16px; /* Prevent zoom on iOS */
+      border-radius: 12px;
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+    
+    /* Better mobile results counter */
+    .mobile-results-counter {
+      font-size: 14px;
+      padding: 8px 16px;
+      border-radius: 12px;
+    }
+  }
+
+  /* Ultra-small screens */
+  @media (max-width: 380px) {
+    .month-filter-button {
+      padding: 8px 12px;
+      font-size: 12px;
+      min-height: 44px;
+    }
+    
+    .mobile-search-enhanced {
+      height: 44px;
+      padding-left: 2.5rem;
+      padding-right: 2.5rem;
+    }
+  }
+
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .month-filter-button {
+      border-width: 3px;
+    }
+    
+    .month-filter-button.active {
+      border-width: 4px;
+      box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.5);
+    }
+  }
+
+  /* Reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .month-filter-button {
+      transition: none;
+    }
+    
+    .month-filter-button:hover {
+      transform: none;
+    }
+    
+    @keyframes cubanMonthPulse {
+      0%, 100% {
+        transform: none;
+      }
+    }
+    
+    @keyframes cubanActiveShimmer {
+      0%, 100% {
+        left: 0;
+        opacity: 0;
+      }
+    }
+  }
+
+  /* Simplified Festival Cards */
+  .festival-card-clean {
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+  }
+  
+  .festival-card-clean:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: translateY(-1px);
+  }
+  
+  /* Ensure grid cards maintain equal height and proper layout */
+  .festival-card-modern {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .festival-card-modern .card-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Grid-specific card improvements - mobile-first comfortable design */
+  .festival-grid-compact > article {
+    min-height: 220px; /* More comfortable mobile height */
+    padding: 1.25rem; /* Increased mobile padding */
+  }
+  
+  @media (min-width: 640px) {
+    .festival-grid-compact > article {
+      min-height: 190px; /* Comfortable tablet height */
+      padding: 1rem; /* Standard tablet padding */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .festival-grid-compact > article {
+      min-height: 160px; /* Compact desktop height */
+      padding: 0.875rem; /* Compact desktop padding */
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    .festival-grid-compact > article {
+      min-height: 155px; /* Ultra-compact for large desktops */
+      padding: 0.875rem;
+    }
+  }
+  
+  /* Artist Card Styling */
+  .artist-card {
+    transition: all 0.2s ease;
+    border-radius: 0.5rem;
+  }
+  
+  .artist-card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .artist-section-header {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .artist-count-badge {
+    background: #f3f4f6;
+    color: #6b7280;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    font-weight: 600;
+  }
+  
+  /* Clean Header */
+  .clean-header {
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Sticky month header positioning */
+  .sticky-month-header {
+    top: var(--header-height);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    contain: layout style;
+  }
+  
+  @media (min-width: 640px) {
+    .sticky-month-header {
+      top: var(--header-height-sm);
+    }
+  }
+  
+  /* Minimal Button System */
+  .festival-card-button {
+    background: var(--minimal-primary);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .festival-card-button:hover {
+    background: var(--minimal-primary-dark);
+  }
+  
+  .festival-card-button:active {
+    background: var(--minimal-primary-dark);
+  }
+  
+  /* Minimal Secondary Button */
+  .modern-button-secondary {
+    background: var(--surface-white);
+    border: 1px solid var(--neutral-border);
+    color: var(--minimal-gray-dark);
+    transition: all 0.2s ease;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .modern-button-secondary:hover {
+    background: var(--neutral-bg);
+    border-color: var(--minimal-gray);
+  }
+  
+  /* Minimal Input Styling */
+  .modern-input {
+    background: var(--surface-white);
+    border: 1px solid var(--neutral-border);
+    border-radius: 0.375rem;
+    transition: border-color 0.2s ease;
+  }
+  
+  .modern-input:focus {
+    border-color: var(--minimal-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+  }
+
+  /* Cuban Mobile Interactions */
+  @media (hover: none) and (pointer: coarse) {
+    .cuban-festival-card:active {
+      background: var(--cuban-warm);
+      transform: translateY(-1px) scale(0.98);
+    }
+    
+    .cuban-action-button:active {
+      transform: scale(0.96);
+      transition: transform 0.1s ease;
+    }
+    
+    .cuban-filter-button:active {
+      transform: scale(0.95);
+      background: var(--cuban-red);
+      color: white;
+    }
+    
+    .festival-card-modern:active {
+      transform: translateY(-2px) scale(0.98);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .modern-filter-button:active {
+      transform: translateY(0) scale(0.97);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .enhanced-search-input:active {
+      transform: translateY(-1px) scale(1);
+    }
+    
+    .filter-chip:active {
+      transform: scale(0.95);
+    }
+  }
+  
+  /* Enhanced focus states for accessibility */
+  .modern-filter-button:focus-visible {
+    outline: 3px solid rgba(30, 64, 175, 0.4);
+    outline-offset: 2px;
+    border-color: var(--cuban-blue);
+  }
+  
+  .enhanced-search-input:focus-visible {
+    outline: 3px solid rgba(30, 64, 175, 0.4);
+    outline-offset: 2px;
+  }
+  
+  .filter-chip:focus-visible {
+    outline: 2px solid rgba(30, 64, 175, 0.4);
+    outline-offset: 2px;
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .modern-filter-button {
+      border-width: 2px;
+      border-color: var(--cuban-blue);
+    }
+    
+    .enhanced-search-input {
+      border-width: 3px;
+      border-color: var(--cuban-blue);
+    }
+    
+    .filter-chip {
+      border-width: 2px;
+      border-color: var(--cuban-blue);
+    }
+    
+    .results-counter {
+      border-width: 2px;
+    }
+  }
+  
+  /* Performance optimizations */
+  .festival-card-modern,
+  .modern-filter-button,
+  .festival-card-button {
+    will-change: transform, box-shadow;
+  }
+  
+  /* Smooth scroll enhancements */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    .festival-card-modern {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                  border-color 0.3s ease;
+    }
+  }
+  
+  /* Fix for sticky positioning conflicts */
+  .glassmorphic-header,
+  .sticky-month-header {
+    transform: translateZ(0); /* Force hardware acceleration */
+    will-change: scroll-position;
+  }
+  
+  /* Ensure proper stacking context */
+  .sticky-month-header {
+    isolation: isolate;
+  }
+  
+  /* Scroll margin for content sections */
+  .festival-month-section {
+    scroll-margin-top: calc(var(--header-height) + 4rem);
+  }
+  
+  @media (min-width: 640px) {
+    .festival-month-section {
+      scroll-margin-top: calc(var(--header-height-sm) + 4rem);
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Minimal Design System */
+  .minimal-card {
+    background: var(--surface-white);
+    border: 1px solid var(--neutral-border);
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-subtle);
+  }
+  
+  .minimal-header {
+    background: var(--surface-white);
+    border-bottom: 1px solid var(--neutral-border);
+  }
+  
+  .minimal-button {
+    background: var(--minimal-primary);
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+  }
+  
+  .minimal-button:hover {
+    background: var(--minimal-primary-dark);
+  }
+  
+  .minimal-button-outline {
+    background: transparent;
+    color: var(--minimal-primary);
+    border: 1px solid var(--minimal-primary);
+    border-radius: 0.375rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .minimal-button-outline:hover {
+    background: var(--minimal-primary);
+    color: white;
+  }
+  
+  /* Modern Date Badge */
+  .modern-date-badge {
+    background: var(--festival-accent);
+    color: white;
+    box-shadow: var(--shadow-sm);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border: none;
+  }
+  
+  .modern-date-badge:hover {
+    background: var(--festival-accent-dark);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Modern Filter Buttons */
+  .simple-filter-button {
+    background: white;
+    border: 1px solid var(--modern-gray-200);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--modern-gray-700);
+    border-radius: 0.75rem;
+    font-weight: 500;
+    box-shadow: var(--shadow-xs);
+  }
+  
+  .simple-filter-button:hover {
+    background: var(--modern-gray-50);
+    border-color: var(--modern-gray-300);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .simple-filter-button.active {
+    background: var(--festival-primary);
+    color: white;
+    border-color: var(--festival-primary);
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Simple Filter Chips */
+  .filter-chip {
+    background: #f3f4f6;
+    border: 1px solid #d1d5db;
+    color: #374151;
+    transition: all 0.2s ease;
+  }
+  
+  .filter-chip:hover {
+    background: #e5e7eb;
+    border-color: #9ca3af;
+  }
+  
+  /* Modern Search Input */
+  .enhanced-search-input {
+    background: white;
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--modern-gray-200);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-sm);
+    border-radius: 0.75rem;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .enhanced-search-input::placeholder {
+    color: var(--modern-gray-400);
+    font-weight: 400;
+  }
+  
+  .enhanced-search-input:focus {
+    background: white;
+    box-shadow: var(--shadow-lg), 0 0 0 3px rgba(124, 58, 237, 0.1);
+    border-color: var(--festival-primary);
+    transform: translateY(-1px);
+    outline: none;
+  }
+  
+  .enhanced-search-input:focus::placeholder {
+    color: var(--modern-gray-300);
+  }
+  
+  /* Filter section responsive improvements */
+  @media (max-width: 640px) {
+    .filter-scroll-container {
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+    }
+    
+    .filter-item {
+      scroll-snap-align: start;
+      flex-shrink: 0;
+    }
+    
+    .filter-divider {
+      display: none;
+    }
+  }
+  
+  /* Modern Results Counter */
+  .results-counter {
+    background: white;
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--modern-gray-200);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0.75rem;
+    box-shadow: var(--shadow-md);
+    font-weight: 600;
+    color: var(--modern-gray-700);
+  }
+  
+  .results-counter:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-1px);
+  }
+  
+  .results-counter.no-results {
+    background: rgba(254, 242, 242, 0.9);
+    border-color: rgba(185, 28, 28, 0.3);
+    box-shadow: 0 8px 32px rgba(185, 28, 28, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5);
+  }
+  
+  .results-counter.no-results::before {
+    background: linear-gradient(90deg, transparent, rgba(185, 28, 28, 0.3), transparent);
+  }
+  
+  /* Enhanced Filter animations */
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  .filter-chips-container {
+    animation: slideInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+  
+  /* Enhanced pulse animation for active states */
+  .filter-pulse {
+    animation: enhancedPulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    position: relative;
+  }
+  
+  .filter-pulse::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0);
+    animation: pulseRing 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes enhancedPulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes pulseRing {
+    0% {
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.5);
+      opacity: 0.2;
+    }
+    100% {
+      transform: translate(-50%, -50%) scale(2);
+      opacity: 0;
+    }
+  }
+  
+  /* Enhanced mobile filter interactions */
+  @media (max-width: 640px) {
+    .cuban-search-input {
+      font-size: 16px; /* Prevent zoom on iOS */
+      border-radius: 1.25rem;
+      height: 3.25rem;
+    }
+    
+    .cuban-search-input:focus {
+      transform: translateY(-2px) scale(1);
+    }
+    
+    /* Month filter grid optimizations */
+    .month-filter-grid {
+      gap: 0.5rem;
+    }
+    
+    .cuban-filter-button {
+      white-space: nowrap;
+      min-width: fit-content;
+      border-radius: 1rem;
+    }
+    
+    .cuban-filter-button:hover {
+      transform: translateY(-1px) scale(1.01);
+    }
+    
+    .cuban-filter-chip {
+      padding: 0.5rem 0.75rem;
+      border-radius: 1rem;
+      font-size: 0.75rem;
+    }
+  }
+  
+  /* Ultra-small screen optimizations */
+  @media (max-width: 380px) {
+    .month-filter-grid {
+      grid-template-columns: repeat(3, 1fr) !important;
+      gap: 0.375rem;
+    }
+    
+    .cuban-filter-button {
+      font-size: 0.625rem;
+      padding: 0.25rem;
+      height: 3.25rem;
+      gap: 0.125rem;
+    }
+    
+    .cuban-search-input {
+      height: 3rem;
+      font-size: 16px;
+    }
+  }
+
+  /* Icon-Only Filter System */
+  .icon-filter-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 640px) {
+    .icon-filter-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .icon-filter-grid {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .icon-filter-item {
+    height: 2.5rem; /* 40px consistent height */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0; /* Prevent flex overflow */
+  }
+  
+  .icon-filter-select {
+    height: 2.5rem;
+    min-height: 2.5rem;
+    padding: 0 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    background: white;
+    font-size: 0.875rem;
+  }
+  
+  .icon-filter-button {
+    height: 2.5rem;
+    min-height: 2.5rem;
+    width: 2.5rem;
+    min-width: 2.5rem;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Responsive icon filter behavior */
+  @media (max-width: 640px) {
+    /* Prevent zoom on iOS inputs */
+    input[type="search"],
+    select {
+      font-size: 16px;
+    }
+    
+    .icon-filter-item {
+      height: 3rem; /* Larger touch targets on mobile */
+    }
+    
+    .icon-filter-select {
+      height: 3rem;
+      min-height: 3rem;
+      font-size: 16px; /* Prevent zoom on iOS */
+    }
+    
+    .icon-filter-button {
+      height: 3rem;
+      min-height: 3rem;
+      width: 3rem;
+      min-width: 3rem;
+    }
+  }
+  
+  /* Custom select styling for icon filters */
+  .icon-filter-select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+  }
+  
+  .icon-filter-select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 1px #3b82f6;
+  }
+  
+  /* Enhanced Autocomplete Search */
+  .autocomplete-suggestion {
+    animation: slideInSuggestion 0.15s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    transform: translateY(-8px);
+    opacity: 0;
+  }
+  
+  .autocomplete-suggestion:nth-child(1) { animation-delay: 0ms; }
+  .autocomplete-suggestion:nth-child(2) { animation-delay: 20ms; }
+  .autocomplete-suggestion:nth-child(3) { animation-delay: 40ms; }
+  .autocomplete-suggestion:nth-child(4) { animation-delay: 60ms; }
+  .autocomplete-suggestion:nth-child(5) { animation-delay: 80ms; }
+  .autocomplete-suggestion:nth-child(6) { animation-delay: 100ms; }
+  .autocomplete-suggestion:nth-child(7) { animation-delay: 120ms; }
+  .autocomplete-suggestion:nth-child(8) { animation-delay: 140ms; }
+  
+  @keyframes slideInSuggestion {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .autocomplete-dropdown {
+    animation: fadeInDropdown 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  @keyframes fadeInDropdown {
+    from {
+      opacity: 0;
+      transform: translateY(-2px) scale(0.99);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+  
+  /* Enhanced suggestion highlighting */
+  .autocomplete-suggestion mark {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.15) 0%, rgba(249, 115, 22, 0.25) 100%);
+    color: inherit;
+    border-radius: 2px;
+    padding: 1px 2px;
+    font-weight: 600;
+  }
+  
+  /* Category headers */
+  .suggestion-category-header {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  
+  /* Enhanced hover effects */
+  .autocomplete-suggestion:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.02) 0%, rgba(59, 130, 246, 0.05) 100%);
+    border-left: 3px solid rgba(59, 130, 246, 0.3);
+    padding-left: calc(1rem - 3px);
+  }
+  
+  .autocomplete-suggestion:hover .suggestion-icon {
+    transform: scale(1.05);
+    transition: transform 0.1s ease;
+  }
+  
+  /* Popular and recent indicators */
+  .suggestion-popular-indicator {
+    background: linear-gradient(135deg, rgba(249, 115, 22, 0.1) 0%, rgba(249, 115, 22, 0.2) 100%);
+    border: 1px solid rgba(249, 115, 22, 0.2);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .suggestion-recent-indicator {
+    background: linear-gradient(135deg, rgba(107, 114, 128, 0.1) 0%, rgba(107, 114, 128, 0.2) 100%);
+    border: 1px solid rgba(107, 114, 128, 0.2);
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Enhanced clear button */
+  .search-clear-button {
+    background: linear-gradient(135deg, rgba(107, 114, 128, 0.1) 0%, rgba(107, 114, 128, 0.15) 100%);
+    border: 1px solid rgba(107, 114, 128, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  
+  .search-clear-button:hover {
+    background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(239, 68, 68, 0.15) 100%);
+    border-color: rgba(239, 68, 68, 0.3);
+    color: #dc2626;
+  }
+  
+  /* Search input enhancements */
+  .search-input-enhanced {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .search-input-enhanced:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15), 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .search-input-enhanced::placeholder {
+    transition: color 0.2s ease;
+  }
+  
+  .search-input-enhanced:focus::placeholder {
+    color: rgba(59, 130, 246, 0.6);
+  }
+  
+  /* Mobile autocomplete optimizations */
+  @media (max-width: 640px) {
+    .autocomplete-dropdown {
+      max-height: 60vh;
+      border-radius: 0.75rem;
+    }
+    
+    .autocomplete-suggestion {
+      min-height: 56px; /* Better touch targets */
+    }
+    
+    .search-input-enhanced {
+      font-size: 16px !important; /* Prevent zoom on iOS */
+      height: 3rem;
+    }
+    
+    .search-input-enhanced:focus {
+      transform: translateY(-0.5px);
+    }
+  }
+  
+  /* High contrast mode support for autocomplete */
+  @media (prefers-contrast: high) {
+    .autocomplete-dropdown {
+      border-width: 2px;
+      border-color: var(--cuban-blue);
+    }
+    
+    .autocomplete-suggestion {
+      border-bottom-width: 2px;
+    }
+    
+    .autocomplete-suggestion:hover,
+    .autocomplete-suggestion:focus {
+      background: var(--cuban-blue-subtle) !important;
+      border-color: var(--cuban-blue) !important;
+    }
+  }
+  
+  /* Reduced motion support for autocomplete */
+  @media (prefers-reduced-motion: reduce) {
+    .autocomplete-suggestion {
+      animation: none;
+      transform: none;
+      opacity: 1;
+    }
+    
+    .autocomplete-dropdown {
+      animation: none;
+      transform: none;
+    }
+    
+    .search-input-enhanced {
+      transition: none;
+    }
+    
+    .search-input-enhanced:focus {
+      transform: none;
+    }
+  }
+  
+
+  
+  /* Responsive festival grid - Enhanced for all months including January */
+  .festival-grid-compact {
+    display: grid;
+    gap: 0.75rem;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    width: 100%;
+    max-width: 100%;
+    grid-auto-rows: max-content;
+  }
+  
+  /* Tablet: 2 columns */
+  @media (min-width: 640px) {
+    .festival-grid-compact {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+  
+  /* Desktop: 3 columns */
+  @media (min-width: 1024px) {
+    .festival-grid-compact {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+    }
+  }
+  
+  /* Large desktop: Keep 3 columns but with larger gaps */
+  @media (min-width: 1280px) {
+    .festival-grid-compact {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+  }
+  
+  /* Ensure all festival cards are responsive regardless of month */
+  .festival-grid-compact > article {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Mobile-specific improvements for all festival cards */
+  @media (max-width: 640px) {
+    .festival-grid-compact {
+      gap: 1.25rem; /* More generous gap between cards */
+      padding: 0;
+      margin: 0;
+    }
+    
+    .festival-grid-compact > article {
+      width: 100%;
+      min-height: 220px; /* Comfortable mobile height */
+      max-width: none;
+      padding: 1.25rem; /* More generous mobile padding */
+    }
+    
+    /* Enhanced mobile spacing within cards */
+    .festival-grid-compact > article .flex.items-start.gap-2\.5 {
+      gap: 1rem !important; /* More space between content and date badge */
+      margin-bottom: 1rem !important; /* More space after header */
+    }
+    
+    /* More spacing between price/duration badges */
+    .festival-grid-compact > article .flex.items-center.gap-2.mb-1\.5 {
+      gap: 0.75rem !important;
+      margin-bottom: 0.75rem !important;
+    }
+    
+    /* More spacing after location and travel info */
+    .festival-grid-compact > article .flex.items-center.gap-1.mb-1 {
+      margin-bottom: 0.75rem !important;
+    }
+    
+    /* More space before action buttons */
+    .festival-grid-compact > article .mt-2 {
+      margin-top: 1.25rem !important;
+    }
+    
+    /* More comfortable button spacing */
+    .festival-grid-compact > article .sm\\:hidden .flex.flex-col.gap-1\\.5 {
+      gap: 0.875rem !important;
+    }
+    
+    /* Artists section spacing */
+    .festival-grid-compact > article .mb-1\.5:has(.sm\\:hidden) {
+      margin-bottom: 1rem !important;
+    }
+  }
+  
+  /* Ultra-small screens - still comfortable */
+  @media (max-width: 380px) {
+    .festival-grid-compact {
+      gap: 1rem; /* Reasonable gap for small screens */
+    }
+    
+    .festival-grid-compact > article {
+      min-height: 210px; /* Still comfortable on ultra-small */
+      padding: 1rem; /* Adequate padding for small screens */
+    }
+  }
+  
+  /* Desktop-specific spacing enhancements */
+  @media (min-width: 1024px) {
+    .festival-grid-compact > article {
+      padding: 0.75rem; /* Reduced padding for desktop */
+    }
+    
+    /* Enhanced spacing for desktop cards - much more compact */
+    .festival-grid-compact > article .flex.flex-col {
+      gap: 0.25rem; /* Much tighter gap between main sections */
+    }
+    
+    /* Desktop header section spacing - very tight */
+    .festival-grid-compact > article .flex.items-start.gap-2\.5 {
+      gap: 0.5rem !important; /* Much tighter space between content and date badge */
+      margin-bottom: 0.375rem !important; /* Much reduced space after header */
+    }
+    
+    /* Desktop price and duration badges spacing - very tight */
+    .festival-grid-compact > article .flex.items-center.gap-2.mb-1\.5 {
+      gap: 0.375rem !important; /* Much reduced space between badges */
+      margin-bottom: 0.25rem !important; /* Much reduced space after badges */
+    }
+    
+    /* Desktop location section spacing - very tight */
+    .festival-grid-compact > article .flex.items-center.gap-1.mb-1 {
+      margin-bottom: 0.25rem !important; /* Much reduced space after location */
+    }
+    
+    /* Desktop artists section spacing - very tight */
+    .festival-grid-compact > article .mb-1\.5:has(.hidden.sm\\:flex) {
+      margin-bottom: 0.375rem !important; /* Much reduced space after artists section */
+    }
+    
+    /* Desktop action buttons spacing - very tight */
+    .festival-grid-compact > article .mt-2 {
+      margin-top: 0.5rem !important; /* Much reduced space before buttons */
+    }
+    
+    /* More compact desktop buttons with better spacing */
+    .festival-grid-compact > article button {
+      padding: 0.25rem 0.5rem;
+      font-size: 0.8125rem;
+    }
+    
+    /* Desktop travel time spacing - very tight */
+    .festival-grid-compact > article .flex.items-center.gap-1.mb-1\.5:has(.h-3.w-3.shrink-0) {
+      margin-bottom: 0.25rem !important; /* Much reduced space after travel time */
+    }
+    
+    /* Additional desktop tightening for specific elements */
+    .festival-grid-compact > article .mb-1\.5 {
+      margin-bottom: 0.375rem !important; /* Much reduced margin for general mb-1.5 elements */
+    }
+    
+    .festival-grid-compact > article .mb-1 {
+      margin-bottom: 0.25rem !important; /* Much reduced margin for general mb-1 elements */
+    }
+    
+    /* Much tighter spacing for any remaining gap elements */
+    .festival-grid-compact > article .gap-1\.5 {
+      gap: 0.375rem !important; /* Much reduced gap-1.5 */
+    }
+    
+    .festival-grid-compact > article .gap-2 {
+      gap: 0.375rem !important; /* Much reduced gap-2 */
+    }
+    
+    .festival-grid-compact > article .gap-2\.5 {
+      gap: 0.5rem !important; /* Much reduced gap-2.5 */
+    }
+  }
+  
+  /* Large desktop optimizations */
+  @media (min-width: 1280px) {
+    .festival-grid-compact > article {
+      padding: 0.5rem; /* Ultra-tight padding for large screens */
+    }
+    
+    /* Extremely compact spacing for large desktop screens */
+    .festival-grid-compact > article .flex.flex-col {
+      gap: 0.1875rem; /* Extremely tight gap between main sections */
+    }
+    
+    /* Extremely tight header spacing */
+    .festival-grid-compact > article .flex.items-start.gap-2\.5 {
+      gap: 0.375rem !important; /* Extremely tight space between content and date badge */
+      margin-bottom: 0.25rem !important; /* Extremely reduced space after header */
+    }
+    
+    /* Extremely tight badge spacing */
+    .festival-grid-compact > article .flex.items-center.gap-2.mb-1\.5 {
+      gap: 0.25rem !important; /* Extremely reduced space between badges */
+      margin-bottom: 0.1875rem !important; /* Extremely reduced space after badges */
+    }
+    
+    /* Extremely tight location spacing */
+    .festival-grid-compact > article .flex.items-center.gap-1.mb-1 {
+      margin-bottom: 0.1875rem !important; /* Extremely reduced space after location */
+    }
+    
+    /* Extremely tight artists section spacing */
+    .festival-grid-compact > article .mb-1\.5:has(.hidden.sm\\:flex) {
+      margin-bottom: 0.25rem !important; /* Extremely reduced space after artists section */
+    }
+    
+    /* Extremely tight action buttons spacing */
+    .festival-grid-compact > article .mt-2 {
+      margin-top: 0.375rem !important; /* Extremely reduced space before buttons */
+    }
+    
+    /* Extremely tight travel time spacing */
+    .festival-grid-compact > article .flex.items-center.gap-1.mb-1\.5:has(.h-3.w-3.shrink-0) {
+      margin-bottom: 0.1875rem !important; /* Extremely reduced space after travel time */
+    }
+    
+    /* Extremely tight general margins */
+    .festival-grid-compact > article .mb-1\.5 {
+      margin-bottom: 0.25rem !important; /* Extremely reduced margin for general mb-1.5 elements */
+    }
+    
+    .festival-grid-compact > article .mb-1 {
+      margin-bottom: 0.1875rem !important; /* Extremely reduced margin for general mb-1 elements */
+    }
+    
+    /* Extremely tight gaps */
+    .festival-grid-compact > article .gap-1\.5 {
+      gap: 0.25rem !important; /* Extremely reduced gap-1.5 */
+    }
+    
+    .festival-grid-compact > article .gap-2 {
+      gap: 0.25rem !important; /* Extremely reduced gap-2 */
+    }
+    
+    .festival-grid-compact > article .gap-2\.5 {
+      gap: 0.375rem !important; /* Extremely reduced gap-2.5 */
+    }
+    
+    /* Additional ultra-compact spacing */
+    .festival-grid-compact > article .gap-1 {
+      gap: 0.1875rem !important; /* Extremely reduced gap-1 */
+    }
+    
+    /* Tighten any remaining spacing elements */
+    .festival-grid-compact > article .space-y-1 > * + * {
+      margin-top: 0.1875rem !important;
+    }
+    
+    .festival-grid-compact > article .space-y-2 > * + * {
+      margin-top: 0.25rem !important;
+    }
+    
+    /* Ultra-compact padding and margins for all flex containers */
+    .festival-grid-compact > article .flex {
+      gap: 0.1875rem !important;
+    }
+    
+    .festival-grid-compact > article .flex.gap-1 {
+      gap: 0.1875rem !important;
+    }
+    
+    .festival-grid-compact > article .flex.gap-1\.5 {
+      gap: 0.25rem !important;
+    }
+    
+    .festival-grid-compact > article .flex.gap-2 {
+      gap: 0.25rem !important;
+    }
+    
+    .festival-grid-compact > article .flex.gap-2\.5 {
+      gap: 0.375rem !important;
+    }
+    
+    /* Target specific margin classes that might still exist */
+    .festival-grid-compact > article .mt-1 {
+      margin-top: 0.1875rem !important;
+    }
+    
+    .festival-grid-compact > article .mt-1\.5 {
+      margin-top: 0.25rem !important;
+    }
+    
+    .festival-grid-compact > article .mt-3 {
+      margin-top: 0.375rem !important;
+    }
+    
+    .festival-grid-compact > article .mb-2 {
+      margin-bottom: 0.25rem !important;
+    }
+    
+    .festival-grid-compact > article .mb-3 {
+      margin-bottom: 0.375rem !important;
+    }
+    
+    /* Make price/duration section ultra-compact */
+    .festival-grid-compact > article .flex.items-center.gap-2:not(.gap-1) {
+      gap: 0.25rem !important;
+    }
+    
+    /* Ultra-compact the artist section specifically */
+    .festival-grid-compact > article .flex.items-center.justify-between.mb-1\.5 {
+      margin-bottom: 0.25rem !important;
+    }
+  }
+  
+  /* Stagger animation for festival cards */
+  .festival-card-modern:nth-child(1) { animation-delay: 0ms; }
+  .festival-card-modern:nth-child(2) { animation-delay: 100ms; }
+  .festival-card-modern:nth-child(3) { animation-delay: 200ms; }
+  .festival-card-modern:nth-child(4) { animation-delay: 300ms; }
+  .festival-card-modern:nth-child(5) { animation-delay: 400ms; }
+  .festival-card-modern:nth-child(6) { animation-delay: 500ms; }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .festival-card-modern {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) both;
+  }
+  
+  /* Additional modern design elements */
+  .modern-card-surface {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--modern-gray-200);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .modern-card-surface:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+    border-color: var(--modern-gray-300);
+  }
+  
+  /* Modern section spacing */
+  .modern-section {
+    padding: var(--spacing-3xl) 0;
+  }
+  
+  @media (min-width: 640px) {
+    .modern-section {
+      padding: var(--spacing-4xl) 0;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .modern-section {
+      padding: var(--spacing-5xl) 0;
+    }
+  }
+  
+  /* Enhanced container spacing for festival content */
+  .festival-content-container {
+    position: relative;
+  }
+  
+  /* Content section enhancements */
+  .content-section {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Modern content spacing system */
+  .content-spacing-sm {
+    padding: 2rem 0;
+  }
+  
+  .content-spacing-md {
+    padding: 3rem 0;
+  }
+  
+  .content-spacing-lg {
+    padding: 4rem 0;
+  }
+  
+  .content-spacing-xl {
+    padding: 6rem 0;
+  }
+  
+  @media (min-width: 640px) {
+    .content-spacing-sm { padding: 3rem 0; }
+    .content-spacing-md { padding: 4rem 0; }
+    .content-spacing-lg { padding: 6rem 0; }
+    .content-spacing-xl { padding: 8rem 0; }
+  }
+  
+  @media (min-width: 1024px) {
+    .content-spacing-sm { padding: 4rem 0; }
+    .content-spacing-md { padding: 6rem 0; }
+    .content-spacing-lg { padding: 8rem 0; }
+    .content-spacing-xl { padding: 12rem 0; }
+  }
+  
+  /* Improved state containers */
+  .state-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 2rem 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .state-container {
+      min-height: 60vh;
+      padding: 3rem 2rem;
+    }
+  }
+  
+  /* Cuban Glass Effect State Cards */
+  .cuban-glass-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(254, 247, 240, 0.8) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1.5px solid rgba(220, 38, 38, 0.1);
+    border-radius: var(--radius-2xl);
+    box-shadow: 
+      var(--shadow-large),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      0 0 0 1px rgba(220, 38, 38, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cuban-glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--cuban-gradient-primary);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .cuban-glass-card:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(254, 247, 240, 0.9) 100%);
+    transform: translateY(-6px);
+    border-color: rgba(220, 38, 38, 0.2);
+    box-shadow: 
+      0 20px 60px rgba(45, 24, 16, 0.15),
+      0 8px 20px rgba(220, 38, 38, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.7),
+      0 0 0 1px rgba(220, 38, 38, 0.1);
+  }
+  
+  .cuban-glass-card:hover::before {
+    opacity: 1;
+  }
+  
+  /* Modern month section styling */
+  .festival-month-section {
+    scroll-margin-top: calc(var(--header-height) + 2rem);
+    position: relative;
+  }
+  
+  @media (min-width: 640px) {
+    .festival-month-section {
+      scroll-margin-top: calc(var(--header-height-sm) + 2rem);
+    }
+  }
+  
+
+  
+  /* Modern dialog enhancements */
+  .modern-dialog-content {
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  /* Additional responsive improvements for festival grid */
+  @media (min-width: 1536px) {
+    .festival-grid-compact {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      max-width: 1400px; /* Prevent cards from getting too wide */
+      margin: 0 auto;
+    }
+  }
+  
+  /* Ultra-large screens: maintain readability */
+  @media (min-width: 1920px) {
+    .festival-grid-compact {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Cuban Background Patterns */
+  .cuban-bg-pattern {
+    background-image: 
+      radial-gradient(circle at 2px 2px, var(--pattern-red) 1.5px, transparent 0),
+      radial-gradient(circle at 25px 25px, var(--pattern-orange) 1px, transparent 0),
+      radial-gradient(circle at 50px 10px, var(--pattern-blue) 0.8px, transparent 0);
+    background-size: 30px 30px, 50px 50px, 40px 40px;
+    background-position: 0 0, 15px 15px, 25px 5px;
+  }
+  
+  .cuban-bg-subtle {
+    background: 
+      linear-gradient(135deg, rgba(220, 38, 38, 0.02) 0%, transparent 50%),
+      radial-gradient(circle at 20% 50%, rgba(234, 88, 12, 0.03) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, rgba(3, 105, 161, 0.02) 0%, transparent 50%);
+  }
+  
+  .cuban-hero-pattern {
+    background: 
+      radial-gradient(circle at 30% 20%, rgba(220, 38, 38, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 70% 80%, rgba(234, 88, 12, 0.08) 0%, transparent 50%),
+      linear-gradient(135deg, var(--cuban-warm) 0%, var(--cuban-cream) 100%);
+  }
+  
+  /* Enhanced content flow */
+  .content-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  
+  @media (min-width: 640px) {
+    .content-flow {
+      gap: 6rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .content-flow {
+      gap: 8rem;
+    }
+  }
+  
+  /* Modern section dividers */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(124, 58, 237, 0.2) 20%,
+      rgba(124, 58, 237, 0.3) 50%,
+      rgba(124, 58, 237, 0.2) 80%,
+      transparent
+    );
+    margin: 3rem 0;
+  }
+  
+  @media (min-width: 640px) {
+    .section-divider {
+      margin: 4rem 0;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .section-divider {
+      margin: 6rem 0;
+    }
+  }
+  
+  /* Content header styling */
+  .content-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .content-header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(124, 58, 237, 0.1);
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    box-shadow: var(--shadow-sm);
+    font-weight: 600;
+    color: var(--modern-gray-700);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .content-header-badge:hover {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+    border-color: rgba(124, 58, 237, 0.2);
+  }
+  
+  /* Cuban Loading States */
+  .cuban-loading-shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(220, 38, 38, 0.1),
+      rgba(234, 88, 12, 0.1),
+      transparent
+    );
+    background-size: 300% 100%;
+    animation: cubanShimmer 2.5s ease-in-out infinite;
+  }
+  
+  @keyframes cubanShimmer {
+    0%, 100% { 
+      background-position: -300% 0; 
+      opacity: 0.6;
+    }
+    50% { 
+      background-position: 300% 0; 
+      opacity: 0.8;
+    }
+  }
+  
+  /* Cuban Loading Cards */
+  .cuban-loading-card {
+    background: var(--cuban-gradient-card);
+    border: 1px solid var(--modern-border);
+    border-radius: var(--radius-lg);
+    padding: var(--card-padding);
+    animation: cubanCardPulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes cubanCardPulse {
+    0%, 100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.02);
+    }
+  }
+  
+  /* Progressive loading animation */
+  .loading-progress {
+    width: 100%;
+    height: 2px;
+    background: var(--modern-gray-200);
+    border-radius: 1px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .loading-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      var(--festival-primary),
+      var(--festival-accent),
+      var(--festival-primary)
+    );
+    border-radius: inherit;
+    animation: progressPulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes progressPulse {
+    0%, 100% {
+      width: 0%;
+      opacity: 1;
+    }
+    50% {
+      width: 100%;
+      opacity: 0.8;
+    }
+  }
+  
+  /* Cuban State Animations */
+  .cuban-enter {
+    animation: cubanEnter 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  @keyframes cubanEnter {
+    0% {
+      opacity: 0;
+      transform: translateY(32px) scale(0.95) rotateX(10deg);
+    }
+    60% {
+      opacity: 0.8;
+      transform: translateY(-4px) scale(1.02) rotateX(-2deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1) rotateX(0deg);
+    }
+  }
+  
+  /* Cuban Festival Card Enter */
+  .cuban-festival-enter {
+    animation: cubanFestivalEnter 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  @keyframes cubanFestivalEnter {
+    0% {
+      opacity: 0;
+      transform: translateY(20px) scale(0.9);
+      filter: blur(4px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+  
+  /* Cuban Scale Animation */
+  .cuban-scale-in {
+    animation: cubanScaleIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+  }
+  
+  @keyframes cubanScaleIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8) rotate(-5deg);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+  }
+  
+  /* Staggered animations for content */
+  .stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+  .stagger-children > *:nth-child(2) { animation-delay: 100ms; }
+  .stagger-children > *:nth-child(3) { animation-delay: 200ms; }
+  .stagger-children > *:nth-child(4) { animation-delay: 300ms; }
+  .stagger-children > *:nth-child(5) { animation-delay: 400ms; }
+  
+  /* Better responsive behavior for large screens */
+  @media (min-width: 1920px) {
+    .content-flow {
+      gap: 10rem;
+    }
+    
+    .state-container {
+      min-height: 70vh;
+      padding: 4rem 3rem;
+    }
+  }
+  
+  /* Ultra-wide screen optimizations */
+  @media (min-width: 2560px) {
+    .content-flow {
+      gap: 12rem;
+    }
+    
+    .enhanced-glass-card {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+  
+  /* Tutorial Carousel Styles */
+  .tutorial-carousel-enter {
+    animation: tutorialSlideIn 0.4s ease-out forwards;
+  }
+  
+  @keyframes tutorialSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Tutorial slide transition */
+  .tutorial-slide-transition {
+    transition: all 0.2s ease;
+  }
+  
+  /* Reduced motion support for tutorial */
+  @media (prefers-reduced-motion: reduce) {
+    .tutorial-carousel-enter {
+      animation: none;
+    }
+    
+    .tutorial-slide-transition {
+      transition: none;
+    }
+  }
+
+  /* Cuban Calendar Export Buttons */
+  .cuban-calendar-button {
+    background: var(--cuban-gradient-primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: var(--shadow-warm);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cuban-calendar-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  .cuban-calendar-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-colored);
+  }
+  
+  .cuban-calendar-button:hover::before {
+    left: 100%;
+  }
+  
+  .cuban-calendar-button:active {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-warm);
+  }
+  
+  /* Calendar Export Dropdown Improvements */
+  .calendar-dropdown {
+    min-width: 220px;
+    max-width: 280px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #d1d5db;
+    background: white;
+  }
+  
+  .calendar-dropdown-item {
+    padding: 0.75rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border-radius: 0.375rem;
+    margin: 0.125rem;
+    color: #111827;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.3;
+    min-height: 2.5rem;
+  }
+  
+  .calendar-dropdown-item:hover {
+    background: #f3f4f6;
+    color: #111827;
+  }
+  
+  .calendar-dropdown-item:focus {
+    background: #f3f4f6;
+    color: #111827;
+    outline: none;
+  }
+  
+  /* Language-specific dropdown adjustments */
+  [lang="pl"] .calendar-dropdown {
+    min-width: 240px;
+    max-width: 300px;
+  }
+  
+  [lang="de"] .calendar-dropdown {
+    min-width: 240px;
+    max-width: 300px;
+  }
+  
+  [lang="fr"] .calendar-dropdown {
+    min-width: 240px;
+    max-width: 300px;
+  }
+  
+  [lang="es"] .calendar-dropdown {
+    min-width: 230px;
+    max-width: 290px;
+  }
+  
+  /* Dropdown item text handling */
+  .calendar-dropdown-item span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  @media (max-width: 640px) {
+    .calendar-dropdown-item span {
+      white-space: normal;
+      word-break: break-word;
+      hyphens: auto;
+    }
+  }
+  
+  /* Specific fixes for longer translations */
+  [lang="pl"] .calendar-dropdown-item,
+  [lang="de"] .calendar-dropdown-item,
+  [lang="fr"] .calendar-dropdown-item {
+    padding: 0.625rem 0.875rem;
+    font-size: 0.875rem;
+    min-height: 2.75rem;
+  }
+  
+  [lang="pl"] .calendar-dropdown-item span,
+  [lang="de"] .calendar-dropdown-item span,
+  [lang="fr"] .calendar-dropdown-item span {
+    white-space: normal;
+    word-break: break-word;
+    hyphens: auto;
+  }
+  
+  /* Festival Action Button Overflow Fixes */
+  .festival-action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .festival-action-buttons > * {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+  }
+  
+  /* Festival Card Button Text Handling */
+  .festival-card button,
+  .festival-card-modern button,
+  .cuban-festival-card button {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    max-width: 100%;
+  }
+  
+  /* Desktop button sizing */
+  @media (min-width: 1024px) {
+    .festival-action-buttons {
+      gap: 0.375rem;
+    }
+    
+    .festival-card button,
+    .festival-card-modern button,
+    .cuban-festival-card button {
+      padding: 0.25rem 0.5rem !important;
+      font-size: 0.75em !important;
+      line-height: 1.2 !important;
+      min-height: 1.75rem !important;
+    }
+    
+    /* Allow text wrapping for longer translations on desktop */
+    .festival-card button span,
+    .festival-card-modern button span,
+    .cuban-festival-card button span {
+      white-space: normal;
+      word-break: break-word;
+      hyphens: auto;
+      line-height: 1.1;
+    }
+  }
+  
+  /* Mobile button handling */
+  @media (max-width: 640px) {
+    .festival-action-buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .festival-action-buttons > * {
+      width: 100%;
+      flex: none;
+    }
+    
+    /* Allow text wrapping on mobile */
+    .festival-card button,
+    .festival-card-modern button,
+    .cuban-festival-card button {
+      white-space: normal;
+      text-overflow: unset;
+      min-height: 2.5rem;
+      padding: 0.5rem 0.75rem !important;
+      font-size: 0.875rem !important;
+      line-height: 1.2 !important;
+    }
+    
+    .festival-card button span,
+    .festival-card-modern button span,
+    .cuban-festival-card button span {
+      word-break: break-word;
+      hyphens: auto;
+    }
+  }
+  
+  /* Tablet responsive */
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .festival-action-buttons {
+      gap: 0.375rem;
+    }
+    
+    .festival-card button,
+    .festival-card-modern button,
+    .cuban-festival-card button {
+      padding: 0.375rem 0.625rem !important;
+      font-size: 0.8125rem !important;
+      min-height: 2rem !important;
+      white-space: normal;
+      text-overflow: unset;
+    }
+    
+    .festival-card button span,
+    .festival-card-modern button span,
+    .cuban-festival-card button span {
+      word-break: break-word;
+      hyphens: auto;
+      line-height: 1.1;
+    }
+  }
+  
+  /* Calendar dropdown button specific fixes */
+  .calendar-export-button {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+  
+  .calendar-export-button span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  @media (min-width: 1024px) {
+    .calendar-export-button span {
+      white-space: normal;
+      word-break: break-word;
+      hyphens: auto;
+      text-align: center;
+      line-height: 1.1;
+    }
+  }
+  
+  /* Modern button secondary fixes */
+  .modern-button-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    min-width: 0;
+    flex: 1;
+  }
+  
+  .modern-button-secondary span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  @media (min-width: 1024px) {
+    .modern-button-secondary span {
+      white-space: normal;
+      word-break: break-word;
+      hyphens: auto;
+      text-align: center;
+      line-height: 1.1;
+    }
+  }
+  
+  /* Language-specific button adjustments */
+  [lang="pl"] .festival-card button,
+  [lang="pl"] .festival-card-modern button,
+  [lang="pl"] .cuban-festival-card button {
+    font-size: 0.8125rem !important;
+  }
+  
+  [lang="de"] .festival-card button,
+  [lang="de"] .festival-card-modern button,
+  [lang="de"] .cuban-festival-card button {
+    font-size: 0.8125rem !important;
+  }
+  
+  [lang="fr"] .festival-card button,
+  [lang="fr"] .festival-card-modern button,
+  [lang="fr"] .cuban-festival-card button {
+    font-size: 0.8125rem !important;
+  }
+  
+  /* Button icons spacing adjustments */
+  .festival-card button svg,
+  .festival-card-modern button svg,
+  .cuban-festival-card button svg {
+    flex-shrink: 0;
+  }
+  
+  @media (min-width: 1024px) {
+    .festival-card button svg,
+    .festival-card-modern button svg,
+    .cuban-festival-card button svg {
+      width: 0.75rem !important;
+      height: 0.75rem !important;
+    }
+  }
+  
+  /* SimpleFestivalCard specific button fixes */
+  .sm\\:hidden .festival-action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  
+  .sm\\:hidden .festival-action-buttons > * {
+    width: 100%;
+  }
+  
+  .sm\\:hidden .festival-action-buttons .flex.gap-1\\.5 {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  .sm\\:hidden .festival-action-buttons .flex.gap-1\\.5 > * {
+    flex: 1;
+    min-width: 0;
+  }
+  
+  /* Desktop festival card button layout fixes */
+  .hidden.sm\\:flex.gap-1\\.5 {
+    display: flex;
+    gap: 0.375rem;
+    align-items: stretch;
+  }
+  
+  .hidden.sm\\:flex.gap-1\\.5 > * {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+  }
+  
+  /* Tooltip wrapper button fixes */
+  .hidden.sm\\:flex.gap-1\\.5 [data-slot="tooltip-trigger"] {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+  }
+  
+  .hidden.sm\\:flex.gap-1\\.5 [data-slot="tooltip-trigger"] > * {
+    width: 100%;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  /* Dropdown menu trigger button fixes */
+  .hidden.sm\\:flex.gap-1\\.5 [data-slot="dropdown-menu-trigger"] {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+  }
+  
+  .hidden.sm\\:flex.gap-1\\.5 [data-slot="dropdown-menu-trigger"] > * {
+    width: 100%;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  /* Button text content handling */
+  .festival-card button .w-3.h-3 + span,
+  .festival-card-modern button .w-3.h-3 + span,
+  .cuban-festival-card button .w-3.h-3 + span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+  }
+  
+  @media (min-width: 1024px) {
+    .festival-card button .w-3.h-3 + span,
+    .festival-card-modern button .w-3.h-3 + span,
+    .cuban-festival-card button .w-3.h-3 + span {
+      white-space: normal;
+      word-break: break-word;
+      hyphens: auto;
+      text-align: center;
+      line-height: 1.1;
+    }
+  }
+  
+  /* Chevron icon handling in dropdown buttons */
+  .festival-card button .w-2.h-2,
+  .festival-card-modern button .w-2.h-2,
+  .cuban-festival-card button .w-2.h-2 {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+  
+  /* Ultra-compact desktop sizing for better fit */
+  @media (min-width: 1280px) {
+    .festival-card button,
+    .festival-card-modern button,
+    .cuban-festival-card button {
+      padding: 0.1875rem 0.375rem !important;
+      font-size: 0.6875em !important;
+      min-height: 1.5rem !important;
+    }
+    
+    .festival-card button svg,
+    .festival-card-modern button svg,
+    .cuban-festival-card button svg {
+      width: 0.625rem !important;
+      height: 0.625rem !important;
+    }
+  }
+  
+  /* Ultra-wide screen optimizations */
+  @media (min-width: 1536px) {
+    .festival-card button,
+    .festival-card-modern button,
+    .cuban-festival-card button {
+      padding: 0.25rem 0.5rem !important;
+      font-size: 0.75em !important;
+      min-height: 1.625rem !important;
+    }
+  }
+  
+  /* Share Button Text Overflow Fixes */
+  .share-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    flex-shrink: 0;
+  }
+  
+  /* Share button specific overrides */
+  button[aria-label*="Share"],
+  button[aria-label*="Partager"],
+  button[aria-label*="Compartir"],
+  button[aria-label*="Udostępnij"],
+  button[aria-label*="Teilen"] {
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  
+  /* Share button text handling */
+  button[aria-label*="Share"] span,
+  button[aria-label*="Partager"] span,
+  button[aria-label*="Compartir"] span,
+  button[aria-label*="Udostępnij"] span,
+  button[aria-label*="Teilen"] span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  
+  /* Language-specific share button adjustments */
+  [lang="pl"] button[aria-label*="Udostępnij"] {
+    max-width: 120px;
+    font-size: 0.75rem !important;
+    padding: 0.375rem 0.5rem !important;
+  }
+  
+  [lang="pl"] button[aria-label*="Udostępnij"] span {
+    max-width: 60px;
+    font-size: 0.75rem;
+  }
+  
+  [lang="es"] button[aria-label*="Compartir"] {
+    max-width: 110px;
+    font-size: 0.8125rem !important;
+    padding: 0.375rem 0.5rem !important;
+  }
+  
+  [lang="es"] button[aria-label*="Compartir"] span {
+    max-width: 65px;
+    font-size: 0.8125rem;
+  }
+  
+  [lang="fr"] button[aria-label*="Partager"] {
+    max-width: 105px;
+    font-size: 0.8125rem !important;
+    padding: 0.375rem 0.5rem !important;
+  }
+  
+  [lang="fr"] button[aria-label*="Partager"] span {
+    max-width: 65px;
+    font-size: 0.8125rem;
+  }
+  
+  [lang="de"] button[aria-label*="Teilen"] {
+    max-width: 95px;
+    font-size: 0.875rem !important;
+    padding: 0.375rem 0.5rem !important;
+  }
+  
+  [lang="de"] button[aria-label*="Teilen"] span {
+    max-width: 55px;
+    font-size: 0.875rem;
+  }
+  
+  /* Desktop responsive share button behavior */
+  @media (min-width: 1024px) {
+    button[aria-label*="Share"],
+    button[aria-label*="Partager"],
+    button[aria-label*="Compartir"],
+    button[aria-label*="Udostępnij"],
+    button[aria-label*="Teilen"] {
+      white-space: normal;
+      text-overflow: unset;
+    }
+    
+    button[aria-label*="Share"] span,
+    button[aria-label*="Partager"] span,
+    button[aria-label*="Compartir"] span,
+    button[aria-label*="Udostępnij"] span,
+    button[aria-label*="Teilen"] span {
+      white-space: normal;
+      word-break: break-word;
+      hyphens: auto;
+      line-height: 1.1;
+      text-align: center;
+    }
+    
+    /* Desktop language-specific adjustments */
+    [lang="pl"] button[aria-label*="Udostępnij"] {
+      max-width: 140px;
+      font-size: 0.6875rem !important;
+      padding: 0.25rem 0.375rem !important;
+      min-height: 1.75rem !important;
+    }
+    
+    [lang="es"] button[aria-label*="Compartir"] {
+      max-width: 120px;
+      font-size: 0.75rem !important;
+      padding: 0.25rem 0.375rem !important;
+      min-height: 1.75rem !important;
+    }
+    
+    [lang="fr"] button[aria-label*="Partager"] {
+      max-width: 115px;
+      font-size: 0.75rem !important;
+      padding: 0.25rem 0.375rem !important;
+      min-height: 1.75rem !important;
+    }
+    
+    [lang="de"] button[aria-label*="Teilen"] {
+      max-width: 100px;
+      font-size: 0.8125rem !important;
+      padding: 0.25rem 0.375rem !important;
+      min-height: 1.75rem !important;
+    }
+  }
+  
+  /* Ultra-compact desktop sizing for share buttons */
+  @media (min-width: 1280px) {
+    [lang="pl"] button[aria-label*="Udostępnij"] {
+      font-size: 0.625rem !important;
+      padding: 0.1875rem 0.3125rem !important;
+      min-height: 1.5rem !important;
+      max-width: 130px;
+    }
+    
+    [lang="es"] button[aria-label*="Compartir"] {
+      font-size: 0.6875rem !important;
+      padding: 0.1875rem 0.3125rem !important;
+      min-height: 1.5rem !important;
+      max-width: 110px;
+    }
+    
+    [lang="fr"] button[aria-label*="Partager"] {
+      font-size: 0.6875rem !important;
+      padding: 0.1875rem 0.3125rem !important;
+      min-height: 1.5rem !important;
+      max-width: 105px;
+    }
+    
+    [lang="de"] button[aria-label*="Teilen"] {
+      font-size: 0.75rem !important;
+      padding: 0.1875rem 0.3125rem !important;
+      min-height: 1.5rem !important;
+      max-width: 95px;
+    }
+  }
+  
+  /* Share button icons spacing */
+  button[aria-label*="Share"] svg,
+  button[aria-label*="Partager"] svg,
+  button[aria-label*="Compartir"] svg,
+  button[aria-label*="Udostępnij"] svg,
+  button[aria-label*="Teilen"] svg {
+    flex-shrink: 0;
+    margin-right: 0.25rem;
+  }
+  
+  @media (min-width: 1024px) {
+    button[aria-label*="Share"] svg,
+    button[aria-label*="Partager"] svg,
+    button[aria-label*="Compartir"] svg,
+    button[aria-label*="Udostępnij"] svg,
+    button[aria-label*="Teilen"] svg {
+      width: 0.75rem !important;
+      height: 0.75rem !important;
+      margin-right: 0.1875rem;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    button[aria-label*="Share"] svg,
+    button[aria-label*="Partager"] svg,
+    button[aria-label*="Compartir"] svg,
+    button[aria-label*="Udostępnij"] svg,
+    button[aria-label*="Teilen"] svg {
+      width: 0.625rem !important;
+      height: 0.625rem !important;
+      margin-right: 0.125rem;
+    }
+  }
+  
+  /* FestivalShareButton specific fixes (size="sm") */
+  .festival-share-button-sm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    min-width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+  }
+  
+  .festival-share-button-sm span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 70px;
+  }
+  
+  /* Additional specific targeting for share buttons */
+  .share-button-enhanced {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    flex-shrink: 0;
+  }
+  
+  .share-button-enhanced span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  /* Header share button specific styling */
+  .h-8.w-8 .share-button-enhanced {
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+  }
+  
+  /* Ensure header share button only shows icon */
+  .h-8.w-8 .share-button-enhanced span {
+    display: none;
+  }
+  
+  /* Comprehensive share button selectors as backup */
+  [data-slot="button"]:has([data-lucide="share-2"]) {
+    min-width: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  
+  [data-slot="button"]:has([data-lucide="share-2"]) span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  
+  /* Final fallback for any button containing "share" text */
+  button:has(svg + span) span:only-of-type {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 80px;
+  }
+  
+  @media (min-width: 1024px) {
+    button:has(svg + span) span:only-of-type {
+      white-space: normal;
+      word-break: break-word;
+      hyphens: auto;
+      max-width: 100px;
+    }
+  }
+  
+  @media (min-width: 1280px) {
+    button:has(svg + span) span:only-of-type {
+      max-width: 90px;
+      font-size: 0.75rem;
+    }
+  }
+  
+  /* Mobile Festival Card Button Layout - 50/50 Split */
+  @media (max-width: 640px) {
+    /* Target the mobile button container in SimpleFestivalCard */
+    .sm\:hidden .flex[class*="gap"] > div:has([data-slot="dropdown-menu-trigger"]) {
+      display: flex;
+      gap: 0.375rem;
+      width: 100%;
+    }
+    
+    /* Calendar dropdown button gets 50% */
+    .sm\:hidden .flex[class*="gap"] [data-slot="dropdown-menu"] {
+      flex: 1;
+      min-width: 0;
+      flex-basis: calc(50% - 0.1875rem);
+      max-width: calc(50% - 0.1875rem);
+    }
+    
+    .sm\:hidden .flex[class*="gap"] [data-slot="dropdown-menu-trigger"] {
+      width: 100%;
+      display: flex;
+    }
+    
+    .sm\:hidden .flex[class*="gap"] [data-slot="dropdown-menu-trigger"] button {
+      width: 100%;
+      flex: 1;
+    }
+    
+    /* Share button gets 50% */
+    .sm\:hidden .flex[class*="gap"] .festival-share-button-sm {
+      flex: 1;
+      min-width: 0;
+      flex-basis: calc(50% - 0.1875rem);
+      max-width: calc(50% - 0.1875rem);
+    }
+    
+    .sm\:hidden .flex[class*="gap"] .festival-share-button-sm button {
+      width: 100%;
+      flex: 1;
+    }
+    
+    /* Alternative targeting using class names */
+    .sm\:hidden .flex.gap-1\.5 {
+      display: flex;
+      gap: 0.375rem;
+      width: 100%;
+      align-items: stretch;
+    }
+    
+    .sm\:hidden .flex.gap-1\.5 > * {
+      flex: 1;
+      min-width: 0;
+      flex-basis: calc(50% - 0.1875rem);
+      max-width: calc(50% - 0.1875rem);
+    }
+    
+    /* Ensure dropdown menu component fills its container */
+    .sm\:hidden .flex.gap-1\.5 > [data-slot="dropdown-menu"],
+    .sm\:hidden .flex.gap-1\.5 > div:has([data-slot="dropdown-menu-trigger"]) {
+      width: 100%;
+      display: flex;
+    }
+    
+    /* Ensure buttons inside containers fill their space */
+    .sm\:hidden .flex.gap-1\.5 button {
+      width: 100%;
+      min-width: 0;
+    }
+    
+    /* Festival share button specific targeting */
+    .sm\:hidden .festival-share-button-sm,
+    .sm\:hidden .flex-1:last-child {
+      flex: 1 !important;
+      width: 100%;
+      min-width: 0;
+    }
+    
+    /* Ensure festival share button matches save button exactly */
+    .festival-share-button-sm {
+      background: white !important;
+      border: 1px solid black !important;
+      color: black !important;
+      font-weight: 500 !important;
+      border-radius: 0.375rem !important;
+      transition: all 0.2s ease !important;
+    }
+    
+    .festival-share-button-sm:hover {
+      background: rgb(249 250 251) !important;
+      color: black !important;
+      border-color: black !important;
+    }
+    
+    /* Make sure both buttons have identical spacing and sizing */
+    .sm\:hidden .flex.gap-1\.5 button {
+      padding: 0.625rem 0.875rem !important; /* More generous mobile button padding */
+      font-size: 0.875rem !important;
+      min-height: 2.75rem !important; /* Slightly taller buttons for better touch */
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.375rem !important; /* More space between icon and text */
+      font-weight: 500 !important;
+      border-radius: 0.5rem !important; /* Slightly more rounded for friendlier feel */
+      transition: all 0.2s ease !important;
+    }
+  }
+  
+  /* Desktop button consistency */
+  @media (min-width: 640px) {
+    /* Ensure both save and share buttons have identical styling on desktop */
+    .hidden.sm\\:flex .festival-share-button-sm,
+    .hidden.sm\\:flex button[aria-label*="calendar"] {
+      background: white !important;
+      border: 1px solid black !important;
+      color: black !important;
+      font-weight: 500 !important;
+      border-radius: 0.375rem !important;
+      transition: all 0.2s ease !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      gap: 0.25rem !important;
+      padding: 0.375rem 0.625rem !important;
+      font-size: 0.8125rem !important;
+      min-height: 2rem !important;
+    }
+    
+    /* Desktop language-specific calendar button improvements */
+    [lang="de"] .hidden.sm\\:flex button[aria-label*="calendar"],
+    [lang="de"] .calendar-export-button {
+      min-width: 120px !important;
+      font-size: 0.75rem !important;
+      padding: 0.375rem 0.5rem !important;
+    }
+    
+    [lang="es"] .hidden.sm\\:flex button[aria-label*="calendar"],
+    [lang="es"] .calendar-export-button {
+      min-width: 115px !important;
+      font-size: 0.75rem !important;
+      padding: 0.375rem 0.5rem !important;
+    }
+    
+    [lang="pl"] .hidden.sm\\:flex button[aria-label*="calendar"],
+    [lang="pl"] .calendar-export-button {
+      min-width: 125px !important;
+      font-size: 0.75rem !important;
+      padding: 0.375rem 0.5rem !important;
+    }
+    
+    [lang="fr"] .hidden.sm\\:flex button[aria-label*="calendar"],
+    [lang="fr"] .calendar-export-button {
+      min-width: 130px !important;
+      font-size: 0.75rem !important;
+      padding: 0.375rem 0.5rem !important;
+    }
+    
+    .hidden.sm\\:flex .festival-share-button-sm:hover,
+    .hidden.sm\\:flex button[aria-label*="calendar"]:hover {
+      background: rgb(249 250 251) !important;
+      color: black !important;
+      border-color: black !important;
+    }
+    
+    /* Ensure dropdown menu buttons match the same styling */
+    .hidden.sm\\:flex [data-slot="dropdown-menu-trigger"] button {
+      background: white !important;
+      border: 1px solid black !important;
+      color: black !important;
+      font-weight: 500 !important;
+      border-radius: 0.375rem !important;
+      transition: all 0.2s ease !important;
+    }
+    
+    .hidden.sm\\:flex [data-slot="dropdown-menu-trigger"] button:hover {
+      background: rgb(249 250 251) !important;
+      color: black !important;
+      border-color: black !important;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    /* Ultra-compact desktop button styling for visual consistency */
+    .hidden.sm\\:flex .festival-share-button-sm,
+    .hidden.sm\\:flex button[aria-label*="calendar"],
+    .hidden.sm\\:flex [data-slot="dropdown-menu-trigger"] button {
+      padding: 0.25rem 0.5rem !important;
+      font-size: 0.75rem !important;
+      min-height: 1.75rem !important;
+      gap: 0.1875rem !important;
+    }
+    
+    /* Ultra-compact language-specific desktop calendar buttons */
+    [lang="de"] .hidden.sm\\:flex button[aria-label*="calendar"],
+    [lang="de"] .calendar-export-button {
+      min-width: 110px !important;
+      font-size: 0.6875rem !important;
+      padding: 0.25rem 0.375rem !important;
+    }
+    
+    [lang="es"] .hidden.sm\\:flex button[aria-label*="calendar"],
+    [lang="es"] .calendar-export-button {
+      min-width: 105px !important;
+      font-size: 0.6875rem !important;
+      padding: 0.25rem 0.375rem !important;
+    }
+    
+    [lang="pl"] .hidden.sm\\:flex button[aria-label*="calendar"],
+    [lang="pl"] .calendar-export-button {
+      min-width: 115px !important;
+      font-size: 0.6875rem !important;
+      padding: 0.25rem 0.375rem !important;
+    }
+    
+    [lang="fr"] .hidden.sm\\:flex button[aria-label*="calendar"],
+    [lang="fr"] .calendar-export-button {
+      min-width: 120px !important;
+      font-size: 0.6875rem !important;
+      padding: 0.25rem 0.375rem !important;
+    }
+  }
+  
+  /* Language-specific calendar button width adjustments */
+  [lang="de"] .calendar-export-button,
+  [lang="de"] [data-slot="dropdown-menu-trigger"] button {
+    min-width: 140px !important;
+    font-size: 0.8125rem !important;
+  }
+  
+  [lang="es"] .calendar-export-button,
+  [lang="es"] [data-slot="dropdown-menu-trigger"] button {
+    min-width: 135px !important;
+    font-size: 0.8125rem !important;
+  }
+  
+  [lang="pl"] .calendar-export-button,
+  [lang="pl"] [data-slot="dropdown-menu-trigger"] button {
+    min-width: 145px !important;
+    font-size: 0.8125rem !important;
+  }
+  
+  [lang="fr"] .calendar-export-button,
+  [lang="fr"] [data-slot="dropdown-menu-trigger"] button {
+    min-width: 150px !important;
+    font-size: 0.8125rem !important;
+  }
+  
+  /* Mobile Calendar Export Optimizations */
+  @media (max-width: 640px) {
+    .calendar-export-button {
+      font-size: 0.875rem;
+      padding: 0.625rem 1rem;
+      min-height: 44px; /* Ensure touch-friendly size */
+      touch-action: manipulation; /* Optimize touch handling */
+    }
+    
+    /* Language-specific mobile adjustments for calendar buttons */
+    [lang="de"] .calendar-export-button,
+    [lang="de"] [data-slot="dropdown-menu-trigger"] button {
+      min-width: 160px !important;
+      font-size: 0.875rem !important;
+      padding: 0.75rem 1rem !important;
+    }
+    
+    [lang="es"] .calendar-export-button,
+    [lang="es"] [data-slot="dropdown-menu-trigger"] button {
+      min-width: 155px !important;
+      font-size: 0.875rem !important;
+      padding: 0.75rem 1rem !important;
+    }
+    
+    [lang="pl"] .calendar-export-button,
+    [lang="pl"] [data-slot="dropdown-menu-trigger"] button {
+      min-width: 165px !important;
+      font-size: 0.875rem !important;
+      padding: 0.75rem 1rem !important;
+    }
+    
+    [lang="fr"] .calendar-export-button,
+    [lang="fr"] [data-slot="dropdown-menu-trigger"] button {
+      min-width: 170px !important;
+      font-size: 0.875rem !important;
+      padding: 0.75rem 1rem !important;
+    }
+    
+    .calendar-dropdown {
+      min-width: 240px;
+      max-width: 90vw;
+      touch-action: manipulation; /* Optimize touch handling */
+    }
+    
+    .calendar-dropdown-item {
+      padding: 1rem 1.25rem;
+      font-size: 1rem; /* Prevent zoom on iOS */
+      min-height: 48px; /* Touch-friendly height */
+      touch-action: manipulation; /* Optimize touch handling */
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0.1); /* Visual feedback */
+      cursor: pointer; /* Ensure pointer cursor */
+    }
+    
+    /* Ensure dropdown menu items are properly clickable on mobile */
+    .calendar-dropdown-item:active {
+      background-color: #f3f4f6 !important;
+      transform: scale(0.98);
+      transition: all 0.1s ease;
+    }
+    
+    /* Prevent double-tap zoom on calendar buttons */
+    .calendar-dropdown-item,
+    .calendar-export-button,
+    [data-slot="dropdown-menu-item"],
+    [data-slot="dropdown-menu-trigger"] {
+      touch-action: manipulation;
+    }
+    
+    /* Improve mobile dropdown visibility */
+    [data-slot="dropdown-menu-content"] {
+      transform: translateY(0) !important; /* Prevent positioning issues */
+      position: fixed !important; /* Ensure proper positioning on mobile */
+      z-index: 9999 !important; /* Ensure dropdown appears above everything */
+    }
+    
+    /* Ensure buttons in festival cards are properly sized */
+    .festival-action-buttons {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    
+    .festival-action-buttons > * {
+      flex: 1;
+      min-width: 0;
+    }
+    
+    /* Mobile share button fixes */
+    button[aria-label*="Share"],
+    button[aria-label*="Partager"],
+    button[aria-label*="Compartir"],
+    button[aria-label*="Udostępnij"],
+    button[aria-label*="Teilen"] {
+      white-space: normal;
+      text-overflow: unset;
+      min-height: 2.75rem; /* More comfortable touch target */
+      padding: 0.625rem 0.875rem !important; /* More generous padding */
+      font-size: 0.875rem !important;
+      border-radius: 0.5rem !important; /* Consistent with other mobile buttons */
+    }
+    
+    button[aria-label*="Share"] span,
+    button[aria-label*="Partager"] span,
+    button[aria-label*="Compartir"] span,
+    button[aria-label*="Udostępnij"] span,
+    button[aria-label*="Teilen"] span {
+      white-space: normal;
+      word-break: break-word;
+      hyphens: auto;
+      max-width: none;
+    }
+    
+    /* Stack buttons vertically on very small screens */
+    @media (max-width: 380px) {
+      .festival-action-buttons {
+        flex-direction: column;
+      }
+      
+      .festival-action-buttons > * {
+        width: 100%;
+      }
+    }
+  }
+
+  /* Cuban Festival Card Styles */
+  .cuban-festival-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(135deg, #ffffff 0%, var(--cuban-cream) 100%);
+    border: 1px solid var(--modern-border);
+    border-radius: var(--radius-lg);
+    padding: var(--card-padding);
+    box-shadow: var(--shadow-subtle);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cuban-festival-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(135deg, var(--cuban-red) 0%, var(--cuban-orange) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .cuban-festival-card:hover {
+    border-color: var(--cuban-red);
+    box-shadow: 0 4px 14px 0 rgba(220, 38, 38, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  .cuban-festival-card:hover::before {
+    opacity: 1;
+  }
+  
+  @media (min-width: 640px) {
+    .cuban-festival-card {
+      padding: var(--card-padding-sm);
+    }
+  }
+  
+  /* Cuban Action Buttons */
+  .cuban-action-button {
+    min-height: 44px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .cuban-action-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  .cuban-action-button:hover::before {
+    left: 100%;
+  }
+  
+  .cuban-action-button.primary {
+    background: var(--cuban-gradient-primary);
+    color: white;
+  }
+  
+  .cuban-action-button.primary:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-colored);
+  }
+  
+  .cuban-action-button.secondary {
+    background: white;
+    color: var(--cuban-red);
+    border: 1.5px solid var(--cuban-red);
+  }
+  
+  .cuban-action-button.secondary:hover {
+    background: var(--cuban-red);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-colored);
+  }
+  
+  @media (max-width: 640px) {
+    .cuban-action-button {
+      min-height: 48px;
+      font-size: 1rem; /* Prevent zoom on iOS */
+    }
+  }
+  
+  /* Simplified festival list spacing */
+  .festival-list-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  @media (min-width: 640px) {
+    .festival-list-mobile {
+      gap: 1rem;
+    }
+  }
+  
+  /* Mobile-first optimizations */
+  @media (max-width: 640px) {
+    /* Improve readability on small screens */
+    .mobile-festival-card {
+      padding: 0.875rem;
+    }
+    
+    /* Better button spacing on mobile */
+    .mobile-festival-card .flex.gap-2 {
+      gap: 0.5rem;
+    }
+    
+    /* Larger touch targets for mobile */
+    .mobile-action-button {
+      min-height: 44px;
+      padding: 0.75rem 1rem;
+    }
+    
+    /* Responsive text sizing */
+    .mobile-festival-card h3 {
+      font-size: 0.875rem;
+      line-height: 1.25;
+    }
+    
+    /* Better date badge sizing on mobile */
+    .festival-date-badge {
+      width: 2.75rem;
+      height: 2.75rem;
+    }
+    
+    /* Improved month header spacing */
+    .festival-month-section h2 {
+      font-size: 0.875rem;
+      font-weight: 600;
+    }
+    
+    /* Better container padding */
+    .min-h-screen > main > div {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    /* More compact mobile cards */
+    .festival-grid-compact > article {
+      min-height: 180px;
+    }
+    
+    /* Sticky header optimizations */
+    .sticky {
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+  }
+  
+  /* Ultra-mobile optimizations for very small screens */
+  @media (max-width: 380px) {
+    .mobile-festival-card {
+      padding: 0.75rem;
+    }
+    
+    .festival-date-badge {
+      width: 2.5rem;
+      height: 2.5rem;
+      font-size: 0.625rem;
+    }
+    
+    .festival-date-badge .day {
+      font-size: 0.875rem;
+    }
+    
+    .mobile-action-button {
+      padding: 0.625rem 0.75rem;
+      font-size: 0.75rem;
+    }
+    
+    /* Stack buttons vertically if needed */
+    .mobile-festival-card .flex.gap-2 {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .mobile-festival-card .flex.gap-2 > * {
+      width: 100%;
+    }
+  }
+  
+  /* Cuban Date Badge Styling */
+  .cuban-date-badge {
+    background: var(--cuban-gradient-primary);
+    color: white;
+    border-radius: var(--radius-lg);
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    box-shadow: var(--shadow-warm);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cuban-date-badge::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  
+  .cuban-date-badge .day {
+    font-size: 1.125rem;
+    line-height: 1;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .cuban-date-badge .month {
+    font-size: 0.625rem;
+    opacity: 0.9;
+    margin-top: 0.125rem;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  @keyframes shimmer {
+    0%, 100% { transform: rotate(0deg) scale(1); opacity: 0.3; }
+    50% { transform: rotate(180deg) scale(1.1); opacity: 0.1; }
+  }
+  
+  @media (max-width: 640px) {
+    .cuban-date-badge {
+      width: 3rem;
+      height: 3rem;
+    }
+    
+    .cuban-date-badge .day {
+      font-size: 1rem;
+    }
+  }
+  
+  /* High contrast mode for calendar buttons */
+  @media (prefers-contrast: high) {
+    .calendar-export-button {
+      border: 2px solid #374151;
+    }
+    
+    .calendar-dropdown {
+      border-width: 2px;
+      border-color: #6b7280;
+    }
+    
+    .calendar-dropdown-item {
+      border: 1px solid transparent;
+    }
+    
+    .calendar-dropdown-item:hover,
+    .calendar-dropdown-item:focus {
+      border-color: #374151;
+    }
+    
+    /* Dropdown menu high contrast support */
+    [data-slot="dropdown-menu-content"] {
+      border-width: 2px !important;
+      border-color: #6b7280 !important;
+    }
+    
+    [data-slot="dropdown-menu-item"]:hover,
+    [data-slot="dropdown-menu-item"]:focus {
+      border: 1px solid #374151 !important;
+    }
+  }
+  
+  /* Reduced motion for calendar interactions */
+  @media (prefers-reduced-motion: reduce) {
+    .calendar-export-button {
+      transition: none;
+    }
+    
+    .calendar-export-button:hover {
+      transform: none;
+    }
+    
+    .calendar-dropdown-item {
+      transition: none;
+    }
+  }
+  
+
+  
+  /* Cuban Filter System */
+  .cuban-filter-container {
+    background: var(--cuban-gradient-card);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--modern-border);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: var(--shadow-subtle);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  .cuban-filter-container.expanded {
+    box-shadow: var(--shadow-large);
+    border-color: var(--cuban-orange);
+  }
+  
+  .cuban-search-input {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1.5px solid var(--modern-border);
+    border-radius: var(--radius-lg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--modern-text-dark);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  .cuban-search-input::placeholder {
+    color: var(--modern-text-light);
+    font-weight: 400;
+  }
+  
+  .cuban-search-input:focus {
+    background: white;
+    border-color: var(--cuban-red);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1), var(--shadow-soft);
+    transform: translateY(-1px);
+    outline: none;
+  }
+  
+  .filter-button-grid {
+    display: grid;
+    gap: 0.5rem;
+  }
+  
+  .filter-button-grid.continent-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .filter-button-grid.month-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  @media (min-width: 640px) {
+    .filter-button-grid.month-grid {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+  
+  /* Cuban Filter Buttons */
+  .cuban-filter-button {
+    height: 3.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border-radius: var(--radius-lg);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1.5px solid var(--modern-border);
+    background: white;
+    color: var(--modern-text);
+    box-shadow: var(--shadow-subtle);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    min-width: fit-content;
+  }
+  
+  .cuban-filter-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--cuban-gradient-primary);
+    transition: left 0.3s ease;
+    z-index: -1;
+  }
+  
+  .cuban-filter-button:hover {
+    border-color: var(--cuban-red);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .cuban-filter-button.active {
+    background: var(--cuban-gradient-primary);
+    border-color: var(--cuban-red);
+    color: white;
+    box-shadow: var(--shadow-colored);
+  }
+  
+  .cuban-filter-button.active::before {
+    left: 0;
+  }
+  
+  .cuban-filter-button.active:hover {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: var(--shadow-large);
+  }
+  
+  @media (max-width: 640px) {
+    .cuban-filter-button {
+      height: 3.75rem;
+      font-size: 0.875rem;
+      min-height: 48px;
+      padding: 0.375rem 0.5rem;
+      gap: 0.125rem;
+    }
+  }
+  
+  /* Month filter responsive grid improvements */
+  @media (max-width: 480px) {
+    .cuban-filter-button {
+      padding: 0.25rem 0.375rem;
+      font-size: 0.75rem;
+      height: 3.5rem;
+    }
+  }
+  
+  /* Cuban Filter Chips */
+  .cuban-filter-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    padding: 0.5rem 0.875rem;
+    border-radius: var(--radius-xl);
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1.5px solid transparent;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cuban-filter-chip::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    opacity: 0.8;
+    z-index: -1;
+  }
+  
+  .cuban-filter-chip.continent {
+    background: linear-gradient(135deg, rgba(2, 132, 199, 0.1) 0%, rgba(2, 132, 199, 0.2) 100%);
+    color: var(--cuban-blue-dark);
+    border-color: var(--cuban-blue);
+  }
+  
+  .cuban-filter-chip.month {
+    background: linear-gradient(135deg, rgba(5, 150, 105, 0.1) 0%, rgba(5, 150, 105, 0.2) 100%);
+    color: var(--cuban-green-dark);
+    border-color: var(--cuban-green);
+  }
+  
+  .cuban-filter-chip.search {
+    background: linear-gradient(135deg, rgba(234, 88, 12, 0.1) 0%, rgba(234, 88, 12, 0.2) 100%);
+    color: var(--cuban-orange-dark);
+    border-color: var(--cuban-orange);
+  }
+  
+  .cuban-filter-chip:hover {
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .cuban-filter-chip button {
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 0.125rem;
+    margin-left: 0.25rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    width: 1.25rem;
+    height: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .cuban-filter-chip button:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+  }
+  
+  .active-filter-chip button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: 0.25rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.2s ease;
+  }
+  
+  .active-filter-chip.continent button:hover {
+    background: rgba(29, 78, 216, 0.2);
+  }
+  
+  .active-filter-chip.month button:hover {
+    background: rgba(22, 101, 52, 0.2);
+  }
+  
+  .active-filter-chip.search button:hover {
+    background: rgba(124, 58, 237, 0.2);
+  }
+  
+  /* Mobile Search Input */
+  .mobile-search-input {
+    font-size: 16px; /* Prevent zoom on iOS */
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #d1d5db;
+    transition: all 0.2s ease;
+  }
+  
+  .mobile-search-input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    outline: none;
+  }
+  
+
+  
+  /* Filter Expand/Collapse Animation */
+  .filter-expand-enter {
+    animation: filterExpandIn 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  .filter-expand-exit {
+    animation: filterExpandOut 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  @keyframes filterExpandIn {
+    from {
+      opacity: 0;
+      transform: translateY(-8px) scale(0.98);
+      max-height: 0;
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      max-height: 300px;
+    }
+  }
+  
+  @keyframes filterExpandOut {
+    from {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      max-height: 300px;
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-8px) scale(0.98);
+      max-height: 0;
+    }
+  }
+  
+  /* Touch-friendly filter buttons */
+  @media (max-width: 640px) {
+    .simple-filter-button {
+      height: 2.5rem;
+      font-size: 0.875rem;
+      min-height: 44px; /* iOS touch target requirement */
+    }
+    
+    .view-toggle-button {
+      height: 2.5rem;
+      width: 2.5rem;
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    .mobile-search-input {
+      height: 3rem;
+      font-size: 16px;
+      min-height: 44px;
+    }
+    
+    .filter-button-grid {
+      gap: 0.75rem;
+    }
+    
+    .active-filter-chip {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+    }
+  }
+  
+  /* Ultra-mobile optimizations */
+  @media (max-width: 380px) {
+    .filter-button-grid.continent-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .filter-button-grid.month-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .simple-filter-button {
+      font-size: 0.75rem;
+      padding: 0 0.375rem;
+    }
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .filter-expand-enter,
+    .filter-expand-exit {
+      animation: none;
+    }
+    
+    .simple-filter-button,
+    .mobile-search-input,
+    .view-toggle-button {
+      transition: none;
+    }
+  }
+  
+  /* High contrast mode */
+  @media (prefers-contrast: high) {
+    .simple-filter-button {
+      border-width: 2px;
+    }
+    
+    .simple-filter-button.active {
+      border-width: 3px;
+    }
+    
+    .mobile-search-input:focus {
+      border-width: 3px;
+    }
+    
+    .active-filter-chip {
+      border: 2px solid currentColor;
+    }
+  }
+
+  /* Enhanced Tooltip Styling - Consistent White on Black */
+  [data-slot="tooltip-content"],
+  .tooltip-content,
+  [role="tooltip"] {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #374151 !important;
+    border-radius: 0.5rem !important;
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    max-width: 250px !important;
+    z-index: 9999 !important;
+    line-height: 1.4 !important;
+  }
+  
+  [data-slot="tooltip-content"] [data-arrow],
+  .tooltip-content [data-arrow],
+  [role="tooltip"] [data-arrow] {
+    background: #111827 !important;
+    border-color: #374151 !important;
+  }
+  
+  /* Override any component-specific tooltip styling */
+  [data-radix-tooltip-content],
+  [data-radix-popper-content-wrapper] [role="tooltip"],
+  .radix-tooltip-content,
+  [data-state="delayed-open"][role="tooltip"],
+  [data-side="top"][role="tooltip"],
+  [data-side="bottom"][role="tooltip"],
+  [data-side="left"][role="tooltip"],
+  [data-side="right"][role="tooltip"] {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #374151 !important;
+  }
+  
+  /* Ensure all Radix tooltip content is white text */
+  [data-radix-tooltip-content] *,
+  [data-radix-popper-content-wrapper] [role="tooltip"] *,
+  .radix-tooltip-content *,
+  [data-state="delayed-open"][role="tooltip"] *,
+  [data-side="top"][role="tooltip"] *,
+  [data-side="bottom"][role="tooltip"] *,
+  [data-side="left"][role="tooltip"] *,
+  [data-side="right"][role="tooltip"] * {
+    color: #ffffff !important;
+  }
+  
+  /* Festival tooltip overrides */
+  .festival-tooltip {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #374151 !important;
+  }
+  
+  /* Artist ranking tooltip overrides */
+  .artist-tooltip {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #374151 !important;
+  }
+  
+  /* Map tooltip overrides */
+  .map-tooltip {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #374151 !important;
+  }
+  
+  /* Any custom tooltip content and comprehensive catch-all selectors */
+  [data-tooltip],
+  [title],
+  .tooltip,
+  [class*="tooltip"],
+  [class*="Tooltip"],
+  [aria-describedby*="tooltip"],
+  [id*="tooltip"],
+  div[role="tooltip"],
+  span[role="tooltip"],
+  div[data-popper-placement],
+  [data-floating-ui-portal] [role="tooltip"],
+  [data-headlessui-portal] [role="tooltip"] {
+    background: #111827 !important;
+    color: #ffffff !important;
+    border: 1px solid #374151 !important;
+  }
+  
+  /* Comprehensive text color overrides for all possible tooltip content */
+  [data-tooltip] *,
+  .tooltip *,
+  [class*="tooltip"] *,
+  [class*="Tooltip"] *,
+  [aria-describedby*="tooltip"] *,
+  [id*="tooltip"] *,
+  div[role="tooltip"] *,
+  span[role="tooltip"] *,
+  div[data-popper-placement] *,
+  [data-floating-ui-portal] [role="tooltip"] *,
+  [data-headlessui-portal] [role="tooltip"] * {
+    color: #ffffff !important;
+  }
+  
+  /* Ensure all text inside tooltips is white - comprehensive override */
+  [data-slot="tooltip-content"] *,
+  .tooltip-content *,
+  [role="tooltip"] *,
+  [data-slot="tooltip-content"] p,
+  [data-slot="tooltip-content"] span,
+  [data-slot="tooltip-content"] div,
+  [data-slot="tooltip-content"] .text-gray-500,
+  [data-slot="tooltip-content"] .text-gray-400,
+  [data-slot="tooltip-content"] .text-gray-600,
+  [data-slot="tooltip-content"] .text-gray-700,
+  [data-slot="tooltip-content"] .opacity-75,
+  .tooltip-content p,
+  .tooltip-content span,
+  .tooltip-content div,
+  .tooltip-content .text-gray-500,
+  .tooltip-content .text-gray-400,
+  .tooltip-content .text-gray-600,
+  .tooltip-content .text-gray-700,
+  .tooltip-content .opacity-75,
+  [role="tooltip"] p,
+  [role="tooltip"] span,
+  [role="tooltip"] div,
+  [role="tooltip"] .text-gray-500,
+  [role="tooltip"] .text-gray-400,
+  [role="tooltip"] .text-gray-600,
+  [role="tooltip"] .text-gray-700,
+  [role="tooltip"] .opacity-75 {
+    color: #ffffff !important;
+  }
+  
+  /* Override any component-specific opacity or color classes */
+  [data-slot="tooltip-content"] .opacity-75,
+  .tooltip-content .opacity-75,
+  [role="tooltip"] .opacity-75 {
+    opacity: 0.75 !important;
+    color: #ffffff !important;
+  }
+  
+  /* Ensure links and buttons in tooltips are properly styled */
+  [data-slot="tooltip-content"] a,
+  [data-slot="tooltip-content"] button,
+  .tooltip-content a,
+  .tooltip-content button,
+  [role="tooltip"] a,
+  [role="tooltip"] button {
+    color: #ffffff !important;
+    text-decoration: underline !important;
+  }
+  
+  [data-slot="tooltip-content"] a:hover,
+  [data-slot="tooltip-content"] button:hover,
+  .tooltip-content a:hover,
+  .tooltip-content button:hover,
+  [role="tooltip"] a:hover,
+  [role="tooltip"] button:hover {
+    color: #e5e7eb !important;
+  }
+  
+  /* High contrast tooltip support */
+  @media (prefers-contrast: high) {
+    [data-slot="tooltip-content"],
+    .tooltip-content,
+    [role="tooltip"] {
+      border-width: 2px !important;
+      border-color: #ffffff !important;
+      background: #000000 !important;
+    }
+  }
+  
+  /* Reduced motion tooltip support */
+  @media (prefers-reduced-motion: reduce) {
+    [data-slot="tooltip-content"],
+    .tooltip-content,
+    [role="tooltip"] {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+
+  /* Share Button Styles */
+  .share-button-enhanced {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .share-button-enhanced::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.6s ease;
+  }
+  
+  .share-button-enhanced:hover::before {
+    left: 100%;
+  }
+  
+  .share-button-enhanced:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+  }
+  
+  .share-button-enhanced:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Travel Time Display Enhancements */
+  .travel-time-badge {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
+    border: 1px solid rgba(59, 130, 246, 0.2);
+    color: #1e40af;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+  }
+  
+  .travel-time-badge:hover {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.1) 100%);
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateY(-1px);
+  }
+  
+  .travel-time-badge .travel-icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    margin-right: 0.25rem;
+  }
+  
+  /* Mobile travel time optimizations */
+  @media (max-width: 640px) {
+    .travel-time-badge {
+      font-size: 0.625rem;
+      padding: 0.125rem 0.375rem;
+    }
+    
+    .travel-time-badge .travel-icon {
+      width: 0.625rem;
+      height: 0.625rem;
+      margin-right: 0.125rem;
+    }
+  }
+  
+  /* Festival card travel time integration */
+  .festival-card-travel-time {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+  }
+  
+  .festival-card-travel-time .travel-method {
+    display: flex;
+    align-items: center;
+    gap: 0.125rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+  }
+  
+  .festival-card-travel-time .travel-method:not(:last-child)::after {
+    content: '•';
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+    color: #d1d5db;
+  }
+  
+  /* Festival Action Button Overflow Fixes */
+  .festival-action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  
+  .festival-action-buttons > * {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+  }
+  
+  /* Festival Card Button Text Handling */
+  .festival-card button,
+  .festival-card-modern button,
+  .cuban-festival-card button {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+    max-width: 100%;
+  }
+  
+  /* Desktop button sizing */
+  @media (min-width: 1024px) {
+    .festival-action-buttons {
+      gap: 0.375rem;
+    }
+    
+    .festival-card button,
+    .festival-card-modern button,
+    .cuban-festival-card button {
+      padding: 0.25rem 0.5rem !important;
+      font-size: 0.75em !important;
+      line-height: 1.2 !important;
+      min-height: 1.75rem !important;
+    }
+    
+    /* Allow text wrapping for longer translations on desktop */
+    .festival-card button span,
+    .festival-card-modern button span,
+    .cuban-festival-card button span {
+      white-space: normal;
+      word-break: break-word;
+      hyphens: auto;
+      line-height: 1.1;
+    }
+  }
+  
+  /* Mobile button handling */
+  @media (max-width: 640px) {
+    .festival-action-buttons {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    
+    .festival-action-buttons > * {
+      width: 100%;
+      flex: none;
+    }
+    
+    /* Allow text wrapping on mobile */
+    .festival-card button,
+    .festival-card-modern button,
+    .cuban-festival-card button {
+      white-space: normal;
+      text-overflow: unset;
+      min-height: 2.5rem;
+      padding: 0.5rem 0.75rem !important;
+      font-size: 0.875rem !important;
+      line-height: 1.2 !important;
+    }
+    
+    .festival-card button span,
+    .festival-card-modern button span,
+    .cuban-festival-card button span {
+      word-break: break-word;
+      hyphens: auto;
+    }
+  }
+  
+  /* Tablet responsive */
+  @media (min-width: 641px) and (max-width: 1023px) {
+    .festival-action-buttons {
+      gap: 0.375rem;
+    }
+    
+    .festival-card button,
+    .festival-card-modern button,
+    .cuban-festival-card button {
+      padding: 0.375rem 0.625rem !important;
+      font-size: 0.8125rem !important;
+      min-height: 2rem !important;
+      white-space: normal;
+      text-overflow: unset;
+    }
+    
+    .festival-card button span,
+    .festival-card-modern button span,
+    .cuban-festival-card button span {
+      word-break: break-word;
+      hyphens: auto;
+      line-height: 1.1;
+    }
+  }
+  
+  /* Calendar dropdown button specific fixes */
+  .calendar-export-button {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+  }
+  
+  .calendar-export-button span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  @media (min-width: 1024px) {
+    .calendar-export-button span {
+      white-space: normal;
+      word-break: break-word;
+      hyphens: auto;
+      text-align: center;
+      line-height: 1.1;
+    }
+  }
+  
+  /* Modern button secondary fixes */
+  .modern-button-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    min-width: 0;
+    flex: 1;
+  }
+  
+  .modern-button-secondary span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  @media (min-width: 1024px) {
+    .modern-button-secondary span {
+      white-space: normal;
+      word-break: break-word;
+      hyphens: auto;
+      text-align: center;
+      line-height: 1.1;
+    }
+  }
+  
+  /* Language-specific button adjustments */
+  [lang="pl"] .festival-card button,
+  [lang="pl"] .festival-card-modern button,
+  [lang="pl"] .cuban-festival-card button {
+    font-size: 0.8125rem !important;
+  }
+  
+  [lang="de"] .festival-card button,
+  [lang="de"] .festival-card-modern button,
+  [lang="de"] .cuban-festival-card button {
+    font-size: 0.8125rem !important;
+  }
+  
+  [lang="fr"] .festival-card button,
+  [lang="fr"] .festival-card-modern button,
+  [lang="fr"] .cuban-festival-card button {
+    font-size: 0.8125rem !important;
+  }
+  
+  /* Button icons spacing adjustments */
+  .festival-card button svg,
+  .festival-card-modern button svg,
+  .cuban-festival-card button svg {
+    flex-shrink: 0;
+  }
+  
+  @media (min-width: 1024px) {
+    .festival-card button svg,
+    .festival-card-modern button svg,
+    .cuban-festival-card button svg {
+      width: 0.75rem !important;
+      height: 0.75rem !important;
+    }
+  }
+  
+  /* Share button animations */
+  @keyframes share-pulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.05);
+      opacity: 0.8;
+    }
+  }
+  
+  .share-button-pulse {
+    animation: share-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  /* High contrast support for travel time and share features */
+  @media (prefers-contrast: high) {
+    .travel-time-badge {
+      border-width: 2px;
+      border-color: #1d4ed8;
+      background: #f0f9ff;
+      color: #1e40af;
+    }
+    
+    .share-button-enhanced {
+      border-width: 2px;
+    }
+  }
+  
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .share-button-enhanced,
+    .travel-time-badge {
+      transition: none;
+    }
+    
+    .share-button-enhanced:hover,
+    .travel-time-badge:hover {
+      transform: none;
+    }
+    
+    .share-button-enhanced::before {
+      display: none;
+    }
+    
+    .share-button-pulse {
+      animation: none;
+    }
+  }
+
+  /* Minimal UI Component Overrides */
+  [data-slot="button"] {
+    font-weight: 500 !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  [data-slot="select-trigger"] {
+    background: white !important;
+    border: 1px solid #d1d5db !important;
+    color: #111827 !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  [data-slot="select-trigger"]:focus {
+    border-color: #6b7280 !important;
+    box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.2) !important;
+  }
+  
+  [data-slot="select-content"] {
+    background: white !important;
+    border: 1px solid #d1d5db !important;
+    color: #111827 !important;
+  }
+  
+  [data-slot="select-item"] {
+    color: #111827 !important;
+  }
+  
+  [data-slot="select-item"]:hover,
+  [data-slot="select-item"]:focus {
+    background: #f3f4f6 !important;
+    color: #111827 !important;
+  }
+  
+  /* Dropdown Menu Minimal Styling */
+  [data-slot="dropdown-menu-content"] {
+    background: white !important;
+    border: 1px solid #d1d5db !important;
+    color: #111827 !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  [data-slot="dropdown-menu-item"] {
+    color: #111827 !important;
+    transition: all 0.2s ease !important;
+  }
+  
+  [data-slot="dropdown-menu-item"]:hover,
+  [data-slot="dropdown-menu-item"]:focus {
+    background: #f3f4f6 !important;
+    color: #111827 !important;
+  }
+  
+  [data-slot="dropdown-menu-separator"] {
+    background: #e5e7eb !important;
+  }
+  
+  [data-slot="input"] {
+    background: white !important;
+    border: 1px solid #d1d5db !important;
+    color: #111827 !important;
+  }
+  
+  [data-slot="input"]:focus {
+    border-color: #6b7280 !important;
+    box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.2) !important;
+  }
+  
+  [data-slot="dialog-content"] {
+    background: white !important;
+    border: 1px solid #d1d5db !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  [data-slot="dialog-title"] {
+    color: #111827 !important;
+  }
+  
+  [data-slot="dialog-description"] {
+    color: #6b7280 !important;
+  }
+  
+  [data-slot="tabs-list"] {
+    background: #f3f4f6 !important;
+  }
+  
+  [data-slot="tabs-trigger"] {
+    color: #6b7280 !important;
+  }
+  
+  [data-slot="tabs-trigger"][data-state="active"] {
+    background: white !important;
+    color: #111827 !important;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  [data-slot="badge"] {
+    font-weight: 500 !important;
+  }
+  
+  [data-slot="checkbox"] {
+    background: white !important;
+    border: 1px solid #d1d5db !important;
+  }
+  
+  [data-slot="checkbox"][data-state="checked"] {
+    background: #374151 !important;
+    border-color: #374151 !important;
+    color: white !important;
+  }
+  
+  [data-slot="label"] {
+    color: #111827 !important;
+    font-weight: 500 !important;
+  }
+  
+  [data-slot="textarea"] {
+    background: white !important;
+    border: 1px solid #d1d5db !important;
+    color: #111827 !important;
+  }
+  
+  [data-slot="textarea"]:focus {
+    border-color: #6b7280 !important;
+    box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.2) !important;
+  }
+  
+  /* High contrast support for minimal UI */
+  @media (prefers-contrast: high) {
+    [data-slot="button"] {
+      border-width: 2px !important;
+    }
+    
+    [data-slot="select-trigger"] {
+      border-width: 2px !important;
+    }
+    
+    [data-slot="input"] {
+      border-width: 2px !important;
+    }
+    
+    [data-slot="textarea"] {
+      border-width: 2px !important;
+    }
+  }
+  
+  /* Mobile Language Selector Positioning */
+  @media (max-width: 640px) {
+    /* Ensure dropdown menus stay within viewport */
+    [data-slot="dropdown-menu-content"] {
+      max-width: calc(100vw - 1rem) !important;
+      transform: translateX(min(0px, calc(-100% + 1rem))) !important;
+    }
+    
+    /* Language selector specific mobile optimizations */
+    .language-selector-content {
+      max-width: calc(100vw - 1rem) !important;
+      right: 0.5rem !important;
+      left: auto !important;
+      transform: none !important;
+    }
+    
+    /* Mobile dropdown menu items touch-friendly sizing */
+    [data-slot="dropdown-menu-item"] {
+      min-height: 44px !important;
+      padding: 0.75rem 1rem !important;
+      font-size: 0.875rem !important;
+      touch-action: manipulation !important;
+    }
+    
+    /* Prevent text overflow in mobile language selector */
+    [data-slot="dropdown-menu-item"] > * {
+      overflow: hidden !important;
+    }
+    
+    /* Hide currency info on very small screens */
+    @media (max-width: 380px) {
+      .language-currency-info {
+        display: none !important;
+      }
+    }
+  }
+  
+  /* Calendar Button Text Handling for Long Translations */
+  [lang="de"] button[aria-label*="calendar"] span,
+  [lang="de"] .calendar-export-button span,
+  [lang="es"] button[aria-label*="calendar"] span,
+  [lang="es"] .calendar-export-button span,
+  [lang="pl"] button[aria-label*="calendar"] span,
+  [lang="pl"] .calendar-export-button span,
+  [lang="fr"] button[aria-label*="calendar"] span,
+  [lang="fr"] .calendar-export-button span {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    max-width: 100% !important;
+  }
+  
+  /* Desktop text wrapping for calendar buttons */
+  @media (min-width: 1024px) {
+    [lang="de"] button[aria-label*="calendar"] span,
+    [lang="de"] .calendar-export-button span,
+    [lang="es"] button[aria-label*="calendar"] span,
+    [lang="es"] .calendar-export-button span,
+    [lang="pl"] button[aria-label*="calendar"] span,
+    [lang="pl"] .calendar-export-button span,
+    [lang="fr"] button[aria-label*="calendar"] span,
+    [lang="fr"] .calendar-export-button span {
+      white-space: normal !important;
+      word-break: break-word !important;
+      hyphens: auto !important;
+      text-align: center !important;
+      line-height: 1.1 !important;
+    }
+  }
+  
+  /* Language selector dropdown positioning fixes */
+  [data-radix-popper-content-wrapper] {
+    z-index: 9999 !important;
+  }
+  
+  [data-radix-dropdown-menu-content] {
+    transform-origin: var(--radix-dropdown-menu-content-transform-origin) !important;
+    animation: none !important;
+  }
+  
+  /* Ensure proper stacking context for language dropdown */
+  .language-selector-trigger {
+    position: relative !important;
+    z-index: 1 !important;
+  }
+
+  /* Reduced motion support for minimal UI */
+  @media (prefers-reduced-motion: reduce) {
+    [data-slot="button"],
+    [data-slot="select-trigger"],
+    [data-slot="input"],
+    [data-slot="textarea"],
+    [data-slot="dialog-content"] {
+      transition: none !important;
+    }
+  }
+
+  /* Enhanced search input styling */
+  .search-input-enhanced {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+  }
+  
+  .search-input-enhanced:hover {
+    border-color: #9ca3af;
+  }
+  
+  /* Hide any native search styling that might interfere */
+  .search-input-enhanced::-webkit-search-cancel-button,
+  .search-input-enhanced::-webkit-search-decoration,
+  .search-input-enhanced::-webkit-search-results-button,
+  .search-input-enhanced::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    display: none;
+  }
+
+  /* Salsa Loading Animation Enhancements */
+  .bottle-outline {
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+  
+  .liquid-fill {
+    animation: liquidShimmer 3s ease-in-out infinite;
+  }
+  
+  .liquid-surface {
+    animation: surfaceRipple 2s ease-in-out infinite;
+  }
+  
+  @keyframes liquidShimmer {
+    0%, 100% {
+      opacity: 0.9;
+      filter: brightness(1);
+    }
+    50% {
+      opacity: 1;
+      filter: brightness(1.1);
+    }
+  }
+  
+  @keyframes surfaceRipple {
+    0%, 100% {
+      transform: scaleX(1);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scaleX(1.1);
+      opacity: 0.4;
+    }
+  }
+  
+  /* Bubble animations */
+  @keyframes bubble-float-0 {
+    0%, 100% { 
+      transform: translateY(0) scale(1); 
+      opacity: 0.6; 
+    }
+    50% { 
+      transform: translateY(-8px) scale(1.1); 
+      opacity: 0.8; 
+    }
+  }
+  
+  @keyframes bubble-float-1 {
+    0%, 100% { 
+      transform: translateY(0) scale(0.8); 
+      opacity: 0.5; 
+    }
+    50% { 
+      transform: translateY(-12px) scale(1.2); 
+      opacity: 0.9; 
+    }
+  }
+  
+  @keyframes bubble-float-2 {
+    0%, 100% { 
+      transform: translateY(0) scale(1.1); 
+      opacity: 0.7; 
+    }
+    50% { 
+      transform: translateY(-6px) scale(0.9); 
+      opacity: 0.4; 
+    }
+  }
+  
+  @keyframes bubble-float-3 {
+    0%, 100% { 
+      transform: translateY(0) scale(0.9); 
+      opacity: 0.4; 
+    }
+    50% { 
+      transform: translateY(-10px) scale(1.3); 
+      opacity: 0.8; 
+    }
+  }
+  
+  /* Progress bar shine effect */
+  @keyframes progress-shine {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  /* Loading container entrance animation */
+  .salsa-loading-container {
+    animation: fadeInScale 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  @keyframes fadeInScale {
+    0% {
+      opacity: 0;
+      transform: scale(0.95) translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  
+  /* Reduced motion support for loading animations */
+  @media (prefers-reduced-motion: reduce) {
+    .liquid-fill,
+    .liquid-surface,
+    .salsa-loading-container {
+      animation: none;
+    }
+    
+    .bottle-outline {
+      filter: none;
+    }
+  }
+}
