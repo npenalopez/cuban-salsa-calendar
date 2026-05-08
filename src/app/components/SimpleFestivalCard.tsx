@@ -9,6 +9,7 @@ import {
   Plane,
   Train,
   Instagram,
+  Globe,
 } from "lucide-react";
 import { Festival } from "../data/festivals";
 import {
@@ -64,10 +65,33 @@ export function SimpleFestivalCard({
   const isPast = isFestivalPast(festival.dates);
   const [calendarModalOpen, setCalendarModalOpen] = useState(false);
   
-  const handleDetailsClick = (festival: Festival) => {
-    // Instagram URL is always constructed from festival ID
-    const instagramUrl = `https://www.instagram.com/${festival.id}`;
-    safeOpenDetailsURL(instagramUrl, `Visit ${festival.name} Instagram`);
+  // Prefer the festival's Instagram handle when present; fall back to its
+  // website. Returns null when neither is available so the button hides.
+  const detailsLink = (() => {
+    const handle = festival.instagram?.trim().replace(/^@/, "");
+    if (handle) {
+      return {
+        kind: "instagram" as const,
+        url: `https://www.instagram.com/${handle}`,
+        label: "Instagram",
+        ariaLabel: `Visit ${festival.name} Instagram`,
+      };
+    }
+    const site = festival.website?.trim();
+    if (site) {
+      return {
+        kind: "website" as const,
+        url: site,
+        label: t.website,
+        ariaLabel: `Visit ${festival.name} website`,
+      };
+    }
+    return null;
+  })();
+
+  const handleDetailsClick = () => {
+    if (!detailsLink) return;
+    safeOpenDetailsURL(detailsLink.url, detailsLink.ariaLabel);
   };
 
   const handleAddToCalendar = (
@@ -641,17 +665,23 @@ export function SimpleFestivalCard({
         >
           {/* Mobile: Stack buttons vertically */}
           <div className="sm:hidden flex flex-col gap-1.5">
-            <Button
-              onClick={() => handleDetailsClick(festival)}
-              className="w-full bg-black hover:bg-gray-800 text-white font-medium py-2 px-3 transition-colors flex items-center justify-center gap-1"
-              style={{ fontSize: "0.875em" }}
-              aria-label={`Visit ${festival.name} Instagram`}
-              variant="default"
-              size="sm"
-            >
-              <Instagram className="w-3 h-3" aria-hidden="true" />
-              <span>Instagram</span>
-            </Button>
+            {detailsLink && (
+              <Button
+                onClick={handleDetailsClick}
+                className="w-full bg-black hover:bg-gray-800 text-white font-medium py-2 px-3 transition-colors flex items-center justify-center gap-1"
+                style={{ fontSize: "0.875em" }}
+                aria-label={detailsLink.ariaLabel}
+                variant="default"
+                size="sm"
+              >
+                {detailsLink.kind === "instagram" ? (
+                  <Instagram className="w-3 h-3" aria-hidden="true" />
+                ) : (
+                  <Globe className="w-3 h-3" aria-hidden="true" />
+                )}
+                <span>{detailsLink.label}</span>
+              </Button>
+            )}
 
             <Button
               onClick={() => setCalendarModalOpen(true)}
@@ -668,24 +698,30 @@ export function SimpleFestivalCard({
 
           {/* Desktop: Keep horizontal layout */}
           <div className="hidden sm:flex gap-1.5 lg:gap-1.5">
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
-                  onClick={() => handleDetailsClick(festival)}
-                  className="flex-1 bg-black hover:bg-gray-800 text-white font-medium py-1.5 px-2.5 lg:py-1 lg:px-2 transition-colors flex items-center justify-center gap-1"
-                  style={{ fontSize: "0.675em" }}
-                  aria-label={`Visit ${festival.name} Instagram`}
-                  variant="default"
-                  size="sm"
-                >
-                  <Instagram className="w-3 h-3" aria-hidden="true" />
-                  <span>Instagram</span>
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Visit Instagram</p>
-              </TooltipContent>
-            </Tooltip>
+            {detailsLink && (
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    onClick={handleDetailsClick}
+                    className="flex-1 bg-black hover:bg-gray-800 text-white font-medium py-1.5 px-2.5 lg:py-1 lg:px-2 transition-colors flex items-center justify-center gap-1"
+                    style={{ fontSize: "0.675em" }}
+                    aria-label={detailsLink.ariaLabel}
+                    variant="default"
+                    size="sm"
+                  >
+                    {detailsLink.kind === "instagram" ? (
+                      <Instagram className="w-3 h-3" aria-hidden="true" />
+                    ) : (
+                      <Globe className="w-3 h-3" aria-hidden="true" />
+                    )}
+                    <span>{detailsLink.label}</span>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{detailsLink.ariaLabel}</p>
+                </TooltipContent>
+              </Tooltip>
+            )}
 
             <Tooltip>
               <TooltipTrigger asChild>
