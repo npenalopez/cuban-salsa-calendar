@@ -472,6 +472,127 @@ export function CountryFlagIcon({ country, size = 16, className = "" }: CountryF
           </svg>
         );
 
+      case 'sweden':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            <rect width="24" height="16" fill="#006AA7" />
+            {/* Yellow Nordic cross (off-center toward hoist) */}
+            <rect x="0" y="6" width="24" height="4" fill="#FECC00" />
+            <rect x="6" y="0" width="4" height="16" fill="#FECC00" />
+          </svg>
+        );
+
+      case 'russia':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            <rect x="0" y="0" width="24" height="5.33" fill="white" />
+            <rect x="0" y="5.33" width="24" height="5.33" fill="#0039A6" />
+            <rect x="0" y="10.66" width="24" height="5.34" fill="#D52B1E" />
+          </svg>
+        );
+
+      case 'thailand':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            <rect x="0" y="0" width="24" height="2.67" fill="#A51931" />
+            <rect x="0" y="2.67" width="24" height="2.67" fill="white" />
+            <rect x="0" y="5.34" width="24" height="5.32" fill="#2D2A4A" />
+            <rect x="0" y="10.66" width="24" height="2.67" fill="white" />
+            <rect x="0" y="13.33" width="24" height="2.67" fill="#A51931" />
+          </svg>
+        );
+
+      case 'uae':
+      case 'united arab emirates':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            {/* Red vertical at hoist */}
+            <rect x="0" y="0" width="6" height="16" fill="#EF3340" />
+            {/* Green / white / black horizontals on the fly */}
+            <rect x="6" y="0" width="18" height="5.33" fill="#009739" />
+            <rect x="6" y="5.33" width="18" height="5.33" fill="white" />
+            <rect x="6" y="10.66" width="18" height="5.34" fill="#000000" />
+          </svg>
+        );
+
+      case 'egypt':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            <rect x="0" y="0" width="24" height="5.33" fill="#CE1126" />
+            <rect x="0" y="5.33" width="24" height="5.33" fill="white" />
+            <rect x="0" y="10.66" width="24" height="5.34" fill="#000000" />
+            {/* Simplified Eagle of Saladin */}
+            <circle cx="12" cy="8" r="1.5" fill="#C09300" />
+          </svg>
+        );
+
+      case 'australia':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            <rect width="24" height="16" fill="#012169" />
+            {/* Union Jack canton (top-left half) */}
+            <polygon points="0,0 0,1.6 10.5,8 12,8 12,6.4 1.5,0" fill="white" />
+            <polygon points="0,8 0,6.4 10.5,0 12,0 12,1.6 1.5,8" fill="white" />
+            <polygon points="0,0 0,0.8 11.3,8 12,8 12,7.2 0.7,0" fill="#C8102E" />
+            <polygon points="0,8 0,7.2 11.3,0 12,0 12,0.8 0.7,8" fill="#C8102E" />
+            <rect x="0" y="3.2" width="12" height="1.6" fill="white" />
+            <rect x="5.2" y="0" width="1.6" height="8" fill="white" />
+            <rect x="0" y="3.6" width="12" height="0.8" fill="#C8102E" />
+            <rect x="5.6" y="0" width="0.8" height="8" fill="#C8102E" />
+            {/* Commonwealth Star (lower hoist) */}
+            <path d="M6 12 L6.6 13.3 L8 13.3 L6.9 14.2 L7.3 15.5 L6 14.7 L4.7 15.5 L5.1 14.2 L4 13.3 L5.4 13.3 Z" fill="white" />
+            {/* Southern Cross (right side) */}
+            <circle cx="18" cy="4" r="0.6" fill="white" />
+            <circle cx="20.5" cy="6.5" r="0.5" fill="white" />
+            <circle cx="17.5" cy="9" r="0.5" fill="white" />
+            <circle cx="20" cy="11.5" r="0.7" fill="white" />
+            <circle cx="22" cy="13.5" r="0.4" fill="white" />
+          </svg>
+        );
+
+      case 'new zealand':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            <rect width="24" height="16" fill="#012169" />
+            {/* Union Jack canton (top-left half) */}
+            <polygon points="0,0 0,1.6 10.5,8 12,8 12,6.4 1.5,0" fill="white" />
+            <polygon points="0,8 0,6.4 10.5,0 12,0 12,1.6 1.5,8" fill="white" />
+            <polygon points="0,0 0,0.8 11.3,8 12,8 12,7.2 0.7,0" fill="#C8102E" />
+            <polygon points="0,8 0,7.2 11.3,0 12,0 12,0.8 0.7,8" fill="#C8102E" />
+            <rect x="0" y="3.2" width="12" height="1.6" fill="white" />
+            <rect x="5.2" y="0" width="1.6" height="8" fill="white" />
+            <rect x="0" y="3.6" width="12" height="0.8" fill="#C8102E" />
+            <rect x="5.6" y="0" width="0.8" height="8" fill="#C8102E" />
+            {/* Southern Cross — 4 red stars with white outline on the fly */}
+            <circle cx="20" cy="4" r="0.85" fill="white" />
+            <circle cx="20" cy="4" r="0.55" fill="#C8102E" />
+            <circle cx="17.5" cy="7.5" r="0.85" fill="white" />
+            <circle cx="17.5" cy="7.5" r="0.55" fill="#C8102E" />
+            <circle cx="21" cy="10" r="0.85" fill="white" />
+            <circle cx="21" cy="10" r="0.55" fill="#C8102E" />
+            <circle cx="18.5" cy="13" r="0.7" fill="white" />
+            <circle cx="18.5" cy="13" r="0.45" fill="#C8102E" />
+          </svg>
+        );
+
+      case 'south africa':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            {/* Top: red, Bottom: blue */}
+            <rect x="0" y="0" width="24" height="8" fill="#E03C31" />
+            <rect x="0" y="8" width="24" height="8" fill="#001489" />
+            {/* White borders of the pall */}
+            <polygon points="0,1.5 0,4 7,8 24,8 24,7 9,7 2,1.5" fill="white" />
+            <polygon points="0,14.5 0,12 7,8 24,8 24,9 9,9 2,14.5" fill="white" />
+            {/* Green pall (Y) */}
+            <polygon points="0,3 0,13 8,8" fill="#007749" />
+            <polygon points="6,7 24,7 24,9 6,9" fill="#007749" />
+            {/* Yellow inner triangle border + black hoist triangle */}
+            <polygon points="0,4.5 0,11.5 7,8" fill="#FFB81C" />
+            <polygon points="0,5.5 0,10.5 5,8" fill="#000000" />
+          </svg>
+        );
+
       default:
         // Generic flag placeholder for unknown countries
         return (
