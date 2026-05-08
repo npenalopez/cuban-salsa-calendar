@@ -65,10 +65,18 @@ export function SimpleFestivalCard({
   const isPast = isFestivalPast(festival.dates);
   const [calendarModalOpen, setCalendarModalOpen] = useState(false);
   
-  // Prefer the festival's Instagram handle when present; fall back to its
-  // website. Returns null when neither is available so the button hides.
+  // Prefer the festival's Instagram handle when present; fall back to
+  // its website. The "-" placeholder used in the seed data counts as
+  // "not confirmed" — we treat it as missing so the button doesn't link
+  // to a broken handle/URL. Returns null when neither is available, in
+  // which case the button is rendered disabled.
+  const cleanField = (raw: string | undefined): string | null => {
+    const trimmed = raw?.trim();
+    if (!trimmed || trimmed === "-") return null;
+    return trimmed;
+  };
   const detailsLink = (() => {
-    const handle = festival.instagram?.trim().replace(/^@/, "");
+    const handle = cleanField(festival.instagram)?.replace(/^@/, "");
     if (handle) {
       return {
         kind: "instagram" as const,
@@ -77,7 +85,7 @@ export function SimpleFestivalCard({
         ariaLabel: `Visit ${festival.name} Instagram`,
       };
     }
-    const site = festival.website?.trim();
+    const site = cleanField(festival.website);
     if (site) {
       return {
         kind: "website" as const,
@@ -665,7 +673,7 @@ export function SimpleFestivalCard({
         >
           {/* Mobile: Stack buttons vertically */}
           <div className="sm:hidden flex flex-col gap-1.5">
-            {detailsLink && (
+            {detailsLink ? (
               <Button
                 onClick={handleDetailsClick}
                 className="w-full bg-black hover:bg-gray-800 text-white font-medium py-2 px-3 transition-colors flex items-center justify-center gap-1"
@@ -680,6 +688,18 @@ export function SimpleFestivalCard({
                   <Globe className="w-3 h-3" aria-hidden="true" />
                 )}
                 <span>{detailsLink.label}</span>
+              </Button>
+            ) : (
+              <Button
+                disabled
+                className="w-full bg-gray-200 text-gray-400 font-medium py-2 px-3 flex items-center justify-center gap-1 cursor-not-allowed"
+                style={{ fontSize: "0.875em" }}
+                aria-label={`No Instagram or website available for ${festival.name}`}
+                variant="default"
+                size="sm"
+              >
+                <Instagram className="w-3 h-3" aria-hidden="true" />
+                <span>Instagram</span>
               </Button>
             )}
 
@@ -698,7 +718,7 @@ export function SimpleFestivalCard({
 
           {/* Desktop: Keep horizontal layout */}
           <div className="hidden sm:flex gap-1.5 lg:gap-1.5">
-            {detailsLink && (
+            {detailsLink ? (
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button
@@ -719,6 +739,25 @@ export function SimpleFestivalCard({
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>{detailsLink.ariaLabel}</p>
+                </TooltipContent>
+              </Tooltip>
+            ) : (
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button
+                    disabled
+                    className="flex-1 bg-gray-200 text-gray-400 font-medium py-1.5 px-2.5 lg:py-1 lg:px-2 flex items-center justify-center gap-1 cursor-not-allowed"
+                    style={{ fontSize: "0.675em" }}
+                    aria-label={`No Instagram or website available for ${festival.name}`}
+                    variant="default"
+                    size="sm"
+                  >
+                    <Instagram className="w-3 h-3" aria-hidden="true" />
+                    <span>Instagram</span>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>No confirmed Instagram or website</p>
                 </TooltipContent>
               </Tooltip>
             )}
