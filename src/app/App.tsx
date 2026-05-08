@@ -417,29 +417,21 @@ function AppContent() {
 
   return (
     <TooltipProvider>
-      <div className="min-h-screen bg-stone-50 flex flex-col">
-        <header className="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-white/85 bg-white border-b border-stone-200">
-          {/* Cuban-inspired accent stripe */}
-          <div className="h-1 w-full bg-gradient-to-r from-red-600 via-orange-500 to-amber-400" aria-hidden="true" />
-
+      <div className="min-h-screen bg-white flex flex-col">
+        <header className="bg-white border-b border-gray-200 sticky top-0 z-30">
           <div className="px-4 sm:px-6 max-w-6xl mx-auto">
-            <div className="flex items-center justify-between py-3 sm:py-4">
-              <div className="flex items-center gap-2.5 min-w-0">
-                <CubanFlagIcon size={22} className="flex-shrink-0" />
-                <div className="min-w-0">
-                  <h1
-                    className="text-base sm:text-lg font-bold tracking-tight text-stone-900 cursor-pointer select-none truncate"
-                    onClick={handleTitleClick}
-                  >
-                    Cuban Salsa Calendar
-                  </h1>
-                  <p className="hidden sm:block text-xs text-stone-500 leading-tight">
-                    Festivals · congresses · marathons worldwide
-                  </p>
-                </div>
+            <div className="flex items-center justify-between py-3">
+              <div className="flex items-center gap-2 min-w-0">
+                <CubanFlagIcon size={18} className="flex-shrink-0" />
+                <h1
+                  className="text-lg font-semibold cursor-pointer select-none truncate"
+                  onClick={handleTitleClick}
+                >
+                  Cuban Salsa Calendar
+                </h1>
               </div>
 
-              <div className="flex items-center gap-1.5">
+              <div className="flex items-center gap-1">
                 <LanguageSelector />
                 <HelpButton onShowHelp={handleShowHelp} />
 
@@ -447,10 +439,10 @@ function AppContent() {
                   festivals={festivals}
                   triggerElement={
                     <button
-                      className="h-9 w-9 bg-stone-900 hover:bg-red-600 text-white rounded-md flex items-center justify-center transition-colors shadow-sm"
+                      className="h-8 w-8 bg-black hover:bg-gray-800 text-white flex items-center justify-center transition-colors"
                       aria-label={t.topArtists}
                     >
-                      <Trophy className="h-4 w-4" />
+                      <Trophy className="h-3.5 w-3.5" />
                     </button>
                   }
                 />
@@ -461,11 +453,11 @@ function AppContent() {
                       <button
                         onClick={handleOpenManagement}
                         disabled={managementLoading}
-                        className="h-9 w-9 bg-stone-900 hover:bg-red-600 text-white rounded-md flex items-center justify-center transition-colors shadow-sm"
+                        className="h-8 w-8 bg-black hover:bg-gray-800 text-white flex items-center justify-center transition-colors"
                         aria-label="Open festival management"
                       >
                         <Settings
-                          className={`h-4 w-4 ${managementLoading ? "animate-spin" : ""}`}
+                          className={`h-3.5 w-3.5 ${managementLoading ? "animate-spin" : ""}`}
                         />
                       </button>
                     </TooltipTrigger>
@@ -477,7 +469,7 @@ function AppContent() {
               </div>
             </div>
 
-            <div className="pb-3">
+            <div className="pb-2">
               <SimpleFilters
                 searchQuery={searchQuery}
                 selectedMonth={selectedMonth}
@@ -494,15 +486,15 @@ function AppContent() {
           </div>
         </header>
 
-        <main className="flex-1 bg-stone-50">
+        <main className="flex-1 bg-gray-50">
           {/* Contact Banner */}
-          <div className="bg-gradient-to-r from-red-50 via-orange-50 to-amber-50 border-b border-stone-200 py-2.5">
+          <div className="bg-gray-100 border-b border-gray-200 py-2">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
-              <p className="text-sm text-stone-700">
+              <p className="text-sm text-gray-600">
                 {t.foundMistake}{" "}
                 <button
                   onClick={handleInstagramClick}
-                  className="text-red-600 hover:text-red-700 font-semibold underline-offset-2 hover:underline transition-colors bg-transparent border-none p-0 cursor-pointer"
+                  className="text-gray-900 font-medium hover:text-gray-700 underline transition-colors bg-transparent border-none p-0 cursor-pointer"
                 >
                   @cubansalsacalendar
                 </button>
@@ -511,26 +503,24 @@ function AppContent() {
           </div>
 
           <div className="max-w-6xl mx-auto px-4 sm:px-6">
-            <div className="py-6 min-h-[70vh]">
+            <div className="py-4 min-h-[70vh]">
               {filteredFestivals.length === 0 &&
                 dataLoaded &&
                 (selectedMonth !== "All" || searchQuery) && (
-                  <div className="text-center py-10">
-                    <div className="bg-white rounded-2xl p-8 max-w-sm mx-auto border border-stone-200 shadow-sm">
-                      <div className="flex justify-center mb-4">
-                        <div className="h-14 w-14 rounded-full bg-stone-100 flex items-center justify-center">
-                          <Search className="h-7 w-7 text-stone-500" />
-                        </div>
+                  <div className="text-center py-8">
+                    <div className="bg-white p-6 max-w-sm mx-auto border border-gray-200">
+                      <div className="flex justify-center mb-3">
+                        <Search className="h-8 w-8 text-gray-400" />
                       </div>
-                      <h3 className="font-semibold text-stone-900 mb-2 text-lg">
+                      <h3 className="font-semibold text-gray-900 mb-2">
                         {t.noFestivalsFound}
                       </h3>
-                      <p className="text-stone-600 text-sm mb-5">
+                      <p className="text-gray-600 text-sm mb-4">
                         {t.adjustFilters}
                       </p>
                       <button
                         onClick={clearAllFilters}
-                        className="bg-red-600 hover:bg-red-700 text-white font-medium py-2.5 px-5 rounded-md text-sm transition-colors shadow-sm"
+                        className="bg-black hover:bg-gray-800 text-white font-medium py-2 px-4 text-sm transition-colors"
                       >
                         {t.showAll}
                       </button>
@@ -551,26 +541,24 @@ function AppContent() {
                 dataLoaded &&
                 selectedMonth === "All" &&
                 !searchQuery && (
-                  <div className="text-center py-16">
-                    <div className="bg-white rounded-2xl p-10 max-w-md mx-auto border border-stone-200 shadow-sm">
-                      <div className="flex justify-center mb-5">
-                        <div className="h-16 w-16 rounded-full bg-gradient-to-br from-red-500 to-orange-400 flex items-center justify-center shadow-md">
-                          <Music className="h-8 w-8 text-white" />
-                        </div>
+                  <div className="text-center py-12">
+                    <div className="bg-white p-8 max-w-md mx-auto border border-gray-200">
+                      <div className="flex justify-center mb-4">
+                        <Music className="h-12 w-12 text-gray-400" />
                       </div>
-                      <h2 className="text-2xl font-bold text-stone-900 mb-1">
+                      <h2 className="text-xl font-bold text-gray-900 mb-2">
                         {t.welcome}
                       </h2>
-                      <h3 className="font-semibold text-stone-700 mb-3">
+                      <h3 className="font-semibold text-gray-700 mb-3">
                         {t.title}
                       </h3>
-                      <p className="text-stone-600 text-sm mb-6 leading-relaxed">
+                      <p className="text-gray-600 text-sm mb-6 leading-relaxed">
                         {t.welcomeMessage}
                       </p>
                       {adminModeEnabled && (
                         <button
                           onClick={handleOpenManagement}
-                          className="bg-red-600 hover:bg-red-700 text-white font-medium py-2.5 px-5 rounded-md text-sm transition-colors shadow-sm"
+                          className="bg-black hover:bg-gray-800 text-white font-medium py-2 px-4 text-sm transition-colors"
                         >
                           Add Your First Festival
                         </button>
@@ -584,15 +572,15 @@ function AppContent() {
           </div>
         </main>
 
-        <footer className="bg-stone-900 text-stone-300 py-6">
+        <footer className="bg-black text-gray-300 py-5 border-t border-gray-200">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-2">
-              <CubanFlagIcon size={16} />
+              <CubanFlagIcon size={14} />
               <span className="text-sm">Cuban Salsa Calendar · {new Date().getFullYear()}</span>
             </div>
             <button
               onClick={handleInstagramClick}
-              className="text-sm text-stone-400 hover:text-white transition-colors underline-offset-2 hover:underline"
+              className="text-sm text-gray-400 hover:text-white transition-colors hover:underline"
             >
               {t.followInstagram}
             </button>

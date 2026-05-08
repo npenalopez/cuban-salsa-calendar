@@ -85,37 +85,26 @@ export function FestivalCalendar({ festivals, userLocation, onUpdateFestival, al
 
   if (monthlyData.length === 0) {
     return (
-      <div className="text-center py-10">
-        <div className="bg-white rounded-2xl border border-stone-200 shadow-sm max-w-md mx-auto p-8">
-          <div className="flex justify-center mb-4">
-            <div className="h-14 w-14 rounded-full bg-stone-100 flex items-center justify-center">
-              <CalendarIcon className="h-7 w-7 text-stone-500" />
-            </div>
-          </div>
-          <h3 className="font-semibold text-stone-900 mb-2 text-lg">{t.noFestivalsDisplay}</h3>
-          <p className="text-sm text-stone-600">{t.tryAdjustingFilters}</p>
+      <div className="text-center py-8">
+        <div className="bg-white border border-gray-200 max-w-md mx-auto p-6">
+          <CalendarIcon className="h-8 w-8 text-gray-400 mx-auto mb-3" />
+          <h3 className="font-medium text-gray-900 mb-2">{t.noFestivalsDisplay}</h3>
+          <p className="text-sm text-gray-600">{t.tryAdjustingFilters}</p>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       {monthlyData.map(({ name, festivals: monthFestivals }) => (
         <section key={name} className="festival-month-section">
-          {/* Month Header with accent bar */}
-          <div className="flex items-center gap-3 mb-4">
-            <span
-              className="block h-7 w-1 rounded-full bg-gradient-to-b from-red-600 to-orange-400"
-              aria-hidden="true"
-            />
-            <h2 className="font-bold text-stone-900 text-xl tracking-tight">
-              {getTranslatedMonth(name)}
-            </h2>
-            <span className="text-xs font-medium text-stone-700 bg-stone-100 px-2.5 py-1 rounded-full">
+          {/* Month Header */}
+          <div className="flex items-center justify-between mb-3 pb-1 border-b border-gray-200">
+            <h2 className="font-semibold text-gray-900 text-base">{getTranslatedMonth(name)}</h2>
+            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1">
               {countUniqueFestivals(monthFestivals)}
             </span>
-            <div className="flex-1 h-px bg-stone-200 ml-1" aria-hidden="true" />
           </div>
 
           {/* Responsive Festival Grid */}

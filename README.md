@@ -8,7 +8,6 @@ calendar; and see travel-time estimates from your current location.
 
 - **Vite** + **React 18** + **TypeScript**
 - **Tailwind CSS v4** with shadcn-style primitives
-- **Supabase** for festival data persistence
 - **i18n** for English, German, Spanish, French, and Polish
 
 ## Getting started
@@ -21,19 +20,16 @@ npm run typecheck    # TypeScript only, no emit
 npm run preview      # serve the built dist/
 ```
 
-By default the app runs without a database — festivals come from the
-seed list in [src/app/data/festivals.ts](src/app/data/festivals.ts) and
-admin edits are persisted in `localStorage`. To back the app with a
-real Supabase project, copy `.env.example` to `.env` and set:
+## Updating the festival list
 
-```
-VITE_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
-VITE_SUPABASE_ANON_KEY=...
-```
+The festival list lives in [src/app/data/festivals.ts](src/app/data/festivals.ts).
+To add, edit, or remove festivals: change that file and push.
 
-When the seed list is updated in code, bump `SEED_VERSION` in
-[src/app/services/supabase.ts](src/app/services/supabase.ts) so any
-stale local caches get refreshed on next load.
+The app caches the list in `localStorage` so admin edits made in-app
+also survive a reload. After editing the seed list in code, bump
+`SEED_VERSION` in [src/app/services/supabase.ts](src/app/services/supabase.ts)
+so existing visitors' caches get replaced with the new data on their
+next visit.
 
 ## Project layout
 

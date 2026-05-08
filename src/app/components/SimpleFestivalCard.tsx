@@ -217,23 +217,15 @@ export function SimpleFestivalCard({
     <>
       <article
         id={`festival-card-${festival.id}`}
-        className={`bg-white border border-stone-200 rounded-xl p-4 sm:p-3 lg:p-3 hover:shadow-md hover:border-stone-300 transition-all duration-200 h-full flex flex-col relative overflow-hidden ${isPast ? "opacity-70" : ""}`}
+        className="bg-white border border-gray-200 p-4 sm:p-3 lg:p-3 hover:shadow-sm transition-shadow duration-200 h-full flex flex-col relative overflow-hidden"
         role="article"
         tabIndex={0}
         data-festival-id={festival.id}
         data-festival-name={festival.name}
       >
-        {/* Top accent stripe (subtle) */}
-        {!isPast && (
-          <div
-            className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-red-500 via-orange-400 to-amber-300 opacity-0 group-hover:opacity-100"
-            aria-hidden="true"
-          />
-        )}
-
         {/* Past Event Ribbon */}
         {isPast && (
-          <div className="absolute top-3 -right-10 bg-stone-700 text-white text-xs px-12 py-1 rotate-45 z-10 shadow-md">
+          <div className="absolute top-3 -right-10 bg-gray-600 text-white text-xs px-12 py-1 rotate-45 z-10 shadow-md">
             {t.pastEvent}
           </div>
         )}
@@ -469,45 +461,40 @@ export function SimpleFestivalCard({
                 })()}
             </div>
 
-            {/* Enhanced Date Badge with Duration - Moved to Right */}
+            {/* Date Badge */}
             <div
-              className={`rounded-lg text-center flex flex-col items-stretch justify-stretch flex-shrink-0 overflow-hidden border ${
-                isPast
-                  ? "border-stone-300 bg-white text-stone-700"
-                  : "border-red-200 bg-white text-stone-900 shadow-sm"
-              }`}
+              className="bg-white text-gray-800 border border-gray-300 text-center flex flex-col items-center justify-center flex-shrink-0 px-1"
               style={{ width: "3em", height: "3.5em" }}
               aria-label={`${t.date}: ${day} ${month} ${year}`}
             >
+              <div
+                className="font-bold leading-none"
+                style={{ fontSize: "1em" }}
+                aria-hidden="true"
+              >
+                {day}
+              </div>
               {month && (
                 <div
-                  className={`leading-none font-semibold uppercase tracking-wider py-0.5 ${
-                    isPast ? "bg-stone-200 text-stone-700" : "bg-red-600 text-white"
-                  }`}
-                  style={{ fontSize: "0.625em" }}
+                  className="leading-none"
+                  style={{
+                    fontSize: "0.75em",
+                    marginTop: "0.25em",
+                  }}
                   aria-hidden="true"
                 >
                   {month.slice(0, 3)}
                 </div>
               )}
-              <div className="flex-1 flex flex-col items-center justify-center">
-                <div
-                  className="font-bold leading-none"
-                  style={{ fontSize: "1.05em" }}
-                  aria-hidden="true"
-                >
-                  {day}
-                </div>
-                <div
-                  className="leading-none opacity-60"
-                  style={{
-                    fontSize: "0.5625em",
-                    marginTop: "0.15em",
-                  }}
-                  aria-hidden="true"
-                >
-                  {year}
-                </div>
+              <div
+                className="leading-none opacity-75"
+                style={{
+                  fontSize: "0.625em",
+                  marginTop: "0.25em",
+                }}
+                aria-hidden="true"
+              >
+                {year}
               </div>
             </div>
           </div>
@@ -655,27 +642,27 @@ export function SimpleFestivalCard({
           {/* Mobile: Stack buttons vertically */}
           <div className="sm:hidden flex flex-col gap-1.5">
             <Button
-              onClick={() => setCalendarModalOpen(true)}
-              className="w-full bg-red-600 hover:bg-red-700 text-white font-medium py-2 px-3 rounded-md transition-colors flex items-center justify-center gap-1.5 shadow-sm"
+              onClick={() => handleDetailsClick(festival)}
+              className="w-full bg-black hover:bg-gray-800 text-white font-medium py-2 px-3 transition-colors flex items-center justify-center gap-1"
               style={{ fontSize: "0.875em" }}
-              aria-label={`Add ${festival.name} to calendar`}
+              aria-label={`Visit ${festival.name} Instagram`}
               variant="default"
               size="sm"
             >
-              <CalendarPlus className="w-3.5 h-3.5" aria-hidden="true" />
-              <span>{t.addToCalendar}</span>
+              <Instagram className="w-3 h-3" aria-hidden="true" />
+              <span>Instagram</span>
             </Button>
 
             <Button
-              onClick={() => handleDetailsClick(festival)}
-              className="w-full bg-white hover:bg-stone-50 text-stone-900 font-medium py-2 px-3 rounded-md transition-colors border border-stone-300 flex items-center justify-center gap-1.5"
+              onClick={() => setCalendarModalOpen(true)}
+              className="w-full bg-white hover:bg-gray-50 text-black font-medium py-2 px-3 transition-colors border border-black flex items-center justify-center gap-1"
               style={{ fontSize: "0.875em" }}
-              aria-label={`Visit ${festival.name} Instagram`}
+              aria-label={`Add ${festival.name} to calendar`}
               variant="outline"
               size="sm"
             >
-              <Instagram className="w-3.5 h-3.5" aria-hidden="true" />
-              <span>Instagram</span>
+              <CalendarPlus className="w-3 h-3" aria-hidden="true" />
+              <span>{t.addToCalendar}</span>
             </Button>
           </div>
 
@@ -684,30 +671,11 @@ export function SimpleFestivalCard({
             <Tooltip>
               <TooltipTrigger asChild>
                 <Button
-                  onClick={() => setCalendarModalOpen(true)}
-                  className="flex-1 bg-red-600 hover:bg-red-700 text-white font-medium py-1.5 px-2.5 lg:py-1 lg:px-2 rounded-md transition-colors flex items-center justify-center gap-1 shadow-sm"
-                  style={{ fontSize: "0.675em" }}
-                  aria-label={`Add ${festival.name} to calendar`}
-                  variant="default"
-                  size="sm"
-                >
-                  <CalendarPlus className="w-3 h-3" aria-hidden="true" />
-                  <span>{t.addToCalendar}</span>
-                </Button>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{t.addToCalendar}</p>
-              </TooltipContent>
-            </Tooltip>
-
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Button
                   onClick={() => handleDetailsClick(festival)}
-                  className="flex-1 bg-white hover:bg-stone-50 text-stone-900 font-medium py-1.5 px-2.5 lg:py-1 lg:px-2 rounded-md transition-colors border border-stone-300 flex items-center justify-center gap-1"
+                  className="flex-1 bg-black hover:bg-gray-800 text-white font-medium py-1.5 px-2.5 lg:py-1 lg:px-2 transition-colors flex items-center justify-center gap-1"
                   style={{ fontSize: "0.675em" }}
                   aria-label={`Visit ${festival.name} Instagram`}
-                  variant="outline"
+                  variant="default"
                   size="sm"
                 >
                   <Instagram className="w-3 h-3" aria-hidden="true" />
@@ -716,6 +684,25 @@ export function SimpleFestivalCard({
               </TooltipTrigger>
               <TooltipContent>
                 <p>Visit Instagram</p>
+              </TooltipContent>
+            </Tooltip>
+
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Button
+                  onClick={() => setCalendarModalOpen(true)}
+                  className="flex-1 bg-white hover:bg-gray-50 text-black font-medium py-1.5 px-2.5 lg:py-1 lg:px-2 transition-colors border border-black flex items-center justify-center gap-1"
+                  style={{ fontSize: "0.675em" }}
+                  aria-label={`Add ${festival.name} to calendar`}
+                  variant="outline"
+                  size="sm"
+                >
+                  <CalendarPlus className="w-3 h-3" aria-hidden="true" />
+                  <span>{t.addToCalendar}</span>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{t.addToCalendar}</p>
               </TooltipContent>
             </Tooltip>
           </div>
