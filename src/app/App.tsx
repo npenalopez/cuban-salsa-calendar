@@ -302,20 +302,15 @@ function AppContent() {
       try {
         await supabaseFestivalService.initializeDatabase();
         supabaseFestivalService.enableRealSupabase();
-        const dbFestivals = await supabaseFestivalService.getAllFestivals();
-        if (dbFestivals && dbFestivals.length > 0) {
-          return dbFestivals;
-        }
-        try {
-          await supabaseFestivalService.seedDatabase(initialFestivals);
-          const seeded = await supabaseFestivalService.getAllFestivals();
-          if (seeded && seeded.length > 0) return seeded;
-        } catch (seedError) {
-          console.error("Failed to seed database:", seedError);
-        }
+        // Always run the seeder first — when running without Supabase env
+        // vars, this hydrates localStorage from the in-code festival list
+        // (and replaces stale caches when SEED_VERSION bumps).
+        await supabaseFestivalService.seedDatabase(initialFestivals);
+        const stored = await supabaseFestivalService.getAllFestivals();
+        if (stored && stored.length > 0) return stored;
         return initialFestivals;
       } catch (error) {
-        console.error("Failed to load festivals from database:", error);
+        console.error("Failed to load festivals:", error);
         return initialFestivals;
       }
     };

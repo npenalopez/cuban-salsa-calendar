@@ -21,6 +21,20 @@ npm run typecheck    # TypeScript only, no emit
 npm run preview      # serve the built dist/
 ```
 
+By default the app runs without a database — festivals come from the
+seed list in [src/app/data/festivals.ts](src/app/data/festivals.ts) and
+admin edits are persisted in `localStorage`. To back the app with a
+real Supabase project, copy `.env.example` to `.env` and set:
+
+```
+VITE_SUPABASE_URL=https://YOUR_PROJECT.supabase.co
+VITE_SUPABASE_ANON_KEY=...
+```
+
+When the seed list is updated in code, bump `SEED_VERSION` in
+[src/app/services/supabase.ts](src/app/services/supabase.ts) so any
+stale local caches get refreshed on next load.
+
 ## Project layout
 
 ```
