@@ -34,6 +34,7 @@ import { toast } from 'sonner';
 interface FestivalFactCheckProps {
   festivals: Festival[];
   onEditFestival: (festival: Festival) => void;
+  onDeleteFestival: (festival: Festival) => void;
 }
 
 type Filter = 'unchecked' | 'overdue' | 'verified' | 'all';
@@ -52,7 +53,7 @@ const buildWebsiteUrl = (raw: string | undefined): string | null => {
   return trimmed;
 };
 
-export function FestivalFactCheck({ festivals, onEditFestival }: FestivalFactCheckProps) {
+export function FestivalFactCheck({ festivals, onEditFestival, onDeleteFestival }: FestivalFactCheckProps) {
   const [log, setLog] = useState<FactCheckLog>(() => readFactCheckLog());
   const [filter, setFilter] = useState<Filter>('unchecked');
   const [searchQuery, setSearchQuery] = useState('');
@@ -229,15 +230,34 @@ export function FestivalFactCheck({ festivals, onEditFestival }: FestivalFactChe
                         {festival.dates} · {festival.city}, {festival.country}
                       </p>
                     </div>
-                    <Button
-                      onClick={() => onEditFestival(festival)}
-                      variant="outline"
-                      size="sm"
-                      className="border-black"
-                      title="Open editor"
-                    >
-                      <Edit className="h-3.5 w-3.5 mr-1" /> Edit
-                    </Button>
+                    <div className="flex items-center gap-2 flex-shrink-0">
+                      <Button
+                        onClick={() => onEditFestival(festival)}
+                        variant="outline"
+                        size="sm"
+                        className="border-black"
+                        title="Open editor"
+                      >
+                        <Edit className="h-3.5 w-3.5 mr-1" /> Edit
+                      </Button>
+                      <Button
+                        onClick={() => {
+                          // Drop the fact-check stamp first so the delete
+                          // confirmation reflects the cleared state if the
+                          // user reverses course later.
+                          if (log[festival.id]) {
+                            setLog(unmarkVerified(festival.id));
+                          }
+                          onDeleteFestival(festival);
+                        }}
+                        variant="outline"
+                        size="sm"
+                        className="border-red-300 text-red-600 hover:bg-red-50 hover:text-red-700"
+                        title="Delete this festival"
+                      >
+                        <Trash2 className="h-3.5 w-3.5 mr-1" /> Delete
+                      </Button>
+                    </div>
                   </div>
                 </CardHeader>
 

@@ -678,6 +678,7 @@ export function EnhancedFestivalManagement({ festivals, onUpdateFestivals, onClo
             <FestivalFactCheck
               festivals={festivals}
               onEditFestival={handleOpenEditDialog}
+              onDeleteFestival={openDeleteDialog}
             />
           </TabsContent>
 
