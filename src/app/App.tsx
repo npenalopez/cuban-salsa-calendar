@@ -41,6 +41,7 @@ import { supabaseFestivalService } from "./services/supabase";
 import {
   getPrimaryMonth,
   getFestivalSortPriority,
+  isFestivalPast,
 } from "./utils/dateUtils";
 import { normalizeFestivalMonths } from "./utils/festivalMonthNormalization";
 import { safeOpenDetailsURL } from "./utils/calendarExport";
@@ -60,9 +61,26 @@ import {
 } from "./components/ui/tooltip";
 import { toast } from "sonner";
 
+const HIDE_PAST_STORAGE_KEY = 'cuban-salsa-hide-past';
+
 function AppContent() {
   const [selectedMonth, setSelectedMonth] = useState("All");
   const [searchQuery, setSearchQuery] = useState("");
+  const [hidePast, setHidePastState] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem(HIDE_PAST_STORAGE_KEY) === '1';
+    } catch {
+      return false;
+    }
+  });
+  const setHidePast = (next: boolean) => {
+    setHidePastState(next);
+    try {
+      localStorage.setItem(HIDE_PAST_STORAGE_KEY, next ? '1' : '0');
+    } catch {
+      /* ignore quota errors */
+    }
+  };
   const [showManagement, setShowManagement] = useState(false);
   const [showHelpPage, setShowHelpPage] = useState(false);
   const [festivals, setFestivals] = useState<Festival[]>([]);
@@ -199,9 +217,10 @@ function AppContent() {
   };
 
   // A festival is displayable if it has the required fields and a parseable
-  // primary month. Past festivals are kept in the grid (the SimpleFestivalCard
-  // shows a "PAST" ribbon) on the assumption that next year's edition will fall
-  // close to the same dates and the entry is a soft placeholder.
+  // primary month. Past festivals are kept by default (the SimpleFestivalCard
+  // shows a "PAST" ribbon) on the assumption that next year's edition will
+  // fall close to the same dates and the entry is a soft placeholder. The
+  // header toggle lets the visitor opt out and hide them.
   const isDisplayableFestival = (festival: Festival): boolean => {
     if (!festival || typeof festival !== 'object') {
       return false;
@@ -213,6 +232,9 @@ function AppContent() {
     if (!primaryMonth) {
       return false;
     }
+    if (hidePast && isFestivalPast(festival.dates)) {
+      return false;
+    }
     return true;
   };
 
@@ -222,7 +244,7 @@ function AppContent() {
       return 0;
     }
     return festivals.filter(isDisplayableFestival).length;
-  }, [festivals]);
+  }, [festivals, hidePast]);
 
   const filteredFestivals = useMemo(() => {
     if (!Array.isArray(festivals) || festivals.length === 0) {
@@ -280,7 +302,7 @@ function AppContent() {
       if (priorityA !== priorityB) return priorityA - priorityB;
       return a.name.localeCompare(b.name);
     });
-  }, [festivals, selectedMonth, searchQuery]);
+  }, [festivals, selectedMonth, searchQuery, hidePast]);
 
   const clearAllFilters = () => {
     setSelectedMonth("All");
@@ -472,6 +494,8 @@ function AppContent() {
                 festivals={festivals}
                 userLocation={userLocation}
                 locationLoading={locationLoading}
+                hidePast={hidePast}
+                onTogglePast={setHidePast}
               />
             </div>
           </div>

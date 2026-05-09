@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import { X, MapPin } from 'lucide-react';
+import { X, MapPin, EyeOff, Eye } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
 import { Festival } from '../data/festivals';
-import { getPrimaryMonth } from '../utils/dateUtils';
+import { getPrimaryMonth, isFestivalPast } from '../utils/dateUtils';
 import { countUniqueFestivals } from '../utils/festivalNormalization';
 import { ImprovedAutocompleteSearch } from './ImprovedAutocompleteSearch';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -19,6 +19,8 @@ interface SimpleFiltersProps {
   festivals: Festival[];
   userLocation: UserLocation | null;
   locationLoading: boolean;
+  hidePast: boolean;
+  onTogglePast: (next: boolean) => void;
 }
 
 export function SimpleFilters({
@@ -31,7 +33,9 @@ export function SimpleFilters({
   totalCount,
   festivals,
   userLocation,
-  locationLoading
+  locationLoading,
+  hidePast,
+  onTogglePast,
 }: SimpleFiltersProps) {
   const { t } = useLanguage();
   
@@ -83,6 +87,12 @@ export function SimpleFilters({
       // Ensure dates can be parsed to a valid month (same as App.tsx)
       const primaryMonth = getPrimaryMonth(festival.dates);
       if (!primaryMonth) {
+        return false;
+      }
+
+      // Mirror the home page's "Hide past" toggle so the chip counts
+      // match what the calendar actually renders.
+      if (hidePast && isFestivalPast(festival.dates)) {
         return false;
       }
 
@@ -265,25 +275,47 @@ export function SimpleFilters({
         </div>
       </div>
 
-      {/* Compact Month Filter */}
-      <div className="flex items-center gap-1 overflow-x-auto scrollbar-none">
-        {months.map((month) => (
-          <button
-            key={month.key}
-            onClick={() => onMonthChange(month.key)}
-            className={`flex-shrink-0 px-3 py-1 rounded text-xs font-medium transition-colors whitespace-nowrap ${
-              selectedMonth === month.key
-                ? 'bg-black text-white' 
-                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-            }`}
-            aria-label={`${t.searchFestivals} ${month.key === 'All' ? t.months.all : month.label}`}
-          >
-            {getMonthDisplay(month.key)}
-            <span className="ml-1 text-xs opacity-75">
-              ({getMonthFestivalCount(month.key)})
-            </span>
-          </button>
-        ))}
+      {/* Compact Month Filter + "Hide past" toggle */}
+      <div className="flex items-stretch gap-2">
+        <div className="flex items-center gap-1 overflow-x-auto scrollbar-none flex-1">
+          {months.map((month) => (
+            <button
+              key={month.key}
+              onClick={() => onMonthChange(month.key)}
+              className={`flex-shrink-0 px-3 py-1 rounded text-xs font-medium transition-colors whitespace-nowrap ${
+                selectedMonth === month.key
+                  ? 'bg-black text-white'
+                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+              }`}
+              aria-label={`${t.searchFestivals} ${month.key === 'All' ? t.months.all : month.label}`}
+            >
+              {getMonthDisplay(month.key)}
+              <span className="ml-1 text-xs opacity-75">
+                ({getMonthFestivalCount(month.key)})
+              </span>
+            </button>
+          ))}
+        </div>
+
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <button
+              onClick={() => onTogglePast(!hidePast)}
+              className={`flex-shrink-0 px-3 py-1 rounded text-xs font-medium transition-colors whitespace-nowrap inline-flex items-center gap-1 border ${
+                hidePast
+                  ? 'bg-black text-white border-black'
+                  : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100'
+              }`}
+              aria-pressed={hidePast}
+            >
+              {hidePast ? <EyeOff className="h-3 w-3" /> : <Eye className="h-3 w-3" />}
+              <span>{hidePast ? 'Past hidden' : 'Past shown'}</span>
+            </button>
+          </TooltipTrigger>
+          <TooltipContent>
+            <p>{hidePast ? 'Click to show past festivals' : 'Click to hide past festivals'}</p>
+          </TooltipContent>
+        </Tooltip>
       </div>
     </div>
   );
