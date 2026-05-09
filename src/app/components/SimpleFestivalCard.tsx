@@ -191,7 +191,15 @@ export function SimpleFestivalCard({
     year,
     duration,
     durationText,
+    formattedDateRange,
+    hasYearInRange,
   } = getDateInfo();
+
+  // Tooltip on the duration chip = the actual date range, with the year
+  // appended only when the formatted range doesn't already include it.
+  const dateTooltipText = hasYearInRange
+    ? formattedDateRange
+    : `${formattedDateRange}, ${year}`;
 
   // Get travel time if user location is available
   const travelTime = useMemo(() => {
@@ -315,12 +323,20 @@ export function SimpleFestivalCard({
                 >
                   {formatFestivalPrice(festival.price, t)}
                 </div>
-                <div
-                  className="bg-gray-50 text-gray-600 px-2 py-0.5 rounded font-medium border border-gray-200"
-                  style={{ fontSize: "0.75em" }}
-                >
-                  {durationText}
-                </div>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div
+                      className="bg-gray-50 text-gray-600 px-2 py-0.5 rounded font-medium border border-gray-200 cursor-help"
+                      style={{ fontSize: "0.75em" }}
+                      title={dateTooltipText}
+                    >
+                      {durationText}
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{dateTooltipText}</p>
+                  </TooltipContent>
+                </Tooltip>
               </div>
 
               {/* Travel Time Info */}
