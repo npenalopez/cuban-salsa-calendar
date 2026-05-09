@@ -41,7 +41,6 @@ import { supabaseFestivalService } from "./services/supabase";
 import {
   getPrimaryMonth,
   getFestivalSortPriority,
-  isFestivalPast,
 } from "./utils/dateUtils";
 import { normalizeFestivalMonths } from "./utils/festivalMonthNormalization";
 import { safeOpenDetailsURL } from "./utils/calendarExport";
@@ -199,29 +198,21 @@ function AppContent() {
     safeOpenDetailsURL('https://www.instagram.com/cubansalsacalendar', 'Visit Cuban Salsa Calendar Instagram page');
   };
 
-  // Helper function to check if a festival is displayable (has all required data and not in the past)
+  // A festival is displayable if it has the required fields and a parseable
+  // primary month. Past festivals are kept in the grid (the SimpleFestivalCard
+  // shows a "PAST" ribbon) on the assumption that next year's edition will fall
+  // close to the same dates and the entry is a soft placeholder.
   const isDisplayableFestival = (festival: Festival): boolean => {
-    // Ensure festival has required properties
     if (!festival || typeof festival !== 'object') {
       return false;
     }
-
-    // Ensure required string properties exist
     if (!festival.dates || !festival.name || !festival.city || !festival.country || !festival.continent) {
       return false;
     }
-
-    // Ensure dates can be parsed to a valid month
     const primaryMonth = getPrimaryMonth(festival.dates);
     if (!primaryMonth) {
       return false;
     }
-
-    // Filter out past festivals
-    if (isFestivalPast(festival.dates)) {
-      return false;
-    }
-
     return true;
   };
 
