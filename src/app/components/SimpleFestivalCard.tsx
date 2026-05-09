@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { memo, useMemo, useState } from "react";
 import { Button } from "./ui/button";
 import {
   MapPin,
@@ -57,7 +57,7 @@ interface SimpleFestivalCardProps {
   userLocation?: UserLocation | null;
 }
 
-export function SimpleFestivalCard({
+function SimpleFestivalCardImpl({
   festival,
   monthName,
   userLocation,
@@ -202,57 +202,35 @@ export function SimpleFestivalCard({
     ? formattedDateRange
     : `${formattedDateRange}, ${year}`;
 
-  // Get travel time if user location is available
-  const travelTime = useMemo(() => {
-    if (!userLocation || !festival.coordinates) {
+  // Travel-time computation. Done ONCE per card (was previously done
+  // twice: getFormattedTravelTime here, then calculateTravelTime again
+  // inline in the JSX). Returns the structured object so we can render
+  // any of the modes (flying / driving / train) without recomputing.
+  const fullTravelTime = useMemo(() => {
+    if (!userLocation || !userLocation.latitude || !userLocation.longitude) {
       return null;
     }
-
-    // Validate coordinates array
-    if (
-      !Array.isArray(festival.coordinates) ||
-      festival.coordinates.length !== 2
-    ) {
-      console.warn(
-        `Invalid coordinates for festival ${festival.name}:`,
-        festival.coordinates,
-      );
-      return null;
-    }
-
-    // Validate coordinate values
-    const [lat, lng] = festival.coordinates;
-    if (typeof lat !== "number" || typeof lng !== "number") {
-      console.warn(
-        `Non-numeric coordinates for festival ${festival.name}:`,
-        festival.coordinates,
-      );
-      return null;
-    }
-
-    // Validate coordinate ranges
-    if (lat < -90 || lat > 90 || lng < -180 || lng > 180) {
-      console.warn(
-        `Invalid coordinate range for festival ${festival.name}:`,
-        festival.coordinates,
-      );
-      return null;
-    }
-
+    const coords = festival.coordinates;
+    if (!Array.isArray(coords) || coords.length !== 2) return null;
+    const [lat, lng] = coords;
+    if (typeof lat !== 'number' || typeof lng !== 'number') return null;
+    if (lat < -90 || lat > 90 || lng < -180 || lng > 180) return null;
     try {
-      return geolocationService.getFormattedTravelTime(
-        userLocation,
-        festival.coordinates,
-        festival.continent,
-      );
-    } catch (error) {
-      console.warn(
-        `Failed to calculate travel time for festival ${festival.name}:`,
-        error,
-      );
+      return geolocationService.calculateTravelTime(userLocation, coords, festival.continent);
+    } catch {
       return null;
     }
-  }, [userLocation, festival.coordinates, festival.name]);
+  }, [userLocation, festival.coordinates, festival.continent]);
+
+  // Truthy when the card should show the travel-time row at all.
+  const travelTime = useMemo(() => {
+    if (!fullTravelTime) return null;
+    return (fullTravelTime.flying?.duration
+      || fullTravelTime.driving?.duration
+      || fullTravelTime.train?.duration)
+      ? fullTravelTime
+      : null;
+  }, [fullTravelTime]);
 
   return (
     <>
@@ -341,57 +319,14 @@ export function SimpleFestivalCard({
               </div>
 
               {/* Travel Time Info */}
-              {travelTime &&
-                userLocation &&
+              {fullTravelTime &&
+                travelTime &&
                 (() => {
                   try {
-                    // Validate coordinates and user location before calculating
-                    if (
-                      !festival.coordinates ||
-                      !Array.isArray(festival.coordinates) ||
-                      festival.coordinates.length !== 2
-                    ) {
-                      return null;
-                    }
-
-                    if (
-                      !userLocation.latitude ||
-                      !userLocation.longitude
-                    ) {
-                      return null;
-                    }
-
-                    const fullTravelTime =
-                      geolocationService.calculateTravelTime(
-                        userLocation,
-                        festival.coordinates,
-                        festival.continent,
-                      );
-
-                    // Validate the calculated travel time result
-                    if (
-                      !fullTravelTime ||
-                      typeof fullTravelTime !== "object"
-                    ) {
-                      return null;
-                    }
-
                     const isMultiDay = duration > 1;
-
-                    // Only show travel time if there's something to display
-                    const hasFlying =
-                      fullTravelTime?.flying &&
-                      fullTravelTime.flying.duration;
-                    const hasTrain =
-                      fullTravelTime?.train &&
-                      fullTravelTime.train.duration;
-                    const showDriving =
-                      fullTravelTime?.driving &&
-                      fullTravelTime.driving.duration;
-
-                    if (!hasFlying && !hasTrain && !showDriving) {
-                      return null;
-                    }
+                    const hasFlying = !!fullTravelTime.flying?.duration;
+                    const hasTrain = !!fullTravelTime.train?.duration;
+                    const showDriving = !!fullTravelTime.driving?.duration;
 
                     return (
                       <div
@@ -833,3 +768,8 @@ export function SimpleFestivalCard({
     </>
   );
 }
+
+// Memoized so 150+ cards don't re-render on every keystroke in the
+// search box. Props are mostly stable (festival objects are kept by
+// reference in the parent), so the default shallow-equal works well.
+export const SimpleFestivalCard = memo(SimpleFestivalCardImpl);

@@ -1,5 +1,10 @@
 /**
  * Utility functions for handling festival dates
+ *
+ * The same date strings are parsed many times per render (once for the
+ * card, once for the chip count, once for the sort, etc.) — and they
+ * never change for a given session. Each public hot function caches by
+ * its arguments to avoid the recomputation.
  */
 
 interface ParsedDate {
@@ -7,6 +12,24 @@ interface ParsedDate {
   day: number;
   year: number;
 }
+
+/**
+ * Month name → full-name lookup. Used by getPrimaryMonth /
+ * fallbackMonthOnlyDate; hoisted so it isn't recreated per call.
+ */
+const MONTH_NAME_MAP: { [key: string]: string } = {
+  Jan: 'January', Feb: 'February', Mar: 'March', Apr: 'April',
+  May: 'May',     Jun: 'June',     Jul: 'July',  Aug: 'August',
+  Sep: 'September', Oct: 'October', Nov: 'November', Dec: 'December',
+  January: 'January', February: 'February', March: 'March', April: 'April',
+  June: 'June', July: 'July', August: 'August', September: 'September',
+  October: 'October', November: 'November', December: 'December',
+};
+
+const MONTH_NUMBER: Record<string, number> = {
+  January: 1, February: 2, March: 3, April: 4, May: 5, June: 6,
+  July: 7, August: 8, September: 9, October: 10, November: 11, December: 12,
+};
 
 /**
  * Month mapping for both abbreviated and full month names
@@ -421,7 +444,20 @@ export function parseFestivalEndDate(
  * Check if a festival has passed based on its date string
  * A festival is considered past if its END date is before today
  */
+const isFestivalPastCache = new Map<string, boolean>();
 export function isFestivalPast(dateString: string): boolean {
+  // Result depends on today's date — include it in the cache key so
+  // the answer self-invalidates on day rollover (and the first call
+  // each day pays the full cost, the next 150 don't).
+  const todayKey = new Date().toISOString().slice(0, 10) + '|' + dateString;
+  const cached = isFestivalPastCache.get(todayKey);
+  if (cached !== undefined) return cached;
+  const result = computeIsFestivalPast(dateString);
+  isFestivalPastCache.set(todayKey, result);
+  return result;
+}
+
+function computeIsFestivalPast(dateString: string): boolean {
   try {
     const currentDate = new Date();
     // Set to start of today to compare dates without time
@@ -595,16 +631,13 @@ export function formatDateRange(dateString: string): string {
  * Get the year for a festival based on current date and festival timing
  * Returns predictable year assignments for chronological ordering
  */
+const festivalYearCache = new Map<string, number>();
 export function getFestivalYear(dateString: string): number {
-  // Check if date string already contains a year
+  if (festivalYearCache.has(dateString)) return festivalYearCache.get(dateString)!;
   const yearMatch = dateString.match(/\b(20\d{2})\b/);
-  if (yearMatch) {
-    return parseInt(yearMatch[1]);
-  }
-
-  // For festivals without explicit years, default to 2025
-  // This ensures consistent chronological ordering
-  return 2025;
+  const result = yearMatch ? parseInt(yearMatch[1]) : 2025;
+  festivalYearCache.set(dateString, result);
+  return result;
 }
 
 /**
@@ -637,31 +670,21 @@ export function setYearInDateString(
  * Get festival sorting priority based on year, month, and date
  * Returns a number that can be used for sorting (lower = earlier)
  */
+const sortPriorityCache = new Map<string, number>();
 export function getFestivalSortPriority(
   dateString: string,
 ): number {
+  if (sortPriorityCache.has(dateString)) return sortPriorityCache.get(dateString)!;
+  const result = computeSortPriority(dateString);
+  sortPriorityCache.set(dateString, result);
+  return result;
+}
+
+function computeSortPriority(dateString: string): number {
   try {
     const year = getFestivalYear(dateString);
     const primaryMonth = getPrimaryMonth(dateString);
-
-    // Month order for sorting
-    const monthOrder = {
-      January: 1,
-      February: 2,
-      March: 3,
-      April: 4,
-      May: 5,
-      June: 6,
-      July: 7,
-      August: 8,
-      September: 9,
-      October: 10,
-      November: 11,
-      December: 12,
-    };
-
-    const monthNum =
-      monthOrder[primaryMonth as keyof typeof monthOrder] || 13;
+    const monthNum = (primaryMonth && MONTH_NUMBER[primaryMonth]) || 13;
 
     // Try to get the specific start day for more precise sorting
     let dayNum = 1; // Default to 1st of month
@@ -692,45 +715,25 @@ export function getFestivalSortPriority(
  * Get the primary month for a festival based on its start date
  * This ensures festivals only appear in one month section
  */
+const primaryMonthCache = new Map<string, string | null>();
 export function getPrimaryMonth(
   dateString: string,
 ): string | null {
+  if (primaryMonthCache.has(dateString)) return primaryMonthCache.get(dateString)!;
+  const result = computePrimaryMonth(dateString);
+  primaryMonthCache.set(dateString, result);
+  return result;
+}
+
+function computePrimaryMonth(dateString: string): string | null {
   try {
-    // Normalize the date string to ensure consistent spacing (e.g., "Oct 31-Nov 2" -> "Oct 31 - Nov 2")
     const normalizedDateString = normalizeDateString(dateString.trim());
     const cleanDateString = normalizedDateString.trim();
-
-    // Month abbreviations mapping to full names (handles both abbreviated and full month names)
-    const monthMap: { [key: string]: string } = {
-      Jan: "January",
-      Feb: "February",
-      Mar: "March",
-      Apr: "April",
-      May: "May",
-      Jun: "June",
-      Jul: "July",
-      Aug: "August",
-      Sep: "September",
-      Oct: "October",
-      Nov: "November",
-      Dec: "December",
-      January: "January",
-      February: "February",
-      March: "March",
-      April: "April",
-      June: "June",
-      July: "July",
-      August: "August",
-      September: "September",
-      October: "October",
-      November: "November",
-      December: "December",
-    };
 
     // Find the FIRST month name anywhere in the string. This naturally
     // handles:
     //   - normal entries: "April 10-12, 2026" → April
-    //   - cross-month: "Feb 28 - Mar 2, 2026" → February (start month wins
+    //   - cross-month: "Feb 28 - Mar 2, 2026" → February (start wins
     //     because it appears first)
     //   - soft-date prefixes: "Mid-April 2026", "Late September 2026",
     //     "Early November 2026", "TBC March 2026" → April / September /
@@ -739,7 +742,7 @@ export function getPrimaryMonth(
     // null so they fall out of `isDisplayableFestival`.
     const tokens = cleanDateString.split(/[^A-Za-z]+/).filter(Boolean);
     for (const token of tokens) {
-      const month = monthMap[token];
+      const month = MONTH_NAME_MAP[token];
       if (month) return month;
     }
     return null;

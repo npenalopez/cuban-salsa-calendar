@@ -11,6 +11,11 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src/app'),
     },
   },
+  // Strip non-actionable console statements in production builds.
+  // console.warn / console.error stay so genuine bugs still surface.
+  esbuild: {
+    pure: ['console.log', 'console.info', 'console.debug'],
+  },
   build: {
     rollupOptions: {
       output: {

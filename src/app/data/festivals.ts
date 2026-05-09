@@ -70,7 +70,7 @@ export const festivals: Festival[] = [
         "Andria Panagi",
         "Lorenys Rodriguez",
         "Carlos Manolo",
-        "DJ Yan El Diablito",
+        "DJ Yanel Diablito",
         "DJ Jack El Calvo",
         "DJ Amine",
         "DJ Chanchan",
@@ -285,7 +285,7 @@ export const festivals: Festival[] = [
         "DJ Pastaguero",
         "DJ Tom Nka",
         "DJ Ralph El Cavo",
-        "DJ Diablito"
+        "DJ Yanel Diablito"
       ],
       "coordinates": [
         43.2924385,
@@ -1748,7 +1748,7 @@ export const festivals: Festival[] = [
         "DJ Lilimba",
         "DJ La Tremenda",
         "DJ Timbalero",
-        "DJ Diablito",
+        "DJ Yanel Diablito",
         "DJ Chechyto",
         "Chantal",
         "Harold Kinanga",
@@ -4071,7 +4071,7 @@ export const festivals: Festival[] = [
         "DJ Ned",
         "DJ Smile",
         "DJ Manuel",
-        "DJ Diablito",
+        "DJ Yanel Diablito",
         "DJ Kilo",
         "DJ Estefi",
         "DJ Marc",

@@ -1,10 +1,12 @@
+import { memo } from 'react';
+
 interface CountryFlagIconProps {
   country: string;
   size?: number;
   className?: string;
 }
 
-export function CountryFlagIcon({ country, size = 16, className = "" }: CountryFlagIconProps) {
+function CountryFlagIconImpl({ country, size = 16, className = "" }: CountryFlagIconProps) {
   const normalizedCountry = country.toLowerCase().trim();
 
   // Common aspect ratio for flags (3:2)
@@ -683,3 +685,7 @@ export function CountryFlagIcon({ country, size = 16, className = "" }: CountryF
     </span>
   );
 }
+
+// memoized — country/size/className change rarely once a card is mounted,
+// and the giant switch statement is purely a function of those inputs.
+export const CountryFlagIcon = memo(CountryFlagIconImpl);
