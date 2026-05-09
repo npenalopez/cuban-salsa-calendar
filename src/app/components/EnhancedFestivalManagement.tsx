@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { Plus, Edit, Trash2, Download, Upload, Copy, Database, AlertTriangle, Save, X, Calendar, Search, CheckCircle, Instagram, Code2 } from 'lucide-react';
+import { Plus, Edit, Trash2, Download, Upload, Copy, Database, AlertTriangle, Save, X, Calendar, Search, CheckCircle, Instagram, Code2, ClipboardCheck } from 'lucide-react';
 import { EnhancedAutocompleteSearch } from './EnhancedAutocompleteSearch';
 import { Checkbox } from './ui/checkbox';
 import { ArtistsInput } from './ArtistsInput';
@@ -28,6 +28,7 @@ import { useLanguage } from '../contexts/LanguageContext';
 import { ArtistManagement } from './ArtistManagement';
 import { FestivalAttention } from './FestivalAttention';
 import { InstagramContentCreator } from './InstagramContentCreator';
+import { FestivalFactCheck } from './FestivalFactCheck';
 
 interface FestivalManagementProps {
   festivals: Festival[];
@@ -413,18 +414,26 @@ export function EnhancedFestivalManagement({ festivals, onUpdateFestivals, onClo
       {/* Main Content */}
       <main className="px-4 sm:px-6 lg:px-8 py-6 max-w-7xl mx-auto">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="space-y-4">
-          <TabsList className="grid w-full grid-cols-5 bg-gray-100">
+          <TabsList className="grid w-full grid-cols-3 sm:grid-cols-6 bg-gray-100">
             <TabsTrigger value="festivals" className="flex items-center gap-2 text-sm">
               <Calendar className="h-3 w-3" />
-              Festival Management
+              <span className="hidden sm:inline">Festival Management</span>
+              <span className="sm:hidden">Festivals</span>
             </TabsTrigger>
             <TabsTrigger value="attention" className="flex items-center gap-2 text-sm">
               <AlertTriangle className="h-3 w-3" />
-              Needs Attention
+              <span className="hidden sm:inline">Needs Attention</span>
+              <span className="sm:hidden">Attention</span>
+            </TabsTrigger>
+            <TabsTrigger value="factcheck" className="flex items-center gap-2 text-sm">
+              <ClipboardCheck className="h-3 w-3" />
+              <span className="hidden sm:inline">Fact-check</span>
+              <span className="sm:hidden">Check</span>
             </TabsTrigger>
             <TabsTrigger value="artists" className="flex items-center gap-2 text-sm">
               <Database className="h-3 w-3" />
-              Artist Database
+              <span className="hidden sm:inline">Artist Database</span>
+              <span className="sm:hidden">Artists</span>
             </TabsTrigger>
             <TabsTrigger value="instagram" className="flex items-center gap-2 text-sm">
               <Instagram className="h-3 w-3" />
@@ -432,7 +441,8 @@ export function EnhancedFestivalManagement({ festivals, onUpdateFestivals, onClo
             </TabsTrigger>
             <TabsTrigger value="export" className="flex items-center gap-2 text-sm">
               <Download className="h-3 w-3" />
-              Export/Import
+              <span className="hidden sm:inline">Export/Import</span>
+              <span className="sm:hidden">Export</span>
             </TabsTrigger>
           </TabsList>
 
@@ -658,7 +668,14 @@ export function EnhancedFestivalManagement({ festivals, onUpdateFestivals, onClo
           </TabsContent>
 
           <TabsContent value="attention" className="space-y-6">
-            <FestivalAttention 
+            <FestivalAttention
+              festivals={festivals}
+              onEditFestival={handleOpenEditDialog}
+            />
+          </TabsContent>
+
+          <TabsContent value="factcheck" className="space-y-6">
+            <FestivalFactCheck
               festivals={festivals}
               onEditFestival={handleOpenEditDialog}
             />
