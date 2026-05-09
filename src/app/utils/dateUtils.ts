@@ -39,15 +39,52 @@ const MONTH_MAP: { [key: string]: number } = {
 };
 
 /**
- * Normalize date strings to ensure consistent spacing around dashes
- * Converts "Oct 31-Nov 2" to "Oct 31 - Nov 2"
- * Also handles single-month ranges like "Jan 10-12" to "Jan 10-12" (no change needed)
+ * Normalize date strings before parsing:
+ *   - Strip trailing parenthetical annotations like "(TBC)", "(TBA)",
+ *     "(Fall Edition)" — they aren't load-bearing for date parsing.
+ *   - Normalize hyphen spacing: "Feb 26-March 1" / "Feb 26- March 1" /
+ *     "Feb 26 -March 1" all become "Feb 26 - March 1".
+ *   - Cross-month date ranges without spaces ("Oct 31-Nov 2") get a
+ *     proper " - " for the existing parsers.
  */
 function normalizeDateString(dateString: string): string {
-  // Replace cross-month date ranges without spaces (e.g., "Oct 31-Nov 2" -> "Oct 31 - Nov 2")
-  // Look for: month name + space + day + dash (no space) + month name + space + day
-  const crossMonthPattern = /([A-Za-z]{3,})\s+(\d{1,2})-([A-Za-z]{3,})\s+(\d{1,2})/g;
-  return dateString.replace(crossMonthPattern, '$1 $2 - $3 $4');
+  let s = dateString;
+  // 1. Strip parenthetical annotations anywhere in the string.
+  s = s.replace(/\s*\([^)]*\)/g, '').trim();
+  // 2. Cross-month range with no spaces around the dash:
+  //    "Oct 31-Nov 2" → "Oct 31 - Nov 2"
+  s = s.replace(/([A-Za-z]{3,})\s+(\d{1,2})-([A-Za-z]{3,})\s+(\d{1,2})/g, '$1 $2 - $3 $4');
+  // 3. Cross-month range with one-sided spacing:
+  //    "Feb 26- March 1" or "Feb 26 -March 1" → "Feb 26 - March 1"
+  s = s.replace(/(\d)\s*-\s*([A-Za-z]{3,})/g, '$1 - $2');
+  // 4. Collapse any double spaces left over.
+  s = s.replace(/\s+/g, ' ').trim();
+  return s;
+}
+
+/**
+ * Last-resort: if a date string contains a month name but no day we
+ * can parse, return either the first day (kind='start') or the last
+ * day (kind='end') of that month. Handles soft dates like:
+ *   "April 2026"            → 2026-04-01 / 2026-04-30
+ *   "Mid-April 2026"        → same
+ *   "Late September 2026"   → same
+ *   "Early November 2026"   → same
+ */
+function fallbackMonthOnlyDate(
+  cleanDateString: string,
+  finalYear: number,
+  kind: 'start' | 'end',
+): Date | null {
+  const tokens = cleanDateString.split(/[^A-Za-z]+/).filter(Boolean);
+  for (const token of tokens) {
+    const month = MONTH_MAP[token];
+    if (month === undefined) continue;
+    if (kind === 'start') return new Date(finalYear, month, 1, 0, 0, 0);
+    const lastDay = new Date(finalYear, month + 1, 0).getDate();
+    return new Date(finalYear, month, lastDay, 23, 59, 59);
+  }
+  return null;
 }
 
 /**
@@ -139,7 +176,11 @@ export function parseFestivalStartDate(
       }
     }
 
-    console.warn(`Unable to parse festival start date: ${dateString}`);
+    // Soft-date fallback: month name with no parseable day. Treat as
+    // first of that month, e.g. "Mid-April 2026" → 2026-04-01.
+    const fallback = fallbackMonthOnlyDate(dateWithoutYear, finalYear, 'start');
+    if (fallback) return fallback;
+
     return null;
   } catch (error) {
     console.warn("Error parsing festival start date:", dateString, error);
@@ -359,9 +400,12 @@ export function parseFestivalEndDate(
       }
     }
 
-    console.warn(
-      `Unable to parse festival date: ${dateString}`,
-    );
+    // Soft-date fallback: month name with no parseable day. Treat as
+    // "end of that month" so isFestivalPast still has something to
+    // compare against, e.g. "Mid-April 2026" → 2026-04-30.
+    const fallback = fallbackMonthOnlyDate(dateWithoutYear, finalYear, 'end');
+    if (fallback) return fallback;
+
     return null;
   } catch (error) {
     console.warn(
