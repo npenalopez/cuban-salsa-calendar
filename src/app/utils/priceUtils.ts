@@ -26,13 +26,65 @@ export function formatFestivalPrice(price: string, t: Translations): string {
   return `${t.fromPrice} ${price}`;
 }
 
+// Placeholder strings used in the wild to mean "we don't know the price yet".
+const PRICE_TBA_PATTERNS: RegExp[] = [
+  /^tba$/i,
+  /^t\.b\.a\.?$/i,
+  /^tbd$/i,
+  /^n\/a$/i,
+  /to be announced/i,
+  /to be determined/i,
+  /not yet announced/i,
+  /not announced/i,
+  /coming soon/i,
+  /pending/i,
+  /not available/i,
+  /\bask\b/i,
+  /contact (us|organi[sz]er)/i,
+];
+
 /**
- * Checks if a price indicates that it's yet to be announced
- * @param price - The price string to check
- * @returns true if the price is yet to be announced
+ * Checks if a price indicates that it's yet to be announced. Recognizes
+ * empty / "-" and the common placeholder phrases (TBA, TBD, "to be
+ * announced", "coming soon", etc.).
  */
-export function isPriceToBeAnnounced(price: string): boolean {
-  return !price || price.trim() === '' || price.trim() === '-';
+export function isPriceToBeAnnounced(price: string | undefined | null): boolean {
+  if (!price) return true;
+  const trimmed = price.trim();
+  if (trimmed === '' || trimmed === '-' || trimmed === '--' || trimmed === '—') return true;
+  return PRICE_TBA_PATTERNS.some(p => p.test(trimmed));
+}
+
+/**
+ * Treated as a real price: free entry or sold-out events.
+ */
+function isPriceFreeOrSoldOut(price: string): boolean {
+  const lower = price.trim().toLowerCase();
+  return lower === 'free' || lower === 'gratis' || lower === 'no charge' || lower === 'soldout' || lower === 'sold out';
+}
+
+/**
+ * Stricter "missing" check intended for the admin Needs-Attention tab.
+ * A price is considered MISSING when it's a placeholder OR contains no
+ * recognizable numeric value (and isn't an explicit "Free" / "Sold out").
+ *
+ * Examples:
+ *   "€150 (Full Pass)"       → not missing
+ *   "From AUD 40"            → not missing
+ *   "Free"                   → not missing
+ *   "soldout"                → not missing
+ *   ""                       → missing
+ *   "-"                      → missing
+ *   "TBA"                    → missing
+ *   "Coming soon"            → missing
+ *   "Ask the organizer"      → missing
+ */
+export function isPriceMissing(price: string | undefined | null): boolean {
+  if (isPriceToBeAnnounced(price)) return true;
+  const trimmed = (price ?? '').trim();
+  if (isPriceFreeOrSoldOut(trimmed)) return false;
+  // Real prices always contain at least one digit.
+  return !/\d/.test(trimmed);
 }
 
 /**

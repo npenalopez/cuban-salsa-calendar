@@ -7,6 +7,7 @@ import { AlertTriangle, Edit, Calendar, DollarSign, Users, Globe, Instagram, Clo
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { isFestivalPast, getFestivalSortPriority } from '../utils/dateUtils';
+import { isPriceMissing } from '../utils/priceUtils';
 
 interface FestivalAttentionProps {
   festivals: Festival[];
@@ -63,7 +64,7 @@ interface FestivalIssues {
 
 function detectIssues(festival: Festival): FestivalIssues {
   return {
-    noPrice: isMissing(festival.price),
+    noPrice: isPriceMissing(festival.price),
     noArtists: !Array.isArray(festival.artists) || festival.artists.length === 0,
     tbaArtists: Array.isArray(festival.artists)
       && festival.artists.length > 0
