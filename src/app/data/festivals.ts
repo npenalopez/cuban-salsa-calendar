@@ -284,7 +284,7 @@ export const festivals: Festival[] = [
       "DJ Assane",
       "DJ Pastaguero",
       "DJ Tom Nka",
-      "DJ Ralph De Cavo",
+      "DJ Ralph El Cavo",
       "DJ Diablito"
     ],
     "coordinates": [
@@ -1281,7 +1281,7 @@ export const festivals: Festival[] = [
       "Cristina",
       "DJ Dia",
       "DJ Vireack",
-      "DJ Leo",
+      "DJ Leo de Cuba",
       "DJ Polo",
       "DJ Toxica",
       "DJ Carlos Guillen"
@@ -1751,7 +1751,7 @@ export const festivals: Festival[] = [
     "artists": [
       "DJ Jack El Calvo",
       "DJ Tom Nka",
-      "DJ Ralph De Cavo",
+      "DJ Ralph El Cavo",
       "DJ Yala El Puma",
       "DJ Lilimba",
       "DJ La Tremenda",
@@ -2268,8 +2268,8 @@ export const festivals: Festival[] = [
       "Michel Vizcaino",
       "Yordanis Aguero Delgado",
       "Hector Oviedo Abreu",
-      "Di Da",
-      "DJ Leo Abreu",
+      "Dida",
+      "DJ Leo de Cuba",
       "DJ Harold",
       "DJ Jack El Calvo"
     ],
@@ -2402,7 +2402,7 @@ export const festivals: Festival[] = [
       "Yoyo Flow",
       "Rafael",
       "Katja",
-      "Eneris"
+      "Eneris Mulgado"
     ],
     "coordinates": [
       48.7758,
@@ -2564,7 +2564,7 @@ export const festivals: Festival[] = [
       "Yoyo Flow",
       "Yenifer Lavin",
       "Seo Fernandez",
-      "Eneris",
+      "Eneris Mulgado",
       "Yeni Molinet",
       "Yoannis Tamayo",
       "Danger Rodriguez",
@@ -3992,7 +3992,7 @@ export const festivals: Festival[] = [
       "Randy Hechavarria",
       "DJ Flecha",
       "DJ Sacha",
-      "DJ Javier"
+      "DJ Javier La Rosa"
     ],
     "coordinates": [
       51.5476,
