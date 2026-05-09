@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { Plus, Edit, Trash2, Download, Upload, Copy, Database, AlertTriangle, Save, X, Calendar, Search, CheckCircle, Instagram } from 'lucide-react';
+import { Plus, Edit, Trash2, Download, Upload, Copy, Database, AlertTriangle, Save, X, Calendar, Search, CheckCircle, Instagram, Code2 } from 'lucide-react';
 import { EnhancedAutocompleteSearch } from './EnhancedAutocompleteSearch';
 import { Checkbox } from './ui/checkbox';
 import { ArtistsInput } from './ArtistsInput';
@@ -217,6 +217,26 @@ export function EnhancedFestivalManagement({ festivals, onUpdateFestivals, onClo
     toast.success("Festival JSON copied to clipboard!");
   };
 
+  // Download a drop-in replacement for src/app/data/festivals.ts
+  const handleDownloadCodeFile = () => {
+    try {
+      const code = supabaseFestivalService.exportFestivalsAsCodeFile(festivals);
+      const blob = new Blob([code], { type: 'text/typescript' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'festivals.ts';
+      link.click();
+      URL.revokeObjectURL(url);
+      toast.success(`Downloaded festivals.ts — drop into src/app/data/`, {
+        duration: 4000,
+      });
+    } catch (error) {
+      console.error('Download festivals.ts failed:', error);
+      toast.error("Failed to download. Please try again.");
+    }
+  };
+
   // Select/deselect all festivals
   const handleSelectAll = (checked: boolean) => {
     if (checked) {
@@ -349,16 +369,27 @@ export function EnhancedFestivalManagement({ festivals, onUpdateFestivals, onClo
                 </Dialog>
 
                 <button
+                  onClick={handleDownloadCodeFile}
+                  className="h-9 px-3 rounded bg-black hover:bg-gray-800 text-white text-sm"
+                  title="Download drop-in replacement for src/app/data/festivals.ts"
+                >
+                  <Code2 className="h-3 w-3 mr-1 inline" />
+                  Download festivals.ts
+                </button>
+
+                <button
                   onClick={handleExportJSON}
                   className="h-9 px-3 rounded border border-gray-300 hover:bg-gray-50 text-gray-700 text-sm"
+                  title="JSON backup with timestamp + version envelope"
                 >
                   <Download className="h-3 w-3 mr-1 inline" />
-                  Export
+                  Backup
                 </button>
 
                 <button
                   onClick={handleCopyJSON}
                   className="h-9 px-3 rounded border border-gray-300 hover:bg-gray-50 text-gray-700 text-sm"
+                  title="Copy bare JSON array to clipboard"
                 >
                   <Copy className="h-3 w-3 mr-1 inline" />
                   Copy

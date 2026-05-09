@@ -51,21 +51,22 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "January 9-12, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.yabfestival.com",
       "instagram": "@yab_festival",
       "description": "4th edition. 3 parties, 30 workshops, 2 LIVE concerts. Salsa, Timba, Son, Rueda, Reggaeton, Afro Rumba, Afrobeat. Hall 5 Parc des Expositions, 30min from Paris. 700+ people, 15 international teachers. Tumbakin live concert Saturday. Organized by Association Cubagana.",
       "artists": [
-        "Alberto Valdez",
+        "Alberto Valdes",
         "Diana Rodriguez",
-        "Danger & Marielkis",
-        "Yusimi Moya",
+        "Danger Rodriguez",
+        "Marielkis Hernandez",
+        "Yusimi Moya Rodriguez",
         "Chiky Rodriguez",
         "Laura Del Vecchio",
         "Katerina Mik",
         "Alain Rueda",
         "Osmell Relampago",
-        "Royma Rodriguez",
+        "Royma Roman Rodriguez",
         "Jimi Jacks",
         "Luis Duarte",
         "Andria Panagi",
@@ -104,12 +105,12 @@ export const festivals: Festival[] = [
       "country": "USA",
       "continent": "North America",
       "dates": "January 9-11, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.renolatindancefest.com",
       "instagram": "@renolatindancefest",
       "description": "Mixed-style Latin dance festival with a Cuban salsa room.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         39.5296,
@@ -128,12 +129,12 @@ export const festivals: Festival[] = [
       "country": "United Arab Emirates",
       "continent": "Asia",
       "dates": "January 16-18, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "-",
       "description": "Cuban salsa festival in Dubai (per rueda.casino listing). Dates Jan 16-18, 2026. User to verify Instagram/website directly.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         25.2048,
@@ -152,7 +153,7 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "January 16-18, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://bailaconamigos.com",
       "instagram": "@bailaconamigos",
       "description": "6th edition. 30+ hours of workshops, 2 evening parties, dance afternoon, shows, conference, expo. Friday night theme: 1920s-30s. Hosted at hippodrome du Lion d'Angers.",
@@ -161,14 +162,14 @@ export const festivals: Festival[] = [
         "DJ Patricia La Peruana",
         "DJ Caro la Tremenda",
         "DJ Samir Pastaguero",
-        "DJ Didi el Ciclón",
+        "DJ Didi el Ciclon",
         "DJ Kiki",
         "DJ Chico",
         "DJ Willo",
-        "DJ Sensación",
+        "DJ Sensacion",
         "DJ H.",
         "Martha Galarraga",
-        "Tito Belén",
+        "Tito Belen",
         "Keiler Brunet",
         "Alisvey Portuondo",
         "Team Olori"
@@ -191,12 +192,12 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "January 23-25, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.latin-festival-wuerzburg.de",
       "instagram": "@latinfestivalwuerzburg",
       "description": "Organized by Bailamos Würzburg. 3 days of workshops, parties, shows. Dance floors for salsa/mambo/cha-cha/son and bachata. Friday: pre-party workshops + Welcome Party. Saturday: workshops + Gala Night. Sunday: workshops + Goodbye Party.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         49.7913,
@@ -215,16 +216,16 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "January 23-25, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://tickets.baila-augsburg.de/event/son-weekend-2026/",
       "instagram": "@paraelalmadivertir",
       "description": "Cuban Son Weekend by baila Augsburg. Whisks dancers to 1920s Cuba with two days/nights of Son dance, music. Includes Beginner Bootcamp and Show Bootcamp. Beginner Level + Open Level workshops. Organized by Ariel & Sofia (¡baila! social dance studio).",
       "artists": [
-        "Ariel López",
+        "Ariel Lopez",
         "Sofia de Endaya",
         "DJ Tom Nka",
-        "DJ Yala",
-        "DJ Jack el Calvo"
+        "DJ Yala El Puma",
+        "DJ Jack El Calvo"
       ],
       "coordinates": [
         48.3705,
@@ -243,7 +244,7 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "January 30 - February 2, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://my.weezevent.com/quien-manda-festival-2026",
       "instagram": "@quien_manda_festival",
       "description": "3rd edition - 'Mezclando Culturas'. Cuban Salsa + Dominican Bachata + new Puerto Rican Salsa room. 100% women + 100% men workshops, bootcamps, before parties.",
@@ -252,7 +253,7 @@ export const festivals: Festival[] = [
         "Tania Cannarsa",
         "Desiree Godsell",
         "Diana Rodriguez",
-        "Yusimi Moya",
+        "Yusimi Moya Rodriguez",
         "Amneris Martinez",
         "Alicia Velasco",
         "Alex Toledo",
@@ -271,11 +272,11 @@ export const festivals: Festival[] = [
         "Maria de la Vega",
         "Anesslyne Baila",
         "Fatouma",
-        "Gulnara",
+        "Gulnara Bekirova",
         "Terry",
         "Yoyo Flow",
-        "Fredyclan",
-        "Pedrito",
+        "FredyClan Garcia II",
+        "Pedrito Cuba",
         "Danger Rodriguez",
         "Adonis Santiago",
         "Yosniel Brunet",
@@ -283,7 +284,7 @@ export const festivals: Festival[] = [
         "C.H.O.C.O",
         "Ned Neddy",
         "J.R. El Artista",
-        "Alberto Vasquez",
+        "Alberto Valdes",
         "DJ Assane",
         "DJ Tom Nka",
         "DJ Pastaguero"
@@ -307,14 +308,14 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "February 6-8, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://unidanza.de",
       "instagram": "@unidanza.hamburg",
       "description": "The Afro Cuban Dance Festival in Hamburg. 100+ workshops, 40 Cuban Salsa and Afro/Rumba artists, 3 parties, shows. Tagline: #undz26. Confirmed names from social media: FredyClan Garcia II, Nathanaël Mergui. Full lineup announcement on Instagram @unidanza.hamburg.",
       "artists": [
         "FredyClan Garcia II",
-        "Nathanaël Mergui",
-        "40+ Cuban Salsa and Afro/Rumba artists - full 2026 lineup TBA"
+        "Nathanael Mergui",
+        "TBD"
       ],
       "coordinates": [
         53.5511,
@@ -333,12 +334,12 @@ export const festivals: Festival[] = [
       "country": "Spain",
       "continent": "Europe",
       "dates": "February 6-8, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.damefestival.es",
       "instagram": "@damefestival",
       "description": "Pure Cuban salsa, timba, son, rumba and guaguancó. 'El mejor festival de Valencia'. Bootcamp directed by Diana Rodriguez. Family atmosphere.",
       "artists": [
-        "Diana Rodriguez (bootcamp lead)"
+        "Diana Rodriguez"
       ],
       "coordinates": [
         39.4699,
@@ -357,22 +358,23 @@ export const festivals: Festival[] = [
       "country": "Cuba",
       "continent": "North America",
       "dates": "February 18 - March 1, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://alocubano.se",
       "instagram": "@alocubano",
       "description": "AloCubano Havana - 'Dance Tour' edition. Established by Julio Espinal from Santiago de Cuba. The source - Cuban culture where it was born. Workshops, socials, real vibe with top Cuban dance maestros from the AloCubano family. February-March 2026. Premium Cuban festival - cuban, salsa, afro, reggaeton, rueda, reparto, son.",
       "artists": [
-        "Julio Espinal (founder)",
+        "Julio Espinal",
         "Yoyo Flow",
         "Barbara Jimenez",
         "Yoannis Tamayo",
-        "Pedrito & Giusy",
+        "Pedrito Cuba",
+        "Giusy Chisari",
         "Mercedes Sayut",
         "Adonis Santiago",
-        "FredyClan",
+        "FredyClan Garcia II",
         "DJ Flecha",
-        "DJ Maquina de Cuba (Javier La Rosa)",
-        "Live Cuban orchestras (TBA)"
+        "DJ Maquina de Cuba",
+        "Live Cuban orchestras"
       ],
       "coordinates": [
         23.1136,
@@ -391,21 +393,26 @@ export const festivals: Festival[] = [
       "country": "Hungary",
       "continent": "Europe",
       "dates": "February 20-23, 2026",
-      "price": "-",
+      "price": "€149 (Full Pass)",
       "website": "https://www.arrebatatefestival.com",
       "instagram": "@arrebatate",
       "description": "8th edition. Craziest Cuban festival in the heart of Europe. February 20-23, 2026. Salsa, Afro, Son, Rumba workshops with top Cuban artists. Bootcamps: Master Afro Bootcamp with Yeni Molinet, Rueda de Casino Bootcamp with Mahmoud Morsy & Isabella (champions of Rueda de Casino). Official Partner Hotel: Ibis Budapest Stadium.",
       "artists": [
-        "Lorenys & Manolo",
+        "Lorenys Rodriguez",
+        "Manolo",
         "Ckiky Cuba",
-        "Pedrito & Giusy",
-        "Yusimi Rodriguez",
+        "Pedrito Cuba",
+        "Giusy Chisari",
+        "Yusimi Moya Rodriguez",
         "Diana Rodriguez",
         "Yeni Molinet",
-        "Andreas y Melina",
-        "Ale y Sofi",
+        "Andreas",
+        "Melina",
+        "Ale",
+        "Sofi",
         "Ania Seruga",
-        "Mahmoud Morsy & Isabella",
+        "Mahmoud Morsi",
+        "Isabella",
         "DJ Rafi",
         "DJ Csedi"
       ],
@@ -426,7 +433,7 @@ export const festivals: Festival[] = [
       "country": "Cuba",
       "continent": "North America",
       "dates": "February 26 - March 1, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.solwayscuba.com",
       "instagram": "@festivaldelasalsahavana",
       "description": "10th anniversary edition. Concerts by Cuba's top orchestras, salsa/rumba/timba workshops, performances, pool parties. Hotel Memorias Miramar.",
@@ -434,10 +441,10 @@ export const festivals: Festival[] = [
         "Maykel Blanco y su Salsa Mayor",
         "Alexander Abreu y Havana D'Primera",
         "Pupy y Los Que Son Son",
-        "Adalberto Álvarez y Su Son",
-        "Elito Revé y Su Charangón",
+        "Adalberto Alvarez y Su Son",
+        "Elito Reve y Su Charangon",
         "Manolito Simonet y Su Trabuco",
-        "Alain Pérez",
+        "Alain Perez",
         "Isaac Delgado",
         "Maykel Fonts",
         "Jennyselt Galata",
@@ -466,18 +473,18 @@ export const festivals: Festival[] = [
       "country": "Cuba",
       "continent": "North America",
       "dates": "February 25 - March 2, 2026",
-      "price": "-",
+      "price": "$2,395 / person (Group BnB) — VIP package",
       "website": "https://havanamusictours.com",
       "instagram": "@havanamusictours",
       "description": "VIP Havana Salsa Festival Tour by Havana Music Tours. February 25 - March 2, 2026. Premium tour package with the best of the Cuban salsa scene.",
       "artists": [
         "Alexander Abreu y Havana D'Primera",
         "Pupy y Los Que Son Son",
-        "Adalberto Álvarez y Su Son",
-        "Elito Revé y Su Charangón",
+        "Adalberto Alvarez y Su Son",
+        "Elito Reve y Su Charangon",
         "Maikel Blanco y Su Salsa Mayor",
         "Manolito Simonet y Su Trabuco",
-        "Alain Pérez",
+        "Alain Perez",
         "Isaac Delgado"
       ],
       "coordinates": [
@@ -497,12 +504,12 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "March 6-9, 2026",
-      "price": "-",
+      "price": "€115-€135 (Full Pass) / €40-€55 (Party)",
       "website": "",
       "instagram": "@timbamasteryfestival",
       "description": "Timba Mastery Festival in Cologne, Germany. Workshops with top Cuban artists. Verify Instagram/website with @cubansalsacalendar.",
       "artists": [
-        "Alberto Valdés",
+        "Alberto Valdes",
         "Sava",
         "Elio",
         "Enrique",
@@ -527,7 +534,7 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "March 7-8, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://tickets.baila-augsburg.de",
       "instagram": "@baila.augsburg",
       "description": "Women's Weekend 6.0 - Cuban Style Meeting on International Women's Day. 2 days, 6 hours of classes with Alex Toledo & Sofia de Endaya, 1 Women's Talk, 1 Party. Previous editions sold out fast.",
@@ -552,12 +559,12 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "March 13-15, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@arrasando.festival",
       "description": "Cuban Afro-Salsa Festival in Bremen, Germany. Listed in rueda.casino for March 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         53.0793,
@@ -576,7 +583,7 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "March 20-22, 2026",
-      "price": "-",
+      "price": "€50 (3-Party Pass) / €15 (Single Party)",
       "website": "https://www.billetweb.fr/saoco-cuban-festival-2026",
       "instagram": "@saoco.cuban.festival",
       "description": "3rd edition - Cuban salsa, rumba, styling, timba, fusion, Afro (with live percussion), son, rueda de casino, cha-cha-cha, reggaeton. Limited to 250 dancers. Bootcamp Afro Contemporain with Yuniel Gual.",
@@ -602,12 +609,12 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "March 20-22, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@femfestival",
       "description": "Cuban dance festival in L'Hermitage, France. Listed in rueda.casino March 20-22, 2026. Instagram/website not directly findable - user to verify with @cubansalsacalendar.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         48.1311,
@@ -626,13 +633,14 @@ export const festivals: Festival[] = [
       "country": "Austria",
       "continent": "Europe",
       "dates": "March 26-29, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://cubailaviena.at/en/events/meneate-viena-2026/",
       "instagram": "@meneateviena",
       "description": "4th edition. International Afro-Cuban dance festival in Vienna. Timba, salsa, son, casino, rumba, afro, reggaeton. Live concert by Maykel Blanco y su Salsa Mayor (not in fullpass). Workshops at wolke19, Welcome Party with DJ Wasia, Timba Gala with DJ La Pantera, Farewell Party at Fanialive. Son Bootcamp with Alexei & Emilia.",
       "artists": [
-        "Maykel Blanco y su Salsa Mayor (LIVE concert)",
-        "Alexei & Emilia",
+        "Maykel Blanco y su Salsa Mayor",
+        "Alexei",
+        "Emilia",
         "DJ Wasia",
         "DJ La Pantera"
       ],
@@ -659,26 +667,31 @@ export const festivals: Festival[] = [
       "description": "4th edition. One of Europe's most exciting Cuban salsa festivals - son, Afro-Cuban, salsa, timba, reggaeton with dancers from 30+ countries. Live concert by Maykel Blanco y su Salsa Mayor. Limited to 480 tickets.",
       "artists": [
         "Maykel Fonts",
-        "Yoyo Flow (Yoandy Villaurrutia)",
+        "Yoyo Flow",
         "Yusimi Moya Rodriguez",
-        "Jorge & Indira",
+        "Jorge",
+        "Indira",
         "Cuban Flex",
         "Luis Duarte",
-        "Andy & Yuliet",
+        "Andy Varona",
+        "Yuliet Estrada",
         "Hector Oviedo Abreu",
-        "Danger & Marielkis",
+        "Danger Rodriguez",
+        "Marielkis Hernandez",
         "Oliwia Szewczak",
-        "Royma Roman",
+        "Royma Roman Rodriguez",
         "Mahmoud Morsi",
-        "Orisun Company (Luca Caldore)",
-        "Louise & Marvin (Salsa4Water)",
-        "Ido & Agnita (La Candela)",
+        "Orisun Company",
+        "Louise",
+        "Marvin",
+        "Ido",
+        "Agnita",
         "Alexander Scull",
-        "DJ Andrea Androger (Los DJs Timberos)",
+        "DJ Andrea Androger",
         "DJ Yala El Puma",
-        "DJ El Faraoun",
+        "DJ El Faraon",
         "DJ Tamboly",
-        "Maykel Blanco y su Salsa Mayor (LIVE)"
+        "Maykel Blanco y su Salsa Mayor"
       ],
       "coordinates": [
         52.52,
@@ -698,12 +711,12 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "March 27-29, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.cubayonne.fr",
       "instagram": "@festival.cubayonne",
       "description": "Festival of Cuban music and dances in Bayonne, France. Organized by Association Cubayonne and Salsa Timbayonne. Workshops with international instructors, evening with concert + DJ, after-timba session.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         43.4929,
@@ -722,12 +735,12 @@ export const festivals: Festival[] = [
       "country": "Belgium",
       "continent": "Europe",
       "dates": "March 28, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@pura_cuba_brussels",
       "description": "Brussels-based organization that promotes Cuban salsa among dancers. Pura Cuba event at Evere on March 28, 2026.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         50.8722,
@@ -746,17 +759,17 @@ export const festivals: Festival[] = [
       "country": "Cuba",
       "continent": "North America",
       "dates": "April 2-13, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://afrocubandancefestival.com",
       "instagram": "@afrocubandancefestival",
       "description": "International Afro-Cuban Dance Festival in Havana. Most all-inclusive, immersive Afro-Cuban experience - 50 hours of intensive training with Live Music. Classes use the energy of Conjunto Folklórico Nacional de Cuba. Run by Luanda Pau and Maestro Domingo Pau, who select the team based on dedication to Afro-Cuban culture and professional experience. Artists hail from Havana's prestigious institutions.",
       "artists": [
-        "Luanda Pau (curator)",
-        "Maestro Domingo Pau (curator)",
-        "Conjunto Folklórico Nacional de Cuba (artists from)",
-        "Academia de Danza Carlos Acosta (artists from)",
-        "Cabaret Tropicana de Cuba (artists from)",
-        "Top Afro-Cuban dance teachers, musicians and assistants from prestigious Havana institutions"
+        "Luanda Pau",
+        "Maestro Domingo Pau",
+        "Conjunto Folklorico Nacional de Cuba",
+        "Academia de Danza Carlos Acosta",
+        "Cabaret Tropicana de Cuba",
+        "TBD"
       ],
       "coordinates": [
         23.1136,
@@ -775,12 +788,12 @@ export const festivals: Festival[] = [
       "country": "Finland",
       "continent": "Europe",
       "dates": "April 2-5, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@bailabailasalsa",
       "description": "Baila Baila Salsa Festival in Helsinki, Finland. Listed in rueda.casino April 2-5, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         60.1699,
@@ -799,24 +812,26 @@ export const festivals: Festival[] = [
       "country": "Cuba",
       "continent": "North America",
       "dates": "April 6-12, 2026",
-      "price": "-",
+      "price": "From €273 (Weekend) / €480 (Early Bird Full)",
       "website": "https://www.dancefestivalincuba.com",
       "instagram": "@ritmocuba",
       "description": "8th edition. International Cuban dance festival in Havana - 100+ hours of workshops with 60+ teachers across 3 rooms, plus nightly parties at Casa de la Música. Hotel Nacional de Cuba.",
       "artists": [
         "Maykel Fonts",
-        "Jorge & Indira",
-        "Diana Rodríguez",
+        "Jorge",
+        "Indira",
+        "Diana Rodriguez",
         "Adonis Santiago",
-        "Silvia & Silvio (La Casona del Son)",
+        "Silvia",
+        "Silvio Leroy",
         "Jorge Luna",
         "Karelia Despaigne",
         "Mariesly Paradelo",
         "Los Datway",
-        "Yoerlis Brunet (Danza Contemporánea de Cuba)",
-        "Yoanis Peláez",
+        "Yoerlis Brunet",
+        "Yoanis Pelaez",
         "Oddebi",
-        "Adrian Pozo (La Casona del Son)",
+        "Adrian Pozo",
         "Geissa Barr"
       ],
       "coordinates": [
@@ -837,12 +852,12 @@ export const festivals: Festival[] = [
       "country": "Norway",
       "continent": "Europe",
       "dates": "April 10-12, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.nordicsalsa.com",
       "instagram": "@nordicsalsaexperience",
       "description": "16th edition (2026). Knut Erik Productions in cooperation with Salsakompaniet present this 4-day SBK + salsa mix event in Oslo. Norwegian Championship in salsa, Stargate show team competition, Jack & Jill social dance competition. Held at Sentralen.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         59.9139,
@@ -861,12 +876,12 @@ export const festivals: Festival[] = [
       "country": "Slovenia",
       "continent": "Europe",
       "dates": "April 17-19, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@mananaljubljana",
       "description": "9th edition. Cuban dance festival in Ljubljana. Unique 'one instructor couple per day' approach for deep learning - dancers don't choose workshops, each day is dedicated to ONE INSTRUCTOR COUPLE. Helps dancers learn dance style and attitude deeply for quick improvement. Organized by @cubanaljubljana. Dates April 17-19, 2026.",
       "artists": [
-        "1 instructor couple per day - announcements via @mananaljubljana (organized by @cubanaljubljana)"
+        "TBD"
       ],
       "coordinates": [
         46.0569,
@@ -885,13 +900,14 @@ export const festivals: Festival[] = [
       "country": "United Kingdom",
       "continent": "Europe",
       "dates": "April 10-12, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://ruedalibre.co.uk",
       "instagram": "@ruedalibre",
       "description": "3rd edition. Workshops | Parties | Live Music | Rumba Abierta | Casino Boot Camp | Rueda Olympics. 19+ world-class artists + DJs. 3 full days of workshops with live music across all levels. Casino Boot Camp by Ramses and Sandra. 2 epic parties at Saw Swee Hock Student Centre, central London. Friendly, inclusive community by Rueda Libre. Quality Cuban dance with great artists in welcoming and safe space.",
       "artists": [
-        "Ramses & Sandra (Casino Boot Camp)",
-        "19+ world-class Cuban artists + DJs (full lineup TBA on @rueda.libre.ldn)"
+        "Ramses",
+        "Sandra",
+        "19+ world-class Cuban artists + DJs"
       ],
       "coordinates": [
         51.5074,
@@ -910,7 +926,7 @@ export const festivals: Festival[] = [
       "country": "Australia",
       "continent": "Oceania",
       "dates": "April 11, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://events.humanitix.com/sydney-salsa-festival-with-el-grupo-niche-more",
       "instagram": "@casablancaeventssydney",
       "description": "Outdoor salsa festival featuring Colombian salsa legends Grupo Niche, Cuban music and Latin dance.",
@@ -934,12 +950,12 @@ export const festivals: Festival[] = [
       "country": "Italy",
       "continent": "Europe",
       "dates": "Mid-April 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@festivalculturacubana",
       "description": "Festival Cultura Cubana FCC in Montesilvano. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         42.5147,
@@ -958,12 +974,12 @@ export const festivals: Festival[] = [
       "country": "Spain",
       "continent": "Europe",
       "dates": "April 17-23, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@corazon_y_mezcla",
       "description": "Corazón y Mezcla Festival in Barcelona. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         41.3851,
@@ -982,7 +998,7 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "April 17-19, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "http://www.cubaneo-el-festival.de",
       "instagram": "@cubaneo.el.festival",
       "description": "Cuban salsa festival in Nuremberg with limited tickets and intimate atmosphere.",
@@ -1008,12 +1024,12 @@ export const festivals: Festival[] = [
       "country": "Canada",
       "continent": "North America",
       "dates": "April 17-19, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@cubasonweekender",
       "description": "Cuban dance weekender in Vancouver. Listed in rueda.casino April 17-19, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         49.2827,
@@ -1032,23 +1048,23 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "April 23-26, 2026",
-      "price": "-",
+      "price": "€240–€370",
       "website": "https://tickets.baila-augsburg.de/event/timbalemania-2026/",
       "instagram": "@baila.augsburg",
       "description": "Timbalemania 2026 - 'Family dance weekend' by baila Augsburg. 3 days of workshops with balanced leader/follower ratio. 4 crazy parties with passionate DJs. Community activities, city tours, 3 shared dinners. Tagline: 'Esto te pone la cabeza mala'.",
       "artists": [
         "Yuliet Estrada",
         "Oliwia Szewczak",
-        "Yusimi Moya Rodríguez",
+        "Yusimi Moya Rodriguez",
         "Helen Haukamp",
         "Sofia de Endaya",
         "Andy Varona",
         "Silvio Leroy",
         "Luis Duarte",
         "Sassan Alivaliollahi",
-        "Ariel López",
-        "DJ Jack el Calvo",
-        "DJ Yala",
+        "Ariel Lopez",
+        "DJ Jack El Calvo",
+        "DJ Yala El Puma",
         "DJ Tom Nka"
       ],
       "coordinates": [
@@ -1068,12 +1084,12 @@ export const festivals: Festival[] = [
       "country": "Hungary",
       "continent": "Europe",
       "dates": "April 30 - May 3, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@diadelson",
       "description": "Día del Son 5 - 5th edition Son festival in Szeged, Hungary. Listed in rueda.casino April 30 - May 3, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         46.253,
@@ -1094,12 +1110,12 @@ export const festivals: Festival[] = [
       "country": "USA",
       "continent": "North America",
       "dates": "May 1-3, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@bostoncubandance",
       "description": "2026 Boston Cuban Dance Festival - May 1-3, 2026 at Lesley University - Washburn Hall, Cambridge, MA. Cuban dance workshops, social dancing, performances. Verified Instagram @bostoncubandance.",
       "artists": [
-        "Full lineup announced via @bostoncubandance Instagram"
+        "TBD"
       ],
       "coordinates": [
         42.3601,
@@ -1118,12 +1134,12 @@ export const festivals: Festival[] = [
       "country": "Italy",
       "continent": "Europe",
       "dates": "May 6-9, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@salsaontour",
       "description": "Salsa On Tour Italy in Florence. May 6-9, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         43.7696,
@@ -1142,29 +1158,31 @@ export const festivals: Festival[] = [
       "country": "Serbia",
       "continent": "Europe",
       "dates": "May 7-10, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://cubanero.net",
       "instagram": "@cubanerosalsa",
       "description": "19th edition. The biggest Salsa Festival in Serbia. International Festival of Cuban Music and Dance. 40+ workshops in 4 different locations (Allegro Dance, Centre, Studio M, Cafe Havana, Svetozar Markovic Gymnasium, Katolicka Porta Square, Ernesto Cafe), 4 evening parties, 4 open-air hotspot parties, live concert. Cuban Salsa x Afro x Bachata x Kizomba x Reggaeton. 2025 proxy lineup shown - 2026 announcements via @cubanerosalsa Instagram.",
       "artists": [
-        "Mixael Cabrera y su Team Barcelona (LIVE concert - 2025 proxy)",
-        "Diana Rodriguez (2025 proxy)",
-        "Yusimi Moya (2025 proxy)",
-        "Yeni Molinet (2025 proxy)",
-        "Osmani Segura (2025 proxy)",
-        "Yoannis Tamayo (2025 proxy)",
-        "FredyClan (2025 proxy)",
-        "Danger & Marielkis (2025 proxy)",
-        "Anitaa Jimenez (2025 proxy)",
-        "Nemanja Lazovic (2025 proxy)",
-        "Ivan & Ivana (2025 proxy)",
-        "Jan Bervar (2025 proxy)",
-        "DJ Leo D Cuba (proxy)",
-        "DJ Assane (proxy)",
-        "DJ El Gato (proxy)",
-        "DJ Timbalero (proxy)",
-        "DJ Don Marko (proxy)",
-        "DJ Indio (proxy)"
+        "Mixael Cabrera y su Team Barcelona",
+        "Diana Rodriguez",
+        "Yusimi Moya Rodriguez",
+        "Yeni Molinet",
+        "Osmani Segura",
+        "Yoannis Tamayo",
+        "FredyClan Garcia II",
+        "Danger Rodriguez",
+        "Marielkis Hernandez",
+        "Anitaa Jimenez",
+        "Nemanja Lazovic",
+        "Ivan",
+        "Ivana",
+        "Jan Bervar",
+        "DJ Leo de Cuba",
+        "DJ Assane",
+        "DJ El Gato Volador",
+        "DJ Timbalero",
+        "DJ Don Marko",
+        "DJ Indio"
       ],
       "coordinates": [
         45.2671,
@@ -1183,12 +1201,12 @@ export const festivals: Festival[] = [
       "country": "Italy",
       "continent": "Europe",
       "dates": "May 8-10, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.salsaonthebeach.at",
       "instagram": "-",
       "description": "21st edition. All-inclusive dance holiday at the 4-star superior beachfront Bibione Palace Hotel on the Adriatic coast. Workshops in salsa, bachata, rueda de casino, evening show nights, pool-terrace chill-out parties. Friday Meet & Greet, Saturday show night, Sunday morning workshops + poolside chill-out. Note: Facebook /salsaonthebeach.",
       "artists": [
-        "Bachata, Salsa Romantica focus for 21st edition - lineup TBA. Note: original organizer dealing with serious illness."
+        "TBD"
       ],
       "coordinates": [
         45.6396,
@@ -1207,12 +1225,12 @@ export const festivals: Festival[] = [
       "country": "Denmark",
       "continent": "Europe",
       "dates": "May 8-10, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@saborcubano.cph",
       "description": "Sabor Cubano - Copenhagen Cuban Dance Festival. May 8-10, 2026. Affiliated with Salsa Libre Copenhagen (salsalibre.dk).",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         55.6761,
@@ -1236,7 +1254,7 @@ export const festivals: Festival[] = [
       "instagram": "@salazar.ruedafestival",
       "description": "3rd International Rueda Festival in Switzerland. 100% Rueda de Casino. 26 workshops with 15 international top artists, 2 themed parties + Gala-Party Saturday (dresscode elegant), bootcamp, contest. Run at Sabor Latino dance venue. Founded by @reynaldo_salazar_.",
       "artists": [
-        "15 international top Rueda de Casino artists (announcements via @salazar.ruedafestival)"
+        "15 international top Rueda de Casino artists"
       ],
       "coordinates": [
         47.5022,
@@ -1256,12 +1274,12 @@ export const festivals: Festival[] = [
       "country": "Italy",
       "continent": "Europe",
       "dates": "May 7-9, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "-",
       "description": "6th International Salsa Championship for Dancers in Ravenna, Italy. May 7-9, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         44.4173,
@@ -1281,19 +1299,21 @@ export const festivals: Festival[] = [
       "country": "Spain",
       "continent": "Europe",
       "dates": "May 14-17, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://godancefestival.com/event/tenerife-dance-festival-2026/",
       "instagram": "@tenerife_dance_festival",
       "description": "Holiday Experience Festival. 50+ artists, 50+ hours of workshops (BACHATA, SALSA and special). Pool parties, outdoor workshops, social dances, night party till 6am, boat party with whale/dolphin viewing, day tour, dance competition. 4-star hotel. Music policy: 6-8 bachatas per 2 salsas. Note: predominantly bachata festival with some salsa rooms. Cuban salsa room artists listed. Organized by Leandro y Jomante.",
       "artists": [
-        "Alex Toledo (Cuban Salsa)",
+        "Alex Toledo",
         "Nicolo Do Angelo",
         "Nico Silva",
         "Marco Lorusso",
-        "Cristo y Emma",
+        "Cristo",
+        "Emma",
         "Mahmoud Derouiche",
         "Jose Cuellar",
-        "Adan y Cristina",
+        "Adan",
+        "Cristina",
         "DJ Dia",
         "DJ Vireack",
         "DJ Leo",
@@ -1318,14 +1338,14 @@ export const festivals: Festival[] = [
       "country": "Denmark",
       "continent": "Europe",
       "dates": "May 14-17, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "http://salsaweekend.dk",
       "instagram": "@bailasiempre",
       "description": "BailaSiempre Salsa Weekend at Baila Siempre Dance Studio, Kometvej 4, 8700 Horsens. Workshops, pre-party, shows, parties with national/international instructors and DJs. Organizers: Tenna Qvist and Erodys Castillo.",
       "artists": [
-        "Tenna Qvist (organizer)",
-        "Erodys Castillo (organizer)",
-        "International instructors (TBA - 2026 announcements via salsaweekend.dk)"
+        "Tenna Qvist",
+        "Erodys Castillo",
+        "TBD"
       ],
       "coordinates": [
         55.8608,
@@ -1344,22 +1364,23 @@ export const festivals: Festival[] = [
       "country": "Spain",
       "continent": "Europe",
       "dates": "May 14-18, 2026",
-      "price": "-",
+      "price": "€110 (Full Pass)",
       "website": "https://eveniahotels.com/events/guaguanco",
       "instagram": "@guaguancofestival",
       "description": "Largest international Cuban music and culture festival in Europe. 70th anniversary celebration of Orquesta Revé. Live performances, traditional son groups, folk shows. Attendees from 46+ countries.",
       "artists": [
-        "Orquesta Revé (70th anniversary live concert)",
+        "Orquesta Reve",
         "Yoyo Flow",
-        "Yusimi Moya",
-        "Héctor Oviedo",
+        "Yusimi Moya Rodriguez",
+        "Hector Oviedo Abreu",
         "Julio Manguero",
-        "Ismaray Chacón",
-        "Diana Rodríguez",
+        "Ismaray Chacon",
+        "Diana Rodriguez",
         "Yeni Molinet",
-        "Yenifer Lavine",
+        "Yenifer Lavin",
         "Jorge Camaguey",
-        "Mari y Jorgito"
+        "Mari",
+        "Jorgito"
       ],
       "coordinates": [
         41.7005,
@@ -1378,12 +1399,12 @@ export const festivals: Festival[] = [
       "country": "USA",
       "continent": "North America",
       "dates": "June 19-22, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.bailanewyork.com",
       "instagram": "@bailanydancefest_",
       "description": "Baila NY Afro-Caribbean Dance Fest. 3rd edition. NYC's first dance festival rooted in tradition. 80+ hours of parallel workshops + bootcamps in 4 rooms: Cuban, Mambo/Salsa, Bachata, Konpa/Kizomba. Live concerts and 4 social rooms. Organized by JukanBaila. Cuban lineup announcements ongoing - check @bailanydancefest_ Instagram.",
       "artists": [
-        "Cuban room artists - announcements via @bailanydancefest_ - 2026 Cuban Lineup teased on Instagram"
+        "TBD"
       ],
       "coordinates": [
         40.7128,
@@ -1402,14 +1423,15 @@ export const festivals: Festival[] = [
       "country": "Greece",
       "continent": "Europe",
       "dates": "May 21-28, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://misolarfestival.com",
       "instagram": "@misolarfestival",
       "description": "Eight-day Cuban salsa beach week on the western Peloponnese coast. Master bootcamp with Yusimi Moya for Afro-Cuban roots. World-class instructors and family-friendly atmosphere.",
       "artists": [
-        "Yusimi Moya (Afro-Cuban master bootcamp)",
-        "Royma Roman (Ladies bootcamp)",
-        "Izabella & Mahmoud Morsi"
+        "Yusimi Moya Rodriguez",
+        "Royma Roman Rodriguez",
+        "Izabella",
+        "Mahmoud Morsi"
       ],
       "coordinates": [
         38.05,
@@ -1428,12 +1450,12 @@ export const festivals: Festival[] = [
       "country": "Italy",
       "continent": "Europe",
       "dates": "May 22-24, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.timbatumbaeventi.it",
       "instagram": "@timbatumba_eventi",
       "description": "One of Italy's biggest Latin dance congresses - salsa cubana, bachatango, son, rueda de casino, afro, rumba. Beachside venue with pool and full-board package.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         42.805,
@@ -1452,12 +1474,12 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "May 22-24, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.billetweb.fr/montpel-rueda-festival-2026",
       "instagram": "@montpelruedafestival",
       "description": "5th edition. Organized by Rueda Social Club. 27 hours of workshops in Rueda de Casino, salsa, Cuban dances. 3 dance halls, rueda challenge, giant rueda downtown, 100% salsa cubana parties, beach party.",
       "artists": [
-        "International Rueda de Casino instructors (announcements via @montpelruedafestival)"
+        "TBD"
       ],
       "coordinates": [
         43.6108,
@@ -1476,12 +1498,12 @@ export const festivals: Festival[] = [
       "country": "Tunisia",
       "continent": "Africa",
       "dates": "May 28 - June 4, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@cubaintunisia",
       "description": "Cuba in Tunisia festival in Monastir. Listed in rueda.casino May 28 - June 4, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         35.778,
@@ -1501,16 +1523,17 @@ export const festivals: Festival[] = [
       "country": "Croatia",
       "continent": "Europe",
       "dates": "June 8-15, 2026",
-      "price": "-",
+      "price": "From €560 (Full Pass)",
       "website": "https://www.crosalsafestival.com",
       "instagram": "@crosalsafestival",
       "description": "20+ year running mixed-style Adriatic salsa festival with strong Cuban room. Featured Cuban artists.",
       "artists": [
         "Maykel Fonts",
-        "Yoyo Flow (Yoandy Villaurrutia)",
-        "Jorge & Indira",
+        "Yoyo Flow",
+        "Jorge",
+        "Indira",
         "Diana Rodriguez",
-        "Yusimi Moya",
+        "Yusimi Moya Rodriguez",
         "DJ Jack El Calvo"
       ],
       "coordinates": [
@@ -1531,7 +1554,7 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "June 12-19, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.damecuba.com/festival-frankfurt/",
       "instagram": "@damecubafestival",
       "description": "DameCuba Salsa and Afro Cuban Festival Frankfurt. 36 hours of workshops in 3 rooms (Open/Intermediate/Advanced). 3-hr Bootcamp (Open Level). Each evening: Motto-Party with show acts, animations, live percussion. 4 Top DJs. Snacks and cocktails.",
@@ -1545,11 +1568,11 @@ export const festivals: Festival[] = [
         "Yorgenis Danger 'Yoyo'",
         "Juan Carlos Gonzalez",
         "Erodys Castillo",
-        "Yorge Armando González",
-        "Juan Bauste (percussion)",
-        "Marcos Antonio Betancourt (percussion)",
-        "Michel Vizcaíno (percussion)",
-        "DJ Leo D'Cuba",
+        "Yorge Armando Gonzalez",
+        "Juan Bauste",
+        "Marcos Antonio Betancourt",
+        "Michel Vizcaino",
+        "DJ Leo de Cuba",
         "DJ Francesco",
         "DJ Kubaton",
         "DJ Danielito"
@@ -1571,12 +1594,12 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "June 17-21, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@happysalsa",
       "description": "Happy Salsa Festival in Kühlungsborn, Germany. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         54.1428,
@@ -1595,12 +1618,12 @@ export const festivals: Festival[] = [
       "country": "Croatia",
       "continent": "Europe",
       "dates": "June 19-21, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.facebook.com/cubososijek",
       "instagram": "@cubososijek",
       "description": "CubOs - Cuban dance and gastronomic event combining Cuban music/dance tradition with Slavonian hospitality. June 19-21, 2026 in Osijek, Croatia.",
       "artists": [
-        "TBA - announcements via Facebook /cubososijek"
+        "TBD"
       ],
       "coordinates": [
         45.555,
@@ -1619,23 +1642,23 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "June 19-21, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.cuban-convention.de",
       "instagram": "@cubanconvention_koblenz",
       "description": "Das Kubanische Salsa Festival in Koblenz. Limited spots (max 60 per workshop). 100% Cuban parties incl. Tumbakin LIVE concert (Friday). Saturday on Salsa Boat with 2 levels. Timba, Salsa Cubana, Son, Reggaeton. Organized by CHANGA.",
       "artists": [
-        "Yorgenis Danger Garcia (Yoyo)",
+        "Yorgenis Danger 'Yoyo'",
         "Luis Duarte",
         "Ariel Diaz",
-        "Yusimi",
+        "Yusimi Moya Rodriguez",
         "Sassan Ito",
         "Helen Haukamp",
-        "Ariel López",
+        "Ariel Lopez",
         "Sofia de Endaya",
-        "Oliwia",
-        "Tumbakin (LIVE concert)",
+        "Oliwia Szewczak",
+        "Tumbakin",
         "DJ Rafi",
-        "DJ Yala",
+        "DJ Yala El Puma",
         "DJ TiMueve",
         "DJ Paulazo",
         "DJ Luis",
@@ -1659,12 +1682,13 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "June 24-28, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.allsalsafestival.com",
       "instagram": "@allsalsafestival",
       "description": "All Salsa Festival - Cuban, Mambo, Caleña fusion. 2 Before days (June 24-25) + 3 Full Days/Nights (June 26-28). 60+ workshops (Classic & Master Classes).",
       "artists": [
-        "Wilmer y Maria",
+        "Wilmer Najarro",
+        "Maria de la Vega",
         "Bersy Cortez",
         "Seo Fernandez",
         "Tania Cannarsa",
@@ -1673,7 +1697,7 @@ export const festivals: Festival[] = [
         "Marco Ferrigno",
         "Alicia Velasco",
         "Fadi Fusion",
-        "Yusimi Moya",
+        "Yusimi Moya Rodriguez",
         "Miguel Ferrerossa",
         "Adonis Santiago",
         "Yuri Colucci",
@@ -1683,7 +1707,8 @@ export const festivals: Festival[] = [
         "Laurence Salsalianza",
         "Jeremy Martinez",
         "Atocha",
-        "Felipe y Simona",
+        "Felipe",
+        "Simona",
         "Gulnara Bekirova",
         "Francy Barahona",
         "Chantal",
@@ -1707,12 +1732,12 @@ export const festivals: Festival[] = [
       "country": "Canada",
       "continent": "North America",
       "dates": "June 26-28, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.facebook.com/unabullaottawa",
       "instagram": "@unabullaottawa",
       "description": "4th edition of UNA BULLA: Cuban Salsa Extravaganza. 3-day dance festival in Ottawa featuring workshops, performances, and social dancing. Focus on Cuban Salsa, Casino Rueda, Afro-Cuban dance. Organized by Ottawa Casino Rueda.",
       "artists": [
-        "International Cuban dance teachers (TBA - 2026 announcements pending)"
+        "TBD"
       ],
       "coordinates": [
         45.4215,
@@ -1731,7 +1756,7 @@ export const festivals: Festival[] = [
       "country": "Spain",
       "continent": "Europe",
       "dates": "July 3, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.sala-apolo.com",
       "instagram": "@losvanvancuba",
       "description": "Concert by legendary Cuban orchestra Los Van Van - 'El Tren de la Música Cubana'. Part of Caprichos de Apolo series. Songo, son, Afro-Cuban rhythms.",
@@ -1755,7 +1780,7 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "July 3-5, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://wannadance.com",
       "instagram": "@festival.cubano2",
       "description": "5th edition. Mountain restaurant venue (Le Yeti, accessible via télécabine). Salsa cubana focus near Geneva.",
@@ -1763,7 +1788,7 @@ export const festivals: Festival[] = [
         "DJ Jack El Calvo",
         "DJ Tom Nka",
         "DJ Ralph De Cavo",
-        "DJ Yala",
+        "DJ Yala El Puma",
         "DJ Lilimba",
         "DJ La Tremenda",
         "DJ Timbalero",
@@ -1771,7 +1796,8 @@ export const festivals: Festival[] = [
         "DJ Chechyto",
         "Chantal",
         "Harold Kinanga",
-        "Ayoub & Coya",
+        "Ayoub",
+        "Coya",
         "Chahera"
       ],
       "coordinates": [
@@ -1792,12 +1818,12 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "July 3-5, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@soy100cuba",
       "description": "Soy 100% Cuba Festival - Cubania y Mañana. France-based touring event. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         46.6034,
@@ -1816,12 +1842,12 @@ export const festivals: Festival[] = [
       "country": "Denmark",
       "continent": "Europe",
       "dates": "July 5-11, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@nordicsalsacamp",
       "description": "Nordic Salsa Camp at Jelling, Denmark. Listed in rueda.casino July 5-11, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         55.7561,
@@ -1840,12 +1866,12 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "July 10-13, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@cubafrica",
       "description": "CubAfrica Salsa Festival in Horgues, France. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         43.19,
@@ -1864,12 +1890,12 @@ export const festivals: Festival[] = [
       "country": "Denmark",
       "continent": "Europe",
       "dates": "July 19-25, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@cubancamp",
       "description": "Cuban Camp at Bosei, Denmark. Listed in rueda.casino July 19-25, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         55.13,
@@ -1888,12 +1914,12 @@ export const festivals: Festival[] = [
       "country": "USA",
       "continent": "North America",
       "dates": "July 22-27, 2026",
-      "price": "-",
+      "price": "$265 (Full) / $235 (Local) / $135 (Weekend Party)",
       "website": "https://www.miamisalsacongress.com",
       "instagram": "@miamisalsacongress",
       "description": "Multi-style salsa congress with Cuban room and live Cuban music.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         25.7617,
@@ -1912,15 +1938,16 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "July 30 - August 2, 2026",
-      "price": "-",
+      "price": "€150 (4-day Pass) / €130 (3-day Pass)",
       "website": "https://tempolatino.com",
       "instagram": "@tempolatino",
       "description": "31st edition - 'Kaleidoscopic 2026'. Largest European Afro-Cuban Latin Music Festival since 1994. 4 days, 500 volunteers. At the Arènes Joseph-Fourniol.",
       "artists": [
-        "Maite Hontele & Orquesta Akokán",
+        "Maite Hontele",
+        "Orquesta Akokan",
         "Alfredo Rodriguez",
         "Tony Succar",
-        "Yilian Cañizares",
+        "Yilian Canizares",
         "La Yegros"
       ],
       "coordinates": [
@@ -1941,12 +1968,12 @@ export const festivals: Festival[] = [
       "country": "Sweden",
       "continent": "Europe",
       "dates": "July 31 - August 2, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@bachatacubanweekend",
       "description": "Bachata and Cuban Weekend in Stockholm. Listed in rueda.casino July 31 - August 2, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         59.3293,
@@ -1966,22 +1993,29 @@ export const festivals: Festival[] = [
       "country": "Poland",
       "continent": "Europe",
       "dates": "August 14-16, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://bachaturo.com",
       "instagram": "@bachaturo",
       "description": "16th edition. One of the largest SBKZ festivals in Europe. 90+ international artists, 120+ hours of workshops, minimum 10 workshop rooms. 5 dance floors for evening parties – Bachata, Salsa, Cubana, Kizomba, UrbanKiz. Held at MCK – Katowice International Conference Centre + Spodek Arena. Pre-party August 13 (bachata only). Top Cuban room artists - check bachaturo.com/artists for confirmed Cuban-specific artists.",
       "artists": [
-        "(Bachata stage) Ataca & Alemana",
-        "(Bachata) Marco & Sara",
-        "(Bachata) Daniel Sanchez",
-        "(Bachata) Ronald & Alba",
-        "(Bachata) Cornel & Rithika",
-        "(Bachata) Pablo & Raquel",
-        "(Bachata) Gero & Migle",
-        "(Bachata) Antoni & Belen",
-        "(Bachata) Alex & Desiree",
-        "(Bachata) Carolina Rosa",
-        "(Cuban room artists - lineup TBA - announcements via @bachaturo)"
+        "Ataca",
+        "Alemana",
+        "Marco",
+        "Sara",
+        "Daniel Sanchez",
+        "Ronald",
+        "Alba",
+        "Cornel",
+        "Rithika",
+        "Pablo",
+        "Raquel",
+        "Gero",
+        "Migle",
+        "Antoni",
+        "Belen",
+        "Alex",
+        "Desiree",
+        "Carolina Rosa"
       ],
       "coordinates": [
         50.2649,
@@ -2001,18 +2035,23 @@ export const festivals: Festival[] = [
       "country": "Czech Republic",
       "continent": "Europe",
       "dates": "August 21-24, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.salsa-bit.com/festivals-2026/salsa-festival-prague-2026",
       "instagram": "@salsafestivalcr",
       "description": "Official national salsa event of the Czech Republic at Hotel Olympik Congress. Founded by Hanser Estenoz. Salsa cubana, salsa on2, bachata, son, Afro-Cuban dances.",
       "artists": [
-        "Wilmer & Maria",
+        "Wilmer Najarro",
+        "Maria de la Vega",
         "Adonis Santiago",
-        "Charlie & Vero",
-        "Hanser & Vilma",
-        "Jose Mari & Patri",
-        "Jesús Javier",
-        "Yanedis & Daniel",
+        "Charlie",
+        "Vero",
+        "Hanser",
+        "Vilma",
+        "Jose Mari",
+        "Patri",
+        "Jesus Javier",
+        "Yanedis",
+        "Daniel Sanchez",
         "DJ Daladier",
         "DJ Momo",
         "DJ Lole",
@@ -2035,12 +2074,12 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "August 27-31, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@timbaparadise",
       "description": "Festival Timba Paradise in Saarbrücken. Listed in rueda.casino August 27-31, 2026. Organized by Cubaila Salsa Tanzschule & Events.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         49.2401,
@@ -2059,12 +2098,13 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "September 2026 (TBC)",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@salsastras",
       "description": "Salsa Stras Festival - 20 Years anniversary edition. User to verify Instagram/website.",
       "artists": [
-        "Osbanis & Anetta",
+        "Osbanis",
+        "Anetta",
         "Anier Sanchez",
         "Lexis Hernandez",
         "Carla Rojas Salazar",
@@ -2089,12 +2129,12 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "September 11-13, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@corazonlatino",
       "description": "Festival Corazon Latino in Cenon (Bordeaux area). User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         44.8654,
@@ -2114,12 +2154,12 @@ export const festivals: Festival[] = [
       "country": "Poland",
       "continent": "Europe",
       "dates": "Mid-September 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.calledetimberos.pl",
       "instagram": "@calledetimberos",
       "description": "Calle de Timberos - 100% Cuban Festival in Wrocław, Poland. The biggest 100% Cuban festival in Poland. Annual September event. Workshops, parties, live concerts, bootcamps. Verified Facebook /calledetimberos.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         51.1079,
@@ -2138,12 +2178,12 @@ export const festivals: Festival[] = [
       "country": "Indonesia",
       "continent": "Asia",
       "dates": "September 24-27, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@obdacbali",
       "description": "OBDAC Cuban Salsa Fiesta in Bali, Indonesia. Listed in rueda.casino September 24-27, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         -8.4095,
@@ -2162,12 +2202,12 @@ export const festivals: Festival[] = [
       "country": "Greece",
       "continent": "Europe",
       "dates": "September 25-27, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@aguafestival",
       "description": "Agua Festival in Thessaloniki, Greece. Listed in rueda.casino September 25-27, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         40.6401,
@@ -2186,12 +2226,12 @@ export const festivals: Festival[] = [
       "country": "Sweden",
       "continent": "Europe",
       "dates": "Late September 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@holacubamalmo",
       "description": "Hola Cuba - Salsa & Afro-Cuban Festival in Malmö, Sweden. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         55.605,
@@ -2210,7 +2250,7 @@ export const festivals: Festival[] = [
       "country": "Poland",
       "continent": "Europe",
       "dates": "October 2-5, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://alocubano.se/warsaw/lineup",
       "instagram": "@alocubano",
       "description": "AloCubano Krakow - 'The Cuban Festival in the Royal Heart of Europe'. 700+ dancers from 30+ countries, 28+ workshops in 3 powerful days. All-in-one venue at Hotel Galaxy. Parties until 4 AM Friday-Sunday. No live music breaks - non-stop dancing energy. All Cuban styles: Salsa Cubana, Rumba, Afro, Timba, Reparto. Day parties + Night parties. Top Cuban DJs.",
@@ -2221,12 +2261,14 @@ export const festivals: Festival[] = [
         "Yoannis Tamayo",
         "Adonis Santiago",
         "Seo Fernandez",
-        "FredyClan",
+        "FredyClan Garcia II",
         "Mercedes Sayut",
-        "Pedrito & Giusy",
-        "Ola & Piotrek",
+        "Pedrito Cuba",
+        "Giusy Chisari",
+        "Ola",
+        "Piotrek",
         "DJ Flecha",
-        "DJ Maquina de Cuba (Javier La Rosa)",
+        "DJ Maquina de Cuba",
         "DJ El Honguito"
       ],
       "coordinates": [
@@ -2246,23 +2288,28 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "October 2-4, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.billetweb.fr/cubanflow-festival",
       "instagram": "@cubanflowfestival",
       "description": "3rd edition. Cuban Flow Festival in Anglet, France. Imagined and created by Alain Rueda and Katerina Mik. Cuban dance festival to connect with Cuban music and dance, with masterclasses and energy-filled workshops adapted to all levels. Sunday includes live music classes (piano, congas, timbales, brass). 2025 lineup shown as proxy - 2026 announcements via @cubanflowfestival.",
       "artists": [
-        "Alain Rueda & Katerina Mik (organizers)",
-        "Mixael Cabrera y su Team Barcelona (live concert - 2025 proxy)",
-        "Lorenys & Manolo (proxy)",
-        "Florine & Yacin (proxy)",
-        "Kevin & Geisa (proxy)",
-        "Neilys & Michel (proxy)",
-        "Yordanis Aguero Delgado (proxy)",
-        "Hector Oviedo (proxy)",
-        "Di Da (proxy)",
-        "DJ Leo Abreu (proxy)",
-        "DJ Harold (proxy)",
-        "DJ Jack El Calvo (proxy)"
+        "Alain Rueda",
+        "Katerina Mik",
+        "Mixael Cabrera y su Team Barcelona",
+        "Lorenys Rodriguez",
+        "Manolo",
+        "Florine",
+        "Yacin",
+        "Kevin",
+        "Geisa",
+        "Neilys Marrero",
+        "Michel Vizcaino",
+        "Yordanis Aguero Delgado",
+        "Hector Oviedo Abreu",
+        "Di Da",
+        "DJ Leo Abreu",
+        "DJ Harold",
+        "DJ Jack El Calvo"
       ],
       "coordinates": [
         43.4845,
@@ -2281,12 +2328,12 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "October 9-11, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@dancecongresshamburg",
       "description": "Dance Congress Hamburg 2026 - October 9-11. World-class workshops, breathtaking international shows, spectacular parties. Run by Festival de Cuba Hamburg organizers.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         53.5511,
@@ -2305,12 +2352,12 @@ export const festivals: Festival[] = [
       "country": "Spain",
       "continent": "Europe",
       "dates": "October 9-11, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.damecuba.com",
       "instagram": "@damecubafestival",
       "description": "Dame Cuba Festival Tenerife. Same organizer as Dame Cuba Frankfurt. October 9-11, 2026.",
       "artists": [
-        "Same brand as Dame Cuba Frankfurt - lineup announcements via @damecubafestival"
+        "TBD"
       ],
       "coordinates": [
         28.2916,
@@ -2329,12 +2376,12 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "October 9-12, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@ruedaglobetrotters",
       "description": "Festival Rueda GlobeTrotters VOL.8 in Toulouse, France. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         43.6047,
@@ -2354,12 +2401,12 @@ export const festivals: Festival[] = [
       "country": "Portugal",
       "continent": "Europe",
       "dates": "October 15-18, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://crazy4latimba.com",
       "instagram": "@crazy4latimba",
       "description": "5th year - cornerstone of the global Timba community. 35+ Cuban dance workshops, live percussion, beach kick-off, Tumbakin concert. Venues at Timeout Market and Jazzy Dance Studios.",
       "artists": [
-        "Tumbakin (LIVE concert)"
+        "Tumbakin"
       ],
       "coordinates": [
         38.7223,
@@ -2379,18 +2426,20 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "October 22-26, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.festival-de-cuba.de",
       "instagram": "@festivaldecuba_stuttgart",
       "description": "21st International Festival de Cuba Stuttgart. 'Lo Mejor de Cuba' with Cuban dancers from 25+ nations. 3 days of incredible parties, 35+ workshops, 1000+ square meters of workshop space.",
       "artists": [
-        "Osbanis y Anneta",
+        "Osbanis",
+        "Anneta",
         "Leidel Portuondo",
         "Wilmer Najarro",
-        "Wilmer & Maria",
-        "Osmaní Segura",
+        "Maria de la Vega",
+        "Osmani Segura",
         "Yoyo Flow",
-        "Rafael & Katja",
+        "Rafael",
+        "Katja",
         "Eneris"
       ],
       "coordinates": [
@@ -2410,13 +2459,14 @@ export const festivals: Festival[] = [
       "country": "Norway",
       "continent": "Europe",
       "dates": "October 23-25, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@oslocubansalsafestival",
       "description": "First-ever Cuban Salsa Festival in Oslo. By Oslo Kizomba Festival and Dance With Dancecity. 19:00-03:00 daily. Workshops focus on Orishas, Rueda, authentic Cuban dance and culture. Top DJs. Early bird Full Pass 1000 NOK.",
       "artists": [
         "Adonis Santiago",
-        "Ilaria & Ze Braga",
+        "Ilaria",
+        "Ze Braga",
         "Yassell Rodriguez",
         "Damarys Farres",
         "Yersin Rivas",
@@ -2440,17 +2490,17 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "October 23-26, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.facebook.com/festival.international.cubano.orange",
       "instagram": "@fic_festival_cubano",
       "description": "Festival International Cubano (FIC) - the leading Cuban festival in Europe. Annual since 2014, organized by Yoann Henry, president of Association Passion Timba. 4-day program with 28 nationalities, 3 Cuban bands, dance classes by world's best teachers, multiple Cuban concerts. Espace Daudet venue. Friday: outdoor before-party + Columbia contest + Cuban concert. Saturday: workshops + outdoor before-party + artist shows. Sunday: workshops + Battle DJs + Cuban concert. 2026 special guests Sueño de Cristal and Tania Pantoja announced. Historical proxy from 2024.",
       "artists": [
-        "Sueño de Cristal (special guest 2026)",
-        "Tania Pantoja (special guest 2026)",
-        "Maykel Blanco y su Salsa Mayor (2024 proxy - regularly performs at FIC)",
-        "Yasser Ramos y Tumbao Mayombe (2024 proxy)",
-        "Ivan y La Llegada (2024 proxy)",
-        "Multiple Cuban Maestros across 4 days (full 2026 lineup announcing via FB)"
+        "Sueno de Cristal",
+        "Tania Pantoja",
+        "Maykel Blanco y su Salsa Mayor",
+        "Yasser Ramos y Tumbao Mayombe",
+        "Ivan y La Llegada (orchestra)",
+        "TBD"
       ],
       "coordinates": [
         44.1389,
@@ -2469,12 +2519,12 @@ export const festivals: Festival[] = [
       "country": "Slovakia",
       "continent": "Europe",
       "dates": "October 24-25, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@cubanbratislava",
       "description": "Cuban Bratislava Weekend. Listed in rueda.casino October 24-25, 2026 (also May 15-16 per visitbratislava.com - verify dates). User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         48.1486,
@@ -2493,12 +2543,12 @@ export const festivals: Festival[] = [
       "country": "Australia",
       "continent": "Oceania",
       "dates": "October 2026 (TBC)",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@australianruedachampionship",
       "description": "Australian Rueda Championship & Cuban Dance Festival in Sydney. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         -33.8688,
@@ -2517,12 +2567,12 @@ export const festivals: Festival[] = [
       "country": "Spain",
       "continent": "Europe",
       "dates": "Late October 2026 (TBC)",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@sonnamafestival",
       "description": "Son Na'ma festival in Zaragoza, Spain. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         41.6488,
@@ -2547,17 +2597,20 @@ export const festivals: Festival[] = [
       "description": "Cuban congress on the Costa Brava. Hotel Don Ángel privatized for the event - 100% Cuban vibe. Direct from Cuba lineup.",
       "artists": [
         "Maykel Fonts",
-        "Yusimi Moya",
-        "Alberto Valdés",
-        "Yoyo Flow & Yenifer Lavín",
-        "Seo Fernández & Eneris",
+        "Yusimi Moya Rodriguez",
+        "Alberto Valdes",
+        "Yoyo Flow",
+        "Yenifer Lavin",
+        "Seo Fernandez",
+        "Eneris",
         "Yeni Molinet",
         "Yoannis Tamayo",
-        "Danger & Marielkis",
+        "Danger Rodriguez",
+        "Marielkis Hernandez",
         "Mercedes Sayut",
-        "Royma Román",
-        "Bárbara Jiménez",
-        "Yorgenis Danger",
+        "Royma Roman Rodriguez",
+        "Barbara Jimenez",
+        "Yorgenis Danger 'Yoyo'",
         "Emilio Herrera",
         "Julio Molina",
         "DJ Javier La Rosa",
@@ -2565,7 +2618,7 @@ export const festivals: Festival[] = [
         "DJ Rumbero",
         "DJ Chanchan",
         "DJ Pelotero",
-        "DJ Yván"
+        "DJ Yvan"
       ],
       "coordinates": [
         41.6358,
@@ -2584,13 +2637,13 @@ export const festivals: Festival[] = [
       "city": "Santa Susanna",
       "country": "Spain",
       "continent": "Europe",
-      "dates": "TBC 2026",
-      "price": "-",
-      "website": "",
-      "instagram": "@timbacerrasantasusanna",
-      "description": "Timba Cerra Festival in Santa Susanna, Spain. User to verify Instagram/website.",
+      "dates": "March 20-23, 2026",
+      "price": "€60 (Full Pass workshops EB) / €420 (Pack 1 Individual) / €700 (Pack 2 Double)",
+      "website": "https://www.goandance.com/en/event/9002/timba-cerra",
+      "instagram": "@timba.cerra",
+      "description": "Intensive 100% Cuban festival dedicated to timberos. Four days of workshops, parties and full cultural immersion at Hotel Don Angel, Santa Susanna. Focuses on Cuban salsa, timba and Afro-Cuban rhythms with strong emphasis on musicality, body movement and social connection. Daytime structured workshops at multiple levels; nights dedicated to high-energy timba parties with DJs.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         41.6358,
@@ -2599,7 +2652,7 @@ export const festivals: Festival[] = [
       "venue": "Hotel Don Angel",
       "category": "Festival",
       "months": [
-        "TBC"
+        "March"
       ]
     },
     {
@@ -2609,12 +2662,12 @@ export const festivals: Festival[] = [
       "country": "Serbia",
       "continent": "Europe",
       "dates": "November 5-8, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@havanaenbelgrado",
       "description": "Havana en Belgrado festival in Belgrade, Serbia. Listed in rueda.casino November 5-8, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         44.7866,
@@ -2633,13 +2686,14 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "November 6-8, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.cubajena.de",
       "instagram": "@cubajena.festival",
       "description": "Themed blocks on Casino, Son, Rueda de Casino and Rueda de Son. Workshops build progressively, focus on technique, leading/following, musicality. Organized by Jenaer Tanzhaus e.V.",
       "artists": [
-        "Izabella & Mahmoud Morsi (El Faraon)",
-        "DJ El Faraon (Mahmoud)",
+        "Izabella",
+        "Mahmoud Morsi",
+        "DJ El Faraon",
         "DJ Heiko"
       ],
       "coordinates": [
@@ -2659,14 +2713,14 @@ export const festivals: Festival[] = [
       "country": "Poland",
       "continent": "Europe",
       "dates": "November 11-15, 2026 (Fall Edition)",
-      "price": "-",
+      "price": "TBA",
       "website": "https://elsolfestival.pl",
       "instagram": "@elsolfestivals",
       "description": "el Sol Festival Fall Edition - mixed-style salsa festival - one of the biggest Polish dance brands. 100+ hours of workshops in 3 dance styles. Run by @elsolfestivals brand which also runs Bachata Festival, Warsaw Zouk Festival, etc. Strong Cuban presence.",
       "artists": [
         "Maykel Fonts",
         "Marco Ferrigno",
-        "Top Cuban instructors (TBA via @elsolfestivals - 35K followers)"
+        "TBD"
       ],
       "coordinates": [
         52.2297,
@@ -2685,12 +2739,12 @@ export const festivals: Festival[] = [
       "country": "Hungary",
       "continent": "Europe",
       "dates": "Early November 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@gustocubano",
       "description": "Gusto Cubano Festival in Tapolca, Hungary. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         46.8806,
@@ -2709,12 +2763,12 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "November 11-13, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@laklavefestival",
       "description": "La Klave Festival in Dortmund, Germany. Listed in rueda.casino November 11-13, 2026.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         51.5136,
@@ -2733,12 +2787,12 @@ export const festivals: Festival[] = [
       "country": "Italy",
       "continent": "Europe",
       "dates": "Mid-November 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@atodacuba",
       "description": "A Toda Cuba Festival in Calenzano, Italy. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         43.8576,
@@ -2757,13 +2811,12 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "November 27-29, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://tickets.baila-augsburg.de",
       "instagram": "@baila.augsburg",
       "description": "3rd edition of La Descarga - Cuban Meets Dominican Festival. By baila Augsburg. Caribbean energy weekend. Friday: 5pm bootcamp. Workshops + socials. Sunday wraps ~5-6pm. Timba meets Bachata, Son meets Merengue, Bolero, Chachachá, Reggaetón.",
       "artists": [
-        "Cuban + Dominican instructors (TBA via @baila.augsburg)",
-        "Timba meets Bachata, Son meets Merengue with Bolero, Chachachá, Reggaetón influences"
+        "TBD"
       ],
       "coordinates": [
         48.3705,
@@ -2782,7 +2835,7 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "TBC late 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.festival-salsa-cubana.de",
       "instagram": "@festival.salsa.cubana.munich",
       "description": "Long-running Munich winter festival at CIRCULO. 70 workshops in 5 rooms - Cuban salsa, son, rumba, rueda de casino, afro, reggaeton, with Drums Secret live percussion ensemble.",
@@ -2807,12 +2860,12 @@ export const festivals: Festival[] = [
       "country": "United Kingdom",
       "continent": "Europe",
       "dates": "December 4-7, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@merseysidelatinfestival",
       "description": "Merseyside Latin Festival in Liverpool, UK. SRBK event. December 4-7, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         53.4084,
@@ -2831,12 +2884,12 @@ export const festivals: Festival[] = [
       "country": "Norway",
       "continent": "Europe",
       "dates": "January 22-24, 2027",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@nicasino",
       "description": "Nicasino Dance Festival in Kristiansand, Norway. January 22-24, 2027. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         58.1599,
@@ -2855,12 +2908,12 @@ export const festivals: Festival[] = [
       "country": "Norway",
       "continent": "Europe",
       "dates": "February 26-28, 2027",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@bailan2",
       "description": "5th edition. Bailan2 Puro Cubano Festival at Grønland 60, central Drammen, Norway. Over 20 workshops in salsa, son, rumba, Afro-Cuban dance. Live music in classes, evening parties, social dancing. Organized by Bailan2 Dance Studio.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         59.744,
@@ -2879,12 +2932,12 @@ export const festivals: Festival[] = [
       "country": "Spain",
       "continent": "Europe",
       "dates": "February 26-28, 2027",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@masquecubano",
       "description": "Mas que cubano Festival in Bilbao, Spain. Listed in rueda.casino February 26-28, 2027.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         43.263,
@@ -2903,12 +2956,12 @@ export const festivals: Festival[] = [
       "country": "United Kingdom",
       "continent": "Europe",
       "dates": "March 12-15, 2027",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@mesalsafest",
       "description": "Me Salsa Fest in Birmingham, England. Listed in rueda.casino March 12-15, 2027.",
       "artists": [
-        "Fredyclan",
+        "FredyClan Garcia II",
         "Yusimi Moya Rodriguez"
       ],
       "coordinates": [
@@ -2928,12 +2981,12 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "March 19-21, 2027",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.rockcaliente.fr",
       "instagram": "@saoco.cuban.festival",
       "description": "Saoco Cuban Festival in Aix-en-Provence, France. Listed in rueda.casino March 19-21, 2027.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         43.5297,
@@ -2952,12 +3005,12 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "March 12-14, 2027",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@arrasando.festival",
       "description": "Arrasando Cuban Afro-Salsa Festival in Bremen, Germany. Listed in rueda.casino March 12-14, 2027.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         53.0793,
@@ -2976,12 +3029,12 @@ export const festivals: Festival[] = [
       "country": "USA",
       "continent": "North America",
       "dates": "February 21-22, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "-",
       "description": "Listed in rueda.casino - 21-22 February 2026 in NYC. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         40.7128,
@@ -3000,12 +3053,12 @@ export const festivals: Festival[] = [
       "country": "Italy",
       "continent": "Europe",
       "dates": "Mid-March 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@marche_kizomba",
       "description": "Marche Kizomba Festival in Castelfidardo, Italy. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         43.4634,
@@ -3024,12 +3077,12 @@ export const festivals: Festival[] = [
       "country": "Spain",
       "continent": "Europe",
       "dates": "May 7-9, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@caribbeandancefest",
       "description": "Caribbean Dance Festival at Santa Susanna, Spain. May 7-9, 2026. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         41.6358,
@@ -3048,12 +3101,12 @@ export const festivals: Festival[] = [
       "country": "USA",
       "continent": "North America",
       "dates": "August 7-9, 2026 (TBC)",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@festivalcubano",
       "description": "Festival Cubano in Chicago. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         41.8781,
@@ -3072,12 +3125,12 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "September 18-20, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.tickettailor.com/events/azuca",
       "instagram": "@cubaalaaf",
       "description": "4th edition (CUBA ALAAF 4.0). Cologne's first 100% Cuban Salsa Festival. Sold out repeatedly. Workshops at Sporthochschule Köln. Run by Azuca Cologne (@azucacologne). Passion project.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         50.9375,
@@ -3097,12 +3150,12 @@ export const festivals: Festival[] = [
       "country": "USA",
       "continent": "North America",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@rosecitysalsatimba",
       "description": "Rose City Salsa & Timba Festival in Portland, USA. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         45.5152,
@@ -3121,12 +3174,12 @@ export const festivals: Festival[] = [
       "country": "USA",
       "continent": "North America",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@casinerostimbafest",
       "description": "Casineros Timba Fest in Atlanta. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         33.749,
@@ -3145,12 +3198,12 @@ export const festivals: Festival[] = [
       "country": "USA",
       "continent": "North America",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@atlantaafrocubandance",
       "description": "Atlanta AfroCuban Dance Congress. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         33.749,
@@ -3169,12 +3222,12 @@ export const festivals: Festival[] = [
       "country": "Australia",
       "continent": "Oceania",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@havanatomelbourne",
       "description": "Havana to Melbourne Cuban Festival. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         -37.8136,
@@ -3193,12 +3246,12 @@ export const festivals: Festival[] = [
       "country": "Australia",
       "continent": "Oceania",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@sydneycubansalsacongress",
       "description": "Sydney Cuban Salsa Congress. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         -33.8688,
@@ -3217,12 +3270,12 @@ export const festivals: Festival[] = [
       "country": "New Zealand",
       "continent": "Oceania",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@aotearoacubanfestival",
       "description": "Aotearoa Cuban Festival NZ. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         -36.8509,
@@ -3241,12 +3294,12 @@ export const festivals: Festival[] = [
       "country": "Italy",
       "continent": "Europe",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@bolognasalsafestival",
       "description": "Bologna Salsa Festival. User to verify Instagram/website. May not have annual 2026 edition - verify before publishing.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         44.4949,
@@ -3265,12 +3318,12 @@ export const festivals: Festival[] = [
       "country": "Italy",
       "continent": "Europe",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@firenzemambocongress",
       "description": "Firenze Mambo Congress, Florence. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         43.7696,
@@ -3289,12 +3342,12 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@salsafestival.chemnitz",
       "description": "Salsafestival Chemnitz. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         50.8278,
@@ -3313,12 +3366,12 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@festivalito_leipzig",
       "description": "Festivalito Leipzig. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         51.3397,
@@ -3337,12 +3390,12 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@duesseldorf_salsa_festival",
       "description": "Düsseldorf International Salsa Festival. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         51.2277,
@@ -3361,7 +3414,7 @@ export const festivals: Festival[] = [
       "country": "Germany",
       "continent": "Europe",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.megustacubafestival.de",
       "instagram": "@megustacubafestival",
       "description": "Me Gusta Cuba Festival, Germany. User to verify exact location and dates.",
@@ -3385,7 +3438,7 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "http://www.holacubafestival.fr",
       "instagram": "@holacubafestival.fr",
       "description": "Hola Cuba Festival, France touring. User to verify exact location.",
@@ -3409,15 +3462,15 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "April 10-12, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@franciacubafestival",
       "description": "Francia Cuba Festival - 50 Workshops, 3 Nights, 4 Halls. Salsa, Reggaeton, Afro Rumba, Rueda, plus Bachata, Kompa, Kizomba, Semba. 4 rooms 4 atmospheres: Salsa Cuba, Salsa Son & Retro, Tropical Hall, Bachata Kizomba. Organized by Philippe Gomis. Hotel: Séjours & affaires Apparthotel.",
       "artists": [
-        "Grupo Olori (percussion)",
-        "Philippe Gomis (DJ Phil Gomis - organizer)",
-        "Cuba room workshops (TBA)",
-        "DEEJAY CUBA, DJ KOMPA, DJ BACHATA, DJ KIZOMBA"
+        "Grupo Olori",
+        "Philippe Gomis",
+        "Cuba room workshops",
+        "TBD"
       ],
       "coordinates": [
         48.8566,
@@ -3436,7 +3489,7 @@ export const festivals: Festival[] = [
       "country": "France",
       "continent": "Europe",
       "dates": "TBC March 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://www.endanse.com",
       "instagram": "@salsafestivalcarnaval",
       "description": "Annual carnaval-themed Cuban salsa festival in Limoges with DJ Jack El Calvo.",
@@ -3460,7 +3513,7 @@ export const festivals: Festival[] = [
       "country": "Thailand",
       "continent": "Asia",
       "dates": "September 11-13, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://salsabachatatemptation.com",
       "instagram": "@salsabachatatemptation",
       "description": "Asia's biggest salsa-bachata festival. 3 dance rooms including Cuban & Dominican (Timba, Son, Cha Cha Cha). 100+ international performers. Live concerts.",
@@ -3469,42 +3522,55 @@ export const festivals: Festival[] = [
         "Tania Cannarsa",
         "Latin Soul Dancers",
         "Bersy Cortez",
-        "Wilmer y Maria",
+        "Wilmer Najarro",
+        "Maria de la Vega",
         "Yoyo Flow",
-        "Panagiotis & Myrto",
-        "Angelo y Romina",
-        "Diego Rivera & Yaritza Arboleda",
-        "Dimitris & Yolena",
-        "Jacopo y Linda",
+        "Panagiotis",
+        "Myrto",
+        "Angelo",
+        "Romina",
+        "Diego Rivera",
+        "Yaritza Arboleda",
+        "Dimitris",
+        "Yolena",
+        "Jacopo",
+        "Linda",
         "Samuel Funflow",
         "Mari Yogo",
         "Eloy J Rojas",
         "Alena Studenok",
-        "Berry & Naya",
+        "Berry",
+        "Naya",
         "Piao Piao",
-        "Beko & Mong",
+        "Beko",
+        "Mong",
         "Nwelati",
         "Sahiba",
         "Kalpana",
         "Pinky",
-        "Alonso & Ieva",
+        "Alonso",
+        "Ieva",
         "Sandy Phan",
         "A Qiang",
-        "Klui & Dalla",
+        "Klui",
+        "Dalla",
         "Francesco Scalvenzi",
         "Arun",
-        "Josh & Muse",
+        "Josh",
+        "Muse",
         "Dhwani",
-        "Oscar & Anna",
+        "Oscar",
+        "Anna",
         "Saren",
         "Vero Yuan",
         "JaneJane",
-        "Diego y Sofi",
+        "Diego",
+        "Sofi",
         "Tuna",
         "Tiny",
         "Matangi",
-        "Sebas Garreta (LIVE)",
-        "Mario Rainero (LIVE)"
+        "Sebas Garreta",
+        "Mario Rainero"
       ],
       "coordinates": [
         13.7563,
@@ -3523,12 +3589,12 @@ export const festivals: Festival[] = [
       "country": "Asia (TBC)",
       "continent": "Asia",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@asia_salsa_bachata_congress",
       "description": "Asia Salsa Bachata Congress. Touring Asia event. User to verify location and Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         1.3521,
@@ -3547,7 +3613,7 @@ export const festivals: Festival[] = [
       "country": "Russia",
       "continent": "Europe",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@dianarodriguez_official",
       "description": "Moscow Cuban Festival is speculative - Diana Rodriguez is Moscow-based but no dedicated festival is well-documented. Consider removing if not verifiable.",
@@ -3571,12 +3637,12 @@ export const festivals: Festival[] = [
       "country": "Switzerland",
       "continent": "Europe",
       "dates": "September 25-27, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@salsamas_renens",
       "description": "Festival La Speciale in Renens, Switzerland. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         46.5359,
@@ -3596,12 +3662,12 @@ export const festivals: Festival[] = [
       "country": "Sweden",
       "continent": "Europe",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@stockholm_salsamarathon",
       "description": "Stockholm Bachata Cuban Marathon. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         59.3293,
@@ -3620,12 +3686,12 @@ export const festivals: Festival[] = [
       "country": "Sweden",
       "continent": "Europe",
       "dates": "Early November 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@hotsalsaweekend",
       "description": "Hot Salsa Weekend Stockholm. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         59.3293,
@@ -3644,12 +3710,12 @@ export const festivals: Festival[] = [
       "country": "Cyprus",
       "continent": "Europe",
       "dates": "TBC 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "",
       "instagram": "@cubamisalsa.cy",
       "description": "Cuba Mi Salsa Cyprus. User to verify Instagram/website.",
       "artists": [
-        "-"
+        "TBD"
       ],
       "coordinates": [
         35.1856,
@@ -3668,38 +3734,44 @@ export const festivals: Festival[] = [
       "country": "Spain",
       "continent": "Europe",
       "dates": "April 9-13, 2026",
-      "price": "-",
+      "price": "TBA",
       "website": "https://alocubano.se/benidorm/",
       "instagram": "@alocubano",
       "description": "AloCubano Benidorm 2026 ★ MAYKEL BLANCO LIVE! 'The Cuban Festival in the Miami of Europe'. Set at the legendary Gran Hotel Bali - all-in-one resort experience. 4 unforgettable days of workshops, pool parties, night fiestas. 2 dance floors by night - 1000m² Pure Cuban + 500m² Bachata. 26+ workshops in Cuban styles: Salsa Cubana, Rumba, Afro, Timba, Reparto. Dazzling shows, competitions, animations. Parties until sunrise with DJs from Cuba's finest scene. Established by Julio Espinal from Santiago de Cuba.",
       "artists": [
-        "Maykel Blanco y su Salsa Mayor (LIVE CONCERT)",
+        "Maykel Blanco y su Salsa Mayor",
         "Yoyo Flow",
         "Reynaldo Salazar",
         "Barbara Jimenez",
-        "Pedrito & Giusy",
+        "Pedrito Cuba",
+        "Giusy Chisari",
         "Addy Mendoza",
         "Keke El Peluche",
         "Mercedes Sayut",
-        "Yoannis Tamayo & Anitaa",
-        "Yohan & Elaine",
+        "Yoannis Tamayo",
+        "Anitaa Jimenez",
+        "Yohan Corrioso",
+        "Elaine",
         "Neilys Marrero",
         "Cristian Ivorra",
         "Paolo Suarez",
         "Joan Pich",
         "B Dance Team",
-        "Luis & Vanessa",
-        "Abel & Helia",
+        "Luis Duarte",
+        "Vanessa",
+        "Abel",
+        "Helia",
         "Carlita",
-        "Moyses & Lucia",
-        "DJ Flecha (Joel Verdecia)",
-        "DJ Maquina de Cuba (Javier La Rosa)",
+        "Moyses",
+        "Lucia",
+        "DJ Flecha",
+        "DJ Maquina de Cuba",
         "DJ Raymon",
         "Rey Ceballo",
         "Eddy Aguero",
         "Adriano Brizuela",
-        "Kachi (Classes Live)",
-        "Rey Silveira (Classes Live)"
+        "Kachi",
+        "Rey Silveira"
       ],
       "coordinates": [
         38.5411,
@@ -3725,12 +3797,12 @@ export const festivals: Festival[] = [
       "description": "Cuban festival in Tenerife featuring concert and Cuban dance. 3 days from 15:00 onwards. Featuring multiple Cuban artists and DJs.",
       "artists": [
         "Alicia Ruiz",
-        "Jorge Camagüey",
+        "Jorge Camaguey",
         "Cubaneando",
         "Yeni Molinet",
-        "Hector Oviedo",
+        "Hector Oviedo Abreu",
         "Pedrito Cuba",
-        "DJ Arokán"
+        "DJ Arokan"
       ],
       "coordinates": [
         28.0431,
@@ -3740,6 +3812,477 @@ export const festivals: Festival[] = [
       "category": "Festival",
       "months": [
         "March"
+      ]
+    },
+    {
+      "id": "odac-singapore-cuban-salsa-fiesta-2026",
+      "name": "ODAC Singapore Cuban Salsa Fiesta",
+      "city": "Singapore",
+      "country": "Singapore",
+      "continent": "Asia",
+      "dates": "November 27-29, 2026",
+      "price": "TBA",
+      "website": "https://linktr.ee/odacsingapore",
+      "instagram": "@odacsingapore",
+      "description": "Annual Cuban Salsa festival by ODAC Singapore (Only Dance Afro-Cuban). Brings renowned artists from Cuban Salsa communities across the globe to Singapore. Cross-border collaboration with Cuban Salsa lovers in the region. Features 20+ hours of Workshops, 3 Parties, 6 hours of Masterclasses, Pre-Party. Past lineups have included Diana Rodriguez, Yeni Molinet, Fredyclan, Yusimi, Osmani Segura, Kevin y Geysa. ODAC also runs Cuban Salsa Fiesta editions in Bali (Sept) and Special Editions in Tokyo. 2026 dates approximate - confirm via @odacsingapore Instagram.",
+      "artists": [
+        "TBD",
+        "Diana Rodriguez",
+        "Yeni Molinet",
+        "FredyClan Garcia II",
+        "Yusimi Moya Rodriguez",
+        "Osmani Segura",
+        "Kevin",
+        "Geysa",
+        "DJ Jack El Calvo",
+        "DJ El Gato Volador",
+        "DJ Yuma",
+        "DJ Camille"
+      ],
+      "coordinates": [
+        1.3521,
+        103.8198
+      ],
+      "venue": "Various venues in Singapore (past: Aliwal Arts Centre, 1880, Pasela Resorts)",
+      "category": "Festival",
+      "yearsActive": "5",
+      "months": [
+        "November"
+      ]
+    },
+    {
+      "id": "fusafes-fukuoka-salsa-festival-2026",
+      "name": "FUSAFES - Fukuoka Salsa Festival",
+      "city": "Fukuoka",
+      "country": "Japan",
+      "continent": "Asia",
+      "dates": "TBA 2026",
+      "price": "TBA",
+      "website": "https://tiempo.jp/fusafes/en/",
+      "instagram": "-",
+      "description": "Fukuoka Salsa Festival by NPO TIEMPO, pioneer of salsa culture in Fukuoka for 28 years. Philosophy: 'salsa is salsa' - bringing together salsa lovers from across Japan and abroad regardless of style or origin (includes Cuban Salsa). Three days of music, rhythm, international vibes. Dance shows, live music, workshops, Caribbean food & cocktails, world-class Latin DJs spinning at nightly dance parties. Held at TIEMPO HALL (3F Daimyo11511 Bldg., 1-15-11 Daimyo, Chuo-ku, Fukuoka 810-0041) - located in Daimyo, next to Tenjin.",
+      "artists": [
+        "TBD"
+      ],
+      "coordinates": [
+        33.5904,
+        130.4017
+      ],
+      "venue": "TIEMPO HALL, 3F Daimyo11511 Bldg., 1-15-11 Daimyo, Chuo-ku, Fukuoka",
+      "category": "Festival",
+      "yearsActive": "28",
+      "months": [
+        "TBA"
+      ]
+    },
+    {
+      "id": "cape-town-afro-latin-dance-festival-2026",
+      "name": "Cape Town Afro-Latin Dance Festival",
+      "city": "Cape Town",
+      "country": "South Africa",
+      "continent": "Africa",
+      "dates": "January 28 - February 3, 2026",
+      "price": "TBA",
+      "website": "https://www.capetownsalsa.co.za/event/ctaldf/",
+      "instagram": "-",
+      "description": "7-day celebration of Afro-Latin dance, culture, and exploration in Cape Town. World-class workshops in salsa, bachata, kizomba, and Afro-Latin styles, led by both local and international artists. Daytime socials, rooftop parties, poolside gatherings, sightseeing excursions, and evening gala events. Highlights: opening SBK party, rooftop cocktails, black-tie gala evening, pool party, traditional South African braai with closing party. Events at Homecoming Centre (District Six Museum) and various iconic Cape Town venues.",
+      "artists": [
+        "Caylum Hughes",
+        "Maetro Milord",
+        "Aladdin",
+        "TBD"
+      ],
+      "coordinates": [
+        -33.9249,
+        18.4241
+      ],
+      "venue": "Homecoming Centre (District Six Museum) and various Cape Town venues",
+      "category": "Festival",
+      "months": [
+        "January",
+        "February"
+      ]
+    },
+    {
+      "id": "egypt-world-dance-congress-2026",
+      "name": "Egypt World Dance Congress",
+      "city": "South Sinai",
+      "country": "Egypt",
+      "continent": "Africa",
+      "dates": "April 8-16, 2026",
+      "price": "TBA",
+      "website": "-",
+      "instagram": "-",
+      "description": "Multi-day Latin dance congress in South Sinai, Egypt. Workshops in salsa, bachata, kizomba, and other Latin styles set against Sinai's spectacular Red Sea coastal scenery. Includes Cuban Salsa programming alongside other styles.",
+      "artists": [
+        "TBD"
+      ],
+      "coordinates": [
+        27.9654,
+        34.33
+      ],
+      "venue": "South Sinai (Red Sea coastal venues)",
+      "category": "Congress",
+      "months": [
+        "April"
+      ]
+    },
+    {
+      "id": "afrolatin-holidays-egypt-2026",
+      "name": "AfroLatin Holidays Egypt",
+      "city": "Cairo",
+      "country": "Egypt",
+      "continent": "Africa",
+      "dates": "October 2026 (TBA)",
+      "price": "Full Pass from €80",
+      "website": "https://afrolatinegypt.com/",
+      "instagram": "-",
+      "description": "AfroLatin Egypt presents the 14th edition of its signature dance-vacation. Up to 15 days of social Latin dance experiences across six iconic Egyptian destinations: Cairo, Hurghada (Red Sea), Luxor, Nubia (Aswan), Matrouh, and Siwa. Daily social parties (beach, pool, boat, foam, themed), workshops in Salsa (including Cuban), Bachata, Kizomba, UrbanKiz, Zouk. Sightseeing (Pyramids, Luxor temples), adventure activities (sandboarding, safaris, hot-air balloon), genuine cultural connection. Pass options: Full, Ultra Full, VIP, Super, Royal. NOTE: Mainly bachata/kizomba/SBK with some Cuban content - dance vacation rather than pure Cuban festival.",
+      "artists": [
+        "TBD"
+      ],
+      "coordinates": [
+        30.0444,
+        31.2357
+      ],
+      "venue": "Cairo + Hurghada, Luxor, Nubia (Aswan), Matrouh, Siwa",
+      "category": "Festival",
+      "yearsActive": "14",
+      "months": [
+        "October"
+      ]
+    },
+    {
+      "id": "marrakech-bailamos-festival-2026",
+      "name": "Marrakech Bailamos Festival",
+      "city": "Marrakech",
+      "country": "Morocco",
+      "continent": "Africa",
+      "dates": "July 2026 (TBA)",
+      "price": "TBA",
+      "website": "-",
+      "instagram": "-",
+      "description": "Annual Latin dance festival in Marrakech, Morocco. 6th edition was July 3-6, 2025. Mix of Cuban salsa, bachata, kizomba styles in the heart of Morocco's vibrant cultural capital. 2026 dates approximate based on past editions.",
+      "artists": [
+        "TBD"
+      ],
+      "coordinates": [
+        31.6295,
+        -7.9811
+      ],
+      "venue": "TBA, Marrakech",
+      "category": "Festival",
+      "yearsActive": "7",
+      "months": [
+        "July"
+      ]
+    },
+    {
+      "id": "johannesburg-afro-latin-festival-2026",
+      "name": "Johannesburg Afro-Latin Festival",
+      "city": "Johannesburg",
+      "country": "South Africa",
+      "continent": "Africa",
+      "dates": "March 2026 (TBA)",
+      "price": "TBA",
+      "website": "-",
+      "instagram": "-",
+      "description": "Annual Afro-Latin festival in Johannesburg. 4 days of dance and music workshops and seminars, world-class performances and live music. Past editions partnered with Radisson Blu Gautrain Hotel and Melrose Arch. Past lineups featured Tromboranga Salsa Orquesta. Mix of Salsa (Cuban + Crossbody), Bachata, Kizomba, Tango.",
+      "artists": [
+        "TBD"
+      ],
+      "coordinates": [
+        -26.2041,
+        28.0473
+      ],
+      "venue": "Past venues: Radisson Blu Gautrain Hotel + Melrose Arch",
+      "category": "Festival",
+      "months": [
+        "March"
+      ]
+    },
+    {
+      "id": "australian-cuban-dance-festival-sydney-2026",
+      "name": "Australian Cuban Dance Festival",
+      "city": "Sydney",
+      "country": "Australia",
+      "continent": "Oceania",
+      "dates": "October 2026 (TBA)",
+      "price": "From AUD 40",
+      "website": "https://buenavistadance.com/cuban-dance-festival/",
+      "instagram": "@afro.and.cuban.dance.festival",
+      "description": "Celebrating the Evolution of Cuban Salsa: 'Del Son A La Timba'. 3-day extravaganza of Cuban dance and music. 30 Workshops, 3 Night Parties, Live Band, 4 DJs. Dynamic workshops with acclaimed Cuban dance masters, outstanding live performances by Australian dance schools and Cuban artists, electrifying parties with DJs and live music. Organized by Buena Vista Dance Cuban Academy at Sydney Portugal Community Club, Marrickville.",
+      "artists": [
+        "TBD"
+      ],
+      "coordinates": [
+        -33.91,
+        151.1551
+      ],
+      "venue": "Sydney Portugal Community Club, 100 Marrickville Rd, Marrickville NSW 2204",
+      "category": "Festival",
+      "months": [
+        "October"
+      ]
+    },
+    {
+      "id": "timbeando-festival-lloret-2026",
+      "name": "Timbeando Festival 2026",
+      "city": "Lloret de Mar",
+      "country": "Spain",
+      "continent": "Europe",
+      "dates": "March 6-8, 2026",
+      "price": "From €85 (Full Pass Basic €119, Pack Party Pass €50)",
+      "website": "https://www.salsavida.com/event/spain/catalunya/lloret-de-mar/timbeando-festival/",
+      "instagram": "@timbeando_festival",
+      "description": "100% Cuban festival celebrating Cuban music and dance with timba as its centerpiece. Workshops in salsa cubana, timba, guaguanco, rueda de casino, rumba and afro. Includes Timba en el Ring competition (solo and couples). Held at Hotel Evenia Olympic in Lloret de Mar.",
+      "artists": [
+        "Yorgenis Danger 'Yoyo'",
+        "Jorge Camagüey",
+        "José Carlos",
+        "DJ El Ruso",
+        "DJ Santiago de Cuba"
+      ],
+      "coordinates": [
+        41.7005,
+        2.8458
+      ],
+      "venue": "Hotel Evenia Olympic Palace",
+      "category": "Festival",
+      "yearsActive": "2022-present",
+      "months": [
+        "March"
+      ]
+    },
+    {
+      "id": "ruedamania-yekaterinburg-2026",
+      "name": "Ruedamania 2026",
+      "city": "Yekaterinburg",
+      "country": "Russia",
+      "continent": "Europe",
+      "dates": "October 15-17, 2026",
+      "price": "TBA",
+      "website": "",
+      "instagram": "-",
+      "description": "Cuban Rueda de Casino festival in Yekaterinburg, the cultural center of Russia's Ural region. Features rueda workshops, casino partnerwork, and Cuban-style social dancing.",
+      "artists": [
+        "TBD"
+      ],
+      "coordinates": [
+        56.8389,
+        60.6057
+      ],
+      "venue": "TBD",
+      "category": "Festival",
+      "months": [
+        "October"
+      ]
+    },
+    {
+      "id": "el-son-cubano-fest-london-2026",
+      "name": "El Son Cubano Fest 2026 — From Son to Contratiempo",
+      "city": "London",
+      "country": "United Kingdom",
+      "continent": "Europe",
+      "dates": "May 7-11, 2026",
+      "price": "£269 (Full Pass after May 3, 2026)",
+      "website": "https://www.cubanschool.co.uk/events/festivals/son-cubano-fest",
+      "instagram": "@elsoncubanofest",
+      "description": "The UK's only festival fully dedicated to Son Cubano, returning for its 2nd edition. Created and directed by Damarys Farres, UK Official Ambassador of the International Day of Son. 5 days of authentic Cuban culture with workshops, themed parties, live music, outdoor matinees and seminars. Friday May 8 celebrates the International Day of Son Cubano with red/white/blue Cuban flag colors.",
+      "artists": [
+        "Damarys Farres",
+        "Juan Carlos Pacheco",
+        "Osbanis Tejeda",
+        "Anneta Kepka",
+        "Randy Hechavarria",
+        "DJ Flecha",
+        "DJ Sacha",
+        "DJ Javier"
+      ],
+      "coordinates": [
+        51.5476,
+        -0.2107
+      ],
+      "venue": "The Crown Hotel, Cricklewood",
+      "category": "Festival",
+      "yearsActive": "2025-present",
+      "months": [
+        "May"
+      ]
+    },
+    {
+      "id": "los-dos-abuelos-festival-2026",
+      "name": "Los Dos Abuelos Festival 2026",
+      "city": "Santa Susanna",
+      "country": "Spain",
+      "continent": "Europe",
+      "dates": "March 20-22, 2026",
+      "price": "TBA",
+      "website": "https://www.salsero.es/events/9482/los-dos-abuelos-festival-2026-2--edicion",
+      "instagram": "-",
+      "description": "2nd edition Cuban festival in the Barcelona area, organized by Zaragozando a lo Cubano. Dedicated to the roots of Cuban dance and music with 30+ workshops covering rumba guaguancó, son cubano, palo congo, timba cubana, casino, and afro-cuban styles. Includes shows, dance competitions, pool party, and themed socials. Family-friendly atmosphere at Hotel Don Angel.",
+      "artists": [
+        "Silvio Leroy",
+        "Sonia Cano",
+        "Ernesto Garcia",
+        "Alba Calvet",
+        "Michael Vizcaino",
+        "Neilys Marrero",
+        "Cristian Mauricio",
+        "Olofi"
+      ],
+      "coordinates": [
+        41.6353,
+        2.7066
+      ],
+      "venue": "Hotel Don Angel",
+      "category": "Festival",
+      "yearsActive": "2025-present",
+      "months": [
+        "March"
+      ]
+    },
+    {
+      "id": "tomezclao-dance-festival-2026",
+      "name": "To' Mezclao Dance Festival 2026",
+      "city": "Santa Susanna",
+      "country": "Spain",
+      "continent": "Europe",
+      "dates": "April 2026 (TBC)",
+      "price": "TBA",
+      "website": "https://www.goandance.com/en/events/7143-to-mezclao-dance-festival-2025",
+      "instagram": "-",
+      "description": "Three-day mixed-style dance festival in the Barcelona area (Santa Susanna), organized by Michael & Neilys. Combines Cuban Salsa, Timba, Son, Cuban Rumba, Bachata, Sensual Bachata, Dominican Bachata, Reggaeton, and Urban styles. Features international artists, two nights of socials, pool party, and shows in a welcoming family-style setting at Hotel Don Angel.",
+      "artists": [
+        "TBD"
+      ],
+      "coordinates": [
+        41.6353,
+        2.7066
+      ],
+      "venue": "Hotel Don Angel",
+      "category": "Festival",
+      "yearsActive": "2024-present",
+      "months": [
+        "April"
+      ]
+    },
+    {
+      "id": "crazy-dance-festival-2026",
+      "name": "Crazy Dance Festival 2026",
+      "city": "Santa Susanna",
+      "country": "Spain",
+      "continent": "Europe",
+      "dates": "June 12-14, 2026",
+      "price": "TBA",
+      "website": "https://crazydancefestival.com/",
+      "instagram": "@crazydancefestival",
+      "description": "Festival of bachata, salsa cubana, and timba held at Hotel Don Angel in Santa Susanna (Barcelona area). Features workshops with renowned Cuban artists like Pedrito & Giusy, plus international bachata names. Three days of workshops, shows, themed parties and pool parties on the Mediterranean coast.",
+      "artists": [
+        "Pedrito Cuba",
+        "Giusy Chisari",
+        "Cristian y Gabriela",
+        "Gloria y Aitor",
+        "Alfonso y Noelia",
+        "DJ Ned",
+        "DJ Smile",
+        "DJ Manuel",
+        "DJ Diablito",
+        "DJ Kilo",
+        "DJ Estefi",
+        "DJ Marc",
+        "DJ Tom Nka"
+      ],
+      "coordinates": [
+        41.6353,
+        2.7066
+      ],
+      "venue": "Hotel Don Angel",
+      "category": "Festival",
+      "months": [
+        "June"
+      ]
+    },
+    {
+      "id": "timbatonazo-summer-festival-2026",
+      "name": "TIMBATONAZO Summer Festival 2026",
+      "city": "Santa Susanna",
+      "country": "Spain",
+      "continent": "Europe",
+      "dates": "August 20-23, 2026",
+      "price": "€105-€120 (Full Pass) / €260+ (Pass + Hotel single) / €520 (Pass + Double Room)",
+      "website": "https://www.goandance.com/en/event/8650/timbatonazo-summer-festival-2026",
+      "instagram": "@timbatonazo",
+      "description": "100% Cuban summer festival representing Cuba in Spain. Held at Hotel Don Angel in Santa Susanna (Barcelona area). Features the best Cuban folkloric, traditional and modern dance teachers, live percussion master classes, pool parties, dominoes games, social nights, shows, and themed parties. Organized by Zaragozando a lo Cubano (Zgz).",
+      "artists": [
+        "TBD"
+      ],
+      "coordinates": [
+        41.6353,
+        2.7066
+      ],
+      "venue": "Hotel Don Angel",
+      "category": "Festival",
+      "yearsActive": "2024-present",
+      "months": [
+        "August"
+      ]
+    },
+    {
+      "id": "remix-dance-festival-2026",
+      "name": "The Remix Dance Festival 2026 — Diamond Edition",
+      "city": "Santa Susanna",
+      "country": "Spain",
+      "continent": "Europe",
+      "dates": "April 30 - May 3, 2026",
+      "price": "€99 (Full Pass)",
+      "website": "https://www.goandance.com/en/event/8618/the-remix-dance-festival-2026-diamond-edition",
+      "instagram": "@theremixdancefestival",
+      "description": "Diamond Edition. Four days and three nights of Cuban-leaning Latin dance at Hotel Don Angel in Santa Susanna with full board. Lineup features prominent Cuban artists across timba, salsa cubana, and Afro-Cuban styles. Workshops with national and international artists, themed parties, shows, and pool sessions on the Costa del Maresme.",
+      "artists": [
+        "Marley & Leo",
+        "Cuban Flex",
+        "Jorge 'El Bomba'",
+        "Osdanys Flores",
+        "Marielkis Hernandez",
+        "Alan & Cristina",
+        "Emilito Herrera",
+        "Danger Rodriguez"
+      ],
+      "coordinates": [
+        41.6353,
+        2.7066
+      ],
+      "venue": "Hotel Don Angel",
+      "category": "Festival",
+      "yearsActive": "2023-present",
+      "months": [
+        "April",
+        "May"
+      ]
+    },
+    {
+      "id": "salsarave-barcelona-2026",
+      "name": "SalsaRave 2026 in Barcelona",
+      "city": "Santa Susanna",
+      "country": "Spain",
+      "continent": "Europe",
+      "dates": "September 9-12, 2026",
+      "price": "TBA",
+      "website": "https://www.goandance.com/en/event/8717/salsarave-2026",
+      "instagram": "-",
+      "description": "International Cuban salsa rave festival blending workshops with high-energy rave-inspired social dancing. Four-day program at Hotel Don Angel, Santa Susanna, with daytime workshops and late-night socials in a contemporary Cuban music environment.",
+      "artists": [
+        "TBD"
+      ],
+      "coordinates": [
+        41.6353,
+        2.7066
+      ],
+      "venue": "Hotel Don Angel",
+      "category": "Festival",
+      "months": [
+        "September"
       ]
     }
 ];

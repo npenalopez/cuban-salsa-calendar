@@ -4,7 +4,7 @@ import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from './ui/card';
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
-import { Download, Upload, Copy, FileText, AlertCircle, CheckCircle } from 'lucide-react';
+import { Download, Upload, Copy, FileText, AlertCircle, CheckCircle, Code2 } from 'lucide-react';
 import { toast } from "sonner";
 import { supabaseFestivalService } from '../services/supabase';
 
@@ -44,6 +44,42 @@ export function SimpleDataExport({ festivals, onUpdateFestivals }: SimpleDataExp
     } catch (error) {
       console.error('Copy failed:', error);
       toast.error("Failed to copy festival data. Please try again.");
+    }
+  };
+
+  // Copy a bare Festival[] JSON array to the clipboard, ready to paste
+  // between the brackets of `export const festivals: Festival[] = [...];`
+  // in src/app/data/festivals.ts. No envelope, no metadata.
+  const handleCopyForCode = () => {
+    try {
+      const arrayLiteral = supabaseFestivalService.exportFestivalsAsArray(festivals);
+      navigator.clipboard.writeText(arrayLiteral);
+      toast.success(`${festivals.length} festivals copied as a bare array — paste inside festivals.ts brackets`, {
+        duration: 4000,
+      });
+    } catch (error) {
+      console.error('Copy-for-code failed:', error);
+      toast.error("Failed to copy. Please try again.");
+    }
+  };
+
+  // Download a complete drop-in replacement for festivals.ts
+  const handleDownloadCodeFile = () => {
+    try {
+      const code = supabaseFestivalService.exportFestivalsAsCodeFile(festivals);
+      const blob = new Blob([code], { type: 'text/typescript' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = 'festivals.ts';
+      link.click();
+      URL.revokeObjectURL(url);
+      toast.success(`Downloaded festivals.ts — drop into src/app/data/ to replace`, {
+        duration: 4000,
+      });
+    } catch (error) {
+      console.error('Download festivals.ts failed:', error);
+      toast.error("Failed to download. Please try again.");
     }
   };
 
@@ -167,38 +203,89 @@ export function SimpleDataExport({ festivals, onUpdateFestivals }: SimpleDataExp
         </CardContent>
       </Card>
 
-      {/* Export Section */}
+      {/* Export FOR CODE — drop-in for src/app/data/festivals.ts */}
+      <Card className="border-black border-2">
+        <CardHeader>
+          <CardTitle className="flex items-center gap-2">
+            <Code2 className="h-5 w-5" />
+            Export for festivals.ts
+          </CardTitle>
+          <CardDescription>
+            Use this when you've finished editing here and want to commit the
+            new list back to the repo. No envelope, no metadata — just the raw
+            <code className="mx-1 px-1 bg-gray-100 rounded">Festival[]</code> array
+            ready to paste into the source file.
+          </CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <div className="flex flex-wrap items-center gap-3">
+            <Button
+              onClick={handleCopyForCode}
+              className="bg-black hover:bg-gray-800 text-white"
+            >
+              <Copy className="h-4 w-4 mr-2" />
+              Copy as JSON array
+            </Button>
+
+            <Button
+              variant="outline"
+              onClick={handleDownloadCodeFile}
+              className="border-black"
+            >
+              <Download className="h-4 w-4 mr-2" />
+              Download festivals.ts
+            </Button>
+          </div>
+
+          <div className="bg-gray-50 border border-gray-200 rounded p-3 text-xs space-y-2 text-gray-700">
+            <p className="font-semibold">Workflow:</p>
+            <ol className="list-decimal list-inside space-y-1">
+              <li>Edit the list visually here (add / edit / delete).</li>
+              <li>Click <strong>Download festivals.ts</strong> and replace
+                <code className="mx-1 px-1 bg-white border rounded">src/app/data/festivals.ts</code>
+                in the repo. (Or use <strong>Copy as JSON array</strong> and paste between the brackets in the existing file.)</li>
+              <li>Bump <code className="mx-1 px-1 bg-white border rounded">SEED_VERSION</code> in
+                <code className="mx-1 px-1 bg-white border rounded">src/app/services/supabase.ts</code>
+                so visitors' caches refresh.</li>
+              <li><code className="px-1 bg-white border rounded">git add &amp;&amp; git commit &amp;&amp; git push</code>.</li>
+            </ol>
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Export Section (legacy backup format with envelope) */}
       <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Download className="h-5 w-5" />
-            Export Festival Data
+            Backup (envelope JSON)
           </CardTitle>
           <CardDescription>
-            Download or copy your festival collection as JSON for backup or sharing
+            Wrapped JSON with timestamp + version metadata — useful for
+            archive backups, but not for editing the source file.
           </CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
           <div className="flex items-center gap-3">
             <Button
               onClick={handleExportJSON}
-              className="bg-blue-600 hover:bg-blue-700"
+              variant="outline"
             >
               <Download className="h-4 w-4 mr-2" />
-              Download as File
+              Download backup file
             </Button>
-            
+
             <Button
               variant="outline"
               onClick={handleCopyJSON}
             >
               <Copy className="h-4 w-4 mr-2" />
-              Copy to Clipboard
+              Copy backup to clipboard
             </Button>
           </div>
-          
+
           <div className="text-sm text-gray-600">
-            Export includes all {festivals.length} festivals with metadata and timestamps
+            Includes all {festivals.length} festivals plus exportedAt / version / source metadata.
           </div>
         </CardContent>
       </Card>
@@ -318,8 +405,9 @@ export function SimpleDataExport({ festivals, onUpdateFestivals }: SimpleDataExp
           </div>
           
           <div className="text-xs text-gray-500 mt-4">
-            All data is stored in Supabase database and shared across all users.
-            Festival admins can manage the collection and changes are visible to everyone.
+            Edits live in your browser's localStorage only. To make them visible
+            to other visitors, export the new <code>festivals.ts</code> from the
+            card above and commit it to the repo.
           </div>
         </CardContent>
       </Card>

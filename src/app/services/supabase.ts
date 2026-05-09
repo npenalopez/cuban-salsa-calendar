@@ -21,7 +21,7 @@ const STORAGE_KEY = 'cuban-salsa-festivals';
 const SEED_VERSION_KEY = 'cuban-salsa-festivals-seed-version';
 // Bump this string whenever `initialFestivals` in src/app/data/festivals.ts
 // changes — local caches with a different version are replaced on load.
-const SEED_VERSION = '2026-05-09-v6-133-festivals-v7audit';
+const SEED_VERSION = '2026-05-09-v7-150-festivals';
 
 class FestivalStorage {
   // ───── Lifecycle (no-ops kept for API compatibility) ─────
@@ -127,6 +127,70 @@ class FestivalStorage {
       null,
       2,
     );
+  }
+
+  /**
+   * JSON array string ready to paste between the brackets of
+   * `export const festivals: Festival[] = [ … ];` in festivals.ts.
+   * No envelope, no wrapper — just the array literal.
+   */
+  exportFestivalsAsArray(festivals: Festival[]): string {
+    return JSON.stringify(festivals, null, 2);
+  }
+
+  /**
+   * Full replacement contents for src/app/data/festivals.ts. Save the
+   * returned string over the existing file and you're done.
+   */
+  exportFestivalsAsCodeFile(festivals: Festival[]): string {
+    const arrayLiteral = JSON.stringify(festivals, null, 2);
+    return `export interface Festival {
+  id: string;
+  name: string;
+  city: string;
+  country: string;
+  continent: string;
+  dates: string;
+  price: string;
+  months?: string[];
+  website?: string;
+  instagram?: string;
+  description?: string;
+  artists?: string[];
+  coordinates?: [number, number];
+  venue?: string;
+  category?: string;
+  yearsActive?: string;
+}
+
+export const continents = [
+  "North America",
+  "South America",
+  "Europe",
+  "Africa",
+  "Asia",
+  "Oceania",
+];
+
+export const months = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+
+export const festivals: Festival[] = ${arrayLiteral};
+
+export default festivals;
+`;
   }
 
   importFestivals(jsonString: string): Festival[] {
