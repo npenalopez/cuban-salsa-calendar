@@ -593,6 +593,79 @@ export function CountryFlagIcon({ country, size = 16, className = "" }: CountryF
           </svg>
         );
 
+      case 'belgium':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            <rect x="0" y="0" width="8" height="16" fill="#000000" />
+            <rect x="8" y="0" width="8" height="16" fill="#FAE042" />
+            <rect x="16" y="0" width="8" height="16" fill="#ED2939" />
+          </svg>
+        );
+
+      case 'denmark':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            <rect width="24" height="16" fill="#C8102E" />
+            {/* White Nordic cross (off-center toward hoist) */}
+            <rect x="0" y="6" width="24" height="4" fill="white" />
+            <rect x="6" y="0" width="4" height="16" fill="white" />
+          </svg>
+        );
+
+      case 'morocco':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            <rect width="24" height="16" fill="#C1272D" />
+            {/* Green pentagram outline */}
+            <path
+              d="M12 5 L13.18 8.65 L17 8.65 L13.91 10.91 L15.09 14.55 L12 12.29 L8.91 14.55 L10.09 10.91 L7 8.65 L10.82 8.65 Z"
+              fill="none"
+              stroke="#006233"
+              strokeWidth="0.6"
+            />
+          </svg>
+        );
+
+      case 'indonesia':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            <rect x="0" y="0" width="24" height="8" fill="#FF0000" />
+            <rect x="0" y="8" width="24" height="8" fill="white" />
+          </svg>
+        );
+
+      case 'slovakia':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            <rect x="0" y="0" width="24" height="5.33" fill="white" />
+            <rect x="0" y="5.33" width="24" height="5.33" fill="#0B4EA2" />
+            <rect x="0" y="10.66" width="24" height="5.34" fill="#EE1C25" />
+            {/* Simplified coat-of-arms shield on hoist side */}
+            <path d="M4 4 L9 4 L9 9 L6.5 11 L4 9 Z" fill="#EE1C25" stroke="white" strokeWidth="0.3" />
+            {/* Patriarchal double cross — vertical with two horizontals */}
+            <rect x="6.2" y="5" width="0.6" height="4.5" fill="white" />
+            <rect x="5.4" y="5.7" width="2.2" height="0.5" fill="white" />
+            <rect x="5" y="6.7" width="3" height="0.5" fill="white" />
+          </svg>
+        );
+
+      case 'singapore':
+        return (
+          <svg width={width} height={height} viewBox="0 0 24 16" fill="none" className={className}>
+            <rect x="0" y="0" width="24" height="8" fill="#EF3340" />
+            <rect x="0" y="8" width="24" height="8" fill="white" />
+            {/* Crescent: white disc with red bite */}
+            <circle cx="5.5" cy="4" r="2.5" fill="white" />
+            <circle cx="6.3" cy="4" r="2" fill="#EF3340" />
+            {/* 5 small stars (simplified to dots) in the canonical arc */}
+            <circle cx="9.5" cy="2.6" r="0.4" fill="white" />
+            <circle cx="11" cy="3.7" r="0.4" fill="white" />
+            <circle cx="11" cy="5.5" r="0.4" fill="white" />
+            <circle cx="9" cy="5.5" r="0.4" fill="white" />
+            <circle cx="8.5" cy="3.7" r="0.4" fill="white" />
+          </svg>
+        );
+
       default:
         // Generic flag placeholder for unknown countries
         return (
