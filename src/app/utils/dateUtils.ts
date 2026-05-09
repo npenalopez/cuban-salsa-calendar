@@ -683,21 +683,21 @@ export function getPrimaryMonth(
       December: "December",
     };
 
-    // For cross-month festivals like "Feb 28 - Mar 2" or "October 26 - November 4", use the start month
-    if (cleanDateString.includes(" - ")) {
-      const startPart = cleanDateString.split(" - ")[0].trim();
-      const startMatch = startPart.match(/^([A-Za-z]{3,})/);
-      if (startMatch) {
-        return monthMap[startMatch[1]] || null;
-      }
+    // Find the FIRST month name anywhere in the string. This naturally
+    // handles:
+    //   - normal entries: "April 10-12, 2026" → April
+    //   - cross-month: "Feb 28 - Mar 2, 2026" → February (start month wins
+    //     because it appears first)
+    //   - soft-date prefixes: "Mid-April 2026", "Late September 2026",
+    //     "Early November 2026", "TBC March 2026" → April / September /
+    //     November / March
+    // Entries with no month name at all (e.g. "TBC 2026") still return
+    // null so they fall out of `isDisplayableFestival`.
+    const tokens = cleanDateString.split(/[^A-Za-z]+/).filter(Boolean);
+    for (const token of tokens) {
+      const month = monthMap[token];
+      if (month) return month;
     }
-
-    // For single month festivals like "Jan 10-12" or "December 15-18" or single day "Apr 25"
-    const monthMatch = cleanDateString.match(/^([A-Za-z]{3,})/);
-    if (monthMatch) {
-      return monthMap[monthMatch[1]] || null;
-    }
-
     return null;
   } catch (error) {
     console.warn(
