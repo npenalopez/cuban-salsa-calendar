@@ -235,7 +235,8 @@ export const festivals: Festival[] = [
       "Sofia de Endaya",
       "Ariel López",
       "Lexi Krewinkel",
-      "Helen & Yago",
+      "Helen Haukamp",
+      "Yago",
       "DJ Pastaguero",
       "DJ Luis",
       "Dj Endaya"
@@ -376,27 +377,16 @@ export const festivals: Festival[] = [
     "country": "Cuba",
     "continent": "North America",
     "dates": "February 18 - March 1, 2026",
-    "price": "TBA",
+    "price": "1700.00€ - 2850.00€",
     "website": "https://alocubano.se",
-    "instagram": "@alocubano",
+    "instagram": "https://www.instagram.com/alocubanodanceescape/",
     "description": "AloCubano Havana - 'Dance Tour' edition. Established by Julio Espinal from Santiago de Cuba. The source - Cuban culture where it was born. Workshops, socials, real vibe with top Cuban dance maestros from the AloCubano family. February-March 2026. Premium Cuban festival - cuban, salsa, afro, reggaeton, rueda, reparto, son.",
     "artists": [
-      "Julio Espinal",
-      "Yoyo Flow",
-      "Barbara Jimenez",
-      "Yoannis Tamayo",
-      "Pedrito Cuba",
-      "Giusy Chisari",
-      "Mercedes Sayut",
-      "Adonis Santiago",
-      "FredyClan Garcia II",
-      "DJ Flecha",
-      "DJ Maquina de Cuba",
-      "Live Cuban orchestras"
+      "TBD"
     ],
     "coordinates": [
-      23.1136,
-      -82.3666
+      23.135305,
+      -82.3589631
     ],
     "venue": "-",
     "category": "Festival",
@@ -410,33 +400,23 @@ export const festivals: Festival[] = [
     "city": "Budapest",
     "country": "Hungary",
     "continent": "Europe",
-    "dates": "February 20-23, 2026",
-    "price": "€149 (Full Pass)",
+    "dates": "February 26- March 1, 2027",
+    "price": "€121.00 - €141.00",
     "website": "https://www.arrebatatefestival.com",
-    "instagram": "@arrebatate",
-    "description": "8th edition. Craziest Cuban festival in the heart of Europe. February 20-23, 2026. Salsa, Afro, Son, Rumba workshops with top Cuban artists. Bootcamps: Master Afro Bootcamp with Yeni Molinet, Rueda de Casino Bootcamp with Mahmoud Morsy & Isabella (champions of Rueda de Casino). Official Partner Hotel: Ibis Budapest Stadium.",
+    "instagram": "https://www.instagram.com/arrebatate",
+    "description": "9th edition. Craziest Cuban festival in the heart of Europe. ",
     "artists": [
-      "Lorenys Rodriguez",
-      "Manolo",
-      "Ckiky Cuba",
+      "Diana Rodriguez",
+      "Alex Toledo",
       "Pedrito Cuba",
       "Giusy Chisari",
-      "Yusimi Moya Rodriguez",
-      "Diana Rodriguez",
-      "Yeni Molinet",
-      "Andreas",
+      "Royma Roman Rodriguez",
       "Melina",
-      "Ale",
-      "Sofi",
-      "Ania Seruga",
-      "Mahmoud Morsi",
-      "Isabella",
-      "DJ Rafi",
-      "DJ Csedi"
+      "Andreas"
     ],
     "coordinates": [
-      47.4979,
-      19.0402
+      47.4978789,
+      19.0402383
     ],
     "venue": "Lurdy Ház, UniCredit Bank, Könyves Kálmán körút 12, Budapest 1097",
     "category": "Festival",
@@ -453,7 +433,7 @@ export const festivals: Festival[] = [
     "dates": "February 26 - March 1, 2026",
     "price": "TBA",
     "website": "https://www.solwayscuba.com",
-    "instagram": "@festivaldelasalsahavana",
+    "instagram": "https://www.instagram.com/festivaldelasalsaencuba/",
     "description": "10th anniversary edition. Concerts by Cuba's top orchestras, salsa/rumba/timba workshops, performances, pool parties. Hotel Memorias Miramar.",
     "artists": [
       "Maykel Blanco y su Salsa Mayor",
@@ -473,43 +453,12 @@ export const festivals: Festival[] = [
       "DJ Javier Miramar"
     ],
     "coordinates": [
-      23.1136,
-      -82.3666
+      23.135305,
+      -82.3589631
     ],
     "venue": "Hotel Memories Miramar / Club 500",
     "category": "Festival",
     "yearsActive": "since 2017",
-    "months": [
-      "February"
-    ]
-  },
-  {
-    "id": "vip-havana-salsa-festival-2026",
-    "name": "VIP Havana Salsa Festival Tour",
-    "city": "Havana",
-    "country": "Cuba",
-    "continent": "North America",
-    "dates": "February 25 - March 2, 2026",
-    "price": "$2,395 / person (Group BnB) — VIP package",
-    "website": "https://havanamusictours.com",
-    "instagram": "@havanamusictours",
-    "description": "VIP Havana Salsa Festival Tour by Havana Music Tours. February 25 - March 2, 2026. Premium tour package with the best of the Cuban salsa scene.",
-    "artists": [
-      "Alexander Abreu y Havana D'Primera",
-      "Pupy y Los Que Son Son",
-      "Adalberto Alvarez y Su Son",
-      "Elito Reve y Su Charangon",
-      "Maikel Blanco y Su Salsa Mayor",
-      "Manolito Simonet y Su Trabuco",
-      "Alain Perez",
-      "Isaac Delgado"
-    ],
-    "coordinates": [
-      23.1136,
-      -82.3666
-    ],
-    "venue": "Various venues, Havana",
-    "category": "Festival",
     "months": [
       "February"
     ]
@@ -520,22 +469,22 @@ export const festivals: Festival[] = [
     "city": "Cologne",
     "country": "Germany",
     "continent": "Europe",
-    "dates": "March 6-9, 2026",
-    "price": "€115-€135 (Full Pass) / €40-€55 (Party)",
+    "dates": "March 6-8, 2026",
+    "price": "€115-€135",
     "website": "",
-    "instagram": "@timbamasteryfestival",
+    "instagram": "",
     "description": "Timba Mastery Festival in Cologne, Germany. Workshops with top Cuban artists. Verify Instagram/website with @cubansalsacalendar.",
     "artists": [
       "Alberto Valdes",
+      "Alain Zambrana",
       "Sava",
       "Elio",
       "Enrique",
-      "Iljana",
-      "Aram"
+      "Jeney"
     ],
     "coordinates": [
-      50.9375,
-      6.9603
+      50.938361,
+      6.959974
     ],
     "venue": "Emdener Straße 68, Köln",
     "category": "Congress",
@@ -1079,7 +1028,7 @@ export const festivals: Festival[] = [
       "Silvio Leroy",
       "Luis Duarte",
       "Sassan Alivaliollahi",
-      "Ariel Lopez",
+      "Ariel López",
       "DJ Jack El Calvo",
       "DJ Yala El Puma",
       "DJ Tom Nka"
@@ -1394,9 +1343,9 @@ export const festivals: Festival[] = [
       "Diana Rodriguez",
       "Yeni Molinet",
       "Yenifer Lavin",
-      "Jorge Camaguey",
+      "Jorge Camagüey",
       "Mari",
-      "Jorgito"
+      "Jorge Luis Fernandez"
     ],
     "coordinates": [
       41.7005,
@@ -1668,7 +1617,7 @@ export const festivals: Festival[] = [
       "Yusimi Moya Rodriguez",
       "Sassan Ito",
       "Helen Haukamp",
-      "Ariel Lopez",
+      "Ariel López",
       "Sofia de Endaya",
       "Oliwia Szewczak",
       "Tumbakin",
@@ -2310,11 +2259,11 @@ export const festivals: Festival[] = [
       "Katerina Mik",
       "Mixael Cabrera y su Team Barcelona",
       "Lorenys Rodriguez",
-      "Manolo",
+      "Carlos Manolo",
       "Florine",
       "Yacin",
-      "Kevin",
-      "Geisa",
+      "Kevin Cano",
+      "Geysa Martinez",
       "Neilys Marrero",
       "Michel Vizcaino",
       "Yordanis Aguero Delgado",
@@ -2624,7 +2573,7 @@ export const festivals: Festival[] = [
       "Royma Roman Rodriguez",
       "Barbara Jimenez",
       "Yorgenis Danger 'Yoyo'",
-      "Emilio Herrera",
+      "Emilito Herrera",
       "Julio Molina",
       "DJ Javier La Rosa",
       "DJ Leo de Cuba",
@@ -3027,54 +2976,6 @@ export const festivals: Festival[] = [
     "coordinates": [
       53.0793,
       8.8017
-    ],
-    "venue": "-",
-    "category": "Festival",
-    "months": [
-      "March"
-    ]
-  },
-  {
-    "id": "asi-se-goza-nyc-2026",
-    "name": "Así Se Goza!",
-    "city": "New York City",
-    "country": "USA",
-    "continent": "North America",
-    "dates": "February 21-22, 2026",
-    "price": "TBA",
-    "website": "",
-    "instagram": "-",
-    "description": "Listed in rueda.casino - 21-22 February 2026 in NYC. User to verify Instagram/website.",
-    "artists": [
-      "TBD"
-    ],
-    "coordinates": [
-      40.7128,
-      -74.006
-    ],
-    "venue": "-",
-    "category": "Weekender",
-    "months": [
-      "February"
-    ]
-  },
-  {
-    "id": "marche-kizomba-castelfidardo-2026",
-    "name": "Marche Kizomba Festival",
-    "city": "Castelfidardo",
-    "country": "Italy",
-    "continent": "Europe",
-    "dates": "Mid-March 2026",
-    "price": "TBA",
-    "website": "",
-    "instagram": "@marche_kizomba",
-    "description": "Marche Kizomba Festival in Castelfidardo, Italy. User to verify Instagram/website.",
-    "artists": [
-      "TBD"
-    ],
-    "coordinates": [
-      43.4634,
-      13.5524
     ],
     "venue": "-",
     "category": "Festival",
@@ -3500,17 +3401,27 @@ export const festivals: Festival[] = [
     "city": "Limoges",
     "country": "France",
     "continent": "Europe",
-    "dates": "TBC March 2026",
-    "price": "TBA",
+    "dates": "March 13-15, 2026",
+    "price": "90€ - 150€",
     "website": "https://www.endanse.com",
-    "instagram": "@salsafestivalcarnaval",
+    "instagram": "https://www.instagram.com/festival_salsa_carnaval_lmg/",
     "description": "Annual carnaval-themed Cuban salsa festival in Limoges with DJ Jack El Calvo.",
     "artists": [
-      "DJ Jack El Calvo"
+      "Issac Delgado",
+      "Laura Del Vecchio",
+      "Jonar Gonzalez",
+      "Carlos Manolo",
+      "Lorenys Rodriguez",
+      "Hector Oviedo Abreu",
+      "Luis Duarte",
+      "DJ Rafi",
+      "DJ La Tremenda",
+      "DJ El Loco",
+      "DJ Timbaleaks"
     ],
     "coordinates": [
-      45.8336,
-      1.2611
+      45.8354243,
+      1.2644847
     ],
     "venue": "-",
     "category": "Festival",
@@ -3809,7 +3720,7 @@ export const festivals: Festival[] = [
     "description": "Cuban festival in Tenerife featuring concert and Cuban dance. 3 days from 15:00 onwards. Featuring multiple Cuban artists and DJs.",
     "artists": [
       "Alicia Ruiz",
-      "Jorge Camaguey",
+      "Jorge Camagüey",
       "Cubaneando",
       "Yeni Molinet",
       "Hector Oviedo Abreu",
@@ -3844,8 +3755,8 @@ export const festivals: Festival[] = [
       "FredyClan Garcia II",
       "Yusimi Moya Rodriguez",
       "Osmani Segura",
-      "Kevin",
-      "Geysa",
+      "Kevin Cano",
+      "Geysa Martinez",
       "DJ Jack El Calvo",
       "DJ El Gato Volador",
       "DJ Yuma",
@@ -3983,30 +3894,6 @@ export const festivals: Festival[] = [
     "yearsActive": "7",
     "months": [
       "July"
-    ]
-  },
-  {
-    "id": "johannesburg-afro-latin-festival-2026",
-    "name": "Johannesburg Afro-Latin Festival",
-    "city": "Johannesburg",
-    "country": "South Africa",
-    "continent": "Africa",
-    "dates": "March 2026 (TBA)",
-    "price": "TBA",
-    "website": "-",
-    "instagram": "-",
-    "description": "Annual Afro-Latin festival in Johannesburg. 4 days of dance and music workshops and seminars, world-class performances and live music. Past editions partnered with Radisson Blu Gautrain Hotel and Melrose Arch. Past lineups featured Tromboranga Salsa Orquesta. Mix of Salsa (Cuban + Crossbody), Bachata, Kizomba, Tango.",
-    "artists": [
-      "TBD"
-    ],
-    "coordinates": [
-      -26.2041,
-      28.0473
-    ],
-    "venue": "Past venues: Radisson Blu Gautrain Hotel + Melrose Arch",
-    "category": "Festival",
-    "months": [
-      "March"
     ]
   },
   {
