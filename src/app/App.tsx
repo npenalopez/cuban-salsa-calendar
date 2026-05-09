@@ -394,18 +394,20 @@ function AppContent() {
 
   if (showHelpPage) {
     return (
-      <div className="min-h-screen bg-white">
-        <Suspense fallback={<SalsaLoadingAnimation />}>
-          <HelpPageContent onBackToCalendar={handleBackToCalendar} />
-        </Suspense>
-        <Toaster />
-      </div>
+      <TooltipProvider>
+        <div className="min-h-screen bg-white">
+          <Suspense fallback={<SalsaLoadingAnimation />}>
+            <HelpPageContent onBackToCalendar={handleBackToCalendar} />
+          </Suspense>
+          <Toaster />
+        </div>
+      </TooltipProvider>
     );
   }
 
   if (showManagement) {
     return (
-      <>
+      <TooltipProvider>
         <Suspense fallback={<SalsaLoadingAnimation />}>
           <EnhancedFestivalManagement
             festivals={festivals}
@@ -414,7 +416,7 @@ function AppContent() {
           />
         </Suspense>
         <Toaster />
-      </>
+      </TooltipProvider>
     );
   }
 
