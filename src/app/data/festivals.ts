@@ -647,7 +647,6 @@ export const festivals: Festival[] = [
         "Oliwia Szewczak",
         "Royma Roman Rodriguez",
         "Mahmoud Morsi",
-        "Orisun Company",
         "Louise",
         "Marvin",
         "Ido",
@@ -732,9 +731,6 @@ export const festivals: Festival[] = [
       "artists": [
         "Luanda Pau",
         "Maestro Domingo Pau",
-        "Conjunto Folklorico Nacional de Cuba",
-        "Academia de Danza Carlos Acosta",
-        "Cabaret Tropicana de Cuba",
         "TBD"
       ],
       "coordinates": [
@@ -872,8 +868,7 @@ export const festivals: Festival[] = [
       "description": "3rd edition. Workshops | Parties | Live Music | Rumba Abierta | Casino Boot Camp | Rueda Olympics. 19+ world-class artists + DJs. 3 full days of workshops with live music across all levels. Casino Boot Camp by Ramses and Sandra. 2 epic parties at Saw Swee Hock Student Centre, central London. Friendly, inclusive community by Rueda Libre. Quality Cuban dance with great artists in welcoming and safe space.",
       "artists": [
         "Ramses",
-        "Sandra",
-        "19+ world-class Cuban artists + DJs"
+        "Sandra"
       ],
       "coordinates": [
         51.5074,
@@ -970,8 +965,7 @@ export const festivals: Festival[] = [
       "description": "Cuban salsa festival in Nuremberg with limited tickets and intimate atmosphere.",
       "artists": [
         "Charles DJ Cuba",
-        "DJ Amaury",
-        "CubaDanza"
+        "DJ Amaury"
       ],
       "coordinates": [
         49.4521,
@@ -1218,9 +1212,7 @@ export const festivals: Festival[] = [
       "website": "https://salazarruedafestival.com",
       "instagram": "@salazar.ruedafestival",
       "description": "3rd International Rueda Festival in Switzerland. 100% Rueda de Casino. 26 workshops with 15 international top artists, 2 themed parties + Gala-Party Saturday (dresscode elegant), bootcamp, contest. Run at Sabor Latino dance venue. Founded by @reynaldo_salazar_.",
-      "artists": [
-        "15 international top Rueda de Casino artists"
-      ],
+      "artists": [],
       "coordinates": [
         47.5022,
         8.7372
@@ -3382,7 +3374,6 @@ export const festivals: Festival[] = [
       "artists": [
         "Grupo Olori",
         "Philippe Gomis",
-        "Cuba room workshops",
         "TBD"
       ],
       "coordinates": [
@@ -3720,7 +3711,6 @@ export const festivals: Festival[] = [
       "artists": [
         "Alicia Ruiz",
         "Jorge Camagüey",
-        "Cubaneando",
         "Yeni Molinet",
         "Hector Oviedo Abreu",
         "Pedrito Cuba",

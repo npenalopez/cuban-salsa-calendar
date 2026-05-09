@@ -3,9 +3,15 @@ import { type Festival } from '../data/festivals';
 import { Input } from './ui/input';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from './ui/table';
 import { Badge } from './ui/badge';
-import { Search, Users, TrendingUp, ArrowUpDown, AlertTriangle, X } from 'lucide-react';
+import { Search, Users, TrendingUp, ArrowUpDown, AlertTriangle, X, Disc3, Music, Footprints } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Button } from './ui/button';
+import {
+  getArtistCategory,
+  isNonArtistEntry,
+  CATEGORY_LABEL,
+  type ArtistCategory,
+} from '../utils/artistCategory';
 
 interface ArtistManagementProps {
   festivals: Festival[];
@@ -14,6 +20,7 @@ interface ArtistManagementProps {
 interface ArtistInfo {
   name: string;
   appearanceCount: number;
+  category: ArtistCategory;
   festivals: {
     name: string;
     id: string;
@@ -44,7 +51,11 @@ const PLACEHOLDER_PATTERNS: RegExp[] = [
 function isPlaceholderArtist(name: string): boolean {
   const trimmed = name.trim();
   if (!trimmed) return true;
-  return PLACEHOLDER_PATTERNS.some(p => p.test(trimmed));
+  if (PLACEHOLDER_PATTERNS.some(p => p.test(trimmed))) return true;
+  // Also drop descriptive phrases / brand names ("19+ Cuban artists",
+  // "Academia de Danza Carlos Acosta", etc.) so they don't pollute the
+  // artist database.
+  return isNonArtistEntry(trimmed);
 }
 
 // Normalize for duplicate detection: lowercase, strip punctuation, collapse
@@ -59,6 +70,7 @@ function normalizeForCompare(name: string): string {
 
 type SortKey = 'name' | 'appearances';
 type SortDir = 'asc' | 'desc';
+type CategoryFilter = ArtistCategory | 'all';
 
 export function ArtistManagement({ festivals }: ArtistManagementProps) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -66,6 +78,7 @@ export function ArtistManagement({ festivals }: ArtistManagementProps) {
   const [sortDir, setSortDir] = useState<SortDir>('asc');
   const [hideDups, setHideDups] = useState(false);
   const [showOnlyDups, setShowOnlyDups] = useState(false);
+  const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>('all');
 
   const artistsData = useMemo<ArtistInfo[]>(() => {
     const artistMap = new Map<string, ArtistInfo>();
@@ -92,6 +105,7 @@ export function ArtistManagement({ festivals }: ArtistManagementProps) {
           artistMap.set(artistName, {
             name: artistName,
             appearanceCount: 1,
+            category: getArtistCategory(artistName),
             festivals: [entry],
           });
         }
@@ -125,6 +139,9 @@ export function ArtistManagement({ festivals }: ArtistManagementProps) {
 
   const filteredArtists = useMemo(() => {
     let out = artistsData;
+    if (categoryFilter !== 'all') {
+      out = out.filter(a => a.category === categoryFilter);
+    }
     if (showOnlyDups) {
       out = out.filter(a => dupNameSet.has(a.name));
     } else if (hideDups) {
@@ -162,7 +179,7 @@ export function ArtistManagement({ festivals }: ArtistManagementProps) {
       return a.name.localeCompare(b.name) * dir;
     });
     return sorted;
-  }, [artistsData, searchQuery, sortKey, sortDir, hideDups, showOnlyDups, dupNameSet, dupGroups]);
+  }, [artistsData, searchQuery, sortKey, sortDir, hideDups, showOnlyDups, categoryFilter, dupNameSet, dupGroups]);
 
   const totalArtists = artistsData.length;
   const totalAppearances = artistsData.reduce((s, a) => s + a.appearanceCount, 0);
@@ -171,6 +188,12 @@ export function ArtistManagement({ festivals }: ArtistManagementProps) {
     () => [...artistsData].sort((a, b) => b.appearanceCount - a.appearanceCount)[0] ?? null,
     [artistsData],
   );
+
+  const categoryCounts = useMemo(() => {
+    const counts: Record<ArtistCategory, number> = { dj: 0, musician: 0, dancer: 0 };
+    for (const a of artistsData) counts[a.category]++;
+    return counts;
+  }, [artistsData]);
 
   const toggleSort = (key: SortKey) => {
     if (key === sortKey) {
@@ -185,8 +208,14 @@ export function ArtistManagement({ festivals }: ArtistManagementProps) {
     <div className="space-y-6">
       {/* Statistics Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <StatCard label="Total artists" value={totalArtists} hint="Unique names (placeholders excluded)" icon={Users} />
-        <StatCard label="Total appearances" value={totalAppearances} hint={`Avg ${averageAppearances} per artist`} icon={TrendingUp} />
+        <StatCard label="Total artists" value={totalArtists} hint={`${totalAppearances} appearances · avg ${averageAppearances}`} icon={Users} />
+        <StatCard label="Dancers" value={categoryCounts.dancer} hint="Workshop instructors, performers" icon={Footprints} />
+        <StatCard label="Musicians" value={categoryCounts.musician} hint="Bands, orchestras, soloists" icon={Music} />
+        <StatCard label="DJs" value={categoryCounts.dj} hint='Names starting with "DJ"' icon={Disc3} />
+      </div>
+
+      {/* Top performer + duplicates summary */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <StatCard
           label="Most featured"
           value={topArtist ? topArtist.appearanceCount : 0}
@@ -231,6 +260,15 @@ export function ArtistManagement({ festivals }: ArtistManagementProps) {
           </CardContent>
         </Card>
       )}
+
+      {/* Category filter chips */}
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-xs text-gray-500 mr-1">Category:</span>
+        <CategoryChip current={categoryFilter} value="all"      label={`All (${totalArtists})`}                       onClick={setCategoryFilter} />
+        <CategoryChip current={categoryFilter} value="dancer"   label={`Dancers (${categoryCounts.dancer})`}          onClick={setCategoryFilter} icon={Footprints} />
+        <CategoryChip current={categoryFilter} value="musician" label={`Musicians (${categoryCounts.musician})`}      onClick={setCategoryFilter} icon={Music} />
+        <CategoryChip current={categoryFilter} value="dj"       label={`DJs (${categoryCounts.dj})`}                  onClick={setCategoryFilter} icon={Disc3} />
+      </div>
 
       {/* Toolbar — search + sort + duplicate filters */}
       <div className="flex flex-col md:flex-row gap-3 md:items-center">
@@ -341,8 +379,21 @@ export function ArtistManagement({ festivals }: ArtistManagementProps) {
                 <TableRow key={artist.name}>
                   <TableCell className="text-gray-500 text-sm">{index + 1}</TableCell>
                   <TableCell className="font-medium align-top">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 flex-wrap">
                       <span>{artist.name}</span>
+                      <Badge
+                        variant="secondary"
+                        className={`text-[10px] px-1.5 py-0 border ${
+                          artist.category === 'dj'
+                            ? 'bg-gray-900 text-white border-gray-900'
+                            : artist.category === 'musician'
+                            ? 'bg-gray-200 text-gray-900 border-gray-300'
+                            : 'bg-white text-gray-700 border-gray-300'
+                        }`}
+                        title={`Category: ${CATEGORY_LABEL[artist.category]}`}
+                      >
+                        {CATEGORY_LABEL[artist.category]}
+                      </Badge>
                       {dupNameSet.has(artist.name) && (
                         <Badge
                           variant="secondary"
@@ -423,5 +474,36 @@ function StatCard({
         <p className="text-xs text-gray-500 mt-1 truncate">{hint}</p>
       </CardContent>
     </Card>
+  );
+}
+
+function CategoryChip({
+  current,
+  value,
+  label,
+  onClick,
+  icon: Icon,
+}: {
+  current: CategoryFilter;
+  value: CategoryFilter;
+  label: string;
+  onClick: (v: CategoryFilter) => void;
+  icon?: React.ComponentType<{ className?: string }>;
+}) {
+  const active = current === value;
+  return (
+    <button
+      type="button"
+      onClick={() => onClick(value)}
+      className={`inline-flex items-center gap-1 px-3 py-1 rounded text-xs font-medium border transition-colors ${
+        active
+          ? 'bg-black text-white border-black'
+          : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-100'
+      }`}
+      aria-pressed={active}
+    >
+      {Icon && <Icon className="h-3 w-3" />}
+      <span>{label}</span>
+    </button>
   );
 }

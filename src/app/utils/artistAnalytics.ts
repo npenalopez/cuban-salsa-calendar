@@ -1,4 +1,5 @@
 import { Festival } from '../data/festivals';
+import { isNonArtistEntry } from './artistCategory';
 
 export interface ArtistRanking {
   name: string;
@@ -34,8 +35,12 @@ function shouldExcludeArtist(artistName: string): boolean {
     /announcement coming/i,
     /^tbd$/i
   ];
-  
-  return excludePatterns.some(pattern => pattern.test(artistName.trim()));
+
+  if (excludePatterns.some(pattern => pattern.test(artistName.trim()))) return true;
+  // Also drop descriptive phrases / institutions / brand names that
+  // ended up in artist lists ("19+ Cuban artists", "Academia de Danza
+  // Carlos Acosta", "CubaDanza", etc.).
+  return isNonArtistEntry(artistName);
 }
 
 /**
