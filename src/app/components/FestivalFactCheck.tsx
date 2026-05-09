@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { CountryFlagIcon } from './CountryFlagIcon';
 import { getFestivalSortPriority } from '../utils/dateUtils';
+import { buildInstagramUrl } from '../utils/instagram';
 import {
   readFactCheckLog,
   markVerified,
@@ -38,13 +39,6 @@ interface FestivalFactCheckProps {
 }
 
 type Filter = 'unchecked' | 'overdue' | 'verified' | 'all';
-
-const buildInstagramUrl = (handle: string | undefined): string | null => {
-  if (!handle) return null;
-  const cleaned = handle.trim().replace(/^@/, '');
-  if (!cleaned || cleaned === '-') return null;
-  return `https://www.instagram.com/${cleaned}`;
-};
 
 const buildWebsiteUrl = (raw: string | undefined): string | null => {
   if (!raw) return null;

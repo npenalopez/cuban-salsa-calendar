@@ -49,6 +49,7 @@ import {
   getPriceDisplayClasses,
   formatFestivalArtists,
 } from "../utils/priceUtils";
+import { buildInstagramUrl } from "../utils/instagram";
 
 interface SimpleFestivalCardProps {
   festival: Festival;
@@ -66,26 +67,26 @@ export function SimpleFestivalCard({
   const [calendarModalOpen, setCalendarModalOpen] = useState(false);
   
   // Prefer the festival's Instagram handle when present; fall back to
-  // its website. The "-" placeholder used in the seed data counts as
-  // "not confirmed" — we treat it as missing so the button doesn't link
-  // to a broken handle/URL. Returns null when neither is available, in
-  // which case the button is rendered disabled.
-  const cleanField = (raw: string | undefined): string | null => {
+  // its website. Accepts handles in any common form ("@x", "x",
+  // "instagram.com/x", "https://www.instagram.com/x/"); the "-"
+  // placeholder counts as missing. Returns null when neither is real,
+  // in which case the button is rendered disabled.
+  const cleanWebsite = (raw: string | undefined): string | null => {
     const trimmed = raw?.trim();
     if (!trimmed || trimmed === "-") return null;
     return trimmed;
   };
   const detailsLink = (() => {
-    const handle = cleanField(festival.instagram)?.replace(/^@/, "");
-    if (handle) {
+    const igUrl = buildInstagramUrl(festival.instagram);
+    if (igUrl) {
       return {
         kind: "instagram" as const,
-        url: `https://www.instagram.com/${handle}`,
+        url: igUrl,
         label: "Instagram",
         ariaLabel: `Visit ${festival.name} Instagram`,
       };
     }
-    const site = cleanField(festival.website);
+    const site = cleanWebsite(festival.website);
     if (site) {
       return {
         kind: "website" as const,

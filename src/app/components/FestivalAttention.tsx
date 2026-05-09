@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { isFestivalPast, getFestivalSortPriority } from '../utils/dateUtils';
 import { isPriceMissing } from '../utils/priceUtils';
+import { normalizeInstagramHandle } from '../utils/instagram';
 
 interface FestivalAttentionProps {
   festivals: Festival[];
@@ -70,7 +71,8 @@ function detectIssues(festival: Festival): FestivalIssues {
       && festival.artists.length > 0
       && festival.artists.some(isPlaceholderArtist),
     noWebsite: isMissing(festival.website),
-    noInstagram: isMissing(festival.instagram),
+    // Recognize @handle, bare handle, and any www.instagram.com/... URL.
+    noInstagram: normalizeInstagramHandle(festival.instagram) === null,
     noCoordinates: isCoordinatesPlaceholder(festival.coordinates),
     pastDate: !!festival.dates && isFestivalPast(festival.dates),
   };
