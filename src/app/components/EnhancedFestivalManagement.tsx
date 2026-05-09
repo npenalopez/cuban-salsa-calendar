@@ -9,7 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
-import { Plus, Edit, Trash2, Download, Upload, Copy, Database, AlertTriangle, Save, X, Calendar, Search, CheckCircle, Instagram, Code2, ClipboardCheck } from 'lucide-react';
+import { Plus, Edit, Trash2, Download, Upload, Copy, Database, AlertTriangle, Save, X, Calendar, Search, CheckCircle, Instagram, Code2, ClipboardCheck, EyeOff } from 'lucide-react';
 import { EnhancedAutocompleteSearch } from './EnhancedAutocompleteSearch';
 import { Checkbox } from './ui/checkbox';
 import { ArtistsInput } from './ArtistsInput';
@@ -23,6 +23,8 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { SimpleDataExport } from './SimpleDataExport';
 import { supabaseFestivalService } from '../services/supabase';
 import { getFestivalYear, extractYearFromDateString, setYearInDateString, getFestivalSortPriority, isFestivalPast } from '../utils/dateUtils';
+import { getFestivalVisibility } from '../utils/displayability';
+import { Tooltip, TooltipContent, TooltipTrigger } from './ui/tooltip';
 import { formatFestivalPrice } from '../utils/priceUtils';
 import { useLanguage } from '../contexts/LanguageContext';
 import { ArtistManagement } from './ArtistManagement';
@@ -42,6 +44,7 @@ export function EnhancedFestivalManagement({ festivals, onUpdateFestivals, onClo
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedContinent, setSelectedContinent] = useState("All");
   const [selectedMonth, setSelectedMonth] = useState("All");
+  const [showOnlyHidden, setShowOnlyHidden] = useState(false);
   const [selectedFestivals, setSelectedFestivals] = useState<string[]>([]);
   const [editingFestival, setEditingFestival] = useState<Festival | null>(null);
   const [isAddingFestival, setIsAddingFestival] = useState(false);
@@ -64,24 +67,38 @@ export function EnhancedFestivalManagement({ festivals, onUpdateFestivals, onClo
     });
   }, [festivals]);
 
+  // Visibility (public-page filter result) per festival, keyed by id.
+  const visibilityById = useMemo(() => {
+    const m = new Map<string, ReturnType<typeof getFestivalVisibility>>();
+    for (const f of festivals) m.set(f.id, getFestivalVisibility(f));
+    return m;
+  }, [festivals]);
+
+  const hiddenCount = useMemo(
+    () => Array.from(visibilityById.values()).filter(v => !v.displayed).length,
+    [visibilityById],
+  );
+
   // Filter festivals for the table
   const filteredFestivals = useMemo(() => {
     return sortedFestivals.filter(festival => {
       const continentMatch = selectedContinent === "All" || festival.continent === selectedContinent;
       const monthMatch = selectedMonth === "All" || (festival.months ?? []).some(month => month === selectedMonth);
-      const searchMatch = searchQuery === "" || 
+      const searchMatch = searchQuery === "" ||
         festival.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         festival.city.toLowerCase().includes(searchQuery.toLowerCase()) ||
         festival.country.toLowerCase().includes(searchQuery.toLowerCase()) ||
         festival.id.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        (Array.isArray(festival.artists) && festival.artists.length > 0 && 
-         festival.artists.some(artist => 
+        (Array.isArray(festival.artists) && festival.artists.length > 0 &&
+         festival.artists.some(artist =>
            typeof artist === 'string' && artist.toLowerCase().includes(searchQuery.toLowerCase())
          ));
-      
-      return continentMatch && monthMatch && searchMatch;
+      const visibilityMatch =
+        !showOnlyHidden || !(visibilityById.get(festival.id)?.displayed ?? true);
+
+      return continentMatch && monthMatch && searchMatch && visibilityMatch;
     });
-  }, [sortedFestivals, selectedContinent, selectedMonth, searchQuery]);
+  }, [sortedFestivals, selectedContinent, selectedMonth, searchQuery, showOnlyHidden, visibilityById]);
 
   // Separate current and past festivals
   const currentFestivals = useMemo(() => {
@@ -342,6 +359,35 @@ export function EnhancedFestivalManagement({ festivals, onUpdateFestivals, onClo
                 </SelectContent>
               </Select>
 
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <button
+                    onClick={() => setShowOnlyHidden(v => !v)}
+                    className={`h-9 px-3 rounded text-sm font-medium border inline-flex items-center gap-1 ${
+                      showOnlyHidden
+                        ? 'bg-yellow-500 hover:bg-yellow-600 text-white border-yellow-600'
+                        : hiddenCount > 0
+                        ? 'bg-yellow-50 hover:bg-yellow-100 text-yellow-900 border-yellow-300'
+                        : 'bg-white hover:bg-gray-100 text-gray-500 border-gray-300'
+                    }`}
+                    aria-pressed={showOnlyHidden}
+                    disabled={hiddenCount === 0}
+                  >
+                    <EyeOff className="h-3.5 w-3.5" />
+                    <span>Hidden ({hiddenCount})</span>
+                  </button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>
+                    {hiddenCount === 0
+                      ? 'No festivals are hidden — every entry passes the public filter.'
+                      : showOnlyHidden
+                      ? 'Click to show all festivals again.'
+                      : 'Show only festivals that are NOT visible on the public page (missing fields, unparseable date, etc.)'}
+                  </p>
+                </TooltipContent>
+              </Tooltip>
+
               <div className="flex items-center gap-2 ml-auto">
                 <Dialog open={isAddingFestival} onOpenChange={setIsAddingFestival}>
                   <DialogTrigger asChild>
@@ -504,7 +550,12 @@ export function EnhancedFestivalManagement({ festivals, onUpdateFestivals, onClo
                             {getFestivalYear(festival.dates)}
                           </span>
                         </TableCell>
-                        <TableCell className="font-medium">{festival.name}</TableCell>
+                        <TableCell className="font-medium">
+                          <div className="flex items-center gap-2 flex-wrap">
+                            <span>{festival.name}</span>
+                            <HiddenBadge visibility={visibilityById.get(festival.id)} />
+                          </div>
+                        </TableCell>
                         <TableCell>
                           <div className="text-sm text-gray-900">{festival.dates}</div>
                           <div className="text-xs text-gray-500">
@@ -611,7 +662,12 @@ export function EnhancedFestivalManagement({ festivals, onUpdateFestivals, onClo
                               {getFestivalYear(festival.dates)}
                             </span>
                           </TableCell>
-                          <TableCell className="font-medium text-gray-700">{festival.name}</TableCell>
+                          <TableCell className="font-medium text-gray-700">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <span>{festival.name}</span>
+                              <HiddenBadge visibility={visibilityById.get(festival.id)} />
+                            </div>
+                          </TableCell>
                           <TableCell>
                             <div className="text-sm text-gray-700">{festival.dates}</div>
                             <div className="text-xs text-gray-500">
@@ -789,5 +845,25 @@ export function EnhancedFestivalManagement({ festivals, onUpdateFestivals, onClo
         </DialogContent>
       </Dialog>
     </div>
+  );
+}
+
+function HiddenBadge({ visibility }: { visibility: ReturnType<typeof getFestivalVisibility> | undefined }) {
+  if (!visibility || visibility.displayed) return null;
+  return (
+    <Tooltip>
+      <TooltipTrigger asChild>
+        <Badge
+          variant="secondary"
+          className="bg-yellow-100 text-yellow-900 border border-yellow-300 text-[10px] font-medium inline-flex items-center gap-1 cursor-help"
+        >
+          <EyeOff className="h-3 w-3" />
+          Hidden
+        </Badge>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p className="text-xs">{visibility.reason}</p>
+      </TooltipContent>
+    </Tooltip>
   );
 }

@@ -43,6 +43,7 @@ import {
   getFestivalSortPriority,
   isFestivalPast,
 } from "./utils/dateUtils";
+import { getFestivalVisibility } from "./utils/displayability";
 import { normalizeFestivalMonths } from "./utils/festivalMonthNormalization";
 import { safeOpenDetailsURL } from "./utils/calendarExport";
 import {
@@ -216,25 +217,14 @@ function AppContent() {
     safeOpenDetailsURL('https://www.instagram.com/cubansalsacalendar', 'Visit Cuban Salsa Calendar Instagram page');
   };
 
-  // A festival is displayable if it has the required fields and a parseable
-  // primary month. Past festivals are kept by default (the SimpleFestivalCard
-  // shows a "PAST" ribbon) on the assumption that next year's edition will
-  // fall close to the same dates and the entry is a soft placeholder. The
-  // header toggle lets the visitor opt out and hide them.
+  // Public-page filter. Required fields + parseable month are enforced by
+  // getFestivalVisibility (shared with the admin so it can show WHY a
+  // festival is hidden). Past festivals stay visible by default — the
+  // SimpleFestivalCard renders a "PAST" ribbon — but the header toggle
+  // lets visitors opt out.
   const isDisplayableFestival = (festival: Festival): boolean => {
-    if (!festival || typeof festival !== 'object') {
-      return false;
-    }
-    if (!festival.dates || !festival.name || !festival.city || !festival.country || !festival.continent) {
-      return false;
-    }
-    const primaryMonth = getPrimaryMonth(festival.dates);
-    if (!primaryMonth) {
-      return false;
-    }
-    if (hidePast && isFestivalPast(festival.dates)) {
-      return false;
-    }
+    if (!getFestivalVisibility(festival).displayed) return false;
+    if (hidePast && isFestivalPast(festival.dates)) return false;
     return true;
   };
 
