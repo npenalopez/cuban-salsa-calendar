@@ -405,33 +405,45 @@ class GeolocationService {
     return degrees * (Math.PI / 180);
   }
 
+  // Module-scope cache: same (userLocation, dest, continent) tuple
+  // resolves to the same TravelTime object, so 150 cards calling this
+  // on first paint do the work once, then read from the Map.
+  private travelTimeCache = new Map<string, TravelTime>();
+
   // Calculate travel time and distance with realistic travel options
   calculateTravelTime(userLocation: UserLocation, destinationCoords: [number, number], destinationContinent?: string): TravelTime {
     // Validate inputs
     if (!userLocation || typeof userLocation.latitude !== 'number' || typeof userLocation.longitude !== 'number') {
       throw new Error('Invalid user location provided');
     }
-    
+
     if (!Array.isArray(destinationCoords) || destinationCoords.length !== 2) {
       throw new Error('Invalid destination coordinates provided');
     }
-    
+
     const [destLat, destLng] = destinationCoords;
-    
+
     // Validate coordinate values
     if (typeof destLat !== 'number' || typeof destLng !== 'number') {
       throw new Error('Destination coordinates must be numbers');
     }
-    
+
     // Validate coordinate ranges
     if (destLat < -90 || destLat > 90 || destLng < -180 || destLng > 180) {
       throw new Error('Destination coordinates are out of valid range');
     }
-    
-    if (userLocation.latitude < -90 || userLocation.latitude > 90 || 
+
+    if (userLocation.latitude < -90 || userLocation.latitude > 90 ||
         userLocation.longitude < -180 || userLocation.longitude > 180) {
       throw new Error('User location coordinates are out of valid range');
     }
+
+    // Cache key includes everything that affects the result. Rounded
+    // coords keep the cache from missing on tiny floating-point drift
+    // when the same UserLocation is rebuilt.
+    const cacheKey = `${userLocation.latitude.toFixed(4)},${userLocation.longitude.toFixed(4)}|${destLat.toFixed(4)},${destLng.toFixed(4)}|${userLocation.continent ?? ''}|${destinationContinent ?? ''}`;
+    const cached = this.travelTimeCache.get(cacheKey);
+    if (cached) return cached;
 
     const distance = this.calculateDistance(
       userLocation.latitude,
@@ -443,10 +455,6 @@ class GeolocationService {
     // Validate calculated distance
     if (!isFinite(distance) || distance < 0) {
       throw new Error('Invalid distance calculated');
-    }
-
-    if (import.meta.env.DEV) {
-      console.log(`Travel calculation: ${userLocation.continent} to ${destinationContinent}, distance: ${Math.round(distance)}km`);
     }
 
     const result: TravelTime = {};
@@ -523,6 +531,7 @@ class GeolocationService {
       };
     }
 
+    this.travelTimeCache.set(cacheKey, result);
     return result;
   }
 
