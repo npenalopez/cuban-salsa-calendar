@@ -1,29 +1,124 @@
 import type { Translations } from '../translations/index';
 
+// ─── Price normalization ─────────────────────────────────────────────
+// Source strings are inconsistent: "120,00 €", "€110", "From AUD 40",
+// "1,700.00 ZAR - 2,850.00 ZAR", "$265 (Full) / $235 (Local)" …
+// The display layer normalizes all of them to one canonical shape:
+// "<symbol><amount>" or "<symbol><lo> – <symbol><hi>".
+
+// Longest first so "NZ$" / "A$" beat "$" in the includes() loop.
+const SYMBOLS_BY_PRIORITY = ['NZ$', 'A$', 'C$', '€', '£', '¥', '₽', '฿', 'kr', '$'];
+
+const CURRENCY_CODE_MAP: Record<string, { display: string; spaced: boolean }> = {
+  EUR: { display: '€',   spaced: false },
+  USD: { display: '$',   spaced: false },
+  GBP: { display: '£',   spaced: false },
+  AUD: { display: 'A$',  spaced: false },
+  CAD: { display: 'C$',  spaced: false },
+  NZD: { display: 'NZ$', spaced: false },
+  JPY: { display: '¥',   spaced: false },
+  RUB: { display: '₽',   spaced: false },
+  THB: { display: '฿',   spaced: false },
+  ZAR: { display: 'R',   spaced: false },
+  MXN: { display: '$',   spaced: false },
+  ARS: { display: '$',   spaced: false },
+  // Codes with no widely-recognized single-char symbol stay as the code
+  // and use "<CODE> <amount>" with a space.
+  CHF: { display: 'CHF', spaced: true },
+  AED: { display: 'AED', spaced: true },
+  SEK: { display: 'kr',  spaced: false },
+  NOK: { display: 'kr',  spaced: false },
+  DKK: { display: 'kr',  spaced: false },
+};
+
+const KNOWN_CODES = Object.keys(CURRENCY_CODE_MAP);
+
+// Words that just clutter the chip — the formatter will re-prefix
+// "Starting" once via t.fromPrice.
+const PREFIX_NOISE_RE = /^(starting|from|ab|desde|à partir de|od|early bird( from)?|full pass from)\s+/i;
+
+function escapeForRegex(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
 /**
- * Formats festival price for display, handling special cases like "Price to be announced" and "Sold out"
- * @param price - The raw price string from the festival data
- * @param t - Translation object for internationalization
- * @returns Formatted price string for display
+ * Best-effort canonicalizer. Returns "" if nothing recognizable was
+ * found, in which case the caller should fall back to the raw string.
+ */
+function normalizePriceForDisplay(raw: string): string {
+  let s = raw.trim();
+  if (!s) return s;
+
+  // Strip stacked leading prefix words ("Early Bird from From €80").
+  while (PREFIX_NOISE_RE.test(s)) s = s.replace(PREFIX_NOISE_RE, '').trim();
+
+  // Multi-option prices ("$265 (Full) / $235 (Local)") — show only the
+  // first option in the chip; full text lives in the tooltip.
+  if (s.includes('/')) s = s.split('/')[0].trim();
+
+  // Drop parentheticals — "(Full Pass)", "(Pack 1 Individual)" etc.
+  s = s.replace(/\s*\([^)]*\)/g, '').trim();
+
+  // Detect the dominant currency. Symbols win over codes (since
+  // "$1,800-$3,200 MXN" should read as $, not MXN).
+  let display = '';
+  let spaced = false;
+  for (const sym of SYMBOLS_BY_PRIORITY) {
+    if (s.includes(sym)) {
+      display = sym;
+      break;
+    }
+  }
+  if (!display) {
+    for (const code of KNOWN_CODES) {
+      if (new RegExp(`\\b${code}\\b`).test(s)) {
+        const meta = CURRENCY_CODE_MAP[code];
+        display = meta.display;
+        spaced = meta.spaced;
+        break;
+      }
+    }
+  }
+
+  // Strip every known currency marker so we can re-attach one consistently.
+  for (const sym of SYMBOLS_BY_PRIORITY) {
+    s = s.replace(new RegExp(`\\s*${escapeForRegex(sym)}\\s*`, 'g'), ' ');
+  }
+  for (const code of KNOWN_CODES) {
+    s = s.replace(new RegExp(`\\s*\\b${code}\\b\\s*`, 'g'), ' ');
+  }
+  s = s.replace(/\s+/g, ' ').trim();
+
+  // Normalize range separators to a real en-dash with surrounding spaces.
+  s = s.replace(/\s*[–—-]\s*/g, ' – ');
+  s = s.replace(/\s+/g, ' ').trim();
+
+  if (!display) return s;
+
+  // Re-prefix the currency in front of every number group.
+  const glue = spaced ? ' ' : '';
+  s = s.replace(/(\d[\d.,]*\+?)/g, (m) => `${display}${glue}${m}`);
+  return s;
+}
+
+/**
+ * Formats festival price for display, handling special cases like
+ * "Price to be announced" and "Sold out". Otherwise normalizes the
+ * currency / number layout (see normalizePriceForDisplay) and prepends
+ * the localized "Starting" prefix.
  */
 export function formatFestivalPrice(price: string, t: Translations): string {
-  // Handle empty, undefined, or null price
   if (!price || price.trim() === '') {
     return t.priceToBeAnnounced || 'Price to be announced';
   }
-  
-  // Handle the "-" case which means price is yet to be announced
   if (price.trim() === '-') {
     return t.priceToBeAnnounced || 'Price to be announced';
   }
-  
-  // Handle the "soldout" case which means the festival is sold out
   if (price.trim().toLowerCase() === 'soldout') {
     return t.soldOut || 'Sold out';
   }
-  
-  // For all other cases (actual prices), prepend "From" to indicate prices may not be up to date
-  return `${t.fromPrice} ${price}`;
+  const normalized = normalizePriceForDisplay(price);
+  return `${t.fromPrice} ${normalized || price.trim()}`;
 }
 
 // Placeholder strings used in the wild to mean "we don't know the price yet".
