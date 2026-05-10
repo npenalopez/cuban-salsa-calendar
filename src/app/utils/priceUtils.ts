@@ -261,9 +261,14 @@ export function formatFestivalArtists(artists: string[] | undefined, t: Translat
     };
   }
   
-  // Filter out any empty or "-" entries from the artists array
-  const safeArtists = (artists || []).filter(artist => artist && artist.trim() !== '' && artist.trim() !== '-');
-  
+  // Filter out any empty or "-" entries from the artists array, then
+  // sort alphabetically (locale-aware, case-insensitive) so every
+  // surface that lists artists shows them in the same predictable order.
+  const safeArtists = (artists || [])
+    .filter(artist => artist && artist.trim() !== '' && artist.trim() !== '-')
+    .slice()
+    .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+
   if (safeArtists.length === 0) {
     return {
       displayText: t.artistsToBeAnnounced || 'Artists to be announced',
@@ -272,7 +277,7 @@ export function formatFestivalArtists(artists: string[] | undefined, t: Translat
       artists: []
     };
   }
-  
+
   return {
     displayText: safeArtists.length === 1 ? safeArtists[0] : `${safeArtists.length} ${safeArtists.length > 1 ? t.artists : t.artist}`,
     isToBeAnnounced: false,

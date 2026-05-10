@@ -186,9 +186,10 @@ export function InstagramContentCreator({ festivals }: InstagramContentCreatorPr
   const spotlightContent = useMemo(() => {
     if (!spotlightFestival) return '';
     const f = spotlightFestival;
-    const realArtists = (f.artists ?? []).filter(
-      a => typeof a === 'string' && a.trim() && a.trim() !== '-' && !/tba|to be announced|coming soon/i.test(a),
-    );
+    const realArtists = (f.artists ?? [])
+      .filter(a => typeof a === 'string' && a.trim() && a.trim() !== '-' && !/tba|to be announced|coming soon/i.test(a))
+      .slice()
+      .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
     const lineupBlock = realArtists.length > 0
       ? `\n\n🎤 Featuring:\n${realArtists.slice(0, 6).map(a => `• ${a}`).join('\n')}${realArtists.length > 6 ? `\n• …and ${realArtists.length - 6} more` : ''}`
       : '';

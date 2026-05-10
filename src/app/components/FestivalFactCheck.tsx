@@ -186,9 +186,10 @@ export function FestivalFactCheck({ festivals, onEditFestival, onDeleteFestival 
             const overdue = entry ? isOverdue(entry) : false;
             const igUrl = buildInstagramUrl(festival.instagram);
             const webUrl = buildWebsiteUrl(festival.website);
-            const realArtists = (festival.artists ?? []).filter(
-              a => typeof a === 'string' && a.trim() && a.trim() !== '-',
-            );
+            const realArtists = (festival.artists ?? [])
+              .filter(a => typeof a === 'string' && a.trim() && a.trim() !== '-')
+              .slice()
+              .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
 
             return (
               <Card

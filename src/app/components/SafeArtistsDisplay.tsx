@@ -28,8 +28,10 @@ export function SafeArtistsDisplay({
     );
   }
   
-  const safeArtists = artists || [];
-  
+  const safeArtists = (artists || [])
+    .slice()
+    .sort((a, b) => a.localeCompare(b, undefined, { sensitivity: 'base' }));
+
   if (safeArtists.length === 0) {
     return (
       <div className={className}>
