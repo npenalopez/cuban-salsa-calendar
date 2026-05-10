@@ -70,7 +70,7 @@ export const festivals: Festival[] = [
         "Andria Panagi",
         "Lorenys Rodriguez",
         "Carlos Manolo",
-        "DJ Yanel Diablito",
+        "DJ Yan El Diablito",
         "DJ Jack El Calvo",
         "DJ Amine",
         "DJ Chanchan",
@@ -154,41 +154,6 @@ export const festivals: Festival[] = [
       ],
       "venue": "-",
       "category": "Festival",
-      "months": [
-        "January"
-      ]
-    },
-    {
-      "id": "cuba-me-mucho-angers-2026",
-      "name": "Cuba Me Mucho - Angers Salsa Festival",
-      "city": "Angers",
-      "country": "France",
-      "continent": "Europe",
-      "dates": "January 15-17, 2027",
-      "price": "120,00 €",
-      "website": "https://bailaconamigos.com",
-      "instagram": "https://www.instagram.com/cuba_me_mucho/",
-      "description": "7th edition. Salsa, Timba, Cubaton y mucho mas",
-      "artists": [
-        "Wilmer Najarro",
-        "Maria de la Vega",
-        "Ismaray Chacon",
-        "Roly Maden",
-        "Yosniel Brunet",
-        "Cuban Flex",
-        "Osbanis Tejeda",
-        "Anneta Kepka",
-        "Melissa Jova",
-        "Lorenys Rodriguez",
-        "Carlos Manolo"
-      ],
-      "coordinates": [
-        47.4739884,
-        -0.5515588
-      ],
-      "venue": "Hippodrome du Lion d'Angers",
-      "category": "Festival",
-      "yearsActive": "since 2020",
       "months": [
         "January"
       ]
@@ -285,7 +250,7 @@ export const festivals: Festival[] = [
         "DJ Pastaguero",
         "DJ Tom Nka",
         "DJ Ralph El Cavo",
-        "DJ Yanel Diablito"
+        "DJ Diablito"
       ],
       "coordinates": [
         43.2924385,
@@ -514,56 +479,6 @@ export const festivals: Festival[] = [
       ],
       "venue": "Baila Social Dance Studio, Halderstraße 29, 86150 Augsburg",
       "category": "Weekender",
-      "months": [
-        "March"
-      ]
-    },
-    {
-      "id": "arrasando-bremen-2026",
-      "name": "Arrasando Cuban Afro-Salsa Festival",
-      "city": "Bremen",
-      "country": "Germany",
-      "continent": "Europe",
-      "dates": "March 13-15, 2026",
-      "price": "TBA",
-      "website": "",
-      "instagram": "@arrasando.festival",
-      "description": "Cuban Afro-Salsa Festival in Bremen, Germany. Listed in rueda.casino for March 2026. User to verify Instagram/website.",
-      "artists": [
-        "TBD"
-      ],
-      "coordinates": [
-        53.0793,
-        8.8017
-      ],
-      "venue": "-",
-      "category": "Festival",
-      "months": [
-        "March"
-      ]
-    },
-    {
-      "id": "saoco-cuban-festival-aix-2026",
-      "name": "Saoco Cuban Festival",
-      "city": "Aix-en-Provence",
-      "country": "France",
-      "continent": "Europe",
-      "dates": "March 20-22, 2026",
-      "price": "€50 (3-Party Pass) / €15 (Single Party)",
-      "website": "https://www.billetweb.fr/saoco-cuban-festival-2026",
-      "instagram": "@saoco.cuban.festival",
-      "description": "3rd edition - Cuban salsa, rumba, styling, timba, fusion, Afro (with live percussion), son, rueda de casino, cha-cha-cha, reggaeton. Limited to 250 dancers. Bootcamp Afro Contemporain with Yuniel Gual.",
-      "artists": [
-        "Yuniel Gual",
-        "Andros Alfonso"
-      ],
-      "coordinates": [
-        43.5297,
-        5.4474
-      ],
-      "venue": "Europia",
-      "category": "Festival",
-      "yearsActive": "since 2024",
       "months": [
         "March"
       ]
@@ -1748,7 +1663,7 @@ export const festivals: Festival[] = [
         "DJ Lilimba",
         "DJ La Tremenda",
         "DJ Timbalero",
-        "DJ Yanel Diablito",
+        "DJ Diablito",
         "DJ Chechyto",
         "Chantal",
         "Harold Kinanga",
@@ -2885,16 +2800,24 @@ export const festivals: Festival[] = [
       "country": "Spain",
       "continent": "Europe",
       "dates": "February 26-28, 2027",
-      "price": "TBA",
+      "price": "80€",
       "website": "",
-      "instagram": "@masquecubano",
+      "instagram": "https://www.instagram.com/masquecubano",
       "description": "Mas que cubano Festival in Bilbao, Spain. Listed in rueda.casino February 26-28, 2027.",
       "artists": [
-        "TBD"
+        "Chiky Rodriguez",
+        "Yandro Alcantara",
+        "Neilys Marrero",
+        "Michael Vizcaino",
+        "DJ Mami Timba",
+        "Irene Soto",
+        "Adry Rumberito",
+        "Maya Romero",
+        "Yohan Lamoru"
       ],
       "coordinates": [
-        43.263,
-        -2.935
+        43.2630018,
+        -2.9350039
       ],
       "venue": "-",
       "category": "Festival",
@@ -2909,17 +2832,16 @@ export const festivals: Festival[] = [
       "country": "United Kingdom",
       "continent": "Europe",
       "dates": "March 12-15, 2027",
-      "price": "TBA",
+      "price": "£129.00",
       "website": "",
-      "instagram": "@mesalsafest",
+      "instagram": "https://www.instagram.com/mesalsafest/",
       "description": "Me Salsa Fest in Birmingham, England. Listed in rueda.casino March 12-15, 2027.",
       "artists": [
-        "FredyClan Garcia II",
-        "Yusimi Moya Rodriguez"
+        "TBD"
       ],
       "coordinates": [
-        52.4862,
-        -1.8904
+        52.4796992,
+        -1.9026911
       ],
       "venue": "-",
       "category": "Festival",
@@ -2936,14 +2858,14 @@ export const festivals: Festival[] = [
       "dates": "March 19-21, 2027",
       "price": "TBA",
       "website": "https://www.rockcaliente.fr",
-      "instagram": "@saoco.cuban.festival",
+      "instagram": "https://www.instagram.com/saococubanfestival/",
       "description": "Saoco Cuban Festival in Aix-en-Provence, France. Listed in rueda.casino March 19-21, 2027.",
       "artists": [
         "TBD"
       ],
       "coordinates": [
-        43.5297,
-        5.4474
+        43.5298424,
+        5.4474738
       ],
       "venue": "-",
       "category": "Festival",
@@ -2960,14 +2882,14 @@ export const festivals: Festival[] = [
       "dates": "March 12-14, 2027",
       "price": "TBA",
       "website": "",
-      "instagram": "@arrasando.festival",
+      "instagram": "https://www.instagram.com/arrasandofestival/",
       "description": "Arrasando Cuban Afro-Salsa Festival in Bremen, Germany. Listed in rueda.casino March 12-14, 2027.",
       "artists": [
         "TBD"
       ],
       "coordinates": [
-        53.0793,
-        8.8017
+        53.0758196,
+        8.8071646
       ],
       "venue": "-",
       "category": "Festival",
@@ -4071,7 +3993,7 @@ export const festivals: Festival[] = [
         "DJ Ned",
         "DJ Smile",
         "DJ Manuel",
-        "DJ Yanel Diablito",
+        "DJ Diablito",
         "DJ Kilo",
         "DJ Estefi",
         "DJ Marc",
