@@ -95,9 +95,16 @@ function normalizePriceForDisplay(raw: string): string {
 
   if (!display) return s;
 
-  // Re-prefix the currency in front of every number group.
+  // Re-prefix the currency in front of every number group, and strip
+  // empty trailing cents so "120,00" and "129" both render as the
+  // whole amount. Real cents like "71.10" or "29.95" stay untouched
+  // (only ".00" / ",00" are dropped, and only when they're the LAST
+  // separator — the thousands comma in "1,700.00" is preserved).
   const glue = spaced ? ' ' : '';
-  s = s.replace(/(\d[\d.,]*\+?)/g, (m) => `${display}${glue}${m}`);
+  s = s.replace(/(\d[\d.,]*)(\+?)/g, (_match, number: string, plus: string) => {
+    const cleaned = number.replace(/([.,])00$/, '');
+    return `${display}${glue}${cleaned}${plus}`;
+  });
   return s;
 }
 
