@@ -6,9 +6,12 @@ import * as TooltipPrimitive from "@radix-ui/react-tooltip";
 import { cn } from "./utils";
 
 function TooltipProvider({
-  delayDuration = 0,
+  delayDuration = 350,
   ...props
 }: React.ComponentProps<typeof TooltipPrimitive.Provider>) {
+  // Short delay so tooltips don't pop up on pass-through; without
+  // this they fire instantly when the cursor crosses any chip and
+  // overlap the card's title area with a dark popover.
   return (
     <TooltipPrimitive.Provider
       data-slot="tooltip-provider"
@@ -44,13 +47,13 @@ const TooltipContent = React.forwardRef<
       data-slot="tooltip-content"
       sideOffset={sideOffset}
       className={cn(
-        "bg-gray-900 text-white animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-fit origin-(--radix-tooltip-content-transform-origin) rounded px-2 py-1 text-xs text-balance border border-gray-700 shadow-sm",
+        "bg-white text-gray-900 animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-fit origin-(--radix-tooltip-content-transform-origin) rounded px-2 py-1 text-xs text-balance border border-gray-200 shadow-md",
         className,
       )}
       {...props}
     >
       {children}
-      <TooltipPrimitive.Arrow className="bg-gray-900 fill-gray-900 z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px]" />
+      <TooltipPrimitive.Arrow className="bg-white fill-white z-50 size-2.5 translate-y-[calc(-50%_-_2px)] rotate-45 rounded-[2px] border border-gray-200" />
     </TooltipPrimitive.Content>
   </TooltipPrimitive.Portal>
 ));
