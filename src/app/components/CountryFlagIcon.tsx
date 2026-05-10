@@ -680,7 +680,10 @@ function CountryFlagIconImpl({ country, size = 16, className = "" }: CountryFlag
   };
 
   return (
-    <span className="inline-flex items-center justify-center flex-shrink-0" title={`${country} flag`}>
+    // No native title attribute on purpose — Radix tooltips handle hover
+    // text in the parent components (gives us a consistent light skin
+    // and avoids the OS dark default that competes with our own).
+    <span className="inline-flex items-center justify-center flex-shrink-0" aria-label={`${country} flag`}>
       {getFlagSVG()}
     </span>
   );

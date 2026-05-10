@@ -244,9 +244,16 @@ function SimpleFestivalCardImpl({
       >
         {/* Past Event Ribbon */}
         {isPast && (
-          <div className="absolute top-3 -right-10 bg-gray-600 text-white text-xs px-12 py-1 rotate-45 z-10 shadow-md">
-            {t.pastEvent}
-          </div>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <div className="absolute top-3 -right-10 bg-gray-600 text-white text-xs px-12 py-1 rotate-45 z-10 shadow-md cursor-help">
+                {t.pastEvent}
+              </div>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>This edition has finished. Next year's dates will likely be similar.</p>
+            </TooltipContent>
+          </Tooltip>
         )}
         
         {/* Card Content - Flex to fill available space */}
@@ -258,43 +265,61 @@ function SimpleFestivalCardImpl({
               <h3
                 className="font-semibold text-gray-900 mb-1 leading-tight flex items-start gap-2"
                 style={{ fontSize: "0.875em" }}
-                title={festival.name}
               >
-                <CountryFlagIcon
-                  country={festival.country}
-                  size={14}
-                  className="mt-0.5 flex-shrink-0"
-                />
-                <span className="line-clamp-2 break-words">
-                  {festival.name}
-                </span>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <span className="mt-0.5 flex-shrink-0 inline-flex">
+                      <CountryFlagIcon country={festival.country} size={14} />
+                    </span>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{festival.country}</p>
+                  </TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <span className="line-clamp-2 break-words cursor-help">
+                      {festival.name}
+                    </span>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{festival.name}</p>
+                  </TooltipContent>
+                </Tooltip>
               </h3>
 
               {/* Location & Continent */}
-              <div
-                className="flex items-center gap-1 mb-1 text-gray-600"
-                style={{ fontSize: "0.875em" }}
-              >
-                <MapPin
-                  className="h-3 w-3 shrink-0"
-                  aria-hidden="true"
-                />
-                <span className="truncate">
-                  {festival.city}, {festival.country}
-                </span>
-                <span
-                  className="text-gray-400"
-                  style={{ fontSize: "0.75em" }}
-                >
-                  •
-                </span>
-                <span
-                  className="text-gray-500"
-                  style={{ fontSize: "0.75em" }}
-                >
-                  {festival.continent}
-                </span>
-              </div>
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <div
+                    className="flex items-center gap-1 mb-1 text-gray-600 cursor-help"
+                    style={{ fontSize: "0.875em" }}
+                  >
+                    <MapPin
+                      className="h-3 w-3 shrink-0"
+                      aria-hidden="true"
+                    />
+                    <span className="truncate">
+                      {festival.city}, {festival.country}
+                    </span>
+                    <span
+                      className="text-gray-400"
+                      style={{ fontSize: "0.75em" }}
+                    >
+                      •
+                    </span>
+                    <span
+                      className="text-gray-500"
+                      style={{ fontSize: "0.75em" }}
+                    >
+                      {festival.continent}
+                    </span>
+                  </div>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>{festival.city}, {festival.country} ({festival.continent})</p>
+                </TooltipContent>
+              </Tooltip>
 
               {/* Price & Duration Info — single line. Long prices truncate
                   (full text on hover); duration chip never wraps below. */}
@@ -304,7 +329,6 @@ function SimpleFestivalCardImpl({
                     <div
                       className={`${getPriceDisplayClasses(festival.price)} truncate min-w-0 max-w-full cursor-help`}
                       style={{ fontSize: "0.75em" }}
-                      title={festival.price}
                     >
                       {formatFestivalPrice(festival.price, t)}
                     </div>
@@ -318,7 +342,6 @@ function SimpleFestivalCardImpl({
                     <div
                       className="bg-gray-50 text-gray-600 px-2 py-0.5 rounded font-medium border border-gray-200 cursor-help flex-shrink-0 whitespace-nowrap"
                       style={{ fontSize: "0.75em" }}
-                      title={dateTooltipText}
                     >
                       {durationText}
                     </div>
@@ -339,16 +362,24 @@ function SimpleFestivalCardImpl({
                     const hasTrain = !!fullTravelTime.train?.duration;
                     const showDriving = !!fullTravelTime.driving?.duration;
 
+                    const travelTooltip = [
+                      hasFlying && fullTravelTime.flying ? `Fly: ${fullTravelTime.flying.duration} (${fullTravelTime.flying.distance})` : '',
+                      showDriving && fullTravelTime.driving ? `Drive: ${fullTravelTime.driving.duration} (${fullTravelTime.driving.distance})` : '',
+                      hasTrain && fullTravelTime.train ? `Train: ${fullTravelTime.train.duration} (${fullTravelTime.train.distance})` : '',
+                    ].filter(Boolean).join(' · ');
+
                     return (
-                      <div
-                        className="flex items-center gap-1 mb-1.5 text-gray-600"
-                        style={{ fontSize: "0.875em" }}
-                      >
-                        <Clock
-                          className="h-3 w-3 shrink-0"
-                          aria-hidden="true"
-                        />
-                        <span className="truncate">
+                      <Tooltip>
+                        <TooltipTrigger asChild>
+                          <div
+                            className="flex items-center gap-1 mb-1.5 text-gray-600 cursor-help"
+                            style={{ fontSize: "0.875em" }}
+                          >
+                            <Clock
+                              className="h-3 w-3 shrink-0"
+                              aria-hidden="true"
+                            />
+                            <span className="truncate">
                           {(() => {
                             if (hasFlying) {
                               return (
@@ -444,7 +475,12 @@ function SimpleFestivalCardImpl({
                             return null;
                           })()}
                         </span>
-                      </div>
+                          </div>
+                        </TooltipTrigger>
+                        <TooltipContent>
+                          <p>{travelTooltip || 'Travel time'}</p>
+                        </TooltipContent>
+                      </Tooltip>
                     );
                   } catch (error) {
                     console.warn(
@@ -457,41 +493,48 @@ function SimpleFestivalCardImpl({
             </div>
 
             {/* Date Badge */}
-            <div
-              className="bg-white text-gray-800 border border-gray-300 text-center flex flex-col items-center justify-center flex-shrink-0 px-1"
-              style={{ width: "3em", height: "3.5em" }}
-              aria-label={`${t.date}: ${day} ${month} ${year}`}
-            >
-              <div
-                className="font-bold leading-none"
-                style={{ fontSize: "1em" }}
-                aria-hidden="true"
-              >
-                {day}
-              </div>
-              {month && (
+            <Tooltip>
+              <TooltipTrigger asChild>
                 <div
-                  className="leading-none"
-                  style={{
-                    fontSize: "0.75em",
-                    marginTop: "0.25em",
-                  }}
-                  aria-hidden="true"
+                  className="bg-white text-gray-800 border border-gray-300 text-center flex flex-col items-center justify-center flex-shrink-0 px-1 cursor-help"
+                  style={{ width: "3em", height: "3.5em" }}
+                  aria-label={`${t.date}: ${day} ${month} ${year}`}
                 >
-                  {month.slice(0, 3)}
+                  <div
+                    className="font-bold leading-none"
+                    style={{ fontSize: "1em" }}
+                    aria-hidden="true"
+                  >
+                    {day}
+                  </div>
+                  {month && (
+                    <div
+                      className="leading-none"
+                      style={{
+                        fontSize: "0.75em",
+                        marginTop: "0.25em",
+                      }}
+                      aria-hidden="true"
+                    >
+                      {month.slice(0, 3)}
+                    </div>
+                  )}
+                  <div
+                    className="leading-none opacity-75"
+                    style={{
+                      fontSize: "0.625em",
+                      marginTop: "0.25em",
+                    }}
+                    aria-hidden="true"
+                  >
+                    {year}
+                  </div>
                 </div>
-              )}
-              <div
-                className="leading-none opacity-75"
-                style={{
-                  fontSize: "0.625em",
-                  marginTop: "0.25em",
-                }}
-                aria-hidden="true"
-              >
-                {year}
-              </div>
-            </div>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{dateTooltipText}</p>
+              </TooltipContent>
+            </Tooltip>
           </div>
 
           {/* Artists Section - Mobile Optimized */}
