@@ -256,14 +256,18 @@ function SimpleFestivalCardImpl({
             {/* Festival Header Info */}
             <div className="flex-1 min-w-0">
               <h3
-                className="font-semibold text-gray-900 mb-1 leading-tight flex items-center gap-2"
+                className="font-semibold text-gray-900 mb-1 leading-tight flex items-start gap-2"
                 style={{ fontSize: "0.875em" }}
+                title={festival.name}
               >
                 <CountryFlagIcon
                   country={festival.country}
                   size={14}
+                  className="mt-0.5 flex-shrink-0"
                 />
-                {festival.name}
+                <span className="line-clamp-2 break-words">
+                  {festival.name}
+                </span>
               </h3>
 
               {/* Location & Continent */}
@@ -292,20 +296,27 @@ function SimpleFestivalCardImpl({
                 </span>
               </div>
 
-              {/* Price & Duration Info */}
-              <div className="flex items-center gap-2 mb-1.5 lg:gap-2.5 lg:mb-2">
-                <div
-                  className={getPriceDisplayClasses(
-                    festival.price,
-                  )}
-                  style={{ fontSize: "0.75em" }}
-                >
-                  {formatFestivalPrice(festival.price, t)}
-                </div>
+              {/* Price & Duration Info — single line. Long prices truncate
+                  (full text on hover); duration chip never wraps below. */}
+              <div className="flex items-center gap-2 mb-1.5 lg:gap-2.5 lg:mb-2 min-w-0">
                 <Tooltip>
                   <TooltipTrigger asChild>
                     <div
-                      className="bg-gray-50 text-gray-600 px-2 py-0.5 rounded font-medium border border-gray-200 cursor-help"
+                      className={`${getPriceDisplayClasses(festival.price)} truncate min-w-0 max-w-full cursor-help`}
+                      style={{ fontSize: "0.75em" }}
+                      title={festival.price}
+                    >
+                      {formatFestivalPrice(festival.price, t)}
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>{festival.price}</p>
+                  </TooltipContent>
+                </Tooltip>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <div
+                      className="bg-gray-50 text-gray-600 px-2 py-0.5 rounded font-medium border border-gray-200 cursor-help flex-shrink-0 whitespace-nowrap"
                       style={{ fontSize: "0.75em" }}
                       title={dateTooltipText}
                     >
