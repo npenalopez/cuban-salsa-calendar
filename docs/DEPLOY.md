@@ -30,7 +30,8 @@ Runbook for the site owner. The project overview is in the [README](../README.md
 | `TURNSTILE_SECRET` | Worker secret | Turnstile → widget → secret key. |
 | `GITHUB_TOKEN` | Worker secret | Fine-grained token on this repo, "Issues: read and write". Create the labels `submission` and `correction`. |
 | `GITHUB_REPO` | `wrangler.jsonc` vars | `owner/name` of the repo that receives submissions. |
-| `ACCESS_TEAM_DOMAIN`, `ACCESS_AUD` | Worker secrets | From the Cloudflare Access application protecting `/admin` (see below). |
+| `ACCESS_TEAM_DOMAIN` | `wrangler.jsonc` vars | Access team name (`bitter-wind-f820`), public. |
+| `ACCESS_AUD` | Worker secret | Audience tag of the Access application protecting `/admin` (see below). |
 | `CF_DEPLOY_HOOK` | GitHub repository secret | Worker → Settings → Build → Deploy hooks. Used by the daily rebuild. |
 
 Worker secrets go in **Worker → Settings → Variables and Secrets**, type **Secret**
@@ -41,8 +42,8 @@ Worker secrets go in **Worker → Settings → Variables and Secrets**, type **S
   `cubansalsacalendar.com` and, for testing, the `*.workers.dev` address.
 - **Cloudflare Access for `/admin`:** Zero Trust → Access → Applications →
   Self-hosted, domain `cubansalsacalendar.com/admin`, policy "Emails: your own
-  email address". Copy the Application Audience (AUD) tag to `ACCESS_AUD` and the
-  team name (`<team>.cloudflareaccess.com`) to `ACCESS_TEAM_DOMAIN`. The Worker
+  email address". Copy the Application Audience (AUD) tag to `ACCESS_AUD`; the
+  team name is already in `wrangler.jsonc`. The Worker
   verifies the Access token itself; until both values are set, `/admin` answers 404
   on every hostname.
 

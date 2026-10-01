@@ -19,12 +19,13 @@
   // Keep variables set in the dashboard when GitHub deploys.
   "keep_vars": true,
   "vars": {
-    "GITHUB_REPO": "npenalopez/cuban-salsa-calendar"
+    "GITHUB_REPO": "npenalopez/cuban-salsa-calendar",
+    // Cloudflare Access team (bitter-wind-f820.cloudflareaccess.com) that protects /admin.
+    "ACCESS_TEAM_DOMAIN": "bitter-wind-f820"
   }
   // Runtime secrets (dashboard → Worker → Settings → Variables and Secrets, type Secret; or `npx wrangler secret put`):
   //   GITHUB_TOKEN        fine-grained token, "Issues: read and write" on the repo
   //   TURNSTILE_SECRET    Turnstile secret key
-  //   ACCESS_TEAM_DOMAIN  e.g. "nestor" for nestor.cloudflareaccess.com
   //   ACCESS_AUD          the Access application's Audience (AUD) tag for /admin
   // Local development reads them from `.dev.vars` (see .dev.vars.example).
 }
