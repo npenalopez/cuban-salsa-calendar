@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { dateBlock, dateLong, dateShort, months12, pISO } from './dates';
-import { cardVM, enrich, fmtPrice } from './festivals';
+import { cardVM, enrich, fmtPrice, isListed } from './festivals';
 import { calUrls, icsCalendar } from './ics';
 import { computeView, DEFAULT_FILTERS, filtersQuery, parseFilters } from './listing';
 import { didYouMean, suggestions } from './search';
@@ -127,9 +127,8 @@ describe('listing', () => {
     const v = computeView(list, TODAY, { name: 'archive' }, DEFAULT_FILTERS, [], null);
     expect(v.sections.flatMap((s) => s.items).map((x) => x.id)).toEqual(['d']);
   });
-  it('dates TBA', () => {
-    const v = computeView(list, TODAY, { name: 'tba' }, DEFAULT_FILTERS, [], null);
-    expect(v.total).toBe(1);
+  it('only exact-date festivals are published', () => {
+    expect(list.filter(isListed).map((x) => x.id)).toEqual(['a', 'b', 'd']);
   });
   it('where filter by country', () => {
     const v = computeView(list, TODAY, { name: 'all' }, { ...DEFAULT_FILTERS, where: 'country:CU' }, [], null);

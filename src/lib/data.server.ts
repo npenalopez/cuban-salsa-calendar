@@ -1,6 +1,6 @@
 import file from '../../data/festivals.json';
 import { isoD, startOfToday } from './dates';
-import { enrich } from './festivals';
+import { enrich, isListed } from './festivals';
 import type { Enriched, FestivalsFile } from './types';
 
 const data = file as unknown as FestivalsFile;
@@ -9,8 +9,9 @@ const data = file as unknown as FestivalsFile;
 export const TODAY = startOfToday(process.env.BUILD_TODAY);
 export const TODAY_ISO = isoD(TODAY);
 
-/** Every festival, enriched relative to the build date. Includes private fields: never pass whole records to the client. */
-export const ALL: Enriched[] = enrich(data.festivals, TODAY);
+/** Every published festival (exact dates only), enriched relative to the build date.
+ * Includes private fields: never pass whole records to the client. */
+export const ALL: Enriched[] = enrich(data.festivals.filter(isListed), TODAY);
 export const UPCOMING = ALL.filter((f) => !f.arch);
 export const ARCHIVE = ALL.filter((f) => f.arch);
 export const DATA_VERSION = data.version;

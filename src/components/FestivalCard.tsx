@@ -9,7 +9,7 @@ interface Props {
 }
 
 export function FestivalCard({ card: c, saved, onSave, onCal }: Props) {
-  const cls = ['card', c.muted && 'card--muted', c.tba && 'card--tba', c.featured && 'card--featured', c.postponed && 'card--postponed', c.struck && 'card--struck']
+  const cls = ['card', c.muted && 'card--muted', c.featured && 'card--featured', c.postponed && 'card--postponed', c.struck && 'card--struck']
     .filter(Boolean).join(' ');
   return (
     <article class={cls}>

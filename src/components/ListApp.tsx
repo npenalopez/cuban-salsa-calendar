@@ -126,7 +126,7 @@ export default function ListApp({ route, buildToday }: Props) {
   const prev = i > 0 ? v.m12[i - 1] : null;
   const next = i >= 0 ? v.m12[i + 1] : null;
   const monthN = (key: string) => v.upF.filter((x) => x.mk === key).length;
-  const otherLabel = { search: plural(v.total, 'result'), archive: 'Archive', saved: v.title, range: v.title, all: 'All upcoming', tba: 'Dates TBA', month: '' }[v.mode];
+  const otherLabel = { search: plural(v.total, 'result'), archive: 'Archive', saved: v.title, range: v.title, all: 'All upcoming', month: '' }[v.mode];
 
   // ---- map
   const items = v.sections.flatMap((s) => s.items);
@@ -200,7 +200,7 @@ export default function ListApp({ route, buildToday }: Props) {
         )}
       </div>
 
-      {!hasQuery && (isMonth || v.mode === 'all' || v.mode === 'tba') && (
+      {!hasQuery && (isMonth || v.mode === 'all') && (
         <nav aria-label="Explore" class="explore">
           <a class="pill" href="/saved/">♡ Saved{savedCount ? ` (${savedCount})` : ''}</a>
           <button type="button" class="pill" aria-haspopup="dialog" onClick={() => openSheet('artists')}>★ Top artists</button>
@@ -369,7 +369,6 @@ export default function ListApp({ route, buildToday }: Props) {
               </div>
             </>
           ))}
-          <a class="row-link row-link--top" href={'/dates-tba/' + qsNoQuery}>Dates to be announced<span class="meta">{v.upF.filter((x) => x.tba).length}</span></a>
           <a class="row-link row-link--top" href={'/archive/' + qsNoQuery}>Archive · past festivals<span class="meta">{v.arch.length}</span></a>
         </div>
       </Sheet>

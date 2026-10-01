@@ -11,7 +11,7 @@ const CLIENT_FIELDS = [
   'priceText', 'priceFrom', 'currency', 'ticketUrl', 'website', 'artists', 'featured',
 ];
 
-/** `virtual:festivals` = data/festivals.json stripped to CLIENT_FIELDS. */
+/** `virtual:festivals` = published festivals (exact days only, as `isListed`), stripped to CLIENT_FIELDS. */
 function festivalsModule() {
   const ID = 'virtual:festivals';
   const RESOLVED = '\0' + ID;
@@ -23,7 +23,7 @@ function festivalsModule() {
       if (id !== RESOLVED) return null;
       this.addWatchFile(file.pathname);
       const json = JSON.parse(readFileSync(file, 'utf8'));
-      const list = json.festivals.map((f) => Object.fromEntries(CLIENT_FIELDS.map((k) => [k, f[k] ?? null])));
+      const list = json.festivals.filter((f) => f.datePrecision === 'day').map((f) => Object.fromEntries(CLIENT_FIELDS.map((k) => [k, f[k] ?? null])));
       return `export default ${JSON.stringify(list)};`;
     },
   };

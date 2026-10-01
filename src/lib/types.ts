@@ -49,8 +49,6 @@ export interface Enriched extends Festival {
   mk: string | null;
   /** In the archive: past or cancelled */
   arch: boolean;
-  /** datePrecision "year": listed under Dates TBA */
-  tba: boolean;
   /** Normalised search haystack */
   hay: string;
 }

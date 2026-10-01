@@ -326,9 +326,6 @@ textarea.input { height: auto; padding: 12px 14px; line-height: 1.5; resize: ver
 .card--postponed .date-block__mon { color: var(--ink3); }
 .card--postponed .date-block__days { color: var(--ink2); }
 .card--struck .date-block__days { text-decoration-line: line-through; }
-.card--tba, .card--tba:hover { border: 1px dashed var(--line-strong); }
-.card--tba .date-block { background: transparent; border: 1px dashed var(--line-strong); }
-.card--tba .date-block__mon { color: var(--ink3); }
 .card--featured { border: 2px solid var(--accent); }
 
 /* ============ Dock ============ */

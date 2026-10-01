@@ -8,6 +8,12 @@ export const FEATURED_ENABLED = false;
 
 export const SITE = 'https://cubansalsacalendar.com';
 export const INSTAGRAM = 'https://www.instagram.com/cubansalsacalendar';
+/**
+ * Only festivals with exact days are published. The others stay in the data (and in /admin)
+ * and appear on their own once their dates are known.
+ */
+export const isListed = (f: Pick<Festival, 'datePrecision'>) => f.datePrecision === 'day';
+
 export const festivalPath = (id: string) => `/festivals/${encodeURIComponent(id)}/`;
 export const fixPath = (id: string) => `/submit/${encodeURIComponent(id)}/`;
 
@@ -23,7 +29,6 @@ export function enrich(list: Festival[], today: Date): Enriched[] {
       past,
       mk: f.datePrecision !== 'year' ? mkey(s.getFullYear(), s.getMonth()) : null,
       arch: past || f.status === 'cancelled',
-      tba: f.datePrecision === 'year',
       hay: norm([f.name, f.city, f.country, f.region, ...(f.artists || [])].join(' | ')),
     };
   });
@@ -79,7 +84,6 @@ export interface CardVM {
   showSave: boolean;
   showCal: boolean;
   muted: boolean;
-  tba: boolean;
   featured: boolean;
   postponed: boolean;
   struck: boolean;
@@ -122,7 +126,6 @@ export function cardVM(f: Enriched, all: Enriched[], city: City | null): CardVM 
     showSave: !f.arch,
     showCal: canAddToCalendar(f),
     muted: f.arch,
-    tba: f.tba,
     featured,
     postponed: f.status === 'postponed',
     struck: f.status === 'postponed' || f.status === 'cancelled',

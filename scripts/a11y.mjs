@@ -6,7 +6,7 @@ import AxeBuilder from '@axe-core/playwright';
 
 const base = process.env.BASE ?? 'http://localhost:8789';
 const FEST = '/festivals/el-que-sabe-sabe-anzio-2026/';
-const pages = ['/', '/upcoming/', '/dates-tba/', '/archive/', '/saved/', FEST, '/submit/', '/submit/el-que-sabe-sabe-anzio-2026/', '/no-such-page/', '/admin/'];
+const pages = ['/', '/upcoming/', '/archive/', '/saved/', FEST, '/submit/', '/submit/el-que-sabe-sabe-anzio-2026/', '/no-such-page/', '/admin/'];
 
 /** [label, path, steps] for interactive states. */
 const states = [

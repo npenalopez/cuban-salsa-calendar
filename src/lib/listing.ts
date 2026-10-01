@@ -24,7 +24,7 @@ export const DEFAULT_FILTERS: Filters = { q: '', where: '', when: 'any', from: '
 
 export type PageRoute =
   | { name: 'month'; key: string | null }
-  | { name: 'all' | 'tba' | 'archive' | 'saved' };
+  | { name: 'all' | 'archive' | 'saved' };
 
 export function parseFilters(search: string): Filters {
   const p = new URLSearchParams(search);
@@ -89,18 +89,16 @@ export interface Section {
 function groupByMonth(list: Enriched[], desc = false): Section[] {
   const g = new Map<string, Enriched[]>();
   for (const f of list) {
-    const k = f.mk || 'tba';
+    const k = f.mk!;
     if (!g.has(k)) g.set(k, []);
     g.get(k)!.push(f);
   }
-  const keys = [...g.keys()].filter((k) => k !== 'tba').sort();
+  const keys = [...g.keys()].sort();
   if (desc) keys.reverse();
-  const secs: Section[] = keys.map((k) => ({ title: monthLabel(k), head: true, items: g.get(k)! }));
-  if (g.has('tba')) secs.push({ title: 'Dates to be announced', head: true, items: g.get('tba')! });
-  return secs;
+  return keys.map((k) => ({ title: monthLabel(k), head: true, items: g.get(k)! }));
 }
 
-export type Mode = 'month' | 'search' | 'range' | 'all' | 'tba' | 'archive' | 'saved';
+export type Mode = 'month' | 'search' | 'range' | 'all' | 'archive' | 'saved';
 
 export interface ListView {
   mode: Mode;
@@ -165,7 +163,7 @@ export function computeView(all: Enriched[], today: Date, route: PageRoute, f: F
     v.emptyText = 'Tap ♡ on any festival to keep it here.';
   } else if (rng) {
     v.mode = 'range';
-    const l = sortList(upF.filter((x) => !x.tba && x.s <= rng[1] && x.e >= rng[0]), f.sort);
+    const l = sortList(upF.filter((x) => x.s <= rng[1] && x.e >= rng[0]), f.sort);
     v.kicker = plural(l.length, 'festival');
     v.title = f.when === '30' ? 'Next 30 days' : f.when === '90' ? 'Next 3 months' : 'Your dates';
     v.sections = byMonthOrAZ(l);
@@ -178,13 +176,6 @@ export function computeView(all: Enriched[], today: Date, route: PageRoute, f: F
     v.sections = byMonthOrAZ(l);
     v.emptyTitle = 'No festivals match these filters.';
     v.emptyText = 'Try a different place.';
-  } else if (route.name === 'tba') {
-    const l = sortList(upF.filter((x) => x.tba), f.sort);
-    v.kicker = plural(l.length, 'festival');
-    v.title = 'Dates TBA';
-    v.note = "These festivals are expected but haven't announced dates. Save one to find it again later.";
-    v.sections = [{ title: '', head: false, items: l }];
-    v.emptyTitle = 'Nothing here with these filters.';
   } else {
     const key = (route.name === 'month' && route.key) || m12[0].key;
     const [y, m] = key.split('-').map(Number);
