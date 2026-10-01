@@ -206,3 +206,34 @@ Candidates for the archive, and a hint for next year's edition.
 | `world-stars-salsa-festival-varna-2027` | instagram: https://www.instagram.com/world_stars_salsa_festival/<br>website: https://varnasalsafestival.com/<br>ticketUrl: https://ticket.varnasalsafestival.com/wssf/tickets<br>venue: Albena Resort |
 | `yo-soy-sicilia-terrasini-2027` | venue: CDSHotels Terrasini - Città del Mare |
 | `zagreb-salsa-marathon-2027` | instagram: https://www.instagram.com/zagrebsalsamarathon/<br>website: https://zagrebsalsamarathon.com/<br>ticketUrl: https://docs.google.com/forms/d/e/1FAIpQLSdFKtGxLY1oG7Qf7fGM4JYP1GNY_icG0YJzAhIBVM54k4OECQ/viewform<br>venue: WESPA Business & Lounge Bar |
+
+## Line-ups from organizer websites
+
+Added on 2026-10-01 for 24 festivals that had none, read from the organizers' own sites and ticket pages (robots.txt respected; sites that opt out of Anthropic's agents were skipped). Every name was checked against the page text. "Medium" means the page shows the current line-up without a year: worth a quick check.
+
+| Festival | Names | Confidence | Source |
+|---|---|---|---|
+| `salsa-rueda-festival-san-francisco-2027` | 1 | high | https://www.eventbrite.com/e/the-16th-annual-salsa-rueda-festival-in-san-francisco-feb-11-feb-14-2027-registration-2000233871354 |
+| `albacete-en-salsa-2027` | 44 | high | https://www.goandance.com/es/evento/9465/xviii-encuentro-internacional-de-ritmos-latinos-albacete-en-salsa-2027 |
+| `la-klave-dortmund-2026` | 17 | medium | https://www.laklavefestival.de/artists/ |
+| `istanbul-social-dance-marathon-2026` | 23 | high | https://www.goandance.com/en/event/8567/postponed-8th-istanbul-social-dance-marathon-turkiye |
+| `la-dosis-london-2027` | 20 | medium | https://ruedalibre.co.uk/la-dosis-artists/ |
+| `saoco-cuban-festival-aix-2027` | 23 | high | https://saoco-cuban-festival.fr/artistes/ |
+| `alocubano-benidorm-2027` | 15 | high | https://alocubano.se/benidorm/artists |
+| `crazy-dance-festival-2027` | 20 | high | https://www.crazydancefestival.com/ |
+| `la-descarga-augsburg-2026` | 11 | high | https://tickets.baila-augsburg.de/event/la-descarga-festival/ |
+| `unified-dance-festival-luxembourg-2026` | 6 | high | https://www.goandance.com/en/event/9061/luxembourg-unified-dance-festival-2026 |
+| `agua-festival-thessaloniki-2026` | 9 | medium | https://www.aguasalsafestival.com/line-up |
+| `el-dos-tres-salsa-festival-dubai-2027` | 18 | high | https://eldostressalsafestival.com/ |
+| `arrebatate-budapest-2027` | 2 | medium | https://arrebatatefestival.com/ |
+| `havana-en-belgrado-2026` | 4 | high | https://www.havanaenbelgrado.com/ |
+| `rainbow-festival-nancy-2026` | 15 | high | https://my.weezevent.com/rainbow-festival-nancy-2026 |
+| `afro-cuban-berlin-2026` | 9 | high | https://www.berlinsalsafestival.com/artists-october-2026 |
+| `afro-cuban-dance-festival-havana-2027` | 5 | high | https://www.goandance.com/en/event/9863/afro-cuban-dance-festival-2027 |
+| `istanbul-world-dance-congress-2027` | 41 | high | https://www.goandance.com/en/event/9956/iwdc-istanbul-world-dance-congress-2027 |
+| `not-salsa-fest-ivano-frankivsk-2026` | 10 | high | https://notfest.in.ua/en/ |
+| `cuba-me-mucho-angers-2027` | 25 | high | https://bailaconamigos.com/soirees-et-evenements/cuba-me-mucho-angers/ |
+| `miami-salsa-congress-2027` | 25 | medium | https://www.miamisalsacongress.com/artists |
+| `guaguanco-festival-lloret-2027` | 11 | high | https://www.goandance.com/en/event/9474/guaguanco-festival-2027-gold-edition |
+| `albania-afro-latin-festival-tirana-2027` | 19 | high | https://www.goandance.com/en/event/9601/albania-afrolatin-festival-2027 |
+| `baila-new-york-2027` | 27 | medium | https://www.bailanewyork.com/artists |
