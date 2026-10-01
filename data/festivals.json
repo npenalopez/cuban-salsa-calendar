@@ -1,5 +1,5 @@
 {
-  "version": "2026.10-130",
+  "version": "2026.10-128",
   "updated": "2026-10-01",
   "festivals": [
     {
@@ -69,7 +69,7 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.endanse.com/festival-salsa-carnaval-de-limoges-2026",
       "website": "https://www.endanse.com/festival-salsa-carnaval-de-limoges-2026",
       "instagram": "https://www.instagram.com/endanse.asso/",
       "artists": [
@@ -218,48 +218,6 @@
       "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
-      "id": "odac-singapore-cuban-salsa-fiesta-2026",
-      "series": "odac-singapore-cuban-salsa-fiesta",
-      "name": "ODAC Singapore Cuban Salsa Fiesta",
-      "status": "scheduled",
-      "startDate": "2026-09-24",
-      "endDate": "2026-09-27",
-      "datePrecision": "day",
-      "dateNote": null,
-      "city": "Kuta",
-      "country": "Indonesia",
-      "countryCode": "ID",
-      "region": "Asia",
-      "venue": null,
-      "coordinates": [
-        -8.4095,
-        115.1889
-      ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": "https://www.instagram.com/odacsingapore/",
-      "artists": [
-        "Diana Rodriguez",
-        "DJ Camille",
-        "DJ El Gato Volador",
-        "DJ Jack El Calvo",
-        "DJ Yuma",
-        "FredyClan",
-        "Geysa",
-        "Kevin",
-        "Osmani Segura",
-        "Yeni Molinet",
-        "Yusimi Moya Rodríguez"
-      ],
-      "description": "Annual Cuban Salsa festival by ODAC Singapore (Only Dance Afro-Cuban). Brings renowned artists from Cuban Salsa communities across the globe to Singapore. Cross-border collaboration with Cuban Salsa lovers in the region. Features 20+ hours of Workshops, 3 Parties, 6 hours of Masterclasses, Pre-Party. Past lineups have included Diana Rodriguez, Yeni Molinet, Fredyclan, Yusimi, Osmani Segura, Kevin y Geysa. ODAC also runs Cuban Salsa Fiesta editions in Bali (Sept) and Special Editions in Tokyo. 2026 dates approximate - confirm via @odacsingapore Instagram.",
-      "lastVerified": null,
-      "featured": false,
-      "notes": null
-    },
-    {
       "id": "agua-festival-thessaloniki-2026",
       "series": "agua-festival-thessaloniki",
       "name": "Agua Festival",
@@ -339,36 +297,6 @@
       "lastVerified": null,
       "featured": false,
       "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
-    },
-    {
-      "id": "afrolatin-holidays-egypt-2026",
-      "series": "afrolatin-holidays-egypt",
-      "name": "AfroLatin Holidays Egypt",
-      "status": "scheduled",
-      "startDate": "2026-10-01",
-      "endDate": "2026-10-15",
-      "datePrecision": "day",
-      "dateNote": null,
-      "city": "Cairo",
-      "country": "Egypt",
-      "countryCode": "EG",
-      "region": "Africa",
-      "venue": null,
-      "coordinates": [
-        30.0444,
-        31.2357
-      ],
-      "priceText": "Full Pass from €80",
-      "priceFrom": 80,
-      "currency": "EUR",
-      "ticketUrl": "https://afrolatinegypt.com/holidays-passes/",
-      "website": "https://afrolatinegypt.com/holidays/",
-      "instagram": "https://www.instagram.com/afrolatinegypt/",
-      "artists": [],
-      "description": "AfroLatin Egypt presents the 14th edition of its signature dance-vacation. Up to 15 days of social Latin dance experiences across six iconic Egyptian destinations: Cairo, Hurghada (Red Sea), Luxor, Nubia (Aswan), Matrouh, and Siwa. Daily social parties (beach, pool, boat, foam, themed), workshops in Salsa (including Cuban), Bachata, Kizomba, UrbanKiz, Zouk. Sightseeing (Pyramids, Luxor temples), adventure activities (sandboarding, safaris, hot-air balloon), genuine cultural connection. Pass options: Full, Ultra Full, VIP, Super, Royal. NOTE: Mainly bachata/kizomba/SBK with some Cuban content - dance vacation rather than pure Cuban festival.",
-      "lastVerified": null,
-      "featured": false,
-      "notes": "Web research on 2026-10-01: dates 2026-10-01 – 2026-10-15, website, instagram, ticketUrl. Source: https://afrolatinegypt.com/holidays/"
     },
     {
       "id": "alocubano-krakow-2026",
@@ -747,30 +675,30 @@
       "series": "mi-habana-baila-santa-susanna-oct",
       "name": "Mi Habana Baila Festival",
       "status": "scheduled",
-      "startDate": "2026-10-09",
-      "endDate": "2026-10-11",
+      "startDate": "2027-04-09",
+      "endDate": "2027-04-11",
       "datePrecision": "day",
       "dateNote": null,
-      "city": "Santa Susanna",
-      "country": "Spain",
-      "countryCode": "ES",
+      "city": "Piran",
+      "country": "Slovenia",
+      "countryCode": "SI",
       "region": "Europe",
-      "venue": "Hotel Don Ángel",
+      "venue": "Grand Hotel Bernardin, Portorož",
       "coordinates": [
-        41.632765,
-        2.720243
+        45.5169439,
+        13.5697685
       ],
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/en/event/10098/mi-habana-baila-festival-2027-5ta-edicion-eslovenia",
       "website": null,
       "instagram": "https://www.instagram.com/mihabanabaila_festival/",
       "artists": [],
-      "description": "5th edition. Small hotel-contained 100% Cuban weekend at Hotel Don Angel on the Maresme coast north of Barcelona, Friday afternoon to Sunday evening. Classes in casino, son, rumba cubana, cha cha cha, mambo, pilon, mozambique, danzon, musicality and technique; parties with 100% Cuban music. Free place for every 10 dancers a school brings. Organiser Cuba Dance Events has run editions in Slovenia and Cuba. Booking via WhatsApp; organiser website currently offline, verify before booking.",
+      "description": "5th edition of Mi Habana Baila in Slovenia, at the Grand Hotel Bernardin in Portorož on the Piran coast: Cuban music, salsa, bachata, shows, animation and social dancing.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer.\n2026-10-01: Slovenia 2027 edition (goandance listing 9–11 Apr 2027, Grand Hotel Bernardin, Portorož)."
     },
     {
       "id": "crazy-4-la-timba-lisbon-2026",
@@ -841,15 +769,15 @@
       "series": "ruedamania-yekaterinburg",
       "name": "Ruedamania 2026",
       "status": "scheduled",
-      "startDate": "2026-10-15",
-      "endDate": "2026-10-17",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-18",
       "datePrecision": "day",
       "dateNote": null,
       "city": "Yekaterinburg",
       "country": "Russia",
       "countryCode": "RU",
       "region": "Europe",
-      "venue": null,
+      "venue": "2Dance, ul. Turgeneva 13",
       "coordinates": [
         56.8389,
         60.6057
@@ -857,14 +785,14 @@
       "priceText": null,
       "priceFrom": 2000,
       "currency": "RUB",
-      "ticketUrl": "https://www.salsavida.com/event/russia/yekaterinburg/ruedamania/",
-      "website": "https://www.salsavida.com/event/russia/yekaterinburg/ruedamania/",
+      "ticketUrl": "https://vk.ru/pages?oid=-71343489&p=%D0%A1%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C",
+      "website": "https://vk.com/ruedamania",
       "instagram": null,
       "artists": [],
       "description": "Cuban Rueda de Casino festival in Yekaterinburg, the cultural center of Russia's Ural region. Features rueda workshops, casino partnerwork, and Cuban-style social dancing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "2026-10-01: official VK community replaces salsavida links; dates 16–18 Oct per the pinned post."
     },
     {
       "id": "atlanta-afrocuban-dance-congress-2026",
@@ -1099,9 +1027,9 @@
       "priceText": null,
       "priceFrom": 1000,
       "currency": "NOK",
-      "ticketUrl": "https://allevents.in/oslo/oslo-cuban-salsa-festival-2026/200028950221719",
-      "website": "https://allevents.in/oslo/oslo-cuban-salsa-festival-2026/200028950221719",
-      "instagram": null,
+      "ticketUrl": "https://www.tikello.com/event/j9724cys9xk5xr3rjefh1t9z0n7r1dt1",
+      "website": "https://www.dancecity.no/",
+      "instagram": "https://www.instagram.com/dancecity_oslo/",
       "artists": [
         "Adonis Santiago",
         "Damarys Farres",
@@ -1115,7 +1043,7 @@
       "description": "First-ever Cuban Salsa Festival in Oslo. By Oslo Kizomba Festival and Dance With Dancecity. 19:00-03:00 daily. Workshops focus on Orishas, Rueda, authentic Cuban dance and culture. Top DJs. Early bird Full Pass 1000 NOK.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer.\n2026-10-01: organizer Dancecity site/Instagram and Tikello tickets replace allevents links."
     },
     {
       "id": "son-and-casino-weekender-eugene-2026",
@@ -1202,14 +1130,14 @@
       "priceText": null,
       "priceFrom": 95,
       "currency": "EUR",
-      "ticketUrl": null,
-      "website": "https://www.salsavida.com/event/slovakia/bratislava/cuban-bratislava-weekend/",
-      "instagram": null,
+      "ticketUrl": "https://events.sbn.sk/event/ev2",
+      "website": "https://events.sbn.sk/event/ev2",
+      "instagram": "https://www.instagram.com/salsabynorika/",
       "artists": [],
       "description": "Cuban Bratislava Weekend. Listed in rueda.casino October 24-25, 2026 (also May 15-16 per visitbratislava.com - verify dates).",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website."
+      "notes": "User to verify Instagram/website.\n2026-10-01: official Salsa by Norika festival page replaces salsavida; 7th edition, 24–25 Oct (the May date was a different event)."
     },
     {
       "id": "made-in-south-bisceglie-2026",
@@ -1729,14 +1657,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": "https://www.salsavida.com/event/hungary/kecskemet/gusto-cubano-salsa-bachata-weekender/",
+      "ticketUrl": "https://forms.gle/HWsox6C1222DB97d9",
+      "website": "https://www.facebook.com/events/1267777715159248/",
       "instagram": null,
       "artists": [],
-      "description": "Gusto Cubano Festival in Tapolca, Hungary.",
+      "description": "Salsa and bachata weekender at the Hotel Granada in Kecskemét, Hungary.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website.\n2026-10-01: moved from Tapolca to Kecskemét (Granada hotel). Directories give 13–15 Nov 2026; confirm on an official source before setting exact dates."
+      "notes": "User to verify Instagram/website.\n2026-10-01: moved from Tapolca to Kecskemét (Granada hotel). Directories give 13–15 Nov 2026; confirm on an official source before setting exact dates.\n2026-10-01: official Facebook event and registration form replace salsavida (gustocubano.hu no longer exists)."
     },
     {
       "id": "la-klave-dortmund-2026",
