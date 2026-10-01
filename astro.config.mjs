@@ -49,5 +49,7 @@ export default defineConfig({
     plugins: [festivalsModule()],
     // MapLibre's web worker is built as an ES module (see MapView).
     worker: { format: 'es' },
+    // Pre-bundle the map library when the dev server starts (it is only imported lazily).
+    optimizeDeps: { include: ['maplibre-gl'] },
   },
 });
