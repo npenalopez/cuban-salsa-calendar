@@ -31,6 +31,8 @@ for (const theme of ['light', 'dark']) {
   for (const w of [375, 1440]) {
     const ctx = await browser.newContext({ colorScheme: theme, viewport: { width: w, height: 900 }, reducedMotion: 'reduce' });
     const page = await ctx.newPage();
+    // Turnstile (spam check) can't run on a test machine and keeps the network busy; it is third-party UI anyway.
+    await page.route('**/challenges.cloudflare.com/**', (r) => r.abort());
     const run = async (label) => {
       await page.waitForTimeout(250);
       // The map canvas draws third-party map labels; scan our UI only.

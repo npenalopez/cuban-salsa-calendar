@@ -22,7 +22,8 @@ for (const p of pages) {
   let best = null;
   await fetch(base + p); // warm up: the local runtime's first response is a cold start
   for (let i = 0; i < RUNS; i++) {
-    const r = await lighthouse(base + p, { port: chrome.port, output: 'json', logLevel: 'error' });
+    // Turnstile only runs on the real hostnames; block it so test-machine errors don't count against the page.
+    const r = await lighthouse(base + p, { port: chrome.port, output: 'json', logLevel: 'error', blockedUrlPatterns: process.env.BLOCK_TURNSTILE === '0' ? [] : ['*challenges.cloudflare.com*'] });
     const s = Object.fromEntries(Object.entries(r.lhr.categories).map(([k, c]) => [k, Math.round(c.score * 100)]));
     if (!best || Object.values(s).reduce((a, b) => a + b) > Object.values(best.s).reduce((a, b) => a + b)) best = { s, lhr: r.lhr };
   }
