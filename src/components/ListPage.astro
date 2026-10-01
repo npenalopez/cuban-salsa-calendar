@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import ListApp from './ListApp';
+import type { PageRoute } from '../lib/listing';
+import { TODAY_ISO } from '../lib/data.server';
+
+interface Props {
+  route: PageRoute;
+  title: string;
+  description?: string;
+  noindex?: boolean;
+}
+const { route, title, description, noindex } = Astro.props;
+---
+<Base title={title} description={description} noindex={noindex} dock>
+  <ListApp client:afterload route={route} buildToday={TODAY_ISO} />
+</Base>

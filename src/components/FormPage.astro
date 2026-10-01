@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+import SubmitForm from './SubmitForm';
+
+interface Props {
+  mode: 'new' | 'fix';
+  fid?: string;
+  fname?: string;
+  back: string;
+}
+const { mode, fid, fname, back } = Astro.props;
+const isFix = mode === 'fix';
+const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
+---
+<Base title={isFix ? `Suggest a correction · ${fname} · Cuban Salsa Calendar` : 'Submit a festival · Cuban Salsa Calendar'} description="Add a Cuban salsa, timba or Afro-Cuban festival. We check every submission before it goes live." noindex={isFix}>
+  <div class="form-page">
+    <a href={back} class="form-page__back">← Back</a>
+    <div class="block">
+      <span class="kicker">{isFix ? 'Suggest a correction' : 'For organizers and dancers'}</span>
+      <h1 class="form-title">{isFix ? 'Fix a listing' : 'Submit a festival'}</h1>
+      <p class="form-intro">
+        {isFix
+          ? "Tell us what's wrong or missing. We check every change before it goes live."
+          : 'Add a Cuban salsa, timba or Afro-Cuban festival. We check every submission before it goes live.'}
+      </p>
+    </div>
+    <SubmitForm client:load mode={mode} fid={fid} fname={fname} turnstileKey={turnstileKey} />
+  </div>
+</Base>

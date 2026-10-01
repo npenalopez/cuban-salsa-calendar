@@ -1,0 +1,171 @@
+---
+import type { GetStaticPaths } from 'astro';
+import Base from '../../../layouts/Base.astro';
+import { AddToCalendar, FestivalMap, Lineup, TopActions, TravelLine } from '../../../components/FestivalIslands';
+import { MONTHS, dateLong, dateShort, dayRange, daysBetween, monthLabel, monthPath, plural } from '../../../lib/dates';
+import { ALL, TODAY, UPCOMING } from '../../../lib/data.server';
+import { SITE, byDate, canAddToCalendar, festivalPath, fixPath, fmtPrice, nextEdition, place, ticketOf } from '../../../lib/festivals';
+import type { Enriched } from '../../../lib/types';
+
+export const getStaticPaths = (() => ALL.map((f) => ({ params: { id: f.id }, props: { f } }))) satisfies GetStaticPaths;
+
+const { f } = Astro.props as { f: Enriched };
+const url = SITE + festivalPath(f.id);
+const a = f.artists;
+const ticket = ticketOf(f);
+const price = fmtPrice(f);
+const where = [f.venue, place(f)].filter(Boolean).join(', ');
+
+// Status banner
+let status: { kind: string; title: string; text: string } | null = null;
+if (f.status === 'postponed') status = { kind: 'postponed', title: 'Postponed.', text: "New dates haven't been announced yet." };
+else if (f.status === 'cancelled') status = { kind: 'cancelled', title: 'Cancelled.', text: "This edition won't take place." };
+else if (f.past)
+  status = { kind: 'past', title: 'This festival already took place.', text: nextEdition(f, ALL) ? 'The next edition is listed below.' : "The next edition hasn't been announced." };
+else if (f.status === 'sold-out') status = { kind: 'sold-out', title: 'Sold out.', text: 'Check the organizer for a waiting list.' };
+
+// "2 days · starts in 58 days"
+let dateSub = '';
+if (f.datePrecision === 'day') {
+  const len = daysBetween(f.s, f.e) + 1;
+  const until = daysBetween(TODAY, f.s);
+  dateSub = `${plural(len, 'day')} · ${f.past ? `ended ${plural(daysBetween(f.e, TODAY), 'day')} ago` : until <= 0 ? 'happening now' : `starts in ${plural(until, 'day')}`}`;
+} else if (f.datePrecision === 'month') dateSub = 'Exact days not announced yet';
+else dateSub = 'Save it and check back later';
+
+const ig = f.instagram || null;
+const others = f.series
+  ? ALL.filter((x) => x.series === f.series && x.id !== f.id).sort(byDate).map((x) => ({
+      href: festivalPath(x.id),
+      label: x.name,
+      when: x.datePrecision === 'year' ? String(x.s.getFullYear()) : `${MONTHS[x.s.getMonth()]} ${x.s.getFullYear()}`,
+    }))
+  : [];
+const more = f.mk && !f.arch ? UPCOMING.filter((x) => x.mk === f.mk && x.id !== f.id).sort(byDate).slice(0, 4) : [];
+
+// Event JSON-LD. Never include `notes`. No dates unless they are exact.
+const ld: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@type': 'Event',
+  name: f.name,
+  url,
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/' + (f.status === 'postponed' ? 'EventPostponed' : f.status === 'cancelled' ? 'EventCancelled' : 'EventScheduled'),
+  location: {
+    '@type': 'Place',
+    name: f.venue || f.city || place(f),
+    address: { '@type': 'PostalAddress', addressLocality: f.city ?? undefined, addressCountry: f.countryCode ?? undefined },
+    geo: f.coordinates ? { '@type': 'GeoCoordinates', latitude: f.coordinates[0], longitude: f.coordinates[1] } : undefined,
+  },
+  image: [SITE + `/og/${f.id}.png`],
+};
+if (f.datePrecision === 'day') {
+  ld.startDate = f.startDate;
+  ld.endDate = f.endDate;
+}
+if (a.length) ld.performer = a.slice(0, 10).map((name) => ({ '@type': 'Person', name }));
+if (f.description) ld.description = f.description;
+if (ticket) ld.offers = { '@type': 'Offer', url: ticket, price: f.priceFrom ?? undefined, priceCurrency: f.currency ?? undefined };
+
+const title = `${f.name} · ${dateShort(f)} · ${f.city || place(f)}`;
+const description = [
+  `${f.name}, ${dateLong(f)}, ${place(f)}.`,
+  a.length ? `Line-up: ${a.slice(0, 6).join(', ')}${a.length > 6 ? ' and more' : ''}.` : '',
+  price ? `Passes ${price}.` : '',
+].filter(Boolean).join(' ');
+---
+<Base title={title} description={description} ogImage={`/og/${f.id}.png`} ogType="article">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(ld).replace(/</g, '\\u003c')} />
+
+  <div class="topbar">
+    <a class="topbar__back" href="/" id="back-link">← All festivals</a>
+    <TopActions client:afterload id={f.id} name={f.name} url={url} canSave={!f.arch} />
+  </div>
+
+  <div class="fest">
+    <div class="fest__col">
+      {status && <div role="status" class={`status status--${status.kind}`}><strong>{status.title}</strong> {status.text}</div>}
+      <div class="fest__head">
+        <span class="fest__place">
+          {f.countryCode && <img class="flag" src={`/flags/${f.countryCode.toLowerCase()}.svg`} alt="" width="20" height="14" />}
+          {place(f)}
+        </span>
+        <h1 class="fest__name">{f.name}</h1>
+        <span class="fest__date">{dateLong(f)}</span>
+        <span class="meta">{dateSub}</span>
+        {f.coordinates && !f.arch && <TravelLine client:afterload coords={f.coordinates} />}
+      </div>
+
+      {ticket && (
+        <div class="passes">
+          <a class="passes__btn" href={ticket} target="_blank" rel="sponsored noopener">Get passes{f.priceFrom != null ? ` · ${price}` : ''} ↗</a>
+          <span class="passes__note">Passes are sold by the organizer.</span>
+        </div>
+      )}
+
+      <div class="actions-grid">
+        {canAddToCalendar(f) && <AddToCalendar client:afterload id={f.id} />}
+        {ig && <a class="btn" href={ig} target="_blank" rel="noopener">{/\/p\//.test(ig) ? 'Instagram post' : 'Instagram'} ↗</a>}
+        {f.website && <a class="btn btn--ghost" href={f.website} target="_blank" rel="noopener">Festival website ↗</a>}
+      </div>
+      {!ig && !f.website && (
+        <p class="no-links">We don't have a website or Instagram for this festival yet. <a href={fixPath(f.id)}>Know it? Tell us.</a></p>
+      )}
+
+      <dl class="facts">
+        <dt>Where</dt><dd>{where}</dd>
+        <dt>Price</dt><dd>{f.priceText || 'Not announced yet'}</dd>
+        <dt>Region</dt><dd>{f.region}</dd>
+      </dl>
+
+      {others.length > 0 && (
+        <div class="block">
+          <h2 class="h2">Other editions</h2>
+          {others.map((o) => <a class="row-between" href={o.href}><span>{o.label}</span><span class="meta">{o.when} ›</span></a>)}
+        </div>
+      )}
+    </div>
+
+    <div class="fest__col fest__col--right">
+      <div class="block block--10">
+        <h2 class="h2">Line-up{a.length > 0 && <span class="h2__count">{a.length}</span>}</h2>
+        {a.length ? <Lineup client:afterload artists={a} /> : <p class="meta" style="margin:0;font-size:15px">Not announced yet.</p>}
+      </div>
+      <div class="block">
+        <h2 class="h2">About</h2>
+        <p class="about">{f.description || 'No description yet.'}</p>
+      </div>
+      {f.coordinates && (
+        <div class="block" style="gap:4px">
+          <FestivalMap client:afterload id={f.id} name={f.name} lat={f.coordinates[0]} lng={f.coordinates[1]} label={`Map of ${place(f)}`} place={place(f)} />
+          <a class="inline-link" href={`https://www.google.com/maps/search/?api=1&query=${f.coordinates[0]},${f.coordinates[1]}`} target="_blank" rel="noopener">Directions in Maps ↗</a>
+        </div>
+      )}
+      <div class="verified">
+        <span>{f.lastVerified ? `Info last checked ${f.lastVerified}` : "Info from the organizer's public channels."}</span>
+        <a class="inline-link" href={fixPath(f.id)}>Something wrong? Suggest a correction</a>
+      </div>
+      {more.length > 0 && f.mk && (
+        <div class="more">
+          <h2 class="h2">More in {monthLabel(f.mk)}</h2>
+          {more.map((x) => (
+            <a class="more-row" href={festivalPath(x.id)}>
+              <span class="more-row__when">{dayRange(x)}</span>
+              <span class="more-row__text"><strong>{x.name}</strong><span>{place(x)}</span></span>
+            </a>
+          ))}
+          <a class="inline-link" href={monthPath(f.mk)}>See all of {MONTHS[f.s.getMonth()]} ›</a>
+        </div>
+      )}
+    </div>
+  </div>
+
+  <script>
+    // "← All festivals" returns to the last list page the visitor came from.
+    try {
+      const last = sessionStorage.getItem('csc-last-list');
+      const a = document.getElementById('back-link') as HTMLAnchorElement | null;
+      if (last && a) a.href = last;
+    } catch {}
+  </script>
+</Base>

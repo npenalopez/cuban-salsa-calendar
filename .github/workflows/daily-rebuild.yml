@@ -1,0 +1,17 @@
+# Rebuilds the site every morning so "upcoming" and "past" roll over without a data change.
+# Needs the repository secret CF_DEPLOY_HOOK (Worker → Settings → Builds → Deploy hooks).
+name: Daily rebuild
+
+on:
+  schedule:
+    - cron: '15 3 * * *' # 03:15 UTC
+  workflow_dispatch:
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger the Cloudflare deploy hook
+        run: curl -fsS -X POST "$HOOK"
+        env:
+          HOOK: ${{ secrets.CF_DEPLOY_HOOK }}

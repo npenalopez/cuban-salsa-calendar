@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Cuban Salsa Calendar · Cuban salsa festivals worldwide</title>
+<meta name="description" content="Dates, cities and line-ups for Cuban salsa, timba and Afro-Cuban festivals around the world.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible+Next:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+.leaflet-container{font-family:inherit}
+.leaflet-popup-content{margin:12px 14px}
+body{margin:0;--bg:#f6ede3;--surface:#fbf6f0;--sunken:#ece2d6;--line:#e2d6c8;--line-strong:#8a8293;--ink:#1c1f3d;--ink2:#45475f;--ink3:#64667c;--rojo:#b8432f;--rojo-hover:#9c3826;--accent:#ff6b4a;--accent-hover:#ff8466;--on-rojo:#1c1f3d;--azul:#2f3d8c;--mango:#ffd2c4;--rojo-tint:#ffe1d8;--dock:#1c1f3d;--dock-ink:#f6ede3;--dock-inner:#383a52;--dock-sub:#c9c6d6;--scrim:rgba(28,31,61,.5);--shadow:0 8px 24px rgba(28,31,61,.18);background:var(--bg);color:var(--ink);font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body[data-theme="dark"]{--bg:#15172b;--surface:#1c1f3d;--sunken:#2a2d4a;--line:#383a52;--line-strong:#6e7091;--ink:#f6ede3;--ink2:#d6cfc6;--ink3:#a9a7b8;--rojo:#ff8a6e;--rojo-hover:#ffa48d;--accent:#ff6b4a;--accent-hover:#ff8466;--on-rojo:#1c1f3d;--azul:#9fb2ff;--mango:#5a3a35;--rojo-tint:#3d2a35;--dock:#2a2d4a;--dock-ink:#f6ede3;--dock-inner:#383a52;--dock-sub:#c9c6d6;--scrim:rgba(0,0,0,.6);--shadow:0 8px 24px rgba(0,0,0,.5)}
+@media (prefers-color-scheme:dark){body:not([data-theme]){--bg:#15172b;--surface:#1c1f3d;--sunken:#2a2d4a;--line:#383a52;--line-strong:#6e7091;--ink:#f6ede3;--ink2:#d6cfc6;--ink3:#a9a7b8;--rojo:#ff8a6e;--rojo-hover:#ffa48d;--accent:#ff6b4a;--accent-hover:#ff8466;--on-rojo:#1c1f3d;--azul:#9fb2ff;--mango:#5a3a35;--rojo-tint:#3d2a35;--dock:#2a2d4a;--dock-ink:#f6ede3;--dock-inner:#383a52;--dock-sub:#c9c6d6;--scrim:rgba(0,0,0,.6);--shadow:0 8px 24px rgba(0,0,0,.5)}}
+a{color:var(--azul);text-underline-offset:2px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:2px solid var(--azul);outline-offset:2px}
+[data-stretch]:focus-visible{outline:none}
+[data-stretch]:focus-visible::after{outline:2px solid var(--azul);outline-offset:2px}
+input,select,textarea,button{font:inherit;color:inherit}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</helmet>
+
+<a href="#main" style="position:absolute;left:8px;top:-60px;z-index:100;background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:8px;font-weight:700" style-focus="top:8px">Skip to festivals</a>
+
+<header style="border-bottom:1px solid var(--line);background:var(--bg)">
+  <div style="max-width:1120px;margin:0 auto;height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 4px 0 16px">
+    <a href="#/" style="display:flex;align-items:center;gap:8px;min-height:44px;color:var(--ink);text-decoration:none;font:800 18px/1 Archivo,sans-serif;font-stretch:75%;text-transform:uppercase;letter-spacing:.01em"><span aria-hidden="true" style="position:relative;width:22px;height:15px;border-radius:2px;overflow:hidden;background:repeating-linear-gradient(#1c1f3d 0 3px,#f6ede3 0 6px);flex-shrink:0"><span style="position:absolute;inset:0;background:#ff6b4a;clip-path:polygon(0 0,55% 50%,0 100%)"></span></span>Cuban Salsa Calendar</a>
+    <nav aria-label="Site" style="display:flex">
+      <a href="#/saved" aria-label="{{ savedLabel }}" style="display:inline-flex;align-items:center;justify-content:center;gap:4px;min-width:44px;height:44px;padding:0 10px;border-radius:8px;color:var(--ink);text-decoration:none;font-weight:700;font-size:15px" style-hover="background:var(--sunken)"><span aria-hidden="true" style="font-size:20px;line-height:1">♡</span><span aria-hidden="true">{{ savedCount }}</span></a>
+      <button type="button" onClick="{{ openMenu }}" aria-haspopup="dialog" style="display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 14px;margin-left:4px;border:1px solid var(--line-strong);background:var(--surface);border-radius:22px;cursor:pointer;font-weight:700;font-size:15px" style-hover="background:var(--sunken)"><span aria-hidden="true" style="font-size:15px">☰</span>Menu</button>
+    </nav>
+  </div>
+</header>
+
+<main id="main" tabIndex="-1" style="max-width:1120px;margin:0 auto;padding:0 16px 140px;outline:none">
+
+  <sc-if value="{{ isListPage }}" hint-placeholder-val="{{ true }}">
+    <div style="padding-top:12px;position:relative;max-width:640px">
+      <label for="search" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Search festivals</label>
+      <div style="position:relative">
+        <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" style="position:absolute;left:14px;top:14px;color:var(--ink3)"><circle cx="9" cy="9" r="6"></circle><path d="M13.5 13.5 17 17"></path></svg>
+        <input id="search" type="text" enterKeyHint="search" role="combobox" aria-expanded="{{ searchExpanded }}" aria-controls="search-list" aria-autocomplete="list" aria-activedescendant="{{ activeOpt }}" autoComplete="off" spellCheck="false" placeholder="Festival, city, country or artist" value="{{ query }}" onChange="{{ onQuery }}" onFocus="{{ onSearchFocus }}" onBlur="{{ onSearchBlur }}" onKeyDown="{{ onSearchKey }}" style="width:100%;box-sizing:border-box;height:48px;padding:0 48px 0 44px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-size:16px;-webkit-appearance:none">
+        <sc-if value="{{ hasQuery }}"><button type="button" onClick="{{ clearQuery }}" aria-label="Clear search" style="position:absolute;right:4px;top:4px;width:40px;height:40px;border:0;border-radius:20px;background:transparent;cursor:pointer;font-size:14px" style-hover="background:var(--sunken)">✕</button></sc-if>
+      </div>
+      <sc-if value="{{ showSugg }}">
+        <div id="search-list" role="listbox" aria-label="Suggestions" style="position:absolute;left:0;right:0;top:64px;z-index:30;background:var(--surface);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:6px 0;max-height:60vh;overflow:auto">
+          <sc-for list="{{ suggestionGroups }}" as="g">
+            <div role="group" aria-label="{{ g.title }}">
+              <div style="display:flex;align-items:center;justify-content:space-between;padding:10px 14px 4px"><span style="font:700 12px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)">{{ g.title }}</span><sc-if value="{{ g.canClear }}"><button type="button" onMouseDown="{{ clearRecent }}" style="border:0;background:transparent;color:var(--azul);text-decoration:underline;font-size:13px;cursor:pointer;padding:4px">Clear</button></sc-if></div>
+              <sc-for list="{{ g.items }}" as="s">
+                <div id="{{ s.id }}" role="option" aria-selected="{{ s.activeStr }}" onMouseDown="{{ s.onPick }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;padding:4px 14px;cursor:pointer;background:{{ s.bg }};box-shadow:{{ s.mark }}" style-hover="background:var(--sunken)">
+                  <span style="display:flex;flex-direction:column;min-width:0"><span style="font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ s.pre }}<strong>{{ s.match }}</strong>{{ s.post }}</span><sc-if value="{{ s.hasDetail }}"><span style="font-size:13px;color:var(--ink3)">{{ s.detail }}</span></sc-if></span>
+                  <span style="font-size:14px;color:var(--ink3);flex-shrink:0">{{ s.count }}</span>
+                </div>
+              </sc-for>
+            </div>
+          </sc-for>
+          <sc-if value="{{ hasQuery }}"><div style="padding:10px 14px;font-size:14px;color:var(--ink3);border-top:1px solid var(--line);margin-top:4px">{{ enterHint }}</div></sc-if>
+        </div>
+      </sc-if>
+    </div>
+
+    <sc-if value="{{ showQuick }}"><nav aria-label="Explore" style="display:flex;gap:8px;overflow-x:auto;margin:0 -16px;padding:12px 16px 2px;scrollbar-width:none"><sc-for list="{{ quick }}" as="qk"><a href="{{ qk.href }}" onClick="{{ qk.onClick }}" style="flex-shrink:0;display:inline-flex;align-items:center;gap:6px;height:44px;padding:0 16px;border-radius:22px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);text-decoration:none;font-weight:700;font-size:15px;white-space:nowrap" style-hover="background:var(--sunken)">{{ qk.label }}</a></sc-for></nav></sc-if>
+    <sc-if value="{{ showBackHome }}"><a href="#/" onClick="{{ goHome }}" style="display:inline-flex;align-items:center;gap:8px;height:44px;margin-top:12px;padding:0 16px 0 12px;border-radius:22px;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:700;font-size:15px" style-hover="color:var(--bg);opacity:.9">← Back to upcoming festivals</a></sc-if>
+    <div style="padding:22px 0 10px;display:flex;flex-direction:column;gap:6px">
+      <span style="font:700 12px/1 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--rojo)">{{ pageKicker }}</span>
+      <h1 id="page-title" style="margin:0;font:800 clamp(52px,12vw,88px)/.85 Archivo,sans-serif;font-stretch:65%;text-transform:uppercase;letter-spacing:-.01em">{{ pageTitle }}</h1>
+      <sc-if value="{{ hasPageNote }}"><p style="margin:6px 0 0;font-size:15px;line-height:1.5;color:var(--ink2);max-width:640px">{{ pageNote }}</p></sc-if>
+      <sc-if value="{{ hasActiveFilters }}"><div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px;font-size:15px"><span style="color:var(--ink2)">{{ filterSummary }}</span><button type="button" onClick="{{ clearFilters }}" style="border:0;background:transparent;color:var(--azul);text-decoration:underline;font-weight:700;min-height:44px;padding:0 4px;cursor:pointer">Clear filters</button></div></sc-if>
+    </div>
+
+    <sc-if value="{{ showViewToggle }}"><div role="group" aria-label="View as" style="display:inline-flex;align-self:flex-start;border:1px solid var(--line-strong);border-radius:8px;overflow:hidden;margin:0 0 12px"><sc-for list="{{ viewOpts }}" as="vo"><button type="button" onClick="{{ vo.onClick }}" aria-pressed="{{ vo.pressed }}" style="min-height:44px;min-width:84px;padding:0 16px;border:0;background:{{ vo.bg }};color:{{ vo.ink }};font-weight:700;font-size:15px;cursor:pointer">{{ vo.label }}</button></sc-for></div></sc-if>
+    <sc-if value="{{ isMapView }}"><div style="display:flex;flex-direction:column;gap:8px;margin-bottom:8px"><div id="cmap" role="region" aria-label="Map of festivals" style="position:relative;isolation:isolate;height:min(64vh,580px);border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--sunken)"></div><span style="font-size:14px;color:var(--ink3)">{{ mapNote }}</span></div></sc-if>
+    <sc-if value="{{ showShared }}">
+      <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;margin-bottom:8px;border-radius:12px;background:var(--sunken)">
+        <span style="font-size:15px">{{ sharedText }}</span>
+        <button type="button" onClick="{{ saveShared }}" style="height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-weight:700;cursor:pointer">Save all to my list</button>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isSavedPage }}">
+      <sc-if value="{{ hasSaved }}">
+        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:8px">
+          <button type="button" onClick="{{ shareList }}" style="height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-weight:700;cursor:pointer" style-hover="background:var(--sunken)">Share my list</button>
+          <button type="button" onClick="{{ savedIcs }}" style="height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-weight:700;cursor:pointer" style-hover="background:var(--sunken)">Add all to calendar (.ics)</button>
+        </div>
+      </sc-if>
+    </sc-if>
+
+    <sc-if value="{{ loading }}" hint-placeholder-val="{{ true }}">
+      <div aria-busy="true" aria-label="Loading festivals" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:8px">
+        <div style="height:104px;border-radius:12px;background:var(--sunken)"></div><div style="height:104px;border-radius:12px;background:var(--sunken);opacity:.8"></div><div style="height:104px;border-radius:12px;background:var(--sunken);opacity:.6"></div><div style="height:104px;border-radius:12px;background:var(--sunken);opacity:.4"></div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ hasError }}">
+      <div role="alert" style="padding:20px;border-radius:12px;border:1px solid var(--line);background:var(--surface);display:flex;flex-direction:column;gap:12px;align-items:flex-start"><strong style="font-size:17px">Couldn't load the festival list.</strong><span style="color:var(--ink2)">Check your connection and try again.</span><button type="button" onClick="{{ retry }}" style="height:44px;padding:0 16px;border-radius:8px;border:0;background:var(--accent);color:var(--on-rojo);font-weight:700;cursor:pointer">Try again</button></div>
+    </sc-if>
+
+    <p aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">{{ liveCount }}</p>
+
+    <div style="display:flex;flex-direction:column;gap:8px">
+      <sc-for list="{{ sections }}" as="sec" hint-placeholder-count="0">
+        <section aria-label="{{ sec.title }}" style="display:flex;flex-direction:column;gap:8px">
+          <sc-if value="{{ sec.showHead }}"><div style="display:flex;align-items:baseline;justify-content:space-between;padding-top:20px"><h2 style="margin:0;font:800 22px/1 Archivo,sans-serif;font-stretch:75%;text-transform:uppercase;letter-spacing:.02em">{{ sec.title }}</h2><span style="font-size:14px;color:var(--ink3)">{{ sec.count }}</span></div></sc-if>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:8px">
+            <sc-for list="{{ sec.cards }}" as="card">
+              <article style="position:relative;display:grid;grid-template-columns:60px minmax(0,1fr) auto;gap:12px;align-items:start;padding:12px;background:{{ card.bg }};border:{{ card.border }};border-radius:12px" style-hover="border-color:var(--line-strong)">
+                <div aria-hidden="true" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;min-height:60px;padding:8px 2px;box-sizing:border-box;background:{{ card.blockBg }};border:{{ card.blockBorder }};border-radius:8px">
+                  <span style="font:700 12px/1 Archivo,sans-serif;letter-spacing:.04em;font-stretch:75%;white-space:nowrap;color:{{ card.monColor }}">{{ card.mon }}</span>
+                  <span style="font:800 24px/1 Archivo,sans-serif;font-stretch:70%;font-variant-numeric:tabular-nums;white-space:nowrap;color:{{ card.daysColor }};text-decoration:{{ card.daysDeco }};text-decoration-thickness:2px">{{ card.days }}</span>
+                  <sc-if value="{{ card.hasSub }}"><span style="font-size:12px;line-height:1;color:var(--ink3);white-space:nowrap">{{ card.sub }}</span></sc-if>
+                </div>
+                <div style="min-width:0;display:flex;flex-direction:column;gap:4px">
+                  <sc-if value="{{ card.hasBadge }}"><span style="align-self:flex-start;font:700 12px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:4px 6px;border-radius:6px;background:{{ card.badgeBg }};color:{{ card.badgeInk }}">{{ card.badge }}</span></sc-if>
+                  <h3 style="margin:0;font:700 18px/1.2 Archivo,sans-serif;font-stretch:87.5%;color:{{ card.nameColor }}"><a data-stretch="1" href="{{ card.href }}" aria-label="{{ card.aria }}" style="color:inherit;text-decoration:none" style-hover="text-decoration:underline" style-after="content:'';position:absolute;inset:0;border-radius:12px">{{ card.name }}</a></h3>
+                  <span style="display:flex;align-items:center;gap:6px;font-size:15px;line-height:1.3;color:var(--ink2)"><sc-if value="{{ card.hasFlag }}"><span aria-hidden="true" style="width:20px;height:14px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12);flex-shrink:0;background:{{ card.flagBg }}"></span></sc-if>{{ card.place }}</span>
+                  <sc-if value="{{ card.hasArtists }}"><div aria-label="Line-up" style="display:flex;flex-wrap:wrap;align-items:center;gap:4px;margin-top:2px"><sc-for list="{{ card.artistChips }}" as="ac"><span style="max-width:100%;box-sizing:border-box;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:4px 9px;border-radius:13px;background:var(--sunken);font-size:13px;line-height:18px;color:var(--ink)">{{ ac }}</span></sc-for><sc-if value="{{ card.hasMoreArtists }}"><span style="padding:3px 8px;border-radius:13px;border:1px solid var(--line-strong);font-size:13px;line-height:18px;color:var(--ink2);white-space:nowrap">{{ card.moreArtists }}</span></sc-if></div></sc-if>
+                  <sc-if value="{{ card.hasMeta }}"><span style="font-size:14px;line-height:1.4;color:var(--ink3)">{{ card.meta }}</span></sc-if>
+                  <sc-if value="{{ card.hasTravel }}"><span style="font-size:14px;line-height:1.4;color:var(--ink3)">{{ card.travel }}</span></sc-if>
+                  <sc-if value="{{ card.hasTicket }}"><a href="{{ card.ticket }}" target="_blank" rel="sponsored noopener" style="position:relative;z-index:1;align-self:flex-start;font-weight:700;font-size:15px;color:var(--rojo);padding:8px 0 4px;text-decoration:none" style-hover="text-decoration:underline">Get passes ↗<span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">{{ card.ticketSr }}</span></a></sc-if>
+                </div>
+                <div style="position:relative;z-index:1;display:flex;flex-direction:column;gap:2px;min-width:44px">
+                  <sc-if value="{{ card.showSave }}"><button type="button" onClick="{{ card.onSave }}" aria-pressed="{{ card.savedStr }}" aria-label="{{ card.saveLabel }}" style="width:44px;height:44px;border:0;background:transparent;border-radius:8px;color:{{ card.saveColor }};font-size:22px;line-height:1;cursor:pointer" style-hover="background:var(--sunken)">{{ card.heart }}</button></sc-if>
+                  <sc-if value="{{ card.showCal }}"><button type="button" onClick="{{ card.onCal }}" aria-label="{{ card.calLabel }}" aria-haspopup="dialog" style="width:44px;height:44px;border:0;background:transparent;border-radius:8px;color:var(--ink2);cursor:pointer;display:inline-flex;align-items:center;justify-content:center" style-hover="background:var(--sunken)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4.5" width="14" height="12" rx="2"></rect><path d="M3 8.5h14M7 2.5v4M13 2.5v4"></path></svg></button></sc-if>
+                </div>
+              </article>
+            </sc-for>
+          </div>
+        </section>
+      </sc-for>
+    </div>
+
+    <sc-if value="{{ showEmpty }}">
+      <div style="padding:28px 20px;border-radius:12px;border:1px dashed var(--line-strong);display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+        <strong style="font-size:18px">{{ emptyTitle }}</strong>
+        <span style="color:var(--ink2);line-height:1.5">{{ emptyText }}</span>
+        <sc-if value="{{ hasDidYouMean }}"><span style="color:var(--ink2)">Did you mean<button type="button" onClick="{{ useDidYouMean }}" style="margin-left:5px;border:0;background:transparent;color:var(--azul);text-decoration:underline;font-weight:700;padding:0;cursor:pointer">{{ didYouMean }}</button>?</span></sc-if>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <sc-if value="{{ hasActiveFilters }}"><button type="button" onClick="{{ clearFilters }}" style="height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-weight:700;cursor:pointer">Clear filters</button></sc-if>
+          <a href="#/submit" style="display:inline-flex;align-items:center;height:44px;padding:0 4px;font-weight:700">Know a festival? Submit it</a>
+        </div>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ hasNextMonth }}">
+      <a href="{{ nextHref }}" style="display:flex;align-items:center;justify-content:center;height:52px;margin-top:20px;border-radius:8px;border:1px solid var(--line-strong);color:var(--ink);text-decoration:none;font-weight:700;font-size:16px;max-width:640px" style-hover="background:var(--sunken)">{{ nextText }}</a>
+    </sc-if>
+  </sc-if>
+
+  <sc-if value="{{ isFestivalPage }}">
+    <sc-if value="{{ notFound }}">
+      <div style="padding:48px 0;display:flex;flex-direction:column;gap:12px"><h1 style="margin:0;font:800 48px/.9 Archivo,sans-serif;font-stretch:70%;text-transform:uppercase">Festival not found</h1><p style="margin:0;color:var(--ink2)">It may have been renamed or removed.</p><a href="#/" style="font-weight:700">Back to all festivals</a></div>
+    </sc-if>
+    <sc-if value="{{ hasDetail }}">
+      <div style="display:flex;align-items:center;justify-content:space-between;padding:8px 0;margin:0 -8px">
+        <a href="{{ d.back }}" style="display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 8px;color:var(--ink);text-decoration:none;font-weight:700">{{ d.backText }}</a>
+        <span style="display:flex">
+          <sc-if value="{{ d.canSave }}"><button type="button" onClick="{{ d.onSave }}" aria-pressed="{{ d.savedStr }}" aria-label="{{ d.saveLabel }}" style="width:44px;height:44px;border:0;background:transparent;border-radius:8px;font-size:22px;line-height:1;color:{{ d.saveColor }};cursor:pointer" style-hover="background:var(--sunken)">{{ d.heart }}</button></sc-if>
+          <button type="button" onClick="{{ d.onShare }}" aria-label="Share this festival" style="height:44px;padding:0 10px;border:0;background:transparent;border-radius:8px;font-weight:700;cursor:pointer" style-hover="background:var(--sunken)">Share</button>
+        </span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:28px 48px;align-items:start;padding-top:8px">
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <sc-if value="{{ d.hasStatus }}"><div role="status" style="padding:12px 14px;border-radius:8px;background:{{ d.statusBg }};color:{{ d.statusInk }};font-size:15px;line-height:1.45"><strong>{{ d.statusTitle }}</strong> {{ d.statusText }}</div></sc-if>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="display:flex;align-items:center;gap:8px;font-size:15px;color:var(--ink2)"><sc-if value="{{ d.hasFlag }}"><span aria-hidden="true" style="width:20px;height:14px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12);flex-shrink:0;background:{{ d.flagBg }}"></span></sc-if>{{ d.place }}</span>
+            <h1 style="margin:0;font:800 clamp(40px,9vw,64px)/.92 Archivo,sans-serif;font-stretch:72%;text-transform:uppercase;text-wrap:balance">{{ d.name }}</h1>
+            <span style="font:800 22px/1.15 Archivo,sans-serif;font-stretch:75%">{{ d.dateLong }}</span>
+            <span style="font-size:14px;color:var(--ink3)">{{ d.dateSub }}</span>
+            <sc-if value="{{ d.hasTravel }}"><span style="font-size:14px;color:var(--ink3)">{{ d.travel }}</span></sc-if>
+          </div>
+          <sc-if value="{{ d.hasTicket }}">
+            <div style="display:flex;flex-direction:column;gap:6px">
+              <a href="{{ d.ticket }}" target="_blank" rel="sponsored noopener" style="display:flex;align-items:center;justify-content:center;height:52px;border-radius:8px;background:var(--accent);color:var(--on-rojo);text-decoration:none;font-weight:700;font-size:17px" style-hover="background:var(--accent-hover);color:var(--on-rojo)">{{ d.ticketText }}</a>
+              <span style="font-size:13px;color:var(--ink3);text-align:center">Passes are sold by the organizer.{{ d.demoNote }}</span>
+            </div>
+          </sc-if>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px">
+            <sc-if value="{{ d.canCal }}"><button type="button" onClick="{{ d.onCal }}" aria-haspopup="dialog" style="display:inline-flex;align-items:center;justify-content:center;gap:8px;height:44px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-weight:700;cursor:pointer" style-hover="background:var(--sunken)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4.5" width="14" height="12" rx="2"></rect><path d="M3 8.5h14M7 2.5v4M13 2.5v4"></path></svg>Add to calendar</button></sc-if>
+            <sc-if value="{{ d.hasInstagram }}"><a href="{{ d.instagram }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;height:44px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);color:var(--ink);text-decoration:none;font-weight:700" style-hover="background:var(--sunken)">{{ d.igText }}</a></sc-if>
+            <sc-if value="{{ d.hasWebsite }}"><a href="{{ d.website }}" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;justify-content:center;height:44px;border-radius:8px;color:var(--ink2);text-decoration:none;font-weight:700" style-hover="background:var(--sunken)">Festival website ↗</a></sc-if>
+          </div>
+          <sc-if value="{{ d.noLinks }}"><p style="margin:0;font-size:14px;line-height:1.5;color:var(--ink3)">We don't have a website or Instagram for this festival yet. <a href="{{ d.fixHref }}">Know it? Tell us.</a></p></sc-if>
+          <dl style="margin:0;display:grid;grid-template-columns:88px minmax(0,1fr);gap:12px;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:15px;line-height:1.4">
+            <dt style="font:700 12px/1.6 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)">Where</dt><dd style="margin:0">{{ d.where }}</dd>
+            <dt style="font:700 12px/1.6 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)">Price</dt><dd style="margin:0">{{ d.price }}</dd>
+            <dt style="font:700 12px/1.6 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)">Region</dt><dd style="margin:0">{{ d.region }}</dd>
+          </dl>
+          <sc-if value="{{ d.hasOther }}">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <h2 style="margin:0;font:800 20px/1 Archivo,sans-serif;font-stretch:75%;text-transform:uppercase">Other editions</h2>
+              <sc-for list="{{ d.others }}" as="o"><a href="{{ o.href }}" style="display:flex;justify-content:space-between;align-items:center;min-height:44px;padding:0 4px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none" style-hover="background:var(--sunken)"><span>{{ o.label }}</span><span style="color:var(--ink3);font-size:14px">{{ o.whenText }}</span></a></sc-for>
+            </div>
+          </sc-if>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <h2 style="margin:0;font:800 20px/1 Archivo,sans-serif;font-stretch:75%;text-transform:uppercase">Line-up<span style="color:var(--ink3);margin-left:8px">{{ d.artistCount }}</span></h2>
+            <sc-if value="{{ d.hasArtists }}">
+              <div style="display:flex;flex-wrap:wrap;gap:6px">
+                <sc-for list="{{ d.artists }}" as="ar"><button type="button" onClick="{{ ar.onPick }}" aria-label="{{ ar.aria }}" style="min-height:40px;padding:0 12px;border-radius:20px;border:0;background:var(--sunken);font-size:15px;cursor:pointer" style-hover="background:var(--line)">{{ ar.name }}</button></sc-for>
+                <sc-if value="{{ d.hasMoreArtists }}"><button type="button" onClick="{{ d.onMoreArtists }}" style="min-height:40px;padding:0 8px;border:0;background:transparent;color:var(--azul);text-decoration:underline;font-size:15px;font-weight:700;cursor:pointer">{{ d.moreArtistsLabel }}</button></sc-if>
+              </div>
+            </sc-if>
+            <sc-if value="{{ d.noArtists }}"><p style="margin:0;color:var(--ink3);font-size:15px">Not announced yet.</p></sc-if>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <h2 style="margin:0;font:800 20px/1 Archivo,sans-serif;font-stretch:75%;text-transform:uppercase">About</h2>
+            <p style="margin:0;font-size:16px;line-height:1.55;color:var(--ink2);text-wrap:pretty">{{ d.description }}</p>
+          </div>
+          <sc-if value="{{ d.hasMap }}"><div style="display:flex;flex-direction:column;gap:4px"><div id="cmap" role="region" aria-label="{{ d.mapTitle }}" style="position:relative;isolation:isolate;height:240px;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--sunken)"></div><a href="{{ d.mapsLink }}" target="_blank" rel="noopener" style="align-self:flex-start;min-height:44px;display:inline-flex;align-items:center;font-weight:700;font-size:15px">Directions in Maps ↗</a></div></sc-if>
+          <div style="display:flex;flex-direction:column;gap:6px;font-size:14px;color:var(--ink3)">
+            <span>{{ d.verified }}</span>
+            <a href="{{ d.fixHref }}" style="font-weight:700;align-self:flex-start;min-height:44px;display:inline-flex;align-items:center">Something wrong? Suggest a correction</a>
+          </div>
+          <details style="font-size:13px;color:var(--ink3)"><summary style="cursor:pointer;min-height:44px;display:flex;align-items:center">What search engines see (Event JSON-LD)</summary><pre style="white-space:pre-wrap;word-break:break-word;background:var(--sunken);padding:12px;border-radius:8px;font-size:12px;line-height:1.5;color:var(--ink2)">{{ d.jsonld }}</pre></details>
+          <sc-if value="{{ d.hasMore }}"><div style="display:flex;flex-direction:column;gap:2px;padding-top:8px;border-top:1px solid var(--line)"><h2 style="margin:8px 0 6px;font:800 20px/1 Archivo,sans-serif;font-stretch:75%;text-transform:uppercase">{{ d.moreTitle }}</h2><sc-for list="{{ d.more }}" as="mm"><a href="{{ mm.href }}" style="display:grid;grid-template-columns:64px minmax(0,1fr);gap:12px;align-items:center;min-height:60px;padding:6px 4px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none" style-hover="background:var(--sunken)"><span style="font:800 20px/1 Archivo,sans-serif;font-stretch:70%;color:var(--rojo);white-space:nowrap">{{ mm.when }}</span><span style="display:flex;flex-direction:column;gap:2px;min-width:0"><strong style="font-size:15px">{{ mm.name }}</strong><span style="font-size:13px;color:var(--ink3)">{{ mm.place }}</span></span></a></sc-for><a href="{{ d.moreHref }}" style="align-self:flex-start;min-height:44px;display:inline-flex;align-items:center;font-weight:700">{{ d.moreLink }}</a></div></sc-if>
+        </div>
+      </div>
+    </sc-if>
+  </sc-if>
+
+  <sc-if value="{{ isSubmitPage }}">
+    <div style="max-width:640px;padding-top:20px;display:flex;flex-direction:column;gap:20px">
+      <a href="{{ formBack }}" style="align-self:flex-start;display:inline-flex;align-items:center;min-height:44px;color:var(--ink);text-decoration:none;font-weight:700">← Back</a>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <span style="font:700 12px/1 Archivo,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--rojo)">{{ formKicker }}</span>
+        <h1 style="margin:0;font:800 clamp(44px,10vw,64px)/.9 Archivo,sans-serif;font-stretch:68%;text-transform:uppercase">{{ formTitle }}</h1>
+        <p style="margin:0;font-size:16px;line-height:1.55;color:var(--ink2)">{{ formIntro }}</p>
+      </div>
+      <sc-if value="{{ formSent }}">
+        <div role="status" style="padding:20px;border-radius:12px;background:var(--sunken);display:flex;flex-direction:column;gap:10px;align-items:flex-start"><strong style="font-size:18px">Thank you. We got it.</strong><span style="line-height:1.5;color:var(--ink2)">We review every message before anything is published. If you left an email, we'll write back if we have questions.</span><a href="#/" style="font-weight:700;min-height:44px;display:inline-flex;align-items:center">Back to festivals</a></div>
+      </sc-if>
+      <sc-if value="{{ formOpen }}">
+        <form onSubmit="{{ onSubmitForm }}" noValidate="true" style="display:flex;flex-direction:column;gap:18px">
+          <sc-if value="{{ hasFormErrors }}">
+            <div id="form-errors" tabIndex="-1" role="alert" style="padding:14px 16px;border-radius:8px;border:2px solid var(--rojo);display:flex;flex-direction:column;gap:6px"><strong>Please fix {{ formErrorCount }}:</strong><sc-for list="{{ formErrors }}" as="er"><a href="{{ er.href }}" onClick="{{ er.onGo }}">{{ er.msg }}</a></sc-for></div>
+          </sc-if>
+          <sc-if value="{{ isFix }}">
+            <div style="padding:14px 16px;border-radius:8px;background:var(--sunken);font-size:15px">Festival:<strong style="margin-left:6px">{{ form.fname }}</strong></div>
+            <div style="display:flex;flex-direction:column;gap:6px"><label for="f-change" style="font-weight:700">What should we change? <span style="color:var(--rojo)">*</span></label><span id="f-change-hint" style="font-size:14px;color:var(--ink3)">For example new dates, the Instagram handle, the line-up, or a ticket link.</span><textarea id="f-change" rows="5" value="{{ form.change }}" onChange="{{ onF.change }}" aria-invalid="{{ inv.change }}" aria-describedby="f-change-hint f-change-err" style="padding:12px 14px;border-radius:8px;border:{{ bd.change }};background:var(--surface);font-size:16px;line-height:1.5;resize:vertical"></textarea><sc-if value="{{ err.change }}"><span id="f-change-err" style="color:var(--rojo);font-size:14px;font-weight:700">{{ err.change }}</span></sc-if></div>
+          </sc-if>
+          <sc-if value="{{ isNew }}">
+            <div style="display:flex;flex-direction:column;gap:6px"><label for="f-name" style="font-weight:700">Festival name <span style="color:var(--rojo)">*</span></label><input id="f-name" value="{{ form.name }}" onChange="{{ onF.name }}" aria-invalid="{{ inv.name }}" aria-describedby="f-name-err" style="height:48px;padding:0 14px;border-radius:8px;border:{{ bd.name }};background:var(--surface);font-size:16px"><sc-if value="{{ err.name }}"><span id="f-name-err" style="color:var(--rojo);font-size:14px;font-weight:700">{{ err.name }}</span></sc-if></div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px">
+              <div style="display:flex;flex-direction:column;gap:6px"><label for="f-city" style="font-weight:700">City <span style="color:var(--rojo)">*</span></label><input id="f-city" value="{{ form.city }}" onChange="{{ onF.city }}" aria-invalid="{{ inv.city }}" aria-describedby="f-city-err" style="height:48px;padding:0 14px;border-radius:8px;border:{{ bd.city }};background:var(--surface);font-size:16px"><sc-if value="{{ err.city }}"><span id="f-city-err" style="color:var(--rojo);font-size:14px;font-weight:700">{{ err.city }}</span></sc-if></div>
+              <div style="display:flex;flex-direction:column;gap:6px"><label for="f-country" style="font-weight:700">Country <span style="color:var(--rojo)">*</span></label><input id="f-country" value="{{ form.country }}" onChange="{{ onF.country }}" aria-invalid="{{ inv.country }}" aria-describedby="f-country-err" style="height:48px;padding:0 14px;border-radius:8px;border:{{ bd.country }};background:var(--surface);font-size:16px"><sc-if value="{{ err.country }}"><span id="f-country-err" style="color:var(--rojo);font-size:14px;font-weight:700">{{ err.country }}</span></sc-if></div>
+            </div>
+            <fieldset style="border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:8px"><legend style="font-weight:700;padding:0;margin-bottom:6px">Dates</legend>
+              <label style="display:flex;align-items:center;gap:10px;min-height:44px;font-size:15px"><input type="checkbox" checked="{{ form.datesTba }}" onChange="{{ onF.datesTba }}" style="width:20px;height:20px;accent-color:var(--ink)">Dates not announced yet</label>
+              <sc-if value="{{ showDateInputs }}"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+                <div style="display:flex;flex-direction:column;gap:6px"><label for="f-start" style="font-size:15px">First day <span style="color:var(--rojo)">*</span></label><input id="f-start" type="date" value="{{ form.start }}" onChange="{{ onF.start }}" aria-invalid="{{ inv.start }}" aria-describedby="f-start-err" style="height:48px;padding:0 10px;border-radius:8px;border:{{ bd.start }};background:var(--surface);font-size:16px"><sc-if value="{{ err.start }}"><span id="f-start-err" style="color:var(--rojo);font-size:14px;font-weight:700">{{ err.start }}</span></sc-if></div>
+                <div style="display:flex;flex-direction:column;gap:6px"><label for="f-end" style="font-size:15px">Last day</label><input id="f-end" type="date" value="{{ form.end }}" onChange="{{ onF.end }}" aria-invalid="{{ inv.end }}" aria-describedby="f-end-err" style="height:48px;padding:0 10px;border-radius:8px;border:{{ bd.end }};background:var(--surface);font-size:16px"><sc-if value="{{ err.end }}"><span id="f-end-err" style="color:var(--rojo);font-size:14px;font-weight:700">{{ err.end }}</span></sc-if></div>
+              </div></sc-if>
+            </fieldset>
+            <div style="display:flex;flex-direction:column;gap:6px"><label for="f-ig" style="font-weight:700">Instagram</label><input id="f-ig" inputMode="url" placeholder="@festival or link" value="{{ form.instagram }}" onChange="{{ onF.instagram }}" style="height:48px;padding:0 14px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-size:16px"></div>
+            <div style="display:flex;flex-direction:column;gap:6px"><label for="f-web" style="font-weight:700">Website</label><input id="f-web" type="url" placeholder="https://" value="{{ form.website }}" onChange="{{ onF.website }}" aria-invalid="{{ inv.website }}" aria-describedby="f-web-err" style="height:48px;padding:0 14px;border-radius:8px;border:{{ bd.website }};background:var(--surface);font-size:16px"><sc-if value="{{ err.website }}"><span id="f-web-err" style="color:var(--rojo);font-size:14px;font-weight:700">{{ err.website }}</span></sc-if></div>
+            <div style="display:flex;flex-direction:column;gap:6px"><label for="f-tix" style="font-weight:700">Where to buy passes</label><input id="f-tix" type="url" placeholder="https://" value="{{ form.tickets }}" onChange="{{ onF.tickets }}" aria-invalid="{{ inv.tickets }}" aria-describedby="f-tix-err" style="height:48px;padding:0 14px;border-radius:8px;border:{{ bd.tickets }};background:var(--surface);font-size:16px"><sc-if value="{{ err.tickets }}"><span id="f-tix-err" style="color:var(--rojo);font-size:14px;font-weight:700">{{ err.tickets }}</span></sc-if></div>
+            <div style="display:flex;flex-direction:column;gap:6px"><label for="f-lineup" style="font-weight:700">Line-up</label><textarea id="f-lineup" rows="3" placeholder="One artist per line" value="{{ form.lineup }}" onChange="{{ onF.lineup }}" style="padding:12px 14px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-size:16px;line-height:1.5;resize:vertical"></textarea></div>
+            <fieldset style="border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:4px"><legend style="font-weight:700;padding:0;margin-bottom:6px">You are</legend>
+              <sc-for list="{{ roleOpts }}" as="ro"><label style="display:flex;align-items:center;gap:10px;min-height:44px;font-size:15px"><input type="radio" name="role" checked="{{ ro.checked }}" onChange="{{ ro.onChange }}" style="width:20px;height:20px;accent-color:var(--ink)">{{ ro.label }}</label></sc-for>
+            </fieldset>
+          </sc-if>
+          <div style="display:flex;flex-direction:column;gap:6px"><label for="f-email" style="font-weight:700">Your email <sc-if value="{{ isNew }}"><span style="color:var(--rojo)">*</span></sc-if></label><span id="f-email-hint" style="font-size:14px;color:var(--ink3)">Only used to ask you about this {{ formNoun }}. Never shown or shared.</span><input id="f-email" type="email" autoComplete="email" value="{{ form.email }}" onChange="{{ onF.email }}" aria-invalid="{{ inv.email }}" aria-describedby="f-email-hint f-email-err" style="height:48px;padding:0 14px;border-radius:8px;border:{{ bd.email }};background:var(--surface);font-size:16px"><sc-if value="{{ err.email }}"><span id="f-email-err" style="color:var(--rojo);font-size:14px;font-weight:700">{{ err.email }}</span></sc-if></div>
+          <div aria-label="Spam check" style="height:66px;max-width:300px;border-radius:8px;border:1px solid var(--line);background:repeating-linear-gradient(135deg,var(--surface) 0 10px,var(--sunken) 0 20px);display:flex;align-items:center;justify-content:center;font:500 12px/1.3 ui-monospace,monospace;color:var(--ink3);text-align:center">Cloudflare Turnstile<br>(spam check, invisible for most people)</div>
+          <button type="submit" style="height:52px;border-radius:8px;border:0;background:var(--accent);color:var(--on-rojo);font-weight:700;font-size:17px;cursor:pointer" style-hover="background:var(--accent-hover)">{{ formCta }}</button>
+        </form>
+      </sc-if>
+    </div>
+  </sc-if>
+
+  <footer style="margin-top:56px;padding:28px 0 0;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;font-size:14px;line-height:1.55;color:var(--ink2)">
+    <div style="max-width:360px;display:flex;flex-direction:column;gap:6px"><strong style="font:800 16px/1 Archivo,sans-serif;font-stretch:75%;text-transform:uppercase;color:var(--ink)">Cuban Salsa Calendar</strong><span>A community-kept list of Cuban salsa, timba and Afro-Cuban festivals around the world. Free to use.</span></div>
+    <div style="display:flex;flex-direction:column;gap:2px"><a href="https://www.instagram.com/cubansalsacalendar" target="_blank" rel="noopener" style="min-height:44px;display:inline-flex;align-items:center;font-weight:700">@cubansalsacalendar ↗</a><a href="#/submit" style="min-height:44px;display:inline-flex;align-items:center">Submit a festival</a></div>
+    <span style="flex-basis:100%;color:var(--ink3)">{{ copyright }}</span>
+  </footer>
+</main>
+
+<sc-if value="{{ showDock }}">
+  <div style="position:fixed;left:0;right:0;bottom:0;z-index:35;display:flex;justify-content:center;padding:0 10px calc(14px + env(safe-area-inset-bottom));pointer-events:none;transition:transform .25s ease;transform:{{ dockTransform }}">
+    <nav aria-label="Browse by month" style="pointer-events:auto;width:100%;max-width:520px;display:flex;align-items:center;gap:4px;height:64px;padding:0 6px;box-sizing:border-box;border-radius:16px;background:var(--dock);color:var(--dock-ink);box-shadow:var(--shadow)">
+      <sc-if value="{{ dock.showArrows }}"><a href="{{ dock.prevHref }}" aria-label="{{ dock.prevLabel }}" aria-disabled="{{ dock.prevDisabledStr }}" onClick="{{ dock.onPrev }}" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;color:var(--dock-ink);text-decoration:none;font-size:26px;opacity:{{ dock.prevOpacity }}">‹</a></sc-if>
+      <sc-if value="{{ showDockHome }}"><a href="#/" onClick="{{ goHome }}" aria-label="Back to upcoming festivals, this month" style="display:inline-flex;align-items:center;justify-content:center;gap:4px;height:44px;padding:0 12px;border-radius:10px;color:var(--dock-ink);text-decoration:none;font-weight:700;font-size:14px;white-space:nowrap">‹ Today</a></sc-if>
+      <button type="button" onClick="{{ openMonths }}" aria-haspopup="dialog" aria-label="{{ dock.ariaLabel }}" style="flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;height:52px;border:0;border-radius:10px;background:var(--dock-inner);color:var(--dock-ink);cursor:pointer">
+        <span style="font:800 18px/1 Archivo,sans-serif;font-stretch:75%;text-transform:uppercase;letter-spacing:.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%">{{ dock.labelText }}</span>
+        <span style="font-size:12px;line-height:1;color:var(--dock-sub)">{{ dock.sub }}</span>
+      </button>
+      <sc-if value="{{ dock.showArrows }}"><a href="{{ dock.nextHref }}" aria-label="{{ dock.nextLabel }}" aria-disabled="{{ dock.nextDisabledStr }}" onClick="{{ dock.onNext }}" style="display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:10px;color:var(--dock-ink);text-decoration:none;font-size:26px;opacity:{{ dock.nextOpacity }}">›</a></sc-if>
+      <sc-if value="{{ dock.showClear }}"><button type="button" onClick="{{ clearQuery }}" aria-label="Clear search" style="width:44px;height:44px;border:0;border-radius:10px;background:transparent;color:var(--dock-ink);font-size:16px;cursor:pointer">✕</button></sc-if>
+      <span aria-hidden="true" style="width:1px;height:32px;background:var(--dock-inner);margin:0 2px"></span>
+      <button type="button" onClick="{{ openFilters }}" aria-haspopup="dialog" aria-label="{{ filterAria }}" style="position:relative;display:inline-flex;align-items:center;justify-content:center;width:52px;height:44px;border:0;border-radius:10px;background:transparent;color:var(--dock-ink);cursor:pointer"><svg aria-hidden="true" width="22" height="22" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 5h14M6 10h8M8.5 15h3"></path></svg><sc-if value="{{ hasFilterBadge }}"><span aria-hidden="true" style="position:absolute;top:4px;right:6px;min-width:18px;height:18px;border-radius:9px;background:var(--accent);color:#1c1f3d;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center">{{ filterCount }}</span></sc-if></button>
+    </nav>
+  </div>
+</sc-if>
+
+<sc-if value="{{ hasSheet }}">
+  <div onClick="{{ closeSheet }}" style="position:fixed;inset:0;z-index:40;background:var(--scrim)"></div>
+  <div role="dialog" aria-modal="true" aria-labelledby="sheet-title" onKeyDown="{{ onSheetKey }}" style="position:fixed;left:0;right:0;bottom:0;z-index:41;display:flex;justify-content:center;pointer-events:none">
+    <div id="sheet" style="pointer-events:auto;width:100%;max-width:560px;max-height:86vh;overflow:auto;box-sizing:border-box;background:var(--surface);color:var(--ink);border-radius:20px 20px 0 0;box-shadow:var(--shadow);padding-bottom:calc(16px + env(safe-area-inset-bottom))">
+      <div style="position:sticky;top:0;z-index:1;background:var(--surface);display:flex;align-items:center;justify-content:space-between;padding:14px 8px 6px 20px">
+        <h2 id="sheet-title" style="margin:0;font:800 26px/1 Archivo,sans-serif;font-stretch:72%;text-transform:uppercase">{{ sheetTitle }}</h2>
+        <button type="button" onClick="{{ closeSheet }}" aria-label="Close" style="width:44px;height:44px;border:0;border-radius:8px;background:transparent;font-size:18px;cursor:pointer" style-hover="background:var(--sunken)">✕</button>
+      </div>
+
+      <sc-if value="{{ sheetMonths }}">
+        <div style="padding:4px 16px 8px;display:flex;flex-direction:column;gap:6px">
+          <a href="#/all" onClick="{{ closeSheet }}" style="display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 6px;border-bottom:1px solid var(--line);color:var(--ink);text-decoration:none;font-weight:700;font-size:16px">All upcoming, as one list<span style="font-weight:400;color:var(--ink3)">{{ upcomingCount }}</span></a>
+          <sc-for list="{{ monthGroups }}" as="mg">
+            <span style="padding:12px 6px 2px;font:700 12px/1 Archivo,sans-serif;letter-spacing:.1em;color:var(--ink3)">{{ mg.year }}</span>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px">
+              <sc-for list="{{ mg.cells }}" as="mc"><a href="{{ mc.href }}" onClick="{{ closeSheet }}" aria-current="{{ mc.currentStr }}" aria-label="{{ mc.aria }}" style="height:56px;border-radius:8px;border:{{ mc.border }};background:{{ mc.bg }};color:{{ mc.ink }};display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-decoration:none"><strong style="font-size:15px">{{ mc.label }}</strong><span style="font-size:13px;opacity:.8">{{ mc.count }}</span></a></sc-for>
+            </div>
+          </sc-for>
+          <a href="#/tba" onClick="{{ closeSheet }}" style="display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 6px;margin-top:8px;border-top:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:16px">Dates to be announced<span style="color:var(--ink3)">{{ tbaCount }}</span></a>
+          <a href="#/archive" onClick="{{ closeSheet }}" style="display:flex;align-items:center;justify-content:space-between;min-height:52px;padding:0 6px;border-top:1px solid var(--line);color:var(--ink);text-decoration:none;font-size:16px">Archive · past festivals<span style="color:var(--ink3)">{{ archiveCount }}</span></a>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ sheetFilters }}">
+        <div style="padding:8px 20px 4px;display:flex;flex-direction:column;gap:22px">
+          <fieldset style="border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:8px"><legend style="font:700 12px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);padding:0;margin-bottom:8px">When</legend>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+              <sc-for list="{{ whenOpts }}" as="wo"><label style="display:flex;align-items:center;gap:10px;min-height:44px;padding:0 12px;border-radius:8px;border:{{ wo.border }};background:{{ wo.bg }};font-size:15px;font-weight:{{ wo.weight }};cursor:pointer"><input type="radio" name="when" checked="{{ wo.checked }}" onChange="{{ wo.onChange }}" style="width:18px;height:18px;margin:0;accent-color:var(--ink)">{{ wo.label }}</label></sc-for>
+            </div>
+            <sc-if value="{{ whenCustom }}"><div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:4px"><label style="display:flex;flex-direction:column;gap:4px;font-size:14px">From<input type="date" value="{{ from }}" onChange="{{ onFrom }}" style="height:44px;padding:0 8px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-size:16px"></label><label style="display:flex;flex-direction:column;gap:4px;font-size:14px">To<input type="date" value="{{ to }}" onChange="{{ onTo }}" style="height:44px;padding:0 8px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-size:16px"></label></div></sc-if>
+          </fieldset>
+          <div style="display:flex;flex-direction:column;gap:8px"><label for="where" style="font:700 12px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3)">Where</label>
+            <select id="where" value="{{ where }}" onChange="{{ onWhere }}" style="height:48px;padding:0 12px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-size:16px">
+              <option value="">Anywhere ({{ upcomingCount }})</option>
+              <optgroup label="Regions"><sc-for list="{{ regionOpts }}" as="ro"><option value="{{ ro.value }}">{{ ro.label }}</option></sc-for></optgroup>
+              <optgroup label="Countries"><sc-for list="{{ countryOpts }}" as="co"><option value="{{ co.value }}">{{ co.label }}</option></sc-for></optgroup>
+            </select>
+          </div>
+          <label style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:44px;font-size:16px;cursor:pointer">Only saved festivals<input type="checkbox" role="switch" checked="{{ savedOnly }}" onChange="{{ onSavedOnly }}" style="width:22px;height:22px;accent-color:var(--ink)"></label>
+          <fieldset style="border:0;padding:0;margin:0;display:flex;align-items:center;justify-content:space-between;gap:12px"><legend style="float:left;font-size:16px;padding:0">Sort</legend>
+            <span style="display:flex;border:1px solid var(--line-strong);border-radius:8px;overflow:hidden">
+              <sc-for list="{{ sortOpts }}" as="so"><label style="display:flex;align-items:center;min-height:44px;padding:0 14px;background:{{ so.bg }};color:{{ so.ink }};font-weight:700;font-size:15px;cursor:pointer"><input type="radio" name="sort" checked="{{ so.checked }}" onChange="{{ so.onChange }}" style="position:absolute;opacity:0;width:1px;height:1px">{{ so.label }}</label></sc-for>
+            </span>
+          </fieldset>
+        </div>
+        <div style="position:sticky;bottom:calc(-16px - env(safe-area-inset-bottom));display:flex;gap:10px;padding:14px 20px 8px;margin-top:16px;border-top:1px solid var(--line);background:var(--surface)">
+          <button type="button" onClick="{{ clearFilters }}" style="height:48px;padding:0 12px;border:0;background:transparent;color:var(--azul);text-decoration:underline;font-weight:700;cursor:pointer">Clear all</button>
+          <button type="button" onClick="{{ closeSheet }}" style="flex:1;height:48px;border-radius:8px;border:0;background:var(--accent);color:var(--on-rojo);font-weight:700;font-size:16px;cursor:pointer">{{ showCountLabel }}</button>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ sheetMenu }}">
+        <nav aria-label="Menu" style="padding:0 12px 8px;display:flex;flex-direction:column">
+          <a href="#/saved" onClick="{{ closeSheet }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:8px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);text-decoration:none;text-align:left;cursor:pointer;width:100%;box-sizing:border-box" style-hover="background:var(--sunken)"><span style="display:flex;flex-direction:column;gap:3px"><strong style="font-size:16px">Saved festivals</strong><span style="font-size:14px;color:var(--ink3);font-weight:400">{{ savedMenuText }}</span></span><span aria-hidden="true" style="color:var(--ink3);font-size:18px;flex-shrink:0">›</span></a>
+          <button type="button" onClick="{{ openArtists }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:8px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);text-decoration:none;text-align:left;cursor:pointer;width:100%;box-sizing:border-box" style-hover="background:var(--sunken)"><span style="display:flex;flex-direction:column;gap:3px"><strong style="font-size:16px">Top artists</strong><span style="font-size:14px;color:var(--ink3);font-weight:400">Who teaches at the most festivals</span></span><span aria-hidden="true" style="color:var(--ink3);font-size:18px;flex-shrink:0">›</span></button>
+          <button type="button" onClick="{{ openCity }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:8px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);text-decoration:none;text-align:left;cursor:pointer;width:100%;box-sizing:border-box" style-hover="background:var(--sunken)"><span style="display:flex;flex-direction:column;gap:3px"><strong style="font-size:16px">Travel times</strong><span style="font-size:14px;color:var(--ink3);font-weight:400">{{ cityMenuText }}</span></span><span aria-hidden="true" style="color:var(--ink3);font-size:18px;flex-shrink:0">›</span></button>
+          <button type="button" onClick="{{ openFeeds }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:8px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);text-decoration:none;text-align:left;cursor:pointer;width:100%;box-sizing:border-box" style-hover="background:var(--sunken)"><span style="display:flex;flex-direction:column;gap:3px"><strong style="font-size:16px">Calendar feeds</strong><span style="font-size:14px;color:var(--ink3);font-weight:400">New festivals appear in your calendar app</span></span><span aria-hidden="true" style="color:var(--ink3);font-size:18px;flex-shrink:0">›</span></button>
+          <a href="#/archive" onClick="{{ closeSheet }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:8px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);text-decoration:none;text-align:left;cursor:pointer;width:100%;box-sizing:border-box" style-hover="background:var(--sunken)"><span style="display:flex;flex-direction:column;gap:3px"><strong style="font-size:16px">Archive</strong><span style="font-size:14px;color:var(--ink3);font-weight:400">{{ archiveMenuText }}</span></span><span aria-hidden="true" style="color:var(--ink3);font-size:18px;flex-shrink:0">›</span></a>
+          <a href="#/submit" onClick="{{ closeSheet }}" style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:8px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);text-decoration:none;text-align:left;cursor:pointer;width:100%;box-sizing:border-box" style-hover="background:var(--sunken)"><span style="display:flex;flex-direction:column;gap:3px"><strong style="font-size:16px">Submit a festival</strong><span style="font-size:14px;color:var(--ink3);font-weight:400">Organizer or dancer? Add one for free</span></span><span aria-hidden="true" style="color:var(--ink3);font-size:18px;flex-shrink:0">›</span></a>
+          <a href="https://www.instagram.com/cubansalsacalendar" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:64px;padding:8px;border:0;border-bottom:1px solid var(--line);background:transparent;color:var(--ink);text-decoration:none;text-align:left;cursor:pointer;width:100%;box-sizing:border-box" style-hover="background:var(--sunken)"><span style="display:flex;flex-direction:column;gap:3px"><strong style="font-size:16px">Follow on Instagram</strong><span style="font-size:14px;color:var(--ink3);font-weight:400">@cubansalsacalendar</span></span><span aria-hidden="true" style="color:var(--ink3);font-size:18px;flex-shrink:0">↗</span></a>
+          <fieldset style="border:0;padding:16px 8px 8px;margin:0;display:flex;align-items:center;justify-content:space-between;gap:12px"><legend style="float:left;font-size:16px;font-weight:700;padding:0">Appearance</legend>
+            <span style="display:flex;border:1px solid var(--line-strong);border-radius:8px;overflow:hidden"><sc-for list="{{ themeOpts }}" as="to"><label style="display:flex;align-items:center;min-height:44px;padding:0 12px;background:{{ to.bg }};color:{{ to.ink }};font-weight:700;font-size:14px;cursor:pointer"><input type="radio" name="theme" checked="{{ to.checked }}" onChange="{{ to.onChange }}" style="position:absolute;opacity:0;width:1px;height:1px">{{ to.label }}</label></sc-for></span>
+          </fieldset>
+          <p style="margin:8px 8px 0;font-size:14px;line-height:1.5;color:var(--ink3)">{{ statsLine }}. Something wrong on a festival? Open it and tap "Suggest a correction".</p>
+        </nav>
+      </sc-if>
+
+      <sc-if value="{{ sheetCal }}">
+        <div style="padding:4px 20px 8px;display:flex;flex-direction:column;gap:10px">
+          <span style="font-size:15px;color:var(--ink2)">{{ cal.line }}</span>
+          <a href="{{ cal.google }}" target="_blank" rel="noopener" onClick="{{ cal.onDone }}" style="display:flex;align-items:center;height:52px;padding:0 16px;border-radius:8px;border:1px solid var(--line-strong);color:var(--ink);text-decoration:none;font-weight:700" style-hover="background:var(--sunken)">Google Calendar ↗</a>
+          <button type="button" onClick="{{ cal.onIcs }}" style="display:flex;align-items:center;height:52px;padding:0 16px;border-radius:8px;border:1px solid var(--line-strong);background:transparent;font-weight:700;text-align:left;cursor:pointer" style-hover="background:var(--sunken)">Apple Calendar, Outlook app, others (.ics)</button>
+          <a href="{{ cal.outlook }}" target="_blank" rel="noopener" onClick="{{ cal.onDone }}" style="display:flex;align-items:center;height:52px;padding:0 16px;border-radius:8px;border:1px solid var(--line-strong);color:var(--ink);text-decoration:none;font-weight:700" style-hover="background:var(--sunken)">Outlook.com ↗</a>
+          <span style="font-size:13px;color:var(--ink3);line-height:1.5">All-day event with reminders a week and a day before. In the Instagram app browser, use Google Calendar, or open this page in Safari or Chrome first.</span>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ sheetArtists }}">
+        <div style="padding:0 20px 8px;display:flex;flex-direction:column;gap:12px">
+          <span style="font-size:14px;color:var(--ink3)">{{ artistsSub }}</span>
+          <span style="display:flex;align-self:flex-start;border:1px solid var(--line-strong);border-radius:8px;overflow:hidden"><sc-for list="{{ tfOpts }}" as="tf"><button type="button" onClick="{{ tf.onClick }}" aria-pressed="{{ tf.pressed }}" style="min-height:40px;padding:0 14px;border:0;background:{{ tf.bg }};color:{{ tf.ink }};font-weight:700;font-size:14px;cursor:pointer">{{ tf.label }}</button></sc-for></span>
+          <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px">
+            <sc-for list="{{ artistRows }}" as="ar"><li><button type="button" onClick="{{ ar.onPick }}" aria-label="{{ ar.aria }}" style="width:100%;display:flex;align-items:center;gap:12px;min-height:60px;padding:0 12px;border:1px solid transparent;border-radius:8px;background:var(--sunken);text-align:left;cursor:pointer" style-hover="border-color:var(--line-strong)">
+              <span style="width:30px;height:30px;flex-shrink:0;border-radius:15px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:14px;background:{{ ar.rankBg }};color:{{ ar.rankInk }}">{{ ar.rank }}</span>
+              <span style="flex:1;min-width:0;display:flex;flex-direction:column;gap:2px"><strong style="font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ ar.name }}</strong><span style="font-size:13px;color:var(--ink3)">{{ ar.meta }}</span></span>
+              <span style="display:flex;gap:4px;flex-shrink:0"><sc-for list="{{ ar.flags }}" as="fl"><span aria-hidden="true" style="width:18px;height:12px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12);background:{{ fl }}"></span></sc-for></span>
+            </button></li></sc-for>
+          </ol>
+          <sc-if value="{{ artistsHasMore }}"><button type="button" onClick="{{ toggleArtistsAll }}" style="height:44px;border-radius:8px;border:1px solid var(--line-strong);background:transparent;font-weight:700;cursor:pointer">{{ artistsMoreLabel }}</button></sc-if>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ sheetCity }}">
+        <div style="padding:0 20px 8px;display:flex;flex-direction:column;gap:12px">
+          <p style="margin:0;font-size:15px;line-height:1.5;color:var(--ink2)">Shows a rough flight or drive time on each festival. Stored only on this device.</p>
+          <button type="button" onClick="{{ useMyLocation }}" style="height:48px;border-radius:8px;border:1px solid var(--line-strong);background:transparent;font-weight:700;cursor:pointer" style-hover="background:var(--sunken)">Use my current location</button>
+          <label for="city-pick" style="font-weight:700;font-size:15px">Or pick a city</label>
+          <select id="city-pick" value="{{ cityValue }}" onChange="{{ onCityPick }}" style="height:48px;padding:0 12px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-size:16px"><option value="">Choose…</option><sc-for list="{{ cityOpts }}" as="ct"><option value="{{ ct }}">{{ ct }}</option></sc-for></select>
+          <sc-if value="{{ hasCity }}"><button type="button" onClick="{{ clearCity }}" style="align-self:flex-start;min-height:44px;border:0;background:transparent;color:var(--azul);text-decoration:underline;font-weight:700;cursor:pointer;padding:0">Stop showing travel times</button></sc-if>
+        </div>
+      </sc-if>
+
+      <sc-if value="{{ sheetFeeds }}">
+        <div style="padding:0 20px 8px;display:flex;flex-direction:column;gap:10px">
+          <p style="margin:0;font-size:15px;line-height:1.5;color:var(--ink2)">Subscribe once and new festivals appear in your own calendar app automatically. Updated every time the list changes.</p>
+          <sc-for list="{{ feedRows }}" as="fr"><div style="display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:52px;border-bottom:1px solid var(--line)"><span style="font-size:15px"><strong>{{ fr.label }}</strong><span style="color:var(--ink3);margin-left:6px">{{ fr.count }}</span></span><span style="display:flex;gap:4px"><button type="button" onClick="{{ fr.onCopy }}" style="min-height:40px;padding:0 10px;border-radius:8px;border:1px solid var(--line-strong);background:transparent;font-weight:700;font-size:14px;cursor:pointer">Copy link</button><button type="button" onClick="{{ fr.onDownload }}" style="min-height:40px;padding:0 10px;border:0;background:transparent;color:var(--azul);text-decoration:underline;font-weight:700;font-size:14px;cursor:pointer">.ics</button></span></div></sc-for>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+</sc-if>
+
+<div aria-live="polite" style="position:fixed;left:50%;bottom:96px;transform:translateX(-50%);z-index:60;pointer-events:none">
+  <sc-if value="{{ hasToast }}"><div style="padding:12px 16px;border-radius:8px;background:var(--ink);color:var(--bg);font-weight:700;font-size:15px;box-shadow:var(--shadow);white-space:nowrap">{{ toast }}</div></sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;demoTicketLinks&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Prototype&quot;},&quot;todayOverride&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Prototype&quot;}}">
+const MONTHS=["January","February","March","April","May","June","July","August","September","October","November","December"];
+const MON3=MONTHS.map(m=>m.slice(0,3).toUpperCase());
+const WD=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const CUR={EUR:"€",GBP:"£",USD:"US$",MXN:"MX$"};
+const norm=s=>(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
+const pISO=s=>{const [y,m,d]=s.split("-").map(Number);return new Date(y,m-1,d)};
+const ymd=d=>d.getFullYear()+String(d.getMonth()+1).padStart(2,"0")+String(d.getDate()).padStart(2,"0");
+const isoD=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+const addDays=(d,n)=>{const x=new Date(d);x.setDate(x.getDate()+n);return x};
+const mkey=(y,m)=>y+"-"+String(m+1).padStart(2,"0");
+const plural=(n,w)=>n+" "+w+(n===1?"":"s");
+const hav=(a,b,c,d)=>{const r=x=>x*Math.PI/180;const h=Math.sin(r(c-a)/2)**2+Math.cos(r(a))*Math.cos(r(c))*Math.sin(r(d-b)/2)**2;return 12742*Math.asin(Math.sqrt(h))};
+const fmtH=h=>{const t=Math.max(.5,Math.round(h*2)/2);return Math.floor(t)+" h"+(t%1?" 30":"")};
+const lev=(a,b)=>{const m=a.length,n=b.length;if(Math.abs(m-n)>2)return 9;const dp=Array.from({length:m+1},(_,i)=>[i]);for(let j=1;j<=n;j++)dp[0][j]=j;for(let i=1;i<=m;i++)for(let j=1;j<=n;j++)dp[i][j]=Math.min(dp[i-1][j]+1,dp[i][j-1]+1,dp[i-1][j-1]+(a[i-1]===b[j-1]?0:1));return dp[m][n]};
+const CITIES=[["Amsterdam",52.37,4.9],["Athens",37.98,23.73],["Barcelona",41.39,2.17],["Berlin",52.52,13.4],["Dubai",25.2,55.27],["Havana",23.11,-82.37],["Lisbon",38.72,-9.14],["London",51.51,-0.13],["Madrid",40.42,-3.7],["Melbourne",-37.81,144.96],["Mexico City",19.43,-99.13],["Miami",25.76,-80.19],["Milan",45.46,9.19],["Montreal",45.5,-73.57],["Munich",48.14,11.58],["New York",40.71,-74.01],["Oslo",59.91,10.75],["Paris",48.86,2.35],["Rome",41.9,12.5],["Stockholm",59.33,18.07],["Sydney",-33.87,151.21],["Tokyo",35.68,139.69],["Toronto",43.65,-79.38],["Vienna",48.21,16.37],["Warsaw",52.23,21.01],["Zurich",47.38,8.54]];
+const LS=(k,v)=>{try{if(v===undefined){const x=localStorage.getItem(k);return x?JSON.parse(x):null}localStorage.setItem(k,JSON.stringify(v))}catch(e){return null}};
+
+class Component extends DCLogic {
+  state={view:"list",loading:true,error:false,raw:[],route:{name:"month",key:null},shared:null,query:"",searchOpen:false,focusIdx:-1,recent:[],where:"",savedOnly:false,sort:"date",when:"any",from:"",to:"",sheet:null,calId:null,saved:[],theme:"system",city:null,dockHidden:false,toast:null,artTf:"year",artAll:false,lineupAll:false,form:{},formErrors:[],formSent:false};
+
+  componentDidMount(){
+    this.setState({saved:LS("csc-saved")||[],recent:LS("csc-recent")||[],theme:LS("csc-theme")||"system",city:LS("csc-city")||null},()=>this.applyTheme());
+    this.load();
+    this.onHash();
+    this._h=()=>this.onHash();window.addEventListener("hashchange",this._h);
+    this._lastY=window.scrollY;
+    this._s=()=>{const y=window.scrollY,dy=y-this._lastY;if(Math.abs(dy)<8)return;const atEnd=window.innerHeight+y>=document.body.scrollHeight-80;const hide=dy>0&&y>240&&!atEnd;if(hide!==this.state.dockHidden)this.setState({dockHidden:hide});this._lastY=y};
+    window.addEventListener("scroll",this._s,{passive:true});
+    this._lp=setInterval(()=>{if(window.L){clearInterval(this._lp);this.syncMap()}},200);
+  }
+  componentDidUpdate(){this.syncMap()}
+  isDark(){const t=this.state.theme;return t==="dark"||(t==="system"&&window.matchMedia&&matchMedia("(prefers-color-scheme: dark)").matches)}
+  syncMap(){const el=document.getElementById("cmap");if(!el||!window.L){if(this._map&&!el){this._map.remove();this._map=null;this._mapEl=null;this._sig=null}return}const L=window.L;
+    if(this._mapEl!==el){if(this._map)this._map.remove();this._map=L.map(el,{scrollWheelZoom:false,worldCopyJump:true});this._mapEl=el;this._layer=L.layerGroup().addTo(this._map);this._tileDark=null;this._sig=null}
+    const dark=this.isDark();if(this._tileDark!==dark){if(this._tiles)this._tiles.remove();this._tiles=L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/"+(dark?"World_Dark_Gray_Base":"World_Light_Gray_Base")+"/MapServer/tile/{z}/{y}/{x}",{attribution:"Tiles © Esri, HERE, Garmin, © OpenStreetMap",maxZoom:16}).addTo(this._map);this._tileDark=dark}
+    const pts=this._mapPts||[];const sig=pts.map(p=>p.id).join(",");if(sig===this._sig)return;this._sig=sig;this._layer.clearLayers();const esc=s=>String(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+    pts.forEach(p=>{const s=p.big?24:18;const m=L.marker([p.lat,p.lng],{title:p.name,alt:p.name,icon:L.divIcon({className:"",iconSize:[s,s],iconAnchor:[s/2,s/2],html:'<span style="display:block;width:'+s+'px;height:'+s+'px;box-sizing:border-box;border-radius:50%;background:#ff6b4a;border:3px solid #1c1f3d;box-shadow:0 2px 6px rgba(0,0,0,.4)"></span>'})});if(!p.big)m.bindPopup('<a href="'+p.href+'" style="display:block;font:800 17px/1.15 Archivo,sans-serif;font-stretch:80%;color:#1c1f3d;text-decoration:none">'+esc(p.name)+'</a><div style="font-size:14px;line-height:1.4;color:#45475f;margin-top:4px">'+esc(p.when)+"<br>"+esc(p.place)+'</div><a href="'+p.href+'" style="display:inline-block;margin-top:8px;font-weight:700;font-size:15px;color:#b8432f">View festival →</a>');m.addTo(this._layer)});
+    if(pts.length===1)this._map.setView([pts[0].lat,pts[0].lng],pts[0].big?11:6);else if(pts.length)this._map.fitBounds(L.latLngBounds(pts.map(p=>[p.lat,p.lng])),{padding:[28,28],maxZoom:6});else this._map.setView([35,5],2);
+    setTimeout(()=>this._map&&this._map.invalidateSize(),60)}
+  componentWillUnmount(){clearInterval(this._lp);if(this._map)this._map.remove();window.removeEventListener("hashchange",this._h);window.removeEventListener("scroll",this._s);clearTimeout(this._t)}
+  load(){this.setState({loading:true,error:false});fetch("data/festivals.json").then(r=>{if(!r.ok)throw 0;return r.json()}).then(j=>{this.setState({raw:j.festivals||[],loading:false},()=>{if(this.state.route.name==="submit")this.setState({form:this.initForm(this.state.route.id)})})}).catch(()=>this.setState({loading:false,error:true}))}
+  applyTheme(){const t=this.state.theme;if(t==="system")delete document.body.dataset.theme;else document.body.dataset.theme=t}
+  toast(msg){clearTimeout(this._t);this.setState({toast:msg});this._t=setTimeout(()=>this.setState({toast:null}),2600)}
+
+  parseHash(){const h=(location.hash||"").replace(/^#\/?/,"");const [p,q]=h.split("?");const seg=(p||"").split("/").filter(Boolean);let r={name:"month",key:null};
+    if(seg[0]==="m"&&seg[1])r={name:"month",key:seg[1]};else if(["all","tba","archive","saved"].includes(seg[0]))r={name:seg[0]};
+    else if(seg[0]==="f"&&seg[1])r={name:"festival",id:decodeURIComponent(seg[1])};else if(seg[0]==="submit")r={name:"submit",id:seg[1]?decodeURIComponent(seg[1]):null};
+    let shared=null;if(q){const ids=new URLSearchParams(q).get("ids");if(ids)shared=ids.split(",").filter(Boolean)}return {r,shared}}
+  onHash(){const {r,shared}=this.parseHash();const prev=this.state.route;const nav=r.name==="festival"||r.name==="submit";
+    this.setState({route:r,shared,sheet:null,lineupAll:false,formSent:false,formErrors:[],form:r.name==="submit"?this.initForm(r.id):this.state.form,searchOpen:false,query:nav?this.state.query:this.state.query,dockHidden:false},()=>{if(prev.name!==r.name||prev.key!==r.key||prev.id!==r.id)window.scrollTo(0,0)});
+    if(r.name!=="festival"&&r.name!=="submit")this._listHash=location.hash||"#/"}
+
+  today(){const o=this.props.todayOverride;if(o&&/^\d{4}-\d{2}-\d{2}$/.test(o))return pISO(o);const d=new Date();d.setHours(0,0,0,0);return d}
+  enrich(){const t=this.today();const k=this.state.raw.length+"|"+t.getTime();if(this._ek===k)return this._en;
+    this._en=this.state.raw.map(f=>{const s=f.startDate?pISO(f.startDate):null,e=f.endDate?pISO(f.endDate):s;const past=e?e<t:false;const mk=f.datePrecision!=="year"&&s?mkey(s.getFullYear(),s.getMonth()):null;
+      return Object.assign({},f,{_s:s,_e:e,_past:past,_mk:mk,_arch:past||f.status==="cancelled",_tba:f.datePrecision==="year",_hay:norm([f.name,f.city,f.country,f.region].concat(f.artists||[]).join(" | "))})});
+    this._ek=k;return this._en}
+  ticketOf(f){return f.ticketUrl||(this.props.demoTicketLinks!==false&&!f._arch?f.website:null)}
+  matchWhere(f,w){w=w===undefined?this.state.where:w;if(!w)return true;const [k,v]=w.split(":");return k==="region"?f.region===v:f.countryCode===v}
+  baseFilter(list,o={}){const q=o.noQuery?"":norm(this.state.query);return list.filter(f=>this.matchWhere(f)&&(!this.state.savedOnly||this.state.saved.includes(f.id))&&(!q||f._hay.includes(q)))}
+  range(){const t=this.today(),w=this.state.when;if(w==="30")return [t,addDays(t,30)];if(w==="90")return [t,addDays(t,91)];if(w==="custom"){const a=this.state.from?pISO(this.state.from):t,b=this.state.to?pISO(this.state.to):addDays(t,3650);return [a,b]}return null}
+  inRange(f,r){return !f._tba&&f._s<=r[1]&&f._e>=r[0]}
+  sortList(l){const s=this.state.sort;return l.slice().sort(s==="name"?(a,b)=>a.name.localeCompare(b.name):(a,b)=>((a._s?a._s.getTime():9e15)-(b._s?b._s.getTime():9e15))||a.name.localeCompare(b.name))}
+  months12(){const t=this.today();const out=[];for(let i=0;i<12;i++){const y=t.getFullYear()+Math.floor((t.getMonth()+i)/12),m=(t.getMonth()+i)%12;out.push({y,m,key:mkey(y,m)})}return out}
+  groupByMonth(list,desc){const g={};list.forEach(f=>{const k=f._mk||"tba";(g[k]=g[k]||[]).push(f)});let keys=Object.keys(g).filter(k=>k!=="tba").sort();if(desc)keys.reverse();const secs=keys.map(k=>{const [y,m]=k.split("-").map(Number);return {title:MONTHS[m-1]+" "+y,items:g[k]}});if(g.tba)secs.push({title:"Dates to be announced",items:g.tba});return secs}
+
+  fmtPrice(f){if(f.priceFrom==null)return f.priceText;const c=f.currency;const sym=CUR[c];const n=f.priceFrom.toLocaleString("en");return "from "+(sym?sym+n:(c?c+" ":"")+n)}
+  place(f){return f.city&&f.country?f.city+", "+f.country:(f.city||f.country||"Location to be announced")}
+  travel(f){const c=this.state.city;if(!c||!f.coordinates)return null;const km=hav(c.lat,c.lng,f.coordinates[0],f.coordinates[1]);if(km<40)return "Near "+c.name;if(km<450)return "≈ "+fmtH(km/75)+" drive from "+c.name;return "≈ "+fmtH(km/750+.75)+" flight from "+c.name}
+  toggleSave(f){const has=this.state.saved.includes(f.id);const saved=has?this.state.saved.filter(x=>x!==f.id):this.state.saved.concat(f.id);LS("csc-saved",saved);this.setState({saved});this.toast(has?"Removed from saved":"Saved")}
+
+  cardVM(f){const s=f._s,e=f._e;let mon="",days="",sub="";const p=f.datePrecision;
+    if(p==="year"){mon=s?String(s.getFullYear()):"";days="TBA"}
+    else if(p==="month"){mon=MON3[s.getMonth()];days=f.dateNote?f.dateNote.toUpperCase().slice(0,5):"TBA";sub=f._past?String(s.getFullYear()):"Days TBA"}
+    else{const sm=s.getMonth(),em=e.getMonth(),one=s.getTime()===e.getTime();mon=sm===em?MON3[sm]:MON3[sm]+"–"+MON3[em];days=one?String(s.getDate()):s.getDate()+"–"+e.getDate();sub=f._past?String(s.getFullYear()):(one?WD[s.getDay()]:WD[s.getDay()]+"–"+WD[e.getDay()])}
+    const a=f.artists||[];const parts=[];
+    if(f.status==="postponed")parts.push("New dates not announced");
+    else if(f._past)parts.push("Took place"+(this.nextEdition(f)?" · next edition listed":""));
+    else if(p==="year")parts.push("Dates not announced yet");
+    else{if(f.priceText)parts.push(this.fmtPrice(f));if(!a.length)parts.push(f.priceText?"Line-up not announced":"Line-up and prices not announced");else if(!f.priceText)parts.push("Price not announced")}
+    const saved=this.state.saved.includes(f.id);const muted=f._arch;const tr=this.travel(f);const tk=this.ticketOf(f);
+    let badge=null,bBg="",bInk="";if(f.status==="postponed"){badge="Postponed";bBg="var(--mango)";bInk="var(--ink)"}else if(f.status==="cancelled"){badge="Cancelled";bBg="var(--ink)";bInk="var(--bg)"}else if(f.status==="sold-out"){badge="Sold out";bBg="var(--ink)";bInk="var(--bg)"}else if(f.featured&&!muted){badge="Sponsored";bBg="transparent";bInk="var(--ink2)"}
+    const dated=p==="day"&&!f._arch&&f.status!=="postponed";
+    return {id:f.id,href:"#/f/"+encodeURIComponent(f.id),name:f.name,aria:f.name+", "+this.dateLong(f)+", "+this.place(f),place:this.place(f),hasFlag:!!f.countryCode,flagBg:f.countryCode?"url(https://flagcdn.com/"+f.countryCode.toLowerCase()+".svg) center/cover no-repeat":"",
+      mon,days,sub,hasSub:!!sub,meta:parts.join(" · "),artistChips:a.slice(0,3),hasArtists:a.length>0&&!f._arch&&f.status!=="postponed",hasMoreArtists:a.length>3,moreArtists:"+"+(a.length-3)+" more",hasMeta:parts.length>0,travel:tr,hasTravel:!!tr&&!f._arch,hasTicket:!!tk&&!f._arch&&f.status==="scheduled",ticket:tk,ticketSr:" for "+f.name+", opens the organizer's site",
+      hasBadge:!!badge,badge,badgeBg:bBg,badgeInk:bInk,
+      bg:muted?"var(--bg)":"var(--surface)",border:f._tba?"1px dashed var(--line-strong)":(f.featured&&!muted?"2px solid var(--mango)":"1px solid var(--line)"),
+      blockBg:f._tba?"transparent":(muted?"var(--line)":"var(--sunken)"),blockBorder:f._tba?"1px dashed var(--line-strong)":"0",monColor:muted||f._tba||f.status==="postponed"?"var(--ink3)":"var(--rojo)",daysColor:muted||f.status==="postponed"?"var(--ink2)":"var(--ink)",daysDeco:f.status==="postponed"||f.status==="cancelled"?"line-through":"none",nameColor:muted?"var(--ink2)":"var(--ink)",
+      showSave:!f._arch,savedStr:saved?"true":"false",saveLabel:"Save "+f.name,heart:saved?"♥":"♡",saveColor:saved?"var(--rojo)":"var(--ink2)",onSave:()=>this.toggleSave(f),
+      showCal:dated,calLabel:"Add "+f.name+" to calendar",onCal:()=>this.setState({sheet:"cal",calId:f.id})}}
+  dateLong(f){const s=f._s,e=f._e;if(!s)return "Dates not announced";if(f.datePrecision==="year")return s.getFullYear()+" · dates not announced";if(f.datePrecision==="month")return (f.dateNote?f.dateNote+" ":"")+MONTHS[s.getMonth()]+" "+s.getFullYear();
+    if(s.getTime()===e.getTime())return WD[s.getDay()]+" "+s.getDate()+" "+MONTHS[s.getMonth()]+" "+s.getFullYear();
+    const same=s.getMonth()===e.getMonth()&&s.getFullYear()===e.getFullYear();return WD[s.getDay()]+" "+s.getDate()+(same?"":" "+MONTHS[s.getMonth()]+(s.getFullYear()!==e.getFullYear()?" "+s.getFullYear():""))+" – "+WD[e.getDay()]+" "+e.getDate()+" "+MONTHS[e.getMonth()]+" "+e.getFullYear()}
+  nextEdition(f){const all=this.enrich();return all.find(x=>x.series===f.series&&x.id!==f.id&&!x._arch&&x._s&&f._s&&x._s>f._s)}
+
+  calUrls(f){const s=f._s,e=addDays(f._e,1);const url=location.href.split("#")[0]+"#/f/"+f.id;const loc=[f.venue,f.city,f.country].filter(Boolean).join(", ");const det=[(f.artists||[]).length?"Line-up: "+f.artists.slice(0,8).join(", ")+(f.artists.length>8?"…":""):"",f.priceText?"Price: "+f.priceText:"","Details: "+url].filter(Boolean).join("\n");const enc=encodeURIComponent;
+    return {google:"https://calendar.google.com/calendar/render?action=TEMPLATE&text="+enc(f.name)+"&dates="+ymd(s)+"/"+ymd(e)+"&location="+enc(loc)+"&details="+enc(det),
+      outlook:"https://outlook.live.com/calendar/0/deeplink/compose?path=/calendar/action/compose&rru=addevent&allday=true&subject="+enc(f.name)+"&startdt="+isoD(s)+"&enddt="+isoD(e)+"&location="+enc(loc)+"&body="+enc(det)}}
+  icsEvent(f){const esc=t=>(t||"").replace(/\\/g,"\\\\").replace(/;/g,"\\;").replace(/,/g,"\\,").replace(/\n/g,"\\n");const url=location.href.split("#")[0]+"#/f/"+f.id;const desc=[(f.artists||[]).length?"Line-up: "+f.artists.join(", "):"",f.priceText?"Price: "+f.priceText:"",f.website?"Website: "+f.website:"","Details: "+url].filter(Boolean).join("\n");
+    return ["BEGIN:VEVENT","UID:"+f.id+"@cubansalsacalendar.com","DTSTAMP:"+ymd(new Date())+"T000000Z","DTSTART;VALUE=DATE:"+ymd(f._s),"DTEND;VALUE=DATE:"+ymd(addDays(f._e,1)),"SUMMARY:"+esc(f.name),"LOCATION:"+esc([f.venue,f.city,f.country].filter(Boolean).join(", ")),"DESCRIPTION:"+esc(desc),"URL:"+url,"BEGIN:VALARM","TRIGGER:-P7D","ACTION:DISPLAY","DESCRIPTION:"+esc(f.name+" starts in a week"),"END:VALARM","BEGIN:VALARM","TRIGGER:-P1D","ACTION:DISPLAY","DESCRIPTION:"+esc(f.name+" starts tomorrow"),"END:VALARM","END:VEVENT"].join("\r\n")}
+  downloadIcs(list,name){list=list.filter(f=>f.datePrecision==="day"&&f._s);if(!list.length){this.toast("No festivals with exact dates");return}const body=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//Cuban Salsa Calendar//EN","CALSCALE:GREGORIAN","METHOD:PUBLISH","X-WR-CALNAME:"+name].concat(list.map(f=>this.icsEvent(f))).concat(["END:VCALENDAR"]).join("\r\n");const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([body],{type:"text/calendar;charset=utf-8"}));a.download=name.replace(/[^a-z0-9]+/gi,"-").toLowerCase()+".ics";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},800);this.toast("Calendar file downloaded")}
+  async share(title,url){if(navigator.share){try{await navigator.share({title,url});return}catch(e){if(e&&e.name==="AbortError")return}}try{await navigator.clipboard.writeText(url);this.toast("Link copied")}catch(e){this.toast(url)}}
+  copy(t,msg){(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>this.toast(msg||"Link copied"),()=>this.toast(t))}
+
+  pickSuggestion(s){if(s.type==="festival"){this.setState({searchOpen:false});location.hash="#/f/"+encodeURIComponent(s.id);return}
+    if(s.type==="country"){this.setState({where:"country:"+s.code,query:"",searchOpen:false});this.addRecent(s.label);return}
+    this.setState({query:s.value,searchOpen:false,focusIdx:-1});this.addRecent(s.value)}
+  addRecent(v){if(!v||v.length<2)return;const r=[v].concat(this.state.recent.filter(x=>x!==v)).slice(0,5);LS("csc-recent",r);this.setState({recent:r})}
+  suggestions(){const q=norm(this.state.query);const up=this.enrich().filter(f=>!f._arch);const groups=[];
+    const hl=(label)=>{const i=norm(label).indexOf(q);if(!q||i<0)return {pre:label,match:"",post:""};return {pre:label.slice(0,i),match:label.slice(i,i+q.length),post:label.slice(i+q.length)}};
+    if(!q){if(this.state.recent.length)groups.push({title:"Recent",canClear:true,items:this.state.recent.map(v=>({type:"text",value:v,label:v}))});
+      const cc={},co={};up.forEach(f=>{if(f.city)cc[f.city]=(cc[f.city]||0)+1;if(f.countryCode)co[f.countryCode]=co[f.countryCode]||{n:0,label:f.country,code:f.countryCode},f.countryCode&&co[f.countryCode].n++});
+      const pop=Object.entries(cc).sort((a,b)=>b[1]-a[1]).slice(0,3).map(([c,n])=>({type:"text",value:c,label:c,count:n})).concat(Object.values(co).sort((a,b)=>b.n-a.n).slice(0,2).map(c=>({type:"country",code:c.code,label:c.label,count:c.n})));
+      groups.push({title:"Popular",items:pop})}
+    else if(q.length>=2){const fest=up.filter(f=>norm(f.name).includes(q)).slice(0,3).map(f=>({type:"festival",id:f.id,label:f.name,detail:this.place(f)}));
+      const cities={},countries={},artists={};up.forEach(f=>{if(f.city&&norm(f.city).includes(q))cities[f.city]=(cities[f.city]||0)+1;if(f.country&&norm(f.country).includes(q)){countries[f.countryCode]=countries[f.countryCode]||{label:f.country,code:f.countryCode,n:0};countries[f.countryCode].n++}(f.artists||[]).forEach(a=>{if(norm(a).includes(q))artists[a]=(artists[a]||0)+1})});
+      const score=(l)=>norm(l).startsWith(q)?0:1;
+      if(fest.length)groups.push({title:"Festivals",items:fest});
+      const ci=Object.entries(cities).sort((a,b)=>score(a[0])-score(b[0])||b[1]-a[1]).slice(0,3).map(([c,n])=>({type:"text",value:c,label:c,count:n}));if(ci.length)groups.push({title:"Cities",items:ci});
+      const cn=Object.values(countries).sort((a,b)=>score(a.label)-score(b.label)||b.n-a.n).slice(0,2).map(c=>({type:"country",code:c.code,label:c.label,count:c.n,detail:"Show only this country"}));if(cn.length)groups.push({title:"Countries",items:cn});
+      const ar=Object.entries(artists).sort((a,b)=>score(a[0])-score(b[0])||b[1]-a[1]).slice(0,3).map(([a,n])=>({type:"text",value:a,label:a,count:n}));if(ar.length)groups.push({title:"Artists",items:ar})}
+    let idx=0;groups.forEach(g=>g.items.forEach(s=>{const h=hl(s.label);s.idx=idx++;s.id="opt-"+s.idx;Object.assign(s,h);s.active=s.idx===this.state.focusIdx;s.activeStr=s.active?"true":"false";s.bg=s.active?"var(--sunken)":"transparent";s.mark=s.active?"inset 3px 0 0 var(--ink)":"none";s.hasDetail=!!s.detail;s.count=s.count!=null?s.count:"";s.onPick=(ev)=>{ev.preventDefault();this.pickSuggestion(s)}}));
+    return groups}
+  didYouMean(){const q=norm(this.state.query);if(q.length<3)return null;const up=this.enrich().filter(f=>!f._arch);const pool=new Set();up.forEach(f=>{if(f.city)pool.add(f.city);if(f.country)pool.add(f.country);(f.artists||[]).forEach(a=>pool.add(a))});let best=null,bd=3;pool.forEach(p=>{const d=lev(q,norm(p));if(d<bd){bd=d;best=p}});return bd<=2?best:null}
+
+  initForm(id){const f=id&&this.state.raw.find(x=>x.id===id);if(id)return {mode:"fix",fid:id,fname:f?f.name:id,change:"",email:""};return {mode:"new",name:"",city:"",country:"",start:"",end:"",datesTba:false,website:"",instagram:"",tickets:"",lineup:"",email:"",role:"organizer"}}
+  validate(){const f=this.state.form,e={};const url=v=>!v||/^https?:\/\/\S+\.\S+/.test(v);const mail=v=>/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+    if(f.mode==="fix"){if(!f.change.trim())e.change="Tell us what to change.";if(f.email&&!mail(f.email))e.email="Enter an email like name@example.com, or leave it empty."}
+    else{if(!f.name.trim())e.name="Enter the festival name.";if(!f.city.trim())e.city="Enter the city.";if(!f.country.trim())e.country="Enter the country.";if(!f.datesTba&&!f.start)e.start="Enter the first day, or tick \"Dates not announced yet\".";if(!f.datesTba&&f.start&&f.end&&f.end<f.start)e.end="The last day can't be before the first day.";if(!url(f.website))e.website="Enter a full link starting with https://";if(!url(f.tickets))e.tickets="Enter a full link starting with https://";if(!f.email.trim())e.email="Enter your email so we can check details with you.";else if(!mail(f.email))e.email="Enter an email like name@example.com."}
+    return e}
+
+  renderVals(){
+    const st=this.state,r=st.route,all=this.enrich(),t=this.today();
+    const up=all.filter(f=>!f._arch),arch=all.filter(f=>f._arch);
+    const q=norm(st.query),hasQuery=q.length>0;
+    const isList=!["festival","submit"].includes(r.name);
+    const rng=this.range();const filterCount=(st.where?1:0)+(st.savedOnly?1:0)+(st.when!=="any"?1:0)+(st.sort!=="date"?1:0);
+    const m12=this.months12();
+    let mode=r.name,kicker="",title="",note="",secs=[],monthIdx=-1,emptyTitle="",emptyText="";
+    const upF=this.baseFilter(up);
+    if(isList){
+      if(hasQuery){mode="search";const a=this.sortList(upF),b=this.sortList(this.baseFilter(arch));kicker=plural(a.length,"result");title="Search";note='Results for "'+st.query.trim()+'" across names, cities, countries and artists.';secs=[{title:"Upcoming",items:a,head:b.length>0}];if(b.length)secs.push({title:"In the archive",items:b,head:true});emptyTitle='Nothing matches "'+st.query.trim()+'".';emptyText="Check the spelling, or try a city, country or artist name."}
+      else if(r.name==="archive"){const l=this.baseFilter(arch);kicker=plural(l.length,"past festival");title="Archive";note="Festivals that already took place or were cancelled. Useful for guessing next year's dates.";secs=st.sort==="name"?[{title:"A–Z",items:this.sortList(l)}]:this.groupByMonth(this.sortList(l),true).map(s=>Object.assign(s,{head:true}));emptyTitle="Nothing in the archive matches.";emptyText="Try clearing filters."}
+      else if(r.name==="saved"){const ids=st.saved;const l=this.baseFilter(all.filter(f=>ids.includes(f.id)));kicker=plural(l.length,"saved festival");title="Saved";note="Saved on this device only. Use \"Share my list\" to open it on another phone.";const u=this.sortList(l.filter(f=>!f._arch)),p=this.sortList(l.filter(f=>f._arch));secs=[{title:"Upcoming",items:u,head:p.length>0}];if(p.length)secs.push({title:"Already happened",items:p,head:true});emptyTitle="No saved festivals yet.";emptyText="Tap ♡ on any festival to keep it here."}
+      else if(rng){mode="range";const l=this.sortList(upF.filter(f=>this.inRange(f,rng)));kicker=plural(l.length,"festival");title=st.when==="30"?"Next 30 days":st.when==="90"?"Next 3 months":"Your dates";secs=st.sort==="name"?[{title:"A–Z",items:l}]:this.groupByMonth(l).map(s=>Object.assign(s,{head:true}));emptyTitle="No festivals in these dates.";emptyText="Try a wider range or a different place."}
+      else if(r.name==="all"){const l=this.sortList(upF);kicker=plural(l.length,"festival");title="All upcoming";secs=st.sort==="name"?[{title:"A–Z",items:l}]:this.groupByMonth(l).map(s=>Object.assign(s,{head:true}));emptyTitle="No festivals match these filters.";emptyText="Try a different place."}
+      else if(r.name==="tba"){const l=this.sortList(upF.filter(f=>f._tba));kicker=plural(l.length,"festival");title="Dates TBA";note="These festivals are expected but haven't announced dates. Save one to find it again later.";secs=[{title:"",items:l}];emptyTitle="Nothing here with these filters.";emptyText=""}
+      else{mode="month";const key=r.key||m12[0].key;monthIdx=m12.findIndex(x=>x.key===key);const [y,m]=key.split("-").map(Number);const l=this.sortList(upF.filter(f=>f._mk===key));kicker=y+" · "+plural(l.length,"festival");title=MONTHS[(m||1)-1]||"Month";secs=[{title:"",items:l}];emptyTitle="No festivals in "+MONTHS[(m||1)-1]+" "+y+(filterCount?" with these filters":"")+".";emptyText=filterCount?"Try clearing filters, or move to another month.":"Nothing listed yet. Know one?"}
+    }
+    const mapView=isList&&st.view==="map";
+    if(r.name==="festival"){const f=all.find(x=>x.id===r.id);this._mapPts=f&&f.coordinates?[{id:"d-"+f.id,big:true,lat:f.coordinates[0],lng:f.coordinates[1],name:f.name}]:[]}else if(mapView){this._mapPts=secs.reduce((acc,s)=>acc.concat(s.items),[]).filter(f=>f.coordinates).map(f=>({id:f.id,lat:f.coordinates[0],lng:f.coordinates[1],name:f.name,href:"#/f/"+encodeURIComponent(f.id),when:this.dateLong(f),place:this.place(f)}))}else this._mapPts=[];
+    const sections=secs.filter(s=>s.items.length).map((s,i)=>({title:s.title,count:s.items.length,showHead:!!s.head,cards:s.items.map(f=>this.cardVM(f))}));
+    const total=sections.reduce((a,s)=>a+s.count,0);
+    // dock
+    let dock={showArrows:false,showClear:false};
+    if(mode==="month"){const i=monthIdx<0?0:monthIdx,cur=m12[i],prev=m12[i-1],next=m12[i+1];const n=upF.filter(f=>f._mk===cur.key).length;
+      dock={showArrows:true,label:MONTHS[cur.m]+" "+cur.y,labelText:MONTHS[cur.m]+" "+cur.y+" ▴",sub:plural(n,"festival")+" · "+(i+1)+" of 12",ariaLabel:"Choose month. Now showing "+MONTHS[cur.m]+" "+cur.y+", "+plural(n,"festival"),prevHref:prev?"#/m/"+prev.key:"#/m/"+cur.key,nextHref:next?"#/m/"+next.key:"#/m/"+cur.key,prevLabel:prev?"Previous month, "+MONTHS[prev.m]+" "+prev.y:"No earlier month",nextLabel:next?"Next month, "+MONTHS[next.m]+" "+next.y:"No later month",prevOpacity:prev?"1":".35",nextOpacity:next?"1":".35",prevDisabledStr:prev?"false":"true",nextDisabledStr:next?"false":"true",onPrev:e=>{if(!prev)e.preventDefault()},onNext:e=>{if(!next)e.preventDefault()},showClear:false}}
+    else{const lbl={search:plural(total,"result"),archive:"Archive",saved:"Saved",range:title,all:"All upcoming",tba:"Dates TBA"}[mode]||"Browse";dock={showArrows:false,showClear:false,label:lbl,labelText:lbl+" ▴",sub:mode==="search"?'for "'+st.query.trim()+'"':plural(total,"festival")+" · tap to change",ariaLabel:"Choose month. Now showing "+lbl};}
+    const nextM=mode==="month"&&monthIdx>=0?m12[monthIdx+1]:null;const nextN=nextM?upF.filter(f=>f._mk===nextM.key).length:0;
+    // month sheet
+    const groups={};m12.forEach((x,i)=>{const n=upF.filter(f=>f._mk===x.key).length;const cur=mode==="month"&&i===(monthIdx<0?0:monthIdx);(groups[x.y]=groups[x.y]||[]).push({label:MONTHS[x.m].slice(0,3),count:n,href:"#/m/"+x.key,currentStr:cur?"true":"false",aria:MONTHS[x.m]+" "+x.y+", "+plural(n,"festival"),border:cur?"0":(n?"1px solid var(--line-strong)":"1px dashed var(--line-strong)"),bg:cur?"var(--ink)":"transparent",ink:cur?"var(--bg)":(n?"var(--ink)":"var(--ink3)")})});
+    const monthGroups=Object.keys(groups).map(y=>({year:y,cells:groups[y]}));
+    // filter options
+    const regC={},cC={};up.forEach(f=>{if(f.region)regC[f.region]=(regC[f.region]||0)+1;if(f.countryCode){cC[f.countryCode]=cC[f.countryCode]||{label:f.country,n:0};cC[f.countryCode].n++}});
+    const regionOpts=Object.entries(regC).sort((a,b)=>b[1]-a[1]).map(([k,n])=>({value:"region:"+k,label:k+" ("+n+")"}));
+    const countryOpts=Object.entries(cC).sort((a,b)=>a[1].label.localeCompare(b[1].label)).map(([k,v])=>({value:"country:"+k,label:v.label+" ("+v.n+")"}));
+    const whereLabel=st.where?(st.where.startsWith("region:")?st.where.slice(7):(cC[st.where.slice(8)]||{label:st.where.slice(8)}).label):"";
+    const sumParts=[];if(whereLabel)sumParts.push(whereLabel);if(st.when!=="any")sumParts.push({"30":"Next 30 days","90":"Next 3 months",custom:"Your dates"}[st.when]);if(st.savedOnly)sumParts.push("Saved only");if(st.sort==="name")sumParts.push("A–Z");
+    const whenOpts=[["any","Any time"],["30","Next 30 days"],["90","Next 3 months"],["custom","Pick dates"]].map(([v,l])=>({label:l,checked:st.when===v,onChange:()=>this.setState({when:v}),border:st.when===v?"2px solid var(--ink)":"1px solid var(--line-strong)",bg:st.when===v?"var(--sunken)":"transparent",weight:st.when===v?"700":"400"}));
+    const sortOpts=[["date","Date"],["name","Name A–Z"]].map(([v,l])=>({label:l,checked:st.sort===v,onChange:()=>this.setState({sort:v}),bg:st.sort===v?"var(--ink)":"transparent",ink:st.sort===v?"var(--bg)":"var(--ink)"}));
+    const themeOpts=[["system","Auto"],["light","Light"],["dark","Dark"]].map(([v,l])=>({label:l,checked:st.theme===v,onChange:()=>{LS("csc-theme",v);this.setState({theme:v},()=>this.applyTheme())},bg:st.theme===v?"var(--ink)":"transparent",ink:st.theme===v?"var(--bg)":"var(--ink)"}));
+    // detail
+    let d=null,notFound=false;
+    if(r.name==="festival"&&!st.loading){const f=all.find(x=>x.id===r.id);if(!f)notFound=true;else{
+      const saved=st.saved.includes(f.id);const tk=this.ticketOf(f);const a=f.artists||[];const shown=st.lineupAll?a:a.slice(0,12);
+      let stT="",stX="",stBg="",stInk="var(--ink)";if(f.status==="postponed"){stT="Postponed.";stX="New dates haven't been announced yet.";stBg="var(--mango)";stInk="var(--ink)"}else if(f.status==="cancelled"){stT="Cancelled.";stX="This edition won't take place.";stBg="var(--sunken)"}else if(f._past){const nx=this.nextEdition(f);stT="This festival already took place.";stX=nx?"The next edition is listed below.":"The next edition hasn't been announced.";stBg="var(--sunken)"}else if(f.status==="sold-out"){stT="Sold out.";stX="Check the organizer for a waiting list.";stBg="var(--sunken)"}
+      let sub="";if(f._s&&f.datePrecision==="day"){const days=Math.round((f._e-f._s)/864e5)+1;const until=Math.round((f._s-t)/864e5);sub=plural(days,"day")+" · "+(f._past?"ended "+plural(Math.round((t-f._e)/864e5),"day")+" ago":until<=0?"happening now":"starts in "+plural(until,"day"))}else if(f.datePrecision==="month")sub="Exact days not announced yet";else sub="Save it and check back later";
+      const others=all.filter(x=>x.series===f.series&&x.id!==f.id).sort((x,y)=>(x._s||0)-(y._s||0)).map(x=>({href:"#/f/"+encodeURIComponent(x.id),label:x.name,when:x._s?(x.datePrecision==="day"?MONTHS[x._s.getMonth()]+" "+x._s.getFullYear():x._s.getFullYear()+""):"",whenText:(x._s?(x.datePrecision==="day"?MONTHS[x._s.getMonth()]+" "+x._s.getFullYear():x._s.getFullYear()+""):"")+" ›"}));
+      const url=location.href.split("#")[0]+"#/f/"+f.id;
+      const ld={"@context":"https://schema.org","@type":"Event",name:f.name,url,eventAttendanceMode:"https://schema.org/OfflineEventAttendanceMode",eventStatus:"https://schema.org/"+(f.status==="postponed"?"EventPostponed":f.status==="cancelled"?"EventCancelled":"EventScheduled"),location:{"@type":"Place",name:f.venue||f.city,address:{"@type":"PostalAddress",addressLocality:f.city,addressCountry:f.countryCode},geo:f.coordinates?{"@type":"GeoCoordinates",latitude:f.coordinates[0],longitude:f.coordinates[1]}:undefined}};
+      if(f.datePrecision==="day"){ld.startDate=f.startDate;ld.endDate=f.endDate}if(a.length)ld.performer=a.slice(0,10).map(n=>({"@type":"Person",name:n}));if(f.description)ld.description=f.description;if(tk)ld.offers={"@type":"Offer",url:tk,price:f.priceFrom!=null?f.priceFrom:undefined,priceCurrency:f.currency||undefined};
+      const ig=f.instagram;const c=f.coordinates;const moreL=f._mk?this.sortList(up.filter(x=>x._mk===f._mk&&x.id!==f.id)).slice(0,4):[];const [my,mm]=(f._mk||"0-1").split("-").map(Number);
+      d={name:f.name,place:this.place(f),hasFlag:!!f.countryCode,flagBg:f.countryCode?"url(https://flagcdn.com/"+f.countryCode.toLowerCase()+".svg) center/cover no-repeat":"",dateLong:this.dateLong(f),dateSub:sub,hasTravel:!!this.travel(f),travel:this.travel(f)||"",
+        hasStatus:!!stT,statusTitle:stT,statusText:stX,statusBg:stBg,statusInk:stInk,
+        hasTicket:!!tk&&!f._arch&&f.status==="scheduled",ticket:tk,ticketText:"Get passes"+(f.priceFrom!=null?" · "+this.fmtPrice(f):"")+" ↗",demoNote:f.ticketUrl?"":" (Prototype: using the festival website.)",
+        canCal:f.datePrecision==="day"&&!f._arch&&f.status!=="postponed",onCal:()=>this.setState({sheet:"cal",calId:f.id}),
+        hasInstagram:!!ig,instagram:ig,igText:(ig&&/\/p\//.test(ig)?"Instagram post":"Instagram")+" ↗",hasWebsite:!!f.website,website:f.website,noLinks:!ig&&!f.website,
+        where:[f.venue,this.place(f)].filter(Boolean).join(", "),price:f.priceText||"Not announced yet",region:f.region||"—",
+        artistCount:a.length||"",hasArtists:a.length>0,noArtists:!a.length,artists:shown.map(n=>({name:n,aria:"Find festivals with "+n,onPick:()=>{this.setState({query:n,where:"",savedOnly:false,when:"any"});location.hash="#/all"}})),hasMoreArtists:a.length>12,moreArtistsLabel:st.lineupAll?"Show fewer":"+"+(a.length-12)+" more",onMoreArtists:()=>this.setState({lineupAll:!st.lineupAll}),
+        description:f.description||"No description yet.",hasMap:!!c,mapTitle:"Map of "+this.place(f),mapSrc:c?"https://www.openstreetmap.org/export/embed.html?bbox="+(c[1]-.08)+","+(c[0]-.05)+","+(c[1]+.08)+","+(c[0]+.05)+"&layer=mapnik&marker="+c[0]+","+c[1]:"",
+        verified:f.lastVerified?"Info last checked "+f.lastVerified:"Info from the organizer's public channels.",fixHref:"#/submit/"+encodeURIComponent(f.id),
+        hasOther:others.length>0,others,hasMore:moreL.length>0&&!f._arch,moreTitle:"More in "+MONTHS[mm-1]+" "+my,more:moreL.map(x=>({href:"#/f/"+encodeURIComponent(x.id),name:x.name,place:this.place(x),when:x.datePrecision==="day"?(x._s.getDate()===x._e.getDate()&&x._s.getMonth()===x._e.getMonth()?x._s.getDate()+"":x._s.getDate()+"–"+x._e.getDate()):"TBA"})),moreHref:"#/m/"+f._mk,moreLink:"See all of "+MONTHS[mm-1]+" ›",mapsLink:c?"https://www.google.com/maps/search/?api=1&query="+c[0]+","+c[1]:"",jsonld:JSON.stringify(ld,null,2),
+        canSave:!f._arch,savedStr:saved?"true":"false",saveLabel:"Save "+f.name,heart:saved?"♥":"♡",saveColor:saved?"var(--rojo)":"var(--ink2)",onSave:()=>this.toggleSave(f),onShare:()=>this.share(f.name,url),
+        back:this._listHash||"#/",backText:"← All festivals"}}}
+    // calendar sheet
+    let cal={};if(st.sheet==="cal"){const f=all.find(x=>x.id===st.calId);if(f){const u=this.calUrls(f);cal={name:f.name,when:this.dateLong(f),line:f.name+" · "+this.dateLong(f),google:u.google,outlook:u.outlook,onDone:()=>setTimeout(()=>this.setState({sheet:null}),50),onIcs:()=>{this.downloadIcs([f],f.name);this.setState({sheet:null})}}}}
+    // artists
+    let artistRows=[],artistsHasMore=false;if(st.sheet==="artists"){const yr=t.getFullYear();const src=all.filter(f=>st.artTf==="all"||(f._s&&f._s.getFullYear()===yr));const m={};src.forEach(f=>(f.artists||[]).forEach(a=>{const k=norm(a);m[k]=m[k]||{name:a,n:0,cc:[]};m[k].n++;if(f.countryCode&&!m[k].cc.includes(f.countryCode))m[k].cc.push(f.countryCode)}));
+      const arr=Object.values(m).sort((a,b)=>b.n-a.n||a.name.localeCompare(b.name));let rank=0,last=-1;arr.forEach((x,i)=>{if(x.n!==last){rank=i+1;last=x.n}x.rank=rank});artistsHasMore=arr.length>10;
+      artistRows=(st.artAll?arr:arr.slice(0,10)).map(x=>({rank:x.rank,name:x.name,meta:plural(x.n,"festival")+" · "+plural(x.cc.length,"country").replace("countrys","countries"),aria:x.name+", "+plural(x.n,"festival")+". Show their festivals",flags:x.cc.slice(0,3).map(c=>"url(https://flagcdn.com/"+c.toLowerCase()+".svg) center/cover no-repeat"),rankBg:x.rank===1?"var(--accent)":x.rank===2?"var(--line)":x.rank===3?"#e8c9b0":"var(--surface)",rankInk:x.rank<=3?"#1c1f3d":"var(--ink2)",onPick:()=>{this.setState({query:x.name,sheet:null,where:"",when:"any",savedOnly:false});location.hash="#/all"}}));this._artTotal=arr.length}
+    // feeds
+    const feedRows=[["All festivals","all",up]].concat(Object.keys(regC).sort().map(k=>[k,k.toLowerCase().replace(/\s+/g,"-"),up.filter(f=>f.region===k)])).concat([["My saved festivals","saved",all.filter(f=>st.saved.includes(f.id)&&!f._arch)]]).map(([l,slug,list])=>({label:l,count:list.filter(f=>f.datePrecision==="day").length,onCopy:()=>this.copy("webcal://cubansalsacalendar.com/feeds/"+slug+".ics","Feed link copied"),onDownload:()=>this.downloadIcs(list,"Cuban Salsa Calendar - "+l)}));
+    // form
+    const fm=st.form||{};const errs=st.formErrors.length?this.validate():{};const fieldOrder=["change","name","city","country","start","end","website","tickets","email"];const idMap={change:"f-change",name:"f-name",city:"f-city",country:"f-country",start:"f-start",end:"f-end",website:"f-web",tickets:"f-tix",email:"f-email"};
+    const onF={};["change","name","city","country","start","end","website","instagram","tickets","lineup","email"].forEach(k=>onF[k]=e=>{const v=e.target.value;this.setState(s=>({form:Object.assign({},s.form,{[k]:v})}))});onF.datesTba=e=>{const v=e.target.checked;this.setState(s=>({form:Object.assign({},s.form,{datesTba:v})}))};
+    const inv={},bd={},err={};fieldOrder.forEach(k=>{inv[k]=errs[k]?"true":"false";bd[k]=errs[k]?"2px solid var(--rojo)":"1px solid var(--line-strong)";err[k]=errs[k]||""});
+    const formErrors=fieldOrder.filter(k=>errs[k]).map(k=>({msg:errs[k],href:"#"+idMap[k],onGo:e=>{e.preventDefault();const el=document.getElementById(idMap[k]);if(el)el.focus()}}));
+    const isFix=fm.mode==="fix";
+    const savedCount=st.saved.length;
+    const countries=new Set(up.map(f=>f.countryCode).filter(Boolean)).size;
+    const sheetTitles={months:"Choose a month",filters:"Filters",menu:"Menu",cal:"Add to calendar",artists:"Top artists",city:"Travel times",feeds:"Calendar feeds"};
+    const showShared=r.name==="saved"&&st.shared&&st.shared.some(id=>!st.saved.includes(id));
+    const sugg=isList&&st.searchOpen?this.suggestions():[];const flat=[];sugg.forEach(g=>g.items.forEach(s=>flat.push(s)));this._flat=flat;
+    const dym=total===0&&hasQuery?this.didYouMean():null;
+    return {
+      year:t.getFullYear(),nextText:nextM?"Next: "+MONTHS[nextM.m]+" "+nextM.y+" · "+nextN+" ›":"",sharedText:"Someone shared "+(st.shared?st.shared.length:0)+" festivals with you.",copyright:"© "+t.getFullYear()+" Cuban Salsa Calendar · "+up.length+" upcoming festivals in "+countries+" countries",cityText:(st.city?"From "+st.city.name:"Off")+" ›",archiveText:arch.length+" ›",enterHint:'Press Enter to see all results for "'+st.query+'"',savedCount,savedLabel:"Saved festivals, "+savedCount,openMenu:()=>this.setState({sheet:"menu"}),
+      isListPage:isList,isFestivalPage:r.name==="festival",isSubmitPage:r.name==="submit",isSavedPage:r.name==="saved",hasSaved:savedCount>0,
+      loading:st.loading,hasError:st.error,retry:()=>this.load(),
+      query:st.query,hasQuery,onQuery:e=>this.setState({query:e.target.value,searchOpen:true,focusIdx:-1}),clearQuery:()=>{this.setState({query:"",focusIdx:-1});const el=document.getElementById("search");if(el)el.focus()},
+      onSearchFocus:()=>this.setState({searchOpen:true}),onSearchBlur:()=>setTimeout(()=>this.setState({searchOpen:false,focusIdx:-1}),120),
+      onSearchKey:e=>{const n=this._flat.length;if(e.key==="ArrowDown"&&n){e.preventDefault();this.setState({searchOpen:true,focusIdx:(st.focusIdx+1)%n})}else if(e.key==="ArrowUp"&&n){e.preventDefault();this.setState({focusIdx:(st.focusIdx-1+n)%n})}else if(e.key==="Enter"){e.preventDefault();if(st.focusIdx>=0&&this._flat[st.focusIdx])this.pickSuggestion(this._flat[st.focusIdx]);else{this.addRecent(st.query.trim());this.setState({searchOpen:false})}}else if(e.key==="Escape"){this.setState({searchOpen:false,focusIdx:-1})}},
+      searchExpanded:sugg.length>0?"true":"false",showSugg:sugg.length>0,suggestionGroups:sugg,activeOpt:st.focusIdx>=0?"opt-"+st.focusIdx:"",clearRecent:e=>{e.preventDefault();LS("csc-recent",[]);this.setState({recent:[]})},
+      pageKicker:kicker,pageTitle:title,pageNote:note,hasPageNote:!!note,
+      hasActiveFilters:filterCount>0,filterSummary:"Filtered: "+sumParts.join(" · "),clearFilters:()=>this.setState({where:"",savedOnly:false,when:"any",sort:"date",from:"",to:""}),
+      showShared,sharedCount:st.shared?st.shared.length:0,saveShared:()=>{const s=Array.from(new Set(st.saved.concat(st.shared)));LS("csc-saved",s);this.setState({saved:s});this.toast("Added to your saved list")},
+      shareList:()=>this.share("My Cuban salsa festivals",location.href.split("#")[0]+"#/saved?ids="+st.saved.join(",")),savedIcs:()=>this.downloadIcs(all.filter(f=>st.saved.includes(f.id)&&!f._arch),"My Cuban salsa festivals"),
+      sections:mapView?[]:sections,isMapView:mapView,mapNote:plural((this._mapPts||[]).length,"festival")+" on the map. Tap a pin for details.",showViewToggle:isList&&!st.loading&&(total>0||mapView),viewOpts:[["list","List"],["map","Map"]].map(([v,l])=>({label:l,pressed:st.view===v?"true":"false",bg:st.view===v?"var(--ink)":"transparent",ink:st.view===v?"var(--bg)":"var(--ink)",onClick:()=>this.setState({view:v})})),
+      showBackHome:isList&&mode!=="month",showDockHome:isList&&mode!=="month",goHome:()=>{this.setState({query:"",when:"any",view:"list",searchOpen:false})},
+      showQuick:isList&&!hasQuery&&["month","all","tba"].includes(mode),quick:[{label:"♡ Saved"+(savedCount?" ("+savedCount+")":""),href:"#/saved"},{label:"★ Top artists",href:"#/",onClick:e=>{e.preventDefault();this.setState({sheet:"artists"})}},{label:"Travel times",href:"#/",onClick:e=>{e.preventDefault();this.setState({sheet:"city"})}},{label:"Archive",href:"#/archive"},{label:"Submit a festival",href:"#/submit"}].map(x=>Object.assign({onClick:()=>{}},x)),
+      savedMenuText:savedCount?plural(savedCount,"festival")+" saved on this phone":"Tap ♡ on any festival to keep it here",cityMenuText:st.city?"On · from "+st.city.name:"Off · show flight or drive time from your city",archiveMenuText:plural(arch.length,"festival")+" that already happened",
+      liveCount:st.loading?"":plural(total,"festival")+" shown",showEmpty:isList&&!st.loading&&!st.error&&total===0,emptyTitle,emptyText,hasDidYouMean:!!dym,didYouMean:dym||"",useDidYouMean:()=>this.setState({query:dym}),
+      hasNextMonth:!!nextM&&!st.loading,nextHref:nextM?"#/m/"+nextM.key:"#/",nextLabel:nextM?MONTHS[nextM.m]+" "+nextM.y+" · "+nextN:"",
+      isFix,isNew:fm.mode==="new",form:fm,onF,inv,bd,err,formErrors,hasFormErrors:formErrors.length>0,formErrorCount:plural(formErrors.length,"thing"),showDateInputs:!fm.datesTba,
+      roleOpts:[["organizer","The organizer"],["teacher","A teacher or artist"],["dancer","A dancer"]].map(([v,l])=>({label:l,checked:fm.role===v,onChange:()=>this.setState(s=>({form:Object.assign({},s.form,{role:v})}))})),
+      formSent:st.formSent,formOpen:!st.formSent,formKicker:isFix?"Suggest a correction":"For organizers and dancers",formTitle:isFix?"Fix a listing":"Submit a festival",formIntro:isFix?"Tell us what's wrong or missing. We check every change before it goes live.":"Add a Cuban salsa, timba or Afro-Cuban festival. We check every submission before it goes live.",formNoun:isFix?"change":"festival",formCta:isFix?"Send correction":"Send festival",formBack:isFix?"#/f/"+encodeURIComponent(fm.fid||""):"#/",
+      onSubmitForm:e=>{e.preventDefault();const v=this.validate();if(Object.keys(v).length){this.setState({formErrors:Object.keys(v)},()=>setTimeout(()=>{const el=document.getElementById("form-errors");if(el)el.focus()},30))}else{this.setState({formSent:true,formErrors:[]});window.scrollTo(0,0)}},
+      notFound,hasDetail:!!d,d:d||{},
+      showDock:isList&&!st.loading,dock,dockTransform:st.dockHidden&&!st.sheet?"translateY(120%)":"none",openMonths:()=>this.setState({sheet:"months"}),openFilters:()=>this.setState({sheet:"filters"}),filterCount,hasFilterBadge:filterCount>0,filterAria:"Filters"+(filterCount?", "+filterCount+" active":""),
+      hasSheet:!!st.sheet,sheetTitle:sheetTitles[st.sheet]||"",closeSheet:()=>this.setState({sheet:null}),onSheetKey:e=>{if(e.key==="Escape")this.setState({sheet:null})},
+      sheetMonths:st.sheet==="months",sheetFilters:st.sheet==="filters",sheetMenu:st.sheet==="menu",sheetCal:st.sheet==="cal",sheetArtists:st.sheet==="artists",sheetCity:st.sheet==="city",sheetFeeds:st.sheet==="feeds",
+      monthGroups,upcomingCount:up.length,tbaCount:up.filter(f=>f._tba).length,archiveCount:arch.length,
+      whenOpts,whenCustom:st.when==="custom",from:st.from,to:st.to,onFrom:e=>this.setState({from:e.target.value}),onTo:e=>this.setState({to:e.target.value}),
+      where:st.where,onWhere:e=>this.setState({where:e.target.value}),regionOpts,countryOpts,savedOnly:st.savedOnly,onSavedOnly:e=>this.setState({savedOnly:e.target.checked}),sortOpts,
+      showCountLabel:"Show "+plural(mode==="month"?upF.length:total,"festival"),
+      openArtists:()=>this.setState({sheet:"artists"}),openCity:()=>this.setState({sheet:"city"}),openFeeds:()=>this.setState({sheet:"feeds"}),cityLabel:st.city?"From "+st.city.name:"Off",themeOpts,
+      statsLine:up.length+" upcoming festivals in "+countries+" countries",
+      cal,artistRows,artistsHasMore,artistsMoreLabel:st.artAll?"Show top 10":"Show all "+(this._artTotal||"")+" artists",toggleArtistsAll:()=>this.setState({artAll:!st.artAll}),artistsSub:st.artTf==="year"?"Ranked by festival appearances in "+t.getFullYear()+". Tap a name to see their festivals.":"Ranked by festival appearances in all listed years.",
+      tfOpts:[["year","This year"],["all","All time"]].map(([v,l])=>({label:l,pressed:st.artTf===v?"true":"false",bg:st.artTf===v?"var(--ink)":"transparent",ink:st.artTf===v?"var(--bg)":"var(--ink)",onClick:()=>this.setState({artTf:v,artAll:false})})),
+      useMyLocation:()=>{if(!navigator.geolocation){this.toast("Location isn't available here");return}navigator.geolocation.getCurrentPosition(p=>{const c={name:"your location",lat:p.coords.latitude,lng:p.coords.longitude};LS("csc-city",c);this.setState({city:c,sheet:null});this.toast("Travel times on")},()=>this.toast("Couldn't get your location. Pick a city instead."))},
+      cityOpts:CITIES.map(c=>c[0]),cityValue:st.city&&st.city.name!=="your location"?st.city.name:"",onCityPick:e=>{const c=CITIES.find(x=>x[0]===e.target.value);if(!c)return;const v={name:c[0],lat:c[1],lng:c[2]};LS("csc-city",v);this.setState({city:v,sheet:null});this.toast("Travel times from "+c[0])},hasCity:!!st.city,clearCity:()=>{LS("csc-city",null);this.setState({city:null,sheet:null})},
+      feedRows,
+      hasToast:!!st.toast,toast:st.toast||""
+    };
+  }
+}
+</script>
+</body>
+</html>

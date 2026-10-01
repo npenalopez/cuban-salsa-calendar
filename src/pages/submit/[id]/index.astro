@@ -1,0 +1,10 @@
+---
+import type { GetStaticPaths } from 'astro';
+import FormPage from '../../../components/FormPage.astro';
+import { ALL } from '../../../lib/data.server';
+import { festivalPath } from '../../../lib/festivals';
+
+export const getStaticPaths = (() => ALL.map((f) => ({ params: { id: f.id }, props: { name: f.name } }))) satisfies GetStaticPaths;
+const { id } = Astro.params;
+---
+<FormPage mode="fix" fid={id} fname={Astro.props.name} back={festivalPath(id!)} />

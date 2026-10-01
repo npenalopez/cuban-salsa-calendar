@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Cuban Salsa Calendar festivals file",
+  "type": "object",
+  "required": ["version", "festivals"],
+  "properties": {
+    "version": { "type": "string", "description": "YYYY.MM-<count>, set by the admin export" },
+    "updated": { "type": "string", "format": "date" },
+    "festivals": { "type": "array", "items": { "$ref": "#/$defs/festival" } }
+  },
+  "$defs": {
+    "url": { "type": ["string", "null"], "pattern": "^https?://" },
+    "festival": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "name", "status", "startDate", "endDate", "datePrecision", "region"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "URL slug, usually name-city-year. Changing it breaks links." },
+        "series": { "type": ["string", "null"], "description": "Same value on every edition of a festival (id without the year)" },
+        "name": { "type": "string", "minLength": 1 },
+        "status": { "enum": ["scheduled", "postponed", "cancelled", "sold-out"] },
+        "startDate": { "type": "string", "format": "date" },
+        "endDate": { "type": "string", "format": "date" },
+        "datePrecision": { "enum": ["day", "month", "year"], "description": "month: start=1st, end=last day of month. year: Jan 1 – Dec 31." },
+        "dateNote": { "type": ["string", "null"], "description": "Shown instead of days for month precision (Mid, Early, Late) or as an extra label (Fall edition)" },
+        "city": { "type": ["string", "null"] },
+        "country": { "type": ["string", "null"] },
+        "countryCode": { "type": ["string", "null"], "pattern": "^[A-Z]{2}$", "description": "ISO 3166-1 alpha-2, used for flags and schema.org" },
+        "region": { "enum": ["Europe", "North America", "South America", "Africa", "Asia", "Oceania"] },
+        "venue": { "type": ["string", "null"] },
+        "coordinates": { "type": ["array", "null"], "items": { "type": "number" }, "minItems": 2, "maxItems": 2, "description": "[latitude, longitude]" },
+        "priceText": { "type": ["string", "null"], "description": "Human text as shown on the detail page. null = not announced" },
+        "priceFrom": { "type": ["number", "null"], "description": "Lowest price, for 'from €59' on cards" },
+        "currency": { "type": ["string", "null"], "pattern": "^[A-Z]{3}$" },
+        "ticketUrl": { "$ref": "#/$defs/url", "description": "Drives the 'Get passes' button. May be an affiliate link." },
+        "website": { "$ref": "#/$defs/url" },
+        "instagram": { "$ref": "#/$defs/url", "description": "Full profile URL. Never guess one." },
+        "artists": { "type": "array", "items": { "type": "string" } },
+        "description": { "type": ["string", "null"], "description": "Public text" },
+        "lastVerified": { "type": ["string", "null"], "format": "date" },
+        "featured": { "type": "boolean", "description": "Sponsored listing. On hold: render only when the feature is switched on." },
+        "notes": { "type": ["string", "null"], "description": "Private editorial notes. Must never be rendered, exported to .ics, or put in JSON-LD." }
+      }
+    }
+  }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Admin · Cuban Salsa Calendar</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible+Next:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+body{margin:0;--bg:#f6ede3;--surface:#fbf6f0;--sunken:#ece2d6;--line:#e2d6c8;--line-strong:#8a8293;--ink:#1c1f3d;--ink2:#45475f;--ink3:#64667c;--rojo:#b8432f;--rojo-hover:#9c3826;--accent:#ff6b4a;--accent-hover:#ff8466;--on-rojo:#1c1f3d;--azul:#2f3d8c;--mango:#ffd2c4;--rojo-tint:#ffe1d8;--dock:#1c1f3d;--dock-ink:#f6ede3;--dock-inner:#383a52;--dock-sub:#c9c6d6;--scrim:rgba(28,31,61,.5);--shadow:0 8px 24px rgba(28,31,61,.18);background:var(--bg);color:var(--ink);font-family:'Atkinson Hyperlegible Next','Atkinson Hyperlegible',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--azul)}
+a:hover{color:var(--ink)}
+:focus-visible{outline:2px solid var(--azul);outline-offset:2px}
+input,select,textarea,button{font:inherit;color:inherit}
+</style>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:20;background:var(--bg);border-bottom:1px solid var(--line)">
+  <div style="max-width:1400px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 12px">
+    <div style="display:flex;flex-direction:column;gap:3px;margin-right:auto">
+      <span style="font:700 12px/1 Archivo,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--rojo)">/admin · behind Cloudflare Access</span>
+      <h1 style="margin:0;font:800 28px/1 Archivo,sans-serif;font-stretch:72%;text-transform:uppercase">Festival data</h1>
+    </div>
+    <span style="font-size:14px;color:var(--ink3)">{{ draftStatus }}</span>
+    <button type="button" onClick="{{ openAdd }}" style="height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-weight:700;cursor:pointer;white-space:nowrap" style-hover="background:var(--sunken)">+ Add festival</button>
+    <label style="position:relative;display:inline-flex;align-items:center;height:44px;padding:0 14px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-weight:700;cursor:pointer;white-space:nowrap">Import JSON<input type="file" accept="application/json,.json" onChange="{{ onImport }}" style="position:absolute;inset:0;opacity:0;cursor:pointer"></label>
+    <button type="button" onClick="{{ exportJson }}" style="height:44px;padding:0 16px;border-radius:8px;border:0;background:var(--accent);color:var(--on-rojo);font-weight:700;cursor:pointer;white-space:nowrap" style-hover="background:var(--accent-hover)">Export festivals.json</button>
+  </div>
+</header>
+
+<main style="max-width:1400px;margin:0 auto;padding:16px 16px 80px;display:flex;flex-direction:column;gap:14px">
+  <p style="margin:0;font-size:14px;line-height:1.5;color:var(--ink2);max-width:900px">Edits are saved as a draft in this browser only. To publish, export <code>festivals.json</code>, replace <code>data/festivals.json</code> in the repo, and push. Cloudflare rebuilds the site in about a minute.</p>
+  <sc-if value="{{ hasDraft }}"><button type="button" onClick="{{ discardDraft }}" style="align-self:flex-start;border:0;background:transparent;color:var(--azul);text-decoration:underline;font-weight:700;cursor:pointer;padding:0;min-height:32px">Discard draft and reload the published file</button></sc-if>
+
+  <div role="group" aria-label="Quick filters" style="display:flex;flex-wrap:wrap;gap:8px">
+    <sc-for list="{{ stats }}" as="s" hint-placeholder-count="5"><button type="button" onClick="{{ s.onClick }}" aria-pressed="{{ s.pressed }}" style="display:flex;flex-direction:column;align-items:flex-start;gap:3px;min-width:128px;padding:10px 14px;border-radius:8px;border:{{ s.border }};background:var(--surface);cursor:pointer;text-align:left"><strong style="font:800 24px/1 Archivo,sans-serif;font-stretch:75%">{{ s.n }}</strong><span style="font-size:13px;color:var(--ink3)">{{ s.label }}</span></button></sc-for>
+  </div>
+
+  <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+    <label for="q" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Search</label>
+    <input id="q" type="search" placeholder="Search name, city, country, artist or id" value="{{ q }}" onChange="{{ onQ }}" style="flex:1;min-width:240px;height:44px;padding:0 14px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-size:15px">
+    <label for="miss" style="font-size:14px;color:var(--ink2)">Show</label>
+    <select id="miss" value="{{ missing }}" onChange="{{ onMissing }}" style="height:44px;padding:0 10px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-size:15px">
+      <sc-for list="{{ missingOpts }}" as="mo"><option value="{{ mo.value }}">{{ mo.label }}</option></sc-for>
+    </select>
+    <span aria-live="polite" style="font-size:14px;color:var(--ink3)">{{ shownLabel }}</span>
+  </div>
+
+  <div style="overflow:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)">
+    <table style="width:100%;min-width:1100px;border-collapse:collapse;font-size:14px;line-height:1.35">
+      <thead>
+        <tr style="background:var(--sunken);text-align:left">
+          <sc-for list="{{ cols }}" as="c"><th scope="col" aria-sort="{{ c.ariaSort }}" style="padding:0;white-space:nowrap"><button type="button" onClick="{{ c.onSort }}" style="display:flex;align-items:center;gap:6px;width:100%;min-height:44px;padding:0 12px;border:0;background:transparent;font-weight:700;font-size:13px;cursor:pointer;text-align:left">{{ c.label }}<span aria-hidden="true" style="color:var(--ink3)">{{ c.arrow }}</span></button></th></sc-for>
+          <th scope="col" style="padding:0 12px;font-size:13px">Missing</th>
+          <th scope="col" style="padding:0 12px;font-size:13px">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <sc-for list="{{ rows }}" as="r" hint-placeholder-count="8">
+          <tr style="border-top:1px solid var(--line);vertical-align:top" style-hover="background:var(--bg)">
+            <td style="padding:10px 12px;max-width:260px"><button type="button" onClick="{{ r.onEdit }}" style="border:0;background:transparent;padding:0;font-weight:700;text-align:left;cursor:pointer;color:var(--ink);text-decoration:underline;text-decoration-color:var(--line-strong)">{{ r.name }}</button><div style="font-size:12px;color:var(--ink3);margin-top:3px;font-family:ui-monospace,monospace">{{ r.id }}</div></td>
+            <td style="padding:10px 12px;white-space:nowrap">{{ r.dates }}<div style="font-size:12px;color:var(--ink3)">{{ r.prec }}</div></td>
+            <td style="padding:10px 12px">{{ r.city }}</td>
+            <td style="padding:10px 12px">{{ r.country }}</td>
+            <td style="padding:10px 12px">{{ r.region }}</td>
+            <td style="padding:10px 12px"><span style="font:700 11px/1 Archivo,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:4px 6px;border-radius:5px;background:{{ r.stBg }};color:{{ r.stInk }}">{{ r.status }}</span></td>
+            <td style="padding:10px 12px;max-width:180px">{{ r.price }}</td>
+            <td style="padding:10px 12px;text-align:right;font-variant-numeric:tabular-nums">{{ r.artists }}</td>
+            <td style="padding:10px 12px;max-width:220px;color:{{ r.missInk }};font-size:13px">{{ r.missing }}</td>
+            <td style="padding:6px 8px;white-space:nowrap"><span style="display:flex;gap:4px"><button type="button" onClick="{{ r.onEdit }}" aria-label="{{ r.editLabel }}" style="min-height:36px;padding:0 10px;border-radius:6px;border:1px solid var(--line-strong);background:transparent;font-weight:700;font-size:13px;cursor:pointer">Edit</button><button type="button" onClick="{{ r.onDelete }}" aria-label="{{ r.delLabel }}" style="min-height:36px;padding:0 10px;border:0;background:transparent;color:var(--rojo);font-weight:700;font-size:13px;cursor:pointer">Delete</button></span></td>
+          </tr>
+        </sc-for>
+      </tbody>
+    </table>
+    <sc-if value="{{ noRows }}"><p style="margin:0;padding:24px;color:var(--ink3)">No festivals match.</p></sc-if>
+  </div>
+</main>
+
+<sc-if value="{{ editing }}">
+  <div onClick="{{ closeEdit }}" style="position:fixed;inset:0;z-index:40;background:rgba(28,31,61,.45)"></div>
+  <div role="dialog" aria-modal="true" aria-labelledby="ed-title" onKeyDown="{{ onEdKey }}" style="position:fixed;inset:0;z-index:41;display:flex;justify-content:center;align-items:flex-start;padding:24px 12px;overflow:auto;pointer-events:none">
+    <form onSubmit="{{ onSave }}" noValidate="true" style="pointer-events:auto;width:100%;max-width:860px;background:var(--surface);border-radius:16px;box-shadow:0 12px 40px rgba(28,31,61,.25);display:flex;flex-direction:column">
+      <div style="position:sticky;top:-24px;z-index:1;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 12px 12px 20px;background:var(--surface);border-bottom:1px solid var(--line);border-radius:16px 16px 0 0">
+        <h2 id="ed-title" style="margin:0;font:800 26px/1 Archivo,sans-serif;font-stretch:72%;text-transform:uppercase">{{ edTitle }}</h2>
+        <button type="button" onClick="{{ closeEdit }}" aria-label="Close without saving" style="width:44px;height:44px;border:0;border-radius:8px;background:transparent;font-size:18px;cursor:pointer" style-hover="background:var(--sunken)">✕</button>
+      </div>
+      <div style="padding:16px 20px;display:flex;flex-direction:column;gap:20px">
+        <sc-if value="{{ hasEdErrors }}"><div id="ed-errors" tabIndex="-1" role="alert" style="padding:12px 14px;border-radius:8px;border:2px solid var(--rojo);font-size:14px;line-height:1.5"><strong>Can't save yet.</strong><span style="margin-left:6px">{{ edErrorText }}</span></div></sc-if>
+        <sc-for list="{{ groups }}" as="g">
+          <fieldset style="border:0;padding:0;margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px">
+            <legend style="font:700 12px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px;padding:0">{{ g.title }}</legend>
+            <sc-for list="{{ g.fields }}" as="fd">
+              <label style="display:flex;flex-direction:column;gap:4px;font-size:14px;font-weight:700;grid-column:{{ fd.span }}">{{ fd.label }}
+                <sc-if value="{{ fd.isInput }}"><input type="{{ fd.type }}" list="{{ fd.list }}" placeholder="{{ fd.ph }}" value="{{ fd.value }}" onChange="{{ fd.onChange }}" aria-invalid="{{ fd.invalid }}" style="height:44px;padding:0 12px;border-radius:8px;border:{{ fd.border }};background:var(--surface);font-size:15px;font-weight:400;font-family:{{ fd.font }}"></sc-if>
+                <sc-if value="{{ fd.isSelect }}"><select value="{{ fd.value }}" onChange="{{ fd.onChange }}" style="height:44px;padding:0 10px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-size:15px;font-weight:400"><sc-for list="{{ fd.options }}" as="op"><option value="{{ op.v }}">{{ op.l }}</option></sc-for></select></sc-if>
+                <sc-if value="{{ fd.isText }}"><textarea rows="{{ fd.rows }}" placeholder="{{ fd.ph }}" value="{{ fd.value }}" onChange="{{ fd.onChange }}" style="padding:10px 12px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-size:15px;font-weight:400;line-height:1.5;resize:vertical"></textarea></sc-if>
+                <sc-if value="{{ fd.isCheck }}"><span style="display:flex;align-items:center;gap:10px;min-height:44px;font-weight:400"><input type="checkbox" checked="{{ fd.checked }}" onChange="{{ fd.onChange }}" style="width:20px;height:20px;accent-color:var(--ink)">{{ fd.checkLabel }}</span></sc-if>
+                <sc-if value="{{ fd.hasHint }}"><span style="font-size:12px;font-weight:400;color:var(--ink3)">{{ fd.hint }}</span></sc-if>
+              </label>
+            </sc-for>
+          </fieldset>
+        </sc-for>
+        <datalist id="dl-countries"><sc-for list="{{ countryList }}" as="cn"><option value="{{ cn }}"></option></sc-for></datalist>
+
+        <fieldset style="border:0;padding:0;margin:0;display:flex;flex-direction:column;gap:10px"><legend style="font:700 12px/1 Archivo,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--ink3);margin-bottom:10px;padding:0">Line-up · {{ artistCountLabel }}</legend>
+          <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <sc-for list="{{ edArtists }}" as="a"><span style="display:inline-flex;align-items:center;gap:2px;min-height:36px;padding:0 4px 0 12px;border-radius:18px;background:var(--sunken);font-size:14px">{{ a.name }}<button type="button" onClick="{{ a.onRemove }}" aria-label="{{ a.removeLabel }}" style="width:30px;height:30px;border:0;border-radius:15px;background:transparent;cursor:pointer;font-size:12px" style-hover="background:var(--line)">✕</button></span></sc-for>
+          </div>
+          <div style="display:flex;gap:8px"><label for="add-artist" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Add artist</label><input id="add-artist" list="dl-artists" placeholder="Add an artist (suggestions from the database)" value="{{ artistInput }}" onChange="{{ onArtistInput }}" onKeyDown="{{ onArtistKey }}" style="flex:1;height:44px;padding:0 12px;border-radius:8px;border:1px solid var(--line-strong);background:var(--surface);font-size:15px"><button type="button" onClick="{{ addArtist }}" style="height:44px;padding:0 14px;border-radius:8px;border:1px solid var(--line-strong);background:transparent;font-weight:700;cursor:pointer">Add</button></div>
+          <datalist id="dl-artists"><sc-for list="{{ artistPool }}" as="ap"><option value="{{ ap }}"></option></sc-for></datalist>
+        </fieldset>
+      </div>
+      <div style="position:sticky;bottom:-24px;display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 20px;border-top:1px solid var(--line);background:var(--surface);border-radius:0 0 16px 16px">
+        <button type="button" onClick="{{ markChecked }}" style="height:44px;padding:0 12px;border:0;background:transparent;color:var(--azul);text-decoration:underline;font-weight:700;cursor:pointer">Mark as checked today</button>
+        <span style="flex:1"></span>
+        <button type="button" onClick="{{ closeEdit }}" style="height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--line-strong);background:transparent;font-weight:700;cursor:pointer">Cancel</button>
+        <button type="submit" style="height:44px;padding:0 20px;border-radius:8px;border:0;background:var(--accent);color:var(--on-rojo);font-weight:700;cursor:pointer" style-hover="background:var(--accent-hover)">{{ saveLabel }}</button>
+      </div>
+    </form>
+  </div>
+</sc-if>
+
+<div aria-live="polite" style="position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:60;pointer-events:none">
+  <sc-if value="{{ hasToast }}"><div style="padding:12px 16px;border-radius:8px;background:var(--ink);color:var(--bg);font-weight:700;font-size:15px;box-shadow:0 8px 24px rgba(28,31,61,.2);white-space:nowrap">{{ toast }}</div></sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const KEY="csc-admin-draft";
+const ORDER=["id","series","name","status","startDate","endDate","datePrecision","dateNote","city","country","countryCode","region","venue","coordinates","priceText","priceFrom","currency","ticketUrl","website","instagram","artists","description","lastVerified","featured","notes"];
+const blank=v=>v==null||String(v).trim()===""||(Array.isArray(v)&&!v.length);
+const norm=s=>(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim();
+const MON3=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+const CHECKS=[["dates","Exact dates",f=>f.datePrecision!=="day"],["price","Price",f=>blank(f.priceText)],["links","Website or Instagram",f=>blank(f.website)&&blank(f.instagram)],["ticket","Ticket link",f=>blank(f.ticketUrl)],["artists","Line-up",f=>blank(f.artists)],["description","Description",f=>blank(f.description)],["venue","Venue",f=>blank(f.venue)],["coordinates","Coordinates",f=>!f.coordinates],["verified","Last checked",f=>blank(f.lastVerified)]];
+const PRIORITY=["dates","links","artists","price"];
+const slug=s=>norm(s).replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
+const fmtDate=f=>{if(!f.startDate)return "—";const [y,m,d]=f.startDate.split("-").map(Number);const [y2,m2,d2]=(f.endDate||f.startDate).split("-").map(Number);if(f.datePrecision==="year")return String(y);if(f.datePrecision==="month")return (f.dateNote?f.dateNote+" ":"")+MON3[m-1]+" "+y;return m2!==m?d+" "+MON3[m-1]+" – "+d2+" "+MON3[m2-1]+" "+y2:d+(d2!==d?"–"+d2:"")+" "+MON3[m-1]+" "+y2};
+
+class Component extends DCLogic {
+  state={list:[],version:"",draft:false,q:"",missing:"all",sortKey:"default",sortDir:1,edit:null,isNew:false,edErr:[],artistInput:"",toast:null};
+  componentDidMount(){let d=null;try{d=JSON.parse(localStorage.getItem(KEY)||"null")}catch(e){}if(d&&Array.isArray(d.festivals))this.setState({list:d.festivals,version:d.version||"",draft:true});else this.loadPublished()}
+  loadPublished(){fetch("data/festivals.json").then(r=>r.json()).then(j=>this.setState({list:j.festivals||[],version:j.version||"",draft:false})).catch(()=>this.toast("Couldn't load data/festivals.json"))}
+  persist(list){try{localStorage.setItem(KEY,JSON.stringify({version:this.state.version,festivals:list}))}catch(e){}this.setState({list,draft:true})}
+  toast(m){clearTimeout(this._t);this.setState({toast:m});this._t=setTimeout(()=>this.setState({toast:null}),2600)}
+  missingOf(f){return CHECKS.filter(c=>c[2](f)).map(c=>c[0])}
+  ordered(f){const o={};ORDER.forEach(k=>{o[k]=f[k]===undefined?null:f[k]});Object.keys(f).forEach(k=>{if(!(k in o))o[k]=f[k]});return o}
+  exportJson(){const now=new Date();const v=now.getFullYear()+"."+String(now.getMonth()+1).padStart(2,"0")+"-"+this.state.list.length;const sorted=this.state.list.slice().sort((a,b)=>(a.startDate||"9").localeCompare(b.startDate||"9")||a.name.localeCompare(b.name));const body=JSON.stringify({version:v,updated:now.toISOString().slice(0,10),festivals:sorted.map(f=>this.ordered(f))},null,2);const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([body],{type:"application/json"}));a.download="festivals.json";document.body.appendChild(a);a.click();setTimeout(()=>{URL.revokeObjectURL(a.href);a.remove()},800);this.toast("Exported festivals.json · version "+v)}
+  onImport(e){const file=e.target.files&&e.target.files[0];if(!file)return;file.text().then(t=>{const j=JSON.parse(t);const l=Array.isArray(j)?j:j.festivals;if(!Array.isArray(l))throw 0;this.persist(l);this.toast("Imported "+l.length+" festivals")}).catch(()=>this.toast("That file isn't a valid festivals.json"));e.target.value=""}
+  empty(){return {id:"",series:"",name:"",status:"scheduled",startDate:"",endDate:"",datePrecision:"day",dateNote:null,city:"",country:"",countryCode:"",region:"Europe",venue:null,coordinates:null,priceText:null,priceFrom:null,currency:null,ticketUrl:null,website:null,instagram:null,artists:[],description:null,lastVerified:null,featured:false,notes:null}}
+  openEdit(f){const e=Object.assign({},f,{artists:(f.artists||[]).slice(),_orig:f.id,lat:f.coordinates?String(f.coordinates[0]):"",lng:f.coordinates?String(f.coordinates[1]):""});this.setState({edit:e,isNew:false,edErr:[],artistInput:""},()=>this.focusDialog())}
+  focusDialog(){setTimeout(()=>{const el=document.querySelector('[role="dialog"] input');if(el)el.focus()},30)}
+  setE(k,v){this.setState(s=>({edit:Object.assign({},s.edit,{[k]:v})}))}
+  validate(e){const er=[];if(blank(e.name))er.push("Name is required.");if(blank(e.city)&&e.country!=="")er.push("City is required.");if(blank(e.country))er.push("Country is required.");if(blank(e.startDate)||blank(e.endDate))er.push("Start and end dates are required (use the month or year range if the days aren't known).");else if(e.endDate<e.startDate)er.push("End date is before start date.");
+    const id=e.id||slug(e.name+"-"+(e.startDate||"").slice(0,4));if(this.state.list.some(f=>f.id===id&&f.id!==e._orig))er.push("Another festival already uses the id \""+id+"\".");
+    ["ticketUrl","website","instagram"].forEach(k=>{if(!blank(e[k])&&!/^https?:\/\/\S+\.\S+/.test(e[k]))er.push(k+" must be a full link starting with https://")});
+    if((e.lat&&isNaN(+e.lat))||(e.lng&&isNaN(+e.lng)))er.push("Coordinates must be numbers.");return er}
+  save(ev){ev.preventDefault();const e=this.state.edit;const er=this.validate(e);if(er.length){this.setState({edErr:er},()=>setTimeout(()=>{const x=document.getElementById("ed-errors");if(x)x.focus()},30));return}
+    const id=e.id||slug(e.name+"-"+e.startDate.slice(0,4));const clean=v=>blank(v)?null:(typeof v==="string"?v.trim():v);
+    const f={};ORDER.forEach(k=>f[k]=e[k]===undefined?null:e[k]);Object.assign(f,{id,series:clean(e.series)||id.replace(/-20\d\d$/,""),name:e.name.trim(),dateNote:clean(e.dateNote),city:clean(e.city),country:clean(e.country),countryCode:clean(e.countryCode)?e.countryCode.toUpperCase():null,venue:clean(e.venue),priceText:clean(e.priceText),priceFrom:blank(e.priceFrom)?null:+e.priceFrom,currency:clean(e.currency)?e.currency.toUpperCase():null,ticketUrl:clean(e.ticketUrl),website:clean(e.website),instagram:clean(e.instagram),description:clean(e.description),notes:clean(e.notes),lastVerified:clean(e.lastVerified),coordinates:e.lat&&e.lng?[+e.lat,+e.lng]:null,featured:!!e.featured});
+    const list=this.state.isNew?this.state.list.concat(f):this.state.list.map(x=>x.id===e._orig?f:x);this.persist(list);this.setState({edit:null});this.toast((this.state.isNew?"Added ":"Saved ")+f.name)}
+  del(f){if(!window.confirm('Delete "'+f.name+'"? You can undo this by discarding the draft before exporting.'))return;this.persist(this.state.list.filter(x=>x.id!==f.id));this.toast("Deleted "+f.name)}
+  addArtist(){const v=this.state.artistInput.trim();if(!v)return;const e=this.state.edit;if(e.artists.some(a=>norm(a)===norm(v))){this.toast(v+" is already listed");return}const pool=this.pool();const match=pool.find(a=>norm(a)===norm(v));this.setState({edit:Object.assign({},e,{artists:e.artists.concat(match||v)}),artistInput:""})}
+  pool(){if(this._pk===this.state.list)return this._pool;const s=new Map();this.state.list.forEach(f=>(f.artists||[]).forEach(a=>{if(!s.has(norm(a)))s.set(norm(a),a)}));this._pool=Array.from(s.values()).sort((a,b)=>a.localeCompare(b));this._pk=this.state.list;return this._pool}
+
+  renderVals(){
+    const st=this.state;const q=norm(st.q);
+    const all=st.list.map(f=>({f,miss:this.missingOf(f)}));
+    const incomplete=x=>x.miss.some(m=>PRIORITY.includes(m));
+    let rows=all.filter(x=>!q||norm([x.f.id,x.f.name,x.f.city,x.f.country].concat(x.f.artists||[]).join(" ")).includes(q));
+    if(st.missing==="incomplete")rows=rows.filter(incomplete);else if(st.missing!=="all")rows=rows.filter(x=>x.miss.includes(st.missing));
+    const k=st.sortKey,dir=st.sortDir;const val=x=>{const f=x.f;switch(k){case "dates":return f.startDate||"9999";case "price":return f.priceFrom==null?Infinity:f.priceFrom;case "artists":return (f.artists||[]).length;default:return (f[k]||"").toString().toLowerCase()}};
+    if(k==="default")rows.sort((a,b)=>(incomplete(b)-incomplete(a))||a.f.name.localeCompare(b.f.name));else rows.sort((a,b)=>{const A=val(a),B=val(b);return (A<B?-1:A>B?1:0)*dir});
+    const colDefs=[["name","Festival"],["dates","Dates"],["city","City"],["country","Country"],["region","Region"],["status","Status"],["price","Price"],["artists","Artists"]];
+    const cols=colDefs.map(([key,label])=>({label,arrow:k===key?(dir>0?"▲":"▼"):"↕",ariaSort:k===key?(dir>0?"ascending":"descending"):"none",onSort:()=>this.setState(s=>s.sortKey===key?{sortDir:-s.sortDir}:{sortKey:key,sortDir:1})}));
+    const stBg={scheduled:"var(--sunken)",postponed:"var(--mango)",cancelled:"var(--ink)","sold-out":"var(--ink)"};
+    const rowVMs=rows.map(({f,miss})=>({id:f.id,name:f.name,dates:fmtDate(f),prec:f.datePrecision==="day"?"":(f.datePrecision==="month"?"month only":"year only"),city:f.city||"—",country:f.country||"—",region:f.region||"—",status:f.status,stBg:stBg[f.status]||"var(--sunken)",stInk:f.status==="cancelled"||f.status==="sold-out"?"var(--bg)":"var(--ink)",price:f.priceText||"—",artists:(f.artists||[]).length,missing:miss.length?CHECKS.filter(c=>miss.includes(c[0])).map(c=>c[1]).join(", "):"Complete",missInk:miss.some(m=>PRIORITY.includes(m))?"var(--rojo)":"var(--ink3)",editLabel:"Edit "+f.name,delLabel:"Delete "+f.name,onEdit:()=>this.openEdit(f),onDelete:()=>this.del(f)}));
+    const statDefs=[["all","festivals",all.length],["incomplete","missing key info",all.filter(incomplete).length],["links","no website or Instagram",all.filter(x=>x.miss.includes("links")).length],["ticket","no ticket link",all.filter(x=>x.miss.includes("ticket")).length],["dates","dates not exact",all.filter(x=>x.miss.includes("dates")).length]];
+    const stats=statDefs.map(([v,l,n])=>({n,label:l,pressed:st.missing===v?"true":"false",border:st.missing===v?"2px solid var(--ink)":"1px solid var(--line)",onClick:()=>this.setState({missing:v})}));
+    const missingOpts=[{value:"all",label:"All festivals"},{value:"incomplete",label:"Missing key info (dates, links, line-up, price)"}].concat(CHECKS.map(c=>({value:c[0],label:"Missing: "+c[1]})));
+    // editor
+    const e=st.edit;let groups=[],edArtists=[];
+    if(e){const F=(key,label,o={})=>{const bad=st.edErr.length&&o.req&&blank(e[key]);return Object.assign({label:label+(o.req?" *":""),value:e[key]==null?"":String(e[key]),onChange:ev=>this.setE(key,o.check?ev.target.checked:ev.target.value),isInput:!o.kind,isSelect:o.kind==="select",isText:o.kind==="text",isCheck:o.kind==="check",checked:!!e[key],checkLabel:o.checkLabel||"",type:o.type||"text",list:o.list||"",ph:o.ph||"",rows:o.rows||3,span:o.wide?"1 / -1":"auto",border:bad?"2px solid var(--rojo)":"1px solid var(--line-strong)",invalid:bad?"true":"false",font:o.mono?"ui-monospace,monospace":"inherit",hint:o.hint||"",hasHint:!!o.hint,options:(o.options||[]).map(x=>Array.isArray(x)?{v:x[0],l:x[1]}:{v:x,l:x})},o.kind==="check"?{onChange:ev=>this.setE(key,ev.target.checked)}:{})};
+      groups=[{title:"Basics",fields:[F("name","Name",{req:true,wide:true}),F("id","ID (used in the URL)",{mono:true,ph:"auto from name + year",hint:"Changing it breaks old links."}),F("series","Series",{mono:true,ph:"auto",hint:"Same value links editions across years."}),F("status","Status",{kind:"select",options:[["scheduled","Scheduled"],["postponed","Postponed"],["cancelled","Cancelled"],["sold-out","Sold out"]]}),F("featured","Listing",{kind:"check",checkLabel:"Featured (sponsored)"})]},
+        {title:"Dates",fields:[F("datePrecision","Known to",{kind:"select",options:[["day","Exact days"],["month","Month only"],["year","Year only"]]}),F("startDate","Start",{type:"date",req:true}),F("endDate","End",{type:"date",req:true}),F("dateNote","Note",{ph:"Mid, Early, Fall edition…",hint:"Shown in place of days when known to the month."})]},
+        {title:"Place",fields:[F("city","City",{req:true}),F("country","Country",{req:true,list:"dl-countries"}),F("countryCode","Country code",{ph:"ES",hint:"2 letters, for the flag."}),F("region","Region",{kind:"select",options:["Europe","North America","South America","Africa","Asia","Oceania"]}),F("venue","Venue",{wide:true}),F("lat","Latitude",{ph:"41.46"}),F("lng","Longitude",{ph:"12.62"})]},
+        {title:"Price and links",fields:[F("priceText","Price as shown",{wide:true,ph:"Full pass from €80 (empty = not announced)"}),F("priceFrom","From (number)",{ph:"80"}),F("currency","Currency",{ph:"EUR"}),F("ticketUrl","Ticket link (Get passes)",{wide:true,type:"url",ph:"https://"}),F("website","Website",{type:"url",ph:"https://"}),F("instagram","Instagram profile",{type:"url",ph:"https://www.instagram.com/…"})]},
+        {title:"Text",fields:[F("description","Public description",{kind:"text",wide:true,rows:4}),F("notes","Private notes (never published)",{kind:"text",wide:true,rows:2}),F("lastVerified","Last checked",{type:"date"})]}];
+      edArtists=e.artists.map((a,i)=>({name:a,removeLabel:"Remove "+a,onRemove:()=>this.setE("artists",e.artists.filter((_,j)=>j!==i))}))}
+    const countryList=Array.from(new Set(st.list.map(f=>f.country).filter(Boolean))).sort();
+    return {
+      draftStatus:st.draft?"Unpublished draft · "+st.list.length+" festivals":"Published file · "+(st.version||"")+" · "+st.list.length+" festivals",hasDraft:st.draft,discardDraft:()=>{if(!window.confirm("Discard all unpublished edits?"))return;try{localStorage.removeItem(KEY)}catch(x){}this.loadPublished();this.toast("Draft discarded")},
+      openAdd:()=>{const n=this.empty();n.lat="";n.lng="";n._orig=null;this.setState({edit:n,isNew:true,edErr:[],artistInput:""},()=>this.focusDialog())},
+      onImport:ev=>this.onImport(ev),exportJson:()=>this.exportJson(),
+      stats,q:st.q,onQ:ev=>this.setState({q:ev.target.value}),missing:st.missing,onMissing:ev=>this.setState({missing:ev.target.value}),missingOpts,shownLabel:rowVMs.length+" shown",
+      cols,rows:rowVMs,noRows:rowVMs.length===0,
+      editing:!!e,edTitle:st.isNew?"Add festival":"Edit festival",closeEdit:()=>this.setState({edit:null}),onEdKey:ev=>{if(ev.key==="Escape")this.setState({edit:null});if((ev.metaKey||ev.ctrlKey)&&ev.key==="s"){ev.preventDefault();this.save(ev)}},
+      onSave:ev=>this.save(ev),saveLabel:st.isNew?"Add festival":"Save changes",hasEdErrors:st.edErr.length>0,edErrorText:st.edErr.join(" "),
+      groups,countryList,edArtists,artistCountLabel:e?(e.artists.length+(e.artists.length===1?" artist":" artists")):"",artistInput:st.artistInput,onArtistInput:ev=>this.setState({artistInput:ev.target.value}),onArtistKey:ev=>{if(ev.key==="Enter"){ev.preventDefault();this.addArtist()}},addArtist:()=>this.addArtist(),artistPool:e?this.pool():[],
+      markChecked:()=>{const d=new Date();this.setE("lastVerified",d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"));this.toast("Marked as checked today")},
+      hasToast:!!st.toast,toast:st.toast||""
+    };
+  }
+}
+</script>
+</body>
+</html>

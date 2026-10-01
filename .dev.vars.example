@@ -1,0 +1,6 @@
+# Copy to .dev.vars for `npm run serve:cf`. Never commit .dev.vars.
+# Opens /admin locally without Cloudflare Access. Never set this in production.
+ADMIN_OPEN=1
+# Optional, only to test the forms end to end (creates real GitHub issues):
+# GITHUB_TOKEN=
+# TURNSTILE_SECRET=1x0000000000000000000000000000000AA

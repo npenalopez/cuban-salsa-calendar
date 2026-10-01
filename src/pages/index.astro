@@ -1,0 +1,12 @@
+---
+import ListPage from '../components/ListPage.astro';
+import { MONTHS } from '../lib/dates';
+import { TODAY, stats } from '../lib/data.server';
+
+const s = stats();
+---
+<ListPage
+  route={{ name: 'month', key: null }}
+  title="Cuban Salsa Calendar · Cuban salsa festivals worldwide"
+  description={`Dates, cities and line-ups for ${s.upcoming} upcoming Cuban salsa, timba and Afro-Cuban festivals in ${s.countries} countries. ${MONTHS[TODAY.getMonth()]} ${TODAY.getFullYear()} and beyond.`}
+/>

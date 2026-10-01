@@ -1,0 +1,6 @@
+---
+import ListPage from '../../components/ListPage.astro';
+import { stats } from '../../lib/data.server';
+const s = stats();
+---
+<ListPage route={{ name: 'all' }} title="All upcoming festivals · Cuban Salsa Calendar" description={`All ${s.upcoming} upcoming Cuban salsa, timba and Afro-Cuban festivals, month by month.`} />

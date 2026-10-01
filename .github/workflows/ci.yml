@@ -1,0 +1,44 @@
+# Quality checks on every push and pull request.
+# Deploys are done by Cloudflare Workers' Git integration (see README), not here.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: .node-version
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+
+      - name: Types (site + worker)
+        run: npm run check
+      - name: Unit tests
+        run: npm test
+      - name: Build (validates data/festivals.json first)
+        run: npm run build
+
+      - name: Start the Worker locally (static assets, headers, /api, /admin gate)
+        run: |
+          cp .dev.vars.example .dev.vars
+          npm run serve:cf > wrangler.log 2>&1 &
+          for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:8789/ && break; sleep 1; done
+
+      - name: Accessibility (axe, WCAG 2.1 AA, light + dark, 375 + 1440, sheets and states)
+        run: npm run check:a11y
+
+      - name: Lighthouse (mobile, best of 3; 100 for a11y, best practices, SEO)
+        run: npm run check:lighthouse
+        env:
+          RUNS: '3'
+          MIN: '100'
+          MIN_PERF: '95'

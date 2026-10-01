@@ -1,0 +1,130 @@
+import { dateBlock, dateLong, mkey, pISO, type DateBlock } from './dates';
+import { norm } from './text';
+import { travel } from './travel';
+import type { City, Enriched, Festival } from './types';
+
+/** Sponsored listings are on hold. Flip to true to render the "Sponsored" variant. */
+export const FEATURED_ENABLED = false;
+
+export const SITE = 'https://cubansalsacalendar.com';
+export const INSTAGRAM = 'https://www.instagram.com/cubansalsacalendar';
+export const festivalPath = (id: string) => `/festivals/${encodeURIComponent(id)}/`;
+export const fixPath = (id: string) => `/submit/${encodeURIComponent(id)}/`;
+
+export function enrich(list: Festival[], today: Date): Enriched[] {
+  return list.map((f) => {
+    const s = pISO(f.startDate);
+    const e = f.endDate ? pISO(f.endDate) : s;
+    const past = e < today;
+    return {
+      ...f,
+      s,
+      e,
+      past,
+      mk: f.datePrecision !== 'year' ? mkey(s.getFullYear(), s.getMonth()) : null,
+      arch: past || f.status === 'cancelled',
+      tba: f.datePrecision === 'year',
+      hay: norm([f.name, f.city, f.country, f.region, ...(f.artists || [])].join(' | ')),
+    };
+  });
+}
+
+/** Start date, then name. */
+export const byDate = (a: Enriched, b: Enriched) => a.s.getTime() - b.s.getTime() || a.name.localeCompare(b.name);
+export const byName = (a: Enriched, b: Enriched) => a.name.localeCompare(b.name);
+
+const CUR: Record<string, string> = { EUR: '€', GBP: '£', USD: 'US$', MXN: 'MX$' };
+
+/** "from €59", "from PLN 470", or the free-text price. */
+export function fmtPrice(f: Pick<Festival, 'priceFrom' | 'priceText' | 'currency'>): string | null {
+  if (f.priceFrom == null) return f.priceText;
+  const sym = f.currency ? CUR[f.currency] : undefined;
+  const n = f.priceFrom.toLocaleString('en');
+  return 'from ' + (sym ? sym + n : (f.currency ? f.currency + ' ' : '') + n);
+}
+
+export function place(f: Pick<Festival, 'city' | 'country'>): string {
+  if (f.city && f.country) return `${f.city}, ${f.country}`;
+  return f.city || f.country || 'Location to be announced';
+}
+
+export function nextEdition(f: Enriched, all: Enriched[]): Enriched | undefined {
+  if (!f.series) return undefined;
+  return all.find((x) => x.series === f.series && x.id !== f.id && !x.arch && x.s > f.s);
+}
+
+/** Only real ticket links. Never fall back to the website. */
+export const ticketOf = (f: Enriched) => (f.ticketUrl && !f.arch && f.status === 'scheduled' ? f.ticketUrl : null);
+
+/** Calendar actions only make sense with exact days. */
+export const canAddToCalendar = (f: Enriched) => f.datePrecision === 'day' && !f.arch && f.status !== 'postponed';
+
+export type BadgeKind = 'postponed' | 'cancelled' | 'sold-out' | 'sponsored';
+const BADGE_TEXT: Record<BadgeKind, string> = { postponed: 'Postponed', cancelled: 'Cancelled', 'sold-out': 'Sold out', sponsored: 'Sponsored' };
+
+export interface CardVM {
+  id: string;
+  href: string;
+  name: string;
+  aria: string;
+  place: string;
+  countryCode: string | null;
+  block: DateBlock;
+  badge: { kind: BadgeKind; text: string } | null;
+  artists: string[];
+  moreArtists: number;
+  meta: string;
+  travel: string | null;
+  ticket: string | null;
+  showSave: boolean;
+  showCal: boolean;
+  muted: boolean;
+  tba: boolean;
+  featured: boolean;
+  postponed: boolean;
+  struck: boolean;
+}
+
+export function cardVM(f: Enriched, all: Enriched[], city: City | null): CardVM {
+  const a = f.artists || [];
+  const parts: string[] = [];
+  if (f.status === 'postponed') parts.push('New dates not announced');
+  else if (f.past) parts.push('Took place' + (nextEdition(f, all) ? ' · next edition listed' : ''));
+  else if (f.datePrecision === 'year') parts.push('Dates not announced yet');
+  else {
+    const price = fmtPrice(f);
+    if (f.priceText && price) parts.push(price);
+    if (!a.length) parts.push(f.priceText ? 'Line-up not announced' : 'Line-up and prices not announced');
+    else if (!f.priceText) parts.push('Price not announced');
+  }
+  const featured = FEATURED_ENABLED && f.featured && !f.arch;
+  let badge: BadgeKind | null = null;
+  if (f.status === 'postponed') badge = 'postponed';
+  else if (f.status === 'cancelled') badge = 'cancelled';
+  else if (f.status === 'sold-out') badge = 'sold-out';
+  else if (featured) badge = 'sponsored';
+  const showArtists = a.length > 0 && !f.arch && f.status !== 'postponed';
+  const tr = f.arch ? null : travel(city, f.coordinates);
+  return {
+    id: f.id,
+    href: festivalPath(f.id),
+    name: f.name,
+    aria: `${f.name}, ${dateLong(f)}, ${place(f)}`,
+    place: place(f),
+    countryCode: f.countryCode,
+    block: dateBlock(f, f.past),
+    badge: badge ? { kind: badge, text: BADGE_TEXT[badge] } : null,
+    artists: showArtists ? a.slice(0, 3) : [],
+    moreArtists: showArtists ? Math.max(0, a.length - 3) : 0,
+    meta: parts.join(' · '),
+    travel: tr,
+    ticket: ticketOf(f),
+    showSave: !f.arch,
+    showCal: canAddToCalendar(f),
+    muted: f.arch,
+    tba: f.tba,
+    featured,
+    postponed: f.status === 'postponed',
+    struck: f.status === 'postponed' || f.status === 'cancelled',
+  };
+}

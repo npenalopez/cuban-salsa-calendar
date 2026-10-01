@@ -1,0 +1,18 @@
+---
+import type { GetStaticPaths } from 'astro';
+import ListPage from '../../../components/ListPage.astro';
+import { monthLabel, months12, plural } from '../../../lib/dates';
+import { TODAY, UPCOMING } from '../../../lib/data.server';
+
+export const getStaticPaths = (() =>
+  months12(TODAY).map((m) => ({ params: { yyyy: String(m.y), mm: String(m.m + 1).padStart(2, '0') }, props: { key: m.key } }))) satisfies GetStaticPaths;
+
+const { key } = Astro.props;
+const n = UPCOMING.filter((f) => f.mk === key).length;
+const label = monthLabel(key);
+---
+<ListPage
+  route={{ name: 'month', key }}
+  title={`${label} · Cuban salsa festivals · Cuban Salsa Calendar`}
+  description={`${plural(n, 'Cuban salsa festival')} in ${label}: dates, cities and line-ups.`}
+/>
