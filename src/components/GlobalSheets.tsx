@@ -74,7 +74,7 @@ function Artists({ all }: { all: Enriched[] }) {
   const src = all.filter((f) => tf === 'all' || f.s.getFullYear() === yr);
   const m = new Map<string, { name: string; n: number; cc: string[]; rank: number }>();
   for (const f of src)
-    for (const a of f.artists) {
+    for (const a of f.people) {
       const k = norm(a);
       const x = m.get(k) || { name: a, n: 0, cc: [], rank: 0 };
       x.n++;

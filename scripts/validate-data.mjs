@@ -36,6 +36,17 @@ for (const f of data.festivals ?? []) {
   if (f.priceFrom != null && !f.currency) errors.push(`${f.id}: priceFrom needs a currency`);
 }
 
+// Artist registry (data/artists.json): no chains, no act or member that is itself an alias.
+const reg = read('artists.json');
+for (const [variant, name] of Object.entries(reg.aliases)) {
+  if (reg.aliases[name]) errors.push(`artists.json: alias "${variant}" points to "${name}", which is itself an alias`);
+  if (variant === name) errors.push(`artists.json: alias "${variant}" points to itself`);
+}
+for (const [act, members] of Object.entries(reg.acts)) {
+  if (reg.aliases[act]) errors.push(`artists.json: act "${act}" is listed as an alias`);
+  for (const m of members) if (reg.aliases[m]) errors.push(`artists.json: member "${m}" of "${act}" is an alias; use "${reg.aliases[m]}"`);
+}
+
 if (errors.length) {
   console.error(`data/festivals.json: ${errors.length} problem(s)\n` + errors.map((e) => '  - ' + e).join('\n'));
   process.exit(1);

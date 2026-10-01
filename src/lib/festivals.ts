@@ -1,4 +1,5 @@
 import { countdown, dateBlock, dateLong, mkey, pISO, type DateBlock } from './dates';
+import { canonicalLineup, peopleOf } from './artists';
 import { norm } from './text';
 import { travel } from './travel';
 import type { City, Enriched, Festival } from './types';
@@ -22,14 +23,19 @@ export function enrich(list: Festival[], today: Date): Enriched[] {
     const s = pISO(f.startDate);
     const e = f.endDate ? pISO(f.endDate) : s;
     const past = e < today;
+    // One spelling per artist (data/artists.json); `people` expands couples into their members.
+    const artists = canonicalLineup(f.artists || []);
+    const people = peopleOf(artists);
     return {
       ...f,
+      artists,
+      people,
       s,
       e,
       past,
       mk: f.datePrecision !== 'year' ? mkey(s.getFullYear(), s.getMonth()) : null,
       arch: past || f.status === 'cancelled',
-      hay: norm([f.name, f.city, f.country, f.region, ...(f.artists || [])].join(' | ')),
+      hay: norm([f.name, f.city, f.country, f.region, ...artists, ...people].join(' | ')),
     };
   });
 }

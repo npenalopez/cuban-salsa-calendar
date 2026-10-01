@@ -50,7 +50,7 @@ export function suggestions(up: Enriched[], query: string, recent: string[]): Su
       c.n++;
       countries.set(f.countryCode, c);
     }
-    for (const a of f.artists) if (norm(a).includes(q)) artists.set(a, (artists.get(a) || 0) + 1);
+    for (const a of new Set([...f.artists, ...f.people])) if (norm(a).includes(q)) artists.set(a, (artists.get(a) || 0) + 1);
   }
   const score = (l: string) => (norm(l).startsWith(q) ? 0 : 1);
   if (fest.length) groups.push({ title: 'Festivals', items: fest });
@@ -74,7 +74,7 @@ export function didYouMean(up: Enriched[], query: string): string | null {
   for (const f of up) {
     if (f.city) pool.add(f.city);
     if (f.country) pool.add(f.country);
-    f.artists.forEach((a) => pool.add(a));
+    [...f.artists, ...f.people].forEach((a) => pool.add(a));
   }
   let best: string | null = null;
   let bd = 3;

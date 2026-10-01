@@ -4,6 +4,7 @@ import { cardVM, enrich, fmtPrice, isListed } from './festivals';
 import { calUrls, icsCalendar } from './ics';
 import { computeView, DEFAULT_FILTERS, filtersQuery, parseFilters } from './listing';
 import { didYouMean, suggestions } from './search';
+import { canonicalArtist, canonicalLineup, peopleOf } from './artists';
 import { fmtHours, travel } from './travel';
 import type { Festival } from './types';
 
@@ -54,6 +55,19 @@ describe('countdown', () => {
     expect(countdownLong(pISO('2026-09-20'), pISO('2026-09-28'), t)).toBe('ended 3 days ago');
     expect(countdownLong(pISO('2026-09-29'), pISO('2026-10-02'), t)).toBe('happening now');
   });
+});
+
+describe('artists', () => {
+  it('variant spellings resolve to one name', () => {
+    expect(canonicalArtist('Yusimi Moya')).toBe('Yusimi Moya Rodríguez');
+    expect(canonicalArtist('YUSIMI MOYA')).toBe('Yusimi Moya Rodríguez');
+    expect(canonicalArtist('jonar gonzalez')).toBe('Jonar González');
+  });
+  it('unknown names pass through', () => expect(canonicalArtist(' Someone New ')).toBe('Someone New'));
+  it('line-ups are deduplicated after resolving', () =>
+    expect(canonicalLineup(['Yusimi Moya', 'Yusimi Moya Rodríguez', 'Osbanis y Anneta'])).toEqual(['Osbanis & Anneta', 'Yusimi Moya Rodríguez']));
+  it('couples credit each member once', () =>
+    expect(peopleOf(['Osbanis & Anneta', 'Osbanis Tejeda', 'Jorge & Indira'])).toEqual(['Osbanis Tejeda', 'Anneta Kepka', 'Jorge & Indira']));
 });
 
 describe('months12', () => {

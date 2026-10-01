@@ -49,6 +49,8 @@ export interface Enriched extends Festival {
   mk: string | null;
   /** In the archive: past or cancelled */
   arch: boolean;
+  /** Individual people in the line-up: couples with known members expanded (for ranking and search) */
+  people: string[];
   /** Normalised search haystack */
   hay: string;
 }
