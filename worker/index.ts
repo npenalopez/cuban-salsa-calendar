@@ -27,7 +27,11 @@ export default {
     if (pathname.startsWith('/api/')) return new Response('Not found', { status: 404 });
 
     if (pathname === '/admin' || pathname.startsWith('/admin/')) {
-      if (!(await hasAccess(request, env))) return new Response('Not found', { status: 404, headers: PRIVATE });
+      if (!(await hasAccess(request, env))) {
+        // Same answer as any unknown page: the site's 404, nothing that hints at an editor.
+        const page = await env.ASSETS.fetch(new URL('/404.html', request.url));
+        return new Response(page.body, { status: 404, headers: { 'Content-Type': 'text/html; charset=utf-8', ...PRIVATE } });
+      }
       const res = await env.ASSETS.fetch(request);
       const out = new Response(res.body, res);
       for (const [k, v] of Object.entries(PRIVATE)) out.headers.set(k, v);
