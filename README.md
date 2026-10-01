@@ -58,7 +58,7 @@ Every page is pre-rendered HTML with inlined CSS (~6 KB gzipped). Islands use
 with first paint. Fonts are self-hosted: Archivo is cut to the axes the design
 uses and split so most headings need only a 24 KB file (preloaded); Atkinson uses
 `font-display: optional` with a metric-matched fallback, so body text never
-shifts. Leaflet and map tiles load only when a map is opened.
+shifts. MapLibre and map tiles load only when a map is opened.
 
 ## Deploy (Cloudflare Workers, Git integration)
 
@@ -117,5 +117,5 @@ TXT records, so no email to preserve.
    and a festival page.
 8. Unpublish the Figma site once the new one is live.
 
-Map tiles are Esri Canvas gray; check their licence for production traffic
-(alternatives in `design/README.md`).
+Maps use MapLibre with OpenFreeMap vector tiles (OpenStreetMap data, free, no
+key), recoloured in the site palette in `src/components/MapView.tsx`.

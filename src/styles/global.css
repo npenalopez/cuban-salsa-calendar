@@ -495,17 +495,17 @@ dialog.sheet::backdrop { background: rgba(28, 31, 61, 0.5); }
 }
 .map-open:hover { border-color: var(--line-strong); }
 .map-open__text { font-weight: 700; font-size: 16px; }
-.map .leaflet-container, .map.leaflet-container { font-family: inherit; }
-.map .leaflet-popup-content { margin: 12px 14px; }
-.map .leaflet-control-attribution a { color: #2f3d8c; text-decoration: underline; }
+.map .maplibregl-canvas:focus-visible { outline: 2px solid var(--azul); outline-offset: -2px; }
+.map .maplibregl-ctrl-group { border-radius: 8px; box-shadow: none; border: 1px solid var(--line-strong); }
+.map .maplibregl-ctrl-attrib { font-size: 11px; }
+.map .maplibregl-ctrl-attrib a { color: #2f3d8c; text-decoration: underline; }
+.map .maplibregl-popup-content { padding: 12px 14px; border-radius: 10px; box-shadow: var(--shadow); font-family: var(--body); }
+.map .maplibregl-popup-close-button { width: 32px; height: 32px; font-size: 18px; }
+.map .maplibregl-cooperative-gesture-screen { font-family: var(--body); }
 .map-pin {
   display: block; border-radius: 50%; background: #ff6b4a; border: 3px solid #1c1f3d; box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
-.map-cluster {
-  display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%;
-  background: #1c1f3d; color: #f6ede3; border: 2px solid #f6ede3; font: 700 14px/1 var(--body); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
-}
-.map-pop__name { display: block; font: 800 17px/1.15 var(--display); font-stretch: 80%; color: #1c1f3d; text-decoration: none; }
+.map-pop__name { display: block; padding-right: 20px; font: 800 17px/1.15 var(--display); font-stretch: 80%; color: #1c1f3d; text-decoration: none; }
 .map-pop__meta { font-size: 14px; line-height: 1.4; color: #45475f; margin-top: 4px; }
 .map-pop__link { display: inline-block; margin-top: 8px; font-weight: 700; font-size: 15px; color: #ad3e2c !important; }
 

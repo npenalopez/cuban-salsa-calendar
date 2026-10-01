@@ -45,5 +45,9 @@ export default defineConfig({
   devToolbar: { enabled: false },
   // One request less before first paint: the CSS is small (~6 KB gzipped).
   build: { inlineStylesheets: 'always' },
-  vite: { plugins: [festivalsModule()] },
+  vite: {
+    plugins: [festivalsModule()],
+    // MapLibre's web worker is built as an ES module (see MapView).
+    worker: { format: 'es' },
+  },
 });

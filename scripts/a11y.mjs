@@ -20,9 +20,9 @@ const states = [
   ['search suggestions', '/', async (p) => (await p.click('#search'), p.fill('#search', 'yus'))],
   ['empty search', '/', async (p) => p.fill('#search', 'zzzqqq')],
   ['saved list', '/', async (p) => (await p.locator('.card .heart').first().click(), p.goto(base + '/saved/'))],
-  ['map view', '/upcoming/?view=map', async (p) => p.waitForSelector('.map-cluster, .map-pin')],
+  ['map view', '/upcoming/?view=map', async (p) => p.waitForSelector('.maplibregl-canvas')],
   ['form errors', '/submit/', async (p) => p.click('.submit-btn')],
-  ['festival map', FEST, async (p) => (await p.locator('.map').scrollIntoViewIfNeeded(), p.waitForSelector('.map-pin'))],
+  ['festival map', FEST, async (p) => (await p.locator('.map-open').click(), p.waitForSelector('.maplibregl-canvas'))],
 ];
 
 const browser = await chromium.launch();
@@ -33,8 +33,8 @@ for (const theme of ['light', 'dark']) {
     const page = await ctx.newPage();
     const run = async (label) => {
       await page.waitForTimeout(250);
-      // Map tiles are third-party images with their own text; scan our UI only.
-      const r = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).exclude('.leaflet-tile-pane').analyze();
+      // The map canvas draws third-party map labels; scan our UI only.
+      const r = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa', 'wcag21a', 'wcag21aa']).exclude('.maplibregl-canvas').analyze();
       total += r.violations.length;
       for (const v of r.violations) console.log(`${theme} ${w} ${label}: ${v.id} (${v.impact}) ×${v.nodes.length}: ${v.nodes[0].target.join(' ')}\n    ${v.nodes[0].failureSummary?.split('\n')[1] ?? ''}`);
     };
