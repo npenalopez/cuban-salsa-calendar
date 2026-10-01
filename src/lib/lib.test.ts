@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { dateBlock, dateLong, dateShort, months12, pISO } from './dates';
+import { countdown, countdownLong, dateBlock, dateLong, dateShort, months12, pISO } from './dates';
 import { cardVM, enrich, fmtPrice, isListed } from './festivals';
 import { calUrls, icsCalendar } from './ics';
 import { computeView, DEFAULT_FILTERS, filtersQuery, parseFilters } from './listing';
@@ -39,6 +39,21 @@ describe('dateBlock', () => {
   it('month precision with note', () => expect(dateBlock(d('2026-11-01', '2026-11-30', 'month', 'Early'), false)).toEqual({ mon: 'NOV', days: 'EARLY', sub: 'Days TBA' }));
   it('month precision without note', () => expect(dateBlock(d('2026-11-01', '2026-11-30', 'month'), false).days).toBe('TBA'));
   it('year precision', () => expect(dateBlock(d('2026-01-01', '2026-12-31', 'year'), false)).toEqual({ mon: '2026', days: 'TBA', sub: '' }));
+});
+
+describe('countdown', () => {
+  const t = pISO('2026-10-01');
+  it('days ahead', () => expect(countdown(pISO('2026-10-13'), pISO('2026-10-15'), t)).toBe('In 12 days'));
+  it('tomorrow', () => expect(countdown(pISO('2026-10-02'), pISO('2026-10-04'), t)).toBe('Tomorrow'));
+  it('today', () => expect(countdown(t, pISO('2026-10-03'), t)).toBe('Today'));
+  it('happening now', () => expect(countdown(pISO('2026-09-30'), pISO('2026-10-02'), t)).toBe('Happening now'));
+  it('last day is still happening', () => expect(countdown(pISO('2026-09-28'), t, t)).toBe('Happening now'));
+  it('over', () => expect(countdown(pISO('2026-09-20'), pISO('2026-09-22'), t)).toBeNull());
+  it('long form', () => {
+    expect(countdownLong(pISO('2026-11-28'), pISO('2026-11-29'), t)).toBe('starts in 58 days');
+    expect(countdownLong(pISO('2026-09-20'), pISO('2026-09-28'), t)).toBe('ended 3 days ago');
+    expect(countdownLong(pISO('2026-09-29'), pISO('2026-10-02'), t)).toBe('happening now');
+  });
 });
 
 describe('months12', () => {
@@ -96,6 +111,14 @@ describe('cardVM', () => {
     expect(c.artists).toEqual([]);
     expect(c.showCal).toBe(false);
     expect(c.badge?.text).toBe('Postponed');
+  });
+  it('countdown leads the meta line', () => {
+    const [f] = enrich([mk({ artists: ['A'], priceText: '€59', priceFrom: 59, currency: 'EUR' })], TODAY);
+    expect(cardVM(f, [f], null, TODAY).meta).toBe('In 8 days · from €59');
+  });
+  it('no countdown for postponed festivals', () => {
+    const [f] = enrich([mk({ status: 'postponed' })], TODAY);
+    expect(cardVM(f, [f], null, TODAY).meta).toBe('New dates not announced');
   });
   it('featured stays off while the flag is off', () => {
     const [f] = enrich([mk({ featured: true })], TODAY);

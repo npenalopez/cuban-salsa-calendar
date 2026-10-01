@@ -113,3 +113,22 @@ export function dayRange(f: Dated): string {
 
 const DAY = 864e5;
 export const daysBetween = (a: Date, b: Date) => Math.round((b.getTime() - a.getTime()) / DAY);
+
+/** Card countdown: "In 12 days", "Tomorrow", "Today", "Happening now"; null once it has ended. */
+export function countdown(s: Date, e: Date, today: Date): string | null {
+  const until = daysBetween(today, s);
+  if (until > 1) return `In ${until} days`;
+  if (until === 1) return 'Tomorrow';
+  if (until === 0) return 'Today';
+  return daysBetween(today, e) >= 0 ? 'Happening now' : null;
+}
+
+/** Festival page line: "starts in 58 days", "starts tomorrow", "happening now", "ended 3 days ago". */
+export function countdownLong(s: Date, e: Date, today: Date): string {
+  const until = daysBetween(today, s);
+  if (until > 1) return `starts in ${until} days`;
+  if (until === 1) return 'starts tomorrow';
+  if (until === 0) return 'starts today';
+  const ended = daysBetween(e, today);
+  return ended <= 0 ? 'happening now' : `ended ${plural(ended, 'day')} ago`;
+}

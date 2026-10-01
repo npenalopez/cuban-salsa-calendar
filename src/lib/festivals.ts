@@ -1,4 +1,4 @@
-import { dateBlock, dateLong, mkey, pISO, type DateBlock } from './dates';
+import { countdown, dateBlock, dateLong, mkey, pISO, type DateBlock } from './dates';
 import { norm } from './text';
 import { travel } from './travel';
 import type { City, Enriched, Festival } from './types';
@@ -89,13 +89,16 @@ export interface CardVM {
   struck: boolean;
 }
 
-export function cardVM(f: Enriched, all: Enriched[], city: City | null): CardVM {
+export function cardVM(f: Enriched, all: Enriched[], city: City | null, today?: Date): CardVM {
   const a = f.artists || [];
   const parts: string[] = [];
   if (f.status === 'postponed') parts.push('New dates not announced');
   else if (f.past) parts.push('Took place' + (nextEdition(f, all) ? ' · next edition listed' : ''));
   else if (f.datePrecision === 'year') parts.push('Dates not announced yet');
   else {
+    // Days until the festival, for upcoming ones that will go ahead.
+    const cd = today && (f.status === 'scheduled' || f.status === 'sold-out') ? countdown(f.s, f.e, today) : null;
+    if (cd) parts.push(cd);
     const price = fmtPrice(f);
     if (f.priceText && price) parts.push(price);
     if (!a.length) parts.push(f.priceText ? 'Line-up not announced' : 'Line-up and prices not announced');

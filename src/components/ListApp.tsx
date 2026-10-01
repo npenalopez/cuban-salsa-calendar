@@ -274,7 +274,7 @@ export default function ListApp({ route, buildToday }: Props) {
               )}
               <div class="grid">
                 {s.items.map((x) => (
-                  <FestivalCard card={cardVM(x, all, store.city)} saved={store.saved.includes(x.id)} onSave={toggleSaved} onCal={(id) => openSheet('cal', id)} />
+                  <FestivalCard card={cardVM(x, all, store.city, today)} saved={store.saved.includes(x.id)} onSave={toggleSaved} onCal={(id) => openSheet('cal', id)} />
                 ))}
               </div>
             </section>
