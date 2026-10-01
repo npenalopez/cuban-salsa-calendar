@@ -22,7 +22,7 @@ const states = [
   ['saved list', '/', async (p) => (await p.locator('.card .heart').first().click(), p.goto(base + '/saved/'))],
   ['map view', '/upcoming/?view=map', async (p) => p.waitForSelector('.maplibregl-canvas')],
   ['form errors', '/submit/', async (p) => p.click('.submit-btn')],
-  ['festival map', FEST, async (p) => (await p.locator('.map-open').click(), p.waitForSelector('.maplibregl-canvas'))],
+  ['festival map', FEST, async (p) => (await p.locator('.map').scrollIntoViewIfNeeded(), p.waitForSelector('.maplibregl-canvas'))],
 ];
 
 const browser = await chromium.launch();

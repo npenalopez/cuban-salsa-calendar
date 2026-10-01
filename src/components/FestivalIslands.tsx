@@ -1,4 +1,4 @@
-import { useState } from 'preact/hooks';
+import { useEffect, useRef, useState } from 'preact/hooks';
 import { share } from '../client/share';
 import { openSheet, toggleSaved, useStore } from '../client/store';
 import { travel } from '../lib/travel';
@@ -34,16 +34,22 @@ export function TravelLine({ coords }: { coords: [number, number] }) {
   return t ? <span class="meta">{t}</span> : null;
 }
 
-/** The map loads only when asked for: most visitors arrive on mobile data from Instagram. */
+/** The map loads by itself as it comes into view (300 px early), so pages stay light until it's needed. */
 export function FestivalMap({ id, name, lat, lng, label, place }: { id: string; name: string; lat: number; lng: number; label: string; place: string }) {
-  const [open, setOpen] = useState(false);
-  if (open) return <MapView single points={[{ id, name, lat, lng }]} label={label} />;
+  const [show, setShow] = useState(false);
+  const box = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (!box.current || !('IntersectionObserver' in window)) return setShow(true);
+    const io = new IntersectionObserver((entries) => entries.some((e) => e.isIntersecting) && (setShow(true), io.disconnect()), { rootMargin: '300px' });
+    io.observe(box.current);
+    return () => io.disconnect();
+  }, []);
+  if (show) return <MapView single points={[{ id, name, lat, lng }]} label={label} />;
   return (
-    <button type="button" class="map map--single map-open" onClick={() => setOpen(true)}>
+    <div ref={box} class="map map--single map-open" role="img" aria-label={label}>
       <span class="map-pin" aria-hidden="true" style="width:24px;height:24px" />
-      <span class="map-open__text">Show map</span>
-      <span class="meta">{place}</span>
-    </button>
+      <span class="meta">Loading map of {place}…</span>
+    </div>
   );
 }
 
