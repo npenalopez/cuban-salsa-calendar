@@ -15,7 +15,7 @@
       "country": "Austria",
       "countryCode": "AT",
       "region": "Europe",
-      "venue": null,
+      "venue": "wolke19 at Ares Tower",
       "coordinates": [
         48.2082,
         16.3738
@@ -23,14 +23,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://cubailaviena.at/en/events/meneate27/",
+      "website": "https://cubailaviena.at/en/events/meneate-viena-2026/",
+      "instagram": "https://www.instagram.com/meneateviena/",
       "artists": [],
       "description": "International Afro-Cuban dance festival in Vienna. Timba, salsa, son, casino, rumba, afro, reggaeton. Live concert by Maykel Blanco y su Salsa Mayor (not in fullpass). Workshops at wolke19, Welcome Party with DJ Wasia, Timba Gala with DJ La Pantera, Farewell Party at Fanialive. Son Bootcamp with Alexei & Emilia.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "a-toda-cuba-calenzano-2026",
@@ -75,7 +75,7 @@
       "country": "Germany",
       "countryCode": "DE",
       "region": "Europe",
-      "venue": null,
+      "venue": "Embassade Berlin",
       "coordinates": [
         52.526063,
         13.415681
@@ -83,14 +83,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/en/event/9746/afro-cuban-berlin",
       "website": "https://www.berlinsalsafestival.com/",
       "instagram": "https://www.instagram.com/fiesta_elegante/",
       "artists": [],
       "description": "The October festival from Fiesta Elegante (organisers of the Berlin Salsa Festival in spring). Held at Embassade Berlin at Alexanderplatz, two connected halls of ~400 m2 each. Workshops paired with theory on music, culture and history; programme runs across Cuban styles from son and Afro-Cuban roots to salsa, timba, reggaeton and fusion. Social parties framed as part of the learning, with dancers from many countries.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "afro-cuban-dance-festival-havana-2027",
@@ -105,22 +105,22 @@
       "country": "Cuba",
       "countryCode": "CU",
       "region": "North America",
-      "venue": null,
+      "venue": "Conjunto Folklórico Nacional de Cuba",
       "coordinates": [
         23.1136,
         -82.3666
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €112",
+      "priceFrom": 112,
+      "currency": "EUR",
+      "ticketUrl": "https://www.goandance.com/en/event/9863/afro-cuban-dance-festival-2027",
+      "website": "https://afrocubandancefestival.com/",
+      "instagram": "https://www.instagram.com/afrocubandancefestival/",
       "artists": [],
       "description": "International Afro-Cuban Dance Festival in Havana. Most all-inclusive, immersive Afro-Cuban experience - 50 hours of intensive training with Live Music. Classes use the energy of Conjunto Folklórico Nacional de Cuba. Run by Luanda Pau and Maestro Domingo Pau, who select the team based on dedication to Afro-Cuban culture and professional experience. Artists hail from Havana's prestigious institutions.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "afrolatin-holidays-egypt-2026",
@@ -165,7 +165,7 @@
       "country": "Greece",
       "countryCode": "GR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Project Labattoir",
       "coordinates": [
         40.6401,
         22.9444
@@ -173,14 +173,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://my.weezevent.com/agua-salsa-festival-2026",
+      "website": "https://www.aguasalsafestival.com/",
+      "instagram": "https://www.instagram.com/aguafestival/",
       "artists": [],
       "description": "Agua Festival in Thessaloniki, Greece. Listed in rueda.casino September 25-27, 2026.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website."
+      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "albania-afro-latin-festival-tirana-2027",
@@ -195,7 +195,7 @@
       "country": "Albania",
       "countryCode": "AL",
       "region": "Europe",
-      "venue": null,
+      "venue": "Grand Blue Fafa Resort",
       "coordinates": [
         41.3275,
         19.8187
@@ -203,14 +203,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://www.goandance.com/en/event/9601/albania-afrolatin-festival-2027",
+      "website": "https://albaniaafrolatin.com/",
+      "instagram": "https://www.instagram.com/official_albania_afrolatin/",
       "artists": [],
       "description": "Albania Afro Latin Festival in Tirana. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "all-salsa-festival-lyon-2027",
@@ -225,22 +225,22 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Markadas Dance Center",
       "coordinates": [
         45.767,
         5.0026
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €10",
+      "priceFrom": 10,
+      "currency": "EUR",
+      "ticketUrl": "https://www.helloasso.com/associations/baila/adhesions/all-salsa-festival-2027-may-21-22-23-lyon-France",
+      "website": "https://www.allsalsafestival.com/",
+      "instagram": "https://www.instagram.com/allsalsafestival/",
       "artists": [],
       "description": "All Salsa Festival - Cuban, Mambo, Caleña fusion. 2 Before days (June 24-25) + 3 Full Days/Nights (June 26-28). 60+ workshops (Classic & Master Classes).",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "alocubano-benidorm-2027",
@@ -255,7 +255,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Gran Hotel Bali",
       "coordinates": [
         38.5411,
         -0.1226
@@ -263,14 +263,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://alocubano.se/#buy-ticket",
+      "website": "https://alocubano.se/benidorm/",
+      "instagram": "https://www.instagram.com/alocubano_festival/",
       "artists": [],
       "description": "AloCubano Benidorm 2026 ★ MAYKEL BLANCO LIVE! 'The Cuban Festival in the Miami of Europe'. Set at the legendary Gran Hotel Bali - all-in-one resort experience. 4 unforgettable days of workshops, pool parties, night fiestas. 2 dance floors by night - 1000m² Pure Cuban + 500m² Bachata. 26+ workshops in Cuban styles: Salsa Cubana, Rumba, Afro, Timba, Reparto. Dazzling shows, competitions, animations. Parties until sunrise with DJs from Cuba's finest scene. Established by Julio Espinal from Santiago de Cuba.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "alocubano-krakow-2026",
@@ -285,7 +285,7 @@
       "country": "Poland",
       "countryCode": "PL",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Galaxy Krakow",
       "coordinates": [
         50.0647,
         19.945
@@ -293,9 +293,9 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://alocubano.se/#buy-ticket",
+      "website": "https://alocubano.se/",
+      "instagram": "https://www.instagram.com/alocubano_festival/",
       "artists": [
         "Yoyo Flow",
         "Maykel Fonts",
@@ -316,7 +316,7 @@
       "description": "AloCubano Krakow - 'The Cuban Festival in the Royal Heart of Europe'. 700+ dancers from 30+ countries, 28+ workshops in 3 powerful days. All-in-one venue at Hotel Galaxy. Parties until 4 AM Friday-Sunday. No live music breaks - non-stop dancing energy. All Cuban styles: Salsa Cubana, Rumba, Afro, Timba, Reparto. Day parties + Night parties. Top Cuban DJs.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "aotearoa-cuban-festival-nz-2026",
@@ -391,7 +391,7 @@
       "country": "Hungary",
       "countryCode": "HU",
       "region": "Europe",
-      "venue": null,
+      "venue": "Lurdy Conference & Event Center",
       "coordinates": [
         47.4979,
         19.0402
@@ -399,14 +399,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://my.weezevent.com/arrebatate9-cuban-salsa-festival-budapest",
+      "website": "https://arrebatatefestival.com/",
+      "instagram": "https://www.instagram.com/arrebatate/",
       "artists": [],
       "description": "Craziest Cuban festival in the heart of Europe. February 20-23, 2026. Salsa, Afro, Son, Rumba workshops with top Cuban artists. Bootcamps: Master Afro Bootcamp with Yeni Molinet, Rueda de Casino Bootcamp with Mahmoud Morsy & Isabella (champions of Rueda de Casino). Official Partner Hotel: Ibis Budapest Stadium.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "ksaba-asia-salsa-bachata-congress-2026",
@@ -481,22 +481,22 @@
       "country": "United States",
       "countryCode": "US",
       "region": "North America",
-      "venue": null,
+      "venue": "Courtland Grand Hotel",
       "coordinates": [
         33.749,
         -84.388
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From US$194",
+      "priceFrom": 194,
+      "currency": "USD",
+      "ticketUrl": "https://www.eventbrite.com/e/atlanta-salsa-bachata-festival-2027-tickets-1984207297440",
+      "website": "https://www.atlantasbf.com/",
+      "instagram": "https://www.instagram.com/atlantasalsabachatafestival/",
       "artists": [],
       "description": "Atlanta Salsa Bachata Festival in Atlanta. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "australian-cuban-dance-festival-sydney-2026",
@@ -571,7 +571,7 @@
       "country": "Poland",
       "countryCode": "PL",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Lenart",
       "coordinates": [
         50.003879,
         20.014946
@@ -591,7 +591,7 @@
       "description": "Small all-Cuban festival held entirely inside Hotel Lenart, a 4-star hotel next to the Wieliczka salt mine (UNESCO) 20 min from Kraków. Workshops on three floors with six Cuban artists, live music, rumba abierta, parties until dawn, restaurant and rooms all under one roof (saunas, jacuzzi, cold plunge). Only 167 beds; registration has run through a Google form, no website. Instagram @ayquerico_salsafestival.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
     },
     {
       "id": "baila-new-york-2027",
@@ -606,7 +606,7 @@
       "country": "United States",
       "countryCode": "US",
       "region": "North America",
-      "venue": null,
+      "venue": "Location05",
       "coordinates": [
         40.7128,
         -74.006
@@ -614,14 +614,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://www.danceplace.com/book/it/17205",
+      "website": "https://www.bailanewyork.com/",
+      "instagram": "https://www.instagram.com/bailanydancefest_/",
       "artists": [],
       "description": "Baila NY Afro-Caribbean Dance Fest. 3rd edition. NYC's first dance festival rooted in tradition. 80+ hours of parallel workshops + bootcamps in 4 rooms: Cuban, Mambo/Salsa, Bachata, Konpa/Kizomba. Live concerts and 4 social rooms. Organized by JukanBaila. Cuban lineup announcements ongoing - check @bailanydancefest_ Instagram.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "bailan2-puro-cubano-drammen-2027",
@@ -666,7 +666,7 @@
       "country": "Bulgaria",
       "countryCode": "BG",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Samokov",
       "coordinates": [
         42.266452,
         23.606062
@@ -674,7 +674,7 @@
       "priceText": "€50-€140 (all-inclusive packages)",
       "priceFrom": 50,
       "currency": "EUR",
-      "ticketUrl": null,
+      "ticketUrl": "https://lospambosevents.com/balkan-salsa-bachata-kizomba-congress/prices",
       "website": "https://lospambosevents.com/balkan-salsa-bachata-kizomba-congress",
       "instagram": "https://www.instagram.com/balkansalsacongress/",
       "artists": [
@@ -683,7 +683,7 @@
       "description": "19th edition, over 4,000 dancers at Hotel Samokov, a ski resort at 1,300 m in the Rila mountains 70 km south of Sofia. All-inclusive: 4 nights, breakfasts, free open bar at night parties. 8 workshop halls, 5 dance floors until 5 AM, pool and afternoon parties, live concerts, Balkan competition (Rueda de Casino, LA, NY, solo, kids, zeibekiko). Around 130 acts, mostly schools from Bulgaria, Greece, Romania, Cyprus. NOTE: mixed styles, floors lean linear and bachata; Ivancito Camagüey is the one Cuban name; Cuban class count not published in advance.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "berlin-fiesta-elegante-2027",
@@ -698,7 +698,7 @@
       "country": "Germany",
       "countryCode": "DE",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel MOA Berlin",
       "coordinates": [
         52.52,
         13.405
@@ -706,14 +706,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://www.berlinsalsafestival.com/tickets",
+      "website": "https://www.berlinsalsafestival.com/",
+      "instagram": "https://www.instagram.com/fiesta_elegante/",
       "artists": [],
       "description": "One of Europe's most exciting Cuban salsa festivals - son, Afro-Cuban, salsa, timba, reggaeton with dancers from 30+ countries. Live concert by Maykel Blanco y su Salsa Mayor. Limited to 480 tickets.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "bologna-salsa-festival-2026",
@@ -758,7 +758,7 @@
       "country": "Canada",
       "countryCode": "CA",
       "region": "North America",
-      "venue": null,
+      "venue": "Fairmont Royal York Hotel",
       "coordinates": [
         43.645909,
         -79.381364
@@ -766,7 +766,7 @@
       "priceText": "Full Pass 188-458 CAD",
       "priceFrom": 188,
       "currency": "CAD",
-      "ticketUrl": null,
+      "ticketUrl": "https://www.canadasalsacongress.com/tickets",
       "website": "https://www.canadasalsacongress.com/",
       "instagram": "https://www.instagram.com/canadasalsaandbachatacongress",
       "artists": [
@@ -776,7 +776,7 @@
       "description": "21st edition, one of the oldest congresses in North America. Six days at the Fairmont Royal York: 3 ballrooms, ~60 international artists, 22 hours of social dancing, Canadian championships. NOTE: mainly linear salsa and bachata. Cuban content comes through Maykel Fonts and Jorge & Indira (timba and Afro-Cuban classes) plus a 2-hour Afro-Cuban intensive sold separately; social rooms stay linear.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "caribe-salsa-bachata-congress-punta-cana-2027",
@@ -791,22 +791,22 @@
       "country": "Dominican Republic",
       "countryCode": "DO",
       "region": "North America",
-      "venue": null,
+      "venue": "Sunscape Coco Punta Cana",
       "coordinates": [
         18.5601,
         -68.3725
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "From €120",
+      "priceFrom": 120,
+      "currency": "EUR",
       "ticketUrl": null,
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/caribesalsabachatacongress/",
       "artists": [],
       "description": "Caribe Salsa & Bachata Congress RD in Punta Cana. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "casineros-timba-fest-atlanta-2026",
@@ -851,7 +851,7 @@
       "country": "Mexico",
       "countryCode": "MX",
       "region": "North America",
-      "venue": null,
+      "venue": "Salón Kristal, Club Cumbres",
       "coordinates": [
         20.967076,
         -89.62374
@@ -880,7 +880,7 @@
       "description": "First anniversary weekend of Casino Ritmo Habana, a Mérida (Yucatán) school and community run by Daniel Ríos and Minda Partida. 14 teachers from Cuba, Venezuela, Argentina, Spain, USA and Mexico; content is son, casino, rueda, rumba and reparto, nothing linear. Saturday workshops 10-6 at Salón Kristal (Club Cumbres), Fiesta Sonera 9 PM-3 AM with Grupo La Siembra live and DJ El de la Yunfa; Sunday workshops at AME Events and closing social 6-10 PM. Sunday only available with the full pass. Optional Monday workshop with Leonardo Esmoris and Daniel y Minda sold separately.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
     },
     {
       "id": "crazy-4-la-timba-lisbon-2026",
@@ -900,19 +900,19 @@
         38.7223,
         -9.1393
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €27",
+      "priceFrom": 27,
+      "currency": "EUR",
+      "ticketUrl": "https://crazy4latimba.com/tickets/",
+      "website": "https://crazy4latimba.com/",
+      "instagram": "https://www.instagram.com/crazy4latimba/",
       "artists": [
         "Tumbakin"
       ],
       "description": "5th year - cornerstone of the global Timba community. 35+ Cuban dance workshops, live percussion, beach kick-off, Tumbakin concert. Venues at Timeout Market and Jazzy Dance Studios.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "crazy-dance-festival-2027",
@@ -927,22 +927,22 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Don Ángel",
       "coordinates": [
         41.6353,
         2.7066
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €99",
+      "priceFrom": 99,
+      "currency": "EUR",
+      "ticketUrl": "https://www.goandance.com/es/evento/9689/crazy-dance-festival-2027",
+      "website": "https://www.crazydancefestival.com/",
+      "instagram": "https://www.instagram.com/crazydancefestival/",
       "artists": [],
       "description": "Festival of bachata, salsa cubana, and timba held at Hotel Don Angel in Santa Susanna (Barcelona area). Features workshops with renowned Cuban artists like Pedrito & Giusy, plus international bachata names. Three days of workshops, shows, themed parties and pool parties on the Mediterranean coast.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "croatian-summer-salsa-rovinj-2027",
@@ -965,14 +965,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://www.crosalsafestival.com/tickets",
+      "website": "https://www.crosalsafestival.com/2026",
+      "instagram": "https://www.instagram.com/seasunsalsa/",
       "artists": [],
       "description": "20+ year running mixed-style Adriatic salsa festival with strong Cuban room. Featured Cuban artists.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl); verify with the organizer."
     },
     {
       "id": "cuba-in-tunisia-monastir-2027",
@@ -987,7 +987,7 @@
       "country": "Tunisia",
       "countryCode": "TN",
       "region": "Africa",
-      "venue": null,
+      "venue": "Skanes",
       "coordinates": [
         35.778,
         10.8262
@@ -995,14 +995,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://cit-festival.com/tickets",
+      "website": "https://cit-festival.com/",
+      "instagram": "https://www.instagram.com/cubaintunisia/",
       "artists": [],
       "description": "Cuba in Tunisia festival in Monastir. Listed in rueda.casino May 28 - June 4, 2026.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027. User to verify Instagram/website."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027. User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "cuba-me-mucho-angers-2027",
@@ -1017,22 +1017,22 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hippodrome du Lion d'Angers",
       "coordinates": [
         47.4784,
         -0.5632
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €120",
+      "priceFrom": 120,
+      "currency": "EUR",
+      "ticketUrl": "https://my.weezevent.com/cuba-me-mucho-7e-edition-angers",
+      "website": "https://bailaconamigos.com/soirees-et-evenements/cuba-me-mucho-angers/",
+      "instagram": "https://www.instagram.com/cuba_me_mucho/",
       "artists": [],
       "description": "30+ hours of workshops, 2 evening parties, dance afternoon, shows, conference, expo. Friday night theme: 1920s-30s. Hosted at hippodrome du Lion d'Angers.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "cuba-y-ya-festival-toulon-2026",
@@ -1047,7 +1047,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Gymnase des Lices",
       "coordinates": [
         43.129573,
         5.932272
@@ -1055,14 +1055,14 @@
       "priceText": "€12-€139",
       "priceFrom": 12,
       "currency": "EUR",
-      "ticketUrl": null,
+      "ticketUrl": "https://www.helloasso.com/associations/tumba-timba-event",
       "website": null,
       "instagram": "https://www.instagram.com/cuba_y_ya/",
       "artists": [],
       "description": "3rd edition, 100% Cuban: 20 hours of workshops and two party nights across salsa cubaine, son, rumba and afro. Slogan 'Vivez Cuba à Toulon'. Run by Tumba Timba Event, a Toulon association that also runs weekly practicas and trips (A Lo Cubano weekend in Porquerolles, Cuba trip in Feb 2027). Classes at the Gymnase des Lices, a municipal sports hall in central Toulon; partner hotel B&B 5 min from Toulon station, 2 min from the hall. Workshop timetable published end of August.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "cubajena-jena-2026",
@@ -1172,17 +1172,17 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Espace Maïtena",
       "coordinates": [
         43.4845,
         -1.518
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €18",
+      "priceFrom": 18,
+      "currency": "EUR",
+      "ticketUrl": "https://www.billetweb.fr/cuban-flow-festival-2026",
+      "website": "https://cubanflowfestival.com/",
+      "instagram": "https://www.instagram.com/cubanflowfestival/",
       "artists": [
         "Alain Rueda",
         "Katerina Mik",
@@ -1205,7 +1205,7 @@
       "description": "3rd edition. Cuban Flow Festival in Anglet, France. Imagined and created by Alain Rueda and Katerina Mik. Cuban dance festival to connect with Cuban music and dance, with masterclasses and energy-filled workshops adapted to all levels. Sunday includes live music classes (piano, congas, timbales, brass). 2025 lineup shown as proxy - 2026 announcements via @cubanflowfestival.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "cubaneo-festival-nurnberg-2027",
@@ -1220,22 +1220,22 @@
       "country": "Germany",
       "countryCode": "DE",
       "region": "Europe",
-      "venue": null,
+      "venue": "Villa Leon and three dance schools in Fürth",
       "coordinates": [
         49.4521,
         11.0767
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €10",
+      "priceFrom": 10,
+      "currency": "EUR",
+      "ticketUrl": "https://www.cubaneo-el-festival.de/buchen.html",
+      "website": "https://www.cubaneo-el-festival.de/",
+      "instagram": "https://www.instagram.com/cubaneo_el_festival/",
       "artists": [],
       "description": "Cuban salsa festival in Nuremberg with limited tickets and intimate atmosphere.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "cubanero-novi-sad-2027",
@@ -1250,7 +1250,7 @@
       "country": "Serbia",
       "countryCode": "RS",
       "region": "Europe",
-      "venue": null,
+      "venue": "SPENS Sports and Business Center",
       "coordinates": [
         45.2671,
         19.8335
@@ -1258,14 +1258,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://cubanero.net/tickets/",
+      "website": "https://cubanero.net/",
+      "instagram": "https://www.instagram.com/cubanerosalsa/",
       "artists": [],
       "description": "The biggest Salsa Festival in Serbia. International Festival of Cuban Music and Dance. 40+ workshops in 4 different locations (Allegro Dance, Centre, Studio M, Cafe Havana, Svetozar Markovic Gymnasium, Katolicka Porta Square, Ernesto Cafe), 4 evening parties, 4 open-air hotspot parties, live concert. Cuban Salsa x Afro x Bachata x Kizomba x Reggaeton. 2025 proxy lineup shown - 2026 announcements via @cubanerosalsa Instagram.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "cubanital-afro-cuban-event-bari-2027",
@@ -1280,7 +1280,7 @@
       "country": "Italy",
       "countryCode": "IT",
       "region": "Europe",
-      "venue": null,
+      "venue": "UNA HOTELS Regina Bari",
       "coordinates": [
         41.125784,
         16.862029
@@ -1288,14 +1288,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/en/event/9568/cubanital-2027",
       "website": null,
       "instagram": "https://www.instagram.com/cubanital_afrocubanevent",
       "artists": [],
       "description": "Described by the organisers as a study event rather than a festival: intensive workshops on Afro-Cuban culture, live music, social nights and a rumba competition (rare outside Cuba). Held at UNA Hotels Regina Bari on the Adriatic coast of Puglia in mid-January.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "cubasi-congress-valledoria-2027",
@@ -1310,7 +1310,7 @@
       "country": "Italy",
       "countryCode": "IT",
       "region": "Europe",
-      "venue": null,
+      "venue": "Marina Manna Hotel & Club Village",
       "coordinates": [
         40.928283,
         8.824584
@@ -1327,7 +1327,7 @@
       "description": "2nd edition (first ran in May 2026). Grew out of CubaSi, a long-running Cuban music night at the Marina Manna Hotel & Club Village on the north coast of Sardinia, minutes from San Pietro a Mare beach facing the Gulf of Asinara. Three rooms of classes, four socials, a pool party, live concert by Tumbao de Primera, Cuban food alongside Sardinian. First edition had a heavily Cuban teaching roster. Nearest airport Alghero; ferries from Genoa, Civitavecchia or Barcelona. Web presence is thin; contact organisers directly (Instagram @cubasiacademidancesport).",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
     },
     {
       "id": "cultural-social-dance-fest-copenhagen-2026",
@@ -1342,7 +1342,7 @@
       "country": "Denmark",
       "countryCode": "DK",
       "region": "Europe",
-      "venue": null,
+      "venue": "KU.BE Hus for kultur og bevaegelse",
       "coordinates": [
         55.682778,
         12.505715
@@ -1364,7 +1364,7 @@
       "description": "1st edition, organised by Bachata Dominicana Copenhagen. Held at KU.BE, a municipal house of culture and movement in Frederiksberg. No shows, no competition: the point is for different dance communities to meet. 12+ hours of workshops in two rooms and 13+ hours of social dancing on two floors, Friday to Sunday evening; Friday opens with a free public dance night. Cuban side: Ramses y Sandra (casino and son cubano). Also bachata, merengue (Juan Pablo Paredes), konpa (Mariana), kizomba (Daniela), son dominicano and bolero (Frank E), DJ la Desi. NOTE: mixed styles, bachata-led.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
     },
     {
       "id": "dcuba-international-congress-2026",
@@ -1379,7 +1379,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Don Ángel",
       "coordinates": [
         41.6358,
         2.7106
@@ -1387,9 +1387,9 @@
       "priceText": "€150 / €330 with hotel",
       "priceFrom": 150,
       "currency": "EUR",
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://www.dcubacongress.com/en/je-r%C3%A9serve",
+      "website": "https://www.dcubacongress.com/",
+      "instagram": "https://www.instagram.com/dcubacongress/",
       "artists": [
         "Maykel Fonts",
         "Yusimi Moya Rodríguez",
@@ -1418,7 +1418,7 @@
       "description": "Cuban congress on the Costa Brava. Hotel Don Ángel privatized for the event - 100% Cuban vibe. Direct from Cuba lineup.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "dame-cuba-tenerife-2026",
@@ -1471,14 +1471,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://damevalencia.com/eventos/dame-festival-2027",
+      "website": "https://damefestival.es/?lang=en#inicio",
+      "instagram": "https://www.instagram.com/damefestival/",
       "artists": [],
       "description": "Pure Cuban salsa, timba, son, rumba and guaguancó. 'El mejor festival de Valencia'. Bootcamp directed by Diana Rodriguez. Family atmosphere.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl); verify with the organizer."
     },
     {
       "id": "dance-congress-hamburg-2026",
@@ -1523,7 +1523,7 @@
       "country": "United Kingdom",
       "countryCode": "GB",
       "region": "Europe",
-      "venue": null,
+      "venue": "MidKent College, Medway Campus",
       "coordinates": [
         51.38717,
         0.546161
@@ -1531,7 +1531,7 @@
       "priceText": "Full Pass from £145",
       "priceFrom": 145,
       "currency": "GBP",
-      "ticketUrl": null,
+      "ticketUrl": "https://www.tickettailor.com/events/duke/1914908",
       "website": "https://danceukevolution.com/",
       "instagram": "https://www.instagram.com/danceukevolution/",
       "artists": [
@@ -1542,7 +1542,7 @@
       "description": "Halloween weekender on the MidKent College Medway campus: a 300-seat theatre with retractable seating for shows and dancing, sprung-floor studios, free parking, college kitchens serving halal, vegetarian, vegan and gluten-free food. Four rooms every night (general salsa, Cuban salsa, bachata, kizomba) plus an Alternative Madness room on Saturday, which is Halloween itself with costume competition and two show blocks. Seven DJs. Cuban side: Rueda Libre (London), Luanda Pau (Afro-Cuban), Jacopo y Linda. 2025 edition had a live concert by Son Con Ron. 10 min walk from Gillingham station, direct trains from London. NOTE: mixed styles event with a dedicated Cuban room.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "dusseldorf-international-salsa-2026",
@@ -1587,7 +1587,7 @@
       "country": "United Arab Emirates",
       "countryCode": "AE",
       "region": "Asia",
-      "venue": null,
+      "venue": "Millennium Lakeview Hotel",
       "coordinates": [
         25.074282,
         55.188562
@@ -1595,14 +1595,14 @@
       "priceText": "Full Pass AED 549-599",
       "priceFrom": 549,
       "currency": "AED",
-      "ticketUrl": null,
+      "ticketUrl": "https://eldostressalsafestival.com/pages/early-bird-full-pass",
       "website": "https://eldostressalsafestival.com/",
       "instagram": "https://www.instagram.com/eldostressalsafestival",
       "artists": [],
       "description": "Entirely Cuban festival at the Millennium Lakeview Hotel (Dubai Investment Park): timba, rueda de casino, Afro-Cuban, rumba, son and reparto plus styling and body movement, nothing linear and no bachata room. 30+ workshops in 3 rooms from first steps to master level, 5 parties across 4 days. Centrepiece is the Sunday afternoon Grand Pool Party with a live band, followed by a separate closing night. Everything in one hotel.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "el-que-sabe-sabe-anzio-2026",
@@ -1617,7 +1617,7 @@
       "country": "Italy",
       "countryCode": "IT",
       "region": "Europe",
-      "venue": null,
+      "venue": "Plan B Club",
       "coordinates": [
         41.462894,
         12.621734
@@ -1649,7 +1649,7 @@
       "description": "10th edition, run by Salsa Crew at the Plan B Music Club in Anzio, south of Rome. Two days with workshops for all levels in 4 rooms simultaneously, 20+ international artists, Royal Dance Competition and the Saturday Latin Star Night. Strong Cuban line-up (Maykel Fonts, Jenniselt Galata, Wilmer y María, Gerardo De Armas) alongside a large Italian contingent. NOTE: announced as the 'salsa division' line-up, so other styles are likely to follow. Partner hotels from about €29/night. Info: info@salsacrew.it.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
     },
     {
       "id": "el-sol-festival-warsaw-2026",
@@ -1664,17 +1664,17 @@
       "country": "Poland",
       "countryCode": "PL",
       "region": "Europe",
-      "venue": null,
+      "venue": "Sound Garden Hotel",
       "coordinates": [
         52.2297,
         21.0122
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €170",
+      "priceFrom": 170,
+      "currency": "EUR",
+      "ticketUrl": "https://www.goandance.com/en/event/9085/el-sol-festival-fall-edition-2026",
+      "website": "https://elsolfestival.pl/en/",
+      "instagram": "https://www.instagram.com/elsolfestivals/",
       "artists": [
         "Maykel Fonts",
         "Marco Ferrigno"
@@ -1682,7 +1682,7 @@
       "description": "el Sol Festival Fall Edition - mixed-style salsa festival - one of the biggest Polish dance brands. 100+ hours of workshops in 3 dance styles. Run by @elsolfestivals brand which also runs Bachata Festival, Warsaw Zouk Festival, etc. Strong Cuban presence.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "albacete-en-salsa-2027",
@@ -1697,22 +1697,22 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Palacio Albacete & Spa",
       "coordinates": [
         38.9943,
         -1.8585
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €55",
+      "priceFrom": 55,
+      "currency": "EUR",
+      "ticketUrl": "https://www.goandance.com/es/evento/9465/xviii-encuentro-internacional-de-ritmos-latinos-albacete-en-salsa-2027",
+      "website": "https://albaceteensalsa.albaceteporcuba.com/",
+      "instagram": "https://www.instagram.com/albaceteensalsa/",
       "artists": [],
       "description": "Encuentro Internacional de Ritmos Latinos Albacete en Salsa in Albacete. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "enruedate-congress-santa-susanna-2026",
@@ -1727,7 +1727,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Don Ángel",
       "coordinates": [
         41.632765,
         2.720243
@@ -1735,7 +1735,7 @@
       "priceText": "Full-board hotel packages",
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.asociacionruedadecasino.com/tienda",
       "website": "https://www.asociacionruedadecasino.com/",
       "instagram": "https://www.instagram.com/asociacionruedadecasino/",
       "artists": [
@@ -1746,7 +1746,7 @@
       "description": "Congress run by the Asociación Rueda de Casino at Hotel Don Angel, a seafront hotel on the Maresme coast with everyone on full board. Syllabus is strictly son, casino, rueda de casino, timba and musicality, in three halls at different levels from Friday dinner to Sunday lunch. Centrepiece is the 5th Copa Internacional de Rueda de Casino, judged in two phases (choreography and improvisation) by an international jury, with a relaxed category Friday and the main competition Saturday, each followed by a social party. Station 12 min walk, direct trains from Barcelona.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "festival-cultura-cubana-montesilvano-2027",
@@ -1761,7 +1761,7 @@
       "country": "Italy",
       "countryCode": "IT",
       "region": "Europe",
-      "venue": null,
+      "venue": "Grand Hotel adriatico",
       "coordinates": [
         42.5147,
         14.1467
@@ -1770,13 +1770,13 @@
       "priceFrom": null,
       "currency": null,
       "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "website": "https://www.festivalculturacubana.it/",
+      "instagram": "https://www.instagram.com/fcc_festivalculturacubana/",
       "artists": [],
       "description": "Festival Cultura Cubana FCC in Montesilvano.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027. User to verify Instagram/website."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027. User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, venue); verify with the organizer."
     },
     {
       "id": "festival-de-cuba-stuttgart-2026",
@@ -1791,17 +1791,17 @@
       "country": "Germany",
       "countryCode": "DE",
       "region": "Europe",
-      "venue": null,
+      "venue": "Sängerhalle",
       "coordinates": [
         48.7758,
         9.1829
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €89",
+      "priceFrom": 89,
+      "currency": "EUR",
+      "ticketUrl": "https://www.goandance.com/en/event/9563/festival-de-cuba-stuttgart-germany-2026-21st-edition",
+      "website": "https://cubafestival-stuttgart.de/",
+      "instagram": "https://www.instagram.com/festivaldecuba/",
       "artists": [
         "Osbanis",
         "Anneta",
@@ -1817,7 +1817,7 @@
       "description": "21st International Festival de Cuba Stuttgart. 'Lo Mejor de Cuba' with Cuban dancers from 25+ nations. 3 days of incredible parties, 35+ workshops, 1000+ square meters of workshop space.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "festival-de-la-salsa-havana-2027",
@@ -1832,7 +1832,7 @@
       "country": "Cuba",
       "countryCode": "CU",
       "region": "North America",
-      "venue": null,
+      "venue": "Club 500",
       "coordinates": [
         23.1136,
         -82.3666
@@ -1842,12 +1842,12 @@
       "currency": null,
       "ticketUrl": null,
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/elfestivaldelasalsaencuba/",
       "artists": [],
       "description": "10th anniversary edition. Concerts by Cuba's top orchestras, salsa/rumba/timba workshops, performances, pool parties. Hotel Memorias Miramar.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, venue); verify with the organizer."
     },
     {
       "id": "el-son-se-viste-de-gala-santa-susanna-2026",
@@ -1862,7 +1862,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Don Ángel",
       "coordinates": [
         41.632765,
         2.720243
@@ -1870,7 +1870,7 @@
       "priceText": "Residential pass from €320",
       "priceFrom": 320,
       "currency": "EUR",
-      "ticketUrl": null,
+      "ticketUrl": "https://my.weezevent.com/el-son-se-viste-de-gala-festival-1",
       "website": null,
       "instagram": "https://www.instagram.com/elsonsevistedegala",
       "artists": [
@@ -1880,7 +1880,7 @@
       "description": "Small residential weekend at Hotel Don Angel on the Catalan coast, organised by the association Suena Cubano and presented by Cuban tresero and sonero Mixael Cabrera. Son is the point: 18 workshops, all Cuban (son cubano, rueda de son, casino, timba a contratiempo, Yoruba dances, conga, rumba guaguancó, lady style son, danzón, cha cha chá) in three rooms named after Benny Moré, Arsenio Rodríguez and Ignacio Piñeiro, about half taught with live musicians. Friday welcome cocktail and show 'Lo Mejor de Mí', Orquesta Típica, Saturday 'noche elegante' with midnight concert by Mixael Cabrera, DJs until 3-4 AM. Meals included, everyone in the same hotel.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "casinea-festival-bogota-2026",
@@ -1903,14 +1903,14 @@
       "priceText": "80,000-490,000 COP",
       "priceFrom": 80000,
       "currency": "COP",
-      "ticketUrl": null,
+      "ticketUrl": "https://iledanza.com/categoria-producto/casinea/",
       "website": "https://iledanza.com/casinea/",
       "instagram": "https://www.instagram.com/casineafest/",
       "artists": [],
       "description": "10th edition, run by Ile Danza (Bogotá school founded 2012: casino, rueda de casino, son cubano, Afro-Cuban folklore, plus bachata and Colombian salsa). Built around competition: published rulebook, practical guide, archived judges' score tables since 2021, press conference. Pass ladder: Full Pass (everything + up to 2 competition categories), Experience Pass (no competing), Learning Pass (workshops only), Vs Pass (competition only). Workshops, competitions, artistic presentations and social spaces.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl); verify with the organizer."
     },
     {
       "id": "festival-la-speciale-renens-2026",
@@ -1955,22 +1955,22 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Le Sing Sing",
       "coordinates": [
         43.6047,
         1.4442
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €50",
+      "priceFrom": 50,
+      "currency": "EUR",
+      "ticketUrl": "https://rgtfestival.com/billetterie",
+      "website": "https://rgtfestival.com/",
+      "instagram": "https://www.instagram.com/festivalruedaglobetrotters/",
       "artists": [],
       "description": "Festival Rueda GlobeTrotters VOL.8 in Toulouse, France.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website."
+      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "festival-salsa-cubana-munich-2026",
@@ -2017,22 +2017,22 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Don Ángel",
       "coordinates": [
         41.6367,
         2.7136
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "From €100",
+      "priceFrom": 100,
+      "currency": "EUR",
       "ticketUrl": null,
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/vamosabailarcongress/",
       "artists": [],
       "description": "Festival Social Costa Dance in Santa Susanna. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "festivalito-leipzig-2026",
@@ -2077,7 +2077,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Espace Daudet",
       "coordinates": [
         44.1389,
         4.8081
@@ -2085,9 +2085,9 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://my.weezevent.com/fic-2026",
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/fic_festival_cubano/",
       "artists": [
         "Sueno de Cristal",
         "Tania Pantoja",
@@ -2098,7 +2098,7 @@
       "description": "Festival International Cubano (FIC) - the leading Cuban festival in Europe. Annual since 2014, organized by Yoann Henry, president of Association Passion Timba. 4-day program with 28 nationalities, 3 Cuban bands, dance classes by world's best teachers, multiple Cuban concerts. Espace Daudet venue. Friday: outdoor before-party + Columbia contest + Cuban concert. Saturday: workshops + outdoor before-party + artist shows. Sunday: workshops + Battle DJs + Cuban concert. 2026 special guests Sueño de Cristal and Tania Pantoja announced. Historical proxy from 2024.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "firenze-mambo-congress-2026",
@@ -2143,7 +2143,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Station danse",
       "coordinates": [
         48.7875,
         2.3928
@@ -2151,14 +2151,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.helloasso.com/associations/los-ases-de-la-timba/evenements/francia-cuba-festival-2027-1",
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/franciacubafestival/",
       "artists": [],
       "description": "Francia Cuba Festival - 50 Workshops, 3 Nights, 4 Halls. Salsa, Reggaeton, Afro Rumba, Rueda, plus Bachata, Kompa, Kizomba, Semba. 4 rooms 4 atmospheres: Salsa Cuba, Salsa Son & Retro, Tropical Hall, Bachata Kizomba. Organized by Philippe Gomis. Hotel: Séjours & affaires Apparthotel.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "fusafes-fukuoka-salsa-festival-2026",
@@ -2203,7 +2203,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Playa de La Luz",
       "coordinates": [
         36.628198,
         -6.38441
@@ -2211,14 +2211,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/en/event/9780/gaditaneando-a-lo-cubano-2027",
       "website": null,
       "instagram": "https://www.instagram.com/gaditaneandoalocubano",
       "artists": [],
       "description": "Cuban culture weekend in Rota, a coastal town in the province of Cádiz on the Atlantic, one of the few Cuban events on that coast. Built around salsa, son and reparto (the newest Cuban style, still rare on festival programmes outside Cuba), with Dominican and traditional bachata alongside. Held at Hotel Playa de la Luz. Nearest airport Seville.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "guaguanco-festival-lloret-2027",
@@ -2233,7 +2233,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Evenia Hotels",
       "coordinates": [
         41.7005,
         2.8444
@@ -2241,14 +2241,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://www.goandance.com/en/event/9474/guaguanco-festival-2027-gold-edition",
+      "website": "https://www.guaguancofestival.com/",
+      "instagram": "https://www.instagram.com/guaguancofestival/",
       "artists": [],
       "description": "Largest international Cuban music and culture festival in Europe. 70th anniversary celebration of Orquesta Revé. Live performances, traditional son groups, folk shows. Attendees from 46+ countries.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "guarachando-festival-strasbourg-2027",
@@ -2263,7 +2263,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Pavillon Joséphine",
       "coordinates": [
         48.592538,
         7.774807
@@ -2271,7 +2271,7 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://my.weezevent.com/guarachando-festival-4-1",
       "website": null,
       "instagram": "https://www.instagram.com/guarachando_festival/",
       "artists": [
@@ -2293,7 +2293,7 @@
       "description": "4th edition, run by the Salsa Guarachando school at the Pavillon Joséphine in the Parc de l'Orangerie. 25 hours of classes Friday to Sunday: Cuban salsa, son, rueda de casino, reparto, reggaeton, Afro-contemporary and fusion, plus a dedicated Cuban folklore room taught to live percussion (rumba cubana, ciclo congo, arará, yoruba). Three parties and two pre-parties with international DJs, a Rumba Abierta concert and a DJ contest.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "gusto-cubano-tapolca-2026",
@@ -2338,7 +2338,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Salle des fêtes",
       "coordinates": [
         43.915804,
         2.033046
@@ -2346,7 +2346,7 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.billetweb.fr/hasta-santiago-a-pie-3",
       "website": null,
       "instagram": null,
       "artists": [
@@ -2362,7 +2362,7 @@
       "description": "3rd edition in the Tarn (near Albi), built around the dance and music of Santiago de Cuba with a small, family, 'a lo cubano' atmosphere. Intensive workshops with international teachers; NOTE: classes require solid salsa basics, no beginner track. Evenings with live concerts and Cuban-scene DJs. Held at the Salle des fêtes of Marssac-sur-Tarn; nearest airport Toulouse.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "havana-en-belgrado-2026",
@@ -2377,22 +2377,22 @@
       "country": "Serbia",
       "countryCode": "RS",
       "region": "Europe",
-      "venue": null,
+      "venue": "DKC Majdan and Zappa Barka",
       "coordinates": [
         44.7866,
         20.4489
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €109",
+      "priceFrom": 109,
+      "currency": "EUR",
+      "ticketUrl": "https://my.weezevent.com/havana-en-belgrado-13",
+      "website": "https://www.havanaenbelgrado.com/",
+      "instagram": "https://www.instagram.com/havanaenbelgrado/",
       "artists": [],
       "description": "Havana en Belgrado festival in Belgrade, Serbia. Listed in rueda.casino November 5-8, 2026.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website."
+      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "havana-to-melbourne-cuban-festival-2026",
@@ -2529,22 +2529,22 @@
       "country": "Hungary",
       "countryCode": "HU",
       "region": "Europe",
-      "venue": null,
+      "venue": "Balaton Szabadidő és Konferencia Központ",
       "coordinates": [
         46.96,
         17.8919
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €120",
+      "priceFrom": 120,
+      "currency": "EUR",
+      "ticketUrl": "https://hssf.eu/foglalas/",
+      "website": "https://hssf.eu/",
+      "instagram": "https://www.instagram.com/hssfhungary/",
       "artists": [],
       "description": "Hungarian Summer Salsa and Sensual Festival (HSSF) in Balatonfüred. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "international-salsa-bachata-kizomba-congress-sofia-2027",
@@ -2559,22 +2559,22 @@
       "country": "Bulgaria",
       "countryCode": "BG",
       "region": "Europe",
-      "venue": null,
+      "venue": "Park Hotel Moskva",
       "coordinates": [
         42.6977,
         23.3219
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €25",
+      "priceFrom": 25,
+      "currency": "EUR",
+      "ticketUrl": "https://lospambosevents.com/international-salsa-bachata-kizomba-congress/prices",
+      "website": "https://lospambosevents.com/international-salsa-bachata-kizomba-congress",
+      "instagram": "https://www.instagram.com/internationalsalsacongress/",
       "artists": [],
       "description": "International Salsa Bachata Kizomba Congress in Sofia. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "istanbul-social-dance-marathon-2026",
@@ -2589,7 +2589,7 @@
       "country": "Turkey",
       "countryCode": "TR",
       "region": "Europe",
-      "venue": null,
+      "venue": "The Green Park Pendik Hotel & Convention Center",
       "coordinates": [
         41.006381,
         28.975872
@@ -2597,14 +2597,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/en/event/8567/8th-istanbul-social-dance-marathon-7th-12th-october-2026-turkiye",
       "website": "https://www.dancemarathonistanbul.com/",
       "instagram": "https://www.instagram.com/dancemarathonistanbul",
       "artists": [],
       "description": "8th edition. Built around non-stop social dancing rather than a workshop timetable, all inside one hotel (The Green Park Pendik Hotel & Convention Center). NOTE: the October 2026 edition has been POSTPONED with no replacement dates announced; salsa/bachata mixed event.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "istanbul-world-dance-congress-2027",
@@ -2619,7 +2619,7 @@
       "country": "Turkey",
       "countryCode": "TR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Pullman Istanbul Hotel and Convention Center",
       "coordinates": [
         41.0082,
         28.9784
@@ -2627,14 +2627,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://www.goandance.com/en/event/9956/istanbul-world-dance-congress-2027",
+      "website": "https://istanbulworlddancecongress.com/",
+      "instagram": "https://www.instagram.com/istanbulworlddancecongress/",
       "artists": [],
       "description": "Istanbul World Dance Congress in Istanbul. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "la-clave-festival-lloret-2026",
@@ -2649,7 +2649,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Guitart Central Park Aqua Resort",
       "coordinates": [
         41.69735,
         2.839239
@@ -2657,7 +2657,7 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/es/evento/8764/la-clave-festival-2026-premium-edition",
       "website": "https://laclavefestival.com/",
       "instagram": "https://www.instagram.com/laclave_festival/",
       "artists": [
@@ -2667,7 +2667,7 @@
       "description": "5th edition (5th anniversary) at Hotel Guitart Central Park Aqua Resort. Non-stop winter weekend with 40+ artists across salsa and bachata, shows, and live music: Orquesta Tumbakin presenting a new album with guest singer Helen Fabelo. Hosts the 4th Campeonato de España de Rueda de Casino y Casino en Pareja, making it a fixture for competing rueda teams. Family-friendly, mixed atmosphere.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "la-descarga-augsburg-2026",
@@ -2682,22 +2682,22 @@
       "country": "Germany",
       "countryCode": "DE",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hep Cat Club",
       "coordinates": [
         48.3705,
         10.8978
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €149",
+      "priceFrom": 149,
+      "currency": "EUR",
+      "ticketUrl": "https://tickets.baila-augsburg.de/event/la-descarga-festival/",
+      "website": "https://www.baila-augsburg.de/ladescarga",
+      "instagram": "https://www.instagram.com/ladescarga.cubanmeetsdominican/",
       "artists": [],
       "description": "3rd edition of La Descarga - Cuban Meets Dominican Festival. By baila Augsburg. Caribbean energy weekend. Friday: 5pm bootcamp. Workshops + socials. Sunday wraps ~5-6pm. Timba meets Bachata, Son meets Merengue, Bolero, Chachachá, Reggaetón.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "la-dosis-london-2027",
@@ -2712,7 +2712,7 @@
       "country": "United Kingdom",
       "countryCode": "GB",
       "region": "Europe",
-      "venue": null,
+      "venue": "Saw Swee Hock Centre",
       "coordinates": [
         51.5074,
         -0.1278
@@ -2721,13 +2721,13 @@
       "priceFrom": null,
       "currency": null,
       "ticketUrl": null,
-      "website": null,
+      "website": "https://ruedalibre.co.uk/la-dosis/",
       "instagram": null,
       "artists": [],
       "description": "Workshops | Parties | Live Music | Rumba Abierta | Casino Boot Camp | Rueda Olympics. 19+ world-class artists + DJs. 3 full days of workshops with live music across all levels. Casino Boot Camp by Ramses and Sandra. 2 epic parties at Saw Swee Hock Student Centre, central London. Friendly, inclusive community by Rueda Libre. Quality Cuban dance with great artists in welcoming and safe space.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (website, venue); verify with the organizer."
     },
     {
       "id": "la-gozadera-weekend-benidorm-2026",
@@ -2742,7 +2742,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Gran Hotel Bali & Spa",
       "coordinates": [
         38.540625,
         -0.129093
@@ -2750,14 +2750,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://salsero.es/eventshop/9761",
       "website": null,
       "instagram": "https://www.instagram.com/lagozaderaweekend/",
       "artists": [],
       "description": "November weekend at the Gran Hotel Bali & Spa in Benidorm, billed as 'el festival del sabor'. Salsa and bachata share the programme; line-up usually announced closer to the date. NOTE: mixed salsa/bachata, not a pure Cuban event.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "la-gozadera-xl-troyes-2027",
@@ -2772,7 +2772,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Latinea",
       "coordinates": [
         48.297163,
         4.074626
@@ -2780,14 +2780,14 @@
       "priceText": "First 20 Full Passes discounted",
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.helloasso.com/associations/latinea/evenements/la-gozadera-xl-2nd-edition",
       "website": null,
       "instagram": "https://www.instagram.com/lagozadera.xl",
       "artists": [],
       "description": "2nd edition at Latinea in Saint-André-les-Vergers on the edge of Troyes (Champagne), about 1.5 h from Paris by train. Premise: 'cuando La Habana se cruza con Santo Domingo', Cuban salsa, casino and timba on one side and Dominican bachata on the other. Bigger line-up than the first edition and a Friday night party added.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "la-klave-dortmund-2026",
@@ -2802,22 +2802,22 @@
       "country": "Germany",
       "countryCode": "DE",
       "region": "Europe",
-      "venue": null,
+      "venue": "Dietrich Keuning Haus",
       "coordinates": [
         51.5136,
         7.4653
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "priceText": "From €130",
+      "priceFrom": 130,
+      "currency": "EUR",
+      "ticketUrl": "https://pretix.eu/laklavefestival/2026/5036746/",
+      "website": "https://www.laklavefestival.de/",
+      "instagram": "https://www.instagram.com/laklavefestival/",
       "artists": [],
       "description": "La Klave Festival in Dortmund, Germany. Listed in rueda.casino November 11-13, 2026.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "la-verdad-latin-event-scanzano-2027",
@@ -2832,7 +2832,7 @@
       "country": "Italy",
       "countryCode": "IT",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Porto Greco",
       "coordinates": [
         40.2489,
         16.6968
@@ -2842,12 +2842,12 @@
       "currency": null,
       "ticketUrl": null,
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/laverdad_latinevent/",
       "artists": [],
       "description": "La Verdad Latin Event in Scanzano Jonico. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, venue); verify with the organizer."
     },
     {
       "id": "la-vibra-cubana-warsaw-2026",
@@ -2862,7 +2862,7 @@
       "country": "Poland",
       "countryCode": "PL",
       "region": "Europe",
-      "venue": null,
+      "venue": "Abra Studio",
       "coordinates": [
         52.246066,
         21.002898
@@ -2883,7 +2883,7 @@
       "description": "Cuban-only weekend in central Warsaw run by Abra Studio in its own studios (which of its two central premises is still to be announced). Styles: salsa cubana, timba, son, afro-Cuban, folklore and saoco; bachata, kizomba and zouk deliberately excluded. Three of five announced teachers are Cuban. Pitched at experienced dancers, beginners and enthusiasts. Adults only. Chopin airport 8 km from the centre.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
     },
     {
       "id": "last-summer-dance-festival-sagone-2026",
@@ -2898,7 +2898,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Camping Le Sagone",
       "coordinates": [
         42.115915,
         8.689699
@@ -2906,7 +2906,7 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://my.weezevent.com/last-summer-dance-festival-6eme-edition",
       "website": null,
       "instagram": "https://www.instagram.com/lastsummerdancefestival/",
       "artists": [
@@ -2924,7 +2924,7 @@
       "description": "6th edition, run since 2018 by the Corsican'Clave association (around DJ Danael Serre). Held at Camping Le Sagone, a 4-star campsite on the Corsican coast 40 min from Ajaccio: pools, outdoor stage, dance rooms near the sea, childcare, massages, a dedicated beginners' room all weekend. About 40 hours of classes in 3 spaces, 3 evening parties, 2 pool parties, school shows Friday and artist gala Saturday. NOTE: billed as SBK (salsa, bachata, kizomba) but the salsa taught is Cuban. Family-friendly weekend rather than a congress.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "latin-dance-festival-lloret-2026",
@@ -2939,7 +2939,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Evenia Hotels",
       "coordinates": [
         41.704413,
         2.837432
@@ -2947,7 +2947,7 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/es/evento/9040/latin-dance-festival-2026",
       "website": "https://beacons.ai/_ldf",
       "instagram": "https://www.instagram.com/latin_dance_festival/",
       "artists": [
@@ -2956,7 +2956,7 @@
       "description": "Run by Adrián and Anita (six-time world salsa champions) each December at the Evenia Olympic hotel in Lloret de Mar. Built around surprises: unannounced parties, contests, themed set pieces (past editions included a haunted house and a Squid Game pastiche), nightly show programme hosted by Adrián, with a mystery dancer and a mystery celebrity guest each year. NOTE: mixed styles (Cuban salsa, casino, timba alongside NY/LA on1/on2); WTP European Meeting runs alongside.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "latin-garden-festival-helsinki-2026",
@@ -2971,7 +2971,7 @@
       "country": "Finland",
       "countryCode": "FI",
       "region": "Europe",
-      "venue": null,
+      "venue": "Kulttuuritehdas Korjaamo",
       "coordinates": [
         60.184207,
         24.919796
@@ -2979,14 +2979,14 @@
       "priceText": "Full Pass €120-€165",
       "priceFrom": 120,
       "currency": "EUR",
-      "ticketUrl": null,
+      "ticketUrl": "https://appwedance.com/en/events/latin-garden-festival-2026-a7882065",
       "website": null,
       "instagram": "https://www.instagram.com/latingardenhelsinki",
       "artists": [],
       "description": "Three nights at Korjaamo, a converted tram depot in central Helsinki (Vintti and Kulmasali halls). Workshops by day, party each night, Saturday running to 3:30 AM. 2026 edition is bigger than before with more artists and an extra night. Ticket types: Full, Day, Party (3 nights), single party, workshop packs. NOTE: Cuban content (casino, timba, rumba, afro) sits alongside a broader Latin/bachata programme.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "loco-festival-valencia-2026",
@@ -3001,7 +3001,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Bailosophy, Tropicuba and Caribbean's",
       "coordinates": [
         39.469707,
         -0.376335
@@ -3009,14 +3009,14 @@
       "priceText": "€30-€75",
       "priceFrom": 30,
       "currency": "EUR",
-      "ticketUrl": null,
+      "ticketUrl": "https://my.weezevent.com/loco-festival-anniversary",
       "website": "https://loco-valencia-salsa.es/loco-festival-5/",
       "instagram": "https://www.instagram.com/locovalenciasalsa/",
       "artists": [],
       "description": "First festival by Loco Valencia Salsa, a Cuban and Afro-Cuban academy (casino, rueda, son, rumba guaguancó, orisha repertoire) celebrating its 5th birthday. Four days across four venues in three districts: Thursday opening at a Caribbean club's pure Cuban timba night, Friday VIP bootcamp and 'Cuba Libre' welcome party, Saturday and Sunday morning workshops in two rooms (fundamentals and advanced), Sunday afternoon open rumba and white party in the Jardín del Turia riverbed park. NOTE: parties end around 11 PM Friday and Saturday; no line-up or festival hotel published yet.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "los-dos-abuelos-festival-2027",
@@ -3031,7 +3031,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Don Angel",
       "coordinates": [
         41.6353,
         2.7066
@@ -3039,14 +3039,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/es/evento/9436/los-dos-abuelos-festival-2027-el-festival-internacional-de-la-rumba-y-el-son",
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/losdosabueloss/",
       "artists": [],
       "description": "2nd edition Cuban festival in the Barcelona area, organized by Zaragozando a lo Cubano. Dedicated to the roots of Cuban dance and music with 30+ workshops covering rumba guaguancó, son cubano, palo congo, timba cubana, casino, and afro-cuban styles. Includes shows, dance competitions, pool party, and themed socials. Family-friendly atmosphere at Hotel Don Angel.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "love-dance-festival-lloret-feb-2027",
@@ -3061,7 +3061,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Guitart Central Park Aqua Resort",
       "coordinates": [
         41.69735,
         2.839239
@@ -3069,7 +3069,7 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/en/event/9748/love-dance-festival-15-edition-february-2027-edicion-valentine-s-day-and-carnival-edition",
       "website": "https://lovedancefestival.com/",
       "instagram": "https://www.instagram.com/p/DbI9N6KMudd/",
       "artists": [
@@ -3090,7 +3090,7 @@
       "description": "15th edition. Runs twice a year (winter and summer) at the Hotel Guitart Central Park Aqua Resort. General Latin weekend built on salsa and bachata, open to first-timers as well as experienced dancers; Cuban salsa, casino and timba appear on the programme. NOTE: mixed styles, bachata-heavy line-up.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "lucus-son-congress-lugo-2027",
@@ -3105,7 +3105,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Auditorio Santiago & Spa",
       "coordinates": [
         43.039527,
         -7.456798
@@ -3113,14 +3113,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/en/event/9555/lucus-son-congress",
       "website": null,
       "instagram": "https://www.instagram.com/lucus_son_congress/",
       "artists": [],
       "description": "Three days of workshops and shows at the Hotel Auditorio Santiago & Spa in Lugo, Galicia, the city still encircled by its Roman walls. Regional event off the usual festival route with a largely Spanish crowd. Programme: Cuban salsa, casino, timba and son alongside bachata. Nearest airport Santiago de Compostela. Organiser page still shows 2026 details; verify before booking.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "made-in-cuba-festival-original-perugia-2027",
@@ -3135,7 +3135,7 @@
       "country": "Italy",
       "countryCode": "IT",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Giò Wine e Jazz Area",
       "coordinates": [
         43.107032,
         12.402996
@@ -3150,7 +3150,7 @@
       "description": "Three days of Cuban music and dance at the Hotel Giò Wine e Jazz Area in Perugia: workshops, shows, evening parties and international guests. The organisers describe the city becoming the capital of Cuban rhythms for the weekend. 2027 line-up not yet announced.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
     },
     {
       "id": "made-in-south-bisceglie-2026",
@@ -3165,7 +3165,7 @@
       "country": "Italy",
       "countryCode": "IT",
       "region": "Europe",
-      "venue": null,
+      "venue": "Nicotel Bisceglie",
       "coordinates": [
         41.24924,
         16.49419
@@ -3191,7 +3191,7 @@
       "description": "1st edition, created by Vanessa Lacedonia (born in Bisceglie, trained in salsa cubana since 2004 in the Alberto Valdés line, former dancer with Maykel Fonts' company, Euroson Latino winner). Framed as a weekend celebrating Puglia through dance: culture, tradition, hospitality. Held at Nicotel Bisceglie, a 4-star hotel 200 m from the Adriatic, half an hour up the coast from Bari. NOTE: mixed bill; Cuban salsa, afro and rumba alongside bachata and New York mambo. Instagram: @madeinsouthpuglia.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
     },
     {
       "id": "manana-ljubljana-2027",
@@ -3206,7 +3206,7 @@
       "country": "Slovenia",
       "countryCode": "SI",
       "region": "Europe",
-      "venue": null,
+      "venue": "Austria Trend Hotel Ljubljana",
       "coordinates": [
         46.0569,
         14.5058
@@ -3215,13 +3215,13 @@
       "priceFrom": null,
       "currency": null,
       "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "website": "https://manana.si/",
+      "instagram": "https://www.instagram.com/mananaljubljana/",
       "artists": [],
       "description": "Cuban dance festival in Ljubljana. Unique 'one instructor couple per day' approach for deep learning - dancers don't choose workshops, each day is dedicated to ONE INSTRUCTOR COUPLE. Helps dancers learn dance style and attitude deeply for quick improvement. Organized by @cubanaljubljana. Dates April 17-19, 2026.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, venue); verify with the organizer."
     },
     {
       "id": "mas-que-cubano-bilbao-2027",
@@ -3236,22 +3236,22 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Seminario",
       "coordinates": [
         43.263,
         -2.935
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
+      "priceText": "From €70",
+      "priceFrom": 70,
+      "currency": "EUR",
+      "ticketUrl": "https://www.goandance.com/es/evento/9003/mas-que-cubano-festival-bilbao-2027-5a-edicion",
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/masquecubano/",
       "artists": [],
       "description": "Mas que cubano Festival in Bilbao, Spain. Listed in rueda.casino February 26-28, 2027.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "me-gusta-cuba-festival-2026",
@@ -3298,7 +3298,7 @@
       "country": "United Kingdom",
       "countryCode": "GB",
       "region": "Europe",
-      "venue": null,
+      "venue": "Secret Space Digbeth",
       "coordinates": [
         52.4862,
         -1.8904
@@ -3306,9 +3306,9 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://my.weezevent.com/msf27",
+      "website": "https://www.mesalsadance.com/blank",
+      "instagram": "https://www.instagram.com/mesalsafest/",
       "artists": [
         "Fredyclan Garcia",
         "Yusimi Moya Rodríguez"
@@ -3316,7 +3316,7 @@
       "description": "Me Salsa Fest in Birmingham, England. Listed in rueda.casino March 12-15, 2027.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "merseyside-latin-festival-liverpool-2026",
@@ -3361,14 +3361,14 @@
       "country": "Mexico",
       "countryCode": "MX",
       "region": "North America",
-      "venue": null,
+      "venue": "Centro de Convenciones y Exposiciones Tlatelolco",
       "coordinates": [
         19.455921,
         -99.139365
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "From MX$2,000",
+      "priceFrom": 2000,
+      "currency": "MXN",
       "ticketUrl": null,
       "website": null,
       "instagram": "https://www.instagram.com/mexico.timba.congress/",
@@ -3376,7 +3376,7 @@
       "description": "Three days of timba and casino in Mexico City at the Centro de Convenciones y Exposiciones Tlatelolco. Programme covers Cuban salsa, casino, timba, son, rumba and Afro-Cuban. Line-up and prices not yet published; Instagram @mexico.timba.congress.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "mi-habana-baila-santa-susanna-apr-2027",
@@ -3391,7 +3391,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Don Ángel",
       "coordinates": [
         41.632765,
         2.720243
@@ -3399,14 +3399,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/en/event/9984/mi-habana-baila-festival-6ta-edicion",
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/mihabanabaila_festival/",
       "artists": [],
       "description": "Small hotel-contained 100% Cuban weekend at Hotel Don Angel on the Maresme coast north of Barcelona, Friday afternoon to Sunday evening. Classes in casino, son, rumba cubana, cha cha cha, mambo, pilon, mozambique, danzon, musicality and technique; parties with 100% Cuban music. Free place for every 10 dancers a school brings. Organiser Cuba Dance Events has run editions in Slovenia and Cuba. Booking via WhatsApp; organiser website currently offline, verify before booking.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "mi-habana-baila-santa-susanna-oct-2026",
@@ -3421,7 +3421,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Don Ángel",
       "coordinates": [
         41.632765,
         2.720243
@@ -3436,7 +3436,7 @@
       "description": "5th edition. Small hotel-contained 100% Cuban weekend at Hotel Don Angel on the Maresme coast north of Barcelona, Friday afternoon to Sunday evening. Classes in casino, son, rumba cubana, cha cha cha, mambo, pilon, mozambique, danzon, musicality and technique; parties with 100% Cuban music. Free place for every 10 dancers a school brings. Organiser Cuba Dance Events has run editions in Slovenia and Cuba. Booking via WhatsApp; organiser website currently offline, verify before booking.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
     },
     {
       "id": "miami-salsa-congress-2027",
@@ -3451,7 +3451,7 @@
       "country": "United States",
       "countryCode": "US",
       "region": "North America",
-      "venue": null,
+      "venue": "InterContinental Miami",
       "coordinates": [
         25.7617,
         -80.1918
@@ -3459,14 +3459,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://themiamisalsacongress.ticketspice.com/miami-salsa-congress-2027",
+      "website": "https://www.miamisalsacongress.com/",
+      "instagram": "https://www.instagram.com/miamisalsacongress/",
       "artists": [],
       "description": "Multi-style salsa congress with Cuban room and live Cuban music.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "moscow-cuban-festival-2026",
@@ -3481,7 +3481,7 @@
       "country": "Russia",
       "countryCode": "RU",
       "region": "Europe",
-      "venue": null,
+      "venue": "Bossa Nova Club",
       "coordinates": [
         55.7558,
         37.6173
@@ -3489,16 +3489,16 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://salsafest.ru/#rec1989466761",
+      "website": "https://salsafest.ru/",
+      "instagram": "https://www.instagram.com/moscowsalsafestival/",
       "artists": [
         "Diana Rodriguez"
       ],
       "description": "Moscow Cuban Festival is speculative - Diana Rodriguez is Moscow-based but no dedicated festival is well-documented. Consider removing if not verifiable.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "nicasino-kristiansand-2027",
@@ -3543,7 +3543,7 @@
       "country": "Ukraine",
       "countryCode": "UA",
       "region": "Europe",
-      "venue": null,
+      "venue": "Catholic Lyceum of St Basil the Great",
       "coordinates": [
         48.91874,
         24.704168
@@ -3551,14 +3551,14 @@
       "priceText": "Full Pass €82-€102",
       "priceFrom": 82,
       "currency": "EUR",
-      "ticketUrl": null,
+      "ticketUrl": "https://notfest.in.ua/en/order.html",
       "website": "https://notfest.in.ua/en/",
       "instagram": "https://www.instagram.com/notfest_ua",
       "artists": [],
       "description": "Deliberately small, capped Cuban festival run by the LE Shkrobtak school (17 years in the scene, also runs bachata editions of NOT FEST). Half the programme is rumba and afro: afro sessions separate Yoruba, Palo, Arará and Abakuá; rumba covers guaguancó, yambú and columbia separately. Lecture on how Cuban salsa is danced in Cuba today. 13 hours of workshops, 3 parties, ladies bootcamp ending in a slot at the Saturday gala, video zone, closing tea and conversation. Telegram points game with merch and discounts. NOTE: Ukrainian airspace closed; dancers arrive overland by train or bus from Krakow or Lviv.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "obdac-bali-2026",
@@ -3573,22 +3573,22 @@
       "country": "Indonesia",
       "countryCode": "ID",
       "region": "Asia",
-      "venue": null,
+      "venue": "Bintang Bali Resort",
       "coordinates": [
         -8.4095,
         115.1889
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
+      "priceText": "From SGD 30",
+      "priceFrom": 30,
+      "currency": "SGD",
+      "ticketUrl": "https://www.eventbrite.com/e/odac-cuban-salsa-fiesta-2026-bali-edition-tickets-1982577006195",
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/odacsingapore/",
       "artists": [],
       "description": "OBDAC Cuban Salsa Fiesta in Bali, Indonesia. Listed in rueda.casino September 24-27, 2026.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website."
+      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "odac-singapore-cuban-salsa-fiesta-2026",
@@ -3645,7 +3645,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Salle des fêtes Robert Vergnaud",
       "coordinates": [
         46.1594,
         -1.2694
@@ -3654,13 +3654,13 @@
       "priceFrom": null,
       "currency": null,
       "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "website": "https://www.onlysalsa.fr/",
+      "instagram": "https://www.instagram.com/onlysalsa_by_swob/",
       "artists": [],
       "description": "Only Salsa Festival by Swob in Rivedoux-Plage (Île de Ré). Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, venue); verify with the organizer."
     },
     {
       "id": "oslo-cuban-salsa-festival-2026",
@@ -3675,7 +3675,7 @@
       "country": "Norway",
       "countryCode": "NO",
       "region": "Europe",
-      "venue": null,
+      "venue": "Sentralen",
       "coordinates": [
         59.9139,
         10.7522
@@ -3699,7 +3699,7 @@
       "description": "First-ever Cuban Salsa Festival in Oslo. By Oslo Kizomba Festival and Dance With Dancecity. 19:00-03:00 daily. Workshops focus on Orishas, Rueda, authentic Cuban dance and culture. Top DJs. Early bird Full Pass 1000 NOK.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
     },
     {
       "id": "para-el-alma-divertir-augsburg-2027",
@@ -3714,22 +3714,22 @@
       "country": "Germany",
       "countryCode": "DE",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hep Cat Club",
       "coordinates": [
         48.3705,
         10.8978
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
+      "priceText": "From €175",
+      "priceFrom": 175,
+      "currency": "EUR",
+      "ticketUrl": "https://tickets.baila-augsburg.de/event/paraelalmadivertir-sonweekend2027/",
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/paraelalmadivertir/",
       "artists": [],
       "description": "Cuban Son Weekend by baila Augsburg. Whisks dancers to 1920s Cuba with two days/nights of Son dance, music. Includes Beginner Bootcamp and Show Bootcamp. Beginner Level + Open Level workshops. Organized by Ariel & Sofia (¡baila! social dance studio).",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "paradise-salsa-bachata-kizomba-holiday-sunny-beach-2027",
@@ -3744,7 +3744,7 @@
       "country": "Bulgaria",
       "countryCode": "BG",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Kotva",
       "coordinates": [
         42.6917,
         27.7136
@@ -3753,13 +3753,13 @@
       "priceFrom": null,
       "currency": null,
       "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "website": "https://lospambosevents.com/paradise-salsa-holiday",
+      "instagram": "https://www.instagram.com/paradisesalsaholiday/",
       "artists": [],
       "description": "Paradise Salsa Bachata Kizomba Holiday in Sunny Beach (Nesebar). Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, venue); verify with the organizer."
     },
     {
       "id": "quien-manda-aubagne-2027",
@@ -3774,7 +3774,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Centre des congrès Agora",
       "coordinates": [
         43.2939,
         5.5704
@@ -3782,14 +3782,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/en/event/9845/quien-manda-festival-2027",
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/quien_manda_festival/",
       "artists": [],
       "description": "3rd edition - 'Mezclando Culturas'. Cuban Salsa + Dominican Bachata + new Puerto Rican Salsa room. 100% women + 100% men workshops, bootcamps, before parties.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "rainbow-festival-nancy-2026",
@@ -3804,7 +3804,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Salle des Fêtes de Gentilly",
       "coordinates": [
         48.699469,
         6.137797
@@ -3812,14 +3812,14 @@
       "priceText": "€79-€139",
       "priceFrom": 79,
       "currency": "EUR",
-      "ticketUrl": null,
+      "ticketUrl": "https://my.weezevent.com/rainbow-festival-nancy-2026",
       "website": "https://rainbowfestivalnancy.com/",
       "instagram": "https://www.instagram.com/rainbowfestivalnancy/",
       "artists": [],
       "description": "Three festivals under one roof at the Salle des Fêtes de Gentilly: a Cuban festival, a bachata festival and a kizomba festival, each with its own poster, programme and teaching team. You can stay in the Cuban room all weekend (casino, son, Afro-Cuban, rumba, timba) or move between rooms. One of the busiest weekends in France, with a crowd drawn from all three scenes.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "rico-flow-festival-lleida-2027",
@@ -3834,7 +3834,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Restaurante Resquitx",
       "coordinates": [
         41.6308,
         0.8944
@@ -3842,14 +3842,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/es/evento/9976/rico-flow-dance-festival-2027-3a-edicion",
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/rico_flow_dance_festival/reels/",
       "artists": [],
       "description": "Rico Flow Festival Lleida in Mollerussa. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "rose-city-salsa-timba-portland-2026",
@@ -3924,7 +3924,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Cristina by Tigotan Las Palmas",
       "coordinates": [
         28.144861,
         -15.43058
@@ -3932,7 +3932,7 @@
       "priceText": "Full Pass €69-€120",
       "priceFrom": 69,
       "currency": "EUR",
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/es/evento/9114/rumbachata-2026",
       "website": null,
       "instagram": "https://www.instagram.com/rumbachata.canarias",
       "artists": [
@@ -3955,7 +3955,7 @@
       "description": "5th edition. Salsa and bachata festival at Hotel Cristina by Tigotan, a seafront hotel in Las Palmas. Two independent rooms (salsa and bachata) running non-stop, workshops, shows, sunset beach party, pool party, Jack & Jill, after-party until 4 AM. Over 30 artists. NOTE: mixed salsa/bachata event with Cuban salsa, casino, timba, son and rumba content.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "saigon-latin-festival-vung-tau-2026",
@@ -3970,7 +3970,7 @@
       "country": "Vietnam",
       "countryCode": "VN",
       "region": "Asia",
-      "venue": null,
+      "venue": "Victory Hotel Vung Tau",
       "coordinates": [
         10.338333,
         107.09106
@@ -3978,7 +3978,7 @@
       "priceText": "US$110-US$250",
       "priceFrom": 110,
       "currency": "USD",
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/en/event/9745/saigon-latin-festival",
       "website": "https://saigonlatinfestival.com/",
       "instagram": "https://www.instagram.com/saigonlatinfestival_sglf/",
       "artists": [
@@ -3987,7 +3987,7 @@
       "description": "Vietnam's largest Latin dance weekend: five days at the Victory Hotel, a beach hotel in Vung Tau two hours from Ho Chi Minh City, with three official festival days, sunset pool party and live sets between workshops. 35 artists from across Southeast Asia, Morocco and Europe; crowd drawn from the region. NOTE: bachata and kizomba centred (dedicated kizomba pass), no Cuban styles in the workshop programme. The Cuban moment is a live concert by Seo Fernández.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "salsa-festival-carnaval-limoges-2027",
@@ -4002,7 +4002,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "CCM John Lennon",
       "coordinates": [
         45.8336,
         1.2611
@@ -4011,13 +4011,13 @@
       "priceFrom": null,
       "currency": null,
       "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "website": "https://www.endanse.com/festival-salsa-carnaval-de-limoges-2026",
+      "instagram": "https://www.instagram.com/festival_salsa_carnaval_lmg/",
       "artists": [],
       "description": "Annual carnaval-themed Cuban salsa festival in Limoges with DJ Jack El Calvo.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, venue); verify with the organizer."
     },
     {
       "id": "salsa-festival-carnaval-limoges-2026",
@@ -4064,7 +4064,7 @@
       "country": "United States",
       "countryCode": "US",
       "region": "North America",
-      "venue": null,
+      "venue": "Grand Hyatt San Francisco",
       "coordinates": [
         37.789114,
         -122.407238
@@ -4072,14 +4072,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.eventbrite.com/e/the-16th-annual-salsa-rueda-festival-in-san-francisco-feb-11-feb-14-2027-registration-2000233871354",
       "website": "https://www.salsaruedafestival.com/",
       "instagram": "https://www.instagram.com/salsaruedafestival/",
       "artists": [],
       "description": "15th annual edition, presented by Salsa Vale Todo at the Grand Hyatt San Francisco (Union Square). Billed as the premier West Coast timba festival: four days of social dancing, performances and shows, live bands and DJs, workshops for all levels, a beginner bootcamp, educational lectures and late-night parties.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "salsa-stras-festival-strasbourg-2026",
@@ -4132,7 +4132,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hôtel Kaktus Playa",
       "coordinates": [
         41.6153,
         2.6566
@@ -4141,13 +4141,13 @@
       "priceFrom": null,
       "currency": null,
       "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "website": "https://www.rockcaliente.fr/agenda/festivals-sejours/salsa-y-otra",
+      "instagram": "https://www.instagram.com/salsayotra/",
       "artists": [],
       "description": "Salsa y Otra in Calella. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, venue); verify with the organizer."
     },
     {
       "id": "salsafestival-chemnitz-2026",
@@ -4192,7 +4192,7 @@
       "country": "Italy",
       "countryCode": "IT",
       "region": "Europe",
-      "venue": null,
+      "venue": "Club Hotel Dante",
       "coordinates": [
         44.2617,
         12.3484
@@ -4200,14 +4200,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://www.salseandobeach.it/prodotto/full-passes/",
+      "website": "https://www.salseandobeach.it/",
+      "instagram": "https://www.instagram.com/salseando_beach/",
       "artists": [],
       "description": "Salseando Beach in Cervia. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "salsitaly-winter-edition-montesilvano-2026",
@@ -4252,7 +4252,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Europia",
       "coordinates": [
         43.5297,
         5.4474
@@ -4260,14 +4260,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://www.billetweb.fr/saoco-cuban-festival-du-19-au-21-mars-2027",
+      "website": "https://saoco-cuban-festival.fr/",
+      "instagram": "https://www.instagram.com/saococubanfestival/",
       "artists": [],
       "description": "Saoco Cuban Festival in Aix-en-Provence, France. Listed in rueda.casino March 19-21, 2027.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "son-and-casino-weekender-eugene-2026",
@@ -4282,7 +4282,7 @@
       "country": "United States",
       "countryCode": "US",
       "region": "North America",
-      "venue": null,
+      "venue": "The Vets Club",
       "coordinates": [
         44.050505,
         -123.095051
@@ -4290,7 +4290,7 @@
       "priceText": "From US$95",
       "priceFrom": 95,
       "currency": "USD",
-      "ticketUrl": null,
+      "ticketUrl": "https://www.bailarcasinoeugene.com/products",
       "website": "https://www.bailarcasinoeugene.com/",
       "instagram": "https://www.instagram.com/eugene_sonandcasino",
       "artists": [
@@ -4301,7 +4301,7 @@
       "description": "Weekend of Cuban social dance in Eugene, Oregon, taught by Amanda Gill and Adrian Valdivia (co-founders of DC Casineros). Workshops run as a single progression: son into casino, partnerwork foundations and rueda de casino, then double-handed moves, nudos, paseos and desplazamientos. For dancers who already have the basics. Friday son class and social with DJ Alejandro; Saturday son demo and social at WOW Hall. Main venue: The Vets Club. Nearest airport Portland.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "son-nama-zaragoza-2026",
@@ -4316,7 +4316,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hotel Nautic Park",
       "coordinates": [
         41.8172,
         3.0672
@@ -4324,14 +4324,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/es/evento/8877/son-na-ma-festival-2026-5a-edicion",
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/son_na_ma_festival_de_son/",
       "artists": [],
       "description": "Son Na'ma festival in Zaragoza, Spain.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website."
+      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "soneate-festival-toulouse-2027",
@@ -4346,7 +4346,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Mas Tolosa",
       "coordinates": [
         43.5686,
         1.2925
@@ -4354,14 +4354,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.billetweb.fr/festival-de-son-cubano-2-3-4-avril-2027-toulouse-francia",
       "website": null,
       "instagram": null,
       "artists": [],
       "description": "3rd edition. A festival 100% dedicated to Cuban son, rather than son as one room among many. Three days at the Mas Tolosa in Plaisance-du-Touch, just west of Toulouse. Line-up, final venue details and booking link to be announced.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "stockholm-bachata-cuban-marathon-2026",
@@ -4406,7 +4406,7 @@
       "country": "Romania",
       "countryCode": "RO",
       "region": "Europe",
-      "venue": null,
+      "venue": "Restaurant Corsaru & Corsaru Beach",
       "coordinates": [
         43.75,
         28.5731
@@ -4416,12 +4416,12 @@
       "currency": null,
       "ticketUrl": null,
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/sunny_waves_dance_festival/",
       "artists": [],
       "description": "Sunny Waves Dance Festival in Vama Veche. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, venue); verify with the organizer."
     },
     {
       "id": "sydney-cuban-salsa-congress-2026",
@@ -4466,7 +4466,7 @@
       "country": "Mexico",
       "countryCode": "MX",
       "region": "North America",
-      "venue": null,
+      "venue": "The Palm at Playa",
       "coordinates": [
         20.684593,
         -87.05812
@@ -4474,14 +4474,14 @@
       "priceText": "MX$2,799-MX$3,399 (hotel and transfers included)",
       "priceFrom": 2799,
       "currency": "MXN",
-      "ticketUrl": null,
+      "ticketUrl": "https://timbaflowfestival.com/en#boletos",
       "website": "https://timbaflowfestival.com/en",
       "instagram": "https://www.instagram.com/timbaflow_festival",
       "artists": [],
       "description": "Four days on the Mexican Caribbean where one pass covers the hotel room (The Palm at Playa, central Playa del Carmen near Quinta Avenida), airport transfers, private beach access, workshops and a front-of-stage zone. Friday registration and welcome social; Saturday timba and son workshops plus open rumba (the only workshop day); Sunday live shows and outdoor colour party; Monday closing party on a catamaran. All-Cuban roster; built around music and the beach more than teaching.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "timbalemania-augsburg-2027",
@@ -4496,22 +4496,22 @@
       "country": "Germany",
       "countryCode": "DE",
       "region": "Europe",
-      "venue": null,
+      "venue": "Hep Cat Club",
       "coordinates": [
         48.3705,
         10.8978
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": null,
+      "priceText": "From €189",
+      "priceFrom": 189,
+      "currency": "EUR",
+      "ticketUrl": "https://tickets.baila-augsburg.de/event/timbalemania-2027/",
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/timbalemania/",
       "artists": [],
       "description": "Timbalemania 2026 - 'Family dance weekend' by baila Augsburg. 3 days of workshops with balanced leader/follower ratio. 4 crazy parties with passionate DJs. Community activities, city tours, 3 shared dinners. Tagline: 'Esto te pone la cabeza mala'.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "timbeando-y-mambo-festival-lloret-2027",
@@ -4526,7 +4526,7 @@
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": null,
+      "venue": "Evenia Hotels",
       "coordinates": [
         41.7005,
         2.8458
@@ -4534,14 +4534,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://www.goandance.com/es/evento/9374/timbeando-mambo-festival-2027",
+      "website": "https://beacons.ai/timbeando_festival",
+      "instagram": "https://www.instagram.com/timbeandoymambofestival/",
       "artists": [],
       "description": "100% Cuban festival celebrating Cuban music and dance with timba as its centerpiece. Workshops in salsa cubana, timba, guaguanco, rueda de casino, rumba and afro. Includes Timba en el Ring competition (solo and couples). Held at Hotel Evenia Olympic in Lloret de Mar.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "trelaze-salsa-festival-2027",
@@ -4556,7 +4556,7 @@
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
-      "venue": null,
+      "venue": "Salle Louis Aragon",
       "coordinates": [
         47.4453,
         -0.4653
@@ -4564,14 +4564,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.helloasso.com/associations/pole-latino-s-49/evenements/trelaze-salsa-festival-12eme-edition-2027-2",
       "website": null,
-      "instagram": null,
+      "instagram": "https://www.instagram.com/trelazesalsafestival/",
       "artists": [],
       "description": "Trélazé Salsa Festival in Trélazé (Angers). Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "unified-dance-festival-luxembourg-2026",
@@ -4586,7 +4586,7 @@
       "country": "Luxembourg",
       "countryCode": "LU",
       "region": "Europe",
-      "venue": null,
+      "venue": "LuxExpo the Box",
       "coordinates": [
         49.635283,
         6.17172
@@ -4594,14 +4594,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://www.goandance.com/en/event/9061/luxembourg-unified-dance-festival-2026",
       "website": "https://unifiedfestival.lu/",
       "instagram": "https://www.instagram.com/unifieddancefestival",
       "artists": [],
       "description": "Five days at LuxExpo The Box in Kirchberg, Luxembourg City, in the week before Christmas when most of the circuit has stopped. Billed as bachata, kizomba and salsa with workshops, socials and a Jack & Jill competition. NOTE: general Latin event, not Cuban-focused.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "world-stars-salsa-festival-varna-2027",
@@ -4616,7 +4616,7 @@
       "country": "Bulgaria",
       "countryCode": "BG",
       "region": "Europe",
-      "venue": null,
+      "venue": "Albena Resort",
       "coordinates": [
         43.2141,
         27.9147
@@ -4624,14 +4624,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://ticket.varnasalsafestival.com/wssf/tickets",
+      "website": "https://varnasalsafestival.com/",
+      "instagram": "https://www.instagram.com/world_stars_salsa_festival/",
       "artists": [],
       "description": "World Stars Salsa Festival in Varna. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
       "id": "yo-soy-sicilia-terrasini-2027",
@@ -4646,7 +4646,7 @@
       "country": "Italy",
       "countryCode": "IT",
       "region": "Europe",
-      "venue": null,
+      "venue": "CDSHotels Terrasini - Città del Mare",
       "coordinates": [
         38.152822,
         13.082122
@@ -4661,7 +4661,7 @@
       "description": "Seaside weekend at the CDSHotels Città del Mare resort near Palermo, built as a promotional showcase for masters, companies and emerging dancers in Caribbean and Afro-Cuban dance. International instructors, intensive workshops and social parties centred on Cuban salsa, Afro-Cuban and bachata. Ferry from Naples, Genoa or Civitavecchia. NOTE: mixed salsa/bachata programme.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
     },
     {
       "id": "zagreb-salsa-marathon-2027",
@@ -4676,7 +4676,7 @@
       "country": "Croatia",
       "countryCode": "HR",
       "region": "Europe",
-      "venue": null,
+      "venue": "WESPA Business & Lounge Bar",
       "coordinates": [
         45.815,
         15.9819
@@ -4684,14 +4684,14 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
-      "website": null,
-      "instagram": null,
+      "ticketUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdFKtGxLY1oG7Qf7fGM4JYP1GNY_icG0YJzAhIBVM54k4OECQ/viewform",
+      "website": "https://zagrebsalsamarathon.com/",
+      "instagram": "https://www.instagram.com/zagrebsalsamarathon/",
       "artists": [],
       "description": "Zagreb Salsa Marathon in Zagreb. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     }
   ]
 }
