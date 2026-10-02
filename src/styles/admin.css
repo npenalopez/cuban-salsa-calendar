@@ -79,8 +79,8 @@ dialog.ed-dialog::backdrop { background: rgba(28, 31, 61, 0.45); }
 .ed-lineup { border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
 .ed-lineup > legend { margin-bottom: 10px; padding: 0; }
 .ed-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-.ed-chip { display: inline-flex; align-items: center; gap: 2px; min-height: 36px; padding: 0 4px 0 12px; border-radius: 18px; background: var(--sunken); font-size: 14px; }
-.ed-chip button { width: 30px; height: 30px; border: 0; border-radius: 15px; background: transparent; font-size: 12px; }
+.ed-chip { display: inline-flex; align-items: center; gap: 2px; min-height: 36px; padding: 0 4px 0 12px; border-radius: 8px; background: var(--sunken); font-size: 14px; }
+.ed-chip button { width: 30px; height: 30px; border: 0; border-radius: 6px; background: transparent; font-size: 12px; }
 .ed-chip button:hover { background: var(--line); }
 .ed-add { display: flex; gap: 8px; }
 .ed-add .input { flex: 1; }
