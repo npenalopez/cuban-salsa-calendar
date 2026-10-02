@@ -1,5 +1,5 @@
 import type { CardVM } from '../lib/festivals';
-import { CalendarIcon, Flag } from './ui';
+import { CalendarIcon, Flag, TravelIcon } from './ui';
 
 interface Props {
   card: CardVM;
@@ -34,7 +34,9 @@ export function FestivalCard({ card: c, saved, onSave, onCal }: Props) {
           </div>
         )}
         {c.meta && <span class="meta">{c.meta}</span>}
-        {c.travel && <span class="meta">{c.travel}</span>}
+        {c.travel && (
+          <span class="meta travel"><TravelIcon mode={c.travel.mode} />{c.travel.text}</span>
+        )}
         {c.ticket && (
           <a class="card__ticket" href={c.ticket} target="_blank" rel="sponsored noopener">
             Get passes ↗<span class="sr-only"> for {c.name}, opens the organizer's site</span>

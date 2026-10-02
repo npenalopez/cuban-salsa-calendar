@@ -5,7 +5,7 @@ import { calUrls, icsCalendar } from './ics';
 import { computeView, DEFAULT_FILTERS, filtersQuery, parseFilters } from './listing';
 import { didYouMean, suggestions } from './search';
 import { canonicalArtist, canonicalLineup, peopleOf } from './artists';
-import { fmtHours, travel } from './travel';
+import { bestTravel, fmtHours, travelOptions } from './travel';
 import type { Festival } from './types';
 
 const base: Festival = {
@@ -89,9 +89,21 @@ describe('fmtPrice', () => {
 
 describe('travel', () => {
   const zurich = { name: 'Zurich', lat: 47.38, lng: 8.54 };
-  it('near', () => expect(travel(zurich, [47.4, 8.5])).toBe('Near Zurich'));
-  it('drive', () => expect(travel(zurich, [48.14, 11.58])).toMatch(/^≈ \d h( 30)? drive from Zurich$/));
-  it('flight', () => expect(travel(zurich, [41.39, 2.17])).toMatch(/flight from Zurich$/));
+  const modes = (c: [number, number]) => travelOptions(zurich, c).map((o) => o.mode);
+  it('nearby', () => expect(modes([47.4, 8.5])).toEqual(['near']));
+  it('short trip: car first, no plane', () => {
+    expect(modes([47.56, 7.59])[0]).toBe('car'); // Basel
+    expect(modes([47.56, 7.59])).not.toContain('plane');
+  });
+  it('Zurich to Munich (240 km): train first, then car, no flight', () => expect(modes([48.14, 11.58])).toEqual(['train', 'car']));
+  it('Zurich to Barcelona: all three, flight fastest', () => {
+    const m = modes([41.39, 2.17]);
+    expect(m).toEqual(expect.arrayContaining(['car', 'train', 'plane']));
+    expect(m[0]).toBe('plane');
+  });
+  it('across the ocean: plane only', () => expect(modes([40.71, -74.01])).toEqual(['plane']));
+  it('Canary Islands: no train', () => expect(modes([28.29, -16.63])).not.toContain('train'));
+  it('text', () => expect(bestTravel(zurich, [41.39, 2.17])?.text).toMatch(/^≈ \d h( 30)? flight$/));
   it('rounds to half hours', () => expect(fmtHours(2.4)).toBe('2 h 30'));
   it('minimum half hour', () => expect(fmtHours(0.1)).toBe('0 h 30'));
 });
@@ -170,6 +182,17 @@ describe('listing', () => {
   it('where filter by country', () => {
     const v = computeView(list, TODAY, { name: 'all' }, { ...DEFAULT_FILTERS, where: 'country:CU' }, [], null);
     expect(v.total).toBe(1);
+  });
+  it('nearest first with a travel city', () => {
+    const zurich = { name: 'Zurich', lat: 47.38, lng: 8.54 };
+    const near = list.map((x) => ({ ...x, coordinates: (x.id === 'b' ? [47.4, 8.6] : [41.39, 2.17]) as [number, number] }));
+    const v = computeView(near, TODAY, { name: 'all' }, { ...DEFAULT_FILTERS, sort: 'near' }, [], null, zurich);
+    expect(v.sections[0].title).toBe('Nearest first');
+    expect(v.sections[0].items[0].id).toBe('b');
+  });
+  it('nearest first without a city falls back to dates', () => {
+    const v = computeView(list.filter(isListed), TODAY, { name: 'all' }, { ...DEFAULT_FILTERS, sort: 'near' }, [], null, null);
+    expect(v.sections[0].title).toBe('October 2026');
   });
   it('query string round trip', () => {
     const f = { ...DEFAULT_FILTERS, q: 'havana', where: 'region:Europe', when: '90' as const, sort: 'name' as const };

@@ -1,10 +1,11 @@
 import { MONTHS, addDays, monthLabel, months12, pISO, plural, type MonthRef } from './dates';
 import { byDate, byName } from './festivals';
 import { norm } from './text';
-import type { Enriched } from './types';
+import { bestTravel } from './travel';
+import type { City, Enriched } from './types';
 
 export type When = 'any' | '30' | '90' | 'custom';
-export type Sort = 'date' | 'name';
+export type Sort = 'date' | 'name' | 'near';
 export type View = 'list' | 'map';
 
 /** List state that lives in the query string. */
@@ -36,7 +37,7 @@ export function parseFilters(search: string): Filters {
     from: p.get('from') || '',
     to: p.get('to') || '',
     savedOnly: p.get('saved') === '1',
-    sort: p.get('sort') === 'name' ? 'name' : 'date',
+    sort: p.get('sort') === 'name' ? 'name' : p.get('sort') === 'near' ? 'near' : 'date',
     view: p.get('view') === 'map' ? 'map' : 'list',
   };
 }
@@ -78,7 +79,14 @@ function range(f: Filters, today: Date): [Date, Date] | null {
   return null;
 }
 
-const sortList = (l: Enriched[], sort: Sort) => l.slice().sort(sort === 'name' ? byName : byDate);
+/** Sort by date, name, or (with a travel city) fastest to reach first. */
+function sortBy(l: Enriched[], sort: Sort, city: City | null = null): Enriched[] {
+  if (sort === 'near' && city) {
+    const t = new Map(l.map((x) => [x.id, bestTravel(city, x.coordinates)?.doorToDoor ?? Infinity]));
+    return l.slice().sort((a, b) => t.get(a.id)! - t.get(b.id)! || byDate(a, b));
+  }
+  return l.slice().sort(sort === 'name' ? byName : byDate);
+}
 
 export interface Section {
   title: string;
@@ -119,7 +127,10 @@ export interface ListView {
   arch: Enriched[];
 }
 
-export function computeView(all: Enriched[], today: Date, route: PageRoute, f: Filters, saved: string[], shared: string[] | null): ListView {
+export function computeView(all: Enriched[], today: Date, route: PageRoute, filters: Filters, saved: string[], shared: string[] | null, city: City | null = null): ListView {
+  // "Nearest first" needs a travel city; without one it falls back to date order.
+  const f: Filters = filters.sort === 'near' && !city ? { ...filters, sort: 'date' } : filters;
+  const sortList = (l: Enriched[], sort: Sort) => sortBy(l, sort, city);
   const up = all.filter((x) => !x.arch);
   const arch = all.filter((x) => x.arch);
   const q = f.q.trim();
@@ -128,7 +139,8 @@ export function computeView(all: Enriched[], today: Date, route: PageRoute, f: F
   const rng = range(f, today);
   const fc = filterCount(f);
   const v: ListView = { mode: route.name === 'month' ? 'month' : route.name, kicker: '', title: '', note: '', sections: [], total: 0, emptyTitle: '', emptyText: '', m12, monthIdx: -1, monthKey: null, upF, up, arch };
-  const byMonthOrAZ = (l: Enriched[], desc = false) => (f.sort === 'name' ? [{ title: 'A–Z', head: true, items: l }] : groupByMonth(l, desc));
+  const byMonthOrAZ = (l: Enriched[], desc = false) =>
+    f.sort === 'name' ? [{ title: 'A–Z', head: true, items: l }] : f.sort === 'near' ? [{ title: 'Nearest first', head: true, items: l }] : groupByMonth(l, desc);
 
   if (q && route.name !== 'saved') {
     v.mode = 'search';
@@ -220,5 +232,6 @@ export function filterSummary(f: Filters, up: Enriched[]): string {
   if (f.when !== 'any') parts.push({ '30': 'Next 30 days', '90': 'Next 3 months', custom: 'Your dates' }[f.when]);
   if (f.savedOnly) parts.push('Saved only');
   if (f.sort === 'name') parts.push('A–Z');
+  if (f.sort === 'near') parts.push('Nearest first');
   return 'Filtered: ' + parts.join(' · ');
 }

@@ -75,7 +75,7 @@ export default function ListApp({ route, buildToday }: Props) {
   const patch = (p: Partial<Filters>) => setF((cur) => ({ ...cur, ...p }));
   const clearFilters = () => patch({ where: '', savedOnly: false, when: 'any', sort: 'date', from: '', to: '' });
 
-  const v = computeView(all, today, route, f, store.saved, shared);
+  const v = computeView(all, today, route, f, store.saved, shared, store.city);
   const fc = filterCount(f);
   const hasQuery = f.q.trim().length > 0;
   const isMonth = v.mode === 'month';
@@ -415,7 +415,7 @@ export default function ListApp({ route, buildToday }: Props) {
             Only saved festivals
             <input type="checkbox" role="switch" checked={f.savedOnly} onChange={(e) => patch({ savedOnly: e.currentTarget.checked })} />
           </label>
-          <Segmented name="sort" legend="Sort" value={f.sort} options={[['date', 'Date'], ['name', 'Name A–Z']]} onChange={(s) => patch({ sort: s })} />
+          <Segmented name="sort" legend="Sort" value={f.sort === 'near' && !store.city ? 'date' : f.sort} options={store.city ? [['date', 'Date'], ['near', 'Nearest'], ['name', 'A–Z']] : [['date', 'Date'], ['name', 'Name A–Z']]} onChange={(s) => patch({ sort: s })} />
         </div>
       </Sheet>
     </>

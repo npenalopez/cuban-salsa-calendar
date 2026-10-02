@@ -13,6 +13,8 @@ const states = [
   ['menu sheet', '/', async (p) => p.click('.header__menu')],
   ['top artists sheet', '/', async (p) => (await p.click('.header__menu'), p.locator('dialog[open]').getByRole('button', { name: /Top artists/ }).click())],
   ['travel sheet', '/', async (p) => (await p.click('.header__menu'), p.locator('dialog[open]').getByRole('button', { name: /Travel times/ }).click())],
+  ['travel times set', '/upcoming/?sort=near', async (p) => (await p.evaluate(() => localStorage.setItem('csc-city', JSON.stringify({ name: 'Zurich', lat: 47.38, lng: 8.54 }))), p.reload({ waitUntil: 'load' }), p.waitForSelector('.card .travel'))],
+  ['festival travel panel', FEST, async (p) => (await p.evaluate(() => localStorage.setItem('csc-city', JSON.stringify({ name: 'Zurich', lat: 47.38, lng: 8.54 }))), p.reload({ waitUntil: 'load' }), p.waitForSelector('.travel-panel'))],
   ['feeds sheet', '/', async (p) => (await p.click('.header__menu'), p.locator('dialog[open]').getByRole('button', { name: /Calendar feeds/ }).click())],
   ['months sheet', '/', async (p) => p.click('.dock__center')],
   ['filters sheet', '/', async (p) => (await p.click('.dock__filters'), p.getByText('Pick dates').click())],

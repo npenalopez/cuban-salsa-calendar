@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'preact/hooks';
 import { share } from '../client/share';
-import { openSheet, toggleSaved, useStore } from '../client/store';
-import { travel } from '../lib/travel';
+import { openSheet, toggleSaved, useMounted, useStore } from '../client/store';
+import { fromCity, travelOptions } from '../lib/travel';
 import { MapView } from './MapView';
-import { CalendarIcon } from './ui';
+import { CalendarIcon, PinIcon, TravelIcon } from './ui';
 
 export function TopActions({ id, name, url, canSave }: { id: string; name: string; url: string; canSave: boolean }) {
   const { saved } = useStore();
@@ -28,10 +28,32 @@ export function AddToCalendar({ id }: { id: string }) {
   );
 }
 
+/** How to get there from the visitor's city: every realistic option with an icon, fastest first. */
 export function TravelLine({ coords }: { coords: [number, number] }) {
   const { city } = useStore();
-  const t = travel(city, coords);
-  return t ? <span class="meta">{t}</span> : null;
+  const mounted = useMounted();
+  if (!mounted) return null;
+  if (!city) {
+    return (
+      <button type="button" class="travel-set" aria-haspopup="dialog" onClick={() => openSheet('city')}>
+        <PinIcon />How far is it from you?
+      </button>
+    );
+  }
+  const opts = travelOptions(city, coords);
+  return (
+    <div class="travel-panel">
+      <ul class="travel-list" aria-label={`Getting there ${fromCity(city)}`}>
+        {opts.map((o) => (
+          <li class="travel"><TravelIcon mode={o.mode} />{o.mode === 'near' ? (city.name === 'your location' ? 'Near you' : `Near ${city.name}`) : o.text}</li>
+        ))}
+      </ul>
+      <span class="meta">
+        {fromCity(city)} · rough estimate ·{' '}
+        <button type="button" class="link-btn link-btn--inline" aria-haspopup="dialog" onClick={() => openSheet('city')}>Change</button>
+      </span>
+    </div>
+  );
 }
 
 /** The map loads by itself as it comes into view (300 px early), so pages stay light until it's needed. */

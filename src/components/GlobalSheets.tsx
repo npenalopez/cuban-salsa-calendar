@@ -6,9 +6,9 @@ import { dateLong, plural, startOfToday } from '../lib/dates';
 import { INSTAGRAM } from '../lib/festivals';
 import { FEED_SLUG, calUrls, icsCalendar } from '../lib/ics';
 import { norm } from '../lib/text';
-import { CITIES } from '../lib/travel';
-import type { Enriched } from '../lib/types';
-import { Flag, Segmented, Sheet } from './ui';
+import { CITIES, fromCity } from '../lib/travel';
+import type { City, Enriched } from '../lib/types';
+import { Flag, LocateIcon, Segmented, Sheet } from './ui';
 
 const TITLES = { menu: 'Menu', artists: 'Top artists', city: 'Travel times', feeds: 'Calendar feeds', cal: 'Add to calendar' };
 
@@ -22,7 +22,7 @@ export default function GlobalSheets() {
         <Sheet id={`sheet-${k}`} title={TITLES[k]} open={name === k} onClose={closeSheet}>
           {name === k && k === 'menu' && <Menu all={all} saved={st.saved.length} cityName={st.city?.name} theme={st.theme} />}
           {name === k && k === 'artists' && <Artists all={all} />}
-          {name === k && k === 'city' && <CitySheet cityName={st.city?.name ?? null} />}
+          {name === k && k === 'city' && <CitySheet all={all} city={st.city} />}
           {name === k && k === 'feeds' && <Feeds all={all} saved={st.saved} />}
           {name === k && k === 'cal' && <Cal f={all.find((x) => x.id === st.sheet?.id)} />}
         </Sheet>
@@ -54,7 +54,7 @@ function Menu({ all, saved, cityName, theme }: { all: Enriched[]; saved: number;
     <nav aria-label="Menu" class="menu">
       <MenuRow href="/saved/" title="Saved festivals" text={saved ? `${plural(saved, 'festival')} saved on this phone` : 'Tap ♡ on any festival to keep it here'} />
       <MenuRow onClick={() => openSheet('artists')} title="Top artists" text="Who teaches at the most festivals" />
-      <MenuRow onClick={() => openSheet('city')} title="Travel times" text={cityName ? `On · from ${cityName}` : 'Off · show flight or drive time from your city'} />
+      <MenuRow onClick={() => openSheet('city')} title="Travel times" text={cityName ? `On · from ${cityName}` : 'Off · car, train or plane time from your city'} />
       <MenuRow onClick={() => openSheet('feeds')} title="Calendar feeds" text="New festivals appear in your calendar app" />
       <MenuRow href="/archive/" title="Archive" text={`${plural(arch, 'festival')} that already happened`} />
       <MenuRow href="/submit/" title="Submit a festival" text="Organizer or dancer? Add one for free" />
@@ -123,39 +123,70 @@ function Artists({ all }: { all: Enriched[] }) {
   );
 }
 
-function CitySheet({ cityName }: { cityName: string | null }) {
+function CitySheet({ all, city }: { all: Enriched[]; city: City | null }) {
+  const [q, setQ] = useState('');
+  const [miss, setMiss] = useState(false);
+  // The dance hubs plus every festival city, one entry per name.
+  const places = new Map<string, [string, number, number]>();
+  for (const c of CITIES) places.set(norm(c[0]), c);
+  for (const f of all) if (f.city && f.coordinates && !places.has(norm(f.city))) places.set(norm(f.city), [f.city, f.coordinates[0], f.coordinates[1]]);
+  const names = [...places.values()].map((p) => p[0]).sort((x, y) => x.localeCompare(y));
+  const choose = (value: string) => {
+    const p = places.get(norm(value));
+    if (!p) return setMiss(true);
+    setCity({ name: p[0], lat: p[1], lng: p[2] });
+    closeSheet();
+    toast('Travel times from ' + p[0]);
+  };
   const useLocation = () => {
     if (!navigator.geolocation) return toast("Location isn't available here");
     navigator.geolocation.getCurrentPosition(
-      (p) => {
-        setCity({ name: 'your location', lat: p.coords.latitude, lng: p.coords.longitude });
+      (pos) => {
+        setCity({ name: 'your location', lat: pos.coords.latitude, lng: pos.coords.longitude });
         closeSheet();
-        toast('Travel times on');
+        toast('Travel times from your location');
       },
-      () => toast("Couldn't get your location. Pick a city instead."),
+      () => toast("Couldn't get your location. Type your city instead."),
     );
   };
   return (
     <div class="sheet-pad stack-12">
-      <p class="sheet-text">Shows a rough flight or drive time on each festival. Stored only on this device.</p>
-      <button type="button" class="btn btn--tall" onClick={useLocation}>Use my current location</button>
-      <label for="city-pick" class="field-label">Or pick a city</label>
-      <select
-        id="city-pick"
-        class="input"
-        value={cityName && cityName !== 'your location' ? cityName : ''}
-        onChange={(e) => {
-          const c = CITIES.find((x) => x[0] === e.currentTarget.value);
-          if (!c) return;
-          setCity({ name: c[0], lat: c[1], lng: c[2] });
-          closeSheet();
-          toast('Travel times from ' + c[0]);
-        }}
-      >
-        <option value="">Choose…</option>
-        {CITIES.map((c) => <option value={c[0]}>{c[0]}</option>)}
-      </select>
-      {cityName && <button type="button" class="link-btn" onClick={() => (setCity(null), closeSheet())}>Stop showing travel times</button>}
+      {city ? (
+        <div class="travel-now">
+          <span>Showing travel times <strong>{fromCity(city)}</strong>.</span>
+          <button type="button" class="link-btn" onClick={() => (setCity(null), closeSheet(), toast('Travel times off'))}>Turn off</button>
+        </div>
+      ) : (
+        <p class="sheet-text">See how long it takes to get to each festival by car, train or plane, and sort festivals by distance. Your city stays on this device.</p>
+      )}
+      <button type="button" class="btn btn--tall" onClick={useLocation}><LocateIcon size={18} />Use my current location</button>
+      <form class="stack-8" onSubmit={(e) => (e.preventDefault(), choose(q))}>
+        <label for="city-pick" class="field-label">Or type your city</label>
+        <div class="city-row">
+          <input
+            id="city-pick"
+            class="input"
+            list="city-options"
+            autocomplete="off"
+            enterKeyHint="go"
+            placeholder="e.g. Zurich, Madrid, Toronto"
+            value={q}
+            aria-invalid={miss || undefined}
+            aria-describedby={miss ? 'city-miss' : undefined}
+            onInput={(e) => {
+              const v = e.currentTarget.value;
+              setQ(v);
+              setMiss(false);
+              // Picking a suggestion fills the whole name: apply it straight away.
+              if (places.has(norm(v)) && names.includes(v)) choose(v);
+            }}
+          />
+          <button type="submit" class="btn">Set</button>
+        </div>
+        <datalist id="city-options">{names.map((n) => <option value={n} />)}</datalist>
+        {miss && <span id="city-miss" class="field__err">Not in the list yet. Pick the nearest big city from the suggestions.</span>}
+      </form>
+      <p class="small-note">Estimates from straight-line distance with typical speeds; flights add about 2.5 h for airports when choosing the fastest option.</p>
     </div>
   );
 }

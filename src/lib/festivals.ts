@@ -1,7 +1,7 @@
 import { countdown, dateBlock, dateLong, mkey, pISO, type DateBlock } from './dates';
 import { canonicalLineup, peopleOf } from './artists';
 import { norm } from './text';
-import { travel } from './travel';
+import { bestTravel, fromCity, type TravelMode } from './travel';
 import type { City, Enriched, Festival } from './types';
 
 /** Sponsored listings are on hold. Flip to true to render the "Sponsored" variant. */
@@ -85,7 +85,8 @@ export interface CardVM {
   artists: string[];
   moreArtists: number;
   meta: string;
-  travel: string | null;
+  /** Fastest practical way to get there from the visitor's city */
+  travel: { mode: TravelMode; text: string } | null;
   ticket: string | null;
   showSave: boolean;
   showCal: boolean;
@@ -117,7 +118,10 @@ export function cardVM(f: Enriched, all: Enriched[], city: City | null, today?: 
   else if (f.status === 'sold-out') badge = 'sold-out';
   else if (featured) badge = 'sponsored';
   const showArtists = a.length > 0 && !f.arch && f.status !== 'postponed';
-  const tr = f.arch ? null : travel(city, f.coordinates);
+  const best = f.arch ? null : bestTravel(city, f.coordinates);
+  const tr = best && city
+    ? { mode: best.mode, text: best.mode === 'near' ? (city.name === 'your location' ? 'Near you' : `Near ${city.name}`) : `${best.text} ${fromCity(city)}` }
+    : null;
   return {
     id: f.id,
     href: festivalPath(f.id),
