@@ -30,6 +30,8 @@ let total = 0;
 for (const theme of ['light', 'dark']) {
   for (const w of [375, 1440]) {
     const ctx = await browser.newContext({ colorScheme: theme, viewport: { width: w, height: 900 }, reducedMotion: 'reduce' });
+    // Light is the default theme; dark mode is the visitor's choice in the menu.
+    if (theme === 'dark') await ctx.addInitScript(() => localStorage.setItem('csc-theme', '"dark"'));
     const page = await ctx.newPage();
     // Turnstile (spam check) can't run on a test machine and keeps the network busy; it is third-party UI anyway.
     await page.route('**/challenges.cloudflare.com/**', (r) => r.abort());

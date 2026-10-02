@@ -14,7 +14,7 @@ export interface StoreState {
 }
 
 /** What the server renders with. Islands start from this so hydration matches. */
-export const SSR_STATE: StoreState = { saved: [], recent: [], city: null, theme: 'system', sheet: null, toast: null };
+export const SSR_STATE: StoreState = { saved: [], recent: [], city: null, theme: 'light', sheet: null, toast: null };
 
 function ls<T>(key: string): T | null {
   try {
@@ -46,7 +46,7 @@ function load() {
     saved: ls<string[]>('csc-saved') || [],
     recent: ls<string[]>('csc-recent') || [],
     city: ls<City>('csc-city'),
-    theme: theme === 'light' || theme === 'dark' ? theme : 'system',
+    theme: theme === 'dark' || theme === 'system' ? theme : 'light',
   };
   // Another tab changed the saved list.
   window.addEventListener('storage', (e) => {
@@ -117,8 +117,9 @@ export function setCity(city: City | null) {
 }
 
 export function setTheme(theme: Theme) {
-  lsSet('csc-theme', theme === 'system' ? null : theme);
-  if (theme === 'system') delete document.documentElement.dataset.theme;
+  // Light is the default, so it needs no stored value or attribute.
+  lsSet('csc-theme', theme === 'light' ? null : theme);
+  if (theme === 'light') delete document.documentElement.dataset.theme;
   else document.documentElement.dataset.theme = theme;
   set({ theme });
   window.dispatchEvent(new Event('csc-theme'));
@@ -136,6 +137,6 @@ export function useMounted() {
 
 export function isDark(): boolean {
   const t = document.documentElement.dataset.theme;
-  if (t) return t === 'dark';
-  return window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false;
+  if (t === 'system') return window.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false;
+  return t === 'dark';
 }

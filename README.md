@@ -25,7 +25,7 @@ link: **[cubansalsacalendar.com](https://cubansalsacalendar.com)**
 - **Top artists** ranking, and travel times from your city.
 - **Submit a festival** or suggest a correction; submissions arrive as GitHub issues
   for review, nothing is published automatically.
-- Light and dark mode, following the system or chosen by the visitor.
+- Light theme by default, with a dark theme or "follow the device" in the menu.
 
 ## Quality
 

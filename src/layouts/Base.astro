@@ -50,15 +50,15 @@ const s = stats();
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="theme-color" content="#F6EDE3" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#15172B" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F6EDE3" />
     <link rel="preload" href="/fonts/archivo-core.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="alternate" type="text/calendar" title="All festivals" href="/feeds/all.ics" />
     <script is:inline>
       try {
         var t = JSON.parse(localStorage.getItem('csc-theme') || 'null');
-        if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+        // Light unless the visitor chose Dark or Auto (follow the device).
+        if (t === 'dark' || t === 'system') document.documentElement.dataset.theme = t;
       } catch (e) {}
     </script>
     <slot name="head" />

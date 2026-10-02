@@ -27,8 +27,9 @@
   --body: 'Atkinson Hyperlegible Next', 'Atkinson Fallback', system-ui, sans-serif;
   color-scheme: light;
 }
+/* Light is the default. Dark applies when chosen, or with "Auto" on a phone set to dark. */
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) {
+  :root[data-theme='system'] {
     --bg: #15172b; --surface: #1c1f3d; --sunken: #2a2d4a; --line: #383a52; --line-strong: #6e7091;
     --ink: #f6ede3; --ink2: #d6cfc6; --ink3: #a9a7b8; --rojo: #ff8a6e; --azul: #9fb2ff;
     --mango: #5a3a35; --rojo-tint: #3d2a35; --dock: #2a2d4a; --scrim: rgba(0, 0, 0, 0.6);
@@ -378,7 +379,7 @@ dialog.sheet {
 dialog.sheet::backdrop { background: rgba(28, 31, 61, 0.5); }
 :root[data-theme='dark'] dialog.sheet::backdrop { background: rgba(0, 0, 0, 0.6); }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme]) dialog.sheet::backdrop { background: rgba(0, 0, 0, 0.6); }
+  :root[data-theme='system'] dialog.sheet::backdrop { background: rgba(0, 0, 0, 0.6); }
 }
 .sheet__panel { padding-bottom: calc(16px + env(safe-area-inset-bottom)); }
 .sheet__head {
