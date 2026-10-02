@@ -1,6 +1,6 @@
 {
   "version": "2026.10-128",
-  "updated": "2026-10-01",
+  "updated": "2026-10-02",
   "festivals": [
     {
       "id": "salsa-stras-festival-strasbourg-2026",
@@ -671,36 +671,6 @@
       "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer."
     },
     {
-      "id": "mi-habana-baila-santa-susanna-oct-2026",
-      "series": "mi-habana-baila-santa-susanna-oct",
-      "name": "Mi Habana Baila Festival",
-      "status": "scheduled",
-      "startDate": "2027-04-09",
-      "endDate": "2027-04-11",
-      "datePrecision": "day",
-      "dateNote": null,
-      "city": "Piran",
-      "country": "Slovenia",
-      "countryCode": "SI",
-      "region": "Europe",
-      "venue": "Grand Hotel Bernardin, Portorož",
-      "coordinates": [
-        45.5169439,
-        13.5697685
-      ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": "https://www.goandance.com/en/event/10098/mi-habana-baila-festival-2027-5ta-edicion-eslovenia",
-      "website": null,
-      "instagram": "https://www.instagram.com/mihabanabaila_festival/",
-      "artists": [],
-      "description": "5th edition of Mi Habana Baila in Slovenia, at the Grand Hotel Bernardin in Portorož on the Piran coast: Cuban music, salsa, bachata, shows, animation and social dancing.",
-      "lastVerified": null,
-      "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer.\n2026-10-01: Slovenia 2027 edition (goandance listing 9–11 Apr 2027, Grand Hotel Bernardin, Portorož)."
-    },
-    {
       "id": "crazy-4-la-timba-lisbon-2026",
       "series": "crazy-4-la-timba-lisbon",
       "name": "Crazy 4 la Timba",
@@ -765,36 +735,6 @@
       "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
     },
     {
-      "id": "ruedamania-yekaterinburg-2026",
-      "series": "ruedamania-yekaterinburg",
-      "name": "Ruedamania 2026",
-      "status": "scheduled",
-      "startDate": "2026-10-16",
-      "endDate": "2026-10-18",
-      "datePrecision": "day",
-      "dateNote": null,
-      "city": "Yekaterinburg",
-      "country": "Russia",
-      "countryCode": "RU",
-      "region": "Europe",
-      "venue": "2Dance, ul. Turgeneva 13",
-      "coordinates": [
-        56.8389,
-        60.6057
-      ],
-      "priceText": null,
-      "priceFrom": 2000,
-      "currency": "RUB",
-      "ticketUrl": "https://vk.ru/pages?oid=-71343489&p=%D0%A1%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C",
-      "website": "https://vk.com/ruedamania",
-      "instagram": null,
-      "artists": [],
-      "description": "Cuban Rueda de Casino festival in Yekaterinburg, the cultural center of Russia's Ural region. Features rueda workshops, casino partnerwork, and Cuban-style social dancing.",
-      "lastVerified": null,
-      "featured": false,
-      "notes": "2026-10-01: official VK community replaces salsavida links; dates 16–18 Oct per the pinned post."
-    },
-    {
       "id": "atlanta-afrocuban-dance-congress-2026",
       "series": "atlanta-afrocuban-dance-congress",
       "name": "Atlanta AfroCuban Dance Congress",
@@ -853,6 +793,36 @@
       "lastVerified": null,
       "featured": false,
       "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
+    },
+    {
+      "id": "ruedamania-yekaterinburg-2026",
+      "series": "ruedamania-yekaterinburg",
+      "name": "Ruedamania 2026",
+      "status": "scheduled",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-18",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Yekaterinburg",
+      "country": "Russia",
+      "countryCode": "RU",
+      "region": "Europe",
+      "venue": "2Dance, ul. Turgeneva 13",
+      "coordinates": [
+        56.8389,
+        60.6057
+      ],
+      "priceText": null,
+      "priceFrom": 2000,
+      "currency": "RUB",
+      "ticketUrl": "https://vk.ru/pages?oid=-71343489&p=%D0%A1%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C",
+      "website": "https://vk.com/ruedamania",
+      "instagram": null,
+      "artists": [],
+      "description": "Cuban Rueda de Casino festival in Yekaterinburg, the cultural center of Russia's Ural region. Features rueda workshops, casino partnerwork, and Cuban-style social dancing.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "2026-10-01: official VK community replaces salsavida links; dates 16–18 Oct per the pinned post."
     },
     {
       "id": "festival-de-cuba-stuttgart-2026",
@@ -1394,8 +1364,8 @@
         2.839239
       ],
       "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceFrom": 109,
+      "currency": "EUR",
       "ticketUrl": "https://www.goandance.com/es/evento/8764/la-clave-festival-2026-premium-edition",
       "website": "https://laclavefestival.com/",
       "instagram": "https://www.instagram.com/laclave_festival/",
@@ -3579,6 +3549,36 @@
       "lastVerified": null,
       "featured": false,
       "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, venue); verify with the organizer."
+    },
+    {
+      "id": "mi-habana-baila-santa-susanna-oct-2026",
+      "series": "mi-habana-baila-santa-susanna-oct",
+      "name": "Mi Habana Baila Festival",
+      "status": "scheduled",
+      "startDate": "2027-04-09",
+      "endDate": "2027-04-11",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Piran",
+      "country": "Slovenia",
+      "countryCode": "SI",
+      "region": "Europe",
+      "venue": "Grand Hotel Bernardin, Portorož",
+      "coordinates": [
+        45.5169439,
+        13.5697685
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://www.goandance.com/en/event/10098/mi-habana-baila-festival-2027-5ta-edicion-eslovenia",
+      "website": null,
+      "instagram": "https://www.instagram.com/mihabanabaila_festival/",
+      "artists": [],
+      "description": "5th edition of Mi Habana Baila in Slovenia, at the Grand Hotel Bernardin in Portorož on the Piran coast: Cuban music, salsa, bachata, shows, animation and social dancing.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer.\n2026-10-01: Slovenia 2027 edition (goandance listing 9–11 Apr 2027, Grand Hotel Bernardin, Portorož)."
     },
     {
       "id": "yo-soy-sicilia-terrasini-2027",
