@@ -41,7 +41,7 @@ export const Flag = ({ code, small }: { code: string | null; small?: boolean }) 
   ) : null;
 
 /** Bottom sheet on a native modal <dialog>: focus trap, Esc, focus return. */
-export function Sheet(props: { open: boolean; title: string; onClose: () => void; children: ComponentChildren; footer?: ComponentChildren; id: string }) {
+export function Sheet(props: { open: boolean; title: string; onClose: () => void; children: ComponentChildren; footer?: ComponentChildren; id: string; variant?: 'sheet' | 'drawer' }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => {
     const d = ref.current;
@@ -52,7 +52,7 @@ export function Sheet(props: { open: boolean; title: string; onClose: () => void
   return (
     <dialog
       ref={ref}
-      class="sheet"
+      class={props.variant === 'drawer' ? 'sheet sheet--drawer' : 'sheet'}
       aria-labelledby={props.id}
       onClose={() => props.open && props.onClose()}
       onClick={(e) => e.target === ref.current && props.onClose()}

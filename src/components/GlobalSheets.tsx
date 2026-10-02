@@ -19,7 +19,7 @@ export default function GlobalSheets() {
   return (
     <>
       {(Object.keys(TITLES) as (keyof typeof TITLES)[]).map((k) => (
-        <Sheet id={`sheet-${k}`} title={TITLES[k]} open={name === k} onClose={closeSheet}>
+        <Sheet id={`sheet-${k}`} title={TITLES[k]} open={name === k} onClose={closeSheet} variant={k === 'menu' ? 'drawer' : 'sheet'}>
           {name === k && k === 'menu' && <Menu all={all} saved={st.saved.length} cityName={st.city?.name} theme={st.theme} />}
           {name === k && k === 'artists' && <Artists all={all} />}
           {name === k && k === 'city' && <CitySheet all={all} city={st.city} />}

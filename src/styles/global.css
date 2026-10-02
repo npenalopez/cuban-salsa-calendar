@@ -381,6 +381,26 @@ dialog.sheet::backdrop { background: rgba(28, 31, 61, 0.5); }
 @media (prefers-color-scheme: dark) {
   :root[data-theme='system'] dialog.sheet::backdrop { background: rgba(0, 0, 0, 0.6); }
 }
+/* Phones: bottom sheet. Computers: a centred window. */
+@media (min-width: 768px) {
+  dialog.sheet:not(.sheet--drawer) { inset: 0; margin: auto; width: calc(100% - 48px); max-height: min(86vh, 760px); border-radius: 20px; }
+}
+/* The menu: a full-height drawer from the right on every screen. */
+dialog.sheet--drawer {
+  inset: 0 0 0 auto; margin: 0; width: min(380px, 88vw); max-width: none; height: 100%; max-height: none;
+  border-radius: 20px 0 0 20px;
+}
+dialog.sheet--drawer .sheet__panel { padding-top: env(safe-area-inset-top); }
+@media (prefers-reduced-motion: no-preference) {
+  dialog.sheet[open] { animation: sheet-up 0.22s ease-out; }
+  dialog.sheet--drawer[open] { animation-name: sheet-in; }
+  dialog.sheet[open]::backdrop { animation: sheet-fade 0.22s ease-out; }
+  @media (min-width: 768px) { dialog.sheet:not(.sheet--drawer)[open] { animation-name: sheet-pop; } }
+}
+@keyframes sheet-up { from { transform: translateY(40px); opacity: 0; } }
+@keyframes sheet-in { from { transform: translateX(100%); } }
+@keyframes sheet-pop { from { transform: scale(0.96); opacity: 0; } }
+@keyframes sheet-fade { from { opacity: 0; } }
 .sheet__panel { padding-bottom: calc(16px + env(safe-area-inset-bottom)); }
 .sheet__head {
   position: sticky; top: 0; z-index: 1; background: var(--surface);
