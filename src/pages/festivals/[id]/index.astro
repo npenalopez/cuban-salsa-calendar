@@ -4,7 +4,7 @@ import Base from '../../../layouts/Base.astro';
 import { AddToCalendar, FestivalMap, Lineup, TopActions, TravelLine } from '../../../components/FestivalIslands';
 import { MONTHS, countdownLong, dateLong, dateShort, dayRange, daysBetween, monthLabel, monthPath, plural } from '../../../lib/dates';
 import { ALL, TODAY, UPCOMING } from '../../../lib/data.server';
-import { SITE, byDate, canAddToCalendar, festivalPath, fixPath, fmtPrice, nextEdition, place, ticketOf } from '../../../lib/festivals';
+import { SITE, byDate, canAddToCalendar, festivalPath, fixPath, fmtPrice, nextEdition, place, priceLabel, ticketOf } from '../../../lib/festivals';
 import type { Enriched } from '../../../lib/types';
 
 export const getStaticPaths = (() => ALL.map((f) => ({ params: { id: f.id }, props: { f } }))) satisfies GetStaticPaths;
@@ -108,7 +108,7 @@ const description = [
 
       <dl class="facts">
         <dt>Where</dt><dd>{where}</dd>
-        <dt>Price</dt><dd>{f.priceText || 'Not announced yet'}</dd>
+        <dt>Price</dt><dd>{priceLabel(f) || 'Not announced yet'}</dd>
         <dt>Region</dt><dd>{f.region}</dd>
       </dl>
 

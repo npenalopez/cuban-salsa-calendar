@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { countdown, countdownLong, dateBlock, dateLong, dateShort, months12, pISO } from './dates';
-import { cardVM, enrich, fmtPrice, isListed } from './festivals';
+import { cardVM, enrich, fmtPrice, isListed, priceLabel } from './festivals';
 import { calUrls, icsCalendar } from './ics';
 import { computeView, DEFAULT_FILTERS, filtersQuery, parseFilters } from './listing';
 import { didYouMean, suggestions } from './search';
@@ -119,6 +119,11 @@ describe('cardVM', () => {
     expect(c.meta).toBe('from €59');
     expect(c.artists).toEqual(['A', 'B', 'C']);
     expect(c.moreArtists).toBe(1);
+  });
+  it('meta: a starting price without price text counts as announced', () => {
+    const [f] = enrich([mk({ artists: ['A'], priceFrom: 109, currency: 'EUR' })], TODAY);
+    expect(cardVM(f, [f], null).meta).toBe('from €109');
+    expect(priceLabel(f)).toBe('From €109');
   });
   it('never falls back to the website for Get passes', () => {
     const [f] = enrich([mk({ website: 'https://x.example' })], TODAY);

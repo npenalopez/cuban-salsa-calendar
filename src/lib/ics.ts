@@ -1,5 +1,5 @@
 import { addDays, isoD, ymd } from './dates';
-import { SITE, festivalPath } from './festivals';
+import { SITE, festivalPath, priceLabel } from './festivals';
 import type { Enriched } from './types';
 
 const esc = (t: string) => t.replace(/\\/g, '\\\\').replace(/;/g, '\\;').replace(/,/g, '\\,').replace(/\n/g, '\\n');
@@ -31,7 +31,7 @@ export function icsEvent(f: Enriched, now = new Date()): string {
   const url = SITE + festivalPath(f.id);
   const desc = [
     f.artists.length ? 'Line-up: ' + f.artists.join(', ') : '',
-    f.priceText ? 'Price: ' + f.priceText : '',
+    priceLabel(f) ? 'Price: ' + priceLabel(f) : '',
     f.website ? 'Website: ' + f.website : '',
     'Details: ' + url,
   ].filter(Boolean).join('\n');
@@ -69,7 +69,7 @@ export function calUrls(f: Enriched) {
   const a = f.artists;
   const det = [
     a.length ? 'Line-up: ' + a.slice(0, 8).join(', ') + (a.length > 8 ? '…' : '') : '',
-    f.priceText ? 'Price: ' + f.priceText : '',
+    priceLabel(f) ? 'Price: ' + priceLabel(f) : '',
     'Details: ' + url,
   ].filter(Boolean).join('\n');
   const enc = encodeURIComponent;

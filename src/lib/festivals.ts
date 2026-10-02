@@ -54,6 +54,13 @@ export function fmtPrice(f: Pick<Festival, 'priceFrom' | 'priceText' | 'currency
   return 'from ' + (sym ? sym + n : (f.currency ? f.currency + ' ' : '') + n);
 }
 
+/** For the Price row and calendar files: the organizer's wording, else "From €109". */
+export function priceLabel(f: Pick<Festival, 'priceFrom' | 'priceText' | 'currency'>): string | null {
+  if (f.priceText) return f.priceText;
+  const p = fmtPrice(f);
+  return p ? p[0].toUpperCase() + p.slice(1) : null;
+}
+
 export function place(f: Pick<Festival, 'city' | 'country'>): string {
   if (f.city && f.country) return `${f.city}, ${f.country}`;
   return f.city || f.country || 'Location to be announced';
@@ -106,10 +113,11 @@ export function cardVM(f: Enriched, all: Enriched[], city: City | null, today?: 
     // Days until the festival, for upcoming ones that will go ahead.
     const cd = today && (f.status === 'scheduled' || f.status === 'sold-out') ? countdown(f.s, f.e, today) : null;
     if (cd) parts.push(cd);
+    // A starting price alone (no price text) still counts as announced.
     const price = fmtPrice(f);
-    if (f.priceText && price) parts.push(price);
-    if (!a.length) parts.push(f.priceText ? 'Line-up not announced' : 'Line-up and prices not announced');
-    else if (!f.priceText) parts.push('Price not announced');
+    if (price) parts.push(price);
+    if (!a.length) parts.push(price ? 'Line-up not announced' : 'Line-up and prices not announced');
+    else if (!price) parts.push('Price not announced');
   }
   const featured = FEATURED_ENABLED && f.featured && !f.arch;
   let badge: BadgeKind | null = null;
