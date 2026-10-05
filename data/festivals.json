@@ -1,6 +1,6 @@
 {
-  "version": "2026.10-128",
-  "updated": "2026-10-02",
+  "version": "2026.10-132",
+  "updated": "2026-10-05",
   "festivals": [
     {
       "id": "salsa-stras-festival-strasbourg-2026",
@@ -104,17 +104,17 @@
       "country": "Switzerland",
       "countryCode": "CH",
       "region": "Europe",
-      "venue": null,
+      "venue": "Salle de spectacles de Renens",
       "coordinates": [
         46.5359,
         6.5783
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "CHF 20 to CHF 200",
+      "priceFrom": 20,
+      "currency": "CHF",
       "ticketUrl": "https://eventfrog.ch/la-speciale-3",
       "website": "https://salsamas.godaddysites.com/la-speciale-3",
-      "instagram": null,
+      "instagram": "https://www.instagram.com/salsamas.ch/",
       "artists": [
         "Danger & Marielkis",
         "DJ Estefi",
@@ -131,7 +131,7 @@
       "description": "Festival La Speciale in Renens, Switzerland.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website."
+      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-05 (venue, instagram, priceText, priceFrom, currency); verify with the organizer."
     },
     {
       "id": "salsafestival-chemnitz-2026",
@@ -1329,7 +1329,7 @@
       "priceText": "Full Pass 850-990 DKK",
       "priceFrom": 850,
       "currency": "DKK",
-      "ticketUrl": null,
+      "ticketUrl": "https://bachatacopenhagen.dk/events/cultural-social-dance-fest/",
       "website": "https://bachatacopenhagen.dk/events/cultural-social-dance-fest/",
       "instagram": "https://www.instagram.com/bachatadominicanacopenhagen/",
       "artists": [
@@ -1343,7 +1343,7 @@
       "description": "1st edition, organised by Bachata Dominicana Copenhagen. Held at KU.BE, a municipal house of culture and movement in Frederiksberg. No shows, no competition: the point is for different dance communities to meet. 12+ hours of workshops in two rooms and 13+ hours of social dancing on two floors, Friday to Sunday evening; Friday opens with a free public dance night. Cuban side: Ramses y Sandra (casino and son cubano). Also bachata, merengue (Juan Pablo Paredes), konpa (Mariana), kizomba (Daniela), son dominicano and bolero (Frank E), DJ la Desi. NOTE: mixed styles, bachata-led.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer.\nFilled from cubansalsafestivals.com on 2026-10-05 (ticketUrl); verify with the organizer."
     },
     {
       "id": "la-clave-festival-lloret-2026",
@@ -2001,7 +2001,7 @@
       "priceText": "From PLN 470",
       "priceFrom": 470,
       "currency": "PLN",
-      "ticketUrl": null,
+      "ticketUrl": "https://abra-studio.pl/produkt/lavibracubana-festival-2026/",
       "website": "https://abra-studio.pl/produkt/lavibracubana-festival-2026/",
       "instagram": "https://www.instagram.com/lavibracubanafestival/",
       "artists": [
@@ -2014,7 +2014,7 @@
       "description": "Cuban-only weekend in central Warsaw run by Abra Studio in its own studios (which of its two central premises is still to be announced). Styles: salsa cubana, timba, son, afro-Cuban, folklore and saoco; bachata, kizomba and zouk deliberately excluded. Three of five announced teachers are Cuban. Pitched at experienced dancers, beginners and enthusiasts. Adults only. Chopin airport 8 km from the centre.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer.\nFilled from cubansalsafestivals.com on 2026-10-05 (ticketUrl); verify with the organizer."
     },
     {
       "id": "latin-dance-festival-lloret-2026",
@@ -2054,29 +2054,29 @@
       "name": "Merseyside Latin Festival",
       "status": "scheduled",
       "startDate": "2026-12-04",
-      "endDate": "2026-12-07",
+      "endDate": "2026-12-06",
       "datePrecision": "day",
       "dateNote": null,
       "city": "Liverpool",
       "country": "United Kingdom",
       "countryCode": "GB",
       "region": "Europe",
-      "venue": null,
+      "venue": "The Adelphi Hotel",
       "coordinates": [
         53.4084,
         -2.9916
       ],
-      "priceText": null,
+      "priceText": "£60 to £195",
       "priceFrom": 195,
       "currency": "GBP",
       "ticketUrl": "https://www.merseysidelatinfestival.co.uk/tickets",
       "website": "https://www.merseysidelatinfestival.co.uk/",
-      "instagram": null,
+      "instagram": "https://www.instagram.com/merseysidelatinfestival/",
       "artists": [],
       "description": "Merseyside Latin Festival in Liverpool, UK. SRBK event. December 4-7, 2026.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website."
+      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-05 (venue, instagram, priceText); verify with the organizer.\n2026-10-05: dates changed from 2026-12-04 – 2026-12-07 to 2026-12-04 – 2026-12-06, as on https://www.merseysidelatinfestival.co.uk/ and cubansalsafestivals.com."
     },
     {
       "id": "timba-flow-cuban-festival-playa-del-carmen-2026",
@@ -2607,17 +2607,17 @@
       "country": "Norway",
       "countryCode": "NO",
       "region": "Europe",
-      "venue": null,
+      "venue": "Union Scene",
       "coordinates": [
         59.744,
         10.2045
       ],
-      "priceText": null,
-      "priceFrom": null,
+      "priceText": "€150 to €160",
+      "priceFrom": 150,
       "currency": "NOK",
       "ticketUrl": "https://purocubanofestival.com/tickets/",
       "website": "https://purocubanofestival.com/",
-      "instagram": null,
+      "instagram": "https://www.instagram.com/bailan2purocubanofestival/",
       "artists": [
         "Andy & Yuliet",
         "DJ Charanga",
@@ -2634,7 +2634,7 @@
       "description": "5th edition. Bailan2 Puro Cubano Festival at Grønland 60, central Drammen, Norway. Over 20 workshops in salsa, son, rumba, Afro-Cuban dance. Live music in classes, evening parties, social dancing. Organized by Bailan2 Dance Studio.",
       "lastVerified": null,
       "featured": false,
-      "notes": null
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-05 (venue, instagram, priceText, priceFrom); verify with the organizer."
     },
     {
       "id": "fusafes-fukuoka-salsa-festival-2027",
@@ -2957,7 +2957,7 @@
       "name": "Me Salsa Fest",
       "status": "scheduled",
       "startDate": "2027-03-12",
-      "endDate": "2027-03-15",
+      "endDate": "2027-03-14",
       "datePrecision": "day",
       "dateNote": null,
       "city": "Birmingham",
@@ -2982,7 +2982,7 @@
       "description": "Me Salsa Fest in Birmingham, England. Listed in rueda.casino March 12-15, 2027.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-05: dates changed from 2027-03-12 – 2027-03-15 to 2027-03-12 – 2027-03-14, as on https://www.mesalsadance.com/blank and cubansalsafestivals.com."
     },
     {
       "id": "salsa-festival-carnaval-limoges-2027",
@@ -3020,7 +3020,7 @@
       "name": "Istanbul World Dance Congress",
       "status": "scheduled",
       "startDate": "2027-03-17",
-      "endDate": "2027-03-21",
+      "endDate": "2027-03-23",
       "datePrecision": "day",
       "dateNote": null,
       "city": "Istanbul",
@@ -3084,7 +3084,7 @@
       "description": "Istanbul World Dance Congress in Istanbul. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (41) from https://www.goandance.com/en/event/9956/iwdc-istanbul-world-dance-congress-2027 on 2026-10-01 (high confidence); verify with the organizer."
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (41) from https://www.goandance.com/en/event/9956/iwdc-istanbul-world-dance-congress-2027 on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-05: dates changed from 2027-03-17 – 2027-03-21 to 2027-03-17 – 2027-03-23, as on https://istanbulworlddancecongress.com/ and cubansalsafestivals.com."
     },
     {
       "id": "meneate-viena-2027",
@@ -3490,7 +3490,7 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": null,
+      "ticketUrl": "https://ruedalibre.co.uk/la-dosis/",
       "website": "https://ruedalibre.co.uk/la-dosis/",
       "instagram": null,
       "artists": [
@@ -3518,7 +3518,7 @@
       "description": "Workshops | Parties | Live Music | Rumba Abierta | Casino Boot Camp | Rueda Olympics. 19+ world-class artists + DJs. 3 full days of workshops with live music across all levels. Casino Boot Camp by Ramses and Sandra. 2 epic parties at Saw Swee Hock Student Centre, central London. Friendly, inclusive community by Rueda Libre. Quality Cuban dance with great artists in welcoming and safe space.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (website, venue); verify with the organizer.\nLine-up (20) from https://ruedalibre.co.uk/la-dosis-artists/ on 2026-10-01 (medium confidence); verify with the organizer."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (website, venue); verify with the organizer.\nLine-up (20) from https://ruedalibre.co.uk/la-dosis-artists/ on 2026-10-01 (medium confidence); verify with the organizer.\nFilled from cubansalsafestivals.com on 2026-10-05 (ticketUrl); verify with the organizer."
     },
     {
       "id": "manana-ljubljana-2027",
@@ -4644,6 +4644,126 @@
       "lastVerified": null,
       "featured": false,
       "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer."
+    },
+    {
+      "series": "timba-paradise-saarbrucken",
+      "status": "scheduled",
+      "datePrecision": "day",
+      "dateNote": null,
+      "region": "Europe",
+      "venue": "Congresshalle Saarbrücken",
+      "priceText": "From €159",
+      "priceFrom": 159,
+      "currency": "EUR",
+      "ticketUrl": "https://my.weezevent.com/tp10",
+      "website": "https://timba-paradise.com/",
+      "instagram": "https://www.instagram.com/timbaparadise/",
+      "artists": [],
+      "lastVerified": null,
+      "featured": false,
+      "id": "timba-paradise-saarbrucken-2027",
+      "name": "Timba Paradise",
+      "startDate": "2027-08-26",
+      "endDate": "2027-08-30",
+      "city": "Saarbrücken",
+      "country": "Germany",
+      "countryCode": "DE",
+      "coordinates": [
+        49.237583,
+        6.987417
+      ],
+      "description": "Timba Paradise in Saarbrücken, Germany: a late-summer festival of timba, casino, son and rumba at the Congresshalle, from Thursday night into Monday morning.",
+      "notes": "Added from cubansalsafestivals.com on 2026-10-05; verify with the organizer. Dates confirmed on the Weezevent ticket page (TP10)."
+    },
+    {
+      "series": "timbatonazo-summer-festival-santa-susanna",
+      "status": "scheduled",
+      "datePrecision": "day",
+      "dateNote": null,
+      "region": "Europe",
+      "venue": "Hotel Don Ángel",
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://www.goandance.com/en/event/9958/timbatonazo-summer-festival-2027",
+      "website": null,
+      "instagram": "https://www.instagram.com/timbatonazo_summer_fest/",
+      "artists": [],
+      "lastVerified": null,
+      "featured": false,
+      "id": "timbatonazo-summer-festival-santa-susanna-2027",
+      "name": "Timbatonazo Summer Festival",
+      "startDate": "2027-08-19",
+      "endDate": "2027-08-22",
+      "city": "Santa Susanna",
+      "country": "Spain",
+      "countryCode": "ES",
+      "coordinates": [
+        41.633208,
+        2.721074
+      ],
+      "description": "Timbatonazo Summer Festival in Santa Susanna, on the coast north of Barcelona: four days of timba and Cuban dance with workshops, pool parties, night socials and dance battles.",
+      "notes": "Added from cubansalsafestivals.com on 2026-10-05; verify with the organizer. Dates confirmed on the go&dance listing."
+    },
+    {
+      "series": "montpel-rueda-festival-montpellier",
+      "status": "scheduled",
+      "datePrecision": "day",
+      "dateNote": null,
+      "region": "Europe",
+      "venue": null,
+      "priceText": "€90 to €110",
+      "priceFrom": 90,
+      "currency": "EUR",
+      "ticketUrl": null,
+      "website": "https://www.ruedasocialclub.fr/",
+      "instagram": "https://www.instagram.com/montpelruedafestival/",
+      "artists": [],
+      "lastVerified": null,
+      "featured": false,
+      "id": "montpel-rueda-festival-montpellier-2027",
+      "name": "Montpel' Rueda Festival",
+      "startDate": "2027-05-14",
+      "endDate": "2027-05-16",
+      "city": "Montpellier",
+      "country": "France",
+      "countryCode": "FR",
+      "coordinates": [
+        43.611242,
+        3.876734
+      ],
+      "description": "Montpel' Rueda Festival in Montpellier, run by Rueda Social Club: a May weekend of rueda de casino, Cuban salsa, son and rumba workshops with Cuban parties.",
+      "notes": "Added from cubansalsafestivals.com on 2026-10-05; verify with the organizer. Venue not announced; coordinates are the city centre."
+    },
+    {
+      "series": "cuban-ile-noirmoutier",
+      "status": "scheduled",
+      "datePrecision": "day",
+      "dateNote": null,
+      "region": "Europe",
+      "venue": "Domaine Les Quatre Vents",
+      "priceText": "€85 to €150",
+      "priceFrom": 85,
+      "currency": "EUR",
+      "ticketUrl": "https://www.helloasso.com/associations/cuban-ile/evenements/cuban-ile-5-mars-2027",
+      "website": null,
+      "instagram": "https://www.instagram.com/cubanilefestival/",
+      "artists": [],
+      "lastVerified": null,
+      "featured": false,
+      "id": "cuban-ile-noirmoutier-2027",
+      "name": "Festival Cuban'île",
+      "startDate": "2027-03-12",
+      "endDate": "2027-03-14",
+      "city": "L'Épine (Noirmoutier)",
+      "country": "France",
+      "countryCode": "FR",
+      "coordinates": [
+        46.969474,
+        -2.264174
+      ],
+      "description": "Festival Cuban'île, 5th edition, on the island of Noirmoutier: a full-board weekend in a holiday village with Cuban salsa workshops by day; evening parties also include bachata and kizomba.",
+      "notes": "Added from cubansalsafestivals.com on 2026-10-05; verify with the organizer. Mixed nights (SBK) per their page; Cuban workshops by day. Dates confirmed by the HelloAsso listing title \"Cuban'île #5 - mars 2027\" and search snippets."
     }
   ]
 }

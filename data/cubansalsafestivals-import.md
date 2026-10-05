@@ -292,3 +292,45 @@ On 2026-10-01 the 27 festivals without exact days were researched online by name
 - Discontinued, no edition since 2014–2025: `bologna-salsa-festival-2026`, `festival-salsa-cubana-munich-2026`, `hot-salsa-weekend-stockholm-2026`, `sydney-cuban-salsa-congress-2026`, `rose-city-salsa-timba-portland-2026`, `cuba-mi-salsa-cyprus-2026`, `hola-cuba-festival-france-2026`, `hola-cuba-malmo-2026`, `me-gusta-cuba-festival-2026`, `havana-to-melbourne-cuban-festival-2026`, `ksaba-asia-salsa-bachata-congress-2026`, `casineros-timba-fest-atlanta-2026`.
 - Not Cuban style (On2 / LA-NY): `firenze-mambo-congress-2026`, `firenze-mambo-congress-2027`, `dusseldorf-international-salsa-2026`.
 - Corrected: Gusto Cubano moved from Tapolca to Kecskemét (id now `gusto-cubano-kecskemet-2026`; dates 13–15 Nov 2026 only from directories, so still hidden). Aotearoa Cuban Festival is in Rotorua, not Auckland.
+
+## Rescan on 2026-10-05
+
+159 festival pages crawled (151 on 2026-10-01). Same rules: facts only, empty fields only. One difference: links are now checked before use. Their pages contain many links that belong to other festivals (for example, the Mexico Timba Congress ticket link points to Arrebatate Budapest, the CubaSi ticket link to Flama, and the Made in Cuba ticket link to Me Salsa Fest). About 30 such links were left out.
+
+### Added (4)
+
+| Festival | Dates | Source |
+|---|---|---|
+| `timba-paradise-saarbrucken-2027` | 2027-08-26 – 2027-08-30 | [theirs](https://cubansalsafestivals.com/festivals/timbaparadise-2027/), dates confirmed on Weezevent |
+| `timbatonazo-summer-festival-santa-susanna-2027` | 2027-08-19 – 2027-08-22 | [theirs](https://cubansalsafestivals.com/festivals/timbatonazosummerfestival-2027/), dates confirmed on go&dance |
+| `montpel-rueda-festival-montpellier-2027` | 2027-05-14 – 2027-05-16 | [theirs](https://cubansalsafestivals.com/festivals/montpelruedafestival-2027/) (venue not announced) |
+| `cuban-ile-noirmoutier-2027` | 2027-03-12 – 2027-03-14 | [theirs](https://cubansalsafestivals.com/festivals/cubanile-2027/), 5th edition; SBK at night |
+
+### Dates corrected (checked on the organizer's site)
+
+- `istanbul-world-dance-congress-2027`: now 17–23 Mar 2027 (was 17–21)
+- `me-salsa-fest-birmingham-2027`: now 12–14 Mar 2027 (was 12–15)
+- `merseyside-latin-festival-liverpool-2026`: now 4–6 Dec 2026 (was 4–7)
+
+### Fields filled
+
+- `merseyside-latin-festival-liverpool-2026`: venue, Instagram, price £60–£195
+- `bailan2-puro-cubano-drammen-2027`: venue (Union Scene), Instagram, price €150–€160
+- `festival-la-speciale-renens-2026`: venue, Instagram, price CHF 20–200
+- Ticket links: `cultural-social-dance-fest-copenhagen-2026`, `la-dosis-london-2027`, `la-vibra-cubana-warsaw-2026`
+
+### Not added: mixed events with a small Cuban share (owner to decide)
+
+| Festival | Dates | Why held back |
+|---|---|---|
+| [Champagne Dance Festival](https://cubansalsafestivals.com/festivals/champagnedancefestival-2026/), Reims | 2026-10-16 – 2026-10-19 | SBK; Cuban about a third |
+| [Tisno Dance City](https://cubansalsafestivals.com/festivals/elsolfestival-tisno-2027/), Tisno HR | 2027-09-15 – 2027-09-20 | elSol beach edition; small Cuban floor |
+| [Berlin Salsa Congress](https://cubansalsafestivals.com/festivals/berlinsalsacongress-2027/), Tempodrom | 2027-08-26 – 2027-08-29 | Mostly On1/On2; separate Cuban pass and floor |
+| [Festival Cuba Hoy](https://cubansalsafestivals.com/festivals/festivalcubahoy-2027/), Toulouse | 2027-01-23 – 2027-02-05 | City music festival; Cuban is one strand |
+| [Ballagan](https://cubansalsafestivals.com/festivals/ballagan-2026/), Eilat IL | 2026-10-08 – 2026-10-10 | Multi-style; Cuban about 1 in 8 |
+| [Sicilia Salsa Sensual Festival](https://cubansalsafestivals.com/festivals/siciliasalsasensualfestival-2027/) | 2027-07-05 – 2027-07-11 | Salsa sensual / LA |
+
+### Still to check
+
+- `festival-rueda-globetrotters-toulouse-2026` (9 Oct): they say ends 11 Oct, we say 12 Oct. rgtfestival.com shows no dates.
+- They link El Festival de la Salsa en Cuba (= `festival-de-la-salsa-havana-2027`) to Love Dance Festival's site and tickets. Not copied.
