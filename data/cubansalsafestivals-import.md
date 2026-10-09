@@ -349,6 +349,7 @@ On 2026-10-01 the 27 festivals without exact days were researched online by name
 
 - `timbeando-y-mambo-festival-lloret-2027`: now 5–7 Mar 2027 (was 6–7), with a €105 full pass, as on go&dance.
 - `merseyside-latin-festival-liverpool-2026`: `priceFrom` corrected to 60. It was 195, the top of the £60–£195 range.
+- `bailan2-puro-cubano-drammen-2027`: currency corrected to EUR. The €150–€160 price from the last scan had been saved as NOK.
 - `latin-garden-festival-helsinki-2026`: price text now reads "Full pass €160–€165; track passes from €120", from the ticket page.
 
 ### Not added
