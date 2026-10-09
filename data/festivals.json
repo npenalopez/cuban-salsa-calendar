@@ -1,6 +1,6 @@
 {
-  "version": "2026.10-132",
-  "updated": "2026-10-05",
+  "version": "2026.10-133",
+  "updated": "2026-10-09",
   "festivals": [
     {
       "id": "salsa-stras-festival-strasbourg-2026",
@@ -782,7 +782,7 @@
         60.184207,
         24.919796
       ],
-      "priceText": "Full Pass €120-€165",
+      "priceText": "Full pass €160–€165; track passes from €120",
       "priceFrom": 120,
       "currency": "EUR",
       "ticketUrl": "https://appwedance.com/en/events/latin-garden-festival-2026-a7882065",
@@ -792,7 +792,7 @@
       "description": "Three nights at Korjaamo, a converted tram depot in central Helsinki (Vintti and Kulmasali halls). Workshops by day, party each night, Saturday running to 3:30 AM. 2026 edition is bigger than before with more artists and an extra night. Ticket types: Full, Day, Party (3 nights), single party, workshop packs. NOTE: Cuban content (casino, timba, rumba, afro) sits alongside a broader Latin/bachata programme.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer."
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\n2026-10-09: pass prices from the appwedance ticket page (full pass €160 advance, €165 door; partnerwork track €120). cubansalsafestivals.com lists Instagram @latingardenfestival; ours is @latingardenhelsinki. Not changed."
     },
     {
       "id": "ruedamania-yekaterinburg-2026",
@@ -2067,7 +2067,7 @@
         -2.9916
       ],
       "priceText": "£60 to £195",
-      "priceFrom": 195,
+      "priceFrom": 60,
       "currency": "GBP",
       "ticketUrl": "https://www.merseysidelatinfestival.co.uk/tickets",
       "website": "https://www.merseysidelatinfestival.co.uk/",
@@ -2836,7 +2836,7 @@
       "series": "timbeando-y-mambo-festival-lloret",
       "name": "Timbeando y Mambo Festival",
       "status": "scheduled",
-      "startDate": "2027-03-06",
+      "startDate": "2027-03-05",
       "endDate": "2027-03-07",
       "datePrecision": "day",
       "dateNote": null,
@@ -2849,9 +2849,9 @@
         41.7005,
         2.8458
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Full pass €105",
+      "priceFrom": 105,
+      "currency": "EUR",
       "ticketUrl": "https://www.goandance.com/es/evento/9374/timbeando-mambo-festival-2027",
       "website": "https://beacons.ai/timbeando_festival",
       "instagram": "https://www.instagram.com/timbeandoymambofestival/",
@@ -2859,7 +2859,7 @@
       "description": "100% Cuban festival celebrating Cuban music and dance with timba as its centerpiece. Workshops in salsa cubana, timba, guaguanco, rueda de casino, rumba and afro. Includes Timba en el Ring competition (solo and couples). Held at Hotel Evenia Olympic in Lloret de Mar.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer."
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-09: dates changed from 2027-03-06 – 2027-03-07 to 2027-03-05 – 2027-03-07 and full pass €105, as on the go&dance listing (event 9374). That listing gives the venue as Hotel Don Ángel, Santa Susanna, not Evenia Lloret; venue not changed, check with the organizer."
     },
     {
       "id": "arrasando-bremen-2027",
@@ -4764,6 +4764,36 @@
       ],
       "description": "Festival Cuban'île, 5th edition, on the island of Noirmoutier: a full-board weekend in a holiday village with Cuban salsa workshops by day; evening parties also include bachata and kizomba.",
       "notes": "Added from cubansalsafestivals.com on 2026-10-05; verify with the organizer. Mixed nights (SBK) per their page; Cuban workshops by day. Dates confirmed by the HelloAsso listing title \"Cuban'île #5 - mars 2027\" and search snippets."
+    },
+    {
+      "id": "salsa-festival-prague-2027",
+      "series": "salsa-festival-prague",
+      "name": "Salsa Festival Prague",
+      "status": "scheduled",
+      "startDate": "2027-08-20",
+      "endDate": "2027-08-22",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Prague",
+      "country": "Czech Republic",
+      "countryCode": "CZ",
+      "region": "Europe",
+      "venue": "Hotel Olympik Congress",
+      "coordinates": [
+        50.098381,
+        14.468282
+      ],
+      "priceText": "Early-bird full pass €119 (then €169)",
+      "priceFrom": 119,
+      "currency": "EUR",
+      "ticketUrl": "https://www.goandance.com/en/event/9971/salsa-festival-prague-2027",
+      "website": "https://www.salsafestivalprague.cz/",
+      "instagram": "https://www.instagram.com/salsafestivalprague/",
+      "artists": [],
+      "description": "Salsa Festival Prague, second edition: a Cuban salsa, timba and Afro-Cuban weekend run by Cuban teacher Hanser Estenoz, with classes, socials and rooms all under one roof at the Hotel Olympik Congress.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added from cubansalsafestivals.com on 2026-10-09; verify with the organizer. Dates and early-bird price confirmed on the go&dance listing (event 9971); parties run into the morning of 23 Aug."
     }
   ]
 }

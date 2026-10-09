@@ -334,3 +334,33 @@ On 2026-10-01 the 27 festivals without exact days were researched online by name
 
 - `festival-rueda-globetrotters-toulouse-2026` (9 Oct): they say ends 11 Oct, we say 12 Oct. rgtfestival.com shows no dates.
 - They link El Festival de la Salsa en Cuba (= `festival-de-la-salsa-havana-2027`) to Love Dance Festival's site and tickets. Not copied.
+
+## Rescan on 2026-10-09
+
+159 festival pages crawled, the same number as on 2026-10-05. Five pages for 2026 editions were replaced by 2027 pages, and three of those 2027 pages are new to us. Most links that differ from ours still point to other festivals, so they were not copied.
+
+### Added (1)
+
+| Festival | Dates | Source |
+|---|---|---|
+| `salsa-festival-prague-2027` | 2027-08-20 – 2027-08-22 | [theirs](https://cubansalsafestivals.com/festivals/salsafestivalprague-2027/). Fully Cuban programme; dates and early-bird €119 confirmed on go&dance |
+
+### Changed
+
+- `timbeando-y-mambo-festival-lloret-2027`: now 5–7 Mar 2027 (was 6–7), with a €105 full pass, as on go&dance.
+- `merseyside-latin-festival-liverpool-2026`: `priceFrom` corrected to 60. It was 195, the top of the £60–£195 range.
+- `latin-garden-festival-helsinki-2026`: price text now reads "Full pass €160–€165; track passes from €120", from the ticket page.
+
+### Not added
+
+- [UNiDANZA 2027](https://cubansalsafestivals.com/festivals/unidanza-hamburg-2027/), Hamburg, 12–14 Feb 2027. Fully Cuban, but unidanza.de still shows only 2026 and I found no other source for these dates. Their ticket link goes to Baila Calabria. Add it once the organizer announces it.
+- [Benidorm Beach Festival 2027](https://cubansalsafestivals.com/festivals/benidormbeachfestival-2027/), 26–30 Aug 2027, Gran Hotel Bali. Mixed Latin festival with one salsa floor, where the Cuban share is small. Same category as the other held-back mixed events.
+
+### Still to check
+
+- `timbeando-y-mambo-festival-lloret-2027`: go&dance gives the venue as Hotel Don Ángel, Santa Susanna. We (and they) say Evenia Hotels, Lloret de Mar.
+- `havana-en-belgrado-2026`: they now give the venue as Dom Omladine Beograda (Makedonska 22) and call this the 13th and final edition. The organizer's site names no venue and doesn't say it is the last edition. Ours says DKC Majdan and Zappa Barka.
+- `el-son-se-viste-de-gala-santa-susanna-2026`: they link a HelloAsso page (Suena Cubano) from €50 instead of Weezevent from €320. The page returned 403, so I couldn't check it. It may be a non-residential pass.
+- `latin-garden-festival-helsinki-2026`: their Instagram is @latingardenfestival, ours is @latingardenhelsinki.
+- `festival-rueda-globetrotters-toulouse-2026` (ends 11 or 12 Oct) is still unresolved, and the festival starts today.
+- `mi-habana-baila-santa-susanna-oct-2026`: their October 2026 Santa Susanna page still says cancelled. Our record with this id now holds the Slovenia April 2027 edition, so the id is misleading. Worth renaming.
