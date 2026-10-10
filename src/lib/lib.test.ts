@@ -6,7 +6,7 @@ import { inCountry } from '../i18n/places';
 import { calUrls, icsCalendar } from './ics';
 import { computeView, DEFAULT_FILTERS, filtersQuery, km, parseFilters, styleOptions } from './listing';
 import { didYouMean, suggestions } from './search';
-import { artistKind, artistPath, canonicalArtist, canonicalLineup, pagedArtistSlugs, peopleOf } from './artists';
+import { artistKind, artistPath, canonicalArtist, canonicalLineup, initials, pagedArtistSlugs, peopleOf, profileOf } from './artists';
 import { artistPages } from './artistPages';
 import { bestTravel, fmtHours, travelOptions } from './travel';
 import { countryPath, eventLd, festivalTitle, inName, landingIntro, landings, regionPath, relatedFor, slugify } from './seo';
@@ -324,8 +324,8 @@ describe('artist pages', () => {
     expect(artistKind('Adonis Santiago')).toBe('person');
     expect(artistPath('Ana & José')).toBe('/artists/ana-and-jose/');
     expect(artistPath('Wilmer y María')).toBe('/artists/wilmer-and-maria/'); // old spelling, same page
-    const paged = pagedArtistSlugs([['Cristian', 'Ana Paz'], ['Cristian', 'Solo'], ['Ana Paz']]);
-    expect(paged.has('cristian')).toBe(false); // one word, two festivals: maybe two people
+    const paged = pagedArtistSlugs([['Rosalinda', 'Ana Paz'], ['Rosalinda', 'Solo'], ['Ana Paz']]);
+    expect(paged.has('rosalinda')).toBe(false); // one word, two festivals: maybe two people
     expect(paged.has('solo')).toBe(true); // one word, one festival
     expect(paged.has('ana-paz')).toBe(true);
   });
@@ -381,5 +381,17 @@ describe('couples count for each partner', () => {
     expect(peopleOf(['Some & Couple'])).toEqual(['Some & Couple']);
     expect(peopleOf(['Elito Revé y su Charangón'])).toEqual(['Elito Revé y su Charangón']);
     expect(peopleOf(['Adonis Santiago', 'Adonis & Royma'])).toEqual(['Adonis Santiago', 'Royma Roman']);
+  });
+});
+
+describe('artist profiles', () => {
+  it('initials and Instagram handles from the registry', () => {
+    expect(initials('Adonis Santiago')).toBe('AS');
+    expect(initials('Danger & Marielkis')).toBe('D&M');
+    expect(initials('DJ Yan El Diablito')).toBe('YD');
+    expect(initials('FredyClan')).toBe('F');
+    expect(profileOf('Adonis Santiago').instagram).toBe('adonis_santiago_official');
+    expect(profileOf('Relampago').instagram).toBe('relampago_acflow'); // alias of Osmel Relámpago
+    expect(profileOf('Nobody Known')).toEqual({});
   });
 });

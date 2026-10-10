@@ -79,3 +79,22 @@ export function pagedArtistSlugs(lineups: string[][]): Set<string> {
   for (const l of lineups) for (const a of l) if (!/\s/.test(a.trim()) && !known.has(key(a))) oneWord.add(slugify(a));
   return new Set([...count.keys()].filter((s) => s && !(oneWord.has(s) && count.get(s)! > 1)));
 }
+
+export interface ArtistProfile {
+  instagram?: string;
+  /** Path under /artists/photos/, only with the artist's or organizer's permission. */
+  photo?: string;
+}
+const profiles = ((registry as { profiles?: Record<string, ArtistProfile> }).profiles ?? {}) as Record<string, ArtistProfile>;
+const profileByKey = new Map(Object.entries(profiles).map(([n, p]) => [key(n), p]));
+/** Instagram handle and photo for an artist, if known. */
+export const profileOf = (name: string): ArtistProfile => profileByKey.get(key(canonicalArtist(name))) ?? {};
+
+/** "AS" for Adonis Santiago, "D&M" for Danger & Marielkis: for the round placeholder when there is no photo. */
+export function initials(name: string): string {
+  const clean = name.replace(/^DJ\s+/i, '').replace(/[()"'.]/g, '');
+  const parts = clean.split(/\s*&\s*/);
+  if (parts.length === 2) return `${parts[0][0] ?? ''}&${parts[1][0] ?? ''}`.toUpperCase();
+  const w = clean.split(/\s+/).filter((x) => /\p{L}/u.test(x[0] ?? ''));
+  return ((w[0]?.[0] ?? '') + (w.length > 1 ? w[w.length - 1][0] : '')).toUpperCase();
+}

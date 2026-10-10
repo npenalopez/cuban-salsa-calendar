@@ -628,6 +628,11 @@ dialog.sheet--drawer .sheet__panel { padding-top: env(safe-area-inset-top); }
 
 /* ============ Artist pages ============ */
 .page-title--name { font-size: clamp(44px, 10vw, 80px); overflow-wrap: anywhere; }
+.artist-head { flex-direction: row; align-items: center; gap: 16px; }
+.artist-head__text { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.artist-photo { flex: none; width: 96px; height: 96px; border-radius: 50%; object-fit: cover; background: var(--sunken); }
+.artist-photo--initials { display: inline-flex; align-items: center; justify-content: center; font: 800 32px/1 var(--display); font-stretch: 75%; color: var(--bg); background: var(--ink); letter-spacing: 0.02em; }
+.artist-ig { align-self: flex-start; margin-top: 12px; }
 .artist-rel { margin: 4px 0 0; font-size: 15px; color: var(--ink2); }
 .artist-rel a { font-weight: 700; }
 .artist-note { margin-top: 28px; }

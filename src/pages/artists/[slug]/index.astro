@@ -8,6 +8,7 @@ import { inCountry } from '../../../i18n/places';
 import { ALL } from '../../../lib/data.server';
 import { SITE, festivalPath, place } from '../../../lib/festivals';
 import { type ArtistPage, artistPages, artistPath } from '../../../lib/artistPages';
+import { initials, profileOf } from '../../../lib/artists';
 
 export const getStaticPaths = (() => {
   const pages = artistPages(ALL);
@@ -28,6 +29,8 @@ const description = n ? T('artist.desc', { name: a.name, n, list: next.join(', '
 const countriesWhere = a.countries.length === 0 ? '' : a.countries.length === 1 ? t(lang, 'land.where', { place: inCountry(lang, a.upcoming.find((h) => h.f.country === a.countries[0])?.f.countryCode, a.countries[0]) }) : T('artist.inCountries', { n: a.countries.length });
 const intro = n ? T('artist.intro', { name: a.name, n, where: countriesWhere }) + (a.past.length ? T('artist.pastBelow', { n: a.past.length }) : '') : T('artist.none', { name: a.name });
 
+const profile = profileOf(a.name);
+const ig = profile.instagram ? `https://www.instagram.com/${profile.instagram}/` : null;
 const ld: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': a.kind === 'group' || a.kind === 'couple' ? 'PerformingGroup' : 'Person',
@@ -38,6 +41,8 @@ const ld: Record<string, unknown> = {
     location: { '@type': 'Place', name: f.venue || f.city || place(f), address: { '@type': 'PostalAddress', addressLocality: f.city ?? undefined, addressCountry: f.countryCode ?? undefined } },
   })),
 };
+if (ig) ld.sameAs = [ig];
+if (profile.photo) ld.image = SITE + profile.photo;
 if (a.members.length) ld.member = a.members.map((m) => ({ '@type': 'Person', name: m }));
 if (a.memberOf.length) ld.memberOf = a.memberOf.map((m) => ({ '@type': 'PerformingGroup', name: m }));
 ---
@@ -46,11 +51,17 @@ if (a.memberOf.length) ld.memberOf = a.memberOf.map((m) => ({ '@type': 'Performi
   <div class="topbar">
     <a class="topbar__back" href={L('/artists/')}>{T('artist.back')}</a>
   </div>
-  <div class="page-head">
-    <span class="kicker">{T(`artist.${a.kind}`)}</span>
-    <h1 class="page-title page-title--name">{a.name}</h1>
-    <p class="page-note">{intro}</p>
+  <div class="page-head artist-head">
+    {profile.photo
+      ? <img class="artist-photo" src={profile.photo} alt={a.name} width="96" height="96" loading="lazy" decoding="async" />
+      : <span class="artist-photo artist-photo--initials" aria-hidden="true">{initials(a.name)}</span>}
+    <div class="artist-head__text">
+      <span class="kicker">{T(`artist.${a.kind}`)}</span>
+      <h1 class="page-title page-title--name">{a.name}</h1>
+    </div>
   </div>
+  <p class="page-note">{intro}</p>
+  {ig && <a class="btn artist-ig" href={ig} target="_blank" rel="noopener">Instagram @{profile.instagram} ↗</a>}
 
   {(a.members.length > 0 || a.memberOf.length > 0) && (
     <p class="artist-rel">

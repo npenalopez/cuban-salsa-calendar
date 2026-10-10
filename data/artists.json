@@ -1,5 +1,5 @@
 {
-  "$comment": "Artist registry. `aliases`: other spellings -> the one name shown on the site (matching ignores case and accents). `acts`: couples, duos and bands -> their members, so the Top artists ranking and search credit each person. An act without known members is counted as itself. Only add a member when a source shows who it is. `people`: one-word names known to be one person, so they get an artist page.",
+  "$comment": "Artist registry. `aliases`: other spellings -> the one name shown on the site (matching ignores case and accents). `acts`: couples, duos and bands -> their members, so the Top artists ranking and search credit each person. An act without known members is counted as itself. Only add a member when a source shows who it is. `people`: one-word names known to be one person, so they get an artist page. `profiles`: per artist, `instagram` (handle, from an organizer source and checked) and optional `photo` (path under /artists/, only with the artist's or organizer's permission).",
   "aliases": {
     "Yusimi Moya": "Yusimi Moya Rodríguez",
     "Fredyclan Garcia": "FredyClan",
@@ -15,7 +15,7 @@
     "Dayeline": "Dayeline Argota",
     "Damarys": "Damarys Farres",
     "Jaison": "Jaison Rodríguez",
-    "Pedrito": "Pedrito Cuba",
+    "Pedrito": "Pedro Luis Pestana González",
     "Sheyla": "Sheyla Colombe Carbonell",
     "Manolo": "Carlos Manolo",
     "Geisa": "Geysa Martinez",
@@ -169,7 +169,10 @@
     "Pablito y Su Mezcla Latina": "Pablito Stellato y su Mezcla Latina",
     "DJ Fabrizio": "DJ Fabrizio Zoro",
     "Cristina": "Kristina",
-    "Cubanflex": "Cuban Flex"
+    "Cubanflex": "Cuban Flex",
+    "Maria de la Vega": "María del Carmen Moreno",
+    "Pedrito Cuba": "Pedro Luis Pestana González",
+    "Cristian": "Cristian Mauricio"
   },
   "acts": {
     "Danger & Marielkis": [
@@ -181,7 +184,7 @@
       "Anneta Kepka"
     ],
     "Pedrito & Giusy": [
-      "Pedrito Cuba",
+      "Pedro Luis Pestana González",
       "Giusy Chisari"
     ],
     "Ramses & Sandra": [
@@ -198,7 +201,7 @@
     ],
     "Wilmer & María": [
       "Wilmer Najarro",
-      "Maria de la Vega"
+      "María del Carmen Moreno"
     ],
     "Adrián Valdivia & Amanda Gill": [
       "Adrián Valdivia",
@@ -285,5 +288,157 @@
     "Jeydikson",
     "Puntilla",
     "Vilmar"
-  ]
+  ],
+  "profiles": {
+    "Adonis Santiago": {
+      "instagram": "adonis_santiago_official"
+    },
+    "Adrián & Anita": {
+      "instagram": "adrianyanitaoficial"
+    },
+    "Alain & Katerina": {
+      "instagram": "alain_katerina"
+    },
+    "Alberto Valdes": {
+      "instagram": "albertovaldesofficial"
+    },
+    "Alejandro & Rosy": {
+      "instagram": "alejandroyrosy"
+    },
+    "Alex & Susana": {
+      "instagram": "alexysusanamambo"
+    },
+    "Alex Morales": {
+      "instagram": "alexmoralesdancelab"
+    },
+    "Alex Toledo": {
+      "instagram": "byalextoledo"
+    },
+    "Andrea Campagna": {
+      "instagram": "andrea__campagna5"
+    },
+    "Barbara Jimenez": {
+      "instagram": "barbara_jimenez_official"
+    },
+    "Bryan Matienzo": {
+      "instagram": "bryanmatienzo"
+    },
+    "Chiky Cuba": {
+      "instagram": "chiky.cuba"
+    },
+    "Danger Rodriguez": {
+      "instagram": "danger_rodriguez_official"
+    },
+    "Diana Rodriguez": {
+      "instagram": "dianarodriguez.86"
+    },
+    "DJ Amado": {
+      "instagram": "danielleuk17"
+    },
+    "DJ Assane": {
+      "instagram": "assane_kane_dj"
+    },
+    "DJ Estefi": {
+      "instagram": "djestefi"
+    },
+    "DJ Johnnie Beatz": {
+      "instagram": "djjohnniebeatz"
+    },
+    "DJ Kasanoba": {
+      "instagram": "kasanoba__"
+    },
+    "DJ Samir Pastaguero": {
+      "instagram": "dj_pastaguero"
+    },
+    "DJ Yan El Diablito": {
+      "instagram": "yaneldiablito"
+    },
+    "Edgar Rodríguez": {
+      "instagram": "edgar_rodriguezd"
+    },
+    "Falco & Leti": {
+      "instagram": "falcoyleti"
+    },
+    "FredyClan": {
+      "instagram": "fredyclan_fclan"
+    },
+    "Gastón Carvallo": {
+      "instagram": "gastoncarvallo_littlehabana"
+    },
+    "Geysa Martinez": {
+      "instagram": "geysa_martinez"
+    },
+    "Greechen Mendez": {
+      "instagram": "greechenmendezrodriguez"
+    },
+    "Jorge & Indira": {
+      "instagram": "jorgeandindira"
+    },
+    "Jose & Tania": {
+      "instagram": "joseytaniaofficial"
+    },
+    "Karen Lazo": {
+      "instagram": "karenlazodance"
+    },
+    "Kevin Cano": {
+      "instagram": "kevincanodance"
+    },
+    "Marielkis Hernandez": {
+      "instagram": "marielkishernandez"
+    },
+    "Marjorie Ricse": {
+      "instagram": "marjoriericse"
+    },
+    "Mercedes Sayut": {
+      "instagram": "mercedessayut"
+    },
+    "Mijael Bueno": {
+      "instagram": "mijaelbueno"
+    },
+    "Nikola Medic": {
+      "instagram": "besniatom"
+    },
+    "Noe & Diego": {
+      "instagram": "high_five_salsa"
+    },
+    "Osmani Segura": {
+      "instagram": "osmani_segura"
+    },
+    "Osmel Relámpago": {
+      "instagram": "relampago_acflow"
+    },
+    "Pedrito & Giusy": {
+      "instagram": "pedrito_y_giusy"
+    },
+    "Raíces BCN": {
+      "instagram": "raicesbcnoficial"
+    },
+    "Seo Fernández": {
+      "instagram": "seofernandez_official"
+    },
+    "Sergi Márquez": {
+      "instagram": "sergimarquez5"
+    },
+    "Sergio Aragón": {
+      "instagram": "sergio.aragon02"
+    },
+    "Tania Cannarsa": {
+      "instagram": "taniacannarsa"
+    },
+    "Vanessa Lacedonia": {
+      "instagram": "vanessalacedonia"
+    },
+    "Wilmer & María": {
+      "instagram": "wilmerymariaofficial"
+    },
+    "Yarisbel Kondeff": {
+      "instagram": "yarisbel_kondeff"
+    },
+    "Yoyo Flow": {
+      "instagram": "yoyoflowofficial"
+    },
+    "Yusimi Moya Rodríguez": {
+      "instagram": "yusimi_moya_rodriguez"
+    }
+  }
 }

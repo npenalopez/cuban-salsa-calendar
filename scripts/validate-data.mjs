@@ -46,6 +46,11 @@ for (const [act, members] of Object.entries(reg.acts)) {
   if (reg.aliases[act]) errors.push(`artists.json: act "${act}" is listed as an alias`);
   for (const m of members) if (reg.aliases[m]) errors.push(`artists.json: member "${m}" of "${act}" is an alias; use "${reg.aliases[m]}"`);
 }
+for (const [name, pr] of Object.entries(reg.profiles ?? {})) {
+  if (reg.aliases[name]) errors.push(`artists.json: profile "${name}" is an alias; use "${reg.aliases[name]}"`);
+  if (pr.instagram && !/^[A-Za-z0-9._]{1,30}$/.test(pr.instagram)) errors.push(`artists.json: profile "${name}" has an invalid Instagram handle "${pr.instagram}"`);
+  if (pr.photo && !/^\/artists\/photos\/[a-z0-9-]+\.(webp|jpg|png)$/.test(pr.photo)) errors.push(`artists.json: profile "${name}" photo must be /artists/photos/<slug>.webp|jpg|png`);
+}
 
 if (errors.length) {
   console.error(`data/festivals.json: ${errors.length} problem(s)\n` + errors.map((e) => '  - ' + e).join('\n'));
