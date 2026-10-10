@@ -322,7 +322,8 @@ describe('artist pages', () => {
     expect(artistKind('Seo & Eneris')).toBe('couple');
     expect(artistKind('Elito Revé y su Charangón')).toBe('group');
     expect(artistKind('Adonis Santiago')).toBe('person');
-    expect(artistPath('Wilmer & María')).toBe('/artists/wilmer-and-maria/');
+    expect(artistPath('Ana & José')).toBe('/artists/ana-and-jose/');
+    expect(artistPath('Wilmer & Maria')).toBe('/artists/wilmer-y-maria/'); // alias of the registry name
     const paged = pagedArtistSlugs([['Cristian', 'Ana Paz'], ['Cristian', 'Solo'], ['Ana Paz']]);
     expect(paged.has('cristian')).toBe(false); // one word, two festivals: maybe two people
     expect(paged.has('solo')).toBe(true); // one word, one festival

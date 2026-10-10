@@ -34,7 +34,6 @@
     "Chicky Cuba": "Chiky Cuba",
     "Yenyere": "Yenyere Project",
     "Issac Delgado": "Isaac Delgado",
-
     "Danger + Marielkis": "Danger & Marielkis",
     "Andy + Yuliet": "Andy & Yuliet",
     "Dwe & Gaby": "Dwé & Gaby",
@@ -50,22 +49,72 @@
     "Johan y Elaine": "Yohan & Elaine",
     "Luis y Andrea": "Luis & Andrea",
     "Ramsés Sariol & Sandra Cuenca": "Ramses y Sandra",
-    "Carlos Manolo y Lorenys Rodriguez": "Lorenys y Manolo"
+    "Carlos Manolo y Lorenys Rodriguez": "Lorenys y Manolo",
+    "Relampago": "Osmel Relámpago",
+    "Jennyselt Galata": "Jenniselt Galata",
+    "Yeniselt Galata": "Jenniselt Galata",
+    "Kevin & Geysa": "Kevin y Geysa",
+    "Wilmer & Maria": "Wilmer y María",
+    "Zayne Rosabal": "Zainé Rosabal",
+    "Fredy Clan": "FredyClan",
+    "Marly & Alexis": "Alexis & Marly",
+    "Gaston & Yaris": "Gastón & Yarisbel"
   },
   "acts": {
-    "Danger & Marielkis": ["Danger Rodriguez", "Marielkis Hernandez"],
-    "Osbanis & Anneta": ["Osbanis Tejeda", "Anneta Kepka"],
-    "Pedrito & Giusy": ["Pedrito Cuba", "Giusy Chisari"],
-    "Ramses y Sandra": ["Ramsés Sariol", "Sandra Cuenca"],
-    "Lorenys y Manolo": ["Lorenys Rodríguez", "Carlos Manolo"],
-    "Kevin y Geysa": ["Kevin", "Geysa"],
-    "Wilmer y María": ["Wilmer Najarro", "Maria de la Vega"],
-    "Adrián Valdivia & Amanda Gill": ["Adrián Valdivia", "Amanda Gill"],
-    "Daniel Ríos & Minda Partida": ["Daniel Ríos", "Minda Partida"],
-    "Adrián Piña & Luz Camarena": ["Adrián Piña", "Luz Camarena"],
-    "Riccardo Sozzino y Miriana Diotallevi": ["Riccardo Sozzino", "Miriana Diotallevi"],
-    "Carlos Rafael Gonzalez et Dayana Alcala": ["Carlos Rafael Gonzalez", "Dayana Alcalá"],
-    "Yoannis & Anitaa": ["Yoannis Tamayo", "Anitaa"],
-    "Mixael Cabrera y su Team Barcelona": ["Mixael Cabrera"]
+    "Danger & Marielkis": [
+      "Danger Rodriguez",
+      "Marielkis Hernandez"
+    ],
+    "Osbanis & Anneta": [
+      "Osbanis Tejeda",
+      "Anneta Kepka"
+    ],
+    "Pedrito & Giusy": [
+      "Pedrito Cuba",
+      "Giusy Chisari"
+    ],
+    "Ramses y Sandra": [
+      "Ramsés Sariol",
+      "Sandra Cuenca"
+    ],
+    "Lorenys y Manolo": [
+      "Lorenys Rodríguez",
+      "Carlos Manolo"
+    ],
+    "Kevin y Geysa": [
+      "Kevin",
+      "Geysa"
+    ],
+    "Wilmer y María": [
+      "Wilmer Najarro",
+      "Maria de la Vega"
+    ],
+    "Adrián Valdivia & Amanda Gill": [
+      "Adrián Valdivia",
+      "Amanda Gill"
+    ],
+    "Daniel Ríos & Minda Partida": [
+      "Daniel Ríos",
+      "Minda Partida"
+    ],
+    "Adrián Piña & Luz Camarena": [
+      "Adrián Piña",
+      "Luz Camarena"
+    ],
+    "Riccardo Sozzino y Miriana Diotallevi": [
+      "Riccardo Sozzino",
+      "Miriana Diotallevi"
+    ],
+    "Carlos Rafael Gonzalez et Dayana Alcala": [
+      "Carlos Rafael Gonzalez",
+      "Dayana Alcalá"
+    ],
+    "Yoannis & Anitaa": [
+      "Yoannis Tamayo",
+      "Anitaa"
+    ],
+    "Mixael Cabrera y su Team Barcelona": [
+      "Mixael Cabrera"
+    ]
   }
 }
