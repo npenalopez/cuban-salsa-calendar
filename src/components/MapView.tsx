@@ -2,6 +2,8 @@ import { useEffect, useRef } from 'preact/hooks';
 import type * as MapLibre from 'maplibre-gl';
 import type { FeatureCollection, Point } from 'geojson';
 import { isDark } from '../client/store';
+import { t } from '../i18n';
+import { useLang } from '../i18n/preact';
 import mapCss from 'maplibre-gl/dist/maplibre-gl.css?url';
 import workerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 
@@ -48,7 +50,7 @@ const PALETTE = {
   dark: { land: '#1C1F3D', park: '#20243F', wood: '#222642', water: '#11132A', building: '#24284A', road: '#383A52', minor: '#2A2D4A', casing: '#2A2D4A', rail: '#2A2D4A', border: '#5A5C78', label: '#C9C6D6', place: '#F6EDE3', waterLabel: '#8C9BC4', halo: '#15172B' },
 };
 
-function themed(base: MapLibre.StyleSpecification, dark: boolean): MapLibre.StyleSpecification {
+function themed(base: MapLibre.StyleSpecification, dark: boolean, lang = 'en'): MapLibre.StyleSpecification {
   const c = dark ? PALETTE.dark : PALETTE.light;
   const layers = base.layers
     // No road shields or airport labels: a calmer map.
@@ -64,8 +66,8 @@ function themed(base: MapLibre.StyleSpecification, dark: boolean): MapLibre.Styl
       } else if (l.type === 'line') {
         paint['line-color'] = /water/.test(id) ? c.water : /boundary/.test(id) ? c.border : /rail/.test(id) ? c.rail : /casing/.test(id) ? c.casing : /minor|path|pier/.test(id) ? c.minor : c.road;
       } else if (l.type === 'symbol') {
-        // English names (falling back to the local one) instead of "Morocco المغرب".
-        if (JSON.stringify(layout['text-field'] ?? '').includes('name')) layout['text-field'] = ['coalesce', ['get', 'name_en'], ['get', 'name:latin'], ['get', 'name']];
+        // Names in the page language (falling back to English, then the local one) instead of "Morocco المغرب".
+        if (JSON.stringify(layout['text-field'] ?? '').includes('name')) layout['text-field'] = ['coalesce', ...(lang === 'en' ? [] : [['get', `name:${lang}`]]), ['get', 'name_en'], ['get', 'name:latin'], ['get', 'name']];
         paint['text-color'] = /water/.test(id) ? c.waterLabel : /label_(city|country|state|town)/.test(id) ? c.place : c.label;
         paint['text-halo-color'] = c.halo;
         paint['text-halo-width'] = 1.2;
@@ -89,6 +91,7 @@ function toGeoJSON(points: MapPoint[]): FeatureCollection {
 }
 
 export function MapView({ points, single, label }: { points: MapPoint[]; single?: boolean; label: string }) {
+  const lang = useLang();
   const el = useRef<HTMLDivElement>(null);
   const ref = useRef<{ lib: ML; map: MapLibre.Map; points: MapPoint[] } | null>(null);
   const latest = useRef(points);
@@ -133,7 +136,7 @@ export function MapView({ points, single, label }: { points: MapPoint[]; single?
       if (dead || !el.current) return;
       const map = new lib.Map({
         container: el.current,
-        style: themed(base, isDark()),
+        style: themed(base, isDark(), lang),
         attributionControl: { compact: true },
         cooperativeGestures: !single, // one finger scrolls the page; two fingers move the map
         dragRotate: false,
@@ -165,7 +168,7 @@ export function MapView({ points, single, label }: { points: MapPoint[]; single?
           if (!p?.href) return;
           new lib.Popup({ offset: 12, maxWidth: '260px' })
             .setLngLat([p.lng, p.lat])
-            .setHTML(`<a class="map-pop__name" href="${p.href}">${esc(p.name)}</a><div class="map-pop__meta">${esc(p.when || '')}<br>${esc(p.place || '')}</div><a class="map-pop__link" href="${p.href}">View festival →</a>`)
+            .setHTML(`<a class="map-pop__name" href="${p.href}">${esc(p.name)}</a><div class="map-pop__meta">${esc(p.when || '')}<br>${esc(p.place || '')}</div><a class="map-pop__link" href="${p.href}">${esc(t(lang, 'map.view'))}</a>`)
             .addTo(map);
         });
         for (const layer of ['clusters', 'pins']) {
@@ -175,7 +178,7 @@ export function MapView({ points, single, label }: { points: MapPoint[]; single?
       }
 
       // Follow the site theme.
-      const restyle = () => map.setStyle(themed(base, isDark()));
+      const restyle = () => map.setStyle(themed(base, isDark(), lang));
       window.addEventListener('csc-theme', restyle);
       const mq = window.matchMedia('(prefers-color-scheme: dark)');
       mq.addEventListener('change', restyle);

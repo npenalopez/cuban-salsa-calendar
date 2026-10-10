@@ -1,3 +1,4 @@
+import { type Lang, t } from '../i18n';
 import type { City } from './types';
 
 /** Dance hubs offered in the Travel times sheet (festival cities are added to the suggestions too): [name, lat, lng]. */
@@ -47,32 +48,36 @@ const AIRPORT_HOURS = 2.5; // getting to the airport, security, boarding, gettin
  * Realistic ways to get from `city` to a festival, fastest door-to-door first. Rough on purpose:
  * straight-line distance with a detour factor and typical speeds, not a route planner.
  */
-export function travelOptions(city: City | null, coords: [number, number] | null): TravelOption[] {
+export function travelOptions(city: City | null, coords: [number, number] | null, lang: Lang = 'en'): TravelOption[] {
   if (!city || !coords) return [];
   const [lat, lng] = coords;
   const km = haversine(city.lat, city.lng, lat, lng);
-  if (km < NEAR_KM) return [{ mode: 'near', hours: 0, doorToDoor: 0, text: 'Nearby' }];
+  if (km < NEAR_KM) return [{ mode: 'near', hours: 0, doorToDoor: 0, text: t(lang, 'travel.nearby') }];
   const bothEurope = inEurope(city.lat, city.lng) && inEurope(lat, lng);
   const sameLand = bothEurope || (inNorthAmerica(city.lat, city.lng) && inNorthAmerica(lat, lng));
   const out: TravelOption[] = [];
   if (km <= 1300 && (sameLand || km <= 500)) {
     const h = (km * 1.3) / 80;
-    out.push({ mode: 'car', hours: h, doorToDoor: h, text: `≈ ${fmtHours(h)} drive` });
+    out.push({ mode: 'car', hours: h, doorToDoor: h, text: t(lang, 'travel.drive', { h: fmtHours(h) }) });
   }
   if (bothEurope && km <= 1100) {
     const h = (km * 1.25) / 110 + 0.5;
-    out.push({ mode: 'train', hours: h, doorToDoor: h, text: `≈ ${fmtHours(h)} by train` });
+    out.push({ mode: 'train', hours: h, doorToDoor: h, text: t(lang, 'travel.train', { h: fmtHours(h) }) });
   }
   if (km >= 250) {
     const h = km / 750 + 0.75;
-    out.push({ mode: 'plane', hours: h, doorToDoor: h + AIRPORT_HOURS, text: `≈ ${fmtHours(h)} flight` });
+    out.push({ mode: 'plane', hours: h, doorToDoor: h + AIRPORT_HOURS, text: t(lang, 'travel.flight', { h: fmtHours(h) }) });
   }
   return out.sort((a, b) => a.doorToDoor - b.doorToDoor);
 }
 
 /** The most practical option, for cards and sorting. */
-export const bestTravel = (city: City | null, coords: [number, number] | null): TravelOption | null =>
-  travelOptions(city, coords)[0] ?? null;
+export const bestTravel = (city: City | null, coords: [number, number] | null, lang: Lang = 'en'): TravelOption | null =>
+  travelOptions(city, coords, lang)[0] ?? null;
 
+/** The city as shown: the stored "your location" is translated. */
+export const cityLabel = (city: City, lang: Lang = 'en') => (city.name === 'your location' ? t(lang, 'travel.yourLocation') : city.name);
 /** "from Zurich", "from your location" */
-export const fromCity = (city: City) => `from ${city.name}`;
+export const fromCity = (city: City, lang: Lang = 'en') => t(lang, 'travel.from', { city: cityLabel(city, lang) });
+/** "Near you" / "Near Zurich". */
+export const nearCity = (city: City, lang: Lang = 'en') => (city.name === 'your location' ? t(lang, 'travel.nearYou') : t(lang, 'travel.near', { city: city.name }));

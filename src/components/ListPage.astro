@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import ListApp from './ListApp';
 import type { PageRoute } from '../lib/listing';
 import { TODAY_ISO } from '../lib/data.server';
+import { langOf } from '../i18n';
 
 interface Props {
   route: PageRoute;
@@ -11,7 +12,8 @@ interface Props {
   noindex?: boolean;
 }
 const { route, title, description, noindex } = Astro.props;
+const lang = langOf(Astro.url.pathname);
 ---
 <Base title={title} description={description} noindex={noindex} dock>
-  <ListApp client:afterload route={route} buildToday={TODAY_ISO} />
+  <ListApp client:afterload route={route} buildToday={TODAY_ISO} lang={lang} />
 </Base>

@@ -1,3 +1,5 @@
+import { t } from '../i18n';
+import { pageLang } from '../i18n/preact';
 import { useEffect, useState } from 'preact/hooks';
 import type { City } from '../lib/types';
 
@@ -90,14 +92,14 @@ export function toggleSaved(id: string) {
   const next = has ? saved.filter((x) => x !== id) : [...saved, id];
   lsSet('csc-saved', next);
   set({ saved: next });
-  toast(has ? 'Removed from saved' : 'Saved');
+  toast(t(pageLang(), has ? 'toast.unsaved' : 'toast.saved'));
 }
 
 export function saveAll(ids: string[]) {
   const next = Array.from(new Set([...getState().saved, ...ids]));
   lsSet('csc-saved', next);
   set({ saved: next });
-  toast('Added to your saved list');
+  toast(t(pageLang(), 'toast.addedAll'));
 }
 
 export function addRecent(v: string) {

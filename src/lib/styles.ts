@@ -1,3 +1,4 @@
+import { type Lang, t } from '../i18n';
 import type { Style } from './types';
 
 /** Style tags in display order, with the names used on pages and filters. */
@@ -12,6 +13,7 @@ export const STYLES: { key: Style; label: string; plural: string }[] = [
   { key: 'mixed', label: 'Mixed styles', plural: 'Mixed festivals with Cuban salsa' },
 ];
 
-export const styleLabel = (k: string) => STYLES.find((s) => s.key === k)?.label ?? k;
+export const styleLabel = (k: string, lang: Lang = 'en') => (STYLES.some((s) => s.key === k) ? t(lang, `style.${k}`) : k);
+export const stylePlural = (k: string, lang: Lang = 'en') => t(lang, `stylePlural.${k}`);
 export const isStyle = (k: string): k is Style => STYLES.some((s) => s.key === k);
 export const stylePath = (k: Style) => `/style/${k}/`;

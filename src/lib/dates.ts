@@ -1,3 +1,4 @@
+import { type Lang, monthInText, monthName, monthShort, t, weekdayShort } from '../i18n';
 import type { Festival } from './types';
 
 export const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -47,29 +48,32 @@ export function months12(today: Date): MonthRef[] {
   return out;
 }
 
-export const monthLabel = (key: string) => {
+export const monthLabel = (key: string, lang: Lang = 'en') => {
   const [y, m] = key.split('-').map(Number);
-  return `${MONTHS[m - 1]} ${y}`;
+  return `${monthName(lang, m - 1)} ${y}`;
 };
 export const monthPath = (key: string) => `/${key.replace('-', '/')}/`;
 
 type Dated = Pick<Festival, 'datePrecision' | 'dateNote'> & { s: Date; e: Date };
 
 /** "Sat 28 – Sun 29 November 2026", "Mid November 2026", "2026 · dates not announced". */
-export function dateLong(f: Dated): string {
+export function dateLong(f: Dated, lang: Lang = 'en'): string {
   const { s, e } = f;
-  if (f.datePrecision === 'year') return `${s.getFullYear()} · dates not announced`;
-  if (f.datePrecision === 'month') return `${f.dateNote ? f.dateNote + ' ' : ''}${MONTHS[s.getMonth()]} ${s.getFullYear()}`;
-  if (s.getTime() === e.getTime()) return `${WD[s.getDay()]} ${s.getDate()} ${MONTHS[s.getMonth()]} ${s.getFullYear()}`;
+  const M = (d: Date) => (lang === 'en' ? monthName(lang, d.getMonth()) : monthInText(lang, d.getMonth()));
+  const W = (d: Date) => weekdayShort(lang, d.getDay());
+  const of = lang === 'es' ? ' de ' : ' ';
+  if (f.datePrecision === 'year') return `${s.getFullYear()} · ${t(lang, 'date.notAnnounced')}`;
+  if (f.datePrecision === 'month') return `${f.dateNote ? f.dateNote + ' ' : ''}${lang === 'en' ? M(s) : monthName(lang, s.getMonth())} ${s.getFullYear()}`;
+  if (s.getTime() === e.getTime()) return `${W(s)} ${s.getDate()}${of}${M(s)}${of}${s.getFullYear()}`;
   const sameMonth = s.getMonth() === e.getMonth() && s.getFullYear() === e.getFullYear();
-  const startTail = sameMonth ? '' : ` ${MONTHS[s.getMonth()]}${s.getFullYear() !== e.getFullYear() ? ' ' + s.getFullYear() : ''}`;
-  return `${WD[s.getDay()]} ${s.getDate()}${startTail} – ${WD[e.getDay()]} ${e.getDate()} ${MONTHS[e.getMonth()]} ${e.getFullYear()}`;
+  const startTail = sameMonth ? '' : `${of}${M(s)}${s.getFullYear() !== e.getFullYear() ? of + s.getFullYear() : ''}`;
+  return `${W(s)} ${s.getDate()}${startTail} – ${W(e)} ${e.getDate()}${of}${M(e)}${of}${e.getFullYear()}`;
 }
 
 /** Short date for page titles: "28–29 Nov 2026", "Nov 2026", "2026". */
-export function dateShort(f: Dated): string {
+export function dateShort(f: Dated, lang: Lang = 'en'): string {
   const { s, e } = f;
-  const mon = (d: Date) => MONTHS[d.getMonth()].slice(0, 3);
+  const mon = (d: Date) => monthShort(lang, d.getMonth());
   if (f.datePrecision === 'year') return String(s.getFullYear());
   if (f.datePrecision === 'month') return `${mon(s)} ${s.getFullYear()}`;
   if (s.getTime() === e.getTime()) return `${s.getDate()} ${mon(s)} ${s.getFullYear()}`;
@@ -84,29 +88,31 @@ export interface DateBlock {
 }
 
 /** The three lines of the card's date block. */
-export function dateBlock(f: Dated, past: boolean): DateBlock {
+export function dateBlock(f: Dated, past: boolean, lang: Lang = 'en'): DateBlock {
   const { s, e } = f;
-  if (f.datePrecision === 'year') return { mon: String(s.getFullYear()), days: 'TBA', sub: '' };
+  const M3 = (m: number) => (lang === 'en' ? MON3[m] : monthShort(lang, m).toLocaleUpperCase());
+  const W = (d: Date) => weekdayShort(lang, d.getDay());
+  if (f.datePrecision === 'year') return { mon: String(s.getFullYear()), days: t(lang, 'date.tba'), sub: '' };
   if (f.datePrecision === 'month') {
     return {
-      mon: MON3[s.getMonth()],
-      days: f.dateNote ? f.dateNote.toUpperCase().slice(0, 5) : 'TBA',
-      sub: past ? String(s.getFullYear()) : 'Days TBA',
+      mon: M3(s.getMonth()),
+      days: f.dateNote ? f.dateNote.toUpperCase().slice(0, 5) : t(lang, 'date.tba'),
+      sub: past ? String(s.getFullYear()) : t(lang, 'date.daysTba'),
     };
   }
   const one = s.getTime() === e.getTime();
   const sm = s.getMonth();
   const em = e.getMonth();
   return {
-    mon: sm === em ? MON3[sm] : `${MON3[sm]}–${MON3[em]}`,
+    mon: sm === em ? M3(sm) : `${M3(sm)}–${M3(em)}`,
     days: one ? String(s.getDate()) : `${s.getDate()}–${e.getDate()}`,
-    sub: past ? String(s.getFullYear()) : one ? WD[s.getDay()] : `${WD[s.getDay()]}–${WD[e.getDay()]}`,
+    sub: past ? String(s.getFullYear()) : one ? W(s) : `${W(s)}–${W(e)}`,
   };
 }
 
 /** Day range for compact rows: "28–29", "7", "TBA". */
-export function dayRange(f: Dated): string {
-  if (f.datePrecision !== 'day') return 'TBA';
+export function dayRange(f: Dated, lang: Lang = 'en'): string {
+  if (f.datePrecision !== 'day') return t(lang, 'date.tba');
   const { s, e } = f;
   return s.getTime() === e.getTime() ? String(s.getDate()) : `${s.getDate()}–${e.getDate()}`;
 }
@@ -115,20 +121,20 @@ const DAY = 864e5;
 export const daysBetween = (a: Date, b: Date) => Math.round((b.getTime() - a.getTime()) / DAY);
 
 /** Card countdown: "In 12 days", "Tomorrow", "Today", "Happening now"; null once it has ended. */
-export function countdown(s: Date, e: Date, today: Date): string | null {
+export function countdown(s: Date, e: Date, today: Date, lang: Lang = 'en'): string | null {
   const until = daysBetween(today, s);
-  if (until > 1) return `In ${until} days`;
-  if (until === 1) return 'Tomorrow';
-  if (until === 0) return 'Today';
-  return daysBetween(today, e) >= 0 ? 'Happening now' : null;
+  if (until > 1) return t(lang, 'cd.inDays', { n: until });
+  if (until === 1) return t(lang, 'cd.tomorrow');
+  if (until === 0) return t(lang, 'cd.today');
+  return daysBetween(today, e) >= 0 ? t(lang, 'cd.now') : null;
 }
 
 /** Festival page line: "starts in 58 days", "starts tomorrow", "happening now", "ended 3 days ago". */
-export function countdownLong(s: Date, e: Date, today: Date): string {
+export function countdownLong(s: Date, e: Date, today: Date, lang: Lang = 'en'): string {
   const until = daysBetween(today, s);
-  if (until > 1) return `starts in ${until} days`;
-  if (until === 1) return 'starts tomorrow';
-  if (until === 0) return 'starts today';
+  if (until > 1) return t(lang, 'cdl.inDays', { n: until });
+  if (until === 1) return t(lang, 'cdl.tomorrow');
+  if (until === 0) return t(lang, 'cdl.today');
   const ended = daysBetween(e, today);
-  return ended <= 0 ? 'happening now' : `ended ${plural(ended, 'day')} ago`;
+  return ended <= 0 ? t(lang, 'cdl.now') : t(lang, 'cdl.ended', { n: ended });
 }

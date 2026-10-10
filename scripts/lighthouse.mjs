@@ -12,7 +12,7 @@ const MIN = Number(process.env.MIN ?? 100);
 const MIN_PERF = Number(process.env.MIN_PERF ?? MIN);
 const RUNS = Number(process.env.RUNS ?? 1);
 const pages = (process.argv.slice(2).length ? process.argv.slice(2) : [
-  '/', '/upcoming/', '/archive/', '/saved/', '/festivals/el-que-sabe-sabe-anzio-2026/', '/submit/', '/country/germany/', '/artists/adonis-santiago/',
+  '/', '/upcoming/', '/archive/', '/saved/', '/festivals/el-que-sabe-sabe-anzio-2026/', '/submit/', '/country/germany/', '/artists/adonis-santiago/', '/es/', '/fr/festivals/el-que-sabe-sabe-anzio-2026/',
 ]);
 
 const chrome = await launch({ chromePath: process.env.CHROME_PATH ?? chromium.executablePath(), chromeFlags: ['--headless=new', '--no-sandbox'] });

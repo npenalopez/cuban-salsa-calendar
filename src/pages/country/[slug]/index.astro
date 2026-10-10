@@ -2,13 +2,13 @@
 import type { GetStaticPaths } from 'astro';
 import LandingPage from '../../../components/LandingPage.astro';
 import { ALL } from '../../../lib/data.server';
-import { type Landing, landings, relatedFor } from '../../../lib/seo';
+import { type Landing, landings } from '../../../lib/seo';
 
 export const getStaticPaths = (() => {
   const all = landings(ALL);
-  return all.filter((l) => l.kind === 'country').map((l) => ({ params: { slug: l.path.split('/')[2] }, props: { l, related: relatedFor(l, all) } }));
+  return all.filter((l) => l.kind === 'country').map((l) => ({ params: { slug: l.path.split('/')[2] }, props: { l, all } }));
 }) satisfies GetStaticPaths;
 
-const { l, related } = Astro.props as { l: Landing; related: ReturnType<typeof relatedFor> };
+const { l, all } = Astro.props as { l: Landing; all: Landing[] };
 ---
-<LandingPage l={l} related={related} />
+<LandingPage l={l} all={all} />

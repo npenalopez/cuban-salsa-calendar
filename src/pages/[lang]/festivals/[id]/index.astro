@@ -1,0 +1,15 @@
+---
+// Spanish and French copy of the English page (the page reads its language from the URL).
+import type { GetStaticPaths } from 'astro';
+import Page from '../../../festivals/[id]/index.astro';
+import { LANGS } from '../../../../i18n';
+import { ALL } from '../../../../lib/data.server';
+import type { Enriched } from '../../../../lib/types';
+export const getStaticPaths = (() => {
+  const langs = LANGS.filter((l) => l !== 'en');
+  return langs.flatMap((lang) => ALL.map((f) => ({ params: { lang, id: f.id }, props: { f } })));
+}) satisfies GetStaticPaths;
+
+const props = Astro.props as { f: Enriched };
+---
+<Page f={props.f} />

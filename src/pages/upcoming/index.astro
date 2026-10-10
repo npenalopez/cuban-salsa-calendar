@@ -1,6 +1,8 @@
 ---
 import ListPage from '../../components/ListPage.astro';
 import { stats } from '../../lib/data.server';
+import { langOf, t } from '../../i18n';
+const lang = langOf(Astro.url.pathname);
 const s = stats();
 ---
-<ListPage route={{ name: 'all' }} title="All upcoming festivals · Cuban Salsa Calendar" description={`All ${s.upcoming} upcoming Cuban salsa, timba and Afro-Cuban festivals, month by month.`} />
+<ListPage route={{ name: 'all' }} title={t(lang, 'page.upcomingTitle')} description={t(lang, 'page.upcomingDesc', { n: s.upcoming })} />

@@ -1,4 +1,6 @@
 import { toast } from './store';
+import { t } from '../i18n';
+import { pageLang } from '../i18n/preact';
 
 /** Web Share API, falling back to copying the link. */
 export async function share(title: string, url: string) {
@@ -10,10 +12,10 @@ export async function share(title: string, url: string) {
       if ((e as Error)?.name === 'AbortError') return;
     }
   }
-  await copy(url, 'Link copied');
+  await copy(url);
 }
 
-export async function copy(text: string, msg = 'Link copied') {
+export async function copy(text: string, msg = t(pageLang(), 'toast.linkCopied')) {
   try {
     await navigator.clipboard.writeText(text);
     toast(msg);
@@ -45,6 +47,6 @@ export function openCalendar(path: string, handoff?: string) {
   setTimeout(() => {
     if (document.visibilityState !== 'visible') return;
     if (handoff) history.replaceState(history.state, '', handoff);
-    toast(android ? 'Tap ⋮ and choose "Open in Chrome", then try again' : 'Tap ··· and choose "Open in external browser", then try again', 8000);
+    toast(t(pageLang(), android ? 'toast.openAndroid' : 'toast.openIos'), 8000);
   }, 1500);
 }

@@ -7,6 +7,8 @@ import { INSTAGRAM, SITE } from '../lib/festivals';
 import { TODAY, UPCOMING, stats } from '../lib/data.server';
 import { countryPath } from '../lib/seo';
 import { DRIVE_ENABLED, DRIVE_SCRIPT } from '../lib/affiliates';
+import { LANGS, LANG_NAMES, LOCALES, basePath, langOf, lp, t } from '../i18n';
+import { countryName } from '../i18n/places';
 
 interface Props {
   title: string;
@@ -19,37 +21,50 @@ interface Props {
   /** Extra bottom padding so the dock never covers the last card. */
   dock?: boolean;
   mainClass?: string;
+  /** Pages that only exist in one language (404) leave out the hreflang links. */
+  noAlternates?: boolean;
 }
 const {
   title,
-  description = 'Dates, cities and line-ups for Cuban salsa, timba and Afro-Cuban festivals around the world.',
+  description,
   canonical = Astro.url.pathname,
   ogImage = '/og/default.png',
   ogType = 'website',
   noindex = false,
   dock = false,
   mainClass = '',
+  noAlternates = false,
 } = Astro.props;
+// The language comes from the URL: /es/… and /fr/…, English otherwise.
+const lang = langOf(Astro.url.pathname);
+const T = (k: string, v?: Record<string, string | number>) => t(lang, k, v);
+const L = (path: string) => lp(lang, path);
+const desc = description ?? T('page.defaultDesc');
+const base = basePath(Astro.url.pathname);
+const alternates = noAlternates ? [] : LANGS.map((l) => ({ lang: l, href: new URL(lp(l, base), SITE).href }));
 const canonicalUrl = new URL(canonical, SITE).href;
 const ogUrl = new URL(ogImage, SITE).href;
 const s = stats();
 // Footer "Browse by country": countries with upcoming festivals, busiest first.
-const byCountry = [...UPCOMING.reduce((m, f) => (f.country ? m.set(f.country, (m.get(f.country) ?? 0) + 1) : m), new Map<string, number>())]
-  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+const byCountry = [...UPCOMING.reduce((m, f) => (f.country ? m.set(f.country, { code: f.countryCode, n: (m.get(f.country)?.n ?? 0) + 1 }) : m), new Map<string, { code: string | null; n: number }>())]
+  .sort((a, b) => b[1].n - a[1].n || a[0].localeCompare(b[0]));
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <title>{title}</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={desc} />
     <link rel="canonical" href={canonicalUrl} />
+    {alternates.map((a) => <link rel="alternate" hreflang={a.lang} href={a.href} />)}
+    {alternates.length > 0 && <link rel="alternate" hreflang="x-default" href={alternates[0].href} />}
     {noindex && <meta name="robots" content="noindex" />}
     <meta property="og:site_name" content="Cuban Salsa Calendar" />
     <meta property="og:type" content={ogType} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:locale" content={LOCALES[lang].replace('-', '_')} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:image" content={ogUrl} />
     <meta property="og:image:width" content="1200" />
@@ -70,11 +85,11 @@ const byCountry = [...UPCOMING.reduce((m, f) => (f.country ? m.set(f.country, (m
     <slot name="head" />
   </head>
   <body>
-    <a href="#main" class="skip">Skip to festivals</a>
+    <a href="#main" class="skip">{T('site.skip')}</a>
     <header class="header">
       <div class="header__inner">
-        <a href="/" class="logo"><span aria-hidden="true" class="logo__flag"></span>Cuban Salsa Calendar</a>
-        <HeaderActions client:afterload />
+        <a href={L('/')} class="logo"><span aria-hidden="true" class="logo__flag"></span>Cuban Salsa Calendar</a>
+        <HeaderActions client:afterload lang={lang} />
       </div>
     </header>
     <main id="main" tabindex="-1" class:list={['main', dock && 'main--dock', mainClass]}>
@@ -82,21 +97,26 @@ const byCountry = [...UPCOMING.reduce((m, f) => (f.country ? m.set(f.country, (m
       <footer class="footer">
         <div class="footer__about">
           <strong class="footer__name">Cuban Salsa Calendar</strong>
-          <span>A community-kept list of Cuban salsa, timba and Afro-Cuban festivals around the world. Free to use.</span>
+          <span>{T('site.about')}</span>
         </div>
         <div class="footer__links">
           <a href={INSTAGRAM} target="_blank" rel="noopener">@cubansalsacalendar ↗</a>
-          <a href="/submit/">Submit a festival</a>
-          <a href="/artists/">All artists</a>
-          <a href="/privacy/">Privacy</a>
+          <a href={L('/submit/')}>{T('menu.submit')}</a>
+          <a href={L('/artists/')}>{T('site.allArtists')}</a>
+          <a href={L('/privacy/')}>{T('site.privacy')}</a>
         </div>
-        <nav class="footer__countries" aria-label="Browse by country">
-          <strong class="footer__name">Browse by country</strong>
-          <ul>{byCountry.map(([c, n]) => <li><a href={countryPath(c)}>{c}</a> <span>{n}</span></li>)}</ul>
+        <nav class="footer__countries" aria-label={T('site.browseCountry')}>
+          <strong class="footer__name">{T('site.browseCountry')}</strong>
+          <ul>{byCountry.map(([c, x]) => <li><a href={L(countryPath(c))}>{countryName(lang, x.code, c)}</a> <span>{x.n}</span></li>)}</ul>
         </nav>
-        <span class="footer__copy">© {TODAY.getFullYear()} Cuban Salsa Calendar · {s.upcoming} upcoming festivals in {s.countries} countries</span>
+        {alternates.length > 0 && (
+          <nav class="footer__langs" aria-label={T('site.language')}>
+            {alternates.map((a) => (a.lang === lang ? <strong aria-current="page" lang={a.lang}>{LANG_NAMES[a.lang]}</strong> : <a href={lp(a.lang, base)} hreflang={a.lang} lang={a.lang}>{LANG_NAMES[a.lang]}</a>))}
+          </nav>
+        )}
+        <span class="footer__copy">{T('site.copy', { y: TODAY.getFullYear(), n: s.upcoming, c: s.countries })}</span>
       </footer>
     </main>
-    <GlobalSheets client:afterload />
+    <GlobalSheets client:afterload lang={lang} />
   </body>
 </html>

@@ -1,6 +1,8 @@
 import { lev, norm } from './text';
 import { place } from './festivals';
 import type { Enriched } from './types';
+import { type Lang, t } from '../i18n';
+import { countryName } from '../i18n/places';
 
 export type Suggestion =
   | { type: 'festival'; id: string; label: string; detail: string; count?: undefined }
@@ -14,17 +16,17 @@ export interface SuggestionGroup {
 }
 
 /** Recent + Popular on empty focus; grouped matches from 2 characters. */
-export function suggestions(up: Enriched[], query: string, recent: string[]): SuggestionGroup[] {
+export function suggestions(up: Enriched[], query: string, recent: string[], lang: Lang = 'en'): SuggestionGroup[] {
   const q = norm(query);
   const groups: SuggestionGroup[] = [];
   if (!q) {
-    if (recent.length) groups.push({ title: 'Recent', canClear: true, items: recent.map((v) => ({ type: 'text', value: v, label: v })) });
+    if (recent.length) groups.push({ title: t(lang, 'search.recent'), canClear: true, items: recent.map((v) => ({ type: 'text', value: v, label: v })) });
     const cities = new Map<string, number>();
     const countries = new Map<string, { label: string; n: number }>();
     for (const f of up) {
       if (f.city) cities.set(f.city, (cities.get(f.city) || 0) + 1);
       if (f.countryCode && f.country) {
-        const c = countries.get(f.countryCode) || { label: f.country, n: 0 };
+        const c = countries.get(f.countryCode) || { label: countryName(lang, f.countryCode, f.country), n: 0 };
         c.n++;
         countries.set(f.countryCode, c);
       }
@@ -33,36 +35,36 @@ export function suggestions(up: Enriched[], query: string, recent: string[]): Su
       ...[...cities].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([c, n]): Suggestion => ({ type: 'text', value: c, label: c, count: n })),
       ...[...countries].sort((a, b) => b[1].n - a[1].n).slice(0, 2).map(([code, c]): Suggestion => ({ type: 'country', code, label: c.label, count: c.n })),
     ];
-    groups.push({ title: 'Popular', items: pop });
+    groups.push({ title: t(lang, 'search.popular'), items: pop });
     return groups;
   }
   if (q.length < 2) return groups;
 
   const fest = up.filter((f) => norm(f.name).includes(q)).slice(0, 3)
-    .map((f): Suggestion => ({ type: 'festival', id: f.id, label: f.name, detail: place(f) }));
+    .map((f): Suggestion => ({ type: 'festival', id: f.id, label: f.name, detail: place(f, lang) }));
   const cities = new Map<string, number>();
   const countries = new Map<string, { label: string; n: number }>();
   const artists = new Map<string, number>();
   for (const f of up) {
     if (f.city && norm(f.city).includes(q)) cities.set(f.city, (cities.get(f.city) || 0) + 1);
-    if (f.country && f.countryCode && norm(f.country).includes(q)) {
-      const c = countries.get(f.countryCode) || { label: f.country, n: 0 };
+    if (f.country && f.countryCode && (norm(f.country).includes(q) || norm(countryName(lang, f.countryCode, f.country)).includes(q))) {
+      const c = countries.get(f.countryCode) || { label: countryName(lang, f.countryCode, f.country), n: 0 };
       c.n++;
       countries.set(f.countryCode, c);
     }
     for (const a of new Set([...f.artists, ...f.people])) if (norm(a).includes(q)) artists.set(a, (artists.get(a) || 0) + 1);
   }
   const score = (l: string) => (norm(l).startsWith(q) ? 0 : 1);
-  if (fest.length) groups.push({ title: 'Festivals', items: fest });
+  if (fest.length) groups.push({ title: t(lang, 'search.festivals'), items: fest });
   const ci = [...cities].sort((a, b) => score(a[0]) - score(b[0]) || b[1] - a[1]).slice(0, 3)
     .map(([c, n]): Suggestion => ({ type: 'text', value: c, label: c, count: n }));
-  if (ci.length) groups.push({ title: 'Cities', items: ci });
+  if (ci.length) groups.push({ title: t(lang, 'search.cities'), items: ci });
   const cn = [...countries].sort((a, b) => score(a[1].label) - score(b[1].label) || b[1].n - a[1].n).slice(0, 2)
-    .map(([code, c]): Suggestion => ({ type: 'country', code, label: c.label, count: c.n, detail: 'Show only this country' }));
-  if (cn.length) groups.push({ title: 'Countries', items: cn });
+    .map(([code, c]): Suggestion => ({ type: 'country', code, label: c.label, count: c.n, detail: t(lang, 'search.onlyCountry') }));
+  if (cn.length) groups.push({ title: t(lang, 'search.countries'), items: cn });
   const ar = [...artists].sort((a, b) => score(a[0]) - score(b[0]) || b[1] - a[1]).slice(0, 3)
     .map(([a, n]): Suggestion => ({ type: 'text', value: a, label: a, count: n }));
-  if (ar.length) groups.push({ title: 'Artists', items: ar });
+  if (ar.length) groups.push({ title: t(lang, 'search.artists'), items: ar });
   return groups;
 }
 

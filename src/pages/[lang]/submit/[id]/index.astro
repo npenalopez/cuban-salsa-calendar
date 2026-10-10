@@ -1,0 +1,14 @@
+---
+// Spanish and French copy of the English page (the page reads its language from the URL).
+import type { GetStaticPaths } from 'astro';
+import Page from '../../../submit/[id]/index.astro';
+import { LANGS } from '../../../../i18n';
+import { ALL } from '../../../../lib/data.server';
+export const getStaticPaths = (() => {
+  const langs = LANGS.filter((l) => l !== 'en');
+  return langs.flatMap((lang) => ALL.map((f) => ({ params: { lang, id: f.id }, props: { name: f.name } })));
+}) satisfies GetStaticPaths;
+
+const props = Astro.props as { name: string };
+---
+<Page name={props.name} />

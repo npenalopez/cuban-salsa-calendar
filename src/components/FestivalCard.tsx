@@ -1,5 +1,6 @@
 import type { CardVM } from '../lib/festivals';
 import { CalendarIcon, Flag, TravelIcon } from './ui';
+import { useT } from '../i18n/preact';
 
 interface Props {
   card: CardVM;
@@ -9,6 +10,7 @@ interface Props {
 }
 
 export function FestivalCard({ card: c, saved, onSave, onCal }: Props) {
+  const t = useT();
   const cls = ['card', c.muted && 'card--muted', c.featured && 'card--featured', c.postponed && 'card--postponed', c.struck && 'card--struck']
     .filter(Boolean).join(' ');
   return (
@@ -28,9 +30,9 @@ export function FestivalCard({ card: c, saved, onSave, onCal }: Props) {
           {c.place}
         </span>
         {c.artists.length > 0 && (
-          <div class="chips-mini" aria-label="Line-up">
+          <div class="chips-mini" aria-label={t('card.lineup')}>
             {c.artists.map((a) => <span class="chip-mini">{a}</span>)}
-            {c.moreArtists > 0 && <span class="chip-mini chip-mini--more">+{c.moreArtists} more</span>}
+            {c.moreArtists > 0 && <span class="chip-mini chip-mini--more">{t('card.more', { n: c.moreArtists })}</span>}
           </div>
         )}
         {c.meta && <span class="meta">{c.meta}</span>}
@@ -39,18 +41,18 @@ export function FestivalCard({ card: c, saved, onSave, onCal }: Props) {
         )}
         {c.ticket && (
           <a class="card__ticket" href={c.ticket} target="_blank" rel="sponsored noopener">
-            Get passes ↗<span class="sr-only"> for {c.name}, opens the organizer's site</span>
+            {t('card.getPasses')} ↗<span class="sr-only">{t('card.getPassesSr', { name: c.name })}</span>
           </a>
         )}
       </div>
       <div class="card__actions">
         {c.showSave && (
-          <button type="button" class={`icon-btn heart${saved ? ' is-saved' : ''}`} aria-pressed={saved} aria-label={`Save ${c.name}`} onClick={() => onSave(c.id)}>
+          <button type="button" class={`icon-btn heart${saved ? ' is-saved' : ''}`} aria-pressed={saved} aria-label={t('card.save', { name: c.name })} onClick={() => onSave(c.id)}>
             {saved ? '♥' : '♡'}
           </button>
         )}
         {c.showCal && (
-          <button type="button" class="icon-btn" aria-haspopup="dialog" aria-label={`Add ${c.name} to calendar`} onClick={() => onCal(c.id)}>
+          <button type="button" class="icon-btn" aria-haspopup="dialog" aria-label={t('card.addCal', { name: c.name })} onClick={() => onCal(c.id)}>
             <CalendarIcon />
           </button>
         )}

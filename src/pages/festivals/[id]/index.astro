@@ -2,43 +2,46 @@
 import type { GetStaticPaths } from 'astro';
 import Base from '../../../layouts/Base.astro';
 import { AddToCalendar, FestivalMap, Lineup, TopActions, TravelLine } from '../../../components/FestivalIslands';
-import { MONTHS, countdownLong, dateLong, dayRange, daysBetween, monthLabel, monthPath, plural } from '../../../lib/dates';
+import { countdownLong, dateLong, dayRange, daysBetween, monthLabel, monthPath } from '../../../lib/dates';
 import { ALL, ARTIST_SLUGS, TODAY, UPCOMING } from '../../../lib/data.server';
 import { artistPath } from '../../../lib/artists';
-import { SITE, byDate, canAddToCalendar, festivalPath, fixPath, fmtPrice, nextEdition, place, priceLabel, ticketOf } from '../../../lib/festivals';
+import { SITE, byDate, canAddToCalendar, discountLabel, festivalPath, fixPath, fmtPrice, nextEdition, place, priceLabel, ticketOf } from '../../../lib/festivals';
 import type { Enriched } from '../../../lib/types';
-import { countryPath, eventLd, festivalTitle, inName, regionPath } from '../../../lib/seo';
-import { STYLES, stylePath } from '../../../lib/styles';
+import { countryPath, eventLd, festivalTitle, regionPath } from '../../../lib/seo';
+import { STYLES, styleLabel, stylePath } from '../../../lib/styles';
 import { flightsUrl, stayUrl } from '../../../lib/affiliates';
 import { airportInfo } from '../../../lib/airports.server';
-import { discountLabel } from '../../../lib/festivals';
+import { langOf, lp, monthInText, monthName, t } from '../../../i18n';
+import { inCountry, regionName } from '../../../i18n/places';
 
 export const getStaticPaths = (() => ALL.map((f) => ({ params: { id: f.id }, props: { f } }))) satisfies GetStaticPaths;
 
 const { f } = Astro.props as { f: Enriched };
-const url = SITE + festivalPath(f.id);
+const lang = langOf(Astro.url.pathname);
+const T = (k: string, v?: Record<string, string | number>) => t(lang, k, v);
+const L = (path: string) => lp(lang, path);
+const url = SITE + L(festivalPath(f.id));
 const a = f.artists;
 const ticket = ticketOf(f);
-const price = fmtPrice(f);
-const where = [f.venue, place(f)].filter(Boolean).join(', ');
+const price = fmtPrice(f, lang);
+const where = [f.venue, place(f, lang)].filter(Boolean).join(', ');
 
 // Status banner
 let status: { kind: string; title: string; text: string } | null = null;
-if (f.status === 'postponed') status = { kind: 'postponed', title: 'Postponed.', text: "New dates haven't been announced yet." };
-else if (f.status === 'cancelled') status = { kind: 'cancelled', title: 'Cancelled.', text: "This edition won't take place." };
-else if (f.past)
-  status = { kind: 'past', title: 'This festival already took place.', text: nextEdition(f, ALL) ? 'The next edition is listed below.' : "The next edition hasn't been announced." };
-else if (f.status === 'sold-out') status = { kind: 'sold-out', title: 'Sold out.', text: 'Check the organizer for a waiting list.' };
+if (f.status === 'postponed') status = { kind: 'postponed', title: T('fest.postponed'), text: T('fest.postponedText') };
+else if (f.status === 'cancelled') status = { kind: 'cancelled', title: T('fest.cancelled'), text: T('fest.cancelledText') };
+else if (f.past) status = { kind: 'past', title: T('fest.past'), text: T(nextEdition(f, ALL) ? 'fest.pastNext' : 'fest.pastNoNext') };
+else if (f.status === 'sold-out') status = { kind: 'sold-out', title: T('fest.soldOut'), text: T('fest.soldOutText') };
 
 // "2 days · starts in 58 days" (the countdown is refreshed in the browser, below)
-const length = plural(daysBetween(f.s, f.e) + 1, 'day');
+const length = T('days', { n: daysBetween(f.s, f.e) + 1 });
 
 const ig = f.instagram || null;
 const others = f.series
   ? ALL.filter((x) => x.series === f.series && x.id !== f.id).sort(byDate).map((x) => ({
-      href: festivalPath(x.id),
+      href: L(festivalPath(x.id)),
       label: x.name,
-      when: x.datePrecision === 'year' ? String(x.s.getFullYear()) : `${MONTHS[x.s.getMonth()]} ${x.s.getFullYear()}`,
+      when: x.datePrecision === 'year' ? String(x.s.getFullYear()) : `${monthName(lang, x.s.getMonth())} ${x.s.getFullYear()}`,
     }))
   : [];
 const more = f.mk && !f.arch ? UPCOMING.filter((x) => x.mk === f.mk && x.id !== f.id).sort(byDate).slice(0, 4) : [];
@@ -49,22 +52,23 @@ const tripOn = f.s > TODAY && f.status !== 'postponed' && f.status !== 'cancelle
 const flights = tripOn ? flightsUrl(f) : null;
 const stay = tripOn ? stayUrl(f) : null;
 const airport = airportInfo(f.airport, f.coordinates);
-const discount = !f.arch && f.discount ? discountLabel(f.discount) : null;
+const discount = !f.arch && f.discount ? discountLabel(f.discount, lang) : null;
 const country = f.country ? UPCOMING.filter((x) => x.country === f.country && x.id !== f.id).sort(byDate).slice(0, 4) : [];
+const inThisCountry = f.country ? inCountry(lang, f.countryCode, f.country) : '';
 
-const title = festivalTitle(f);
+const title = festivalTitle(f, lang);
 const description = [
-  `${f.name}, ${dateLong(f)}, ${place(f)}.`,
-  a.length ? `Line-up: ${a.slice(0, 6).join(', ')}${a.length > 6 ? ' and more' : ''}.` : '',
-  price ? `Passes ${price}.` : '',
+  `${f.name}, ${dateLong(f, lang)}, ${place(f, lang)}.`,
+  a.length ? T('fest.descLineup', { list: a.slice(0, 6).join(', '), more: a.length > 6 ? T('fest.descMore') : '' }) : '',
+  price ? T('fest.descPasses', { price }) : '',
 ].filter(Boolean).join(' ');
 ---
 <Base title={title} description={description} ogImage={`/og/${f.id}.png`} ogType="article">
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(ld).replace(/</g, '\\u003c')} />
 
   <div class="topbar">
-    <a class="topbar__back" href="/" id="back-link">← All festivals</a>
-    <TopActions client:afterload id={f.id} name={f.name} url={url} canSave={!f.arch} />
+    <a class="topbar__back" href={L('/')} id="back-link">{T('fest.back')}</a>
+    <TopActions client:afterload id={f.id} name={f.name} url={url} canSave={!f.arch} lang={lang} />
   </div>
 
   <div class="fest">
@@ -73,54 +77,54 @@ const description = [
       <div class="fest__head">
         <span class="fest__place">
           {f.countryCode && <img class="flag" src={`/flags/${f.countryCode.toLowerCase()}.svg`} alt="" width="20" height="14" />}
-          {place(f)}
+          {place(f, lang)}
         </span>
         <h1 class="fest__name">{f.name}</h1>
-        <span class="fest__date">{dateLong(f)}</span>
-        <span class="meta">{length} · <span data-countdown data-start={f.startDate} data-end={f.endDate}>{countdownLong(f.s, f.e, TODAY)}</span></span>
-        {f.coordinates && !f.arch && <TravelLine client:afterload coords={f.coordinates} />}
+        <span class="fest__date">{dateLong(f, lang)}</span>
+        <span class="meta">{length} · <span data-countdown data-start={f.startDate} data-end={f.endDate}>{countdownLong(f.s, f.e, TODAY, lang)}</span></span>
+        {f.coordinates && !f.arch && <TravelLine client:afterload coords={f.coordinates} lang={lang} />}
       </div>
 
       {ticket && (
         <div class="passes">
-          {discount && <p class="discount"><span class="badge badge--discount">{discount}</span> with code <strong class="discount__code">{f.discount!.code}</strong></p>}
-          <a class="passes__btn" href={ticket} target="_blank" rel="sponsored noopener">Get passes{f.priceFrom != null ? ` · ${price}` : ''} ↗</a>
-          <span class="passes__note">Passes are sold by the organizer.</span>
+          {discount && <p class="discount"><span class="badge badge--discount">{discount}</span> {T('discount.with')} <strong class="discount__code">{f.discount!.code}</strong></p>}
+          <a class="passes__btn" href={ticket} target="_blank" rel="sponsored noopener">{T('card.getPasses')}{f.priceFrom != null ? ` · ${price}` : ''} ↗</a>
+          <span class="passes__note">{T('fest.passesNote')}</span>
         </div>
       )}
 
       <div class="actions-grid">
-        {canAddToCalendar(f) && <AddToCalendar client:afterload id={f.id} />}
-        {ig && <a class="btn" href={ig} target="_blank" rel="noopener">{/\/p\//.test(ig) ? 'Instagram post' : 'Instagram'} ↗</a>}
-        {f.facebook && <a class="btn" href={f.facebook} target="_blank" rel="noopener">Facebook ↗</a>}
-        {f.website && <a class="btn btn--ghost" href={f.website} target="_blank" rel="noopener">Festival website ↗</a>}
+        {canAddToCalendar(f) && <AddToCalendar client:afterload id={f.id} lang={lang} />}
+        {ig && <a class="btn" href={ig} target="_blank" rel="noopener">{T(/\/p\//.test(ig) ? 'fest.instagramPost' : 'fest.instagram')} ↗</a>}
+        {f.facebook && <a class="btn" href={f.facebook} target="_blank" rel="noopener">{T('fest.facebook')} ↗</a>}
+        {f.website && <a class="btn btn--ghost" href={f.website} target="_blank" rel="noopener">{T('fest.website')} ↗</a>}
       </div>
       {!ig && !f.website && !f.facebook && (
-        <p class="no-links">We don't have a website or Instagram for this festival yet. <a href={fixPath(f.id)}>Know it? Tell us.</a></p>
+        <p class="no-links">{T('fest.noLinks')} <a href={L(fixPath(f.id))}>{T('fest.knowIt')}</a></p>
       )}
 
       <dl class="facts">
-        <dt>Where</dt><dd>{where}</dd>
-        <dt>Price</dt><dd>{priceLabel(f) || 'Not announced yet'}</dd>
-        <dt>Region</dt><dd><a href={regionPath(f.region)}>{f.region}</a></dd>
-        {f.styles?.length ? <><dt>Styles</dt><dd>{STYLES.filter((x) => f.styles!.includes(x.key)).map((x, i) => <>{i > 0 && ', '}<a href={stylePath(x.key)}>{x.label}</a></>)}</dd></> : null}
+        <dt>{T('fest.where')}</dt><dd>{where}</dd>
+        <dt>{T('fest.price')}</dt><dd>{priceLabel(f, lang) || T('fest.notAnnounced')}</dd>
+        <dt>{T('fest.region')}</dt><dd><a href={L(regionPath(f.region))}>{regionName(lang, f.region)}</a></dd>
+        {f.styles?.length ? <><dt>{T('fest.styles')}</dt><dd>{STYLES.filter((x) => f.styles!.includes(x.key)).map((x, i) => <>{i > 0 && ', '}<a href={L(stylePath(x.key))}>{styleLabel(x.key, lang)}</a></>)}</dd></> : null}
       </dl>
 
       {(flights || stay) && (
         <section class="block trip" aria-labelledby="trip-h">
-          <h2 class="h2" id="trip-h">Plan your trip</h2>
-          {flights && airport && <p class="trip__airport">Nearest airport: {airport.name} ({airport.code}){airport.km != null ? ` · ${airport.km} km` : ''}</p>}
+          <h2 class="h2" id="trip-h">{T('trip.title')}</h2>
+          {flights && airport && <p class="trip__airport">{T('trip.airport', { name: airport.name, code: airport.code })}{airport.km != null ? ` · ${airport.km} km` : ''}</p>}
           <div class="trip__links">
-            {flights && <a class="btn" href={flights} target="_blank" rel="sponsored noopener">Find flights ↗</a>}
-            {stay && <a class="btn" href={stay} target="_blank" rel="sponsored noopener">Find a place to stay ↗</a>}
+            {flights && <a class="btn" href={flights} target="_blank" rel="sponsored noopener">{T('trip.flights')} ↗</a>}
+            {stay && <a class="btn" href={stay} target="_blank" rel="sponsored noopener">{T('trip.stay')} ↗</a>}
           </div>
-          <p class="small-note">Dates are set to the night before and the day after the festival. We may earn a commission at no extra cost to you. <a href="/privacy/">Privacy</a></p>
+          <p class="small-note">{T('trip.note')} <a href={L('/privacy/')}>{T('site.privacy')}</a></p>
         </section>
       )}
 
       {others.length > 0 && (
         <div class="block">
-          <h2 class="h2">Other editions</h2>
+          <h2 class="h2">{T('fest.otherEditions')}</h2>
           {others.map((o) => <a class="row-between" href={o.href}><span>{o.label}</span><span class="meta">{o.when} ›</span></a>)}
         </div>
       )}
@@ -128,46 +132,46 @@ const description = [
 
     <div class="fest__col fest__col--right">
       <div class="block block--10">
-        <h2 class="h2">Line-up{a.length > 0 && <span class="h2__count">{a.length}</span>}</h2>
-        {a.length ? <Lineup client:afterload artists={a} hrefs={a.map((n) => (ARTIST_SLUGS.has(artistPath(n).split('/')[2]) ? artistPath(n) : null))} /> : <p class="meta" style="margin:0;font-size:15px">Not announced yet.</p>}
+        <h2 class="h2">{T('fest.lineup')}{a.length > 0 && <span class="h2__count">{a.length}</span>}</h2>
+        {a.length ? <Lineup client:afterload artists={a} lang={lang} hrefs={a.map((n) => (ARTIST_SLUGS.has(artistPath(n).split('/')[2]) ? L(artistPath(n)) : null))} /> : <p class="meta" style="margin:0;font-size:15px">{T('fest.notAnnounced')}.</p>}
       </div>
       <div class="block">
-        <h2 class="h2">About</h2>
-        <p class="about">{f.description || 'No description yet.'}</p>
+        <h2 class="h2">{T('fest.about')}</h2>
+        <p class="about" lang={f.description ? 'en' : undefined}>{f.description || T('fest.noDescription')}</p>
       </div>
       {f.coordinates && (
         <div class="block" style="gap:4px">
-          <FestivalMap client:afterload id={f.id} name={f.name} lat={f.coordinates[0]} lng={f.coordinates[1]} label={`Map of ${place(f)}`} place={place(f)} />
-          <a class="inline-link" href={`https://www.google.com/maps/search/?api=1&query=${f.coordinates[0]},${f.coordinates[1]}`} target="_blank" rel="noopener">Directions in Maps ↗</a>
+          <FestivalMap client:afterload id={f.id} name={f.name} lat={f.coordinates[0]} lng={f.coordinates[1]} label={T('fest.mapOf', { place: place(f, lang) })} place={place(f, lang)} lang={lang} />
+          <a class="inline-link" href={`https://www.google.com/maps/search/?api=1&query=${f.coordinates[0]},${f.coordinates[1]}`} target="_blank" rel="noopener">{T('fest.directions')} ↗</a>
         </div>
       )}
       <div class="verified">
-        <span>{f.lastVerified ? `Info last checked ${f.lastVerified}` : "Info from the organizer's public channels."}</span>
-        <a class="inline-link" href={fixPath(f.id)}>Something wrong? Suggest a correction</a>
+        <span>{f.lastVerified ? T('fest.checked', { d: f.lastVerified }) : T('fest.public')}</span>
+        <a class="inline-link" href={L(fixPath(f.id))}>{T('fest.correct')}</a>
       </div>
       {f.country && (
         <div class="more">
-          <h2 class="h2">More festivals in {inName(f.country)}</h2>
+          <h2 class="h2">{T('fest.moreCountry', { country: inThisCountry })}</h2>
           {country.map((x) => (
-            <a class="more-row" href={festivalPath(x.id)}>
-              <span class="more-row__when">{dayRange(x)}</span>
-              <span class="more-row__text"><strong>{x.name}</strong><span>{MONTHS[x.s.getMonth()]} {x.s.getFullYear()} · {x.city || place(x)}</span></span>
+            <a class="more-row" href={L(festivalPath(x.id))}>
+              <span class="more-row__when">{dayRange(x, lang)}</span>
+              <span class="more-row__text"><strong>{x.name}</strong><span>{monthName(lang, x.s.getMonth())} {x.s.getFullYear()} · {x.city || place(x, lang)}</span></span>
             </a>
           ))}
-          {country.length === 0 && <p class="meta">No other upcoming festival in {inName(f.country)} yet.</p>}
-          <a class="inline-link" href={countryPath(f.country)}>All Cuban salsa festivals in {inName(f.country)} ›</a>
+          {country.length === 0 && <p class="meta">{T('fest.noOtherCountry', { country: inThisCountry })}</p>}
+          <a class="inline-link" href={L(countryPath(f.country))}>{T('fest.allCountry', { country: inThisCountry })}</a>
         </div>
       )}
       {more.length > 0 && f.mk && (
         <div class="more">
-          <h2 class="h2">More in {monthLabel(f.mk)}</h2>
+          <h2 class="h2">{T('fest.moreIn', { month: monthLabel(f.mk, lang) })}</h2>
           {more.map((x) => (
-            <a class="more-row" href={festivalPath(x.id)}>
-              <span class="more-row__when">{dayRange(x)}</span>
-              <span class="more-row__text"><strong>{x.name}</strong><span>{place(x)}</span></span>
+            <a class="more-row" href={L(festivalPath(x.id))}>
+              <span class="more-row__when">{dayRange(x, lang)}</span>
+              <span class="more-row__text"><strong>{x.name}</strong><span>{place(x, lang)}</span></span>
             </a>
           ))}
-          <a class="inline-link" href={monthPath(f.mk)}>See all of {MONTHS[f.s.getMonth()]} ›</a>
+          <a class="inline-link" href={L(monthPath(f.mk))}>{T('fest.seeAll', { month: lang === 'en' ? monthName(lang, f.s.getMonth()) : monthInText(lang, f.s.getMonth()) })}</a>
         </div>
       )}
     </div>
@@ -175,14 +179,16 @@ const description = [
 
   <script>
     import { countdownLong, pISO, startOfToday } from '../../../lib/dates';
+    import { langOf } from '../../../i18n';
+    const lang = langOf(location.pathname);
     // The page is built once a day; count the days from the visitor's today.
     for (const el of document.querySelectorAll<HTMLElement>('[data-countdown]'))
-      el.textContent = countdownLong(pISO(el.dataset.start!), pISO(el.dataset.end!), startOfToday());
-    // "← All festivals" returns to the last list page the visitor came from.
+      el.textContent = countdownLong(pISO(el.dataset.start!), pISO(el.dataset.end!), startOfToday(), lang);
+    // "← All festivals" returns to the last list page the visitor came from (in the same language).
     try {
       const last = sessionStorage.getItem('csc-last-list');
       const a = document.getElementById('back-link') as HTMLAnchorElement | null;
-      if (last && a) a.href = last;
+      if (last && a && langOf(last) === lang) a.href = last;
     } catch {}
   </script>
 </Base>

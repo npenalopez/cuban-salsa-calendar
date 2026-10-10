@@ -1,6 +1,6 @@
 # Plan: closing the gaps with cubansalsafestivals.com
 
-Status 2026-10-10: Phases 0–5 are live (airports waiting for review). Phase 6 in progress.
+Status 2026-10-10: Phases 0–6 are live (airports and artist duplicates waiting for review). Translations should get a native-speaker review.
 
 ## What the site is today
 
@@ -99,7 +99,10 @@ Built: optional `facebook` field (schema, admin, festival page button, JSON-LD o
 - **No newsletter and no posters** (owner's decision).
 - **Facebook:** optional `facebook` link next to Instagram.
 
-## Phase 6: Languages
+## Phase 6: Languages (live)
+
+Built: every page in Spanish (/es/) and French (/fr/), with hreflang links (and x-default) in the head and the sitemap, a language switcher in the footer, and <html lang> per page. UI strings live in src/i18n/strings.ts (English is the fallback for any missing key); the page language comes from the URL. Dates and month names use Intl; country names use Intl.DisplayNames (French prepositions handled: en/au/aux/à). Common English price texts are translated; festival descriptions stay English (marked lang="en"). Map labels follow the page language. /[lang]/ routes reuse the English page files. The private admin editor and the 404 page stay English.
+
 
 - **Routes:** `/es/…` and `/fr/…` for every page type, with `hreflang` alternates and `x-default`. Page counts roughly triple, so builds get longer, but it stays static.
 - **Strings:** UI text moves into `src/i18n/{en,es,fr}.json`, for Astro pages and Preact islands alike. Dates and prices are formatted with `Intl` per language. Descriptions stay English unless `description_es` / `description_fr` exist.

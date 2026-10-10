@@ -1,6 +1,8 @@
 import type { ComponentChildren } from 'preact';
 import type { TravelMode } from '../lib/travel';
 import { useEffect, useRef } from 'preact/hooks';
+import { t } from '../i18n';
+import { useLang } from '../i18n/preact';
 
 export const SearchIcon = () => (
   <svg aria-hidden="true" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="9" cy="9" r="6" /><path d="M13.5 13.5 17 17" /></svg>
@@ -43,6 +45,7 @@ export const Flag = ({ code, small }: { code: string | null; small?: boolean }) 
 /** Bottom sheet on a native modal <dialog>: focus trap, Esc, focus return. */
 export function Sheet(props: { open: boolean; title: string; onClose: () => void; children: ComponentChildren; footer?: ComponentChildren; id: string; variant?: 'sheet' | 'drawer' }) {
   const ref = useRef<HTMLDialogElement>(null);
+  const lang = useLang();
   useEffect(() => {
     const d = ref.current;
     if (!d) return;
@@ -61,7 +64,7 @@ export function Sheet(props: { open: boolean; title: string; onClose: () => void
         <div class="sheet__panel">
           <div class="sheet__head">
             <h2 id={props.id} class="sheet__title">{props.title}</h2>
-            <button type="button" class="icon-btn" aria-label="Close" onClick={props.onClose}>✕</button>
+            <button type="button" class="icon-btn" aria-label={t(lang, 'sheet.close')} onClick={props.onClose}>✕</button>
           </div>
           <div class="sheet__body">{props.children}</div>
           {props.footer && <div class="sheet__foot">{props.footer}</div>}

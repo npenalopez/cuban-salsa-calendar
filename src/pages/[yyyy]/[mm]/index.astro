@@ -1,18 +1,23 @@
 ---
 import type { GetStaticPaths } from 'astro';
 import ListPage from '../../../components/ListPage.astro';
-import { monthLabel, months12, plural } from '../../../lib/dates';
+import { monthLabel, months12 } from '../../../lib/dates';
 import { TODAY, UPCOMING } from '../../../lib/data.server';
+import { langOf, monthInText, t } from '../../../i18n';
 
 export const getStaticPaths = (() =>
   months12(TODAY).map((m) => ({ params: { yyyy: String(m.y), mm: String(m.m + 1).padStart(2, '0') }, props: { key: m.key } }))) satisfies GetStaticPaths;
 
 const { key } = Astro.props;
+const lang = langOf(Astro.url.pathname);
 const n = UPCOMING.filter((f) => f.mk === key).length;
-const label = monthLabel(key);
+const label = monthLabel(key, lang);
+const [yy, mm] = key.split('-').map(Number);
+// In running text Spanish and French write months in lower case: "en noviembre de 2026".
+const inText = lang === 'en' ? label : `${monthInText(lang, mm - 1)}${lang === 'es' ? ' de' : ''} ${yy}`;
 ---
 <ListPage
   route={{ name: 'month', key }}
-  title={`${label} · Cuban salsa festivals · Cuban Salsa Calendar`}
-  description={`${plural(n, 'Cuban salsa festival')} in ${label}: dates, cities and line-ups.`}
+  title={t(lang, 'page.monthTitle', { month: label })}
+  description={t(lang, 'page.monthDesc', { n, month: inText })}
 />

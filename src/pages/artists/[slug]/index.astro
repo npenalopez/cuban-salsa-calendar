@@ -2,7 +2,9 @@
 // One page per artist: upcoming and past festivals, the acts they belong to, Person / PerformingGroup schema.
 import type { GetStaticPaths } from 'astro';
 import Base from '../../../layouts/Base.astro';
-import { MONTHS, dayRange, plural } from '../../../lib/dates';
+import { dayRange } from '../../../lib/dates';
+import { langOf, lp, monthName, monthShort, t } from '../../../i18n';
+import { inCountry } from '../../../i18n/places';
 import { ALL } from '../../../lib/data.server';
 import { SITE, festivalPath, place } from '../../../lib/festivals';
 import { type ArtistPage, artistPages, artistPath } from '../../../lib/artistPages';
@@ -14,26 +16,25 @@ export const getStaticPaths = (() => {
 }) satisfies GetStaticPaths;
 
 const { a, linked } = Astro.props as { a: ArtistPage; linked: (n: string) => boolean };
-const KIND = { person: 'Dancer and teacher', couple: 'Dance couple', group: 'Group', dj: 'DJ' } as const;
+const lang = langOf(Astro.url.pathname);
+const T = (k: string, v?: Record<string, string | number>) => t(lang, k, v);
+const L = (path: string) => lp(lang, path);
 const n = a.upcoming.length;
 const years = [...new Set(a.upcoming.map((h) => h.f.s.getFullYear()))].sort();
 const yearsLabel = years.length > 1 ? `${years[0]}–${years[years.length - 1]}` : String(years[0] ?? '');
-const title = n ? `${a.name}: Upcoming Cuban Salsa Festivals ${yearsLabel}` : `${a.name}: Cuban Salsa Festivals`;
-const next = a.upcoming.slice(0, 3).map((h) => `${h.f.name} (${h.f.city || place(h.f)}, ${MONTHS[h.f.s.getMonth()].slice(0, 3)} ${h.f.s.getFullYear()})`);
-const description = n
-  ? `${a.name} at ${plural(n, 'upcoming festival')}: ${next.join(', ')}${n > 3 ? ' and more' : ''}. Dates, places and line-ups.`
-  : `Festivals where ${a.name} taught or performed, with dates and places.`;
-const intro = n
-  ? `${a.name} is on the line-up of ${plural(n, 'upcoming Cuban salsa festival')}${a.countries.length ? ` in ${a.countries.length === 1 ? a.countries[0] : `${a.countries.length} countries`}` : ''}.${a.past.length ? ` ${plural(a.past.length, 'past festival')} listed below.` : ''}`
-  : `No upcoming festival lists ${a.name} yet. Past festivals are below.`;
+const title = n ? T('artist.title', { name: a.name, years: yearsLabel }) : T('artist.titlePast', { name: a.name });
+const next = a.upcoming.slice(0, 3).map((h) => `${h.f.name} (${h.f.city || place(h.f, lang)}, ${monthShort(lang, h.f.s.getMonth())} ${h.f.s.getFullYear()})`);
+const description = n ? T('artist.desc', { name: a.name, n, list: next.join(', '), more: n > 3 ? T('fest.descMore') : '' }) : T('artist.descPast', { name: a.name });
+const countriesWhere = a.countries.length === 0 ? '' : a.countries.length === 1 ? t(lang, 'land.where', { place: inCountry(lang, a.upcoming.find((h) => h.f.country === a.countries[0])?.f.countryCode, a.countries[0]) }) : T('artist.inCountries', { n: a.countries.length });
+const intro = n ? T('artist.intro', { name: a.name, n, where: countriesWhere }) + (a.past.length ? T('artist.pastBelow', { n: a.past.length }) : '') : T('artist.none', { name: a.name });
 
 const ld: Record<string, unknown> = {
   '@context': 'https://schema.org',
   '@type': a.kind === 'group' || a.kind === 'couple' ? 'PerformingGroup' : 'Person',
   name: a.name,
-  url: SITE + `/artists/${a.slug}/`,
+  url: SITE + L(`/artists/${a.slug}/`),
   performerIn: a.upcoming.map(({ f }) => ({
-    '@type': 'DanceEvent', name: f.name, url: SITE + festivalPath(f.id), startDate: f.startDate, endDate: f.endDate,
+    '@type': 'DanceEvent', name: f.name, url: SITE + L(festivalPath(f.id)), startDate: f.startDate, endDate: f.endDate,
     location: { '@type': 'Place', name: f.venue || f.city || place(f), address: { '@type': 'PostalAddress', addressLocality: f.city ?? undefined, addressCountry: f.countryCode ?? undefined } },
   })),
 };
@@ -43,31 +44,31 @@ if (a.memberOf.length) ld.memberOf = a.memberOf.map((m) => ({ '@type': 'Performi
 <Base title={title} description={description} noindex={n === 0}>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(ld).replace(/</g, '\\u003c')} />
   <div class="topbar">
-    <a class="topbar__back" href="/artists/">← All artists</a>
+    <a class="topbar__back" href={L('/artists/')}>{T('artist.back')}</a>
   </div>
   <div class="page-head">
-    <span class="kicker">{KIND[a.kind]}</span>
+    <span class="kicker">{T(`artist.${a.kind}`)}</span>
     <h1 class="page-title page-title--name">{a.name}</h1>
     <p class="page-note">{intro}</p>
   </div>
 
   {(a.members.length > 0 || a.memberOf.length > 0) && (
     <p class="artist-rel">
-      {a.members.length > 0 && <>Members: {a.members.map((m, i) => <>{i > 0 && ', '}{linked(m) ? <a href={artistPath(m)}>{m}</a> : m}</>)}</>}
-      {a.memberOf.length > 0 && <>Also dances as {a.memberOf.map((m, i) => <>{i > 0 && ', '}{linked(m) ? <a href={artistPath(m)}>{m}</a> : m}</>)}</>}
+      {a.members.length > 0 && <>{T('artist.members')} {a.members.map((m, i) => <>{i > 0 && ', '}{linked(m) ? <a href={L(artistPath(m))}>{m}</a> : m}</>)}</>}
+      {a.memberOf.length > 0 && <>{T('artist.alsoAs')} {a.memberOf.map((m, i) => <>{i > 0 && ', '}{linked(m) ? <a href={L(artistPath(m))}>{m}</a> : m}</>)}</>}
     </p>
   )}
 
   {n > 0 && (
     <section class="land-group" aria-labelledby="up-h">
-      <h2 class="h2 land-group__head" id="up-h">Upcoming festivals<span class="h2__count">{n}</span></h2>
+      <h2 class="h2 land-group__head" id="up-h">{T('artist.upcoming')}<span class="h2__count">{n}</span></h2>
       {a.upcoming.map(({ f, via }) => (
-        <a class="more-row land-row" href={festivalPath(f.id)}>
-          <span class="more-row__when">{dayRange(f)}</span>
+        <a class="more-row land-row" href={L(festivalPath(f.id))}>
+          <span class="more-row__when">{dayRange(f, lang)}</span>
           <span class="more-row__text">
             <strong>{f.name}</strong>
-            <span>{MONTHS[f.s.getMonth()]} {f.s.getFullYear()} · {place(f)}{f.status === 'postponed' ? ' · Postponed' : f.status === 'cancelled' ? ' · Cancelled' : ''}</span>
-            {via && <span class="land-row__lineup">with {via}</span>}
+            <span>{monthName(lang, f.s.getMonth())} {f.s.getFullYear()} · {place(f, lang)}{f.status === 'postponed' || f.status === 'cancelled' ? ` · ${T(`badge.${f.status}`)}` : ''}</span>
+            {via && <span class="land-row__lineup">{T('artist.with', { act: via })}</span>}
           </span>
         </a>
       ))}
@@ -76,15 +77,15 @@ if (a.memberOf.length) ld.memberOf = a.memberOf.map((m) => ({ '@type': 'Performi
 
   {a.past.length > 0 && (
     <details class="land-past" open={n === 0}>
-      <summary class="h2">Past festivals<span class="h2__count">{a.past.length}</span></summary>
+      <summary class="h2">{T('land.past')}<span class="h2__count">{a.past.length}</span></summary>
       {a.past.map(({ f, via }) => (
-        <a class="more-row land-row" href={festivalPath(f.id)}>
-          <span class="more-row__when">{dayRange(f)}</span>
-          <span class="more-row__text"><strong>{f.name}</strong><span>{MONTHS[f.s.getMonth()]} {f.s.getFullYear()} · {place(f)}{via ? ` · with ${via}` : ''}</span></span>
+        <a class="more-row land-row" href={L(festivalPath(f.id))}>
+          <span class="more-row__when">{dayRange(f, lang)}</span>
+          <span class="more-row__text"><strong>{f.name}</strong><span>{monthName(lang, f.s.getMonth())} {f.s.getFullYear()} · {place(f, lang)}{via ? ` · ${T('artist.with', { act: via })}` : ''}</span></span>
         </a>
       ))}
     </details>
   )}
 
-  <p class="small-note artist-note">Line-ups come from the organizers' own pages and change often. Check the festival page before you book.</p>
+  <p class="small-note artist-note">{T('artist.note')}</p>
 </Base>

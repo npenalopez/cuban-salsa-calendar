@@ -1,6 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { countdown, countdownLong, dateBlock, dateLong, dateShort, months12, pISO } from './dates';
-import { cardVM, enrich, fmtPrice, isListed, priceLabel } from './festivals';
+import { cardVM, enrich, fmtPrice, isListed, localPriceText, priceLabel } from './festivals';
+import { basePath, langOf, lp, t } from '../i18n';
+import { inCountry } from '../i18n/places';
 import { calUrls, icsCalendar } from './ics';
 import { computeView, DEFAULT_FILTERS, filtersQuery, km, parseFilters, styleOptions } from './listing';
 import { didYouMean, suggestions } from './search';
@@ -339,5 +341,34 @@ describe('artist pages', () => {
     const anneta = pages.find((p) => p.slug === 'anneta-kepka')!;
     expect(anneta.upcoming[0].via).toBe('Osbanis & Anneta');
     expect(anneta.memberOf).toEqual(['Osbanis & Anneta']);
+  });
+});
+
+describe('i18n', () => {
+  it('translates strings with plurals and falls back to English', () => {
+    expect(t('es', 'n.festivals', { n: 1 })).toBe('1 festival');
+    expect(t('es', 'n.festivals', { n: 3 })).toBe('3 festivales');
+    expect(t('fr', 'cd.inDays', { n: 2 })).toBe('Dans 2 jours');
+    expect(t('fr', 'no.such.key')).toBe('no.such.key');
+  });
+  it('paths, languages and country phrases', () => {
+    expect(lp('es', '/festivals/x/')).toBe('/es/festivals/x/');
+    expect(lp('en', '/festivals/x/')).toBe('/festivals/x/');
+    expect(basePath('/fr/country/germany/')).toBe('/country/germany/');
+    expect(langOf('/es/')).toBe('es');
+    expect(inCountry('fr', 'US', 'United States')).toBe('aux États-Unis');
+    expect(inCountry('fr', 'MX', 'Mexico')).toBe('au Mexique');
+    expect(inCountry('fr', 'CU', 'Cuba')).toBe('à Cuba');
+    expect(inCountry('es', 'DE', 'Germany')).toBe('Alemania');
+    expect(inCountry('en', 'GB', 'United Kingdom')).toBe('the United Kingdom');
+  });
+  it('dates and prices per language; English unchanged', () => {
+    const [f] = enrich([mk({ startDate: '2026-11-13', endDate: '2026-11-15', priceText: 'From €130' })], TODAY);
+    expect(dateLong(f)).toBe('Fri 13 – Sun 15 November 2026');
+    expect(dateLong(f, 'es')).toBe('Vie 13 – Dom 15 de noviembre de 2026');
+    expect(dateLong(f, 'fr')).toBe('Ven 13 – Dim 15 novembre 2026');
+    expect(priceLabel(f, 'es')).toBe('Desde €130');
+    expect(localPriceText('€60 to €195', 'fr')).toBe('€60 – €195');
+    expect(festivalTitle(f, 'fr')).toBe('X Fest 2026 : festival de salsa cubaine à Kraków, Pologne');
   });
 });

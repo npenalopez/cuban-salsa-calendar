@@ -1,4 +1,6 @@
 ---
 import ListPage from '../../components/ListPage.astro';
+import { langOf, t } from '../../i18n';
+const lang = langOf(Astro.url.pathname);
 ---
-<ListPage route={{ name: 'saved' }} title="Saved festivals · Cuban Salsa Calendar" description="Your saved Cuban salsa festivals, kept on this device. Share the list or add every date to your calendar." />
+<ListPage route={{ name: 'saved' }} title={t(lang, 'page.savedTitle')} description={t(lang, 'page.savedDesc')} />

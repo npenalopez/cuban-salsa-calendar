@@ -1,0 +1,15 @@
+---
+// Spanish and French copy of the English page (the page reads its language from the URL).
+import type { GetStaticPaths } from 'astro';
+import Page from '../../../[yyyy]/[mm]/index.astro';
+import { LANGS } from '../../../../i18n';
+import { months12 } from '../../../../lib/dates';
+import { TODAY } from '../../../../lib/data.server';
+export const getStaticPaths = (() => {
+  const langs = LANGS.filter((l) => l !== 'en');
+  return langs.flatMap((lang) => months12(TODAY).map((m) => ({ params: { lang, yyyy: String(m.y), mm: String(m.m + 1).padStart(2, '0') }, props: { key: m.key } })));
+}) satisfies GetStaticPaths;
+
+const props = Astro.props as { key: string };
+---
+<Page key={props.key} />

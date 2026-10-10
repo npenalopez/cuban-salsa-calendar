@@ -148,6 +148,8 @@ html:has(.search) { scroll-padding-top: calc(var(--header-h) + 88px); }
 .footer__countries ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0 14px; }
 .footer__countries li { min-height: 44px; display: inline-flex; align-items: center; gap: 5px; }
 .footer__countries li span { color: var(--ink3); font-size: 13px; }
+.footer__langs { flex-basis: 100%; display: flex; flex-wrap: wrap; gap: 4px 16px; align-items: center; }
+.footer__langs a, .footer__langs strong { min-height: 44px; display: inline-flex; align-items: center; }
 .footer__copy { flex-basis: 100%; color: var(--ink3); }
 
 /* ============ Controls ============ */

@@ -1,0 +1,16 @@
+---
+// Spanish and French copy of the English page (the page reads its language from the URL).
+import type { GetStaticPaths } from 'astro';
+import Page from '../../../region/[slug]/index.astro';
+import { LANGS } from '../../../../i18n';
+import { ALL } from '../../../../lib/data.server';
+import { type Landing, landings } from '../../../../lib/seo';
+export const getStaticPaths = (() => {
+  const langs = LANGS.filter((l) => l !== 'en');
+  const all = landings(ALL);
+  return langs.flatMap((lang) => all.filter((l) => l.kind === 'region').map((l) => ({ params: { lang, slug: l.path.split('/')[2] }, props: { l, all } })));
+}) satisfies GetStaticPaths;
+
+const props = Astro.props as { l: Landing; all: Landing[] };
+---
+<Page l={props.l} all={props.all} />

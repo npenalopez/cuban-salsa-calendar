@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import SubmitForm from './SubmitForm';
+import { langOf, lp, t } from '../i18n';
 
 interface Props {
   mode: 'new' | 'fix';
@@ -10,20 +11,20 @@ interface Props {
 }
 const { mode, fid, fname, back } = Astro.props;
 const isFix = mode === 'fix';
+const lang = langOf(Astro.url.pathname);
+const T = (k: string, v?: Record<string, string | number>) => t(lang, k, v);
 const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY;
 ---
-<Base title={isFix ? `Suggest a correction · ${fname} · Cuban Salsa Calendar` : 'Submit a festival · Cuban Salsa Calendar'} description="Add a Cuban salsa, timba or Afro-Cuban festival. We check every submission before it goes live." noindex={isFix}>
+<Base title={isFix ? T('form.fixTitle', { name: fname ?? '' }) : T('form.newTitle')} description={T('form.desc')} noindex={isFix}>
   <div class="form-page">
-    <a href={back} class="form-page__back">← Back</a>
+    <a href={lp(lang, back)} class="form-page__back">{T('form.back')}</a>
     <div class="block">
-      <span class="kicker">{isFix ? 'Suggest a correction' : 'For organizers and dancers'}</span>
-      <h1 class="form-title">{isFix ? 'Fix a listing' : 'Submit a festival'}</h1>
+      <span class="kicker">{T(isFix ? 'form.fixKicker' : 'form.newKicker')}</span>
+      <h1 class="form-title">{T(isFix ? 'form.fixH1' : 'form.newH1')}</h1>
       <p class="form-intro">
-        {isFix
-          ? "Tell us what's wrong or missing. We check every change before it goes live."
-          : 'Add a Cuban salsa, timba or Afro-Cuban festival. We check every submission before it goes live.'}
+        {T(isFix ? 'form.fixIntro' : 'form.newIntro')}
       </p>
     </div>
-    <SubmitForm client:load mode={mode} fid={fid} fname={fname} turnstileKey={turnstileKey} />
+    <SubmitForm client:load mode={mode} fid={fid} fname={fname} turnstileKey={turnstileKey} lang={lang} />
   </div>
 </Base>
