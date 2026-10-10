@@ -13,8 +13,8 @@ interface Props {
 }
 const { l, related } = Astro.props;
 
-const kicker = l.kind === 'country' ? `Cuban salsa festivals · ${l.upcoming[0]?.region ?? l.past[0]?.region ?? ''}` : l.kind === 'region' ? 'Cuban salsa festivals by region' : 'Cuban salsa festivals by year';
-const filter = l.kind === 'country' ? `/upcoming/?where=country:${(l.upcoming[0] ?? l.past[0]).countryCode}` : l.kind === 'region' ? `/upcoming/?where=region:${encodeURIComponent(l.label)}` : null;
+const kicker = l.kind === 'country' ? `Cuban salsa festivals · ${l.upcoming[0]?.region ?? l.past[0]?.region ?? ''}` : l.kind === 'region' ? 'Cuban salsa festivals by region' : l.kind === 'style' ? 'Cuban salsa festivals by style' : 'Cuban salsa festivals by year';
+const filter = l.kind === 'country' ? `/upcoming/?where=country:${(l.upcoming[0] ?? l.past[0]).countryCode}` : l.kind === 'region' ? `/upcoming/?where=region:${encodeURIComponent(l.label)}` : l.kind === 'style' ? `/upcoming/?style=${l.path.split('/')[2]}` : null;
 
 const monthGroups = (list: Enriched[]) => {
   const g = new Map<string, Enriched[]>();

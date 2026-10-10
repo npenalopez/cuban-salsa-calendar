@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { countdown, countdownLong, dateBlock, dateLong, dateShort, months12, pISO } from './dates';
 import { cardVM, enrich, fmtPrice, isListed, priceLabel } from './festivals';
 import { calUrls, icsCalendar } from './ics';
-import { computeView, DEFAULT_FILTERS, filtersQuery, parseFilters } from './listing';
+import { computeView, DEFAULT_FILTERS, filtersQuery, km, parseFilters, styleOptions } from './listing';
 import { didYouMean, suggestions } from './search';
 import { canonicalArtist, canonicalLineup, peopleOf } from './artists';
 import { bestTravel, fmtHours, travelOptions } from './travel';
@@ -272,5 +272,43 @@ describe('seo', () => {
     expect(ld.startDate).toBe('2026-10-09');
     expect((eventLd(past) as any).offers).toBeUndefined();
     expect((eventLd(pp) as any).eventStatus).toBe('https://schema.org/EventPostponed');
+  });
+});
+
+describe('styles, Cuban focus and new sorts', () => {
+  const list = enrich([
+    mk({ id: 'a', name: 'A', styles: ['timba', 'casino'], cubanFocused: true, startDate: '2026-10-09', endDate: '2026-10-10', coordinates: [50.06, 19.94] }),
+    mk({ id: 'b', name: 'B', styles: ['casino', 'mixed'], cubanFocused: false, startDate: '2026-10-20', endDate: '2026-10-25', coordinates: [40.42, -3.7] }),
+    mk({ id: 'c', name: 'C', startDate: '2026-11-01', endDate: '2026-11-03', coordinates: [52.52, 13.4] }),
+  ], TODAY);
+  const ids = (f: Partial<typeof DEFAULT_FILTERS>, me = null as null | { lat: number; lng: number }) =>
+    computeView(list, TODAY, { name: 'all' }, { ...DEFAULT_FILTERS, ...f }, [], null, null, me).sections.flatMap((s) => s.items.map((x) => x.id));
+
+  it('parses and writes style, cuban and the new sorts', () => {
+    const f = parseFilters('?style=timba&cuban=1&sort=length');
+    expect(f).toMatchObject({ style: 'timba', cuban: true, sort: 'length' });
+    expect(filtersQuery(f)).toBe('?style=timba&cuban=1&sort=length');
+    expect(parseFilters('?style=salsa&sort=nope')).toMatchObject({ style: '', sort: 'date' });
+  });
+
+  it('filters by style and Cuban focus', () => {
+    expect(ids({ style: 'casino' })).toEqual(['a', 'b']);
+    expect(ids({ cuban: true })).toEqual(['a']);
+  });
+
+  it('sorts by length and by distance from the visitor, falling back to date without a location', () => {
+    expect(ids({ sort: 'length' })).toEqual(['b', 'c', 'a']);
+    expect(ids({ sort: 'me' }, { lat: 52.4, lng: 13.1 })).toEqual(['c', 'a', 'b']);
+    expect(ids({ sort: 'me' })).toEqual(['a', 'b', 'c']);
+    expect(km({ lat: 52.52, lng: 13.4 }, { lat: 48.86, lng: 2.35 })).toBeGreaterThan(870);
+    expect(km({ lat: 52.52, lng: 13.4 }, { lat: 48.86, lng: 2.35 })).toBeLessThan(885);
+  });
+
+  it('style pages exist only for styles in use; mixed festivals are titled "Salsa Festival"', () => {
+    const paths = landings(list).filter((l) => l.kind === 'style').map((l) => l.path);
+    expect(paths).toEqual(['/style/casino/', '/style/timba/', '/style/mixed/']);
+    expect(festivalTitle(list[1])).toBe('B 2026: Salsa Festival in Kraków, Poland');
+    expect(festivalTitle(list[2])).toBe('C 2026: Cuban Salsa Festival in Kraków, Poland');
+    expect(styleOptions(list.filter((x) => !x.arch)).map((o) => [o.value, o.n])).toEqual([['casino', 2], ['timba', 1], ['mixed', 1]]);
   });
 });

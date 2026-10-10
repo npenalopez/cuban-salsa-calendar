@@ -36,6 +36,13 @@
         "website": { "$ref": "#/$defs/url" },
         "instagram": { "$ref": "#/$defs/url", "description": "Full profile URL. Never guess one." },
         "artists": { "type": "array", "items": { "type": "string" } },
+        "styles": {
+          "type": "array",
+          "items": { "enum": ["casino", "timba", "son", "rumba", "afro-cuban", "rueda", "reggaeton", "mixed"] },
+          "uniqueItems": true,
+          "description": "Optional. Dance styles taught or played. 'mixed' = other styles (bachata, kizomba, linear salsa) have their own floors."
+        },
+        "cubanFocused": { "type": "boolean", "description": "Optional. true = mainly Cuban styles; false = a mixed festival with a Cuban strand. Absent = not reviewed." },
         "description": { "type": ["string", "null"], "description": "Public text" },
         "lastVerified": { "type": ["string", "null"], "format": "date" },
         "featured": { "type": "boolean", "description": "Sponsored listing. On hold: render only when the feature is switched on." },

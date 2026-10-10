@@ -1,5 +1,6 @@
 export type Status = 'scheduled' | 'postponed' | 'cancelled' | 'sold-out';
 export type Precision = 'day' | 'month' | 'year';
+export type Style = 'casino' | 'timba' | 'son' | 'rumba' | 'afro-cuban' | 'rueda' | 'reggaeton' | 'mixed';
 export type Region = 'Europe' | 'North America' | 'South America' | 'Africa' | 'Asia' | 'Oceania';
 
 /** One record of data/festivals.json (see festivals.schema.json). */
@@ -25,6 +26,10 @@ export interface Festival {
   website: string | null;
   artists: string[];
   featured: boolean;
+  /** Optional, see STYLES in styles.ts. */
+  styles?: Style[];
+  /** Optional: true = mainly Cuban, false = mixed festival with a Cuban strand, absent = not reviewed. */
+  cubanFocused?: boolean;
   // Only present server-side (stripped from the client bundle).
   instagram?: string | null;
   description?: string | null;

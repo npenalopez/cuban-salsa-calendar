@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from 'preact/hooks';
 import { MON3 } from '../lib/dates';
 import { norm } from '../lib/text';
-import type { Festival, FestivalsFile } from '../lib/types';
+import { STYLES } from '../lib/styles';
+import type { Festival, FestivalsFile, Style } from '../lib/types';
 
 const KEY = 'csc-admin-draft';
 /** Field order in the exported file. */
@@ -226,6 +227,9 @@ export default function AdminApp() {
       lastVerified: clean(e.lastVerified),
       coordinates: e.lat && e.lng ? [+e.lat, +e.lng] : null,
       featured: !!e.featured,
+      // Optional fields: written only when set, so unreviewed festivals stay without them.
+      ...(e.styles?.length ? { styles: STYLES.map((x) => x.key).filter((k) => e.styles!.includes(k)) } : {}),
+      ...(typeof e.cubanFocused === 'boolean' ? { cubanFocused: e.cubanFocused } : {}),
     } as Festival;
     const isNew = e._orig == null;
     persist(isNew ? [...list, f] : list.map((x) => (x.id === e._orig ? f : x)));
@@ -446,6 +450,30 @@ function Editor(p: EditorProps) {
             {F('series', 'Series', { mono: true, ph: 'auto', hint: 'Same value links editions across years.' })}
             {F('status', 'Status', { kind: 'select', options: [['scheduled', 'Scheduled'], ['postponed', 'Postponed'], ['cancelled', 'Cancelled'], ['sold-out', 'Sold out']] })}
             {F('featured', 'Listing', { kind: 'check', checkLabel: 'Featured (sponsored)' })}
+          </fieldset>
+          <fieldset class="ed-group">
+            <legend class="label">Styles</legend>
+            <label class="ed-field">
+              Cuban focus
+              <select class="input input--sm" value={e.cubanFocused === true ? 'yes' : e.cubanFocused === false ? 'no' : ''} onChange={(ev) => { const v = ev.currentTarget.value; p.setE('cubanFocused', v === 'yes' ? true : v === 'no' ? false : undefined); }}>
+                <option value="">Not reviewed</option>
+                <option value="yes">Mainly Cuban</option>
+                <option value="no">Mixed, with a Cuban strand</option>
+              </select>
+            </label>
+            <div class="ed-field" style="grid-column:1 / -1" role="group" aria-label="Styles">
+              {STYLES.map((x) => (
+                <span class="check-row">
+                  <input
+                    type="checkbox"
+                    id={`ed-style-${x.key}`}
+                    checked={!!e.styles?.includes(x.key)}
+                    onChange={(ev) => { const on = ev.currentTarget.checked; const cur = e.styles ?? []; p.setE('styles', (on ? [...cur, x.key] : cur.filter((k) => k !== x.key)) as Style[]); }}
+                  />
+                  <label for={`ed-style-${x.key}`}>{x.label}</label>
+                </span>
+              ))}
+            </div>
           </fieldset>
           <fieldset class="ed-group">
             <legend class="label">Dates</legend>

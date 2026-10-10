@@ -1,6 +1,6 @@
 # Plan: closing the gaps with cubansalsafestivals.com
 
-Status 2026-10-10: Phases 0 and 1 are live. The Drive script is off again and the CSP is strict again. Phases 2–6 are waiting for approval. Decisions from the owner: CSP loosened for the Drive script (to be removed once verified); thin country pages are indexed; no newsletter; no posters.
+Status 2026-10-10: Phases 0 and 1 are live (the Drive script is off again and the CSP is strict again). Phase 2 is live; the style suggestions were applied as generated on 2026-10-10 (13 festivals still need a Cuban-focus decision). Phases 3–6 are waiting for approval. Decisions from the owner: CSP loosened for the Drive script (to be removed once verified); thin country pages are indexed; no newsletter; no posters.
 
 ## What the site is today
 
@@ -41,7 +41,14 @@ Original plan:
 - **Sitemap:** add the new pages. robots.txt already points to it.
 - **Internal links:** "More festivals in {Country}" on festival pages, and a "browse by country" block in the footer.
 
-## Phase 2: Styles and filters
+## Phase 2: Styles and filters (live)
+
+Built: optional `styles` and `cubanFocused` in the schema, types and admin editor (the editor used to drop unknown fields on save; it now keeps them). Filters for style and "Cuban-focused only" appear once data has them. Sorts: date, longest first, nearest to me (browser location, asked only when chosen, kept in memory), fastest from the travel city, A–Z. Style pages /style/{style}/ for styles in use. Festival pages list styles. Mixed festivals (`cubanFocused: false`) are titled "Salsa Festival". Month filtering stays with the month pages and the date filter.
+
+Review: `node scripts/suggest-styles.mjs [external.json]` wrote data/review/styles.md and styles.json (71 Cuban-focused, 41 mixed, 13 to decide). `node scripts/apply-styles.mjs` writes them once approved.
+
+Original plan:
+
 
 - **Schema** (optional): `styles: ("casino"|"timba"|"son"|"rumba"|"afro-cuban"|"rueda"|"reggaeton"|"mixed")[]` and `cubanFocused: boolean`.
 - **Filters:** country (exists), style, month (exists as month pages and a date range), and "Cuban-focused only".

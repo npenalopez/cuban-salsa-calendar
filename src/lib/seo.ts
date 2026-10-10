@@ -1,6 +1,7 @@
 // Landing pages (country, region, year), festival titles and Event JSON-LD.
 import { MONTHS, plural } from './dates';
 import { SITE, festivalPath, fmtPrice, place, ticketOf } from './festivals';
+import { STYLES, stylePath } from './styles';
 import type { Enriched } from './types';
 
 export const slugify = (s: string) =>
@@ -10,7 +11,7 @@ export const countryPath = (country: string) => `/country/${slugify(country)}/`;
 export const regionPath = (region: string) => `/region/${slugify(region)}/`;
 export const yearPath = (y: number) => `/${y}/`;
 
-export type LandingKind = 'country' | 'region' | 'year';
+export type LandingKind = 'country' | 'region' | 'year' | 'style';
 
 export interface Landing {
   kind: LandingKind;
@@ -41,6 +42,7 @@ export function landings(all: Enriched[]): Landing[] {
     ...group((f) => f.country).map(([c, l]) => landing('country', c, countryPath(c), l)),
     ...group((f) => f.region).map(([r, l]) => landing('region', r, regionPath(r), l)),
     ...group((f) => String(f.s.getFullYear())).map(([y, l]) => landing('year', y, yearPath(Number(y)), l)),
+    ...STYLES.map((st) => landing('style', st.label, stylePath(st.key), all.filter((f) => f.styles?.includes(st.key)))).filter((l) => l.upcoming.length + l.past.length > 0),
   ];
 }
 
@@ -69,6 +71,12 @@ export function relatedFor(l: Landing, all: Landing[]): Related[] {
       { title: 'Other regions', links: of('region').map(link) },
     ];
   }
+  if (l.kind === 'style') {
+    return [
+      { title: 'Other styles', links: of('style').map(link) },
+      { title: 'By region', links: of('region').map(link) },
+    ];
+  }
   return [
     { title: 'By region', links: of('region').map(link) },
     { title: 'Other years', links: of('year').map(link) },
@@ -86,25 +94,31 @@ function topBy<T>(xs: T[], key: (x: T) => string, n: number): string[] {
 /** Country names that take "the" in running text: "in the Czech Republic". */
 export const inName = (country: string) => (/^(united|czech|dominican|netherlands|philippines)\b/i.test(country) ? `the ${country}` : country);
 
-const where = (l: Landing) => (l.kind === 'year' ? '' : ` in ${l.kind === 'country' ? inName(l.label) : l.label}`);
+const where = (l: Landing) => (l.kind === 'year' || l.kind === 'style' ? '' : ` in ${l.kind === 'country' ? inName(l.label) : l.label}`);
+/** "festival" for most pages, "festival with timba" on style pages. */
+const withStyle = (l: Landing) => (l.kind === 'style' ? ` with ${STYLES.find((x) => x.label === l.label)!.key === 'mixed' ? 'mixed styles' : l.label.toLowerCase()}` : '');
 const count = (n: number, w: string) => (n === 1 ? `One ${w}` : plural(n, w));
 
 export function landingTitle(l: Landing): string {
+  if (l.kind === 'style') {
+    const st = STYLES.find((x) => x.label === l.label)!;
+    return `${st.plural[0].toUpperCase() + st.plural.slice(1)}: Cuban Salsa Festival Dates and Line-ups`;
+  }
   if (l.kind === 'year') return `Cuban Salsa Festivals ${l.label}: Dates, Line-ups and Prices`;
   const years = [...new Set(l.upcoming.map((f) => f.s.getFullYear()))].sort();
   return `Cuban Salsa Festivals in ${inName(l.label)}${years.length ? ' ' + (years.length > 1 ? `${years[0]}–${years[years.length - 1]}` : years[0]) : ''}: Dates and Line-ups`;
 }
 
 export function landingH1(l: Landing): string {
-  return l.kind === 'year' ? `Festivals ${l.label}` : l.label;
+  return l.kind === 'year' ? `Festivals ${l.label}` : l.kind === 'style' ? STYLES.find((x) => x.label === l.label)!.plural : l.label;
 }
 
 export function landingDescription(l: Landing): string {
   const n = l.upcoming.length;
   const next = l.upcoming[0];
   const head = n
-    ? `${count(n, 'upcoming Cuban salsa, timba and Afro-Cuban festival')}${where(l)}${l.kind === 'year' ? ` in ${l.label}` : ''}: dates, cities, line-ups and prices.`
-    : `Cuban salsa, timba and Afro-Cuban festivals${where(l)}${l.kind === 'year' ? ` in ${l.label}` : ''}: past editions with dates and line-ups.`;
+    ? `${count(n, 'upcoming Cuban salsa, timba and Afro-Cuban festival')}${withStyle(l)}${where(l)}${l.kind === 'year' ? ` in ${l.label}` : ''}: dates, cities, line-ups and prices.`
+    : `Cuban salsa, timba and Afro-Cuban festivals${withStyle(l)}${where(l)}${l.kind === 'year' ? ` in ${l.label}` : ''}: past editions with dates and line-ups.`;
   return next ? `${head} Next: ${next.name}, ${next.city || place(next)}.` : head;
 }
 
@@ -112,7 +126,7 @@ export function landingDescription(l: Landing): string {
 export function landingIntro(l: Landing): string {
   const up = l.upcoming;
   if (!up.length) {
-    return `No upcoming festival${where(l)} is on the calendar yet. ${count(l.past.length, 'past edition')} ${l.past.length === 1 ? 'is' : 'are'} listed below, a good hint for next year's dates.`;
+    return `No upcoming festival${withStyle(l)}${where(l)} is on the calendar yet. ${count(l.past.length, 'past edition')} ${l.past.length === 1 ? 'is' : 'are'} listed below, a good hint for next year's dates.`;
   }
   const parts: string[] = [];
   const cities = topBy(up.filter((f) => f.city), (f) => f.city!, 4);
@@ -122,7 +136,7 @@ export function landingIntro(l: Landing): string {
     l.kind === 'country'
       ? cities.length ? `, in ${allCities > cities.length ? 'cities including ' : ''}${listWords(cities)}` : ''
       : countries.length ? `, with the most in ${listWords(countries.map(inName))}` : '';
-  parts.push(`${count(up.length, 'Cuban salsa festival')} ${up.length === 1 ? 'is' : 'are'} coming up${where(l)}${l.kind === 'year' ? ` in ${l.label}` : ''}${spread}.`);
+  parts.push(`${count(up.length, 'Cuban salsa festival')}${withStyle(l)} ${up.length === 1 ? 'is' : 'are'} coming up${where(l)}${l.kind === 'year' ? ` in ${l.label}` : ''}${spread}.`);
   const months = topBy(up, (f) => MONTHS[f.s.getMonth()] + (l.kind === 'year' ? '' : ' ' + f.s.getFullYear()), 1);
   if (up.length > 2 && months.length) parts.push(`${months[0]} is the busiest month.`);
   const lined = up.filter((f) => f.artists.length).length;
@@ -136,7 +150,7 @@ export function landingIntro(l: Landing): string {
 export function festivalTitle(f: Enriched): string {
   const y = String(f.s.getFullYear());
   const name = f.name.includes(y) ? f.name : `${f.name} ${y}`;
-  return `${name}: Cuban Salsa Festival in ${place(f)}`;
+  return `${name}: ${f.cubanFocused === false ? 'Salsa Festival' : 'Cuban Salsa Festival'} in ${place(f)}`;
 }
 
 const isGroup = (name: string) => /\s(&|y|and)\s/i.test(name) || /\b(orquesta|band|team|group|grupo)\b/i.test(name);

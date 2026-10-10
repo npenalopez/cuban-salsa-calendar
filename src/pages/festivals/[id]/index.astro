@@ -7,6 +7,7 @@ import { ALL, TODAY, UPCOMING } from '../../../lib/data.server';
 import { SITE, byDate, canAddToCalendar, festivalPath, fixPath, fmtPrice, nextEdition, place, priceLabel, ticketOf } from '../../../lib/festivals';
 import type { Enriched } from '../../../lib/types';
 import { countryPath, eventLd, festivalTitle, inName, regionPath } from '../../../lib/seo';
+import { STYLES, stylePath } from '../../../lib/styles';
 
 export const getStaticPaths = (() => ALL.map((f) => ({ params: { id: f.id }, props: { f } }))) satisfies GetStaticPaths;
 
@@ -90,6 +91,7 @@ const description = [
         <dt>Where</dt><dd>{where}</dd>
         <dt>Price</dt><dd>{priceLabel(f) || 'Not announced yet'}</dd>
         <dt>Region</dt><dd><a href={regionPath(f.region)}>{f.region}</a></dd>
+        {f.styles?.length ? <><dt>Styles</dt><dd>{STYLES.filter((x) => f.styles!.includes(x.key)).map((x, i) => <>{i > 0 && ', '}<a href={stylePath(x.key)}>{x.label}</a></>)}</dd></> : null}
       </dl>
 
       {others.length > 0 && (

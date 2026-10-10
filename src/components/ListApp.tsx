@@ -1,19 +1,19 @@
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { allFestivals } from '../client/data';
 import { openCalendar, share } from '../client/share';
-import { addRecent, clearRecent, openSheet, saveAll, toggleSaved, useMounted, useStore } from '../client/store';
+import { addRecent, clearRecent, openSheet, saveAll, toast, toggleSaved, useMounted, useStore } from '../client/store';
 import { MONTHS, dateLong, monthLabel, monthPath, pISO, plural, startOfToday } from '../lib/dates';
 import { cardVM, festivalPath, place } from '../lib/festivals';
 import { savedIcsPath } from '../lib/ics';
 import {
-  DEFAULT_FILTERS, computeView, filterCount, filterSummary, filtersQuery, parseFilters, whereOptions,
-  type Filters, type PageRoute, type When,
+  DEFAULT_FILTERS, computeView, filterCount, filterSummary, filtersQuery, parseFilters, styleOptions, whereOptions,
+  type Filters, type LatLng, type PageRoute, type Sort, type When,
 } from '../lib/listing';
 import { didYouMean, suggestions, type Suggestion } from '../lib/search';
 import { highlight, norm } from '../lib/text';
 import { FestivalCard } from './FestivalCard';
 import { MapView, type MapPoint } from './MapView';
-import { FilterIcon, SearchIcon, Segmented, Sheet } from './ui';
+import { FilterIcon, SearchIcon, Sheet } from './ui';
 
 interface Props {
   route: PageRoute;
@@ -73,9 +73,30 @@ export default function ListApp({ route, buildToday }: Props) {
   }, []);
 
   const patch = (p: Partial<Filters>) => setF((cur) => ({ ...cur, ...p }));
-  const clearFilters = () => patch({ where: '', savedOnly: false, when: 'any', sort: 'date', from: '', to: '' });
+  const clearFilters = () => patch({ where: '', savedOnly: false, style: '', cuban: false, when: 'any', sort: 'date', from: '', to: '' });
 
-  const v = computeView(all, today, route, f, store.saved, shared, store.city);
+  // "Near me": the browser's location, asked for only when chosen and kept in memory, never stored.
+  const [me, setMe] = useState<LatLng | null>(null);
+  const [locating, setLocating] = useState(false);
+  const pickSort = (s: Sort) => {
+    if (s !== 'me' || me) return patch({ sort: s });
+    if (!navigator.geolocation) return toast('Location is not available in this browser');
+    setLocating(true);
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setLocating(false);
+        setMe({ lat: pos.coords.latitude, lng: pos.coords.longitude });
+        patch({ sort: 'me' });
+      },
+      () => {
+        setLocating(false);
+        toast('No location, so the list stays in date order');
+      },
+      { maximumAge: 600_000, timeout: 15_000 },
+    );
+  };
+
+  const v = computeView(all, today, route, f, store.saved, shared, store.city, me);
   const fc = filterCount(f);
   const hasQuery = f.q.trim().length > 0;
   const isMonth = v.mode === 'month';
@@ -136,6 +157,8 @@ export default function ListApp({ route, buildToday }: Props) {
   const mapView = f.view === 'map';
 
   const where = whereOptions(v.up);
+  const styles = styleOptions(v.up);
+  const anyCuban = v.up.some((x) => x.cubanFocused === true);
   const savedCount = store.saved.length;
   const showShared = route.name === 'saved' && shared && shared.some((id) => !store.saved.includes(id));
   const awaitingClient = route.name === 'saved' && !mounted;
@@ -414,11 +437,36 @@ export default function ListApp({ route, buildToday }: Props) {
               <optgroup label="Countries">{where.countries.map((o) => <option value={o.value}>{o.label}</option>)}</optgroup>
             </select>
           </div>
+          {styles.length > 0 && (
+            <div class="fieldset">
+              <label for="style" class="label">Style</label>
+              <select id="style" class="input" value={f.style} onChange={(e) => patch({ style: e.currentTarget.value })}>
+                <option value="">Any style</option>
+                {styles.map((o) => <option value={o.value}>{o.label} ({o.n})</option>)}
+              </select>
+            </div>
+          )}
+          {anyCuban && (
+            <label class="switch-row">
+              Cuban-focused only
+              <input type="checkbox" role="switch" checked={f.cuban} onChange={(e) => patch({ cuban: e.currentTarget.checked })} />
+            </label>
+          )}
           <label class="switch-row">
             Only saved festivals
             <input type="checkbox" role="switch" checked={f.savedOnly} onChange={(e) => patch({ savedOnly: e.currentTarget.checked })} />
           </label>
-          <Segmented name="sort" legend="Sort" value={f.sort === 'near' && !store.city ? 'date' : f.sort} options={store.city ? [['date', 'Date'], ['near', 'Nearest'], ['name', 'A–Z']] : [['date', 'Date'], ['name', 'Name A–Z']]} onChange={(s) => patch({ sort: s })} />
+          <div class="fieldset">
+            <label for="sort" class="label">Sort</label>
+            <select id="sort" class="input" value={(f.sort === 'near' && !store.city) || (f.sort === 'me' && !me) ? 'date' : f.sort} onChange={(e) => pickSort(e.currentTarget.value as Sort)} aria-describedby={locating ? 'sort-note' : undefined}>
+              <option value="date">Date</option>
+              <option value="length">Longest first</option>
+              <option value="me">Nearest to me (uses your location)</option>
+              {store.city && <option value="near">Fastest from {store.city.name}</option>}
+              <option value="name">Name A–Z</option>
+            </select>
+            {locating && <span id="sort-note" class="small-note" role="status">Finding your location…</span>}
+          </div>
         </div>
       </Sheet>
     </>

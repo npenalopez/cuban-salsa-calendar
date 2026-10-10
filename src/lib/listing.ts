@@ -1,11 +1,27 @@
-import { MONTHS, addDays, monthLabel, months12, pISO, plural, type MonthRef } from './dates';
+import { MONTHS, addDays, daysBetween, monthLabel, months12, pISO, plural, type MonthRef } from './dates';
 import { byDate, byName } from './festivals';
 import { norm } from './text';
+import { STYLES, isStyle, styleLabel } from './styles';
 import { bestTravel } from './travel';
-import type { City, Enriched } from './types';
+import type { City, Enriched, Style } from './types';
+
+export interface LatLng {
+  lat: number;
+  lng: number;
+}
+
+/** Great-circle distance in km. */
+export function km(a: LatLng, b: LatLng): number {
+  const r = (x: number) => (x * Math.PI) / 180;
+  const h = Math.sin(r(b.lat - a.lat) / 2) ** 2 + Math.cos(r(a.lat)) * Math.cos(r(b.lat)) * Math.sin(r(b.lng - a.lng) / 2) ** 2;
+  return 12742 * Math.asin(Math.sqrt(h));
+}
+
+const SORT_TITLES: Record<Exclude<Sort, 'date'>, string> = { name: 'A–Z', near: 'Nearest first', length: 'Longest first', me: 'Nearest to you' };
 
 export type When = 'any' | '30' | '90' | 'custom';
-export type Sort = 'date' | 'name' | 'near';
+/** near = fastest from the travel city; me = straight-line distance from the browser's location (never stored). */
+export type Sort = 'date' | 'name' | 'near' | 'length' | 'me';
 export type View = 'list' | 'map';
 
 /** List state that lives in the query string. */
@@ -17,11 +33,17 @@ export interface Filters {
   from: string;
   to: string;
   savedOnly: boolean;
+  /** A style key from styles.ts, or "" */
+  style: string;
+  /** Only festivals marked cubanFocused: true */
+  cuban: boolean;
   sort: Sort;
   view: View;
 }
 
-export const DEFAULT_FILTERS: Filters = { q: '', where: '', when: 'any', from: '', to: '', savedOnly: false, sort: 'date', view: 'list' };
+export const DEFAULT_FILTERS: Filters = { q: '', where: '', when: 'any', from: '', to: '', savedOnly: false, style: '', cuban: false, sort: 'date', view: 'list' };
+
+const SORTS: Sort[] = ['date', 'name', 'near', 'length', 'me'];
 
 export type PageRoute =
   | { name: 'month'; key: string | null }
@@ -37,7 +59,9 @@ export function parseFilters(search: string): Filters {
     from: p.get('from') || '',
     to: p.get('to') || '',
     savedOnly: p.get('saved') === '1',
-    sort: p.get('sort') === 'name' ? 'name' : p.get('sort') === 'near' ? 'near' : 'date',
+    style: isStyle(p.get('style') || '') ? p.get('style')! : '',
+    cuban: p.get('cuban') === '1',
+    sort: SORTS.includes(p.get('sort') as Sort) ? (p.get('sort') as Sort) : 'date',
     view: p.get('view') === 'map' ? 'map' : 'list',
   };
 }
@@ -51,13 +75,16 @@ export function filtersQuery(f: Filters, opts: { keepQuery?: boolean; keepView?:
   if (f.when === 'custom' && f.from) p.set('from', f.from);
   if (f.when === 'custom' && f.to) p.set('to', f.to);
   if (f.savedOnly) p.set('saved', '1');
+  if (f.style) p.set('style', f.style);
+  if (f.cuban) p.set('cuban', '1');
   if (f.sort !== 'date') p.set('sort', f.sort);
   if (opts.keepView !== false && f.view !== 'list') p.set('view', f.view);
   const s = p.toString();
   return s ? '?' + s : '';
 }
 
-export const filterCount = (f: Filters) => (f.where ? 1 : 0) + (f.savedOnly ? 1 : 0) + (f.when !== 'any' ? 1 : 0) + (f.sort !== 'date' ? 1 : 0);
+export const filterCount = (f: Filters) =>
+  (f.where ? 1 : 0) + (f.savedOnly ? 1 : 0) + (f.style ? 1 : 0) + (f.cuban ? 1 : 0) + (f.when !== 'any' ? 1 : 0) + (f.sort !== 'date' ? 1 : 0);
 
 export function matchWhere(f: Enriched, where: string): boolean {
   if (!where) return true;
@@ -69,7 +96,14 @@ export function matchWhere(f: Enriched, where: string): boolean {
 
 export function baseFilter(list: Enriched[], f: Filters, saved: string[], withQuery = true): Enriched[] {
   const q = withQuery ? norm(f.q) : '';
-  return list.filter((x) => matchWhere(x, f.where) && (!f.savedOnly || saved.includes(x.id)) && (!q || x.hay.includes(q)));
+  return list.filter(
+    (x) =>
+      matchWhere(x, f.where) &&
+      (!f.savedOnly || saved.includes(x.id)) &&
+      (!f.style || !!x.styles?.includes(f.style as Style)) &&
+      (!f.cuban || x.cubanFocused === true) &&
+      (!q || x.hay.includes(q)),
+  );
 }
 
 function range(f: Filters, today: Date): [Date, Date] | null {
@@ -79,12 +113,17 @@ function range(f: Filters, today: Date): [Date, Date] | null {
   return null;
 }
 
-/** Sort by date, name, or (with a travel city) fastest to reach first. */
-function sortBy(l: Enriched[], sort: Sort, city: City | null = null): Enriched[] {
+/** Sort by date, name, length (longest first), fastest from the travel city, or nearest to the visitor. */
+function sortBy(l: Enriched[], sort: Sort, city: City | null = null, me: LatLng | null = null): Enriched[] {
   if (sort === 'near' && city) {
     const t = new Map(l.map((x) => [x.id, bestTravel(city, x.coordinates)?.doorToDoor ?? Infinity]));
     return l.slice().sort((a, b) => t.get(a.id)! - t.get(b.id)! || byDate(a, b));
   }
+  if (sort === 'me' && me) {
+    const d = new Map(l.map((x) => [x.id, x.coordinates ? km(me, { lat: x.coordinates[0], lng: x.coordinates[1] }) : Infinity]));
+    return l.slice().sort((a, b) => d.get(a.id)! - d.get(b.id)! || byDate(a, b));
+  }
+  if (sort === 'length') return l.slice().sort((a, b) => daysBetween(b.s, b.e) - daysBetween(a.s, a.e) || byDate(a, b));
   return l.slice().sort(sort === 'name' ? byName : byDate);
 }
 
@@ -127,10 +166,12 @@ export interface ListView {
   arch: Enriched[];
 }
 
-export function computeView(all: Enriched[], today: Date, route: PageRoute, filters: Filters, saved: string[], shared: string[] | null, city: City | null = null): ListView {
-  // "Nearest first" needs a travel city; without one it falls back to date order.
-  const f: Filters = filters.sort === 'near' && !city ? { ...filters, sort: 'date' } : filters;
-  const sortList = (l: Enriched[], sort: Sort) => sortBy(l, sort, city);
+export function computeView(
+  all: Enriched[], today: Date, route: PageRoute, filters: Filters, saved: string[], shared: string[] | null, city: City | null = null, me: LatLng | null = null,
+): ListView {
+  // "Nearest first" needs a travel city, "Near me" the visitor's location; without them, date order.
+  const f: Filters = (filters.sort === 'near' && !city) || (filters.sort === 'me' && !me) ? { ...filters, sort: 'date' } : filters;
+  const sortList = (l: Enriched[], sort: Sort) => sortBy(l, sort, city, me);
   const up = all.filter((x) => !x.arch);
   const arch = all.filter((x) => x.arch);
   const q = f.q.trim();
@@ -140,7 +181,7 @@ export function computeView(all: Enriched[], today: Date, route: PageRoute, filt
   const fc = filterCount(f);
   const v: ListView = { mode: route.name === 'month' ? 'month' : route.name, kicker: '', title: '', note: '', sections: [], total: 0, emptyTitle: '', emptyText: '', m12, monthIdx: -1, monthKey: null, upF, up, arch };
   const byMonthOrAZ = (l: Enriched[], desc = false) =>
-    f.sort === 'name' ? [{ title: 'A–Z', head: true, items: l }] : f.sort === 'near' ? [{ title: 'Nearest first', head: true, items: l }] : groupByMonth(l, desc);
+    f.sort === 'date' ? groupByMonth(l, desc) : [{ title: SORT_TITLES[f.sort], head: true, items: l }];
 
   if (q && route.name !== 'saved') {
     v.mode = 'search';
@@ -230,8 +271,14 @@ export function filterSummary(f: Filters, up: Enriched[]): string {
     parts.push(k === 'region' ? val : up.find((x) => x.countryCode === val)?.country || val);
   }
   if (f.when !== 'any') parts.push({ '30': 'Next 30 days', '90': 'Next 3 months', custom: 'Your dates' }[f.when]);
+  if (f.style) parts.push(styleLabel(f.style));
+  if (f.cuban) parts.push('Cuban-focused');
   if (f.savedOnly) parts.push('Saved only');
-  if (f.sort === 'name') parts.push('A–Z');
-  if (f.sort === 'near') parts.push('Nearest first');
+  if (f.sort !== 'date') parts.push(SORT_TITLES[f.sort]);
   return 'Filtered: ' + parts.join(' · ');
+}
+
+/** Styles present in the list, with counts, in STYLES order. */
+export function styleOptions(up: Enriched[]) {
+  return STYLES.map((s) => ({ value: s.key, label: s.label, n: up.filter((f) => f.styles?.includes(s.key)).length })).filter((o) => o.n > 0);
 }

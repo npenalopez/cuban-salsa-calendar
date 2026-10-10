@@ -8,7 +8,7 @@ import { readFileSync } from 'node:fs';
 const CLIENT_FIELDS = [
   'id', 'series', 'name', 'status', 'startDate', 'endDate', 'datePrecision', 'dateNote',
   'city', 'country', 'countryCode', 'region', 'venue', 'coordinates',
-  'priceText', 'priceFrom', 'currency', 'ticketUrl', 'website', 'artists', 'featured',
+  'priceText', 'priceFrom', 'currency', 'ticketUrl', 'website', 'artists', 'featured', 'styles', 'cubanFocused',
 ];
 
 /** `virtual:festivals` = published festivals (exact days only, as `isListed`), stripped to CLIENT_FIELDS. */
