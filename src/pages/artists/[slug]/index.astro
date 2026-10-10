@@ -49,7 +49,7 @@ if (a.memberOf.length) ld.memberOf = a.memberOf.map((m) => ({ '@type': 'Performi
 <Base title={title} description={description} noindex={n === 0}>
   <script type="application/ld+json" slot="head" set:html={JSON.stringify(ld).replace(/</g, '\\u003c')} />
   <div class="topbar">
-    <a class="topbar__back" href={L('/artists/')}>{T('artist.back')}</a>
+    <a class="topbar__back" href={L('/artists/')} id="back-link" data-back={T('form.back')}>{T('artist.back')}</a>
   </div>
   <div class="page-head artist-head">
     {profile.photo
@@ -99,4 +99,27 @@ if (a.memberOf.length) ld.memberOf = a.memberOf.map((m) => ({ '@type': 'Performi
   )}
 
   <p class="small-note artist-note">{T('artist.note')}</p>
+
+  <script>
+    // Came here from another page of the site (usually a festival)? The back link returns there:
+    // "← La Klave Festival" for a festival, "← Back" otherwise. Opened directly, it stays "← All artists".
+    const a = document.getElementById('back-link') as HTMLAnchorElement | null;
+    try {
+      const ref = document.referrer ? new URL(document.referrer) : null;
+      if (a && ref && ref.origin === location.origin && ref.pathname !== location.pathname) {
+        let label = a.dataset.back ?? a.textContent ?? '';
+        const f = JSON.parse(sessionStorage.getItem('csc-last-festival') || 'null');
+        if (f && f.path === ref.pathname && f.name) label = `← ${f.name}`;
+        a.href = ref.pathname + ref.search;
+        a.textContent = label;
+        // Going back keeps the scroll position on the festival page.
+        a.addEventListener('click', (e) => {
+          if (history.length > 1) {
+            e.preventDefault();
+            history.back();
+          }
+        });
+      }
+    } catch {}
+  </script>
 </Base>

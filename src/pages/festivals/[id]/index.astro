@@ -189,6 +189,8 @@ const description = [
       const last = sessionStorage.getItem('csc-last-list');
       const a = document.getElementById('back-link') as HTMLAnchorElement | null;
       if (last && a && langOf(last) === lang) a.href = last;
+      // Artist pages opened from here offer "← <festival name>" as their way back.
+      sessionStorage.setItem('csc-last-festival', JSON.stringify({ path: location.pathname, name: document.querySelector('h1')?.textContent?.trim() ?? '' }));
     } catch {}
   </script>
 </Base>
