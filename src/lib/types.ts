@@ -30,6 +30,10 @@ export interface Festival {
   styles?: Style[];
   /** Optional: true = mainly Cuban, false = mixed festival with a Cuban strand, absent = not reviewed. */
   cubanFocused?: boolean;
+  /** Optional IATA code; drives the "Find flights" link. */
+  airport?: string;
+  /** Optional discount code from the organizer; currency null/absent = percent. */
+  discount?: { code: string; amount: number; currency?: string | null };
   // Only present server-side (stripped from the client bundle).
   instagram?: string | null;
   description?: string | null;

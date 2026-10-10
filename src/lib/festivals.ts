@@ -61,6 +61,13 @@ export function priceLabel(f: Pick<Festival, 'priceFrom' | 'priceText' | 'curren
   return p ? p[0].toUpperCase() + p.slice(1) : null;
 }
 
+/** "10% off" or "€15 off". */
+export function discountLabel(d: { amount: number; currency?: string | null }): string {
+  if (!d.currency) return `${d.amount}% off`;
+  const sym = CUR[d.currency];
+  return `${sym ? sym + d.amount : d.currency + ' ' + d.amount} off`;
+}
+
 export function place(f: Pick<Festival, 'city' | 'country'>): string {
   if (f.city && f.country) return `${f.city}, ${f.country}`;
   return f.city || f.country || 'Location to be announced';
@@ -77,8 +84,8 @@ export const ticketOf = (f: Enriched) => (f.ticketUrl && !f.arch && f.status ===
 /** Calendar actions only make sense with exact days. */
 export const canAddToCalendar = (f: Enriched) => f.datePrecision === 'day' && !f.arch && f.status !== 'postponed';
 
-export type BadgeKind = 'postponed' | 'cancelled' | 'sold-out' | 'sponsored';
-const BADGE_TEXT: Record<BadgeKind, string> = { postponed: 'Postponed', cancelled: 'Cancelled', 'sold-out': 'Sold out', sponsored: 'Sponsored' };
+export type BadgeKind = 'postponed' | 'cancelled' | 'sold-out' | 'sponsored' | 'discount';
+const BADGE_TEXT: Record<Exclude<BadgeKind, 'discount'>, string> = { postponed: 'Postponed', cancelled: 'Cancelled', 'sold-out': 'Sold out', sponsored: 'Sponsored' };
 
 export interface CardVM {
   id: string;
@@ -138,7 +145,8 @@ export function cardVM(f: Enriched, all: Enriched[], city: City | null, today?: 
     place: place(f),
     countryCode: f.countryCode,
     block: dateBlock(f, f.past),
-    badge: badge ? { kind: badge, text: BADGE_TEXT[badge] } : null,
+    // Status badges come first; a discount code shows only on festivals still on sale.
+    badge: badge ? { kind: badge, text: BADGE_TEXT[badge as Exclude<BadgeKind, 'discount'>] } : f.discount && !f.arch && f.status === 'scheduled' ? { kind: 'discount', text: `Code: ${discountLabel(f.discount)}` } : null,
     artists: showArtists ? a.slice(0, 3) : [],
     moreArtists: showArtists ? Math.max(0, a.length - 3) : 0,
     meta: parts.join(' · '),

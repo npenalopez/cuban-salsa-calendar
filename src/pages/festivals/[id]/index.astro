@@ -9,6 +9,9 @@ import { SITE, byDate, canAddToCalendar, festivalPath, fixPath, fmtPrice, nextEd
 import type { Enriched } from '../../../lib/types';
 import { countryPath, eventLd, festivalTitle, inName, regionPath } from '../../../lib/seo';
 import { STYLES, stylePath } from '../../../lib/styles';
+import { flightsUrl, stayUrl } from '../../../lib/affiliates';
+import { airportInfo } from '../../../lib/airports.server';
+import { discountLabel } from '../../../lib/festivals';
 
 export const getStaticPaths = (() => ALL.map((f) => ({ params: { id: f.id }, props: { f } }))) satisfies GetStaticPaths;
 
@@ -41,6 +44,12 @@ const others = f.series
 const more = f.mk && !f.arch ? UPCOMING.filter((x) => x.mk === f.mk && x.id !== f.id).sort(byDate).slice(0, 4) : [];
 
 const ld = eventLd(f);
+// Plan your trip: only for festivals that haven't started and have dates (not postponed or cancelled).
+const tripOn = f.s > TODAY && f.status !== 'postponed' && f.status !== 'cancelled';
+const flights = tripOn ? flightsUrl(f) : null;
+const stay = tripOn ? stayUrl(f) : null;
+const airport = airportInfo(f.airport, f.coordinates);
+const discount = !f.arch && f.discount ? discountLabel(f.discount) : null;
 const country = f.country ? UPCOMING.filter((x) => x.country === f.country && x.id !== f.id).sort(byDate).slice(0, 4) : [];
 
 const title = festivalTitle(f);
@@ -74,6 +83,7 @@ const description = [
 
       {ticket && (
         <div class="passes">
+          {discount && <p class="discount"><span class="badge badge--discount">{discount}</span> with code <strong class="discount__code">{f.discount!.code}</strong></p>}
           <a class="passes__btn" href={ticket} target="_blank" rel="sponsored noopener">Get passes{f.priceFrom != null ? ` · ${price}` : ''} ↗</a>
           <span class="passes__note">Passes are sold by the organizer.</span>
         </div>
@@ -94,6 +104,18 @@ const description = [
         <dt>Region</dt><dd><a href={regionPath(f.region)}>{f.region}</a></dd>
         {f.styles?.length ? <><dt>Styles</dt><dd>{STYLES.filter((x) => f.styles!.includes(x.key)).map((x, i) => <>{i > 0 && ', '}<a href={stylePath(x.key)}>{x.label}</a></>)}</dd></> : null}
       </dl>
+
+      {(flights || stay) && (
+        <section class="block trip" aria-labelledby="trip-h">
+          <h2 class="h2" id="trip-h">Plan your trip</h2>
+          {flights && airport && <p class="trip__airport">Nearest airport: {airport.name} ({airport.code}){airport.km != null ? ` · ${airport.km} km` : ''}</p>}
+          <div class="trip__links">
+            {flights && <a class="btn" href={flights} target="_blank" rel="sponsored noopener">Find flights ↗</a>}
+            {stay && <a class="btn" href={stay} target="_blank" rel="sponsored noopener">Find a place to stay ↗</a>}
+          </div>
+          <p class="small-note">Dates are set to the night before and the day after the festival. We may earn a commission at no extra cost to you. <a href="/privacy/">Privacy</a></p>
+        </section>
+      )}
 
       {others.length > 0 && (
         <div class="block">

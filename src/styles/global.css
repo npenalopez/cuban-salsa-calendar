@@ -571,6 +571,12 @@ dialog.sheet--drawer .sheet__panel { padding-top: env(safe-area-inset-top); }
 }
 .passes__btn:hover { background: var(--accent-hover); color: var(--on-rojo); }
 .passes__note { font-size: 13px; color: var(--ink3); text-align: center; }
+.discount { margin: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px; font-size: 15px; }
+.discount__code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.04em; user-select: all; }
+.badge--discount { background: var(--ink); color: var(--bg); }
+.trip { padding-top: 8px; }
+.trip__airport { margin: 0; font-size: 15px; color: var(--ink2); }
+.trip__links { display: flex; flex-wrap: wrap; gap: 8px; }
 .actions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px; }
 .no-links { margin: 0; font-size: 14px; line-height: 1.5; color: var(--ink3); }
 .facts {
@@ -610,6 +616,13 @@ dialog.sheet--drawer .sheet__panel { padding-top: env(safe-area-inset-top); }
 .more-row__text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .more-row__text strong { font-size: 15px; }
 .more-row__text span { font-size: 13px; color: var(--ink3); }
+
+/* ============ Text pages ============ */
+.prose { max-width: 680px; display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.6; color: var(--ink2); }
+.prose .h2 { margin-top: 16px; color: var(--ink); }
+.prose p, .prose ul { margin: 0; }
+.prose ul { padding-left: 20px; }
+.prose a { font-weight: 700; }
 
 /* ============ Artist pages ============ */
 .page-title--name { font-size: clamp(44px, 10vw, 80px); overflow-wrap: anywhere; }

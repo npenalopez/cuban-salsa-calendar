@@ -21,3 +21,29 @@ export const DRIVE_SCRIPT = `<script nowprocket data-noptimize="1" data-cfasync=
     document.head.appendChild(script);
   })();
 </script>`;
+
+const ymd = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const shift = (iso: string, days: number) => {
+  const [y, m, d] = iso.split('-').map(Number);
+  return ymd(new Date(y, m - 1, d + days));
+};
+
+/** Check in the day before the festival, check out the day after. */
+export const stayDates = (f: { startDate: string; endDate: string }) => ({ checkin: shift(f.startDate, -1), checkout: shift(f.endDate, 1) });
+
+/** Travelpayouts click link to a Kiwi.com search to the festival's airport. */
+export function flightsUrl(f: { id: string; startDate: string; endDate: string; airport?: string }): string | null {
+  if (!f.airport) return null;
+  const { checkin, checkout } = stayDates(f);
+  const t = config.travelpayouts;
+  const kiwi = `${t.flights.deepLinkBase}?to=${encodeURIComponent(f.airport)}&departure=${checkin}&return=${checkout}&lang=en`;
+  return `${t.flights.clickBase}?shmarker=${t.marker}.${encodeURIComponent(f.id)}&promo_id=${t.flights.promoId}&source_type=customlink&type=click&custom_url=${encodeURIComponent(kiwi)}`;
+}
+
+/** Stay22 search for places to stay around the venue. */
+export function stayUrl(f: { id: string; startDate: string; endDate: string; coordinates: [number, number] | null }): string | null {
+  if (!f.coordinates) return null;
+  const { checkin, checkout } = stayDates(f);
+  const s = config.stay22;
+  return `${s.base}?aid=${encodeURIComponent(s.aid)}&campaign=${encodeURIComponent(f.id)}&checkin=${checkin}&checkout=${checkout}&lat=${f.coordinates[0]}&lng=${f.coordinates[1]}`;
+}

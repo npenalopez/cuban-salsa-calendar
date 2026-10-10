@@ -185,6 +185,8 @@ export default function AdminApp() {
     const id = e.id || slug(e.name + '-' + (e.startDate || '').slice(0, 4));
     if (list.some((f) => f.id === id && f.id !== e._orig)) er.push(`Another festival already uses the id "${id}".`);
     if (id && !/^[a-z0-9-]+$/.test(id)) er.push('The id can only use a–z, 0–9 and hyphens.');
+    if (!blank(e.airport) && !/^[A-Za-z]{3}$/.test(String(e.airport).trim())) er.push('The airport must be a 3-letter IATA code, like BCN.');
+    if (e.discount && (e.discount.code?.trim() || e.discount.amount) && !(e.discount.code?.trim() && e.discount.amount > 0)) er.push('A discount needs both a code and an amount above 0.');
     (['ticketUrl', 'website', 'instagram'] as const).forEach((k) => {
       if (!blank(e[k]) && !/^https?:\/\/\S+\.\S+/.test(String(e[k]))) er.push(`${k} must be a full link starting with https://`);
     });
@@ -230,6 +232,8 @@ export default function AdminApp() {
       // Optional fields: written only when set, so unreviewed festivals stay without them.
       ...(e.styles?.length ? { styles: STYLES.map((x) => x.key).filter((k) => e.styles!.includes(k)) } : {}),
       ...(typeof e.cubanFocused === 'boolean' ? { cubanFocused: e.cubanFocused } : {}),
+      ...(clean(e.airport) ? { airport: String(e.airport).trim().toUpperCase() } : {}),
+      ...(e.discount?.code?.trim() && e.discount.amount > 0 ? { discount: { code: e.discount.code.trim(), amount: e.discount.amount, currency: e.discount.currency || null } } : {}),
     } as Festival;
     const isNew = e._orig == null;
     persist(isNew ? [...list, f] : list.map((x) => (x.id === e._orig ? f : x)));
@@ -500,6 +504,25 @@ function Editor(p: EditorProps) {
             {F('ticketUrl', 'Ticket link (Get passes)', { wide: true, type: 'url', ph: 'https://' })}
             {F('website', 'Website', { type: 'url', ph: 'https://' })}
             {F('instagram', 'Instagram profile', { type: 'url', ph: 'https://www.instagram.com/…' })}
+          </fieldset>
+          <fieldset class="ed-group">
+            <legend class="label">Trip and discount</legend>
+            {F('airport', 'Nearest airport (IATA)', { mono: true, ph: 'BCN', hint: 'Drives the Find flights link. Empty = no flights link.' })}
+            <label class="ed-field">
+              Discount code
+              <input class="input input--sm mono" value={e.discount?.code ?? ''} placeholder="SALSA10" onInput={(ev) => { const code = ev.currentTarget.value; p.setE('discount', code || e.discount?.amount ? { amount: e.discount?.amount ?? 0, currency: e.discount?.currency ?? null, code } : undefined); }} />
+            </label>
+            <label class="ed-field">
+              Discount amount
+              <input class="input input--sm" inputMode="decimal" value={e.discount?.amount ? String(e.discount.amount) : ''} placeholder="10" onInput={(ev) => p.setE('discount', { code: e.discount?.code ?? '', currency: e.discount?.currency ?? null, amount: +ev.currentTarget.value || 0 })} />
+            </label>
+            <label class="ed-field">
+              Discount in
+              <select class="input input--sm" value={e.discount?.currency ?? ''} onChange={(ev) => p.setE('discount', { code: e.discount?.code ?? '', amount: e.discount?.amount ?? 0, currency: ev.currentTarget.value || null })}>
+                <option value="">% (percent)</option>
+                {['EUR', 'GBP', 'USD', 'CHF'].map((c) => <option value={c}>{c}</option>)}
+              </select>
+            </label>
           </fieldset>
           <fieldset class="ed-group">
             <legend class="label">Text</legend>

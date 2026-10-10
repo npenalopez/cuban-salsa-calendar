@@ -1,6 +1,6 @@
 # Plan: closing the gaps with cubansalsafestivals.com
 
-Status 2026-10-10: Phases 0–3 are live. Phases 4–6 in progress.
+Status 2026-10-10: Phases 0–4 are live (airports waiting for review). Phases 5–6 in progress.
 
 ## What the site is today
 
@@ -69,7 +69,12 @@ Original plan:
 - **Links:** line-up names link to the artist pages instead of search. The Top artists sheet links there too.
 - **Page count:** roughly 420 artists. Whether artists with a single past festival are indexed is decided after the duplicate review.
 
-## Phase 4: Monetization
+## Phase 4: Monetization (live; airports waiting for review)
+
+Built: optional `airport` (IATA) and `discount` {code, amount, currency} in the schema, types and admin editor. "Plan your trip" on festival pages (nearest airport, Find flights via Travelpayouts/Kiwi, Find a place to stay via Stay22, built from config/affiliates.json, rel="sponsored noopener", one-line disclosure); hidden once a festival has started, and for postponed or cancelled ones; no airport = no flights link. Discount badge on cards and festival pages. /privacy/ page, linked in the footer. src/lib/affiliates.test.ts checks dates, encoding and parameters for three festivals. Airports: `node scripts/suggest-airports.mjs` wrote data/review/airports.md; `node scripts/apply-airports.mjs` writes them once approved. Airport data: scripts/data/airports.json from OurAirports (public domain).
+
+Original plan:
+
 
 - **Schema** (optional):
   - `airport` (IATA code). `scripts/suggest-airports.mjs` uses a small bundled list of major airports to write `data/review/airports.md`; nothing goes into the JSON until you confirm.
