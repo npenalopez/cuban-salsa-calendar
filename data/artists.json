@@ -18,7 +18,7 @@
     "Pedrito": "Pedrito Cuba",
     "Sheyla": "Sheyla Colombe Carbonell",
     "Manolo": "Carlos Manolo",
-    "Geisa": "Geysa",
+    "Geisa": "Geysa Martinez",
     "Jonar Gonzalez": "Jonar González",
     "Germano Carbotti (Yoruba Company)": "Germano Carbotti",
     "Yordanis Aguero Delgado": "Yordanis Agüero",
@@ -134,7 +134,41 @@
     "Juan y Mercedes": "Juan & Mercedes",
     "Alejandro y Rosy": "Alejandro & Rosy",
     "Emilio y Esther": "Emilio & Esther",
-    "Andy y Saray": "Andy & Saray"
+    "Andy y Saray": "Andy & Saray",
+    "DJ El Loco": "DJ Jaime El Loco",
+    "Melisa": "Melisa Sanchez",
+    "Diego": "Diego Glenny",
+    "DJ Timbanero": "DJ Timbalero",
+    "Juan Pablo": "Juan Pablo Paredes",
+    "Kristina": "Cristina",
+    "Capo": "DJ Capo",
+    "DJ Jimi Jacks": "Jimi Jacks",
+    "DJ York": "York",
+    "Timba Casino": "Pedro Timba Casino",
+    "Dansé": "Avanza Cuban Danse",
+    "Hector": "Hector Oviedo",
+    "Billy": "Billy Fajardo",
+    "Kevin": "Kevin Cano",
+    "Geysa": "Geysa Martinez",
+    "Marcos": "Marcos Hernandez",
+    "Roberto": "Roberto Moré",
+    "Sofia": "Sofia de Endaya",
+    "Oscar": "Oscar El Husseini",
+    "DJ Ivan": "DJ Ivan el Samurai",
+    "Ayoub": "Ayoub Mouslim",
+    "Mijael": "Mijael Bueno",
+    "Angel": "Angel Santos",
+    "Aché": "Cía. Aché",
+    "Sergi": "Sergi Márquez",
+    "Andreas": "Andreas Salsa Rebel",
+    "Javier": "Javier Franco Leonard",
+    "DJ Fred": "DJ Fred el Rojo",
+    "Chiquito & Dominican Power": "Chiquito y su Dominican Power",
+    "Nicolo Laricchia y su Bata Klan": "Nicolò Laricchia y su Batá Klan",
+    "Kelly & John": "John & Kelly",
+    "Gaby & Estefy": "Gabi & Estefy",
+    "Pablito y Su Mezcla Latina": "Pablito Stellato y su Mezcla Latina",
+    "DJ Fabrizio": "DJ Fabrizio Zoro"
   },
   "acts": {
     "Danger & Marielkis": [
@@ -158,8 +192,8 @@
       "Carlos Manolo"
     ],
     "Kevin & Geysa": [
-      "Kevin",
-      "Geysa"
+      "Kevin Cano",
+      "Geysa Martinez"
     ],
     "Wilmer & María": [
       "Wilmer Najarro",
@@ -195,6 +229,46 @@
     "Seo & Eneris": [
       "Seo Fernández",
       "Eneris Mulgado"
+    ],
+    "Adonis & Royma": [
+      "Adonis Santiago",
+      "Royma Roman"
+    ],
+    "Jorge & Indira": [
+      "Jorge Luis Fernández",
+      "Indira Mora Cueto"
+    ],
+    "Seo & Jenny Fernández": [
+      "Seo Fernández",
+      "Jenny Fernández"
+    ],
+    "Alain & Katerina": [
+      "Alain Rueda",
+      "Katerina Mik"
+    ],
+    "Gastón & Yarisbel": [
+      "Gastón Carvallo",
+      "Yarisbel Kondeff"
+    ],
+    "Helen & Yago": [
+      "Helen Haukamp",
+      "Yago Caudet"
+    ],
+    "Julia & Laine": [
+      "Julia Montecinos",
+      "Laine Quesada"
+    ],
+    "Angelo Gioffré Dance Company": [
+      "Angelo Gioffrè"
+    ],
+    "Johnny Vazquez y su Imperio Azteka": [
+      "Johnny Vazquez"
+    ],
+    "Chiquito y su Dominican Power": [
+      "Chiquito"
+    ],
+    "Nicolò Laricchia y su Batá Klan": [
+      "Nicolo Laricchia"
     ]
   },
   "people": [

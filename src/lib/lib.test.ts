@@ -71,7 +71,7 @@ describe('artists', () => {
   it('line-ups are deduplicated after resolving', () =>
     expect(canonicalLineup(['Yusimi Moya', 'Yusimi Moya Rodríguez', 'Osbanis y Anneta'])).toEqual(['Osbanis & Anneta', 'Yusimi Moya Rodríguez']));
   it('couples credit each member once', () =>
-    expect(peopleOf(['Osbanis & Anneta', 'Osbanis Tejeda', 'Jorge & Indira'])).toEqual(['Osbanis Tejeda', 'Anneta Kepka', 'Jorge & Indira']));
+    expect(peopleOf(['Osbanis & Anneta', 'Osbanis Tejeda', 'Jorge & Indira'])).toEqual(['Osbanis Tejeda', 'Anneta Kepka', 'Jorge Luis Fernández', 'Indira Mora Cueto']));
 });
 
 describe('months12', () => {
@@ -371,5 +371,15 @@ describe('i18n', () => {
     expect(priceLabel(f, 'es')).toBe('Desde €130');
     expect(localPriceText('€60 to €195', 'fr')).toBe('€60 – €195');
     expect(festivalTitle(f, 'fr')).toBe('X Fest 2026 : festival de salsa cubaine à Kraków, Pologne');
+  });
+});
+
+describe('couples count for each partner', () => {
+  it('registry couples, full-name couples, and first-name couples without members', () => {
+    expect(peopleOf(['Adonis & Royma'])).toEqual(['Adonis Santiago', 'Royma Roman']);
+    expect(peopleOf(['Ernesto Bulnes & Denisse Cambria'])).toEqual(['Ernesto Bulnes', 'Denisse Cambria']);
+    expect(peopleOf(['Some & Couple'])).toEqual(['Some & Couple']);
+    expect(peopleOf(['Elito Revé y su Charangón'])).toEqual(['Elito Revé y su Charangón']);
+    expect(peopleOf(['Adonis Santiago', 'Adonis & Royma'])).toEqual(['Adonis Santiago', 'Royma Roman']);
   });
 });

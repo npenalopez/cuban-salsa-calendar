@@ -25,10 +25,21 @@ export function canonicalLineup(names: string[]): string[] {
   return [...out.values()].sort((a, b) => a.localeCompare(b));
 }
 
-/** The individual people behind a line-up: acts with known members become their members. Deduplicated. */
+/**
+ * The two people of a couple written with full names ("Ernesto Bulnes & Denisse Cambria"), or null.
+ * First-name couples ("Andy & Yuliet") need their members in the registry: a first name alone could be anyone.
+ */
+export function fullNameCouple(name: string): [string, string] | null {
+  const parts = name.split(' & ');
+  if (parts.length !== 2 || /\b(y su|company|crew|klan|power|team)\b/i.test(name)) return null;
+  const [a, b] = parts.map((p) => p.trim());
+  return /\s/.test(a) && /\s/.test(b) ? [canonicalArtist(a), canonicalArtist(b)] : null;
+}
+
+/** The individual people behind a line-up: couples and groups with known members become their members. Deduplicated. */
 export function peopleOf(lineup: string[]): string[] {
   const out = new Map<string, string>();
-  for (const a of lineup) for (const p of acts[a] ?? [a]) if (!out.has(key(p))) out.set(key(p), p);
+  for (const a of lineup) for (const p of acts[a] ?? fullNameCouple(a) ?? [a]) if (!out.has(key(p))) out.set(key(p), p);
   return [...out.values()];
 }
 
@@ -47,8 +58,13 @@ export function artistKind(name: string): ArtistKind {
 }
 
 /** Acts (couples, groups) that a person belongs to, from the registry. */
-export const actsOf = (person: string) => Object.entries(acts).filter(([, m]) => m.some((x) => key(x) === key(person))).map(([a]) => a);
-export const membersOf = (act: string) => acts[act] ?? [];
+export const actsOf = (person: string, lineupNames: string[] = []) => [
+  ...new Set([
+    ...Object.entries(acts).filter(([, m]) => m.some((x) => key(x) === key(person))).map(([a]) => a),
+    ...lineupNames.filter((n) => fullNameCouple(n)?.some((x) => key(x) === key(person))),
+  ]),
+];
+export const membersOf = (act: string) => acts[act] ?? fullNameCouple(act) ?? [];
 
 const known = new Set([...Object.keys(aliases), ...Object.values(aliases), ...Object.keys(acts), ...Object.values(acts).flat(), ...((registry as { people?: string[] }).people ?? [])].map(key));
 

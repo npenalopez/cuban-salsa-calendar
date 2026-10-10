@@ -30,12 +30,13 @@ export function artistPages(all: Enriched[]): ArtistPage[] {
   for (const f of all) for (const a of f.artists) add(a);
   for (const f of all) for (const p of f.people) add(p);
 
+  const allNames = [...new Set(all.flatMap((f) => f.artists))];
   const paged = pagedArtistSlugs(all.map((f) => [...f.artists, ...f.people]));
   const pages: ArtistPage[] = [];
   for (const [slug, m] of spellings) {
     if (!paged.has(slug)) continue;
     const name = [...m].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))[0][0];
-    const memberOf = actsOf(name);
+    const memberOf = actsOf(name, allNames);
     const hits: { f: Enriched; via: string | null }[] = [];
     for (const f of all) {
       if (f.artists.some((a) => slugify(a) === slug)) hits.push({ f, via: null });
