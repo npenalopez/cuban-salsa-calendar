@@ -1,6 +1,6 @@
 # Plan: closing the gaps with cubansalsafestivals.com
 
-Status 2026-10-10: Phases 0–4 are live (airports waiting for review). Phases 5–6 in progress.
+Status 2026-10-10: Phases 0–5 are live (airports waiting for review). Phase 6 in progress.
 
 ## What the site is today
 
@@ -91,7 +91,10 @@ Original plan:
 - **Tests:** a unit test that builds the links for 3 sample festivals and checks dates (including month and year boundaries), encoding and parameters.
 - **CSP:** plain links need no change.
 
-## Phase 5: Imagery and links
+## Phase 5: Imagery and links (live)
+
+Built: optional `facebook` field (schema, admin, festival page button, JSON-LD organizer sameAs). Filled for 47 festivals from the Facebook link on their own website; event pages, groups, personal profiles and web designers' pages were skipped.
+
 
 - **No newsletter and no posters** (owner's decision).
 - **Facebook:** optional `facebook` link next to Instagram.

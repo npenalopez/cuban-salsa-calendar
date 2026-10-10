@@ -179,7 +179,8 @@ export function eventLd(f: Enriched): Record<string, unknown> {
   }
   if (f.description) ld.description = f.description;
   if (f.artists.length) ld.performer = f.artists.map((name) => ({ '@type': isGroup(name) ? 'PerformingGroup' : 'Person', name }));
-  if (f.website) ld.organizer = { '@type': 'Organization', name: f.name, url: f.website };
+  const sameAs = [f.instagram, f.facebook].filter((u): u is string => !!u && !/\/p\//.test(u));
+  if (f.website || sameAs.length) ld.organizer = { '@type': 'Organization', name: f.name, url: f.website ?? undefined, sameAs: sameAs.length ? sameAs : undefined };
   if (!f.arch && (ticket || f.priceFrom != null)) {
     ld.offers = {
       '@type': 'Offer',

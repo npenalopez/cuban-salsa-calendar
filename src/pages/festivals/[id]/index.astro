@@ -92,9 +92,10 @@ const description = [
       <div class="actions-grid">
         {canAddToCalendar(f) && <AddToCalendar client:afterload id={f.id} />}
         {ig && <a class="btn" href={ig} target="_blank" rel="noopener">{/\/p\//.test(ig) ? 'Instagram post' : 'Instagram'} ↗</a>}
+        {f.facebook && <a class="btn" href={f.facebook} target="_blank" rel="noopener">Facebook ↗</a>}
         {f.website && <a class="btn btn--ghost" href={f.website} target="_blank" rel="noopener">Festival website ↗</a>}
       </div>
-      {!ig && !f.website && (
+      {!ig && !f.website && !f.facebook && (
         <p class="no-links">We don't have a website or Instagram for this festival yet. <a href={fixPath(f.id)}>Know it? Tell us.</a></p>
       )}
 

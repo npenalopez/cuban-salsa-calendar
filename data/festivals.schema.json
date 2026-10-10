@@ -35,6 +35,7 @@
         "ticketUrl": { "$ref": "#/$defs/url", "description": "Drives the 'Get passes' button. May be an affiliate link." },
         "website": { "$ref": "#/$defs/url" },
         "instagram": { "$ref": "#/$defs/url", "description": "Full profile URL. Never guess one." },
+        "facebook": { "$ref": "#/$defs/url", "description": "Optional. The festival's or organizer's Facebook page, as linked from their own website. Not event pages." },
         "artists": { "type": "array", "items": { "type": "string" } },
         "styles": {
           "type": "array",

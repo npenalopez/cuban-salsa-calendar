@@ -36,6 +36,7 @@ export interface Festival {
   discount?: { code: string; amount: number; currency?: string | null };
   // Only present server-side (stripped from the client bundle).
   instagram?: string | null;
+  facebook?: string | null;
   description?: string | null;
   lastVerified?: string | null;
   /** Private. Never render. */

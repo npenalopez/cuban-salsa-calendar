@@ -6,7 +6,7 @@ import type { Festival, FestivalsFile, Style } from '../lib/types';
 
 const KEY = 'csc-admin-draft';
 /** Field order in the exported file. */
-const ORDER = ['id', 'series', 'name', 'status', 'startDate', 'endDate', 'datePrecision', 'dateNote', 'city', 'country', 'countryCode', 'region', 'venue', 'coordinates', 'priceText', 'priceFrom', 'currency', 'ticketUrl', 'website', 'instagram', 'artists', 'description', 'lastVerified', 'featured', 'notes'] as const;
+const ORDER = ['id', 'series', 'name', 'status', 'startDate', 'endDate', 'datePrecision', 'dateNote', 'city', 'country', 'countryCode', 'region', 'venue', 'coordinates', 'priceText', 'priceFrom', 'currency', 'ticketUrl', 'website', 'instagram', 'facebook', 'artists', 'description', 'lastVerified', 'featured', 'notes'] as const;
 const REGIONS = ['Europe', 'North America', 'South America', 'Africa', 'Asia', 'Oceania'];
 
 const blank = (v: unknown) => v == null || String(v).trim() === '' || (Array.isArray(v) && !v.length);
@@ -44,7 +44,7 @@ type Edit = Omit<Festival, 'coordinates'> & { lat: string; lng: string; _orig: s
 const empty = (): Edit => ({
   id: '', series: '', name: '', status: 'scheduled', startDate: '', endDate: '', datePrecision: 'day', dateNote: null,
   city: '', country: '', countryCode: '', region: 'Europe', venue: null, priceText: null, priceFrom: null, currency: null,
-  ticketUrl: null, website: null, instagram: null, artists: [], description: null, lastVerified: null, featured: false, notes: null,
+  ticketUrl: null, website: null, instagram: null, facebook: null, artists: [], description: null, lastVerified: null, featured: false, notes: null,
   lat: '', lng: '', _orig: null,
 });
 
@@ -187,7 +187,7 @@ export default function AdminApp() {
     if (id && !/^[a-z0-9-]+$/.test(id)) er.push('The id can only use a–z, 0–9 and hyphens.');
     if (!blank(e.airport) && !/^[A-Za-z]{3}$/.test(String(e.airport).trim())) er.push('The airport must be a 3-letter IATA code, like BCN.');
     if (e.discount && (e.discount.code?.trim() || e.discount.amount) && !(e.discount.code?.trim() && e.discount.amount > 0)) er.push('A discount needs both a code and an amount above 0.');
-    (['ticketUrl', 'website', 'instagram'] as const).forEach((k) => {
+    (['ticketUrl', 'website', 'instagram', 'facebook'] as const).forEach((k) => {
       if (!blank(e[k]) && !/^https?:\/\/\S+\.\S+/.test(String(e[k]))) er.push(`${k} must be a full link starting with https://`);
     });
     if ((e.lat && isNaN(+e.lat)) || (e.lng && isNaN(+e.lng))) er.push('Coordinates must be numbers.');
@@ -224,6 +224,7 @@ export default function AdminApp() {
       ticketUrl: clean(e.ticketUrl),
       website: clean(e.website),
       instagram: clean(e.instagram),
+      facebook: clean(e.facebook),
       description: clean(e.description),
       notes: clean(e.notes),
       lastVerified: clean(e.lastVerified),
@@ -504,6 +505,7 @@ function Editor(p: EditorProps) {
             {F('ticketUrl', 'Ticket link (Get passes)', { wide: true, type: 'url', ph: 'https://' })}
             {F('website', 'Website', { type: 'url', ph: 'https://' })}
             {F('instagram', 'Instagram profile', { type: 'url', ph: 'https://www.instagram.com/…' })}
+            {F('facebook', 'Facebook page', { type: 'url', ph: 'https://www.facebook.com/…' })}
           </fieldset>
           <fieldset class="ed-group">
             <legend class="label">Trip and discount</legend>
