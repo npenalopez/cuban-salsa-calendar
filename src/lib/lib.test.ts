@@ -6,6 +6,7 @@ import { computeView, DEFAULT_FILTERS, filtersQuery, parseFilters } from './list
 import { didYouMean, suggestions } from './search';
 import { canonicalArtist, canonicalLineup, peopleOf } from './artists';
 import { bestTravel, fmtHours, travelOptions } from './travel';
+import { countryPath, eventLd, festivalTitle, inName, landingIntro, landings, regionPath, relatedFor, slugify } from './seo';
 import type { Festival } from './types';
 
 const base: Festival = {
@@ -229,5 +230,47 @@ describe('ics', () => {
     const u = calUrls(f);
     expect(u.google).toContain('dates=20261009/20261013');
     expect(u.outlook).toContain('startdt=2026-10-09&enddt=2026-10-13');
+  });
+});
+
+describe('seo', () => {
+  it('slugs, paths and "the" for country names', () => {
+    expect(slugify('Côte d’Ivoire & Co')).toBe('cote-d-ivoire-and-co');
+    expect(countryPath('United Kingdom')).toBe('/country/united-kingdom/');
+    expect(regionPath('North America')).toBe('/region/north-america/');
+    expect(inName('Czech Republic')).toBe('the Czech Republic');
+    expect(inName('Germany')).toBe('Germany');
+  });
+
+  it('festival titles lead with name and year, without repeating the year', () => {
+    const [a, b] = enrich([mk({}), mk({ id: 'y-2026', name: 'Ruedamania 2026' })], TODAY);
+    expect(festivalTitle(a)).toBe('X Fest 2026: Cuban Salsa Festival in Kraków, Poland');
+    expect(festivalTitle(b)).toBe('Ruedamania 2026: Cuban Salsa Festival in Kraków, Poland');
+  });
+
+  it('builds country, region and year pages with upcoming and past split', () => {
+    const all = enrich([mk({}), mk({ id: 'old', startDate: '2026-03-01', endDate: '2026-03-02' }), mk({ id: 'de', country: 'Germany', countryCode: 'DE', city: 'Berlin', startDate: '2027-01-08', endDate: '2027-01-10' })], TODAY);
+    const ls = landings(all);
+    const pl = ls.find((l) => l.path === '/country/poland/')!;
+    expect(pl.upcoming.map((f) => f.id)).toEqual(['x-2026']);
+    expect(pl.past.map((f) => f.id)).toEqual(['old']);
+    expect(ls.find((l) => l.path === '/region/europe/')!.upcoming).toHaveLength(2);
+    expect(ls.filter((l) => l.kind === 'year').map((l) => l.path)).toEqual(['/2026/', '/2027/']);
+    expect(landingIntro(pl)).toBe('One Cuban salsa festival is coming up in Poland, in Kraków.');
+    expect(relatedFor(pl, ls)[0].links.map((x) => x.href)).toEqual(['/country/germany/']);
+  });
+
+  it('Event JSON-LD: every performer, offers only while upcoming, postponed status', () => {
+    const [f, past, pp] = enrich([
+      mk({ artists: ['Ana', 'Leo & Mia', 'Orquesta Z'], ticketUrl: 'https://t.example', priceFrom: 99, currency: 'EUR' }),
+      mk({ id: 'p', startDate: '2026-03-01', endDate: '2026-03-02', ticketUrl: 'https://t.example', priceFrom: 99, currency: 'EUR' }),
+      mk({ id: 'pp', status: 'postponed' }),
+    ], TODAY);
+    const ld = eventLd(f) as any;
+    expect(ld.performer.map((p: any) => p['@type'])).toEqual(['Person', 'PerformingGroup', 'PerformingGroup']);
+    expect(ld.offers).toMatchObject({ url: 'https://t.example', price: 99, priceCurrency: 'EUR', availability: 'https://schema.org/InStock' });
+    expect(ld.startDate).toBe('2026-10-09');
+    expect((eventLd(past) as any).offers).toBeUndefined();
+    expect((eventLd(pp) as any).eventStatus).toBe('https://schema.org/EventPostponed');
   });
 });

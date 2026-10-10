@@ -144,6 +144,10 @@ html:has(.search) { scroll-padding-top: calc(var(--header-h) + 88px); }
 .footer__links { display: flex; flex-direction: column; gap: 2px; }
 .footer__links a { min-height: 44px; display: inline-flex; align-items: center; }
 .footer__links a:first-child { font-weight: 700; }
+.footer__countries { flex-basis: 100%; display: flex; flex-direction: column; gap: 6px; }
+.footer__countries ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0 14px; }
+.footer__countries li { min-height: 44px; display: inline-flex; align-items: center; gap: 5px; }
+.footer__countries li span { color: var(--ink3); font-size: 13px; }
 .footer__copy { flex-basis: 100%; color: var(--ink3); }
 
 /* ============ Controls ============ */
@@ -605,6 +609,19 @@ dialog.sheet--drawer .sheet__panel { padding-top: env(safe-area-inset-top); }
 .more-row__text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .more-row__text strong { font-size: 15px; }
 .more-row__text span { font-size: 13px; color: var(--ink3); }
+
+/* ============ Landing pages (country, region, year) ============ */
+.land-group { display: flex; flex-direction: column; padding-top: 18px; }
+.land-group__head { margin: 0 0 6px; }
+.land-row { grid-template-columns: 72px minmax(0, 1fr); min-height: 64px; }
+.more-row__text .land-row__lineup { color: var(--ink2); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.land-filter { align-self: flex-start; margin-top: 20px; }
+.land-past { margin-top: 28px; padding-top: 8px; border-top: 1px solid var(--line); }
+.land-past summary { min-height: 44px; display: flex; align-items: center; cursor: pointer; }
+.land-related { margin-top: 28px; display: flex; flex-direction: column; gap: 8px; }
+.land-related ul { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 4px 16px; }
+.land-related li { min-height: 44px; display: inline-flex; align-items: center; gap: 6px; font-size: 15px; }
+.land-related a { font-weight: 700; }
 
 .not-found { padding: 48px 0; display: flex; flex-direction: column; gap: 12px; }
 .not-found h1 { font: 800 48px/0.9 var(--display); font-stretch: 70%; text-transform: uppercase; }

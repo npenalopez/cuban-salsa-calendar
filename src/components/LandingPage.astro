@@ -1,0 +1,78 @@
+---
+// Country, region and year pages: plain HTML, no islands. Rows lead with our edge, line-ups and prices.
+import Base from '../layouts/Base.astro';
+import { MONTHS, dayRange } from '../lib/dates';
+import { festivalPath, fmtPrice, place } from '../lib/festivals';
+import { type Landing, type Related, landingDescription, landingH1, landingIntro, landingTitle } from '../lib/seo';
+import type { Enriched } from '../lib/types';
+
+interface Props {
+  l: Landing;
+  /** Links to related landing pages, e.g. the countries of a region. */
+  related: Related[];
+}
+const { l, related } = Astro.props;
+
+const kicker = l.kind === 'country' ? `Cuban salsa festivals · ${l.upcoming[0]?.region ?? l.past[0]?.region ?? ''}` : l.kind === 'region' ? 'Cuban salsa festivals by region' : 'Cuban salsa festivals by year';
+const filter = l.kind === 'country' ? `/upcoming/?where=country:${(l.upcoming[0] ?? l.past[0]).countryCode}` : l.kind === 'region' ? `/upcoming/?where=region:${encodeURIComponent(l.label)}` : null;
+
+const monthGroups = (list: Enriched[]) => {
+  const g = new Map<string, Enriched[]>();
+  for (const f of list) {
+    const k = `${MONTHS[f.s.getMonth()]} ${f.s.getFullYear()}`;
+    g.set(k, [...(g.get(k) ?? []), f]);
+  }
+  return [...g];
+};
+const lineup = (f: Enriched) => (f.artists.length ? f.artists.slice(0, 3).join(', ') + (f.artists.length > 3 ? ` +${f.artists.length - 3}` : '') : '');
+const sub = (f: Enriched) => [l.kind === 'country' ? f.city || place(f) : place(f), fmtPrice(f), f.status === 'postponed' ? 'Postponed' : f.status === 'cancelled' ? 'Cancelled' : f.status === 'sold-out' ? 'Sold out' : ''].filter(Boolean).join(' · ');
+---
+<Base title={landingTitle(l)} description={landingDescription(l)}>
+  <div class="topbar">
+    <a class="topbar__back" href="/">← All festivals</a>
+  </div>
+  <div class="page-head">
+    <span class="kicker">{kicker}</span>
+    <h1 class="page-title">{landingH1(l)}</h1>
+    <p class="page-note">{landingIntro(l)}</p>
+  </div>
+
+  {monthGroups(l.upcoming).map(([month, list]) => (
+    <section class="land-group" aria-label={month}>
+      <h2 class="h2 land-group__head">{month}<span class="h2__count">{list.length}</span></h2>
+      {list.map((f) => (
+        <a class="more-row land-row" href={festivalPath(f.id)}>
+          <span class="more-row__when">{dayRange(f)}</span>
+          <span class="more-row__text">
+            <strong>{f.name}</strong>
+            <span>{sub(f)}</span>
+            {lineup(f) && <span class="land-row__lineup">{lineup(f)}</span>}
+          </span>
+        </a>
+      ))}
+    </section>
+  ))}
+
+  {filter && l.upcoming.length > 0 && <a class="btn land-filter" href={filter}>Filter and map these festivals</a>}
+
+  {l.past.length > 0 && (
+    <details class="land-past" open={l.upcoming.length === 0}>
+      <summary class="h2">Past festivals<span class="h2__count">{l.past.length}</span></summary>
+      {l.past.map((f) => (
+        <a class="more-row land-row" href={festivalPath(f.id)}>
+          <span class="more-row__when">{dayRange(f)}</span>
+          <span class="more-row__text"><strong>{f.name}</strong><span>{MONTHS[f.s.getMonth()]} {f.s.getFullYear()} · {sub(f)}</span></span>
+        </a>
+      ))}
+    </details>
+  )}
+
+  {related.map((r) => r.links.length > 0 && (
+    <nav class="land-related" aria-label={r.title}>
+      <h2 class="h2">{r.title}</h2>
+      <ul>
+        {r.links.map((x) => <li><a href={x.href}>{x.label}</a>{x.n > 0 && <span class="meta">{x.n}</span>}</li>)}
+      </ul>
+    </nav>
+  ))}
+</Base>

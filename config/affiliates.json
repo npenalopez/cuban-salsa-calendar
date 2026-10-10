@@ -1,0 +1,18 @@
+{
+  "$comment": "Affiliate settings. These IDs are public (they appear in every link), not secrets. Read by src/lib/affiliates.ts.",
+  "driveScriptEnabled": true,
+  "travelpayouts": {
+    "marker": "583798",
+    "driveScriptSrc": "https://emrldtp.com/NTgzNzk4.js?t=583798",
+    "flights": {
+      "program": "Kiwi.com",
+      "promoId": "3791",
+      "clickBase": "https://c111.travelpayouts.com/click",
+      "deepLinkBase": "https://www.kiwi.com/deep"
+    }
+  },
+  "stay22": {
+    "aid": "cubansalsacalendar",
+    "base": "https://www.stay22.com/allez/roam"
+  }
+}

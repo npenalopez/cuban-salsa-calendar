@@ -26,6 +26,9 @@ jobs:
         run: npm test
       - name: Build (validates data/festivals.json first)
         run: npm run build
+        # The Travelpayouts script only answers on the real domain; on localhost it logs a CORS error.
+        env:
+          DRIVE_SCRIPT: 'off'
 
       - name: Start the Worker locally (static assets, headers, /api, /admin gate)
         run: |

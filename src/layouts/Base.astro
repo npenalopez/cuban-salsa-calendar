@@ -4,7 +4,9 @@ import '../styles/global.css';
 import HeaderActions from '../components/HeaderActions';
 import GlobalSheets from '../components/GlobalSheets';
 import { INSTAGRAM, SITE } from '../lib/festivals';
-import { TODAY, stats } from '../lib/data.server';
+import { TODAY, UPCOMING, stats } from '../lib/data.server';
+import { countryPath } from '../lib/seo';
+import { DRIVE_ENABLED, DRIVE_SCRIPT } from '../lib/affiliates';
 
 interface Props {
   title: string;
@@ -31,6 +33,9 @@ const {
 const canonicalUrl = new URL(canonical, SITE).href;
 const ogUrl = new URL(ogImage, SITE).href;
 const s = stats();
+// Footer "Browse by country": countries with upcoming festivals, busiest first.
+const byCountry = [...UPCOMING.reduce((m, f) => (f.country ? m.set(f.country, (m.get(f.country) ?? 0) + 1) : m), new Map<string, number>())]
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 ---
 <!doctype html>
 <html lang="en">
@@ -61,6 +66,7 @@ const s = stats();
         if (t === 'dark' || t === 'system') document.documentElement.dataset.theme = t;
       } catch (e) {}
     </script>
+    {DRIVE_ENABLED && <Fragment set:html={DRIVE_SCRIPT} />}
     <slot name="head" />
   </head>
   <body>
@@ -82,6 +88,10 @@ const s = stats();
           <a href={INSTAGRAM} target="_blank" rel="noopener">@cubansalsacalendar ↗</a>
           <a href="/submit/">Submit a festival</a>
         </div>
+        <nav class="footer__countries" aria-label="Browse by country">
+          <strong class="footer__name">Browse by country</strong>
+          <ul>{byCountry.map(([c, n]) => <li><a href={countryPath(c)}>{c}</a> <span>{n}</span></li>)}</ul>
+        </nav>
         <span class="footer__copy">© {TODAY.getFullYear()} Cuban Salsa Calendar · {s.upcoming} upcoming festivals in {s.countries} countries</span>
       </footer>
     </main>

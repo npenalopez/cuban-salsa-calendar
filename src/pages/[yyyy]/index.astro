@@ -1,0 +1,14 @@
+---
+import type { GetStaticPaths } from 'astro';
+import LandingPage from '../../components/LandingPage.astro';
+import { ALL } from '../../lib/data.server';
+import { type Landing, landings, relatedFor } from '../../lib/seo';
+
+export const getStaticPaths = (() => {
+  const all = landings(ALL);
+  return all.filter((l) => l.kind === 'year').map((l) => ({ params: { yyyy: l.label }, props: { l, related: relatedFor(l, all) } }));
+}) satisfies GetStaticPaths;
+
+const { l, related } = Astro.props as { l: Landing; related: ReturnType<typeof relatedFor> };
+---
+<LandingPage l={l} related={related} />

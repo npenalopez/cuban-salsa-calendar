@@ -2,10 +2,11 @@
 import type { GetStaticPaths } from 'astro';
 import Base from '../../../layouts/Base.astro';
 import { AddToCalendar, FestivalMap, Lineup, TopActions, TravelLine } from '../../../components/FestivalIslands';
-import { MONTHS, countdownLong, dateLong, dateShort, dayRange, daysBetween, monthLabel, monthPath, plural } from '../../../lib/dates';
+import { MONTHS, countdownLong, dateLong, dayRange, daysBetween, monthLabel, monthPath, plural } from '../../../lib/dates';
 import { ALL, TODAY, UPCOMING } from '../../../lib/data.server';
 import { SITE, byDate, canAddToCalendar, festivalPath, fixPath, fmtPrice, nextEdition, place, priceLabel, ticketOf } from '../../../lib/festivals';
 import type { Enriched } from '../../../lib/types';
+import { countryPath, eventLd, festivalTitle, inName, regionPath } from '../../../lib/seo';
 
 export const getStaticPaths = (() => ALL.map((f) => ({ params: { id: f.id }, props: { f } }))) satisfies GetStaticPaths;
 
@@ -37,31 +38,10 @@ const others = f.series
   : [];
 const more = f.mk && !f.arch ? UPCOMING.filter((x) => x.mk === f.mk && x.id !== f.id).sort(byDate).slice(0, 4) : [];
 
-// Event JSON-LD. Never include `notes`. No dates unless they are exact.
-const ld: Record<string, unknown> = {
-  '@context': 'https://schema.org',
-  '@type': 'Event',
-  name: f.name,
-  url,
-  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-  eventStatus: 'https://schema.org/' + (f.status === 'postponed' ? 'EventPostponed' : f.status === 'cancelled' ? 'EventCancelled' : 'EventScheduled'),
-  location: {
-    '@type': 'Place',
-    name: f.venue || f.city || place(f),
-    address: { '@type': 'PostalAddress', addressLocality: f.city ?? undefined, addressCountry: f.countryCode ?? undefined },
-    geo: f.coordinates ? { '@type': 'GeoCoordinates', latitude: f.coordinates[0], longitude: f.coordinates[1] } : undefined,
-  },
-  image: [SITE + `/og/${f.id}.png`],
-};
-if (f.datePrecision === 'day') {
-  ld.startDate = f.startDate;
-  ld.endDate = f.endDate;
-}
-if (a.length) ld.performer = a.slice(0, 10).map((name) => ({ '@type': 'Person', name }));
-if (f.description) ld.description = f.description;
-if (ticket) ld.offers = { '@type': 'Offer', url: ticket, price: f.priceFrom ?? undefined, priceCurrency: f.currency ?? undefined };
+const ld = eventLd(f);
+const country = f.country ? UPCOMING.filter((x) => x.country === f.country && x.id !== f.id).sort(byDate).slice(0, 4) : [];
 
-const title = `${f.name} · ${dateShort(f)} · ${f.city || place(f)}`;
+const title = festivalTitle(f);
 const description = [
   `${f.name}, ${dateLong(f)}, ${place(f)}.`,
   a.length ? `Line-up: ${a.slice(0, 6).join(', ')}${a.length > 6 ? ' and more' : ''}.` : '',
@@ -109,7 +89,7 @@ const description = [
       <dl class="facts">
         <dt>Where</dt><dd>{where}</dd>
         <dt>Price</dt><dd>{priceLabel(f) || 'Not announced yet'}</dd>
-        <dt>Region</dt><dd>{f.region}</dd>
+        <dt>Region</dt><dd><a href={regionPath(f.region)}>{f.region}</a></dd>
       </dl>
 
       {others.length > 0 && (
@@ -139,6 +119,19 @@ const description = [
         <span>{f.lastVerified ? `Info last checked ${f.lastVerified}` : "Info from the organizer's public channels."}</span>
         <a class="inline-link" href={fixPath(f.id)}>Something wrong? Suggest a correction</a>
       </div>
+      {f.country && (
+        <div class="more">
+          <h2 class="h2">More festivals in {inName(f.country)}</h2>
+          {country.map((x) => (
+            <a class="more-row" href={festivalPath(x.id)}>
+              <span class="more-row__when">{dayRange(x)}</span>
+              <span class="more-row__text"><strong>{x.name}</strong><span>{MONTHS[x.s.getMonth()]} {x.s.getFullYear()} · {x.city || place(x)}</span></span>
+            </a>
+          ))}
+          {country.length === 0 && <p class="meta">No other upcoming festival in {inName(f.country)} yet.</p>}
+          <a class="inline-link" href={countryPath(f.country)}>All Cuban salsa festivals in {inName(f.country)} ›</a>
+        </div>
+      )}
       {more.length > 0 && f.mk && (
         <div class="more">
           <h2 class="h2">More in {monthLabel(f.mk)}</h2>
