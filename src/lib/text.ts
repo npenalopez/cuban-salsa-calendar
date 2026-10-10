@@ -21,3 +21,7 @@ export function highlight(label: string, q: string) {
   if (!q || i < 0) return { pre: label, match: '', post: '' };
   return { pre: label.slice(0, i), match: label.slice(i, i + q.length), post: label.slice(i + q.length) };
 }
+
+/** URL slug: accent-free, lowercase, words joined by hyphens ("Wilmer & María" -> "wilmer-and-maria"). */
+export const slugify = (s: string) =>
+  s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');

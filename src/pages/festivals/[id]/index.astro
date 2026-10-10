@@ -3,7 +3,8 @@ import type { GetStaticPaths } from 'astro';
 import Base from '../../../layouts/Base.astro';
 import { AddToCalendar, FestivalMap, Lineup, TopActions, TravelLine } from '../../../components/FestivalIslands';
 import { MONTHS, countdownLong, dateLong, dayRange, daysBetween, monthLabel, monthPath, plural } from '../../../lib/dates';
-import { ALL, TODAY, UPCOMING } from '../../../lib/data.server';
+import { ALL, ARTIST_SLUGS, TODAY, UPCOMING } from '../../../lib/data.server';
+import { artistPath } from '../../../lib/artists';
 import { SITE, byDate, canAddToCalendar, festivalPath, fixPath, fmtPrice, nextEdition, place, priceLabel, ticketOf } from '../../../lib/festivals';
 import type { Enriched } from '../../../lib/types';
 import { countryPath, eventLd, festivalTitle, inName, regionPath } from '../../../lib/seo';
@@ -105,7 +106,7 @@ const description = [
     <div class="fest__col fest__col--right">
       <div class="block block--10">
         <h2 class="h2">Line-up{a.length > 0 && <span class="h2__count">{a.length}</span>}</h2>
-        {a.length ? <Lineup client:afterload artists={a} /> : <p class="meta" style="margin:0;font-size:15px">Not announced yet.</p>}
+        {a.length ? <Lineup client:afterload artists={a} hrefs={a.map((n) => (ARTIST_SLUGS.has(artistPath(n).split('/')[2]) ? artistPath(n) : null))} /> : <p class="meta" style="margin:0;font-size:15px">Not announced yet.</p>}
       </div>
       <div class="block">
         <h2 class="h2">About</h2>

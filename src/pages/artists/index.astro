@@ -1,0 +1,40 @@
+---
+// All artists A–Z, busiest first at the top. Plain links, no islands.
+import Base from '../../layouts/Base.astro';
+import { plural } from '../../lib/dates';
+import { ALL } from '../../lib/data.server';
+import { artistPages } from '../../lib/artistPages';
+
+const pages = artistPages(ALL).filter((a) => a.upcoming.length > 0);
+const top = [...pages].sort((a, b) => b.upcoming.length - a.upcoming.length || a.name.localeCompare(b.name)).slice(0, 20);
+const groups = new Map<string, typeof pages>();
+for (const a of pages) {
+  const l = a.name.normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/^dj\s+/i, '')[0]?.toUpperCase() ?? '#';
+  const k = /[A-Z]/.test(l) ? l : '#';
+  groups.set(k, [...(groups.get(k) ?? []), a]);
+}
+const letters = [...groups.keys()].sort();
+---
+<Base title="Cuban Salsa Artists: Who Teaches Where in 2026–2027" description={`${plural(pages.length, 'dancer, teacher, band and DJ')} on the line-ups of upcoming Cuban salsa festivals, and where each one is booked next.`}>
+  <div class="topbar">
+    <a class="topbar__back" href="/">← All festivals</a>
+  </div>
+  <div class="page-head">
+    <span class="kicker">Line-ups</span>
+    <h1 class="page-title">Artists</h1>
+    <p class="page-note">{plural(pages.length, 'artist')} on the line-ups of upcoming festivals. Pick a name to see where they teach or play next.</p>
+  </div>
+
+  <section class="land-related" aria-labelledby="top-h">
+    <h2 class="h2" id="top-h">Booked at the most festivals</h2>
+    <ul>{top.map((a) => <li><a href={`/artists/${a.slug}/`}>{a.name}</a><span class="meta">{a.upcoming.length}</span></li>)}</ul>
+  </section>
+
+  <nav class="az" aria-label="Jump to letter">{letters.map((l) => <a href={`#l-${l}`}>{l}</a>)}</nav>
+  {letters.map((l) => (
+    <section class="land-related" aria-labelledby={`l-${l}`}>
+      <h2 class="h2" id={`l-${l}`}>{l}</h2>
+      <ul>{groups.get(l)!.map((a) => <li><a href={`/artists/${a.slug}/`}>{a.name}</a><span class="meta">{a.upcoming.length}</span></li>)}</ul>
+    </section>
+  ))}
+</Base>

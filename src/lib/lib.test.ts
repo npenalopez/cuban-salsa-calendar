@@ -4,7 +4,8 @@ import { cardVM, enrich, fmtPrice, isListed, priceLabel } from './festivals';
 import { calUrls, icsCalendar } from './ics';
 import { computeView, DEFAULT_FILTERS, filtersQuery, km, parseFilters, styleOptions } from './listing';
 import { didYouMean, suggestions } from './search';
-import { canonicalArtist, canonicalLineup, peopleOf } from './artists';
+import { artistKind, artistPath, canonicalArtist, canonicalLineup, pagedArtistSlugs, peopleOf } from './artists';
+import { artistPages } from './artistPages';
 import { bestTravel, fmtHours, travelOptions } from './travel';
 import { countryPath, eventLd, festivalTitle, inName, landingIntro, landings, regionPath, relatedFor, slugify } from './seo';
 import type { Festival } from './types';
@@ -310,5 +311,33 @@ describe('styles, Cuban focus and new sorts', () => {
     expect(festivalTitle(list[1])).toBe('B 2026: Salsa Festival in Kraków, Poland');
     expect(festivalTitle(list[2])).toBe('C 2026: Cuban Salsa Festival in Kraków, Poland');
     expect(styleOptions(list.filter((x) => !x.arch)).map((o) => [o.value, o.n])).toEqual([['casino', 2], ['timba', 1], ['mixed', 1]]);
+  });
+});
+
+describe('artist pages', () => {
+  it('kinds, paths and the one-word rule', () => {
+    expect(artistKind('DJ Charanga')).toBe('dj');
+    expect(artistKind('Seo & Eneris')).toBe('couple');
+    expect(artistKind('Elito Revé y su Charangón')).toBe('group');
+    expect(artistKind('Adonis Santiago')).toBe('person');
+    expect(artistPath('Wilmer & María')).toBe('/artists/wilmer-and-maria/');
+    const paged = pagedArtistSlugs([['Cristian', 'Ana Paz'], ['Cristian', 'Solo'], ['Ana Paz']]);
+    expect(paged.has('cristian')).toBe(false); // one word, two festivals: maybe two people
+    expect(paged.has('solo')).toBe(true); // one word, one festival
+    expect(paged.has('ana-paz')).toBe(true);
+  });
+
+  it('collects upcoming and past festivals; accent variants share one page', () => {
+    const list = enrich([
+      mk({ id: 'a', artists: ['José Pérez', 'Osbanis & Anneta'] }),
+      mk({ id: 'b', startDate: '2026-03-01', endDate: '2026-03-02', artists: ['Jose Perez'] }),
+    ], TODAY);
+    const pages = artistPages(list);
+    const jose = pages.find((p) => p.slug === 'jose-perez')!;
+    expect(jose.upcoming.map((h) => h.f.id)).toEqual(['a']);
+    expect(jose.past.map((h) => h.f.id)).toEqual(['b']);
+    const anneta = pages.find((p) => p.slug === 'anneta-kepka')!;
+    expect(anneta.upcoming[0].via).toBe('Osbanis & Anneta');
+    expect(anneta.memberOf).toEqual(['Osbanis & Anneta']);
   });
 });

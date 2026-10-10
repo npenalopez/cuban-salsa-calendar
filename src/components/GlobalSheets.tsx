@@ -5,7 +5,8 @@ import { closeSheet, openSheet, setCity, setTheme, toast, useStore, type Theme }
 import { dateLong, plural, startOfToday } from '../lib/dates';
 import { INSTAGRAM } from '../lib/festivals';
 import { FEED_SLUG, calUrls, savedIcsPath } from '../lib/ics';
-import { norm } from '../lib/text';
+import { artistPath, pagedArtistSlugs } from '../lib/artists';
+import { norm, slugify } from '../lib/text';
 import { CITIES, fromCity } from '../lib/travel';
 import type { City, Enriched } from '../lib/types';
 import { Flag, LocateIcon, Segmented, Sheet } from './ui';
@@ -71,6 +72,7 @@ function Artists({ all }: { all: Enriched[] }) {
   const [tf, setTf] = useState<'year' | 'all'>('year');
   const [showAll, setShowAll] = useState(false);
   const yr = startOfToday().getFullYear();
+  const paged = pagedArtistSlugs(all.map((f) => [...f.artists, ...f.people]));
   const src = all.filter((f) => tf === 'all' || f.s.getFullYear() === yr);
   const m = new Map<string, { name: string; n: number; cc: string[]; rank: number }>();
   for (const f of src)
@@ -105,7 +107,7 @@ function Artists({ all }: { all: Enriched[] }) {
       <ol class="artist-list">
         {rows.map((x) => (
           <li>
-            <a class="artist-row" href={`/upcoming/?q=${encodeURIComponent(x.name)}`} aria-label={`${x.name}, ${plural(x.n, 'festival')}. Show their festivals`}>
+            <a class="artist-row" href={paged.has(slugify(x.name)) ? artistPath(x.name) : `/upcoming/?q=${encodeURIComponent(x.name)}`} aria-label={`${x.name}, ${plural(x.n, 'festival')}. Show their festivals`}>
               <span class={`rank rank--${Math.min(x.rank, 4)}`}>{x.rank}</span>
               <span class="artist-row__text">
                 <strong>{x.name}</strong>

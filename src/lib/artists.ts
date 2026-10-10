@@ -1,4 +1,5 @@
 import registry from '../../data/artists.json';
+import { slugify } from './text';
 
 /** Case-, accent- and punctuation-insensitive key. */
 const key = (s: string) => s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9&+]+/g, ' ').trim();
@@ -32,3 +33,33 @@ export function peopleOf(lineup: string[]): string[] {
 }
 
 export { key as artistKey };
+
+/** The artist page for a name; spellings that differ only by accents or case share one page. */
+export const artistPath = (name: string) => `/artists/${slugify(canonicalArtist(name))}/`;
+
+export type ArtistKind = 'person' | 'couple' | 'group' | 'dj';
+/** Best guess from the name; acts in the registry with two members count as couples. */
+export function artistKind(name: string): ArtistKind {
+  if (/^dj\b/i.test(name.trim())) return 'dj';
+  if (/\b(orquesta|orchestra|band|banda|grupo|group|company|compañía|cia\.?|cía\.?|team|project|trio|quartet|charang[oó]n|tripulaci[oó]n|son con|y su|family|dance company|crew|ensemble)\b/i.test(name)) return 'group';
+  if (acts[name]?.length === 2 || /\s(&|y|and|\+)\s/i.test(name)) return 'couple';
+  return 'person';
+}
+
+/** Acts (couples, groups) that a person belongs to, from the registry. */
+export const actsOf = (person: string) => Object.entries(acts).filter(([, m]) => m.some((x) => key(x) === key(person))).map(([a]) => a);
+export const membersOf = (act: string) => acts[act] ?? [];
+
+const known = new Set([...Object.keys(aliases), ...Object.values(aliases), ...Object.keys(acts), ...Object.values(acts).flat()].map(key));
+
+/**
+ * Slugs that get an artist page. A one-word name ("Cristian") that appears at several festivals
+ * and is not in the registry may be different people, so it gets no page until it is added there.
+ */
+export function pagedArtistSlugs(lineups: string[][]): Set<string> {
+  const count = new Map<string, number>();
+  const oneWord = new Set<string>();
+  for (const l of lineups) for (const a of new Set(l.map((x) => slugify(x)))) count.set(a, (count.get(a) ?? 0) + 1);
+  for (const l of lineups) for (const a of l) if (!/\s/.test(a.trim()) && !known.has(key(a))) oneWord.add(slugify(a));
+  return new Set([...count.keys()].filter((s) => s && !(oneWord.has(s) && count.get(s)! > 1)));
+}

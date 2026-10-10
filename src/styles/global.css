@@ -594,6 +594,7 @@ dialog.sheet--drawer .sheet__panel { padding-top: env(safe-area-inset-top); }
   font-size: 15px; color: var(--ink); text-decoration: none;
 }
 .chip:hover { background: var(--line); color: var(--ink); }
+.chip--plain:hover { background: var(--sunken); }
 .lineup .link-btn { min-height: 40px; font-size: 15px; padding: 0 8px; }
 .about { margin: 0; font-size: 16px; line-height: 1.55; color: var(--ink2); text-wrap: pretty; white-space: pre-line; }
 .inline-link { align-self: flex-start; min-height: 44px; display: inline-flex; align-items: center; font-weight: 700; font-size: 15px; }
@@ -609,6 +610,14 @@ dialog.sheet--drawer .sheet__panel { padding-top: env(safe-area-inset-top); }
 .more-row__text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 .more-row__text strong { font-size: 15px; }
 .more-row__text span { font-size: 13px; color: var(--ink3); }
+
+/* ============ Artist pages ============ */
+.page-title--name { font-size: clamp(44px, 10vw, 80px); overflow-wrap: anywhere; }
+.artist-rel { margin: 4px 0 0; font-size: 15px; color: var(--ink2); }
+.artist-rel a { font-weight: 700; }
+.artist-note { margin-top: 28px; }
+.az { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 24px; }
+.az a { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; border-radius: var(--radius); background: var(--sunken); font-weight: 700; text-decoration: none; }
 
 /* ============ Landing pages (country, region, year) ============ */
 .land-group { display: flex; flex-direction: column; padding-top: 18px; }

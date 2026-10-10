@@ -1,3 +1,4 @@
+import { artistPages } from './artistPages';
 import file from '../../data/festivals.json';
 import { isoD, startOfToday } from './dates';
 import { enrich, isListed } from './festivals';
@@ -20,3 +21,6 @@ export function stats() {
   const countries = new Set(UPCOMING.map((f) => f.countryCode).filter(Boolean)).size;
   return { upcoming: UPCOMING.length, countries };
 }
+
+/** Slugs that have an artist page (see artistPages). */
+export const ARTIST_SLUGS = new Set(artistPages(ALL).map((a) => a.slug));

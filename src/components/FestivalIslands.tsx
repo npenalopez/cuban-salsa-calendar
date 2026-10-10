@@ -76,14 +76,15 @@ export function FestivalMap({ id, name, lat, lng, label, place }: { id: string; 
 }
 
 /** Line-up: first 12 artists, then "+N more" / "Show fewer". */
-export function Lineup({ artists }: { artists: string[] }) {
+/** Line-up chips; names with an artist page link there, the rest stay plain text. */
+export function Lineup({ artists, hrefs }: { artists: string[]; hrefs: (string | null)[] }) {
   const [all, setAll] = useState(false);
   const shown = all ? artists : artists.slice(0, 12);
   return (
     <div class="lineup">
-      {shown.map((a) => (
-        <a class="chip" href={`/upcoming/?q=${encodeURIComponent(a)}`} aria-label={`Find festivals with ${a}`}>{a}</a>
-      ))}
+      {shown.map((a, i) =>
+        hrefs[i] ? <a class="chip" href={hrefs[i]!} aria-label={`${a}: all festivals`}>{a}</a> : <span class="chip chip--plain">{a}</span>,
+      )}
       {artists.length > 12 && (
         <button type="button" class="link-btn" onClick={() => setAll(!all)}>{all ? 'Show fewer' : `+${artists.length - 12} more`}</button>
       )}

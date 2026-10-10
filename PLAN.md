@@ -1,6 +1,6 @@
 # Plan: closing the gaps with cubansalsafestivals.com
 
-Status 2026-10-10: Phases 0 and 1 are live (the Drive script is off again and the CSP is strict again). Phase 2 is live; the style suggestions were applied as generated on 2026-10-10 (13 festivals still need a Cuban-focus decision). Phases 3–6 are waiting for approval. Decisions from the owner: CSP loosened for the Drive script (to be removed once verified); thin country pages are indexed; no newsletter; no posters.
+Status 2026-10-10: Phases 0–3 are live. Phases 4–6 in progress.
 
 ## What the site is today
 
@@ -56,7 +56,12 @@ Original plan:
 - **Style pages:** `/style/{style}/`.
 - **Pre-fill script:** `scripts/suggest-styles.mjs` writes `data/review/styles.md` from names, descriptions and line-up hints. Nothing goes into the JSON until you confirm.
 
-## Phase 3: Artist pages
+## Phase 3: Artist pages (live)
+
+Built: /artists/ index and a page per artist (966), with upcoming and past festivals, members and "also dances as", Person or PerformingGroup schema. Accent and case variants share a page. One-word names at several festivals get no page until added to data/artists.json (they may be different people). Line-up chips and Top artists link to the pages. Artist pages with upcoming festivals are in the sitemap; past-only pages are noindex. Review: `node scripts/artist-duplicates.mjs` wrote data/review/artists.md (67 probable duplicate pairs, 8 one-word names).
+
+Original plan:
+
 
 - **Pages:** `/artists/{slug}/` with upcoming and past festivals, `Person` (or `MusicGroup`) schema, and links to each festival.
 - **Artist file:** build on `data/artists.json`, adding `slug`, `type` (person/couple/group/dj) and optional `instagram`.
