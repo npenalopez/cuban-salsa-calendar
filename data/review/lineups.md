@@ -71,10 +71,10 @@
 
 ## Kept but not confirmed: please check
 
-- **El Que Sabe, Sabe**, **FIC Orange** and **El Son se Viste de Gala**: no website or ticket page names these artists, but our descriptions say they were announced (probably on the organizers' Instagram). Kept for now.
+- **El Que Sabe, Sabe**, **FIC Orange** and **El Son se Viste de Gala**: no website or ticket page names these artists, but our descriptions say they were announced (probably on the organizers' Instagram). Kept (owner's decision, 2026-10-10).
 - **Havana en Belgrado**: line-up is images only; Weezevent calls this the final edition.
 - **La Vibra Cubana**: the 2026 page now redirects to a 3–5 Dec 2027 edition with the same artists; the December 2026 edition may have moved. Check with the organizer.
-- **Only Salsa by Swob**: the organizer site still shows 22–25 May 2026; nothing confirms our 3–7 June 2027 dates.
+- **Only Salsa by Swob**: the organizer site still shows 22–25 May 2026; the unconfirmed 3–7 June 2027 dates were removed and the festival is hidden until 2027 dates are announced.
 
 ## Confirmed unchanged
 
