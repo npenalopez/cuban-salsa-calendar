@@ -260,6 +260,7 @@ textarea.input { height: auto; padding: 12px 14px; line-height: 1.5; resize: ver
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
   padding: 14px 16px; margin-bottom: 8px; border-radius: 12px; background: var(--sunken); font-size: 15px;
 }
+.banner__actions { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .sections { display: flex; flex-direction: column; gap: 8px; }
 .sections section { display: flex; flex-direction: column; gap: 8px; }
@@ -511,10 +512,10 @@ dialog.sheet--drawer .sheet__panel { padding-top: env(safe-area-inset-top); }
 .feed-row__actions { display: flex; gap: 4px; align-items: center; }
 .feed-row__ics { font-size: 14px; min-height: 40px; display: inline-flex; align-items: center; padding: 0 10px; }
 
-.toast-wrap { position: fixed; left: 50%; bottom: 96px; transform: translateX(-50%); z-index: 60; pointer-events: none; }
+.toast-wrap { position: fixed; left: 50%; bottom: 96px; transform: translateX(-50%); z-index: 60; pointer-events: none; width: max-content; max-width: calc(100vw - 32px); }
 .toast {
   padding: 12px 16px; border-radius: var(--radius); background: var(--ink); color: var(--bg); font-weight: 700; font-size: 15px;
-  box-shadow: var(--shadow); white-space: nowrap;
+  box-shadow: var(--shadow); text-align: center; text-wrap: balance;
 }
 
 /* ============ Map ============ */

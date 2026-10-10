@@ -80,4 +80,8 @@ export function calUrls(f: Enriched) {
   };
 }
 
+/** One calendar file for several festivals, served by the Worker (worker/calendar.ts). */
+export const savedIcsPath = (list: Enriched[]) =>
+  '/api/saved.ics?ids=' + list.filter((f) => f.datePrecision === 'day').map((f) => f.id).join(',');
+
 export const FEED_SLUG = (region: string) => region.toLowerCase().replace(/\s+/g, '-');

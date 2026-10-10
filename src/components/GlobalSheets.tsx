@@ -1,10 +1,10 @@
 import { useState } from 'preact/hooks';
 import { allFestivals } from '../client/data';
-import { copy, download } from '../client/share';
+import { copy, openCalendar } from '../client/share';
 import { closeSheet, openSheet, setCity, setTheme, toast, useStore, type Theme } from '../client/store';
 import { dateLong, plural, startOfToday } from '../lib/dates';
 import { INSTAGRAM } from '../lib/festivals';
-import { FEED_SLUG, calUrls, icsCalendar } from '../lib/ics';
+import { FEED_SLUG, calUrls, savedIcsPath } from '../lib/ics';
 import { norm } from '../lib/text';
 import { CITIES, fromCity } from '../lib/travel';
 import type { City, Enriched } from '../lib/types';
@@ -205,7 +205,7 @@ function Feeds({ all, saved }: { all: Enriched[]; saved: string[] }) {
           <span><strong>{label}</strong><span class="meta feed-row__n">{dated(list)}</span></span>
           <span class="feed-row__actions">
             <button type="button" class="btn btn--sm" onClick={() => copy(`webcal://cubansalsacalendar.com/feeds/${slug}.ics`, 'Feed link copied')}>Copy link</button>
-            <a class="link-btn feed-row__ics" href={`/feeds/${slug}.ics`}>.ics</a>
+            <a class="link-btn feed-row__ics" href={`/feeds/${slug}.ics`} onClick={(e) => { e.preventDefault(); openCalendar(`/feeds/${slug}.ics`); }}>.ics</a>
           </span>
         </div>
       ))}
@@ -215,7 +215,7 @@ function Feeds({ all, saved }: { all: Enriched[]; saved: string[] }) {
           <button
             type="button"
             class="link-btn feed-row__ics"
-            onClick={() => (dated(mine) ? download('my-cuban-salsa-festivals.ics', icsCalendar(mine, 'My Cuban salsa festivals'), 'text/calendar;charset=utf-8') : toast('No saved festivals with exact dates'))}
+            onClick={() => (dated(mine) ? openCalendar(savedIcsPath(mine), `/saved/?ids=${saved.join(',')}`) : toast('No saved festivals with exact dates'))}
           >.ics</button>
         </span>
       </div>
@@ -231,9 +231,9 @@ function Cal({ f }: { f?: Enriched }) {
     <div class="sheet-pad stack-10">
       <span class="sheet-text">{f.name} · {dateLong(f)}</span>
       <a class="cal-row" href={u.google} target="_blank" rel="noopener" onClick={done}>Google Calendar ↗</a>
-      <a class="cal-row" href={u.ics} onClick={done}>Apple Calendar, Outlook app, others (.ics)</a>
+      <a class="cal-row" href={u.ics} onClick={(e) => { e.preventDefault(); openCalendar(u.ics); done(); }}>Apple Calendar, Outlook app, others (.ics)</a>
       <a class="cal-row" href={u.outlook} target="_blank" rel="noopener" onClick={done}>Outlook.com ↗</a>
-      <span class="small-note">All-day event with reminders a week and a day before. In the Instagram app browser, use Google Calendar, or open this page in Safari or Chrome first.</span>
+      <span class="small-note">All-day event with reminders a week and a day before. From Instagram, the .ics option opens in Safari or Chrome.</span>
     </div>
   );
 }

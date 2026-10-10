@@ -78,10 +78,10 @@ export function useStore(): StoreState {
 }
 
 let toastTimer: ReturnType<typeof setTimeout> | undefined;
-export function toast(msg: string) {
+export function toast(msg: string, ms = 2600) {
   clearTimeout(toastTimer);
   set({ toast: msg });
-  toastTimer = setTimeout(() => set({ toast: null }), 2600);
+  toastTimer = setTimeout(() => set({ toast: null }), ms);
 }
 
 export function toggleSaved(id: string) {

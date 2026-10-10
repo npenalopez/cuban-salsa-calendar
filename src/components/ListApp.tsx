@@ -1,10 +1,10 @@
 import { useEffect, useMemo, useRef, useState } from 'preact/hooks';
 import { allFestivals } from '../client/data';
-import { download, share } from '../client/share';
+import { openCalendar, share } from '../client/share';
 import { addRecent, clearRecent, openSheet, saveAll, toggleSaved, useMounted, useStore } from '../client/store';
 import { MONTHS, dateLong, monthLabel, monthPath, pISO, plural, startOfToday } from '../lib/dates';
 import { cardVM, festivalPath, place } from '../lib/festivals';
-import { icsCalendar } from '../lib/ics';
+import { savedIcsPath } from '../lib/ics';
 import {
   DEFAULT_FILTERS, computeView, filterCount, filterSummary, filtersQuery, parseFilters, whereOptions,
   type Filters, type PageRoute, type When,
@@ -226,7 +226,10 @@ export default function ListApp({ route, buildToday }: Props) {
       {showShared && (
         <div class="banner">
           <span>Someone shared {plural(shared!.length, 'festival')} with you.</span>
-          <button type="button" class="btn" onClick={() => saveAll(shared!)}>Save all to my list</button>
+          <span class="banner__actions">
+            <button type="button" class="btn" onClick={() => saveAll(shared!)}>Save all to my list</button>
+            <button type="button" class="btn" onClick={() => openCalendar(savedIcsPath(all.filter((x) => shared!.includes(x.id) && !x.arch)), location.pathname + location.search)}>Add all to calendar</button>
+          </span>
         </div>
       )}
       {route.name === 'saved' && !shared && savedCount > 0 && (
@@ -235,7 +238,7 @@ export default function ListApp({ route, buildToday }: Props) {
           <button
             type="button"
             class="btn"
-            onClick={() => download('my-cuban-salsa-festivals.ics', icsCalendar(all.filter((x) => store.saved.includes(x.id) && !x.arch), 'My Cuban salsa festivals'), 'text/calendar;charset=utf-8')}
+            onClick={() => openCalendar(savedIcsPath(all.filter((x) => store.saved.includes(x.id) && !x.arch)), `/saved/?ids=${store.saved.join(',')}`)}
           >Add all to calendar (.ics)</button>
         </div>
       )}

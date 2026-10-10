@@ -1,8 +1,10 @@
 // Only /api/* and /admin* reach this Worker (see wrangler.jsonc); every other page is a static asset.
 //
 //   POST /api/submit   submit a festival / suggest a correction → GitHub issue
+//   GET  /api/saved.ics several festivals in one calendar file (?ids=a,b,c)
 //   GET  /admin/…      data editor and the full data file, behind Cloudflare Access
 import { hasAccess } from './access';
+import { handleSavedIcs } from './calendar';
 import { handleSubmit } from './submit';
 
 export interface Env {
@@ -24,6 +26,7 @@ export default {
     const { pathname } = new URL(request.url);
 
     if (pathname === '/api/submit') return handleSubmit(request, env);
+    if (pathname === '/api/saved.ics') return handleSavedIcs(request, env);
     if (pathname.startsWith('/api/')) return new Response('Not found', { status: 404 });
 
     if (pathname === '/admin' || pathname.startsWith('/admin/')) {
