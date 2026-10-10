@@ -1,6 +1,6 @@
 {
   "$comment": "Affiliate settings. These IDs are public (they appear in every link), not secrets. Read by src/lib/affiliates.ts.",
-  "driveScriptEnabled": true,
+  "driveScriptEnabled": false,
   "travelpayouts": {
     "marker": "583798",
     "driveScriptSrc": "https://emrldtp.com/NTgzNzk4.js?t=583798",

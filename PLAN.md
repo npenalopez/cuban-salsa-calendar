@@ -1,6 +1,6 @@
 # Plan: closing the gaps with cubansalsafestivals.com
 
-Status 2026-10-10: Phases 0 and 1 are built, not yet committed or deployed. Phases 2–6 are waiting for approval. Decisions from the owner: CSP loosened for the Drive script (to be removed once verified); thin country pages are indexed; no newsletter; no posters.
+Status 2026-10-10: Phases 0 and 1 are live. The Drive script is off again and the CSP is strict again. Phases 2–6 are waiting for approval. Decisions from the owner: CSP loosened for the Drive script (to be removed once verified); thin country pages are indexed; no newsletter; no posters.
 
 ## What the site is today
 
@@ -11,7 +11,7 @@ Status 2026-10-10: Phases 0 and 1 are built, not yet committed or deployed. Phas
 - **Already done from the brief:** a JSON-LD `Event` on festival pages (including `EventPostponed`, `offers` and `performer`), `sitemap.xml`, `robots.txt` with the sitemap, filters by region/country/date range/saved, a "nearest first" sort from a chosen city (travel times), and month pages. These get extended, not rebuilt.
 - **Security headers:** `public/_headers` sends a strict CSP (`script-src 'self' …`, `connect-src 'self' …`, `form-action 'self'`). Every new third-party script, fetch or external form target needs a CSP change.
 
-## Phase 0: Travelpayouts verification (done, not deployed)
+## Phase 0: Travelpayouts verification (done; script removed again on 2026-10-10 after verification)
 
 - **Marker check:** `NTgzNzk4` in the script URL is base64 for `583798`, so it matches `t=583798` and the marker in the brief.
 - **Config:** `config/affiliates.json` holds the marker, promo_id 3791, the Stay22 AID and `driveScriptEnabled`. Read through `src/lib/affiliates.ts`.
