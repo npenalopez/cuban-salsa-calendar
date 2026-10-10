@@ -1,0 +1,3282 @@
+[
+  {
+    "id": "agua-festival-thessaloniki-2026",
+    "name": "Agua Festival",
+    "kind": "ticketUrl",
+    "url": "https://my.weezevent.com/agua-salsa-festival-2026",
+    "finalUrl": "https://my.weezevent.com/agua-salsa-festival-2026",
+    "status": 404,
+    "verdict": "broken",
+    "why": "HTTP 404"
+  },
+  {
+    "id": "all-salsa-festival-lyon-2027",
+    "name": "All Salsa Festival Lyon",
+    "kind": "website",
+    "url": "https://www.allsalsafestival.com/",
+    "finalUrl": "https://www.allsalsafestival.com/",
+    "status": 503,
+    "verdict": "broken",
+    "why": "HTTP 503 (server error)"
+  },
+  {
+    "id": "atlanta-salsa-bachata-festival-2027",
+    "name": "Atlanta Salsa Bachata Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.eventbrite.com/e/atlanta-salsa-bachata-festival-2027-tickets-1984207297440",
+    "finalUrl": "https://www.eventbrite.com/e/atlanta-salsa-bachata-festival-2027-tickets-1984207297440",
+    "status": 200,
+    "verdict": "broken",
+    "why": "ticket page says \"SALES ENDED\""
+  },
+  {
+    "id": "cuban-flow-anglet-2026",
+    "name": "Cuban Flow Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.billetweb.fr/cuban-flow-festival-2026",
+    "finalUrl": "https://www.billetweb.fr/cuban-flow-festival-2026",
+    "status": 200,
+    "verdict": "broken",
+    "why": "ticket page says \"event is over\""
+  },
+  {
+    "id": "festival-la-speciale-renens-2026",
+    "name": "Festival La Spéciale 3 - Salsamas 10 Years",
+    "kind": "ticketUrl",
+    "url": "https://eventfrog.ch/la-speciale-3",
+    "finalUrl": "https://eventfrog.ch/la-speciale-3",
+    "status": 404,
+    "verdict": "broken",
+    "why": "HTTP 404"
+  },
+  {
+    "id": "istanbul-social-dance-marathon-2026",
+    "name": "Istanbul Social Dance Marathon",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/dancemarathonistanbul/",
+    "finalUrl": "https://www.instagram.com/dancemarathonistanbul/",
+    "status": 200,
+    "verdict": "broken",
+    "why": "profile removed or never existed"
+  },
+  {
+    "id": "obdac-bali-2026",
+    "name": "ODAC Cuban Salsa Fiesta 2026 Bali Edition",
+    "kind": "ticketUrl",
+    "url": "https://www.eventbrite.com/e/odac-cuban-salsa-fiesta-2026-bali-edition-tickets-1982577006195",
+    "finalUrl": "https://www.eventbrite.com/e/odac-cuban-salsa-fiesta-2026-bali-edition-tickets-1982577006195",
+    "status": 200,
+    "verdict": "broken",
+    "why": "ticket page says \"EVENT ENDED\""
+  },
+  {
+    "id": "timba-flow-cuban-festival-playa-del-carmen-2026",
+    "name": "Timba Flow Cuban Festival (TF MEX)",
+    "kind": "ticketUrl",
+    "url": "https://timbaflowfestival.com/en#boletos",
+    "finalUrl": null,
+    "status": null,
+    "verdict": "broken",
+    "why": "Timeout 30000ms exceeded."
+  },
+  {
+    "id": "timba-flow-cuban-festival-playa-del-carmen-2026",
+    "name": "Timba Flow Cuban Festival (TF MEX)",
+    "kind": "website",
+    "url": "https://timbaflowfestival.com/en",
+    "finalUrl": null,
+    "status": null,
+    "verdict": "broken",
+    "why": "net::ERR_NETWORK_CHANGED at https://timbaflowfestival.com/en"
+  },
+  {
+    "id": "a-toda-cuba-calenzano-2026",
+    "name": "A Toda Cuba Festival",
+    "kind": "website",
+    "url": "https://www.atodacubafestival.it/",
+    "finalUrl": "https://www.atodacubafestival.it/",
+    "status": 200,
+    "verdict": "check",
+    "why": "page doesn't mention \"toda cuba\"; page is nearly empty"
+  },
+  {
+    "id": "casino-ritmo-habana-merida-2026",
+    "name": "Casino Ritmo Habana - Primer Aniversario",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/p/DbYqoaxEcLl/",
+    "finalUrl": "https://www.instagram.com/p/DbYqoaxEcLl/",
+    "status": 200,
+    "verdict": "check",
+    "why": "unexpected page: \"Instagram\""
+  },
+  {
+    "id": "dance-congress-hamburg-2026",
+    "name": "Dance Congress Hamburg",
+    "kind": "website",
+    "url": "https://www.dancecongresshamburg.com/",
+    "finalUrl": "https://www.dancecongresshamburg.com/",
+    "status": 200,
+    "verdict": "check",
+    "why": "page doesn't mention \"hamburg\""
+  },
+  {
+    "id": "duke-dance-uk-evolution-gillingham-2026",
+    "name": "DUKE Dance UK Evolution",
+    "kind": "ticketUrl",
+    "url": "https://www.tickettailor.com/events/duke/1914908",
+    "finalUrl": "https://www.tickettailor.com/events/duke/1914908",
+    "status": 403,
+    "verdict": "check",
+    "why": "blocked by bot protection (HTTP 403); open it by hand"
+  },
+  {
+    "id": "el-que-sabe-sabe-anzio-2026",
+    "name": "El Que Sabe, Sabe",
+    "kind": "website",
+    "url": "https://www.salsacrew.it/",
+    "finalUrl": "https://www.salsacrew.it/",
+    "status": 200,
+    "verdict": "check",
+    "why": "page doesn't mention \"sabe sabe\""
+  },
+  {
+    "id": "festival-la-speciale-renens-2026",
+    "name": "Festival La Spéciale 3 - Salsamas 10 Years",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/salsamas.ch/",
+    "finalUrl": "https://www.instagram.com/salsamas.ch/",
+    "status": 200,
+    "verdict": "check",
+    "why": "unexpected page: \"salsamas.ch • Instagram photos and videos\""
+  },
+  {
+    "id": "fusafes-fukuoka-salsa-festival-2027",
+    "name": "FUSABAFES Fukuoka",
+    "kind": "ticketUrl",
+    "url": "https://first3.jp/reserve/tiempo/customer/entry",
+    "finalUrl": "https://first3.jp/reserve/tiempo/customer/entry",
+    "status": 200,
+    "verdict": "check",
+    "why": "page doesn't mention \"fusabafes fukuoka\"; page is nearly empty"
+  },
+  {
+    "id": "fusafes-fukuoka-salsa-festival-2027",
+    "name": "FUSABAFES Fukuoka",
+    "kind": "website",
+    "url": "https://fusafes.tiempo.jp/",
+    "finalUrl": "https://fusafes.tiempo.jp/",
+    "status": 200,
+    "verdict": "check",
+    "why": "page is nearly empty"
+  },
+  {
+    "id": "gusto-cubano-kecskemet-2026",
+    "name": "Gusto Cubano Salsa & Bachata Weekend",
+    "kind": "ticketUrl",
+    "url": "https://forms.gle/HWsox6C1222DB97d9",
+    "finalUrl": "https://docs.google.com/forms/d/e/1FAIpQLSd3PChpyQabADRvfDRUXNua80e4FjK7eUfov7dAaVYlGqGUtw/viewform",
+    "status": 200,
+    "verdict": "check",
+    "why": "redirects to docs.google.com"
+  },
+  {
+    "id": "havana-en-belgrado-2026",
+    "name": "Havana en Belgrado",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/havanaenbelgrado/",
+    "finalUrl": "https://www.instagram.com/havanaenbelgrado/",
+    "status": 200,
+    "verdict": "check",
+    "why": "unexpected page: \"havanaenbelgrado • Instagram photos and videos\""
+  },
+  {
+    "id": "latin-dance-festival-lloret-2026",
+    "name": "Latin Dance Festival & WTP European Meeting",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/es/evento/9040/latin-dance-festival-2026",
+    "finalUrl": "https://www.goandance.com/es/evento/9040/latin-dance-festival-2026",
+    "status": 200,
+    "verdict": "check",
+    "why": "page doesn't mention \"european meeting\""
+  },
+  {
+    "id": "latin-dance-festival-lloret-2026",
+    "name": "Latin Dance Festival & WTP European Meeting",
+    "kind": "website",
+    "url": "https://beacons.ai/_ldf",
+    "finalUrl": "https://beacons.ai/_ldf",
+    "status": 200,
+    "verdict": "check",
+    "why": "page doesn't mention \"european meeting\""
+  },
+  {
+    "id": "love-dance-festival-lloret-feb-2027",
+    "name": "Love Dance Festival - Valentine's & Carnival Edition",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/p/DbI9N6KMudd/",
+    "finalUrl": "https://www.instagram.com/p/DbI9N6KMudd/",
+    "status": 200,
+    "verdict": "check",
+    "why": "unexpected page: \"Post isn't available • Instagram\""
+  },
+  {
+    "id": "meneate-viena-2027",
+    "name": "¡Menéate! Viena Cuban Dance Festival",
+    "kind": "ticketUrl",
+    "url": "https://cubailaviena.at/en/events/meneate27/",
+    "finalUrl": "https://cubailaviena.at/en/events/meneate27/",
+    "status": 403,
+    "verdict": "check",
+    "why": "blocked by bot protection (HTTP 403); open it by hand"
+  },
+  {
+    "id": "meneate-viena-2027",
+    "name": "¡Menéate! Viena Cuban Dance Festival",
+    "kind": "website",
+    "url": "https://cubailaviena.at/en/events/meneate-viena-2026/",
+    "finalUrl": "https://cubailaviena.at/en/events/meneate-viena-2026/",
+    "status": 403,
+    "verdict": "check",
+    "why": "blocked by bot protection (HTTP 403); open it by hand"
+  },
+  {
+    "id": "para-el-alma-divertir-augsburg-2027",
+    "name": "Para el Alma Divertir - Cuban Son Weekend",
+    "kind": "ticketUrl",
+    "url": "https://tickets.baila-augsburg.de/event/paraelalmadivertir-sonweekend2027/",
+    "finalUrl": "https://tickets.baila-augsburg.de/event/paraelalmadivertir-sonweekend2027/",
+    "status": 200,
+    "verdict": "check",
+    "why": "page is nearly empty"
+  },
+  {
+    "id": "quien-manda-aubagne-2027",
+    "name": "Quien Manda Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9845/quien-manda-festival-2027",
+    "finalUrl": "https://www.goandance.com/en/event/9845/quien-manda-festival-2027",
+    "status": 200,
+    "verdict": "check",
+    "why": "page is nearly empty"
+  },
+  {
+    "id": "ruedamania-yekaterinburg-2026",
+    "name": "Ruedamania 2026",
+    "kind": "website",
+    "url": "https://vk.com/ruedamania",
+    "finalUrl": "https://vk.ru/ruedamania",
+    "status": 200,
+    "verdict": "check",
+    "why": "redirects to vk.ru"
+  },
+  {
+    "id": "stockholm-bachata-cuban-marathon-2026",
+    "name": "Stockholm Salsa Marathon (Cuban Edition)",
+    "kind": "ticketUrl",
+    "url": "https://app.coursely.se/register/6f1aex9s8q9oyc5c?lang=en",
+    "finalUrl": "https://app.coursely.se/register/6f1aex9s8q9oyc5c?lang=en",
+    "status": 200,
+    "verdict": "check",
+    "why": "page doesn't mention \"stockholm marathon\""
+  },
+  {
+    "id": "timbeando-y-mambo-festival-lloret-2027",
+    "name": "Timbeando y Mambo Festival",
+    "kind": "website",
+    "url": "https://beacons.ai/timbeando_festival",
+    "finalUrl": "https://beacons.ai/timbeando_festival",
+    "status": 403,
+    "verdict": "check",
+    "why": "blocked by bot protection (HTTP 403); open it by hand"
+  },
+  {
+    "id": "a-toda-cuba-calenzano-2026",
+    "name": "A Toda Cuba Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/atodacuba/",
+    "finalUrl": "https://www.instagram.com/atodacuba/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "a-toda-cuba-calenzano-2026",
+    "name": "A Toda Cuba Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9646/a-toda-cuba-festival-2026",
+    "finalUrl": "https://www.goandance.com/en/event/9646/a-toda-cuba-festival-2026",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "afro-cuban-berlin-2026",
+    "name": "Afro Cuban Berlin",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/fiesta_elegante/",
+    "finalUrl": "https://www.instagram.com/fiesta_elegante/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "afro-cuban-berlin-2026",
+    "name": "Afro Cuban Berlin",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9746/afro-cuban-berlin",
+    "finalUrl": "https://www.goandance.com/en/event/9746/afro-cuban-berlin",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "afro-cuban-berlin-2026",
+    "name": "Afro Cuban Berlin",
+    "kind": "website",
+    "url": "https://www.berlinsalsafestival.com/",
+    "finalUrl": "https://www.berlinsalsafestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "afro-cuban-dance-festival-havana-2027",
+    "name": "Afro Cuban Dance Festival Havana",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/afrocubandancefestival/",
+    "finalUrl": "https://www.instagram.com/afrocubandancefestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "afro-cuban-dance-festival-havana-2027",
+    "name": "Afro Cuban Dance Festival Havana",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9863/afro-cuban-dance-festival-2027",
+    "finalUrl": "https://www.goandance.com/en/event/9863/afro-cuban-dance-festival-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "afro-cuban-dance-festival-havana-2027",
+    "name": "Afro Cuban Dance Festival Havana",
+    "kind": "website",
+    "url": "https://afrocubandancefestival.com/",
+    "finalUrl": "https://afrocubandancefestival.com/en/home1/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "agua-festival-thessaloniki-2026",
+    "name": "Agua Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/aguafestival/",
+    "finalUrl": "https://www.instagram.com/aguafestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "agua-festival-thessaloniki-2026",
+    "name": "Agua Festival",
+    "kind": "website",
+    "url": "https://www.aguasalsafestival.com/",
+    "finalUrl": "https://www.aguasalsafestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "albacete-en-salsa-2027",
+    "name": "Encuentro Internacional de Ritmos Latinos Albacete en Salsa",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/albaceteensalsa/",
+    "finalUrl": "https://www.instagram.com/albaceteensalsa/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "albacete-en-salsa-2027",
+    "name": "Encuentro Internacional de Ritmos Latinos Albacete en Salsa",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/es/evento/9465/xviii-encuentro-internacional-de-ritmos-latinos-albacete-en-salsa-2027",
+    "finalUrl": "https://www.goandance.com/es/evento/9465/xviii-encuentro-internacional-de-ritmos-latinos-albacete-en-salsa-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "albacete-en-salsa-2027",
+    "name": "Encuentro Internacional de Ritmos Latinos Albacete en Salsa",
+    "kind": "website",
+    "url": "https://albaceteensalsa.albaceteporcuba.com/",
+    "finalUrl": "https://albaceteensalsa.albaceteporcuba.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "albania-afro-latin-festival-tirana-2027",
+    "name": "Albania Afro Latin Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/official_albania_afrolatin/",
+    "finalUrl": "https://www.instagram.com/official_albania_afrolatin/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "albania-afro-latin-festival-tirana-2027",
+    "name": "Albania Afro Latin Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9601/albania-afrolatin-festival-2027",
+    "finalUrl": "https://www.goandance.com/en/event/9601/albania-afrolatin-festival-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "albania-afro-latin-festival-tirana-2027",
+    "name": "Albania Afro Latin Festival",
+    "kind": "website",
+    "url": "https://albaniaafrolatin.com/",
+    "finalUrl": "https://albaniaafrolatin.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "all-salsa-festival-lyon-2027",
+    "name": "All Salsa Festival Lyon",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/allsalsafestival/",
+    "finalUrl": "https://www.instagram.com/allsalsafestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "all-salsa-festival-lyon-2027",
+    "name": "All Salsa Festival Lyon",
+    "kind": "ticketUrl",
+    "url": "https://www.helloasso.com/associations/baila/adhesions/all-salsa-festival-2027-may-21-22-23-lyon-France",
+    "finalUrl": "https://www.helloasso.com/associations/baila/adhesions/all-salsa-festival-2027-may-21-22-23-lyon-france",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "alocubano-benidorm-2027",
+    "name": "AloCubano Salsa Festival Benidorm",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/alocubano_festival/",
+    "finalUrl": "https://www.instagram.com/alocubano_festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "alocubano-benidorm-2027",
+    "name": "AloCubano Salsa Festival Benidorm",
+    "kind": "ticketUrl",
+    "url": "https://alocubano.se/#buy-ticket",
+    "finalUrl": "https://alocubano.se/#buy-ticket",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "alocubano-benidorm-2027",
+    "name": "AloCubano Salsa Festival Benidorm",
+    "kind": "website",
+    "url": "https://alocubano.se/benidorm/",
+    "finalUrl": "https://alocubano.se/benidorm/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "alocubano-krakow-2026",
+    "name": "AloCubano Salsa Festival Krakow",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/alocubano_festival/",
+    "finalUrl": "https://www.instagram.com/alocubano_festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "alocubano-krakow-2026",
+    "name": "AloCubano Salsa Festival Krakow",
+    "kind": "ticketUrl",
+    "url": "https://alocubano.se/#buy-ticket",
+    "finalUrl": "https://alocubano.se/#buy-ticket",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "alocubano-krakow-2026",
+    "name": "AloCubano Salsa Festival Krakow",
+    "kind": "website",
+    "url": "https://alocubano.se/",
+    "finalUrl": "https://alocubano.se/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "arrasando-bremen-2027",
+    "name": "Arrasando Cuban Afro-Salsa Festival",
+    "kind": "website",
+    "url": "https://arrasandofestival.de/festival/",
+    "finalUrl": "https://arrasandofestival.de/festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "arrebatate-budapest-2027",
+    "name": "Arrebátate Cuban New Year Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/arrebatate/",
+    "finalUrl": "https://www.instagram.com/arrebatate/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "arrebatate-budapest-2027",
+    "name": "Arrebátate Cuban New Year Festival",
+    "kind": "ticketUrl",
+    "url": "https://my.weezevent.com/arrebatate9-cuban-salsa-festival-budapest",
+    "finalUrl": "https://my.weezevent.com/arrebatate9-cuban-salsa-festival-budapest",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "arrebatate-budapest-2027",
+    "name": "Arrebátate Cuban New Year Festival",
+    "kind": "website",
+    "url": "https://arrebatatefestival.com/",
+    "finalUrl": "https://arrebatatefestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "atlanta-afrocuban-dance-congress-2026",
+    "name": "Atlanta AfroCuban Dance Congress",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/afrocubancongress_atl/",
+    "finalUrl": "https://www.instagram.com/afrocubancongress_atl/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "atlanta-afrocuban-dance-congress-2026",
+    "name": "Atlanta AfroCuban Dance Congress",
+    "kind": "ticketUrl",
+    "url": "https://book.stripe.com/cNi8wO76D06CdU95mrfnO0b",
+    "finalUrl": "https://book.stripe.com/cNi8wO76D06CdU95mrfnO0b",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "atlanta-afrocuban-dance-congress-2026",
+    "name": "Atlanta AfroCuban Dance Congress",
+    "kind": "website",
+    "url": "https://afrocubandanceatl.com/",
+    "finalUrl": "https://afrocubandanceatl.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "atlanta-salsa-bachata-festival-2027",
+    "name": "Atlanta Salsa Bachata Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/atlantasalsabachatafestival/",
+    "finalUrl": "https://www.instagram.com/atlantasalsabachatafestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "atlanta-salsa-bachata-festival-2027",
+    "name": "Atlanta Salsa Bachata Festival",
+    "kind": "website",
+    "url": "https://www.atlantasbf.com/",
+    "finalUrl": "https://www.atlantasbf.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "ay-que-rico-salsa-festival-wieliczka-2027",
+    "name": "Ay Qué Rico Salsa Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/ayquerico_salsafestival/",
+    "finalUrl": "https://www.instagram.com/ayquerico_salsafestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "baila-new-york-2027",
+    "name": "Baila New York Dance Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/bailanydancefest_/",
+    "finalUrl": "https://www.instagram.com/bailanydancefest_/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "baila-new-york-2027",
+    "name": "Baila New York Dance Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.danceplace.com/book/it/17205",
+    "finalUrl": "https://www.danceplace.com/book/it/17205",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "baila-new-york-2027",
+    "name": "Baila New York Dance Festival",
+    "kind": "website",
+    "url": "https://www.bailanewyork.com/",
+    "finalUrl": "https://www.bailanewyork.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "bailan2-puro-cubano-drammen-2027",
+    "name": "Bailan2 Puro Cubano Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/bailan2purocubanofestival/",
+    "finalUrl": "https://www.instagram.com/bailan2purocubanofestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "bailan2-puro-cubano-drammen-2027",
+    "name": "Bailan2 Puro Cubano Festival",
+    "kind": "ticketUrl",
+    "url": "https://purocubanofestival.com/tickets/",
+    "finalUrl": "https://purocubanofestival.com/tickets/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "bailan2-puro-cubano-drammen-2027",
+    "name": "Bailan2 Puro Cubano Festival",
+    "kind": "website",
+    "url": "https://purocubanofestival.com/",
+    "finalUrl": "https://purocubanofestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "balkan-salsa-congress-borovets-2026",
+    "name": "Balkan Salsa Bachata Kizomba Congress",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/balkansalsacongress/",
+    "finalUrl": "https://www.instagram.com/balkansalsacongress/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "balkan-salsa-congress-borovets-2026",
+    "name": "Balkan Salsa Bachata Kizomba Congress",
+    "kind": "ticketUrl",
+    "url": "https://lospambosevents.com/balkan-salsa-bachata-kizomba-congress/prices",
+    "finalUrl": "https://lospambosevents.com/balkan-salsa-bachata-kizomba-congress/prices",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "balkan-salsa-congress-borovets-2026",
+    "name": "Balkan Salsa Bachata Kizomba Congress",
+    "kind": "website",
+    "url": "https://lospambosevents.com/balkan-salsa-bachata-kizomba-congress",
+    "finalUrl": "https://lospambosevents.com/balkan-salsa-bachata-kizomba-congress",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "berlin-fiesta-elegante-2027",
+    "name": "Berlin Salsa Festival 'Fiesta Elegante'",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/fiesta_elegante/",
+    "finalUrl": "https://www.instagram.com/fiesta_elegante/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "berlin-fiesta-elegante-2027",
+    "name": "Berlin Salsa Festival 'Fiesta Elegante'",
+    "kind": "ticketUrl",
+    "url": "https://www.berlinsalsafestival.com/tickets",
+    "finalUrl": "https://www.berlinsalsafestival.com/tickets",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "berlin-fiesta-elegante-2027",
+    "name": "Berlin Salsa Festival 'Fiesta Elegante'",
+    "kind": "website",
+    "url": "https://www.berlinsalsafestival.com/",
+    "finalUrl": "https://www.berlinsalsafestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "canada-salsa-bachata-congress-toronto-2026",
+    "name": "Canada Salsa and Bachata Congress",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/canadasalsaandbachatacongress/",
+    "finalUrl": "https://www.instagram.com/canadasalsaandbachatacongress/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "canada-salsa-bachata-congress-toronto-2026",
+    "name": "Canada Salsa and Bachata Congress",
+    "kind": "ticketUrl",
+    "url": "https://www.canadasalsacongress.com/tickets",
+    "finalUrl": "https://www.canadasalsacongress.com/tickets",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "canada-salsa-bachata-congress-toronto-2026",
+    "name": "Canada Salsa and Bachata Congress",
+    "kind": "website",
+    "url": "https://www.canadasalsacongress.com/",
+    "finalUrl": "https://www.canadasalsacongress.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "caribe-salsa-bachata-congress-punta-cana-2027",
+    "name": "Caribe Salsa & Bachata Congress RD",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/caribesalsabachatacongress/",
+    "finalUrl": "https://www.instagram.com/caribesalsabachatacongress/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "casinea-festival-bogota-2026",
+    "name": "Festival Internacional Casinea",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/casineafest/",
+    "finalUrl": "https://www.instagram.com/casineafest/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "casinea-festival-bogota-2026",
+    "name": "Festival Internacional Casinea",
+    "kind": "ticketUrl",
+    "url": "https://iledanza.com/categoria-producto/casinea/",
+    "finalUrl": "https://iledanza.com/categoria-producto/casinea/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "casinea-festival-bogota-2026",
+    "name": "Festival Internacional Casinea",
+    "kind": "website",
+    "url": "https://iledanza.com/casinea/",
+    "finalUrl": "https://iledanza.com/casinea/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "crazy-4-la-timba-lisbon-2026",
+    "name": "Crazy 4 la Timba",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/crazy4latimba/",
+    "finalUrl": "https://www.instagram.com/crazy4latimba/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "crazy-4-la-timba-lisbon-2026",
+    "name": "Crazy 4 la Timba",
+    "kind": "ticketUrl",
+    "url": "https://crazy4latimba.com/tickets/",
+    "finalUrl": "https://crazy4latimba.com/tickets/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "crazy-4-la-timba-lisbon-2026",
+    "name": "Crazy 4 la Timba",
+    "kind": "website",
+    "url": "https://crazy4latimba.com/",
+    "finalUrl": "https://crazy4latimba.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "crazy-dance-festival-2027",
+    "name": "Crazy Dance Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/crazydancefestival/",
+    "finalUrl": "https://www.instagram.com/crazydancefestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "crazy-dance-festival-2027",
+    "name": "Crazy Dance Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/es/evento/9689/crazy-dance-festival-2027",
+    "finalUrl": "https://www.goandance.com/es/evento/9689/crazy-dance-festival-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "crazy-dance-festival-2027",
+    "name": "Crazy Dance Festival",
+    "kind": "website",
+    "url": "https://www.crazydancefestival.com/",
+    "finalUrl": "https://www.crazydancefestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "croatian-summer-salsa-rovinj-2027",
+    "name": "Croatian Summer Salsa Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/seasunsalsa/",
+    "finalUrl": "https://www.instagram.com/seasunsalsa/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "croatian-summer-salsa-rovinj-2027",
+    "name": "Croatian Summer Salsa Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.crosalsafestival.com/tickets",
+    "finalUrl": "https://www.crosalsafestival.com/tickets",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "croatian-summer-salsa-rovinj-2027",
+    "name": "Croatian Summer Salsa Festival",
+    "kind": "website",
+    "url": "https://www.crosalsafestival.com/2026",
+    "finalUrl": "https://www.crosalsafestival.com/2026",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuba-in-tunisia-monastir-2027",
+    "name": "Cuba in Tunisia",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/cubaintunisia/",
+    "finalUrl": "https://www.instagram.com/cubaintunisia/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuba-in-tunisia-monastir-2027",
+    "name": "Cuba in Tunisia",
+    "kind": "ticketUrl",
+    "url": "https://cit-festival.com/tickets",
+    "finalUrl": "https://cit-festival.com/tickets",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuba-in-tunisia-monastir-2027",
+    "name": "Cuba in Tunisia",
+    "kind": "website",
+    "url": "https://cit-festival.com/",
+    "finalUrl": "https://cit-festival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuba-me-mucho-angers-2027",
+    "name": "Cuba Me Mucho - Angers Salsa Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/cuba_me_mucho/",
+    "finalUrl": "https://www.instagram.com/cuba_me_mucho/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuba-me-mucho-angers-2027",
+    "name": "Cuba Me Mucho - Angers Salsa Festival",
+    "kind": "ticketUrl",
+    "url": "https://my.weezevent.com/cuba-me-mucho-7e-edition-angers",
+    "finalUrl": "https://my.weezevent.com/cuba-me-mucho-7e-edition-angers",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuba-me-mucho-angers-2027",
+    "name": "Cuba Me Mucho - Angers Salsa Festival",
+    "kind": "website",
+    "url": "https://bailaconamigos.com/soirees-et-evenements/cuba-me-mucho-angers/",
+    "finalUrl": "https://bailaconamigos.com/soirees-et-evenements/cuba-me-mucho-angers/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuba-y-ya-festival-toulon-2026",
+    "name": "Cuba y Ya Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/cuba_y_ya/",
+    "finalUrl": "https://www.instagram.com/cuba_y_ya/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuba-y-ya-festival-toulon-2026",
+    "name": "Cuba y Ya Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.helloasso.com/associations/tumba-timba-event",
+    "finalUrl": "https://www.helloasso.com/associations/tumba-timba-event",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cubajena-jena-2026",
+    "name": "CubaJena - Festival de Salsa Cubana",
+    "kind": "ticketUrl",
+    "url": "https://www.cubajena.de/shop/",
+    "finalUrl": "https://www.cubajena.de/shop/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cubajena-jena-2026",
+    "name": "CubaJena - Festival de Salsa Cubana",
+    "kind": "website",
+    "url": "https://www.cubajena.de/",
+    "finalUrl": "https://www.cubajena.de/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuban-bratislava-weekend-2026",
+    "name": "Cuban Bratislava Weekend",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/salsabynorika/",
+    "finalUrl": "https://www.instagram.com/salsabynorika/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuban-bratislava-weekend-2026",
+    "name": "Cuban Bratislava Weekend",
+    "kind": "ticketUrl",
+    "url": "https://events.sbn.sk/event/ev2",
+    "finalUrl": "https://events.sbn.sk/event/ev2",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuban-bratislava-weekend-2026",
+    "name": "Cuban Bratislava Weekend",
+    "kind": "website",
+    "url": "https://events.sbn.sk/event/ev2",
+    "finalUrl": "https://events.sbn.sk/event/ev2",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuban-flow-anglet-2026",
+    "name": "Cuban Flow Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/cubanflowfestival/",
+    "finalUrl": "https://www.instagram.com/cubanflowfestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuban-flow-anglet-2026",
+    "name": "Cuban Flow Festival",
+    "kind": "website",
+    "url": "https://cubanflowfestival.com/",
+    "finalUrl": "https://cubanflowfestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuban-ile-noirmoutier-2027",
+    "name": "Festival Cuban'île",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/cubanilefestival/",
+    "finalUrl": "https://www.instagram.com/cubanilefestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cuban-ile-noirmoutier-2027",
+    "name": "Festival Cuban'île",
+    "kind": "ticketUrl",
+    "url": "https://www.helloasso.com/associations/cuban-ile/evenements/cuban-ile-5-mars-2027",
+    "finalUrl": "https://www.helloasso.com/associations/cuban-ile/evenements/cuban-ile-5-mars-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cubaneo-festival-nurnberg-2027",
+    "name": "Cubaneo el Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/cubaneo_el_festival/",
+    "finalUrl": "https://www.instagram.com/cubaneo_el_festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cubaneo-festival-nurnberg-2027",
+    "name": "Cubaneo el Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.cubaneo-el-festival.de/buchen.html",
+    "finalUrl": "https://www.cubaneo-el-festival.de/buchen.html",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cubaneo-festival-nurnberg-2027",
+    "name": "Cubaneo el Festival",
+    "kind": "website",
+    "url": "https://www.cubaneo-el-festival.de/",
+    "finalUrl": "https://www.cubaneo-el-festival.de/willkomen-bei-cubaneo-el-festival.html",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cubanero-novi-sad-2027",
+    "name": "Cubanero Salsa Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/cubanerosalsa/",
+    "finalUrl": "https://www.instagram.com/cubanerosalsa/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cubanero-novi-sad-2027",
+    "name": "Cubanero Salsa Festival",
+    "kind": "ticketUrl",
+    "url": "https://cubanero.net/tickets/",
+    "finalUrl": "https://cubanero.net/tickets/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cubanero-novi-sad-2027",
+    "name": "Cubanero Salsa Festival",
+    "kind": "website",
+    "url": "https://cubanero.net/",
+    "finalUrl": "https://cubanero.net/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cubanital-afro-cuban-event-bari-2027",
+    "name": "Cubanital - Afro Cuban Event",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/cubanital_afrocubanevent/",
+    "finalUrl": "https://www.instagram.com/cubanital_afrocubanevent/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cubanital-afro-cuban-event-bari-2027",
+    "name": "Cubanital - Afro Cuban Event",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9568/cubanital-2027",
+    "finalUrl": "https://www.goandance.com/en/event/9568/cubanital-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cubasi-congress-valledoria-2027",
+    "name": "CubaSi Congress",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/cubasiacademidancesport/",
+    "finalUrl": "https://www.instagram.com/cubasiacademidancesport/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cultural-social-dance-fest-copenhagen-2026",
+    "name": "Cultural Social Dance Fest",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/bachatadominicanacopenhagen/",
+    "finalUrl": "https://www.instagram.com/bachatadominicanacopenhagen/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cultural-social-dance-fest-copenhagen-2026",
+    "name": "Cultural Social Dance Fest",
+    "kind": "ticketUrl",
+    "url": "https://bachatacopenhagen.dk/events/cultural-social-dance-fest/",
+    "finalUrl": "https://bachatacopenhagen.dk/events/cultural-social-dance-fest/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "cultural-social-dance-fest-copenhagen-2026",
+    "name": "Cultural Social Dance Fest",
+    "kind": "website",
+    "url": "https://bachatacopenhagen.dk/events/cultural-social-dance-fest/",
+    "finalUrl": "https://bachatacopenhagen.dk/events/cultural-social-dance-fest/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "dame-cuba-tenerife-2026",
+    "name": "Dame Cuba Festival Tenerife",
+    "kind": "ticketUrl",
+    "url": "https://www.damecuba.com/festival-frankfurt/#Anmeldung",
+    "finalUrl": "https://www.damecuba.com/festival-frankfurt/#Anmeldung",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "dame-cuba-tenerife-2026",
+    "name": "Dame Cuba Festival Tenerife",
+    "kind": "website",
+    "url": "https://www.damecuba.com/festival-frankfurt/",
+    "finalUrl": "https://www.damecuba.com/festival-frankfurt/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "dame-festival-valencia-2027",
+    "name": "Dame Festival Valencia",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/damefestival/",
+    "finalUrl": "https://www.instagram.com/damefestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "dame-festival-valencia-2027",
+    "name": "Dame Festival Valencia",
+    "kind": "ticketUrl",
+    "url": "https://damevalencia.com/eventos/dame-festival-2027",
+    "finalUrl": "https://damevalencia.com/eventos/dame-festival-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "dame-festival-valencia-2027",
+    "name": "Dame Festival Valencia",
+    "kind": "website",
+    "url": "https://damefestival.es/?lang=en#inicio",
+    "finalUrl": "https://damefestival.es/?lang=en#inicio",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "dance-congress-hamburg-2026",
+    "name": "Dance Congress Hamburg",
+    "kind": "ticketUrl",
+    "url": "https://www.tickettailor.com/events/saltimbahamburg/1961406",
+    "finalUrl": "https://www.tickettailor.com/events/saltimbahamburg/1961406",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "dcuba-international-congress-2026",
+    "name": "D'Cuba International Congress",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/dcubacongress/",
+    "finalUrl": "https://www.instagram.com/dcubacongress/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "dcuba-international-congress-2026",
+    "name": "D'Cuba International Congress",
+    "kind": "ticketUrl",
+    "url": "https://www.dcubacongress.com/en/je-r%C3%A9serve",
+    "finalUrl": "https://www.dcubacongress.com/en/je-r%C3%A9serve",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "dcuba-international-congress-2026",
+    "name": "D'Cuba International Congress",
+    "kind": "website",
+    "url": "https://www.dcubacongress.com/",
+    "finalUrl": "https://www.dcubacongress.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "duke-dance-uk-evolution-gillingham-2026",
+    "name": "DUKE Dance UK Evolution",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/danceukevolution/",
+    "finalUrl": "https://www.instagram.com/danceukevolution/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "duke-dance-uk-evolution-gillingham-2026",
+    "name": "DUKE Dance UK Evolution",
+    "kind": "website",
+    "url": "https://danceukevolution.com/",
+    "finalUrl": "https://danceukevolution.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "el-dos-tres-salsa-festival-dubai-2027",
+    "name": "El Dos Tres Salsa Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/eldostressalsafestival/",
+    "finalUrl": "https://www.instagram.com/eldostressalsafestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "el-dos-tres-salsa-festival-dubai-2027",
+    "name": "El Dos Tres Salsa Festival",
+    "kind": "ticketUrl",
+    "url": "https://eldostressalsafestival.com/pages/early-bird-full-pass",
+    "finalUrl": "https://eldostressalsafestival.com/pages/early-bird-full-pass",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "el-dos-tres-salsa-festival-dubai-2027",
+    "name": "El Dos Tres Salsa Festival",
+    "kind": "website",
+    "url": "https://eldostressalsafestival.com/",
+    "finalUrl": "https://eldostressalsafestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "el-que-sabe-sabe-anzio-2026",
+    "name": "El Que Sabe, Sabe",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/elquesabesabe_festival/",
+    "finalUrl": "https://www.instagram.com/elquesabesabe_festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "el-sol-festival-warsaw-2026",
+    "name": "el Sol Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/elsolfestivals/",
+    "finalUrl": "https://www.instagram.com/elsolfestivals/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "el-sol-festival-warsaw-2026",
+    "name": "el Sol Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9085/el-sol-festival-fall-edition-2026",
+    "finalUrl": "https://www.goandance.com/en/event/9085/el-sol-festival-fall-edition-2026",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "el-sol-festival-warsaw-2026",
+    "name": "el Sol Festival",
+    "kind": "website",
+    "url": "https://elsolfestival.pl/en/",
+    "finalUrl": "https://elsolfestival.pl/en/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "el-son-se-viste-de-gala-santa-susanna-2026",
+    "name": "Festival El Son se Viste de Gala",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/elsonsevistedegala/",
+    "finalUrl": "https://www.instagram.com/elsonsevistedegala/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "el-son-se-viste-de-gala-santa-susanna-2026",
+    "name": "Festival El Son se Viste de Gala",
+    "kind": "ticketUrl",
+    "url": "https://my.weezevent.com/el-son-se-viste-de-gala-festival-1",
+    "finalUrl": "https://my.weezevent.com/el-son-se-viste-de-gala-festival-1",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "enruedate-congress-santa-susanna-2026",
+    "name": "Enruédate Congress",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/asociacionruedadecasino/",
+    "finalUrl": "https://www.instagram.com/asociacionruedadecasino/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "enruedate-congress-santa-susanna-2026",
+    "name": "Enruédate Congress",
+    "kind": "ticketUrl",
+    "url": "https://www.asociacionruedadecasino.com/tienda",
+    "finalUrl": "https://www.asociacionruedadecasino.com/tienda",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "enruedate-congress-santa-susanna-2026",
+    "name": "Enruédate Congress",
+    "kind": "website",
+    "url": "https://www.asociacionruedadecasino.com/",
+    "finalUrl": "https://www.asociacionruedadecasino.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festival-cultura-cubana-montesilvano-2027",
+    "name": "Festival Cultura Cubana FCC",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/fcc_festivalculturacubana/",
+    "finalUrl": "https://www.instagram.com/fcc_festivalculturacubana/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festival-cultura-cubana-montesilvano-2027",
+    "name": "Festival Cultura Cubana FCC",
+    "kind": "website",
+    "url": "https://www.festivalculturacubana.it/",
+    "finalUrl": "https://www.festivalculturacubana.it/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festival-de-cuba-stuttgart-2026",
+    "name": "Festival de Cuba Stuttgart",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/festivaldecuba/",
+    "finalUrl": "https://www.instagram.com/festivaldecuba/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festival-de-cuba-stuttgart-2026",
+    "name": "Festival de Cuba Stuttgart",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9563/festival-de-cuba-stuttgart-germany-2026-21st-edition",
+    "finalUrl": "https://www.goandance.com/en/event/9563/festival-de-cuba-stuttgart-germany-2026-21st-edition",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festival-de-cuba-stuttgart-2026",
+    "name": "Festival de Cuba Stuttgart",
+    "kind": "website",
+    "url": "https://cubafestival-stuttgart.de/",
+    "finalUrl": "https://cubafestival-stuttgart.de/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festival-de-la-salsa-havana-2027",
+    "name": "Festival de la Salsa - 10th Anniversary",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/elfestivaldelasalsaencuba/",
+    "finalUrl": "https://www.instagram.com/elfestivaldelasalsaencuba/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festival-la-speciale-renens-2026",
+    "name": "Festival La Spéciale 3 - Salsamas 10 Years",
+    "kind": "website",
+    "url": "https://salsamas.godaddysites.com/la-speciale-3",
+    "finalUrl": "https://salsamas.godaddysites.com/la-speciale-3",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festival-rueda-globetrotters-toulouse-2026",
+    "name": "Festival Rueda GlobeTrotters VOL.8",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/festivalruedaglobetrotters/",
+    "finalUrl": "https://www.instagram.com/festivalruedaglobetrotters/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festival-rueda-globetrotters-toulouse-2026",
+    "name": "Festival Rueda GlobeTrotters VOL.8",
+    "kind": "ticketUrl",
+    "url": "https://rgtfestival.com/billetterie",
+    "finalUrl": "https://rgtfestival.com/billetterie",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festival-rueda-globetrotters-toulouse-2026",
+    "name": "Festival Rueda GlobeTrotters VOL.8",
+    "kind": "website",
+    "url": "https://rgtfestival.com/",
+    "finalUrl": "https://rgtfestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festival-social-costa-dance-santa-susanna-2027",
+    "name": "Festival Social Costa Dance",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/vamosabailarcongress/",
+    "finalUrl": "https://www.instagram.com/vamosabailarcongress/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festivalito-leipzig-2026",
+    "name": "Festivalito Leipzig",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/baileo_tanzschule/",
+    "finalUrl": "https://www.instagram.com/baileo_tanzschule/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festivalito-leipzig-2026",
+    "name": "Festivalito Leipzig",
+    "kind": "ticketUrl",
+    "url": "https://baileo.nimbuscloud.at/index.php?c=PublicCustomers&a=Courses&type=xx&level=xx&tag=festivalito",
+    "finalUrl": "https://baileo.nimbuscloud.at/index.php?c=PublicCustomers&a=Courses&type=xx&level=xx&tag=festivalito",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "festivalito-leipzig-2026",
+    "name": "Festivalito Leipzig",
+    "kind": "website",
+    "url": "https://www.baileo.de/festivalito-leipzig/",
+    "finalUrl": "https://www.baileo.de/festivalito-leipzig/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "fic-orange-2026",
+    "name": "FIC - Festival International Cubano",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/fic_festival_cubano/",
+    "finalUrl": "https://www.instagram.com/fic_festival_cubano/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "fic-orange-2026",
+    "name": "FIC - Festival International Cubano",
+    "kind": "ticketUrl",
+    "url": "https://my.weezevent.com/fic-2026",
+    "finalUrl": "https://my.weezevent.com/fic-2026",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "francia-cuba-festival-vitry-2027",
+    "name": "Francia Cuba Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/franciacubafestival/",
+    "finalUrl": "https://www.instagram.com/franciacubafestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "francia-cuba-festival-vitry-2027",
+    "name": "Francia Cuba Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.helloasso.com/associations/los-ases-de-la-timba/evenements/francia-cuba-festival-2027-1",
+    "finalUrl": "https://www.helloasso.com/associations/los-ases-de-la-timba/evenements/francia-cuba-festival-2027-1",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "fusafes-fukuoka-salsa-festival-2027",
+    "name": "FUSABAFES Fukuoka",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/npotiempoiberoamericano/",
+    "finalUrl": "https://www.instagram.com/npotiempoiberoamericano/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "gaditaneando-a-lo-cubano-rota-2027",
+    "name": "Gaditaneando a lo Cubano",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/gaditaneandoalocubano/",
+    "finalUrl": "https://www.instagram.com/gaditaneandoalocubano/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "gaditaneando-a-lo-cubano-rota-2027",
+    "name": "Gaditaneando a lo Cubano",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9780/gaditaneando-a-lo-cubano-2027",
+    "finalUrl": "https://www.goandance.com/en/event/9780/gaditaneando-a-lo-cubano-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "guaguanco-festival-lloret-2027",
+    "name": "Guaguancó Festival - Gold Edition",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/guaguancofestival/",
+    "finalUrl": "https://www.instagram.com/guaguancofestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "guaguanco-festival-lloret-2027",
+    "name": "Guaguancó Festival - Gold Edition",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9474/guaguanco-festival-2027-gold-edition",
+    "finalUrl": "https://www.goandance.com/en/event/9474/guaguanco-festival-2027-gold-edition",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "guaguanco-festival-lloret-2027",
+    "name": "Guaguancó Festival - Gold Edition",
+    "kind": "website",
+    "url": "https://www.guaguancofestival.com/",
+    "finalUrl": "https://www.guaguancofestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "guarachando-festival-strasbourg-2027",
+    "name": "Guarachando Festival 4",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/guarachando_festival/",
+    "finalUrl": "https://www.instagram.com/guarachando_festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "guarachando-festival-strasbourg-2027",
+    "name": "Guarachando Festival 4",
+    "kind": "ticketUrl",
+    "url": "https://my.weezevent.com/guarachando-festival-4-1",
+    "finalUrl": "https://my.weezevent.com/guarachando-festival-4-1",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "gusto-cubano-kecskemet-2026",
+    "name": "Gusto Cubano Salsa & Bachata Weekend",
+    "kind": "website",
+    "url": "https://www.facebook.com/events/1267777715159248/",
+    "finalUrl": "https://www.facebook.com/events/1267777715159248/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "hasta-santiago-a-pie-marssac-2026",
+    "name": "Hasta Santiago a Pie 3",
+    "kind": "ticketUrl",
+    "url": "https://www.billetweb.fr/hasta-santiago-a-pie-3",
+    "finalUrl": "https://www.billetweb.fr/hasta-santiago-a-pie-3",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "hasta-santiago-a-pie-marssac-2026",
+    "name": "Hasta Santiago a Pie 3",
+    "kind": "website",
+    "url": "https://www.facebook.com/profile.php?id=61561947487965&sk=about",
+    "finalUrl": "https://www.facebook.com/people/Hasta-Santiago-a-pie/61561947487965/?sk=about",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "havana-en-belgrado-2026",
+    "name": "Havana en Belgrado",
+    "kind": "ticketUrl",
+    "url": "https://my.weezevent.com/havana-en-belgrado-13",
+    "finalUrl": "https://my.weezevent.com/havana-en-belgrado-13",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "havana-en-belgrado-2026",
+    "name": "Havana en Belgrado",
+    "kind": "website",
+    "url": "https://www.havanaenbelgrado.com/",
+    "finalUrl": "https://www.havanaenbelgrado.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "hungarian-summer-salsa-sensual-festival-2027",
+    "name": "Hungarian Summer Salsa and Sensual Festival (HSSF)",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/hssfhungary/",
+    "finalUrl": "https://www.instagram.com/hssfhungary/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "hungarian-summer-salsa-sensual-festival-2027",
+    "name": "Hungarian Summer Salsa and Sensual Festival (HSSF)",
+    "kind": "ticketUrl",
+    "url": "https://hssf.eu/foglalas/",
+    "finalUrl": "https://hssf.eu/foglalas/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "hungarian-summer-salsa-sensual-festival-2027",
+    "name": "Hungarian Summer Salsa and Sensual Festival (HSSF)",
+    "kind": "website",
+    "url": "https://hssf.eu/",
+    "finalUrl": "https://hssf.eu/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "international-salsa-bachata-kizomba-congress-sofia-2027",
+    "name": "International Salsa Bachata Kizomba Congress",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/internationalsalsacongress/",
+    "finalUrl": "https://www.instagram.com/internationalsalsacongress/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "international-salsa-bachata-kizomba-congress-sofia-2027",
+    "name": "International Salsa Bachata Kizomba Congress",
+    "kind": "ticketUrl",
+    "url": "https://lospambosevents.com/international-salsa-bachata-kizomba-congress/prices",
+    "finalUrl": "https://lospambosevents.com/international-salsa-bachata-kizomba-congress/prices",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "international-salsa-bachata-kizomba-congress-sofia-2027",
+    "name": "International Salsa Bachata Kizomba Congress",
+    "kind": "website",
+    "url": "https://lospambosevents.com/international-salsa-bachata-kizomba-congress",
+    "finalUrl": "https://lospambosevents.com/international-salsa-bachata-kizomba-congress",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "istanbul-social-dance-marathon-2026",
+    "name": "Istanbul Social Dance Marathon",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/8567/8th-istanbul-social-dance-marathon-7th-12th-october-2026-turkiye",
+    "finalUrl": "https://www.goandance.com/en/event/8567/postponed-8th-istanbul-social-dance-marathon-turkiye",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "istanbul-social-dance-marathon-2026",
+    "name": "Istanbul Social Dance Marathon",
+    "kind": "website",
+    "url": "https://www.dancemarathonistanbul.com/",
+    "finalUrl": "https://www.dancemarathonistanbul.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "istanbul-world-dance-congress-2027",
+    "name": "Istanbul World Dance Congress",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/istanbulworlddancecongress/",
+    "finalUrl": "https://www.instagram.com/istanbulworlddancecongress/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "istanbul-world-dance-congress-2027",
+    "name": "Istanbul World Dance Congress",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9956/istanbul-world-dance-congress-2027",
+    "finalUrl": "https://www.goandance.com/en/event/9956/iwdc-istanbul-world-dance-congress-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "istanbul-world-dance-congress-2027",
+    "name": "Istanbul World Dance Congress",
+    "kind": "website",
+    "url": "https://istanbulworlddancecongress.com/",
+    "finalUrl": "https://istanbulworlddancecongress.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-clave-festival-lloret-2026",
+    "name": "La Clave Festival - 5th Anniversary",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/laclave_festival/",
+    "finalUrl": "https://www.instagram.com/laclave_festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-clave-festival-lloret-2026",
+    "name": "La Clave Festival - 5th Anniversary",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/es/evento/8764/la-clave-festival-2026-premium-edition",
+    "finalUrl": "https://www.goandance.com/es/evento/8764/la-clave-festival-2026-premium-edition",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-clave-festival-lloret-2026",
+    "name": "La Clave Festival - 5th Anniversary",
+    "kind": "website",
+    "url": "https://laclavefestival.com/",
+    "finalUrl": "https://laclavefestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-descarga-augsburg-2026",
+    "name": "La Descarga",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/ladescarga.cubanmeetsdominican/",
+    "finalUrl": "https://www.instagram.com/ladescarga.cubanmeetsdominican/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-descarga-augsburg-2026",
+    "name": "La Descarga",
+    "kind": "ticketUrl",
+    "url": "https://tickets.baila-augsburg.de/event/la-descarga-festival/",
+    "finalUrl": "https://tickets.baila-augsburg.de/event/la-descarga-festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-descarga-augsburg-2026",
+    "name": "La Descarga",
+    "kind": "website",
+    "url": "https://www.baila-augsburg.de/ladescarga",
+    "finalUrl": "https://www.baila-augsburg.de/ladescarga",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-dosis-london-2027",
+    "name": "La Dosis (by Rueda Libre)",
+    "kind": "ticketUrl",
+    "url": "https://ruedalibre.co.uk/la-dosis/",
+    "finalUrl": "https://ruedalibre.co.uk/la-dosis/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-dosis-london-2027",
+    "name": "La Dosis (by Rueda Libre)",
+    "kind": "website",
+    "url": "https://ruedalibre.co.uk/la-dosis/",
+    "finalUrl": "https://ruedalibre.co.uk/la-dosis/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-gozadera-weekend-benidorm-2026",
+    "name": "La Gozadera Weekend",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/lagozaderaweekend/",
+    "finalUrl": "https://www.instagram.com/lagozaderaweekend/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-gozadera-weekend-benidorm-2026",
+    "name": "La Gozadera Weekend",
+    "kind": "ticketUrl",
+    "url": "https://salsero.es/eventshop/9761",
+    "finalUrl": "https://salsero.es/eventshop/9761",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-gozadera-xl-troyes-2027",
+    "name": "La Gozadera XL",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/lagozadera.xl/",
+    "finalUrl": "https://www.instagram.com/lagozadera.xl/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-gozadera-xl-troyes-2027",
+    "name": "La Gozadera XL",
+    "kind": "ticketUrl",
+    "url": "https://www.helloasso.com/associations/latinea/evenements/la-gozadera-xl-2nd-edition",
+    "finalUrl": "https://www.helloasso.com/associations/latinea/evenements/la-gozadera-xl-2nd-edition",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-klave-dortmund-2026",
+    "name": "La Klave Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/laklavefestival/",
+    "finalUrl": "https://www.instagram.com/laklavefestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-klave-dortmund-2026",
+    "name": "La Klave Festival",
+    "kind": "ticketUrl",
+    "url": "https://pretix.eu/laklavefestival/2026/5036746/",
+    "finalUrl": "https://pretix.eu/laklavefestival/2026/5036746/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-klave-dortmund-2026",
+    "name": "La Klave Festival",
+    "kind": "website",
+    "url": "https://www.laklavefestival.de/",
+    "finalUrl": "https://www.laklavefestival.de/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-verdad-latin-event-scanzano-2027",
+    "name": "La Verdad Latin Event",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/laverdad_latinevent/",
+    "finalUrl": "https://www.instagram.com/laverdad_latinevent/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-vibra-cubana-warsaw-2026",
+    "name": "La Vibra Cubana Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/lavibracubanafestival/",
+    "finalUrl": "https://www.instagram.com/lavibracubanafestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-vibra-cubana-warsaw-2026",
+    "name": "La Vibra Cubana Festival",
+    "kind": "ticketUrl",
+    "url": "https://abra-studio.pl/produkt/lavibracubana-festival-2026/",
+    "finalUrl": "https://abra-studio.pl/produkt/lavibracubana-festival-2027/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-vibra-cubana-warsaw-2026",
+    "name": "La Vibra Cubana Festival",
+    "kind": "website",
+    "url": "https://abra-studio.pl/produkt/lavibracubana-festival-2026/",
+    "finalUrl": "https://abra-studio.pl/produkt/lavibracubana-festival-2027/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "last-summer-dance-festival-sagone-2026",
+    "name": "Last Summer Dance Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/lastsummerdancefestival/",
+    "finalUrl": "https://www.instagram.com/lastsummerdancefestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "last-summer-dance-festival-sagone-2026",
+    "name": "Last Summer Dance Festival",
+    "kind": "ticketUrl",
+    "url": "https://my.weezevent.com/last-summer-dance-festival-6eme-edition",
+    "finalUrl": "https://my.weezevent.com/last-summer-dance-festival-6eme-edition",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "latin-dance-festival-lloret-2026",
+    "name": "Latin Dance Festival & WTP European Meeting",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/latin_dance_festival/",
+    "finalUrl": "https://www.instagram.com/latin_dance_festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "latin-garden-festival-helsinki-2026",
+    "name": "Latin Garden Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/latingardenhelsinki/",
+    "finalUrl": "https://www.instagram.com/latingardenhelsinki/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "latin-garden-festival-helsinki-2026",
+    "name": "Latin Garden Festival",
+    "kind": "ticketUrl",
+    "url": "https://appwedance.com/en/events/latin-garden-festival-2026-a7882065",
+    "finalUrl": "https://appwedance.com/en/events/latin-garden-festival-2026-a7882065",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "loco-festival-valencia-2026",
+    "name": "Loco Festival - 5th Anniversary",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/locovalenciasalsa/",
+    "finalUrl": "https://www.instagram.com/locovalenciasalsa/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "loco-festival-valencia-2026",
+    "name": "Loco Festival - 5th Anniversary",
+    "kind": "ticketUrl",
+    "url": "https://my.weezevent.com/loco-festival-anniversary",
+    "finalUrl": "https://my.weezevent.com/loco-festival-anniversary",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "loco-festival-valencia-2026",
+    "name": "Loco Festival - 5th Anniversary",
+    "kind": "website",
+    "url": "https://loco-valencia-salsa.es/loco-festival-5/",
+    "finalUrl": "https://loco-valencia-salsa.es/loco-festival-5/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "los-dos-abuelos-festival-2027",
+    "name": "Los Dos Abuelos Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/losdosabueloss/",
+    "finalUrl": "https://www.instagram.com/losdosabueloss/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "los-dos-abuelos-festival-2027",
+    "name": "Los Dos Abuelos Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/es/evento/9436/los-dos-abuelos-festival-2027-el-festival-internacional-de-la-rumba-y-el-son",
+    "finalUrl": "https://www.goandance.com/es/evento/9436/los-dos-abuelos-festival-2027-el-festival-internacional-de-la-rumba-y-el-son",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "love-dance-festival-lloret-feb-2027",
+    "name": "Love Dance Festival - Valentine's & Carnival Edition",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9748/love-dance-festival-15-edition-february-2027-edicion-valentine-s-day-and-carnival-edition",
+    "finalUrl": "https://www.goandance.com/en/event/9748/love-dance-festival-15-edition-february-2027-edicion-valentine-s-day-and-carnival-edition",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "love-dance-festival-lloret-feb-2027",
+    "name": "Love Dance Festival - Valentine's & Carnival Edition",
+    "kind": "website",
+    "url": "https://lovedancefestival.com/",
+    "finalUrl": "https://lovedancefestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "lucus-son-congress-lugo-2027",
+    "name": "Lucus Son Congress",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/lucus_son_congress/",
+    "finalUrl": "https://www.instagram.com/lucus_son_congress/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "lucus-son-congress-lugo-2027",
+    "name": "Lucus Son Congress",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9555/lucus-son-congress",
+    "finalUrl": "https://www.goandance.com/en/event/9555/lucus-son-congress",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "made-in-cuba-festival-original-perugia-2027",
+    "name": "Made in Cuba Festival Original",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/made_in_cuba_festival_original/",
+    "finalUrl": "https://www.instagram.com/made_in_cuba_festival_original/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "made-in-cuba-festival-original-perugia-2027",
+    "name": "Made in Cuba Festival Original",
+    "kind": "website",
+    "url": "https://www.madeincubafestival.it/",
+    "finalUrl": "https://www.madeincubafestival.it/2027/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "made-in-south-bisceglie-2026",
+    "name": "Made in South - Danza e Cultura",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/madeinsouthpuglia/",
+    "finalUrl": "https://www.instagram.com/madeinsouthpuglia/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "manana-ljubljana-2027",
+    "name": "Manana Ljubljana",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/mananaljubljana/",
+    "finalUrl": "https://www.instagram.com/mananaljubljana/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "manana-ljubljana-2027",
+    "name": "Manana Ljubljana",
+    "kind": "website",
+    "url": "https://manana.si/",
+    "finalUrl": "https://manana.si/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "mas-que-cubano-bilbao-2027",
+    "name": "Más que cubano Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/masquecubano/",
+    "finalUrl": "https://www.instagram.com/masquecubano/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "mas-que-cubano-bilbao-2027",
+    "name": "Más que cubano Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/es/evento/9003/mas-que-cubano-festival-bilbao-2027-5a-edicion",
+    "finalUrl": "https://www.goandance.com/es/evento/9003/mas-que-cubano-festival-bilbao-2027-5a-edicion",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "me-salsa-fest-birmingham-2027",
+    "name": "Me Salsa Fest",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/mesalsafest/",
+    "finalUrl": "https://www.instagram.com/mesalsafest/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "me-salsa-fest-birmingham-2027",
+    "name": "Me Salsa Fest",
+    "kind": "ticketUrl",
+    "url": "https://my.weezevent.com/msf27",
+    "finalUrl": "https://my.weezevent.com/msf27",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "me-salsa-fest-birmingham-2027",
+    "name": "Me Salsa Fest",
+    "kind": "website",
+    "url": "https://www.mesalsadance.com/blank",
+    "finalUrl": "https://www.mesalsadance.com/blank",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "meneate-viena-2027",
+    "name": "¡Menéate! Viena Cuban Dance Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/meneateviena/",
+    "finalUrl": "https://www.instagram.com/meneateviena/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "merseyside-latin-festival-liverpool-2026",
+    "name": "Merseyside Latin Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/merseysidelatinfestival/",
+    "finalUrl": "https://www.instagram.com/merseysidelatinfestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "merseyside-latin-festival-liverpool-2026",
+    "name": "Merseyside Latin Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.merseysidelatinfestival.co.uk/tickets",
+    "finalUrl": "https://www.merseysidelatinfestival.co.uk/tickets",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "merseyside-latin-festival-liverpool-2026",
+    "name": "Merseyside Latin Festival",
+    "kind": "website",
+    "url": "https://www.merseysidelatinfestival.co.uk/",
+    "finalUrl": "https://www.merseysidelatinfestival.co.uk/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "mexico-timba-congress-2027",
+    "name": "Mexico Timba Congress",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/mexico.timba.congress/",
+    "finalUrl": "https://www.instagram.com/mexico.timba.congress/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "mi-habana-baila-santa-susanna-apr-2027",
+    "name": "Mi Habana Baila Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/mihabanabaila_festival/",
+    "finalUrl": "https://www.instagram.com/mihabanabaila_festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "mi-habana-baila-santa-susanna-apr-2027",
+    "name": "Mi Habana Baila Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9984/mi-habana-baila-festival-6ta-edicion",
+    "finalUrl": "https://www.goandance.com/en/event/9984/mi-habana-baila-festival-2027-6ta-edicion-barcelona",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "mi-habana-baila-santa-susanna-oct-2026",
+    "name": "Mi Habana Baila Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/mihabanabaila_festival/",
+    "finalUrl": "https://www.instagram.com/mihabanabaila_festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "mi-habana-baila-santa-susanna-oct-2026",
+    "name": "Mi Habana Baila Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/10098/mi-habana-baila-festival-2027-5ta-edicion-eslovenia",
+    "finalUrl": "https://www.goandance.com/en/event/10098/mi-habana-baila-festival-2027-5ta-edicion-eslovenia",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "miami-salsa-congress-2027",
+    "name": "Miami Salsa Congress",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/miamisalsacongress/",
+    "finalUrl": "https://www.instagram.com/miamisalsacongress/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "miami-salsa-congress-2027",
+    "name": "Miami Salsa Congress",
+    "kind": "ticketUrl",
+    "url": "https://themiamisalsacongress.ticketspice.com/miami-salsa-congress-2027",
+    "finalUrl": "https://themiamisalsacongress.ticketspice.com/miami-salsa-congress-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "miami-salsa-congress-2027",
+    "name": "Miami Salsa Congress",
+    "kind": "website",
+    "url": "https://www.miamisalsacongress.com/",
+    "finalUrl": "https://www.miamisalsacongress.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "montpel-rueda-festival-montpellier-2027",
+    "name": "Montpel' Rueda Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/montpelruedafestival/",
+    "finalUrl": "https://www.instagram.com/montpelruedafestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "montpel-rueda-festival-montpellier-2027",
+    "name": "Montpel' Rueda Festival",
+    "kind": "website",
+    "url": "https://www.ruedasocialclub.fr/",
+    "finalUrl": "https://www.ruedasocialclub.fr/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "moscow-cuban-festival-2026",
+    "name": "Moscow Salsa Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/moscowsalsafestival/",
+    "finalUrl": "https://www.instagram.com/moscowsalsafestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "moscow-cuban-festival-2026",
+    "name": "Moscow Salsa Festival",
+    "kind": "ticketUrl",
+    "url": "https://salsafest.ru/#rec1989466761",
+    "finalUrl": "https://salsafest.ru/#rec1989466761",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "moscow-cuban-festival-2026",
+    "name": "Moscow Salsa Festival",
+    "kind": "website",
+    "url": "https://salsafest.ru/",
+    "finalUrl": "https://salsafest.ru/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "nicasino-kristiansand-2027",
+    "name": "Nicasino Dance Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.nicasino.no/en/nicasino-dance-festival-2027-en/",
+    "finalUrl": "https://www.nicasino.no/en/nicasino-dance-festival-2027-en/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "nicasino-kristiansand-2027",
+    "name": "Nicasino Dance Festival",
+    "kind": "website",
+    "url": "https://www.nicasino.no/en/nicasino-dance-festival-2027-en/",
+    "finalUrl": "https://www.nicasino.no/en/nicasino-dance-festival-2027-en/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "not-salsa-fest-ivano-frankivsk-2026",
+    "name": "Not Salsa Fest",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/notfest_ua/",
+    "finalUrl": "https://www.instagram.com/notfest_ua/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "not-salsa-fest-ivano-frankivsk-2026",
+    "name": "Not Salsa Fest",
+    "kind": "ticketUrl",
+    "url": "https://notfest.in.ua/en/order.html",
+    "finalUrl": "https://notfest.in.ua/en/order.html",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "not-salsa-fest-ivano-frankivsk-2026",
+    "name": "Not Salsa Fest",
+    "kind": "website",
+    "url": "https://notfest.in.ua/en/",
+    "finalUrl": "https://notfest.in.ua/en/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "obdac-bali-2026",
+    "name": "ODAC Cuban Salsa Fiesta 2026 Bali Edition",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/odacsingapore/",
+    "finalUrl": "https://www.instagram.com/odacsingapore/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "only-salsa-festival-by-swob-rivedoux-2027",
+    "name": "Only Salsa Festival by Swob",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/onlysalsa_by_swob/",
+    "finalUrl": "https://www.instagram.com/onlysalsa_by_swob/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "only-salsa-festival-by-swob-rivedoux-2027",
+    "name": "Only Salsa Festival by Swob",
+    "kind": "website",
+    "url": "https://www.onlysalsa.fr/",
+    "finalUrl": "https://www.onlysalsa.fr/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "oslo-cuban-salsa-festival-2026",
+    "name": "Oslo Cuban Salsa Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/dancecity_oslo/",
+    "finalUrl": "https://www.instagram.com/dancecity_oslo/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "oslo-cuban-salsa-festival-2026",
+    "name": "Oslo Cuban Salsa Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.tikello.com/event/j9724cys9xk5xr3rjefh1t9z0n7r1dt1",
+    "finalUrl": "https://www.tikello.com/event/j9724cys9xk5xr3rjefh1t9z0n7r1dt1",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "oslo-cuban-salsa-festival-2026",
+    "name": "Oslo Cuban Salsa Festival",
+    "kind": "website",
+    "url": "https://www.dancecity.no/",
+    "finalUrl": "https://www.dancecity.no/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "para-el-alma-divertir-augsburg-2027",
+    "name": "Para el Alma Divertir - Cuban Son Weekend",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/paraelalmadivertir/",
+    "finalUrl": "https://www.instagram.com/paraelalmadivertir/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "paradise-salsa-bachata-kizomba-holiday-sunny-beach-2027",
+    "name": "Paradise Salsa Bachata Kizomba Holiday",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/paradisesalsaholiday/",
+    "finalUrl": "https://www.instagram.com/paradisesalsaholiday/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "paradise-salsa-bachata-kizomba-holiday-sunny-beach-2027",
+    "name": "Paradise Salsa Bachata Kizomba Holiday",
+    "kind": "website",
+    "url": "https://lospambosevents.com/paradise-salsa-holiday",
+    "finalUrl": "https://lospambosevents.com/paradise-salsa-holiday",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "quien-manda-aubagne-2027",
+    "name": "Quien Manda Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/quien_manda_festival/",
+    "finalUrl": "https://www.instagram.com/quien_manda_festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "rainbow-festival-nancy-2026",
+    "name": "Rainbow Festival Nancy",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/rainbowfestivalnancy/",
+    "finalUrl": "https://www.instagram.com/rainbowfestivalnancy/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "rainbow-festival-nancy-2026",
+    "name": "Rainbow Festival Nancy",
+    "kind": "ticketUrl",
+    "url": "https://my.weezevent.com/rainbow-festival-nancy-2026",
+    "finalUrl": "https://my.weezevent.com/rainbow-festival-nancy-2026",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "rainbow-festival-nancy-2026",
+    "name": "Rainbow Festival Nancy",
+    "kind": "website",
+    "url": "https://rainbowfestivalnancy.com/",
+    "finalUrl": "https://rainbowfestivalnancy.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "rico-flow-festival-lleida-2027",
+    "name": "Rico Flow Festival Lleida",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/rico_flow_dance_festival/reels/",
+    "finalUrl": "https://www.instagram.com/rico_flow_dance_festival/reels/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "rico-flow-festival-lleida-2027",
+    "name": "Rico Flow Festival Lleida",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/es/evento/9976/rico-flow-dance-festival-2027-3a-edicion",
+    "finalUrl": "https://www.goandance.com/es/evento/9976/rico-flow-dance-festival-2027-3a-edicion",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "ruedamania-yekaterinburg-2026",
+    "name": "Ruedamania 2026",
+    "kind": "ticketUrl",
+    "url": "https://vk.ru/pages?oid=-71343489&p=%D0%A1%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C",
+    "finalUrl": "https://vk.ru/pages?oid=-71343489&p=%D0%A1%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "rumbachata-canarias-2026",
+    "name": "Rumbachata Canarias",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/rumbachata.canarias/",
+    "finalUrl": "https://www.instagram.com/rumbachata.canarias/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "rumbachata-canarias-2026",
+    "name": "Rumbachata Canarias",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/es/evento/9114/rumbachata-2026",
+    "finalUrl": "https://www.goandance.com/es/evento/9114/rumbachata-2026",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "saigon-latin-festival-vung-tau-2026",
+    "name": "Saigon Latin Festival (SGLF)",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/saigonlatinfestival_sglf/",
+    "finalUrl": "https://www.instagram.com/saigonlatinfestival_sglf/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "saigon-latin-festival-vung-tau-2026",
+    "name": "Saigon Latin Festival (SGLF)",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9745/saigon-latin-festival",
+    "finalUrl": "https://www.goandance.com/en/event/9745/saigon-latin-festival",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "saigon-latin-festival-vung-tau-2026",
+    "name": "Saigon Latin Festival (SGLF)",
+    "kind": "website",
+    "url": "https://saigonlatinfestival.com/",
+    "finalUrl": "https://saigonlatinfestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-festival-carnaval-limoges-2026",
+    "name": "Salsa Festival Carnaval",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/endanse.asso/",
+    "finalUrl": "https://www.instagram.com/endanse.asso/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-festival-carnaval-limoges-2026",
+    "name": "Salsa Festival Carnaval",
+    "kind": "ticketUrl",
+    "url": "https://www.endanse.com/festival-salsa-carnaval-de-limoges-2026",
+    "finalUrl": "https://www.endanse.com/festival-salsa-carnaval-de-limoges-2026",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-festival-carnaval-limoges-2026",
+    "name": "Salsa Festival Carnaval",
+    "kind": "website",
+    "url": "https://www.endanse.com/festival-salsa-carnaval-de-limoges-2026",
+    "finalUrl": "https://www.endanse.com/festival-salsa-carnaval-de-limoges-2026",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-festival-carnaval-limoges-2027",
+    "name": "Salsa Festival Carnaval",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/festival_salsa_carnaval_lmg/",
+    "finalUrl": "https://www.instagram.com/festival_salsa_carnaval_lmg/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-festival-carnaval-limoges-2027",
+    "name": "Salsa Festival Carnaval",
+    "kind": "website",
+    "url": "https://www.endanse.com/festival-salsa-carnaval-de-limoges-2026",
+    "finalUrl": "https://www.endanse.com/festival-salsa-carnaval-de-limoges-2026",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-festival-prague-2027",
+    "name": "Salsa Festival Prague",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/salsafestivalprague/",
+    "finalUrl": "https://www.instagram.com/salsafestivalprague/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-festival-prague-2027",
+    "name": "Salsa Festival Prague",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9971/salsa-festival-prague-2027",
+    "finalUrl": "https://www.goandance.com/en/event/9971/salsa-festival-prague-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-festival-prague-2027",
+    "name": "Salsa Festival Prague",
+    "kind": "website",
+    "url": "https://www.salsafestivalprague.cz/",
+    "finalUrl": "https://www.salsafestivalprague.cz/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-rueda-festival-san-francisco-2027",
+    "name": "Salsa Rueda Festival - 15th Annual",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/salsaruedafestival/",
+    "finalUrl": "https://www.instagram.com/salsaruedafestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-rueda-festival-san-francisco-2027",
+    "name": "Salsa Rueda Festival - 15th Annual",
+    "kind": "ticketUrl",
+    "url": "https://www.eventbrite.com/e/the-16th-annual-salsa-rueda-festival-in-san-francisco-feb-11-feb-14-2027-registration-2000233871354",
+    "finalUrl": "https://www.eventbrite.com/e/the-16th-annual-salsa-rueda-festival-in-san-francisco-feb-11-feb-14-2027-registration-2000233871354",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-rueda-festival-san-francisco-2027",
+    "name": "Salsa Rueda Festival - 15th Annual",
+    "kind": "website",
+    "url": "https://www.salsaruedafestival.com/",
+    "finalUrl": "https://www.salsaruedafestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-stras-festival-strasbourg-2026",
+    "name": "Salsa Stras Festival - 20 Years",
+    "kind": "ticketUrl",
+    "url": "https://www.helloasso.com/associations/association-passions-partagees/evenements/salsa-stras-festival-6-7-8-03-2026",
+    "finalUrl": "https://www.helloasso.com/associations/association-passions-partagees/evenements/salsa-stras-festival-6-7-8-03-2026",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-stras-festival-strasbourg-2026",
+    "name": "Salsa Stras Festival - 20 Years",
+    "kind": "website",
+    "url": "https://passionspartagees.fr/Salsastrasfestival2026",
+    "finalUrl": "https://passionspartagees.fr/Salsastrasfestival2026",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-y-otra-calella-2027",
+    "name": "Salsa y Otra",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/salsayotra/",
+    "finalUrl": "https://www.instagram.com/salsayotra/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-y-otra-calella-2027",
+    "name": "Salsa y Otra",
+    "kind": "website",
+    "url": "https://www.rockcaliente.fr/agenda/festivals-sejours/salsa-y-otra",
+    "finalUrl": "https://www.rockcaliente.fr/agenda/festivals-sejours/salsa-y-otra",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsafestival-chemnitz-2026",
+    "name": "Salsafestival Chemnitz",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/bailamos_chemnitz/",
+    "finalUrl": "https://www.instagram.com/bailamos_chemnitz/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsafestival-chemnitz-2026",
+    "name": "Salsafestival Chemnitz",
+    "kind": "ticketUrl",
+    "url": "https://tickets.bailamos-chemnitz.de/",
+    "finalUrl": "https://tickets.bailamos-chemnitz.de/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsafestival-chemnitz-2026",
+    "name": "Salsafestival Chemnitz",
+    "kind": "website",
+    "url": "https://www.bailamos-chemnitz.de/",
+    "finalUrl": "https://www.bailamos-chemnitz.de/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salseando-beach-cervia-2027",
+    "name": "Salseando Beach",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/salseando_beach/",
+    "finalUrl": "https://www.instagram.com/salseando_beach/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salseando-beach-cervia-2027",
+    "name": "Salseando Beach",
+    "kind": "ticketUrl",
+    "url": "https://www.salseandobeach.it/prodotto/full-passes/",
+    "finalUrl": "https://www.salseandobeach.it/prodotto/full-passes/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salseando-beach-cervia-2027",
+    "name": "Salseando Beach",
+    "kind": "website",
+    "url": "https://www.salseandobeach.it/",
+    "finalUrl": "https://www.salseandobeach.it/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsitaly-winter-edition-montesilvano-2026",
+    "name": "Salsitaly Winter Edition",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/salsitaly/",
+    "finalUrl": "https://www.instagram.com/salsitaly/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsitaly-winter-edition-montesilvano-2026",
+    "name": "Salsitaly Winter Edition",
+    "kind": "website",
+    "url": "http://m.salsitaly.com/mobi/",
+    "finalUrl": "http://m.salsitaly.com/mobi/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "saoco-cuban-festival-aix-2027",
+    "name": "Saoco Cuban Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/saococubanfestival/",
+    "finalUrl": "https://www.instagram.com/saococubanfestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "saoco-cuban-festival-aix-2027",
+    "name": "Saoco Cuban Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.billetweb.fr/saoco-cuban-festival-du-19-au-21-mars-2027",
+    "finalUrl": "https://www.billetweb.fr/saoco-cuban-festival-du-19-au-21-mars-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "saoco-cuban-festival-aix-2027",
+    "name": "Saoco Cuban Festival",
+    "kind": "website",
+    "url": "https://saoco-cuban-festival.fr/",
+    "finalUrl": "https://saoco-cuban-festival.fr/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "son-and-casino-weekender-eugene-2026",
+    "name": "Son and Casino Dance Weekender",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/eugene_sonandcasino/",
+    "finalUrl": "https://www.instagram.com/eugene_sonandcasino/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "son-and-casino-weekender-eugene-2026",
+    "name": "Son and Casino Dance Weekender",
+    "kind": "ticketUrl",
+    "url": "https://www.bailarcasinoeugene.com/products",
+    "finalUrl": "https://www.bailarcasinoeugene.com/products",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "son-and-casino-weekender-eugene-2026",
+    "name": "Son and Casino Dance Weekender",
+    "kind": "website",
+    "url": "https://www.bailarcasinoeugene.com/",
+    "finalUrl": "https://www.bailarcasinoeugene.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "son-nama-zaragoza-2026",
+    "name": "Son na'ma Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/son_na_ma_festival_de_son/",
+    "finalUrl": "https://www.instagram.com/son_na_ma_festival_de_son/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "son-nama-zaragoza-2026",
+    "name": "Son na'ma Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/es/evento/8877/son-na-ma-festival-2026-5a-edicion",
+    "finalUrl": "https://www.goandance.com/es/evento/8877/son-na-ma-festival-2026-5a-edicion",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "soneate-festival-toulouse-2027",
+    "name": "Soneate Festival Toulouse",
+    "kind": "ticketUrl",
+    "url": "https://www.billetweb.fr/festival-de-son-cubano-2-3-4-avril-2027-toulouse-francia",
+    "finalUrl": "https://www.billetweb.fr/festival-de-son-cubano-2-3-4-avril-2027-toulouse-francia",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "soneate-festival-toulouse-2027",
+    "name": "Soneate Festival Toulouse",
+    "kind": "website",
+    "url": "https://www.facebook.com/p/Soneate-Festival-Toulouse-61571480413761/",
+    "finalUrl": "https://www.facebook.com/p/Soneate-Festival-Toulouse-61571480413761/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "stockholm-bachata-cuban-marathon-2026",
+    "name": "Stockholm Salsa Marathon (Cuban Edition)",
+    "kind": "website",
+    "url": "https://bachataandcubanweekend.com/",
+    "finalUrl": "https://bachataandcubanweekend.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "sunny-waves-dance-festival-vama-veche-2027",
+    "name": "Sunny Waves Dance Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/sunny_waves_dance_festival/",
+    "finalUrl": "https://www.instagram.com/sunny_waves_dance_festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "timba-flow-cuban-festival-playa-del-carmen-2026",
+    "name": "Timba Flow Cuban Festival (TF MEX)",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/timbaflow_festival/",
+    "finalUrl": "https://www.instagram.com/timbaflow_festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "timba-paradise-saarbrucken-2027",
+    "name": "Timba Paradise",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/timbaparadise/",
+    "finalUrl": "https://www.instagram.com/timbaparadise/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "timba-paradise-saarbrucken-2027",
+    "name": "Timba Paradise",
+    "kind": "ticketUrl",
+    "url": "https://my.weezevent.com/tp10",
+    "finalUrl": "https://my.weezevent.com/tp10",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "timba-paradise-saarbrucken-2027",
+    "name": "Timba Paradise",
+    "kind": "website",
+    "url": "https://timba-paradise.com/",
+    "finalUrl": "https://timba-paradise.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "timbalemania-augsburg-2027",
+    "name": "Timbalemania",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/timbalemania/",
+    "finalUrl": "https://www.instagram.com/timbalemania/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "timbalemania-augsburg-2027",
+    "name": "Timbalemania",
+    "kind": "ticketUrl",
+    "url": "https://tickets.baila-augsburg.de/event/timbalemania-2027/",
+    "finalUrl": "https://tickets.baila-augsburg.de/event/timbalemania-2027/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "timbatonazo-summer-festival-santa-susanna-2027",
+    "name": "Timbatonazo Summer Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/timbatonazo_summer_fest/",
+    "finalUrl": "https://www.instagram.com/timbatonazo_summer_fest/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "timbatonazo-summer-festival-santa-susanna-2027",
+    "name": "Timbatonazo Summer Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9958/timbatonazo-summer-festival-2027",
+    "finalUrl": "https://www.goandance.com/en/event/9958/timbatonazo-summer-festival-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "timbeando-y-mambo-festival-lloret-2027",
+    "name": "Timbeando y Mambo Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/timbeandoymambofestival/",
+    "finalUrl": "https://www.instagram.com/timbeandoymambofestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "timbeando-y-mambo-festival-lloret-2027",
+    "name": "Timbeando y Mambo Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/es/evento/9374/timbeando-mambo-festival-2027",
+    "finalUrl": "https://www.goandance.com/es/evento/9374/timbeando-mambo-festival-2027",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "trelaze-salsa-festival-2027",
+    "name": "Trélazé Salsa Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/trelazesalsafestival/",
+    "finalUrl": "https://www.instagram.com/trelazesalsafestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "trelaze-salsa-festival-2027",
+    "name": "Trélazé Salsa Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.helloasso.com/associations/pole-latino-s-49/evenements/trelaze-salsa-festival-12eme-edition-2027-2",
+    "finalUrl": "https://www.helloasso.com/associations/pole-latino-s-49/evenements/trelaze-salsa-festival-12eme-edition-2027-2",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "unified-dance-festival-luxembourg-2026",
+    "name": "Unified Dance Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/unifieddancefestival/",
+    "finalUrl": "https://www.instagram.com/unifieddancefestival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "unified-dance-festival-luxembourg-2026",
+    "name": "Unified Dance Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9061/luxembourg-unified-dance-festival-2026",
+    "finalUrl": "https://www.goandance.com/en/event/9061/luxembourg-unified-dance-festival-2026",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "unified-dance-festival-luxembourg-2026",
+    "name": "Unified Dance Festival",
+    "kind": "website",
+    "url": "https://unifiedfestival.lu/",
+    "finalUrl": "https://unifiedfestival.lu/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "world-stars-salsa-festival-varna-2027",
+    "name": "World Stars Salsa Festival",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/world_stars_salsa_festival/",
+    "finalUrl": "https://www.instagram.com/world_stars_salsa_festival/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "world-stars-salsa-festival-varna-2027",
+    "name": "World Stars Salsa Festival",
+    "kind": "ticketUrl",
+    "url": "https://ticket.varnasalsafestival.com/wssf/tickets",
+    "finalUrl": "https://ticket.varnasalsafestival.com/wssf/tickets",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "world-stars-salsa-festival-varna-2027",
+    "name": "World Stars Salsa Festival",
+    "kind": "website",
+    "url": "https://varnasalsafestival.com/",
+    "finalUrl": "https://varnasalsafestival.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "yo-soy-sicilia-terrasini-2027",
+    "name": "Yo Soy Sicilia",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/yosoysicilia/",
+    "finalUrl": "https://www.instagram.com/yosoysicilia/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "zagreb-salsa-marathon-2027",
+    "name": "Zagreb Salsa Marathon",
+    "kind": "instagram",
+    "url": "https://www.instagram.com/zagrebsalsamarathon/",
+    "finalUrl": "https://www.instagram.com/zagrebsalsamarathon/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "zagreb-salsa-marathon-2027",
+    "name": "Zagreb Salsa Marathon",
+    "kind": "ticketUrl",
+    "url": "https://docs.google.com/forms/d/e/1FAIpQLSdFKtGxLY1oG7Qf7fGM4JYP1GNY_icG0YJzAhIBVM54k4OECQ/viewform",
+    "finalUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdFKtGxLY1oG7Qf7fGM4JYP1GNY_icG0YJzAhIBVM54k4OECQ/viewform",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "zagreb-salsa-marathon-2027",
+    "name": "Zagreb Salsa Marathon",
+    "kind": "website",
+    "url": "https://zagrebsalsamarathon.com/",
+    "finalUrl": "https://zagrebsalsamarathon.com/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  }
+]
