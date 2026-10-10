@@ -34,7 +34,7 @@ jobs:
         run: |
           cp .dev.vars.example .dev.vars
           npm run serve:cf > wrangler.log 2>&1 &
-          for i in $(seq 1 60); do curl -sf -o /dev/null http://localhost:8789/ && break; sleep 1; done
+          for i in $(seq 1 180); do curl -sf -o /dev/null http://localhost:8789/ && break; sleep 1; done
 
       - name: Accessibility (axe, WCAG 2.1 AA, light + dark, 375 + 1440, sheets and states)
         run: npm run check:a11y
