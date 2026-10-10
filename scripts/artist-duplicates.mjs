@@ -16,7 +16,7 @@ const canon = new Map();
 for (const n of [...Object.values(reg.aliases), ...Object.keys(reg.acts), ...Object.values(reg.acts).flat()]) canon.set(key(n), n);
 for (const [v, n] of Object.entries(reg.aliases)) canon.set(key(v), n);
 const show = (n) => canon.get(key(n)) ?? n.trim();
-const known = new Set([...Object.keys(reg.aliases), ...Object.values(reg.aliases), ...Object.keys(reg.acts), ...Object.values(reg.acts).flat()].map(key));
+const known = new Set([...Object.keys(reg.aliases), ...Object.values(reg.aliases), ...Object.keys(reg.acts), ...Object.values(reg.acts).flat(), ...(reg.people ?? [])].map(key));
 
 // name -> festivals
 const where = new Map();

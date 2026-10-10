@@ -1,5 +1,5 @@
 {
-  "$comment": "Artist registry. `aliases`: other spellings -> the one name shown on the site (matching ignores case and accents). `acts`: couples, duos and bands -> their members, so the Top artists ranking and search credit each person. An act without known members is counted as itself. Only add a member when a source shows who it is.",
+  "$comment": "Artist registry. `aliases`: other spellings -> the one name shown on the site (matching ignores case and accents). `acts`: couples, duos and bands -> their members, so the Top artists ranking and search credit each person. An act without known members is counted as itself. Only add a member when a source shows who it is. `people`: one-word names known to be one person, so they get an artist page.",
   "aliases": {
     "Yusimi Moya": "Yusimi Moya Rodríguez",
     "Fredyclan Garcia": "FredyClan",
@@ -37,24 +37,23 @@
     "Danger + Marielkis": "Danger & Marielkis",
     "Andy + Yuliet": "Andy & Yuliet",
     "Dwe & Gaby": "Dwé & Gaby",
-    "Ernesto & Denise": "Ernesto & Denisse",
+    "Ernesto & Denise": "Ernesto Bulnes & Denisse Cambria",
     "Melvin y Gatica": "Melvin & Gatica",
     "Jacopo y Linda": "Jacopo & Linda",
     "Pedrito y Giusy": "Pedrito & Giusy",
     "Osbanis y Anneta": "Osbanis & Anneta",
-    "Ruben & Marina": "Rubén y Marina",
+    "Ruben & Marina": "Rubén & Marina",
     "Thomas & Naomi": "Tomas & Naomi",
     "Lisa & York": "York & Lisa",
     "Yaritza & Diego": "Diego & Yaritza",
     "Johan y Elaine": "Yohan & Elaine",
     "Luis y Andrea": "Luis & Andrea",
-    "Ramsés Sariol & Sandra Cuenca": "Ramses y Sandra",
-    "Carlos Manolo y Lorenys Rodriguez": "Lorenys y Manolo",
+    "Ramsés Sariol & Sandra Cuenca": "Ramses & Sandra",
+    "Carlos Manolo y Lorenys Rodriguez": "Lorenys & Manolo",
     "Relampago": "Osmel Relámpago",
     "Jennyselt Galata": "Jenniselt Galata",
     "Yeniselt Galata": "Jenniselt Galata",
-    "Kevin & Geysa": "Kevin y Geysa",
-    "Wilmer & Maria": "Wilmer y María",
+    "Wilmer & Maria": "Wilmer & María",
     "Zayne Rosabal": "Zainé Rosabal",
     "Fredy Clan": "FredyClan",
     "Marly & Alexis": "Alexis & Marly",
@@ -64,7 +63,78 @@
     "Yoyo Flow (Yoandy Villaurrutia)": "Yoyo Flow",
     "Sheyla Colombe": "Sheyla Colombe Carbonell",
     "Alain & Katerine": "Alain & Katerina",
-    "Olofi": "Olofi Azarian"
+    "Olofi": "Olofi Azarian",
+    "Alessia & Alexander": "Alexander & Alessia",
+    "Andy & Juliet": "Andy & Yuliet",
+    "Diego & Noe": "Noe & Diego",
+    "High Five Salsa": "Noe & Diego",
+    "Neilys y Michael": "Michael & Neilys",
+    "Neilys & Michael": "Michael & Neilys",
+    "Neilys & Michel": "Michael & Neilys",
+    "Maya & Yohan": "Yohan & Maya",
+    "Yohan y Maya": "Yohan & Maya",
+    "Yago & Helen": "Helen & Yago",
+    "Tresor & Aurea": "Aurea & Tresor",
+    "Adrián y Anita": "Adrián & Anita",
+    "Gaston y Yarisbel": "Gastón & Yarisbel",
+    "Marlon & Jenni": "Marlon & Jenny",
+    "Seo Fernandez & Eneris Mulgado": "Seo & Eneris",
+    "Ernesto & Denisse": "Ernesto Bulnes & Denisse Cambria",
+    "Riccardo & Miriana": "Riccardo Sozzino & Miriana Diotallevi",
+    "Riccardo & Mariana": "Riccardo Sozzino & Miriana Diotallevi",
+    "Carlos R. & Dayana": "Carlos Rafael Gonzalez & Dayana Alcala",
+    "Yoannis Tamayo & Anita": "Yoannis & Anitaa",
+    "Sandra & Ramsés": "Ramses & Sandra",
+    "Ramsés and Sandra": "Ramses & Sandra",
+    "Fadi Fussion": "Fadi Fusion",
+    "Leonardo Moya": "Leonardo Martinez Moya",
+    "Silvio Leroy Pérez Azcuy": "Silvio Leroy",
+    "Isaac Bastionon": "Isaac Bationon",
+    "Timbalero": "DJ Timbalero",
+    "José Carlos": "José Carlos Leguen",
+    "Leidel Portuondo Perez": "Leidel Portuondo",
+    "Leidel Perez": "Leidel Portuondo",
+    "Yenifer Lavin González": "Yenifer Lavin",
+    "Melisa Jova": "Melissa Jova",
+    "DJ Javier La Rosa": "DJ Javier de la Rosa",
+    "DJ Leo de Cuba": "DJ Leo D'Cuba",
+    "Mireisi Muchili Morales": "Mireisi Muchuli Morales",
+    "Yanet Ochun": "Yanet Oshun",
+    "El Elegante": "El Elegante de la Rumba",
+    "Angelo J Rito": "Angelo Rito",
+    "Greenchen Mendez": "Greechen Mendez",
+    "David Pedron": "DJ David Pedron",
+    "Maykel Blanco": "Maykel Blanco y su Salsa Mayor",
+    "DJ Dimitri": "DJ Dmitri",
+    "DJ El Calvo": "DJ Jack El Calvo",
+    "Chahera": "Chahera Méndez",
+    "Keiler": "Keiler Brunet",
+    "Atocha": "Atocha Showman",
+    "DJ Pastaguero": "DJ Samir Pastaguero",
+    "Tarek": "Tarek Nsiri",
+    "Pinuzzo": "Pinuzzo Agua",
+    "Ramses y Sandra": "Ramses & Sandra",
+    "Lorenys y Manolo": "Lorenys & Manolo",
+    "Kevin y Geysa": "Kevin & Geysa",
+    "Wilmer y María": "Wilmer & María",
+    "Riccardo Sozzino y Miriana Diotallevi": "Riccardo Sozzino & Miriana Diotallevi",
+    "Carlos Rafael Gonzalez et Dayana Alcala": "Carlos Rafael Gonzalez & Dayana Alcala",
+    "Rubén y Marina": "Rubén & Marina",
+    "Irene y Tomás": "Irene & Tomás",
+    "David y María": "David & María",
+    "Rudy y Kelly": "Rudy & Kelly",
+    "Didier y Coralie": "Didier & Coralie",
+    "Andi y Silvia": "Andi & Silvia",
+    "Cristian y Gabriella": "Cristian & Gabriella",
+    "Miguel Angel y Lorena": "Miguel Angel & Lorena",
+    "Mari y Jorgito": "Mari & Jorgito",
+    "Adrian y Naiara": "Adrian & Naiara",
+    "Angel and Stephany": "Angel & Stephany",
+    "Alonso y Noelia": "Alonso & Noelia",
+    "Juan y Mercedes": "Juan & Mercedes",
+    "Alejandro y Rosy": "Alejandro & Rosy",
+    "Emilio y Esther": "Emilio & Esther",
+    "Andy y Saray": "Andy & Saray"
   },
   "acts": {
     "Danger & Marielkis": [
@@ -79,19 +149,19 @@
       "Pedrito Cuba",
       "Giusy Chisari"
     ],
-    "Ramses y Sandra": [
+    "Ramses & Sandra": [
       "Ramsés Sariol",
       "Sandra Cuenca"
     ],
-    "Lorenys y Manolo": [
+    "Lorenys & Manolo": [
       "Lorenys Rodríguez",
       "Carlos Manolo"
     ],
-    "Kevin y Geysa": [
+    "Kevin & Geysa": [
       "Kevin",
       "Geysa"
     ],
-    "Wilmer y María": [
+    "Wilmer & María": [
       "Wilmer Najarro",
       "Maria de la Vega"
     ],
@@ -107,11 +177,11 @@
       "Adrián Piña",
       "Luz Camarena"
     ],
-    "Riccardo Sozzino y Miriana Diotallevi": [
+    "Riccardo Sozzino & Miriana Diotallevi": [
       "Riccardo Sozzino",
       "Miriana Diotallevi"
     ],
-    "Carlos Rafael Gonzalez et Dayana Alcala": [
+    "Carlos Rafael Gonzalez & Dayana Alcala": [
       "Carlos Rafael Gonzalez",
       "Dayana Alcalá"
     ],
@@ -121,6 +191,21 @@
     ],
     "Mixael Cabrera y su Team Barcelona": [
       "Mixael Cabrera"
+    ],
+    "Seo & Eneris": [
+      "Seo Fernández",
+      "Eneris Mulgado"
     ]
-  }
+  },
+  "people": [
+    "Alisvey",
+    "Byron",
+    "Choco",
+    "CyGy",
+    "Didi",
+    "Fatima",
+    "Jeydikson",
+    "Puntilla",
+    "Vilmar"
+  ]
 }

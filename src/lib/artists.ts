@@ -50,7 +50,7 @@ export function artistKind(name: string): ArtistKind {
 export const actsOf = (person: string) => Object.entries(acts).filter(([, m]) => m.some((x) => key(x) === key(person))).map(([a]) => a);
 export const membersOf = (act: string) => acts[act] ?? [];
 
-const known = new Set([...Object.keys(aliases), ...Object.values(aliases), ...Object.keys(acts), ...Object.values(acts).flat()].map(key));
+const known = new Set([...Object.keys(aliases), ...Object.values(aliases), ...Object.keys(acts), ...Object.values(acts).flat(), ...((registry as { people?: string[] }).people ?? [])].map(key));
 
 /**
  * Slugs that get an artist page. A one-word name ("Cristian") that appears at several festivals
