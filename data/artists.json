@@ -140,7 +140,6 @@
     "Diego": "Diego Glenny",
     "DJ Timbanero": "DJ Timbalero",
     "Juan Pablo": "Juan Pablo Paredes",
-    "Kristina": "Cristina",
     "Capo": "DJ Capo",
     "DJ Jimi Jacks": "Jimi Jacks",
     "DJ York": "York",
@@ -168,7 +167,8 @@
     "Kelly & John": "John & Kelly",
     "Gaby & Estefy": "Gabi & Estefy",
     "Pablito y Su Mezcla Latina": "Pablito Stellato y su Mezcla Latina",
-    "DJ Fabrizio": "DJ Fabrizio Zoro"
+    "DJ Fabrizio": "DJ Fabrizio Zoro",
+    "Cristina": "Kristina"
   },
   "acts": {
     "Danger & Marielkis": [
@@ -269,6 +269,9 @@
     ],
     "Nicolò Laricchia y su Batá Klan": [
       "Nicolo Laricchia"
+    ],
+    "Antonio Dabbico & One Drop": [
+      "Antonio Dabbico"
     ]
   },
   "people": [
