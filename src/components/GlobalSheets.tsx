@@ -79,11 +79,11 @@ function Menu({ all, saved, cityName, theme }: { all: Enriched[]; saved: number;
 
 function Artists({ all }: { all: Enriched[] }) {
   const { t, L } = useTr();
-  const [tf, setTf] = useState<'year' | 'all'>('year');
+  const [tf, setTf] = useState<'up' | 'all'>('up');
   const [showAll, setShowAll] = useState(false);
-  const yr = startOfToday().getFullYear();
   const paged = pagedArtistSlugs(all.map((f) => [...f.artists, ...f.people]));
-  const src = all.filter((f) => tf === 'all' || f.s.getFullYear() === yr);
+  // Upcoming festivals by default: past ones are only listed from 2026, so a calendar-year count would be lopsided.
+  const src = all.filter((f) => tf === 'all' || !f.arch);
   const m = new Map<string, { name: string; n: number; cc: string[]; rank: number }>();
   for (const f of src)
     for (const a of f.people) {
@@ -107,10 +107,10 @@ function Artists({ all }: { all: Enriched[] }) {
   return (
     <div class="sheet-pad stack-12">
       <span class="meta">
-        {tf === 'year' ? t('artists.rankedYear', { y: yr }) : t('artists.rankedAll')}
+        {tf === 'up' ? t('artists.rankedUp') : t('artists.rankedAll')}
       </span>
       <span class="seg seg--sm" role="group" aria-label={t('artists.timeframe')}>
-        {([['year', t('artists.thisYear')], ['all', t('artists.allTime')]] as const).map(([k, l]) => (
+        {([['up', t('artists.upcoming')], ['all', t('artists.allTime')]] as const).map(([k, l]) => (
           <button type="button" class={`seg__opt${tf === k ? ' is-on' : ''}`} aria-pressed={tf === k} onClick={() => (setTf(k), setShowAll(false))}>{l}</button>
         ))}
       </span>
