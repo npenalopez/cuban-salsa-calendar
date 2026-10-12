@@ -1,6 +1,6 @@
 {
-  "version": "2026.10-134",
-  "updated": "2026-10-10",
+  "version": "2026.10-137",
+  "updated": "2026-10-12",
   "festivals": [
     {
       "id": "salsa-stras-festival-strasbourg-2026",
@@ -3579,6 +3579,42 @@
       "cubanFocused": false
     },
     {
+      "id": "unidanza-hamburg-2027",
+      "series": "unidanza-hamburg",
+      "name": "UNiDANZA Afro-Cuban Dance Festival",
+      "status": "scheduled",
+      "startDate": "2027-02-01",
+      "endDate": "2027-02-28",
+      "datePrecision": "month",
+      "dateNote": null,
+      "city": "Hamburg",
+      "country": "Germany",
+      "countryCode": "DE",
+      "region": "Europe",
+      "venue": "Billie's Tanzstudio (Alte Dosenfabrik)",
+      "coordinates": [
+        53.550172,
+        10.001316
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://www.unidanza.de/tickets/",
+      "website": "https://www.unidanza.de/",
+      "instagram": "https://www.instagram.com/unidanza.hamburg/",
+      "artists": [],
+      "description": "Afro-Cuban dance festival in Hamburg: a weekend of workshops, bootcamps and parties in the dance studios of Billie's Tanzstudio, in the Alte Dosenfabrik.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; organizer site (unidanza.de) still shows the 6-8 Feb 2026 edition, so 2027 is listed as February only. cubansalsafestivals.com says 12-14 Feb 2027 (not confirmed by the organizer). Their ticket link (bailacalabria.it) looked wrong; used the organizer tickets page.",
+      "styles": [
+        "afro-cuban",
+        "rumba",
+        "casino"
+      ],
+      "cubanFocused": true
+    },
+    {
       "id": "dame-festival-valencia-2027",
       "series": "dame-festival-valencia",
       "name": "Dame Festival Valencia",
@@ -6630,6 +6666,76 @@
       ],
       "cubanFocused": false,
       "facebook": "https://www.facebook.com/miamisalsacongress"
+    },
+    {
+      "id": "berlin-salsa-congress-2027",
+      "series": "berlin-salsa-congress",
+      "name": "Berlin Salsa Congress",
+      "status": "scheduled",
+      "startDate": "2027-08-26",
+      "endDate": "2027-08-30",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Berlin",
+      "country": "Germany",
+      "countryCode": "DE",
+      "region": "Europe",
+      "venue": "Tempodrom",
+      "coordinates": [
+        52.501606,
+        13.381191
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://www.eventbrite.de/e/berlin-salsacongress-2027-the-jungle-reloaded-tickets-1993694802824",
+      "website": null,
+      "instagram": "https://www.instagram.com/berlin_salsa_congress/",
+      "artists": [],
+      "description": "Large salsa congress at the Tempodrom in Berlin, running since 2001. The 2027 \"Jungle Reloaded\" edition features mambo, salsa, Cali style, cha-cha-cha and Cuban salsa, with workshops, social trainings and parties until late.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; facts from the organizer Eventbrite page (26-30 Aug 2027, Tempodrom, styles incl. Cuban Salsa). The other site says 26-29 Aug. Eventbrite shows only the 2026 line-up, so no artists yet.",
+      "styles": [
+        "casino",
+        "mixed"
+      ],
+      "cubanFocused": false
+    },
+    {
+      "id": "tisno-dance-city-2027",
+      "series": "tisno-dance-city",
+      "name": "elSol Tisno Dance City",
+      "status": "scheduled",
+      "startDate": "2027-09-15",
+      "endDate": "2027-09-20",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Tisno",
+      "country": "Croatia",
+      "countryCode": "HR",
+      "region": "Europe",
+      "venue": null,
+      "coordinates": [
+        43.81006,
+        15.629529
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://tisnodancecity.com/tickets/?lang=en",
+      "website": "https://tisnodancecity.com/",
+      "instagram": "https://www.instagram.com/elsoltisno/",
+      "artists": [],
+      "description": "Dance holiday on the Dalmatian coast in Tisno, Croatia: workshops by day and parties until dawn, with salsa, Cuban, bachata, kizomba and urban kiz.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; dates and styles from the organizer site tisnodancecity.com (15-20.09.2027; salsa, cuban, bachata, kizomba & urban kiz). Venue not stated by the organizer; coordinates are Jazine beach from the other site.",
+      "styles": [
+        "casino",
+        "mixed"
+      ],
+      "cubanFocused": false
     },
     {
       "id": "cubasi-congress-valledoria-2027",
