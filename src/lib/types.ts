@@ -3,6 +3,14 @@ export type Precision = 'day' | 'month' | 'year';
 export type Style = 'casino' | 'timba' | 'son' | 'rumba' | 'afro-cuban' | 'rueda' | 'reggaeton' | 'mixed';
 export type Region = 'Europe' | 'North America' | 'South America' | 'Africa' | 'Asia' | 'Oceania';
 
+/** A discount code; `for` = which passes it covers when the organizer gave one code per pass type. */
+export interface Discount {
+  code: string;
+  amount: number;
+  currency?: string | null;
+  for?: 'full' | 'party';
+}
+
 /** One record of data/festivals.json (see festivals.schema.json). */
 export interface Festival {
   id: string;
@@ -37,7 +45,7 @@ export interface Festival {
    * via 'promoter': no code, buyers pick `code` (our name) in the organizer's promoter list, on the form at `url`.
    * A code with `url`: the code only works in that ticket shop, so Get passes links there.
    */
-  discount?: { code: string; amount: number; currency?: string | null; via?: 'code' | 'promoter'; url?: string };
+  discount?: Discount & { via?: 'code' | 'promoter'; url?: string; more?: Discount[] };
   // Only present server-side (stripped from the client bundle).
   instagram?: string | null;
   facebook?: string | null;

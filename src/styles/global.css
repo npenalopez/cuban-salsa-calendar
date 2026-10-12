@@ -575,7 +575,7 @@ dialog.sheet--drawer .sheet__panel { padding-top: env(safe-area-inset-top); }
 .passes__note { font-size: 13px; color: var(--ink3); text-align: center; }
 .discount { margin: 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px; font-size: 15px; }
 .discount__code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: 0.04em; user-select: all; }
-.discount__auto { flex-basis: 100%; text-align: center; font-size: 13px; color: var(--ink3); }
+.discount__auto { margin: 0; flex-basis: 100%; text-align: center; font-size: 13px; color: var(--ink3); }
 .badge--discount { background: var(--ink); color: var(--bg); }
 .trip { padding-top: 8px; }
 .trip__airport { margin: 0; font-size: 15px; color: var(--ink2); }

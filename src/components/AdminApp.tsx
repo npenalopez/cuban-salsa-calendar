@@ -234,7 +234,7 @@ export default function AdminApp() {
       ...(e.styles?.length ? { styles: STYLES.map((x) => x.key).filter((k) => e.styles!.includes(k)) } : {}),
       ...(typeof e.cubanFocused === 'boolean' ? { cubanFocused: e.cubanFocused } : {}),
       ...(clean(e.airport) ? { airport: String(e.airport).trim().toUpperCase() } : {}),
-      ...(e.discount?.code?.trim() && e.discount.amount > 0 ? { discount: { code: e.discount.code.trim(), amount: e.discount.amount, currency: e.discount.currency || null, ...(e.discount.via === 'promoter' ? { via: 'promoter' as const } : {}), ...(e.discount.url?.trim() ? { url: e.discount.url.trim() } : {}) } } : {}),
+      ...(e.discount?.code?.trim() && e.discount.amount > 0 ? { discount: { code: e.discount.code.trim(), amount: e.discount.amount, currency: e.discount.currency || null, ...(e.discount.via === 'promoter' ? { via: 'promoter' as const } : {}), ...(e.discount.url?.trim() ? { url: e.discount.url.trim() } : {}), ...(e.discount.for ? { for: e.discount.for } : {}), ...(e.discount.more?.length ? { more: e.discount.more } : {}) } } : {}),
     } as Festival;
     const isNew = e._orig == null;
     persist(isNew ? [...list, f] : list.map((x) => (x.id === e._orig ? f : x)));

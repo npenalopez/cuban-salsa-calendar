@@ -2648,15 +2648,24 @@
         "PariSongo",
         "Yordanis Agüero"
       ],
-      "description": "3rd edition in the Tarn (near Albi), built around the dance and music of Santiago de Cuba with a small, family, 'a lo cubano' atmosphere. Intensive workshops with international teachers; classes require solid salsa basics, no beginner track. Evenings with live concerts and Cuban-scene DJs. Held at the Salle des fêtes of Marssac-sur-Tarn; nearest airport Toulouse.",
-      "lastVerified": null,
+      "description": "3rd edition in the Tarn (near Albi), built around the dance and music of Santiago de Cuba with a small, family, 'a lo cubano' atmosphere. Intensive workshops with international teachers; mostly for dancers with solid salsa basics, plus one beginner salsa class and one beginner son class. Evenings with live concerts and Cuban-scene DJs. Held at the Salle des fêtes of Marssac-sur-Tarn; nearest airport Toulouse.",
+      "lastVerified": "2026-10-12",
       "featured": false,
       "discount": {
         "code": "SaboramiFP",
         "amount": 10,
-        "currency": "EUR"
+        "currency": "EUR",
+        "for": "full",
+        "more": [
+          {
+            "code": "Saborami10",
+            "amount": 10,
+            "currency": null,
+            "for": "party"
+          }
+        ]
       },
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (18) from https://www.billetweb.fr/hasta-santiago-a-pie-3 (Billetweb page: 'Hasta Santiago a Pie 3', 27-29 novembre 2026, 'Artistes confirmés'). Added: Mauricio Oroceno, Chahera Méndez, Isaac Bastionon, Neilys y Michael, Madeline Rodríguez, DJ Seu Jade, DJ Azúcar, DJ Lilimba, PariSongo, Elito Revé y su Charangón.\n2026-10-10: public description cleaned of editor notes. Was: 3rd edition in the Tarn (near Albi), built around the dance and music of Santiago de Cuba with a small, family, 'a lo cubano' atmosphere. Intensive workshops with international teachers; NOTE: classes require solid salsa basics, no beginner track. Evenings with live concerts and Cuban-scene DJs. Held at the Salle des fêtes of Marssac-sur-Tarn; nearest airport Toulouse.\n2026-10-12: €10 code SaboramiFP from the organizer. Billetweb asks for the code just before payment; it cannot be prefilled from the link.",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (18) from https://www.billetweb.fr/hasta-santiago-a-pie-3 (Billetweb page: 'Hasta Santiago a Pie 3', 27-29 novembre 2026, 'Artistes confirmés'). Added: Mauricio Oroceno, Chahera Méndez, Isaac Bastionon, Neilys y Michael, Madeline Rodríguez, DJ Seu Jade, DJ Azúcar, DJ Lilimba, PariSongo, Elito Revé y su Charangón.\n2026-10-10: public description cleaned of editor notes. Was: 3rd edition in the Tarn (near Albi), built around the dance and music of Santiago de Cuba with a small, family, 'a lo cubano' atmosphere. Intensive workshops with international teachers; NOTE: classes require solid salsa basics, no beginner track. Evenings with live concerts and Cuban-scene DJs. Held at the Salle des fêtes of Marssac-sur-Tarn; nearest airport Toulouse.\n2026-10-12: €10 code SaboramiFP from the organizer. Billetweb asks for the code just before payment; it cannot be prefilled from the link.\n2026-10-12: organizer (Messenger) confirmed the listing (\"Les infos sont ok\"). Correction: there is 1 beginner salsa class and 1 beginner son class. Was: 3rd edition in the Tarn (near Albi), built around the dance and music of Santiago de Cuba with a small, family, 'a lo cubano' atmosphere. Intensive workshops with international teachers; classes require solid salsa basics, no beginner track. Evenings with live concerts and Cuban-scene DJs. Held at the Salle des fêtes of Marssac-sur-Tarn; nearest airport Toulouse.\n2026-10-12: second code Saborami10 (-10%) for the one- or two-party passes; SaboramiFP (-€10) is for the full pass only.",
       "styles": [
         "casino",
         "timba",
