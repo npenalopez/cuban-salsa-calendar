@@ -84,6 +84,29 @@ export interface ArtistProfile {
   instagram?: string;
   /** Path under /artists/photos/, only with the artist's or organizer's permission. */
   photo?: string;
+  /** Illustration from ART to use instead of the automatic pick (e.g. a man or woman dancer for a solo artist). */
+  art?: Art;
+}
+
+/** Generic illustrations in /artists/art/ (not portraits). Solo dancers and the two DJs are only used when set in `profiles`. */
+export const ART = [
+  'woman-casino', 'woman-son', 'woman-rumba', 'woman-afro', 'man-casino', 'man-son', 'man-rumba', 'man-afro',
+  'couple-spin', 'couple-dip', 'couple-son', 'dj-man', 'dj-woman', 'decks', 'band', 'congas', 'feet', 'instruments',
+] as const;
+export type Art = (typeof ART)[number];
+
+const MUSIC = /\b(orquesta|orchestra|band|grupo|conjunto|septeto|sexteto|charanga|all ?stars|habana|son)\b/i;
+const pick = <T,>(xs: readonly T[], seed: string) => xs[[...seed].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7) % xs.length];
+
+/** The illustration for an artist without a photo: the registry choice, else one that fits the kind of act (stable per name). */
+export function artFor(name: string, kind: ArtistKind = artistKind(name)): string {
+  const set = profileOf(name).art;
+  const art: Art = set && ART.includes(set) ? set
+    : kind === 'couple' ? pick(['couple-spin', 'couple-dip', 'couple-son'], name)
+    : kind === 'dj' ? 'decks'
+    : kind === 'group' && MUSIC.test(name) ? pick(['band', 'congas'], name)
+    : pick(['feet', 'instruments'], name);
+  return `/artists/art/${art}.webp`;
 }
 const profiles = ((registry as { profiles?: Record<string, ArtistProfile> }).profiles ?? {}) as Record<string, ArtistProfile>;
 const profileByKey = new Map(Object.entries(profiles).map(([n, p]) => [key(n), p]));

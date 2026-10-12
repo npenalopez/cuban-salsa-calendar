@@ -1,6 +1,6 @@
 // Validates data/festivals.json against the JSON Schema plus rules the schema can't express.
 // Runs before every build; a non-zero exit fails the build.
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import Ajv from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 
@@ -50,6 +50,7 @@ for (const [name, pr] of Object.entries(reg.profiles ?? {})) {
   if (reg.aliases[name]) errors.push(`artists.json: profile "${name}" is an alias; use "${reg.aliases[name]}"`);
   if (pr.instagram && !/^[A-Za-z0-9._]{1,30}$/.test(pr.instagram)) errors.push(`artists.json: profile "${name}" has an invalid Instagram handle "${pr.instagram}"`);
   if (pr.photo && !/^\/artists\/photos\/[a-z0-9-]+\.(webp|jpg|png)$/.test(pr.photo)) errors.push(`artists.json: profile "${name}" photo must be /artists/photos/<slug>.webp|jpg|png`);
+  if (pr.art && !existsSync(new URL(`../public/artists/art/${pr.art}.webp`, import.meta.url))) errors.push(`artists.json: profile "${name}" art "${pr.art}" is not in public/artists/art/`);
 }
 
 if (errors.length) {

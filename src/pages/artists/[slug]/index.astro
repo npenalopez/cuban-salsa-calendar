@@ -8,7 +8,7 @@ import { inCountry } from '../../../i18n/places';
 import { ALL } from '../../../lib/data.server';
 import { SITE, festivalPath, place } from '../../../lib/festivals';
 import { type ArtistPage, artistPages, artistPath } from '../../../lib/artistPages';
-import { initials, profileOf } from '../../../lib/artists';
+import { artFor, profileOf } from '../../../lib/artists';
 
 export const getStaticPaths = (() => {
   const pages = artistPages(ALL);
@@ -54,7 +54,7 @@ if (a.memberOf.length) ld.memberOf = a.memberOf.map((m) => ({ '@type': 'Performi
   <div class="page-head artist-head">
     {profile.photo
       ? <img class="artist-photo" src={profile.photo} alt={a.name} width="96" height="96" loading="lazy" decoding="async" />
-      : <span class="artist-photo artist-photo--initials" aria-hidden="true">{initials(a.name)}</span>}
+      : <img class="artist-photo artist-photo--art" src={artFor(a.name, a.kind)} alt="" width="96" height="96" decoding="async" />}
     <div class="artist-head__text">
       <span class="kicker">{T(`artist.${a.kind}`)}</span>
       <h1 class="page-title page-title--name">{a.name}</h1>
