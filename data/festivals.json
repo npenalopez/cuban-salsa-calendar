@@ -2651,7 +2651,12 @@
       "description": "3rd edition in the Tarn (near Albi), built around the dance and music of Santiago de Cuba with a small, family, 'a lo cubano' atmosphere. Intensive workshops with international teachers; classes require solid salsa basics, no beginner track. Evenings with live concerts and Cuban-scene DJs. Held at the Salle des fêtes of Marssac-sur-Tarn; nearest airport Toulouse.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (18) from https://www.billetweb.fr/hasta-santiago-a-pie-3 (Billetweb page: 'Hasta Santiago a Pie 3', 27-29 novembre 2026, 'Artistes confirmés'). Added: Mauricio Oroceno, Chahera Méndez, Isaac Bastionon, Neilys y Michael, Madeline Rodríguez, DJ Seu Jade, DJ Azúcar, DJ Lilimba, PariSongo, Elito Revé y su Charangón.\n2026-10-10: public description cleaned of editor notes. Was: 3rd edition in the Tarn (near Albi), built around the dance and music of Santiago de Cuba with a small, family, 'a lo cubano' atmosphere. Intensive workshops with international teachers; NOTE: classes require solid salsa basics, no beginner track. Evenings with live concerts and Cuban-scene DJs. Held at the Salle des fêtes of Marssac-sur-Tarn; nearest airport Toulouse.",
+      "discount": {
+        "code": "SaboramiFP",
+        "amount": 10,
+        "currency": "EUR"
+      },
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (18) from https://www.billetweb.fr/hasta-santiago-a-pie-3 (Billetweb page: 'Hasta Santiago a Pie 3', 27-29 novembre 2026, 'Artistes confirmés'). Added: Mauricio Oroceno, Chahera Méndez, Isaac Bastionon, Neilys y Michael, Madeline Rodríguez, DJ Seu Jade, DJ Azúcar, DJ Lilimba, PariSongo, Elito Revé y su Charangón.\n2026-10-10: public description cleaned of editor notes. Was: 3rd edition in the Tarn (near Albi), built around the dance and music of Santiago de Cuba with a small, family, 'a lo cubano' atmosphere. Intensive workshops with international teachers; NOTE: classes require solid salsa basics, no beginner track. Evenings with live concerts and Cuban-scene DJs. Held at the Salle des fêtes of Marssac-sur-Tarn; nearest airport Toulouse.\n2026-10-12: €10 code SaboramiFP from the organizer. Billetweb asks for the code just before payment; it cannot be prefilled from the link.",
       "styles": [
         "casino",
         "timba",
