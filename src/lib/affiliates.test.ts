@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import config from '../../config/affiliates.json';
 import { flightsUrl, stayDates, stayUrl } from './affiliates';
-import { discountLabel } from './festivals';
+import { discountLabel, withDiscount } from './festivals';
 
 const merseyside = { id: 'merseyside-latin-festival-liverpool-2026', startDate: '2026-12-04', endDate: '2026-12-06', airport: 'LPL', coordinates: [53.4084, -2.9916] as [number, number] };
 const newYear = { id: 'cuba-me-mucho-angers-2027', startDate: '2027-01-01', endDate: '2027-01-03', airport: 'NTE', coordinates: [47.47, -0.55] as [number, number] };
@@ -40,6 +40,15 @@ describe('affiliate links', () => {
   it('no airport, no flights link; no coordinates, no stay link', () => {
     expect(flightsUrl({ ...merseyside, airport: undefined })).toBeNull();
     expect(stayUrl({ ...merseyside, coordinates: null })).toBeNull();
+  });
+
+  it('builds the discount code into go&dance links only', () => {
+    const d = { code: 'cubacalendar', amount: 10, currency: 'EUR' };
+    expect(withDiscount('https://www.goandance.com/es/evento/1/x', d)).toBe('https://www.goandance.com/es/evento/1/x?discount=cubacalendar');
+    expect(withDiscount('https://www.goandance.com/es/evento/1/x?a=1', d)).toBe('https://www.goandance.com/es/evento/1/x?a=1&discount=cubacalendar');
+    expect(withDiscount('https://shop.example.com/t', d)).toBe('https://shop.example.com/t');
+    expect(withDiscount('https://www.goandance.com/es/evento/1/x', { ...d, via: 'promoter' as const })).toBe('https://www.goandance.com/es/evento/1/x');
+    expect(withDiscount('https://www.goandance.com/es/evento/1/x', undefined)).toBe('https://www.goandance.com/es/evento/1/x');
   });
 
   it('discount labels', () => {

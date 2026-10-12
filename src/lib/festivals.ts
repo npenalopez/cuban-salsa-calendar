@@ -89,7 +89,24 @@ export function nextEdition(f: Enriched, all: Enriched[]): Enriched | undefined 
 }
 
 /** Only real ticket links. Never fall back to the website. */
-export const ticketOf = (f: Enriched) => (f.ticketUrl && !f.arch && f.status === 'scheduled' ? f.ticketUrl : null);
+/** Ticket shops that apply a discount code from a URL parameter (go&dance: ?discount=CODE prefills and applies it). */
+const DISCOUNT_PARAM: Record<string, string> = { 'goandance.com': 'discount' };
+
+/** The ticket link with the discount code built in, when the shop supports it; otherwise the link unchanged. */
+export function withDiscount(url: string, d: Festival['discount']): string {
+  if (!d || d.via === 'promoter') return url;
+  try {
+    const u = new URL(url);
+    const param = DISCOUNT_PARAM[u.hostname.replace(/^www\./, '')];
+    if (!param) return url;
+    u.searchParams.set(param, d.code);
+    return u.toString();
+  } catch {
+    return url;
+  }
+}
+
+export const ticketOf = (f: Enriched) => (f.ticketUrl && !f.arch && f.status === 'scheduled' ? withDiscount(f.ticketUrl, f.discount) : null);
 
 /** Calendar actions only make sense with exact days. */
 export const canAddToCalendar = (f: Enriched) => f.datePrecision === 'day' && !f.arch && f.status !== 'postponed';
