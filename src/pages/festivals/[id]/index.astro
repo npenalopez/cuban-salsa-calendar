@@ -87,7 +87,9 @@ const description = [
 
       {ticket && (
         <div class="passes">
-          {discount && <p class="discount"><span class="badge badge--discount">{discount}</span> {T('discount.with')} <strong class="discount__code">{f.discount!.code}</strong></p>}
+          {discount && (f.discount!.via === 'promoter'
+            ? <p class="discount"><span class="badge badge--discount">{discount}</span> {T('discount.pick')} <strong>{f.discount!.code}</strong> {T('discount.asPromoter')}{f.discount!.url && <> · <a href={f.discount!.url} target="_blank" rel="noopener">{T('discount.form')} ↗</a></>}</p>
+            : <p class="discount"><span class="badge badge--discount">{discount}</span> {T('discount.with')} <strong class="discount__code">{f.discount!.code}</strong></p>)}
           <a class="passes__btn" href={ticket} target="_blank" rel="sponsored noopener">{T('card.getPasses')}{f.priceFrom != null ? ` · ${price}` : ''} ↗</a>
           <span class="passes__note">{T('fest.passesNote')}</span>
         </div>

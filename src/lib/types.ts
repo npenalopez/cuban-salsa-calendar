@@ -32,8 +32,11 @@ export interface Festival {
   cubanFocused?: boolean;
   /** Optional IATA code; drives the "Find flights" link. */
   airport?: string;
-  /** Optional discount code from the organizer; currency null/absent = percent. */
-  discount?: { code: string; amount: number; currency?: string | null };
+  /**
+   * Optional discount from the organizer; currency null/absent = percent.
+   * via 'promoter': no code, buyers pick `code` (our name) in the organizer's promoter list, on the form at `url`.
+   */
+  discount?: { code: string; amount: number; currency?: string | null; via?: 'code' | 'promoter'; url?: string };
   // Only present server-side (stripped from the client bundle).
   instagram?: string | null;
   facebook?: string | null;

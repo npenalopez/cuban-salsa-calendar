@@ -51,9 +51,11 @@
           "properties": {
             "code": { "type": "string", "minLength": 1 },
             "amount": { "type": "number", "exclusiveMinimum": 0 },
-            "currency": { "type": ["string", "null"], "pattern": "^[A-Z]{3}$", "description": "null or absent = percent" }
+            "currency": { "type": ["string", "null"], "pattern": "^[A-Z]{3}$", "description": "null or absent = percent" },
+            "via": { "enum": ["code", "promoter"], "description": "absent = code. promoter = buyers pick `code` in the organizer's promoter list" },
+            "url": { "type": "string", "format": "uri", "description": "Optional. The organizer's sign-up form, linked next to the discount" }
           },
-          "description": "Optional. A discount code the organizer gave us, shown as a badge."
+          "description": "Optional. A discount the organizer gave us, shown as a badge."
         },
         "cubanFocused": { "type": "boolean", "description": "Optional. true = mainly Cuban styles; false = a mixed festival with a Cuban strand. Absent = not reviewed." },
         "description": { "type": ["string", "null"], "description": "Public text" },

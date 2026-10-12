@@ -153,7 +153,7 @@ export function cardVM(f: Enriched, all: Enriched[], city: City | null, today?: 
     countryCode: f.countryCode,
     block: dateBlock(f, f.past, lang),
     // Status badges come first; a discount code shows only on festivals still on sale.
-    badge: badge ? { kind: badge, text: t(lang, `badge.${badge}`) } : f.discount && !f.arch && f.status === 'scheduled' ? { kind: 'discount', text: t(lang, 'discount.code', { label: discountLabel(f.discount, lang) }) } : null,
+    badge: badge ? { kind: badge, text: t(lang, `badge.${badge}`) } : f.discount && !f.arch && f.status === 'scheduled' ? { kind: 'discount', text: t(lang, f.discount.via === 'promoter' ? 'discount.deal' : 'discount.code', { label: discountLabel(f.discount, lang) }) } : null,
     artists: showArtists ? a.slice(0, 3) : [],
     moreArtists: showArtists ? Math.max(0, a.length - 3) : 0,
     meta: parts.join(' · '),

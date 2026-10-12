@@ -1150,7 +1150,14 @@
       "description": "Congress run by the Asociación Rueda de Casino at Hotel Don Angel, a seafront hotel on the Maresme coast with everyone on full board. Syllabus is strictly son, casino, rueda de casino, timba and musicality, in three halls at different levels from Friday dinner to Sunday lunch. Centrepiece is the 5th Copa Internacional de Rueda de Casino, judged in two phases (choreography and improvisation) by an international jury, with a relaxed category Friday and the main competition Saturday, each followed by a social party. Station 12 min walk, direct trains from Barcelona.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\n2026-10-10: facebook from the festival website (https://www.asociacionruedadecasino.com/).\n2026-10-10: line-up (11) from the list sent by the owner; replaces 3 earlier names.",
+      "discount": {
+        "code": "Cuban Salsa Calendar",
+        "amount": 10,
+        "currency": null,
+        "via": "promoter",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLScApMO27eVeZsB4RTpWZkGm5JSOWUqLGqGjoZsue7YKaEptbg/viewform"
+      },
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\n2026-10-10: facebook from the festival website (https://www.asociacionruedadecasino.com/).\n2026-10-10: line-up (11) from the list sent by the owner; replaces 3 earlier names.\n2026-10-12: 10% discount agreed with the organizer over Instagram DM, valid until the event; buyers pick Cuban Salsa Calendar in the promoter list of their Google Form. No fee; they report sign-ups via us afterwards.",
       "styles": [
         "casino",
         "timba",
@@ -1400,7 +1407,12 @@
       "description": "Son Na'ma festival in Zaragoza, Spain.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (15) from the list sent by the owner; replaces 0 earlier names.",
+      "discount": {
+        "code": "cubacalendar",
+        "amount": 10,
+        "currency": "EUR"
+      },
+      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (15) from the list sent by the owner; replaces 0 earlier names.\n2026-10-12: €10 discount code cubacalendar, sent by Son Na'Má over Instagram DM; valid for Son Na'Má and Los Dos Abuelos (same organizer).",
       "styles": [
         "casino",
         "timba",
@@ -4595,7 +4607,12 @@
       "description": "2nd edition Cuban festival in the Barcelona area, organized by Zaragozando a lo Cubano. Dedicated to the roots of Cuban dance and music with 30+ workshops covering rumba guaguancó, son cubano, palo congo, timba cubana, casino, and afro-cuban styles. Includes shows, dance competitions, pool party, and themed socials. Family-friendly atmosphere at Hotel Don Angel.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (13) from the list sent by the owner; replaces 0 earlier names.",
+      "discount": {
+        "code": "cubacalendar",
+        "amount": 10,
+        "currency": "EUR"
+      },
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (13) from the list sent by the owner; replaces 0 earlier names.\n2026-10-12: €10 discount code cubacalendar, sent by Son Na'Má over Instagram DM; valid for Son Na'Má and Los Dos Abuelos (same organizer).",
       "styles": [
         "casino",
         "timba",

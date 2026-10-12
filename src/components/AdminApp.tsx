@@ -234,7 +234,7 @@ export default function AdminApp() {
       ...(e.styles?.length ? { styles: STYLES.map((x) => x.key).filter((k) => e.styles!.includes(k)) } : {}),
       ...(typeof e.cubanFocused === 'boolean' ? { cubanFocused: e.cubanFocused } : {}),
       ...(clean(e.airport) ? { airport: String(e.airport).trim().toUpperCase() } : {}),
-      ...(e.discount?.code?.trim() && e.discount.amount > 0 ? { discount: { code: e.discount.code.trim(), amount: e.discount.amount, currency: e.discount.currency || null } } : {}),
+      ...(e.discount?.code?.trim() && e.discount.amount > 0 ? { discount: { code: e.discount.code.trim(), amount: e.discount.amount, currency: e.discount.currency || null, ...(e.discount.via === 'promoter' ? { via: 'promoter' as const } : {}), ...(e.discount.url?.trim() ? { url: e.discount.url.trim() } : {}) } } : {}),
     } as Festival;
     const isNew = e._orig == null;
     persist(isNew ? [...list, f] : list.map((x) => (x.id === e._orig ? f : x)));
@@ -512,18 +512,29 @@ function Editor(p: EditorProps) {
             {F('airport', 'Nearest airport (IATA)', { mono: true, ph: 'BCN', hint: 'Drives the Find flights link. Empty = no flights link.' })}
             <label class="ed-field">
               Discount code
-              <input class="input input--sm mono" value={e.discount?.code ?? ''} placeholder="SALSA10" onInput={(ev) => { const code = ev.currentTarget.value; p.setE('discount', code || e.discount?.amount ? { amount: e.discount?.amount ?? 0, currency: e.discount?.currency ?? null, code } : undefined); }} />
+              <input class="input input--sm mono" value={e.discount?.code ?? ''} placeholder="SALSA10" onInput={(ev) => { const code = ev.currentTarget.value; p.setE('discount', code || e.discount?.amount ? { ...e.discount, amount: e.discount?.amount ?? 0, currency: e.discount?.currency ?? null, code } : undefined); }} />
             </label>
             <label class="ed-field">
               Discount amount
-              <input class="input input--sm" inputMode="decimal" value={e.discount?.amount ? String(e.discount.amount) : ''} placeholder="10" onInput={(ev) => p.setE('discount', { code: e.discount?.code ?? '', currency: e.discount?.currency ?? null, amount: +ev.currentTarget.value || 0 })} />
+              <input class="input input--sm" inputMode="decimal" value={e.discount?.amount ? String(e.discount.amount) : ''} placeholder="10" onInput={(ev) => p.setE('discount', { ...e.discount, code: e.discount?.code ?? '', currency: e.discount?.currency ?? null, amount: +ev.currentTarget.value || 0 })} />
             </label>
             <label class="ed-field">
               Discount in
-              <select class="input input--sm" value={e.discount?.currency ?? ''} onChange={(ev) => p.setE('discount', { code: e.discount?.code ?? '', amount: e.discount?.amount ?? 0, currency: ev.currentTarget.value || null })}>
+              <select class="input input--sm" value={e.discount?.currency ?? ''} onChange={(ev) => p.setE('discount', { ...e.discount, code: e.discount?.code ?? '', amount: e.discount?.amount ?? 0, currency: ev.currentTarget.value || null })}>
                 <option value="">% (percent)</option>
                 {['EUR', 'GBP', 'USD', 'CHF'].map((c) => <option value={c}>{c}</option>)}
               </select>
+            </label>
+            <label class="ed-field">
+              Discount works by
+              <select class="input input--sm" value={e.discount?.via ?? 'code'} onChange={(ev) => p.setE('discount', { code: e.discount?.code ?? '', amount: e.discount?.amount ?? 0, ...e.discount, via: ev.currentTarget.value === 'promoter' ? 'promoter' : undefined })}>
+                <option value="code">Code (buyer types the code above)</option>
+                <option value="promoter">Promoter (buyer picks the name above in their list)</option>
+              </select>
+            </label>
+            <label class="ed-field">
+              Discount sign-up form
+              <input class="input input--sm" type="url" value={e.discount?.url ?? ''} placeholder="https://" onInput={(ev) => p.setE('discount', { code: e.discount?.code ?? '', amount: e.discount?.amount ?? 0, ...e.discount, url: ev.currentTarget.value || undefined })} />
             </label>
           </fieldset>
           <fieldset class="ed-group">
