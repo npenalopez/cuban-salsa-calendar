@@ -295,7 +295,8 @@
   ],
   "profiles": {
     "Adonis Santiago": {
-      "instagram": "adonis_santiago_official"
+      "instagram": "adonis_santiago_official",
+      "art": "man-casino"
     },
     "Adrián & Anita": {
       "instagram": "adrianyanitaoficial"
@@ -322,7 +323,8 @@
       "instagram": "andrea__campagna5"
     },
     "Barbara Jimenez": {
-      "instagram": "barbara_jimenez_official"
+      "instagram": "barbara_jimenez_official",
+      "art": "woman-reparto"
     },
     "Bryan Matienzo": {
       "instagram": "bryanmatienzo"
@@ -334,7 +336,8 @@
       "instagram": "danger_rodriguez_official"
     },
     "Diana Rodriguez": {
-      "instagram": "dianarodriguez.86"
+      "instagram": "dianarodriguez.86",
+      "art": "woman-casino"
     },
     "DJ Amado": {
       "instagram": "danielleuk17"
@@ -439,10 +442,12 @@
       "instagram": "yarisbel_kondeff"
     },
     "Yoyo Flow": {
-      "instagram": "yoyoflowofficial"
+      "instagram": "yoyoflowofficial",
+      "art": "man-reparto"
     },
     "Yusimi Moya Rodríguez": {
-      "instagram": "yusimi_moya_rodriguez"
+      "instagram": "yusimi_moya_rodriguez",
+      "art": "woman-afro"
     }
   }
 }
