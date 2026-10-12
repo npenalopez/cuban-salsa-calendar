@@ -3545,7 +3545,13 @@
       "description": "3rd edition - 'Mezclando Culturas'. Cuban Salsa + Dominican Bachata + new Puerto Rican Salsa room. 100% women + 100% men workshops, bootcamps, before parties.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (15) from https://www.goandance.com/en/event/9845/quien-manda-festival-2027 (go&dance page 'Quien Manda Festival 2027', 4th edition, 29 Jan-1 Feb 2027). Added: Alicia Velasco, Terry & Cecile, Yoandy Villaurrutia, Adonis Santiago, Diana Rodriguez, Amneris Martinez, Eneris Mulgado, Danger Rodriguez, Yusimi Moya Rodriguez, Tania Cannarsa, Jessica Quiles, Fredyclan Garcia, Pedrito & Giusy, Fred DanceFloor, Yosniel Brunet.",
+      "discount": {
+        "code": "Nesty",
+        "amount": 10,
+        "currency": "EUR",
+        "url": "https://my.weezevent.com/quien-manda-festival-2027"
+      },
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (15) from https://www.goandance.com/en/event/9845/quien-manda-festival-2027 (go&dance page 'Quien Manda Festival 2027', 4th edition, 29 Jan-1 Feb 2027). Added: Alicia Velasco, Terry & Cecile, Yoandy Villaurrutia, Adonis Santiago, Diana Rodriguez, Amneris Martinez, Eneris Mulgado, Danger Rodriguez, Yusimi Moya Rodriguez, Tania Cannarsa, Jessica Quiles, Fredyclan Garcia, Pedrito & Giusy, Fred DanceFloor, Yosniel Brunet.\n2026-10-12: €10 code Nesty (the owner's personal code, agreed with the organizer). Only valid on the Weezevent shop, not on go&dance, so Get passes links to Weezevent.",
       "styles": [
         "casino",
         "timba",
