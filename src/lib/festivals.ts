@@ -106,7 +106,13 @@ export function withDiscount(url: string, d: Festival['discount']): string {
   }
 }
 
-export const ticketOf = (f: Enriched) => (f.ticketUrl && !f.arch && f.status === 'scheduled' ? withDiscount(f.ticketUrl, f.discount) : null);
+/** A code that only works in one ticket shop (`discount.url`) sends "Get passes" there; otherwise the ticket link, with the code built in when the shop allows. */
+const codeShop = (d: Festival['discount']) => (d && d.via !== 'promoter' && d.url ? d.url : null);
+export const ticketOf = (f: Enriched) => {
+  if (f.arch || f.status !== 'scheduled') return null;
+  const url = (!f.arch && codeShop(f.discount)) || f.ticketUrl;
+  return url ? withDiscount(url, f.discount) : null;
+};
 
 /** Calendar actions only make sense with exact days. */
 export const canAddToCalendar = (f: Enriched) => f.datePrecision === 'day' && !f.arch && f.status !== 'postponed';

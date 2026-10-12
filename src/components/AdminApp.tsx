@@ -533,7 +533,7 @@ function Editor(p: EditorProps) {
               </select>
             </label>
             <label class="ed-field">
-              Discount sign-up form
+              Discount link (promoter form, or the only shop where the code works)
               <input class="input input--sm" type="url" value={e.discount?.url ?? ''} placeholder="https://" onInput={(ev) => p.setE('discount', { code: e.discount?.code ?? '', amount: e.discount?.amount ?? 0, ...e.discount, url: ev.currentTarget.value || undefined })} />
             </label>
           </fieldset>

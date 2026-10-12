@@ -53,7 +53,7 @@
             "amount": { "type": "number", "exclusiveMinimum": 0 },
             "currency": { "type": ["string", "null"], "pattern": "^[A-Z]{3}$", "description": "null or absent = percent" },
             "via": { "enum": ["code", "promoter"], "description": "absent = code. promoter = buyers pick `code` in the organizer's promoter list" },
-            "url": { "type": "string", "format": "uri", "description": "Optional. The organizer's sign-up form, linked next to the discount" }
+            "url": { "type": "string", "format": "uri", "description": "Optional. via promoter: the organizer's sign-up form. via code: the only ticket shop where the code works; Get passes links there" }
           },
           "description": "Optional. A discount the organizer gave us, shown as a badge."
         },

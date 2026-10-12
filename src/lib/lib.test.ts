@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { countdown, countdownLong, dateBlock, dateLong, dateShort, months12, pISO } from './dates';
-import { cardVM, enrich, fmtPrice, isListed, localPriceText, priceLabel } from './festivals';
+import { cardVM, enrich, fmtPrice, isListed, localPriceText, priceLabel, ticketOf } from './festivals';
 import { basePath, langOf, lp, t } from '../i18n';
 import { inCountry } from '../i18n/places';
 import { calUrls, icsCalendar } from './ics';
@@ -394,4 +394,13 @@ describe('artist profiles', () => {
     expect(profileOf('Relampago').instagram).toBe('relampago_acflow'); // alias of Osmel Relámpago
     expect(profileOf('Nobody Known')).toEqual({});
   });
+});
+
+describe('ticketOf with discounts', () => {
+  const gd = 'https://www.goandance.com/en/event/1/x';
+  it('builds a code into go&dance links', () => expect(ticketOf(enrich([mk({ ticketUrl: gd, discount: { code: 'ABC', amount: 10 } })], TODAY)[0])).toBe(gd + '?discount=ABC'));
+  it('sends a shop-only code to its shop', () =>
+    expect(ticketOf(enrich([mk({ ticketUrl: gd, discount: { code: 'Nesty', amount: 10, url: 'https://my.weezevent.com/x' } })], TODAY)[0])).toBe('https://my.weezevent.com/x'));
+  it('keeps the ticket link for promoter deals', () =>
+    expect(ticketOf(enrich([mk({ ticketUrl: gd, discount: { code: 'Us', amount: 10, via: 'promoter', url: 'https://forms.example/f' } })], TODAY)[0])).toBe(gd));
 });

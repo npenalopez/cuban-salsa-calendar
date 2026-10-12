@@ -35,6 +35,7 @@ export interface Festival {
   /**
    * Optional discount from the organizer; currency null/absent = percent.
    * via 'promoter': no code, buyers pick `code` (our name) in the organizer's promoter list, on the form at `url`.
+   * A code with `url`: the code only works in that ticket shop, so Get passes links there.
    */
   discount?: { code: string; amount: number; currency?: string | null; via?: 'code' | 'promoter'; url?: string };
   // Only present server-side (stripped from the client bundle).
