@@ -90,7 +90,7 @@ export interface ArtistProfile {
 
 /** Generic illustrations in /artists/art/ (not portraits). Solo dancers and the two DJs are only used when set in `profiles`. */
 export const ART = [
-  'woman-casino', 'woman-son', 'woman-rumba', 'woman-afro', 'man-casino', 'man-son', 'man-rumba', 'man-afro',
+  'woman-casino', 'woman-son', 'woman-rumba', 'woman-afro', 'woman-reparto', 'man-casino', 'man-son', 'man-rumba', 'man-afro', 'man-reparto',
   'couple-spin', 'couple-dip', 'couple-son', 'dj-man', 'dj-woman', 'decks', 'band', 'congas', 'feet', 'instruments',
 ] as const;
 export type Art = (typeof ART)[number];
