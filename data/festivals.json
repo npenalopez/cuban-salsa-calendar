@@ -1081,7 +1081,7 @@
       "priceText": "From €89",
       "priceFrom": 89,
       "currency": "EUR",
-      "ticketUrl": "https://www.goandance.com/en/event/9563/festival-de-cuba-stuttgart-germany-2026-21st-edition",
+      "ticketUrl": "https://shop.ticketpay.de/JULLVFJY",
       "website": "https://cubafestival-stuttgart.de/",
       "instagram": "https://www.instagram.com/festivaldecuba/",
       "artists": [
@@ -1100,7 +1100,12 @@
       "description": "21st International Festival de Cuba Stuttgart. 'Lo Mejor de Cuba' with Cuban dancers from 25+ nations. 3 days of incredible parties, 35+ workshops, 1000+ square meters of workshop space.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\n2026-10-10: line-up (11) from https://www.goandance.com/en/event/9563/festival-de-cuba-stuttgart-germany-2026-21st-edition (go&dance page title 'Festival de Cuba Stuttgart - Germany 2026 (21st Edition)', 22-26 Oct 2026). Added: Chiky Cuba, DJ Timbanero, Katja Savastano, Leidel Perez, Osbanis & Anneta, Rafael Gonzalez, Seo Fernández, Wilmer & Maria, Yosniel Brunet. Removed (not on the organizer page for this edition): Anneta Kepka, Katja, Leidel Portuondo, Maria de la Vega, Osbanis Tejeda, Rafael, Wilmer Najarro, Yoyo Flow.\n2026-10-10: facebook from the festival website (https://cubafestival-stuttgart.de/).",
+      "discount": {
+        "code": "Cubancalendar",
+        "amount": 30,
+        "currency": null
+      },
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\n2026-10-10: line-up (11) from https://www.goandance.com/en/event/9563/festival-de-cuba-stuttgart-germany-2026-21st-edition (go&dance page title 'Festival de Cuba Stuttgart - Germany 2026 (21st Edition)', 22-26 Oct 2026). Added: Chiky Cuba, DJ Timbanero, Katja Savastano, Leidel Perez, Osbanis & Anneta, Rafael Gonzalez, Seo Fernández, Wilmer & Maria, Yosniel Brunet. Removed (not on the organizer page for this edition): Anneta Kepka, Katja, Leidel Portuondo, Maria de la Vega, Osbanis Tejeda, Rafael, Wilmer Najarro, Yoyo Flow.\n2026-10-10: facebook from the festival website (https://cubafestival-stuttgart.de/).\n2026-10-12: ticketUrl changed to the official TicketPay shop (from the owner, via the organizer). Was: https://www.goandance.com/en/event/9563/festival-de-cuba-stuttgart-germany-2026-21st-edition\n2026-10-12: 30% code Cubancalendar, applies to the whole order incl. ticket fees (owner tested: Full-Pass €149 + €8.84 fees -> €110.49). TicketPay cannot prefill it from the link.",
       "styles": [
         "casino",
         "timba",
