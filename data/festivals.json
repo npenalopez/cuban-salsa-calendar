@@ -1,6 +1,6 @@
 {
-  "version": "2026.10-137",
-  "updated": "2026-10-12",
+  "version": "2026.10-141",
+  "updated": "2026-10-13",
   "festivals": [
     {
       "id": "salsa-stras-festival-strasbourg-2026",
@@ -1059,6 +1059,40 @@
         "rueda"
       ],
       "cubanFocused": true
+    },
+    {
+      "id": "champagne-dance-festival-reims-2026",
+      "series": "champagne-dance-festival-reims",
+      "name": "Champagne Dance Festival",
+      "status": "scheduled",
+      "startDate": "2026-10-16",
+      "endDate": "2026-10-19",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Reims",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "Europe",
+      "venue": "Champagne Dance",
+      "coordinates": [
+        49.217633,
+        4.023415
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://my.weezevent.com/champagne-dance-festival-2026",
+      "website": null,
+      "instagram": "https://www.instagram.com/champagne_dance_festival/",
+      "artists": [],
+      "description": "Four-day dance festival at Champagne Dance in Reims, France, with salsa, bachata and kizomba.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates and venue from the organizer Weezevent page (16-19 Oct 2026, Champagne Dance, rue Roger Caillois, Reims). Cuban content not stated by the organizer; cubansalsafestivals.com says the salsa side is taught by Cuban-repertoire artists.",
+      "styles": [
+        "mixed"
+      ],
+      "cubanFocused": false
     },
     {
       "id": "festival-de-cuba-stuttgart-2026",
@@ -3523,6 +3557,40 @@
       "cubanFocused": true
     },
     {
+      "id": "festival-cuba-hoy-toulouse-2027",
+      "series": "festival-cuba-hoy-toulouse",
+      "name": "Festival Cuba Hoy ! Terres de Rencontres",
+      "status": "scheduled",
+      "startDate": "2027-01-23",
+      "endDate": "2027-02-05",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Toulouse",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "Europe",
+      "venue": null,
+      "coordinates": [
+        43.604464,
+        1.444243
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://billetterie.festik.net/cubahoy/",
+      "website": null,
+      "instagram": "https://www.instagram.com/festivalcubahoy/",
+      "artists": [],
+      "description": "Two-week festival of Cuban and Latin American culture across Toulouse, run by the Association Yemayá.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates and details from cubansalsafestivals.com only (organizer ticket page festik.net needs JavaScript and could not be read). It is a music/culture festival rather than a dance congress; to be reviewed.",
+      "styles": [
+        "mixed"
+      ],
+      "cubanFocused": false
+    },
+    {
       "id": "quien-manda-aubagne-2027",
       "series": "quien-manda-aubagne",
       "name": "Quien Manda Festival",
@@ -3585,9 +3653,9 @@
       "series": "unidanza-hamburg",
       "name": "UNiDANZA Afro-Cuban Dance Festival",
       "status": "scheduled",
-      "startDate": "2027-02-01",
-      "endDate": "2027-02-28",
-      "datePrecision": "month",
+      "startDate": "2027-02-12",
+      "endDate": "2027-02-14",
+      "datePrecision": "day",
       "dateNote": null,
       "city": "Hamburg",
       "country": "Germany",
@@ -3608,7 +3676,7 @@
       "description": "Afro-Cuban dance festival in Hamburg: a weekend of workshops, bootcamps and parties in the dance studios of Billie's Tanzstudio, in the Alte Dosenfabrik.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; organizer site (unidanza.de) still shows the 6-8 Feb 2026 edition, so 2027 is listed as February only. cubansalsafestivals.com says 12-14 Feb 2027 (not confirmed by the organizer). Their ticket link (bailacalabria.it) looked wrong; used the organizer tickets page.",
+      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; organizer site (unidanza.de) still shows the 6-8 Feb 2026 edition, so 2027 is listed as February only. cubansalsafestivals.com says 12-14 Feb 2027 (not confirmed by the organizer). Their ticket link (bailacalabria.it) looked wrong; used the organizer tickets page.\n2026-10-13: dates set to 12-14 Feb 2027 from cubansalsafestivals.com at the owner's request (organizer site not updated yet; to be rechecked).",
       "styles": [
         "afro-cuban",
         "rumba",
@@ -6503,6 +6571,40 @@
       "cubanFocused": true
     },
     {
+      "id": "sicilia-salsa-sensual-festival-ali-terme-2027",
+      "series": "sicilia-salsa-sensual-festival-ali-terme",
+      "name": "Sicilia Salsa Sensual Festival",
+      "status": "scheduled",
+      "startDate": "2027-07-05",
+      "endDate": "2027-07-11",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Ali Terme (Messina)",
+      "country": "Italy",
+      "countryCode": "IT",
+      "region": "Europe",
+      "venue": "Lido Terramatta",
+      "coordinates": [
+        38.016647,
+        15.429057
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://www.goandance.com/en/event/10019/sicilia-salsa-sensual-festival-2027-13th-edition",
+      "website": "https://www.alvaresshoes.com/sicilia-salsa-festival/",
+      "instagram": "https://www.instagram.com/siciliasalsasensualfestival/",
+      "artists": [],
+      "description": "13th edition: a week of salsa and bachata on the Ionian coast of Sicily at Ali Terme, with workshops by day and beach parties.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates from the official go&dance page (organizer Alvares Production: 5-11 Jul 2027, Via Lungomare Ali Terme). Organizer site only shows 2026. Cuban content: cubansalsafestivals.com says 2 of 20 salsa classes are Cuban.",
+      "styles": [
+        "mixed"
+      ],
+      "cubanFocused": false
+    },
+    {
       "id": "hungarian-summer-salsa-sensual-festival-2027",
       "series": "hungarian-summer-salsa-sensual-festival",
       "name": "Hungarian Summer Salsa and Sensual Festival (HSSF)",
@@ -6700,6 +6802,40 @@
       "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; facts from the organizer Eventbrite page (26-30 Aug 2027, Tempodrom, styles incl. Cuban Salsa). The other site says 26-29 Aug. Eventbrite shows only the 2026 line-up, so no artists yet.",
       "styles": [
         "casino",
+        "mixed"
+      ],
+      "cubanFocused": false
+    },
+    {
+      "id": "benidorm-beach-festival-benidorm-2027",
+      "series": "benidorm-beach-festival-benidorm",
+      "name": "Benidorm Beach Festival",
+      "status": "scheduled",
+      "startDate": "2027-08-26",
+      "endDate": "2027-08-30",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Benidorm",
+      "country": "Spain",
+      "countryCode": "ES",
+      "region": "Europe",
+      "venue": "Gran Hotel Bali",
+      "coordinates": [
+        38.531473,
+        -0.163494
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://worldtickets.es/es/events/benidorm-beach-festival-2027",
+      "website": null,
+      "instagram": "https://www.instagram.com/benidormbeachfestival/",
+      "artists": [],
+      "description": "Four-day summer festival at the Gran Hotel Bali in Benidorm, with salsa, bachata and kizomba workshops and parties.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates, venue and styles from the official Worldtickets page (26-30 Aug 2027, Gran Hotel Bali; Bachata Kizomba Salsa). Cuban content not stated by the organizer; cubansalsafestivals.com mentions a Cuban thread in the salsa room in 2026.",
+      "styles": [
         "mixed"
       ],
       "cubanFocused": false
