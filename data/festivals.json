@@ -2213,12 +2213,12 @@
         51.3397,
         12.3731
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "From €99",
+      "priceFrom": 99,
+      "currency": "EUR",
       "ticketUrl": "https://baileo.nimbuscloud.at/index.php?c=PublicCustomers&a=Courses&type=xx&level=xx&tag=festivalito",
       "website": "https://www.baileo.de/festivalito-leipzig/",
-      "instagram": "https://www.instagram.com/baileo_tanzschule/",
+      "instagram": "https://www.instagram.com/festivalito_leipzig/",
       "artists": [
         "Anne Kolditz",
         "Benedikta Leipus",
@@ -2226,16 +2226,18 @@
         "Darian Caballero",
         "Gabriela Cespédes",
         "Jonas & Sharon",
+        "Jordi & Belen",
         "Karolyn Aloma",
         "Kathi",
-        "Kay Polster",
+        "Kay & Lena",
+        "Meylem González",
         "Raymon Rodriguez (Raymon Way)",
         "Williams & Sissy"
       ],
       "description": "Festivalito Leipzig.",
-      "lastVerified": null,
+      "lastVerified": "2026-10-13",
       "featured": false,
-      "notes": "User to verify Instagram/website.\nWeb research on 2026-10-01: dates 2026-11-13 – 2026-11-15, website, instagram, ticketUrl, line-up (11). Source: https://www.baileo.de/festivalito-leipzig/\n2026-10-10: line-up checked against https://www.baileo.de/festivalito-leipzig/: unchanged.\n2026-10-10: facebook from the festival website (https://www.baileo.de/festivalito-leipzig/).",
+      "notes": "User to verify Instagram/website.\nWeb research on 2026-10-01: dates 2026-11-13 – 2026-11-15, website, instagram, ticketUrl, line-up (11). Source: https://www.baileo.de/festivalito-leipzig/\n2026-10-10: line-up checked against https://www.baileo.de/festivalito-leipzig/: unchanged.\n2026-10-10: facebook from the festival website (https://www.baileo.de/festivalito-leipzig/).\n2026-10-13: changes sent by the organizer (Instagram DM): Kay Polster removed, added Kay & Lena, Jordi & Belen, Meylem González; Instagram changed to festivalito_leipzig (was https://www.instagram.com/baileo_tanzschule/); price €99 from 14 Oct 2026.",
       "facebook": "https://www.facebook.com/baileo.tanzschule.leipzig/"
     },
     {
