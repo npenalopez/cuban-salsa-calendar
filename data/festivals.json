@@ -1103,8 +1103,9 @@
       "description": "Four-day dance festival at Champagne Dance in Reims, France, with salsa, bachata and kizomba.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates and venue from the organizer Weezevent page (16-19 Oct 2026, Champagne Dance, rue Roger Caillois, Reims). Cuban content not stated by the organizer; cubansalsafestivals.com says the salsa side is taught by Cuban-repertoire artists.\n2026-10-14: line-up (14) sent by the owner from the festival announcement. Spellings matched to existing artists: Osbanis & Aneta -> Osbanis & Anneta, Dj Pastaguero -> DJ Samir Pastaguero.",
+      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates and venue from the organizer Weezevent page (16-19 Oct 2026, Champagne Dance, rue Roger Caillois, Reims). Cuban content not stated by the organizer; cubansalsafestivals.com says the salsa side is taught by Cuban-repertoire artists.\n2026-10-14: line-up (14) sent by the owner from the festival announcement. Spellings matched to existing artists: Osbanis & Aneta -> Osbanis & Anneta, Dj Pastaguero -> DJ Samir Pastaguero.\n2026-10-14: owner confirmed a Cuban strand (line-up includes Danger & Marielkis, Osbanis & Anneta): styles casino + mixed. Owner confirmed Will MP is the Will of Will Mp & Nad.",
       "styles": [
+        "casino",
         "mixed"
       ],
       "cubanFocused": false
