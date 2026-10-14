@@ -1084,11 +1084,26 @@
       "ticketUrl": "https://my.weezevent.com/champagne-dance-festival-2026",
       "website": null,
       "instagram": "https://www.instagram.com/champagne_dance_festival/",
-      "artists": [],
+      "artists": [
+        "Danger & Marielkis",
+        "Dayana",
+        "DJ Assane",
+        "DJ Chanchan",
+        "DJ Jecksy",
+        "DJ Samir Pastaguero",
+        "Franck Salsahora & Laure",
+        "Jimi Jacks",
+        "Kev Tropiklille",
+        "Melissa Jova",
+        "Obinisa",
+        "Osbanis & Anneta",
+        "Will Dance Company",
+        "Will MP"
+      ],
       "description": "Four-day dance festival at Champagne Dance in Reims, France, with salsa, bachata and kizomba.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates and venue from the organizer Weezevent page (16-19 Oct 2026, Champagne Dance, rue Roger Caillois, Reims). Cuban content not stated by the organizer; cubansalsafestivals.com says the salsa side is taught by Cuban-repertoire artists.",
+      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates and venue from the organizer Weezevent page (16-19 Oct 2026, Champagne Dance, rue Roger Caillois, Reims). Cuban content not stated by the organizer; cubansalsafestivals.com says the salsa side is taught by Cuban-repertoire artists.\n2026-10-14: line-up (14) sent by the owner from the festival announcement. Spellings matched to existing artists: Osbanis & Aneta -> Osbanis & Anneta, Dj Pastaguero -> DJ Samir Pastaguero.",
       "styles": [
         "mixed"
       ],
