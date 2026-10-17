@@ -1,6 +1,6 @@
 {
-  "version": "2026.10-141",
-  "updated": "2026-10-13",
+  "version": "2026.10-142",
+  "updated": "2026-10-17",
   "festivals": [
     {
       "id": "salsa-stras-festival-strasbourg-2026",
@@ -3303,6 +3303,40 @@
       "lastVerified": null,
       "featured": false,
       "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\nLine-up (6) from https://www.goandance.com/en/event/9061/luxembourg-unified-dance-festival-2026 on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: line-up (27) from https://unifiedfestival.lu/artists (Site © 2026 and its countdown points to mid-Dec 2026; the artists page itself has no year). Added: Gilles & Mady, Cesc, Cornel & Rithika, David Pedron, Masa & Polina, Melvin & Gatica, Pablo & Raquel, Sakis & Mia, Trevor, Willy & Lauriane, York & Lisa, York, Aurea & Tresor, DJ Nao, Do Zangado, Dwe & Gaby, Gwany & Liliana, Miro Kikola, Paraiso, Saber & Majdouline, Stefanio Lima, Traybeatz. Removed (not on the organizer page for this edition): Alkemia.\n2026-10-10: public description cleaned of editor notes. Was: Five days at LuxExpo The Box in Kirchberg, Luxembourg City, in the week before Christmas when most of the circuit has stopped. Billed as bachata, kizomba and salsa with workshops, socials and a Jack & Jill competition. NOTE: general Latin event, not Cuban-focused.",
+      "styles": [
+        "mixed"
+      ],
+      "cubanFocused": false
+    },
+    {
+      "id": "eventopeople-roma-roma-2027",
+      "series": "eventopeople-roma-roma",
+      "name": "Eventopeople Roma",
+      "status": "scheduled",
+      "startDate": "2027-01-08",
+      "endDate": "2027-01-10",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Roma",
+      "country": "Italy",
+      "countryCode": "IT",
+      "region": "Europe",
+      "venue": "Hotel Cristoforo Colombo",
+      "coordinates": [
+        41.8178,
+        12.4609
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://www.goandance.com/en/event/10113/eventopeople-roma-2027",
+      "website": "https://www.eventopeopleroma.it/",
+      "instagram": "https://www.instagram.com/eventopeople_roma/",
+      "artists": [],
+      "description": "Three-day Caribbean dance weekend in Rome's EUR district with salsa, bachata and reggaeton workshops, parties and live artists.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-10-17 by the daily sync: city, 3-day format and hotel venue from the organizer site https://www.eventopeopleroma.it/ (exact dates 2027-01-08..10, ticket link and coordinates only from https://cubansalsafestivals.com/festivals/eventopeople-roma-2027/; ticket promo parameters removed). Cuban content not confirmed by the organizer (salsa, bachata, reggaeton).",
       "styles": [
         "mixed"
       ],
