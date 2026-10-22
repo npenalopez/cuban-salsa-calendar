@@ -1,6 +1,6 @@
 {
-  "version": "2026.10-142",
-  "updated": "2026-10-17",
+  "version": "2026.10-143",
+  "updated": "2026-10-22",
   "festivals": [
     {
       "id": "salsa-stras-festival-strasbourg-2026",
@@ -1136,6 +1136,12 @@
       "instagram": "https://www.instagram.com/festivaldecuba/",
       "artists": [
         "Chiky Cuba",
+        "DJ Hamix",
+        "DJ Javier de la Rosa",
+        "DJ Marco",
+        "DJ Matthias",
+        "DJ Oscar de Cuba",
+        "DJ Rumbero",
         "DJ Timbalero",
         "Eneris Mulgado",
         "Katja Savastano",
@@ -1155,7 +1161,7 @@
         "amount": 30,
         "currency": null
       },
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\n2026-10-10: line-up (11) from https://www.goandance.com/en/event/9563/festival-de-cuba-stuttgart-germany-2026-21st-edition (go&dance page title 'Festival de Cuba Stuttgart - Germany 2026 (21st Edition)', 22-26 Oct 2026). Added: Chiky Cuba, DJ Timbanero, Katja Savastano, Leidel Perez, Osbanis & Anneta, Rafael Gonzalez, Seo Fernández, Wilmer & Maria, Yosniel Brunet. Removed (not on the organizer page for this edition): Anneta Kepka, Katja, Leidel Portuondo, Maria de la Vega, Osbanis Tejeda, Rafael, Wilmer Najarro, Yoyo Flow.\n2026-10-10: facebook from the festival website (https://cubafestival-stuttgart.de/).\n2026-10-12: ticketUrl changed to the official TicketPay shop (from the owner, via the organizer). Was: https://www.goandance.com/en/event/9563/festival-de-cuba-stuttgart-germany-2026-21st-edition\n2026-10-12: 30% code Cubancalendar, applies to the whole order incl. ticket fees (owner tested: Full-Pass €149 + €8.84 fees -> €110.49). TicketPay cannot prefill it from the link.",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\n2026-10-10: line-up (11) from https://www.goandance.com/en/event/9563/festival-de-cuba-stuttgart-germany-2026-21st-edition (go&dance page title 'Festival de Cuba Stuttgart - Germany 2026 (21st Edition)', 22-26 Oct 2026). Added: Chiky Cuba, DJ Timbanero, Katja Savastano, Leidel Perez, Osbanis & Anneta, Rafael Gonzalez, Seo Fernández, Wilmer & Maria, Yosniel Brunet. Removed (not on the organizer page for this edition): Anneta Kepka, Katja, Leidel Portuondo, Maria de la Vega, Osbanis Tejeda, Rafael, Wilmer Najarro, Yoyo Flow.\n2026-10-10: facebook from the festival website (https://cubafestival-stuttgart.de/).\n2026-10-12: ticketUrl changed to the official TicketPay shop (from the owner, via the organizer). Was: https://www.goandance.com/en/event/9563/festival-de-cuba-stuttgart-germany-2026-21st-edition\n2026-10-12: 30% code Cubancalendar, applies to the whole order incl. ticket fees (owner tested: Full-Pass €149 + €8.84 fees -> €110.49). TicketPay cannot prefill it from the link.\n2026-10-22: DJs added from https://cubafestival-stuttgart.de/: DJ Rumbero, DJ Javier de la Rosa, DJ Oscar de Cuba, DJ Matthias, DJ Marco, DJ Hamix.",
       "styles": [
         "casino",
         "timba",
@@ -1458,6 +1464,7 @@
       "artists": [
         "Carlos Rafael Gonzalez & Dayana Alcala",
         "Cristian & Ibana",
+        "DJ Canet",
         "DJ Jaime El Loco",
         "Ernesto Garcia",
         "Ernesto Miari",
@@ -1480,7 +1487,7 @@
         "amount": 10,
         "currency": "EUR"
       },
-      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (15) from the list sent by the owner; replaces 0 earlier names.\n2026-10-12: €10 discount code cubacalendar, sent by Son Na'Má over Instagram DM; valid for Son Na'Má and Los Dos Abuelos (same organizer).",
+      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (15) from the list sent by the owner; replaces 0 earlier names.\n2026-10-12: €10 discount code cubacalendar, sent by Son Na'Má over Instagram DM; valid for Son Na'Má and Los Dos Abuelos (same organizer).\n2026-10-22: DJs added from https://www.instagram.com/reel/Dd8jC9HxIJg/: DJ Canet.",
       "styles": [
         "casino",
         "timba",
@@ -1765,6 +1772,9 @@
         "Adonis Santiago",
         "Andy & Yuliet",
         "Diana Rodriguez",
+        "DJ Jack El Calvo",
+        "DJ Leo D'Cuba",
+        "DJ Timbalero",
         "FredyClan",
         "Gilbert Datway",
         "Jenniselt Galata",
@@ -1776,7 +1786,7 @@
       "description": "Havana en Belgrado festival in Belgrade, Serbia. Listed in rueda.casino November 5-8, 2026.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\nLine-up (4) from https://www.havanaenbelgrado.com/ on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: facebook from the festival website (https://www.havanaenbelgrado.com/).\n2026-10-10: line-up (9) from the list sent by the owner; replaces 4 earlier names.\n2026-10-14 instagram watch: added Gilbert Datway from https://www.instagram.com/p/DebelBKsuP9/",
+      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\nLine-up (4) from https://www.havanaenbelgrado.com/ on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: facebook from the festival website (https://www.havanaenbelgrado.com/).\n2026-10-10: line-up (9) from the list sent by the owner; replaces 4 earlier names.\n2026-10-14 instagram watch: added Gilbert Datway from https://www.instagram.com/p/DebelBKsuP9/\n2026-10-22: DJs added from https://www.instagram.com/p/Ddlo3VGDNct/: DJ Leo D'Cuba, DJ Timbalero, DJ Jack El Calvo.",
       "styles": [
         "casino",
         "timba",
@@ -1961,9 +1971,17 @@
         "Claudio & Aleksandra",
         "Cuban Flex",
         "Dimitris & Yolena",
+        "DJ Alexio",
+        "DJ Clau",
+        "DJ Dmitri",
         "DJ Eddy Aguero",
         "DJ Javier de la Rosa",
         "DJ Leo D'Cuba",
+        "DJ Mauri",
+        "DJ Mishow",
+        "DJ MomoLatino",
+        "DJ Morcilla",
+        "DJ Sezar",
         "Edyta Kwaśna",
         "Gabi & Estefy",
         "Julio Molina",
@@ -1979,7 +1997,7 @@
       "description": "el Sol Festival Fall Edition - mixed-style salsa festival - one of the biggest Polish dance brands. 100+ hours of workshops in 3 dance styles. Run by @elsolfestivals brand which also runs Bachata Festival, Warsaw Zouk Festival, etc. Strong Cuban presence.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\n2026-10-10: line-up (11) from https://elsolfestival.pl/en/artists/ (Artists page headed 'ELSOL FALL Line up'; event page 12-16.11.2026 Warsaw; go&dance 'El Sol Festival FALL Edition 2026'). Added: Seo Fernandez & Eneris Mulgado, Cuban Flex, Barbara Jimenez, Julio Molina, Ayoub Mouslim, Edyta Kwaśna, Rey Ceballo & Tripulación Cubana, DJ Javier de la Rosa, DJ Leo D'Cuba, DJ Eddy Aguero. Removed (not on the organizer page for this edition): Marco Ferrigno.\n2026-10-15 instagram watch: added Gabi & Estefy, Michael & Mayra from https://www.instagram.com/p/Ded5e9Ykcbp/ , https://www.instagram.com/p/DebR7O1ihqG/\n2026-10-17 instagram watch: added Willy & Jessy, Claudio & Aleksandra from https://www.instagram.com/p/DejGbJlANb_/ and https://www.instagram.com/p/DeghNwSjWov/\n2026-10-19 instagram watch: added Karen Abi Nader, Dimitris & Yolena from https://www.instagram.com/p/DeoRFepjgIU/ and https://www.instagram.com/p/Delqmb1HaHX/\n2026-10-20 instagram watch: added Rodrigo Cortazar from https://www.instagram.com/p/DerZkdoChyG/\n2026-10-20 instagram watch: added Super Mario from https://www.instagram.com/p/DerYC7lCmz-/",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\n2026-10-10: line-up (11) from https://elsolfestival.pl/en/artists/ (Artists page headed 'ELSOL FALL Line up'; event page 12-16.11.2026 Warsaw; go&dance 'El Sol Festival FALL Edition 2026'). Added: Seo Fernandez & Eneris Mulgado, Cuban Flex, Barbara Jimenez, Julio Molina, Ayoub Mouslim, Edyta Kwaśna, Rey Ceballo & Tripulación Cubana, DJ Javier de la Rosa, DJ Leo D'Cuba, DJ Eddy Aguero. Removed (not on the organizer page for this edition): Marco Ferrigno.\n2026-10-15 instagram watch: added Gabi & Estefy, Michael & Mayra from https://www.instagram.com/p/Ded5e9Ykcbp/ , https://www.instagram.com/p/DebR7O1ihqG/\n2026-10-17 instagram watch: added Willy & Jessy, Claudio & Aleksandra from https://www.instagram.com/p/DejGbJlANb_/ and https://www.instagram.com/p/DeghNwSjWov/\n2026-10-19 instagram watch: added Karen Abi Nader, Dimitris & Yolena from https://www.instagram.com/p/DeoRFepjgIU/ and https://www.instagram.com/p/Delqmb1HaHX/\n2026-10-20 instagram watch: added Rodrigo Cortazar from https://www.instagram.com/p/DerZkdoChyG/\n2026-10-20 instagram watch: added Super Mario from https://www.instagram.com/p/DerYC7lCmz-/\n2026-10-22: DJs added from https://elsolfestival.pl/en/artists/: DJ Alexio, DJ Clau, DJ Sezar, DJ MomoLatino, DJ Mauri, DJ Dmitri, DJ Mishow, DJ Morcilla.",
       "styles": [
         "casino",
         "timba",
@@ -2213,8 +2231,12 @@
       "instagram": "https://www.instagram.com/elsonsevistedegala/",
       "artists": [
         "Alexei & Emilia",
+        "DJ Adriano Ghelli",
+        "DJ El Martillo de la Salsa",
         "DJ Leonel El Farandulero",
         "DJ Lilimba",
+        "DJ Manuel Merlini",
+        "DJ Marco Salamone",
         "Osmani Segura",
         "Roly Maden",
         "Yane Suena Cubano",
@@ -2228,7 +2250,7 @@
         "amount": 10,
         "currency": "EUR"
       },
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up kept but NOT confirmed on any website or ticket page (source not recorded; the description suggests an organizer announcement, probably on Instagram). Owner decided on 2026-10-10 to keep it.\n2026-10-10: line-up (7) from the list sent by the owner; replaces 2 earlier names.\n2026-10-10: description no longer names Mixael Cabrera / Orquesta Típica (not in the line-up the owner sent). Was: Small residential weekend at Hotel Don Angel on the Catalan coast, organised by the association Suena Cubano and presented by Cuban tresero and sonero Mixael Cabrera. Son is the point: 18 workshops, all Cuban (son cubano, rueda de son, casino, timba a contratiempo, Yoruba dances, conga, rumba guaguancó, lady style son, danzón, cha cha chá) in three rooms named after Benny Moré, Arsenio Rodríguez and Ignacio Piñeiro, about half taught with live musicians. Friday welcome cocktail and show 'Lo Mejor de Mí', Orquesta Típica, Saturday 'noche elegante' with midnight concert by Mixael Cabrera, DJs until 3-4 AM. Meals included, everyone in the same hotel.\n2026-10-12: €10 discount code CUBANCALEN from the organizer. Weezevent cannot prefill it from the link; buyers type it at checkout.",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up kept but NOT confirmed on any website or ticket page (source not recorded; the description suggests an organizer announcement, probably on Instagram). Owner decided on 2026-10-10 to keep it.\n2026-10-10: line-up (7) from the list sent by the owner; replaces 2 earlier names.\n2026-10-10: description no longer names Mixael Cabrera / Orquesta Típica (not in the line-up the owner sent). Was: Small residential weekend at Hotel Don Angel on the Catalan coast, organised by the association Suena Cubano and presented by Cuban tresero and sonero Mixael Cabrera. Son is the point: 18 workshops, all Cuban (son cubano, rueda de son, casino, timba a contratiempo, Yoruba dances, conga, rumba guaguancó, lady style son, danzón, cha cha chá) in three rooms named after Benny Moré, Arsenio Rodríguez and Ignacio Piñeiro, about half taught with live musicians. Friday welcome cocktail and show 'Lo Mejor de Mí', Orquesta Típica, Saturday 'noche elegante' with midnight concert by Mixael Cabrera, DJs until 3-4 AM. Meals included, everyone in the same hotel.\n2026-10-12: €10 discount code CUBANCALEN from the organizer. Weezevent cannot prefill it from the link; buyers type it at checkout.\n2026-10-22: DJs added from https://www.instagram.com/reel/DcONt5VoMsw/: DJ Manuel Merlini.\n2026-10-22: DJs added from https://www.instagram.com/reel/DcWxLdGIzkD/: DJ Adriano Ghelli.\n2026-10-22: DJs added from https://www.instagram.com/reel/DcyoLbvIRK3/: DJ Marco Salamone.\n2026-10-22: DJs added from https://www.instagram.com/reel/DcYSpFQIls9/: DJ El Martillo de la Salsa.",
       "styles": [
         "casino",
         "timba",
@@ -2867,6 +2889,7 @@
         "Barbara Jimenez",
         "Claudio D'Ercole",
         "DJ Androger",
+        "DJ El Trece",
         "Gerardo De Armas",
         "Germano Carbotti",
         "Giada Cristofari",
@@ -2882,7 +2905,7 @@
       "description": "10th edition, run by Salsa Crew at the Plan B Music Club in Anzio, south of Rome. Two days with workshops for all levels in 4 rooms simultaneously, 20+ international artists, Royal Dance Competition and the Saturday Latin Star Night. Strong Cuban line-up (Maykel Fonts, Jenniselt Galata, Wilmer y María, Gerardo De Armas) alongside a large Italian contingent. Announced as the 'salsa division' line-up, so other styles are likely to follow. Partner hotels from about €29/night. Info: info@salsacrew.it.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: 10th edition, run by Salsa Crew at the Plan B Music Club in Anzio, south of Rome. Two days with workshops for all levels in 4 rooms simultaneously, 20+ international artists, Royal Dance Competition and the Saturday Latin Star Night. Strong Cuban line-up (Maykel Fonts, Jenniselt Galata, Wilmer y María, Gerardo De Armas) alongside a large Italian contingent. NOTE: announced as the 'salsa division' line-up, so other styles are likely to follow. Partner hotels from about €29/night. Info: info@salsacrew.it.\n2026-10-10: line-up kept but NOT confirmed on any website or ticket page (source not recorded; the description suggests an organizer announcement, probably on Instagram). Owner decided on 2026-10-10 to keep it.\n2026-10-10: facebook from the festival website (https://www.salsacrew.it/).\n2026-10-16 instagram watch: added Claudio D'Ercole, DJ Androger from https://www.instagram.com/p/Dehhk6XORyW/ and https://www.instagram.com/p/DegmQnxOt88/",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (venue); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: 10th edition, run by Salsa Crew at the Plan B Music Club in Anzio, south of Rome. Two days with workshops for all levels in 4 rooms simultaneously, 20+ international artists, Royal Dance Competition and the Saturday Latin Star Night. Strong Cuban line-up (Maykel Fonts, Jenniselt Galata, Wilmer y María, Gerardo De Armas) alongside a large Italian contingent. NOTE: announced as the 'salsa division' line-up, so other styles are likely to follow. Partner hotels from about €29/night. Info: info@salsacrew.it.\n2026-10-10: line-up kept but NOT confirmed on any website or ticket page (source not recorded; the description suggests an organizer announcement, probably on Instagram). Owner decided on 2026-10-10 to keep it.\n2026-10-10: facebook from the festival website (https://www.salsacrew.it/).\n2026-10-16 instagram watch: added Claudio D'Ercole, DJ Androger from https://www.instagram.com/p/Dehhk6XORyW/ and https://www.instagram.com/p/DegmQnxOt88/\n2026-10-22: DJs added from https://www.instagram.com/p/DewAsxIuEHG/: DJ El Trece.",
       "styles": [
         "casino",
         "timba",
@@ -3171,7 +3194,7 @@
       "priceFrom": 2799,
       "currency": "MXN",
       "ticketUrl": null,
-      "website": null,
+      "website": "https://timbaflowfestival.com/",
       "instagram": "https://www.instagram.com/timbaflow_festival/",
       "artists": [
         "Aleida de la Serna",
@@ -3195,7 +3218,7 @@
       "description": "Four days on the Mexican Caribbean where one pass covers the hotel room (The Palm at Playa, central Playa del Carmen near Quinta Avenida), airport transfers, private beach access, workshops and a front-of-stage zone. Friday registration and welcome social; Saturday timba and son workshops plus open rumba (the only workshop day); Sunday live shows and outdoor colour party; Monday closing party on a catamaran. All-Cuban roster; built around music and the beach more than teaching.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\n2026-10-10 link check: website removed (timbaflowfestival.com did not respond in three tries over several hours). Was: https://timbaflowfestival.com/en\n2026-10-10 link check: ticketUrl removed (same site, not responding). Was: https://timbaflowfestival.com/en#boletos\n2026-10-10: line-up (17) from the Timba Flow 2026 poster (sent by the owner); replaces 0 earlier names.",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\n2026-10-10 link check: website removed (timbaflowfestival.com did not respond in three tries over several hours). Was: https://timbaflowfestival.com/en\n2026-10-10 link check: ticketUrl removed (same site, not responding). Was: https://timbaflowfestival.com/en#boletos\n2026-10-10: line-up (17) from the Timba Flow 2026 poster (sent by the owner); replaces 0 earlier names.\n2026-10-22: website https://timbaflowfestival.com/ (official site; flyer for 4-7 Dec 2026 lists 'DJ CONFIRMADOS: DJ ONE • DJ EL DE LA YUNFA', both already listed).",
       "styles": [
         "casino",
         "timba",
@@ -3971,6 +3994,9 @@
       "artists": [
         "Alex Toledo",
         "Diana Rodriguez",
+        "DJ Csedi",
+        "DJ Don Marko",
+        "DJ Rafi",
         "Jonar González",
         "Julio Nápoles",
         "Pedrito & Giusy",
@@ -3981,7 +4007,7 @@
       "description": "Craziest Cuban festival in the heart of Europe. February 20-23, 2026. Salsa, Afro, Son, Rumba workshops with top Cuban artists. Bootcamps: Master Afro Bootcamp with Yeni Molinet, Rueda de Casino Bootcamp with Mahmoud Morsy & Isabella (champions of Rueda de Casino). Official Partner Hotel: Ibis Budapest Stadium.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (2) from https://arrebatatefestival.com/ on 2026-10-01 (medium confidence); verify with the organizer.\n2026-10-10: line-up (3) from https://arrebatatefestival.com/ (Page says 'Arrebáta9e 25 Feb - 01 March 2027'; bootcamps dated Friday 26 February (a Friday in 2027)). Added: Royma Rodriguez. Page partly unreadable (images); earlier names kept.\n2026-10-10: facebook from the festival website (https://arrebatatefestival.com/).\n2026-10-10: added Julio Napoles, Pedrito & Giusy, Diana Rodriguez, Yenifer Lavin, Yoyo Flow, Royma Roman, Jonar Gonzalez (owner).\n2026-10-10: passes from €141 (owner).",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (2) from https://arrebatatefestival.com/ on 2026-10-01 (medium confidence); verify with the organizer.\n2026-10-10: line-up (3) from https://arrebatatefestival.com/ (Page says 'Arrebáta9e 25 Feb - 01 March 2027'; bootcamps dated Friday 26 February (a Friday in 2027)). Added: Royma Rodriguez. Page partly unreadable (images); earlier names kept.\n2026-10-10: facebook from the festival website (https://arrebatatefestival.com/).\n2026-10-10: added Julio Napoles, Pedrito & Giusy, Diana Rodriguez, Yenifer Lavin, Yoyo Flow, Royma Roman, Jonar Gonzalez (owner).\n2026-10-10: passes from €141 (owner).\n2026-10-22: DJs added from https://arrebatatefestival.com/: DJ Rafi, DJ Don Marko, DJ Csedi.",
       "styles": [
         "casino",
         "timba",
@@ -4135,6 +4161,8 @@
         "Alex Garcia",
         "Andrea & Silvia",
         "Andrés & Yuno",
+        "DJ King",
+        "DJ Ricky",
         "Fabrizio & Giulia",
         "Hide & Peko",
         "Marcelo Stella",
@@ -4149,7 +4177,7 @@
       "description": null,
       "lastVerified": null,
       "featured": false,
-      "notes": "Next edition found by web research on 2026-10-01. Source: https://fusafes.tiempo.jp/\n2026-10-10: line-up (13) from https://fusafes.tiempo.jp/en/dancers.html (Page heading 'FUSABAFES 2027 Featured Dancers'; festival 26-28 Feb 2027). Added: Fabrizio & Giulia, Andrea & Silvia, Mari Yogo, Andrés & Yuno, Roberto Moré, Alex Garcia, Hide & Peko, Rav & Yuko, Pablo & Kaku, Yukino, Mike Honda, Marcelo Stella, Yuka.\n2026-10-10: facebook from the festival website (https://fusafes.tiempo.jp/).",
+      "notes": "Next edition found by web research on 2026-10-01. Source: https://fusafes.tiempo.jp/\n2026-10-10: line-up (13) from https://fusafes.tiempo.jp/en/dancers.html (Page heading 'FUSABAFES 2027 Featured Dancers'; festival 26-28 Feb 2027). Added: Fabrizio & Giulia, Andrea & Silvia, Mari Yogo, Andrés & Yuno, Roberto Moré, Alex Garcia, Hide & Peko, Rav & Yuko, Pablo & Kaku, Yukino, Mike Honda, Marcelo Stella, Yuka.\n2026-10-10: facebook from the festival website (https://fusafes.tiempo.jp/).\n2026-10-22: DJs added from https://fusafes.tiempo.jp/ja/musicians.html: DJ Ricky, DJ King.",
       "facebook": "https://www.facebook.com/fukuokasalsafestival"
     },
     {
@@ -5342,6 +5370,10 @@
         "Cristian Mauricio",
         "Damarys Farres",
         "Danger & Marielkis",
+        "DJ Kasanoba",
+        "DJ Ricafed",
+        "DJ Richard Fallon",
+        "DJ Tom Nka",
         "Elito Revé y su Charangón",
         "FredyClan",
         "Kamila",
@@ -5358,7 +5390,7 @@
       "description": "Workshops | Parties | Live Music | Rumba Abierta | Casino Boot Camp | Rueda Olympics. 19+ world-class artists + DJs. 3 full days of workshops with live music across all levels. Casino Boot Camp by Ramses and Sandra. 2 epic parties at Saw Swee Hock Student Centre, central London. Friendly, inclusive community by Rueda Libre. Quality Cuban dance with great artists in welcoming and safe space.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (website, venue); verify with the organizer.\nLine-up (20) from https://ruedalibre.co.uk/la-dosis-artists/ on 2026-10-01 (medium confidence); verify with the organizer.\nFilled from cubansalsafestivals.com on 2026-10-05 (ticketUrl); verify with the organizer.\n2026-10-10: line-up (1) from https://ruedalibre.co.uk/la-dosis/ (Page says 9–11 April 2027 and 'Concert by Elito Reve y su Charangon'). Added: Elito Revé y su Charangón. Removed (not on the organizer page for this edition): Adonis Santiago, Andy & Yuliet, Cristian, Damarys Farres, Danger & Marielkis, DJ Kasanoba, DJ Ricafed, DJ Richard Fallon, DJ Tom Nka, FredyClan, High Five Salsa, Kamila, Kevin y Geysa, Luanda Pau, Luis Duarte, Moe Flex, Osmani Segura, Ramses y Sandra, Yanet Fuentes, Yenifer Lavin.\n2026-10-10: facebook from the festival website (https://ruedalibre.co.uk/la-dosis/).\n2026-10-10: line-up (17) from https://ruedalibre.co.uk/la-dosis-artists/ (owner confirmed it is the 2027 line-up; 'High Five Salsa' = Noe & Diego, 'Damarys' = Damarys Farres) plus the Elito Revé y su Charangón concert. Instagram @rueda.libre.ldn (owner; profile checked).",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (website, venue); verify with the organizer.\nLine-up (20) from https://ruedalibre.co.uk/la-dosis-artists/ on 2026-10-01 (medium confidence); verify with the organizer.\nFilled from cubansalsafestivals.com on 2026-10-05 (ticketUrl); verify with the organizer.\n2026-10-10: line-up (1) from https://ruedalibre.co.uk/la-dosis/ (Page says 9–11 April 2027 and 'Concert by Elito Reve y su Charangon'). Added: Elito Revé y su Charangón. Removed (not on the organizer page for this edition): Adonis Santiago, Andy & Yuliet, Cristian, Damarys Farres, Danger & Marielkis, DJ Kasanoba, DJ Ricafed, DJ Richard Fallon, DJ Tom Nka, FredyClan, High Five Salsa, Kamila, Kevin y Geysa, Luanda Pau, Luis Duarte, Moe Flex, Osmani Segura, Ramses y Sandra, Yanet Fuentes, Yenifer Lavin.\n2026-10-10: facebook from the festival website (https://ruedalibre.co.uk/la-dosis/).\n2026-10-10: line-up (17) from https://ruedalibre.co.uk/la-dosis-artists/ (owner confirmed it is the 2027 line-up; 'High Five Salsa' = Noe & Diego, 'Damarys' = Damarys Farres) plus the Elito Revé y su Charangón concert. Instagram @rueda.libre.ldn (owner; profile checked).\n2026-10-22: DJs added from https://ruedalibre.co.uk/la-dosis/djs/: DJ Tom Nka, DJ Kasanoba, DJ Richard Fallon, DJ Ricafed.",
       "styles": [
         "casino",
         "timba",
@@ -6236,7 +6268,12 @@
       "instagram": "https://www.instagram.com/guaguancofestival/",
       "artists": [
         "Albert Molina",
+        "DJ Abel",
         "DJ El Gato Volador",
+        "DJ Estefi",
+        "DJ Peppe",
+        "DJ Tomer",
+        "DJ Wasia",
         "Emilito Herrera",
         "Hector Oviedo",
         "Jorge Camagüey",
@@ -6251,7 +6288,7 @@
       "description": "Largest international Cuban music and culture festival in Europe. 70th anniversary celebration of Orquesta Revé. Live performances, traditional son groups, folk shows. Attendees from 46+ countries.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (11) from https://www.goandance.com/en/event/9474/guaguanco-festival-2027-gold-edition on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: line-up checked against https://www.goandance.com/en/event/9474/guaguanco-festival-2027-gold-edition: unchanged.\n2026-10-16 instagram watch: added Yenifer Lavin from https://www.instagram.com/reel/Deg2G4hopX7/",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (11) from https://www.goandance.com/en/event/9474/guaguanco-festival-2027-gold-edition on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: line-up checked against https://www.goandance.com/en/event/9474/guaguanco-festival-2027-gold-edition: unchanged.\n2026-10-16 instagram watch: added Yenifer Lavin from https://www.instagram.com/reel/Deg2G4hopX7/\n2026-10-22: DJs added from https://www.guaguancofestival.com/artists/: DJ Abel, DJ Estefi, DJ Wasia, DJ Tomer, DJ Peppe.",
       "styles": [
         "casino",
         "timba",
@@ -6357,6 +6394,46 @@
         "rumba",
         "afro-cuban",
         "mixed"
+      ],
+      "cubanFocused": true
+    },
+    {
+      "id": "mi-solar-kalogria-2027",
+      "series": "mi-solar-kalogria",
+      "name": "Mi Solar Festival",
+      "status": "scheduled",
+      "startDate": "2027-05-21",
+      "endDate": "2027-05-28",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Kalogria",
+      "country": "Greece",
+      "countryCode": "GR",
+      "region": "Europe",
+      "venue": null,
+      "coordinates": [
+        38.153,
+        21.37
+      ],
+      "priceText": "7 nights all-inclusive from €549 (family room) to €1219 (single); bootcamps extra",
+      "priceFrom": 549,
+      "currency": "EUR",
+      "ticketUrl": "https://docs.google.com/forms/d/e/1FAIpQLScS4kkRsHCC8b3wBCG8Zr2xB5bfkfSOPC5LfrLCCJiDk_kVig/viewform",
+      "website": "https://misolarfestival.com/",
+      "instagram": "https://www.instagram.com/misolarfestival/",
+      "facebook": "https://www.facebook.com/Misolarfestival/",
+      "artists": [
+        "Karelia Despaigne",
+        "Yorgenis Danger García",
+        "Yoyo Flow"
+      ],
+      "description": "A week-long Cuban salsa beach holiday on the Peloponnese coast: seven nights in a four-star all-inclusive hotel at Kalogria, with daily workshops, bootcamps, pool, beach and night parties. Fifth edition.",
+      "lastVerified": "2026-10-22",
+      "featured": false,
+      "notes": "2026-10-22: added at the owner's request. Dates, location, room prices, registration form, Instagram and Facebook from https://misolarfestival.com/ ('MiSolar 5', 21-28 May 2027, Kalogria, Greece; check-in Friday, check-out the following Friday). Line-up from the 'Artists of 2027' flyers on that page (each flyer: '21-28 May, 2027 Kalogria'): Yoyo Flow, Karelia Despaigne, Yorgenis Danger Garcia (Afro bootcamp); one more flyer says 'Coming soon'. Hotel not named by the organizer (2026 edition listings say Kalogria Beach Resort); coordinates are Kalogria beach. Bootcamps (Yoyo Flow video, Yorgenis 'Danger' García Afro) are not included in the room price.",
+      "styles": [
+        "casino",
+        "afro-cuban"
       ],
       "cubanFocused": true
     },
@@ -6471,6 +6548,7 @@
         "DJ Aurel",
         "DJ H-Lover",
         "DJ Hicham",
+        "DJ PhilGyver",
         "DJ Rachid",
         "DJ Sabha",
         "DJ Willy",
@@ -6486,7 +6564,7 @@
       "description": "Only Salsa Festival by Swob in Rivedoux-Plage (Île de Ré): a mixed Latin festival with salsa, bachata and kizomba, and some Cuban salsa on the programme.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, venue); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: Only Salsa Festival by Swob in Rivedoux-Plage (Île de Ré). Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-10: dates 2027-06-03 – 2027-06-07 removed (owner's decision): they came from cubansalsafestivals.com and onlysalsa.fr still only shows 22–25 May 2026. Hidden until the organizer announces 2027 dates.\n2026-10-10: dates 3–7 June 2027 confirmed by the owner (listed again). Line-up (19) from the festival poster sent by the owner (salsa artists and DJs; media left out; the poster says more DJs to come).",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, venue); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: Only Salsa Festival by Swob in Rivedoux-Plage (Île de Ré). Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-10: dates 2027-06-03 – 2027-06-07 removed (owner's decision): they came from cubansalsafestivals.com and onlysalsa.fr still only shows 22–25 May 2026. Hidden until the organizer announces 2027 dates.\n2026-10-10: dates 3–7 June 2027 confirmed by the owner (listed again). Line-up (19) from the festival poster sent by the owner (salsa artists and DJs; media left out; the poster says more DJs to come).\n2026-10-22: DJs added from https://www.instagram.com/p/DbVqE2oAcGQ/: DJ PhilGyver.",
       "styles": [
         "casino",
         "timba",
@@ -6564,7 +6642,7 @@
         "Cuban Flex",
         "DJ Abel",
         "DJ Capo",
-        "DJ Estefany",
+        "DJ Estefi",
         "DJ Killo",
         "DJ Manuel",
         "DJ Ned",
@@ -6579,7 +6657,7 @@
       "description": "Festival of bachata, salsa cubana, and timba held at Hotel Don Angel in Santa Susanna (Barcelona area). Features workshops with renowned Cuban artists like Pedrito & Giusy, plus international bachata names. Three days of workshops, shows, themed parties and pool parties on the Mediterranean coast.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\nLine-up (20) from https://www.crazydancefestival.com/ on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: line-up checked against https://www.crazydancefestival.com/: unchanged.",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\nLine-up (20) from https://www.crazydancefestival.com/ on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: line-up checked against https://www.crazydancefestival.com/: unchanged.\n2026-10-22: DJ Estefany renamed to DJ Estefi, the spelling on the organizer's own DJ image (https://www.crazydancefestival.com/) and at her other festivals.",
       "styles": [
         "casino",
         "timba",
@@ -6733,11 +6811,13 @@
       "ticketUrl": "https://www.goandance.com/en/event/10019/sicilia-salsa-sensual-festival-2027-13th-edition",
       "website": "https://www.alvaresshoes.com/sicilia-salsa-festival/",
       "instagram": "https://www.instagram.com/siciliasalsasensualfestival/",
-      "artists": [],
+      "artists": [
+        "DJ El Malo"
+      ],
       "description": "13th edition: a week of salsa and bachata on the Ionian coast of Sicily at Ali Terme, with workshops by day and beach parties.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates from the official go&dance page (organizer Alvares Production: 5-11 Jul 2027, Via Lungomare Ali Terme). Organizer site only shows 2026. Cuban content: cubansalsafestivals.com says 2 of 20 salsa classes are Cuban.",
+      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates from the official go&dance page (organizer Alvares Production: 5-11 Jul 2027, Via Lungomare Ali Terme). Organizer site only shows 2026. Cuban content: cubansalsafestivals.com says 2 of 20 salsa classes are Cuban.\n2026-10-22: DJs added from https://www.alvaresshoes.com/sicilia-salsa-festival-2027/: DJ El Malo.",
       "styles": [
         "mixed"
       ],
@@ -6768,12 +6848,18 @@
       "website": "https://hssf.eu/",
       "instagram": "https://www.instagram.com/hssfhungary/",
       "artists": [
+        "DJ Clau",
+        "DJ Husky",
+        "DJ Khalid",
+        "DJ Rumbero",
+        "DJ Shark",
+        "DJ Tronky",
         "Moe Flex"
       ],
       "description": "Hungarian Summer Salsa and Sensual Festival (HSSF) in Balatonfüred: a mixed Latin festival with salsa, bachata and kizomba, and some Cuban salsa on the programme.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: Hungarian Summer Salsa and Sensual Festival (HSSF) in Balatonfüred. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-21 instagram watch: added Moe Flex from https://www.instagram.com/p/Deo3IQKoMot/",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: Hungarian Summer Salsa and Sensual Festival (HSSF) in Balatonfüred. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-21 instagram watch: added Moe Flex from https://www.instagram.com/p/Deo3IQKoMot/\n2026-10-22: DJs added from https://hssf.eu/eloadok/: DJ Rumbero, DJ Tronky, DJ Husky, DJ Khalid, DJ Clau, DJ Shark.",
       "styles": [
         "casino",
         "timba",
