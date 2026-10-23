@@ -1,6 +1,6 @@
 {
-  "version": "2026.10-143",
-  "updated": "2026-10-22",
+  "version": "2026.10-144",
+  "updated": "2026-10-23",
   "festivals": [
     {
       "id": "salsa-stras-festival-strasbourg-2026",
@@ -4422,11 +4422,11 @@
       "endDate": "2027-03-07",
       "datePrecision": "day",
       "dateNote": null,
-      "city": "Santa Susanna",
+      "city": "Lloret de Mar",
       "country": "Spain",
       "countryCode": "ES",
       "region": "Europe",
-      "venue": "Hotel Don Ángel",
+      "venue": "Evenia Hotels",
       "coordinates": [
         41.6332077,
         2.7210742
@@ -4466,7 +4466,7 @@
       "description": "100% Cuban festival celebrating Cuban music and dance with timba as its centerpiece. Workshops in salsa cubana, timba, guaguancó, rueda de casino, rumba and afro. Includes the Timba en el Ring competition (solo and couples). Held at Hotel Don Ángel in Santa Susanna.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-09: dates changed from 2027-03-06 – 2027-03-07 to 2027-03-05 – 2027-03-07 and full pass €105, as on the go&dance listing (event 9374). That listing gives the venue as Hotel Don Ángel, Santa Susanna, not Evenia Lloret; venue not changed, check with the organizer.\n2026-10-10: venue corrected to Hotel Don Ángel, Santa Susanna (go&dance event 9374, checked twice). Was Evenia Hotels, Lloret de Mar.\n2026-10-10: public description rewritten. Was: 100% Cuban festival celebrating Cuban music and dance with timba as its centerpiece. Workshops in salsa cubana, timba, guaguanco, rueda de casino, rumba and afro. Includes Timba en el Ring competition (solo and couples). Held at Hotel Evenia Olympic in Lloret de Mar.\n2026-10-10: line-up (24) from the organizer Instagram handles sent by the owner (names read from the handles); replaces 0 earlier names.",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-09: dates changed from 2027-03-06 – 2027-03-07 to 2027-03-05 – 2027-03-07 and full pass €105, as on the go&dance listing (event 9374). That listing gives the venue as Hotel Don Ángel, Santa Susanna, not Evenia Lloret; venue not changed, check with the organizer.\n2026-10-10: venue corrected to Hotel Don Ángel, Santa Susanna (go&dance event 9374, checked twice). Was Evenia Hotels, Lloret de Mar.\n2026-10-10: public description rewritten. Was: 100% Cuban festival celebrating Cuban music and dance with timba as its centerpiece. Workshops in salsa cubana, timba, guaguanco, rueda de casino, rumba and afro. Includes Timba en el Ring competition (solo and couples). Held at Hotel Evenia Olympic in Lloret de Mar.\n2026-10-10: line-up (24) from the organizer Instagram handles sent by the owner (names read from the handles); replaces 0 earlier names.\n2026-10-23 daily sync: city changed from Santa Susanna to Lloret de Mar, source https://cubansalsafestivals.com/festivals/timbeandoymambofestival-2027/\n2026-10-23 daily sync: venue changed from Hotel Don Ángel to Evenia Hotels, source https://cubansalsafestivals.com/festivals/timbeandoymambofestival-2027/",
       "styles": [
         "casino",
         "timba",
@@ -4725,6 +4725,40 @@
       ],
       "cubanFocused": false,
       "facebook": "https://www.facebook.com/EnDanse.Salsa.Limoges"
+    },
+    {
+      "id": "festival-cuban-ile-l-epine-2027",
+      "series": "festival-cuban-ile-l-epine",
+      "name": "Festival Cuban'île",
+      "status": "scheduled",
+      "startDate": "2027-03-12",
+      "endDate": "2027-03-14",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "L'Épine",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "Europe",
+      "venue": "Domaine Les Quatre Vents",
+      "coordinates": [
+        46.9695,
+        -2.2642
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://www.helloasso.com/associations/cuban-ile/evenements/cuban-ile-5-mars-2027",
+      "website": null,
+      "instagram": "https://www.instagram.com/cubanilefestival/",
+      "artists": [],
+      "description": "Three-day weekend at a holiday village on Noirmoutier island, organized by three Cuban salsa clubs, with workshops and evening parties.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-10-23 by the daily sync: all facts (dates 2027-03-12..14, L'Épine, Domaine Les Quatre Vents, ticket link, coordinates, Instagram) came only from https://cubansalsafestivals.com/festivals/cubanile-2027/; organizer ticket page (helloasso) returned 403 and could not be checked (its URL says '5 mars'). Cuban content not confirmed by the organizer.",
+      "styles": [
+        "mixed"
+      ],
+      "cubanFocused": false
     },
     {
       "id": "istanbul-world-dance-congress-2027",
@@ -6045,7 +6079,7 @@
       "endDate": "2027-05-11",
       "datePrecision": "day",
       "dateNote": null,
-      "city": "Golem (Durrës)",
+      "city": "Tirana",
       "country": "Albania",
       "countryCode": "AL",
       "region": "Europe",
@@ -6085,7 +6119,7 @@
       "description": "Albania Afro Latin Festival at the Grand Blue Fafa Resort in Golem, on the coast near Durrës: a mixed Latin festival with salsa, bachata and kizomba, and some Cuban salsa on the programme.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (19) from https://www.goandance.com/en/event/9601/albania-afrolatin-festival-2027 on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: line-up checked against https://www.goandance.com/en/event/9601/albania-afrolatin-festival-2027: unchanged.\n2026-10-10: city corrected from Tirana to Golem (Durrës): the venue Grand Blue Fafa Resort is on the coast at Golem (go&dance: Long Beach, Golem). Map pin moved from central Tirana.\n2026-10-10: public description cleaned of editor notes. Was: Albania Afro Latin Festival in Tirana. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-18 instagram watch: added Cornel & Rithika from https://www.instagram.com/p/Dejg1VYCkHB/",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (19) from https://www.goandance.com/en/event/9601/albania-afrolatin-festival-2027 on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: line-up checked against https://www.goandance.com/en/event/9601/albania-afrolatin-festival-2027: unchanged.\n2026-10-10: city corrected from Tirana to Golem (Durrës): the venue Grand Blue Fafa Resort is on the coast at Golem (go&dance: Long Beach, Golem). Map pin moved from central Tirana.\n2026-10-10: public description cleaned of editor notes. Was: Albania Afro Latin Festival in Tirana. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-18 instagram watch: added Cornel & Rithika from https://www.instagram.com/p/Dejg1VYCkHB/\n2026-10-23 daily sync: city changed from Golem (Durrës) to Tirana, source https://cubansalsafestivals.com/festivals/official-albania-afrolatin-2027/",
       "styles": [
         "mixed"
       ],
@@ -6347,7 +6381,7 @@
       "endDate": "2027-05-23",
       "datePrecision": "day",
       "dateNote": null,
-      "city": "Meyzieu",
+      "city": "Lyon",
       "country": "France",
       "countryCode": "FR",
       "region": "Europe",
@@ -6386,7 +6420,7 @@
       "description": "All Salsa Festival - Cuban, Mambo, Caleña fusion. 2 Before days (June 24-25) + 3 Full Days/Nights (June 26-28). 60+ workshops (Classic & Master Classes).",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\n2026-10-10: line-up (19) from https://www.allsalsafestival.com/line-up/ (Page heading 'LINE UP 2027'. Collage image says 'All Salsa #5 May 2027 21/22/23'. Homepage says 21/22/23 mai 2027, 5th anniversary.). Added: Wilmer & Maria, Seo Fernandez, Barbara Jimenez, Adonis Santiago, Anichi Perez, Chiky Cuba, Royma Rodriguez, Atocha, Bersy Cortez, Franklin Diaz, Chiara Tofani, Jacopo & Linda, Falco & Leti, Juan Racines, Breiner & Diana, Yudi Aguilar, Les Enfants Sauvages, Maykel Blanco, Son con Ron.",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\n2026-10-10: line-up (19) from https://www.allsalsafestival.com/line-up/ (Page heading 'LINE UP 2027'. Collage image says 'All Salsa #5 May 2027 21/22/23'. Homepage says 21/22/23 mai 2027, 5th anniversary.). Added: Wilmer & Maria, Seo Fernandez, Barbara Jimenez, Adonis Santiago, Anichi Perez, Chiky Cuba, Royma Rodriguez, Atocha, Bersy Cortez, Franklin Diaz, Chiara Tofani, Jacopo & Linda, Falco & Leti, Juan Racines, Breiner & Diana, Yudi Aguilar, Les Enfants Sauvages, Maykel Blanco, Son con Ron.\n2026-10-23 daily sync: city changed from Meyzieu to Lyon, source https://cubansalsafestivals.com/festivals/allsalsafestival-2027/",
       "styles": [
         "casino",
         "timba",
