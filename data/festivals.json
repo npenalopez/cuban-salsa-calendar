@@ -1787,7 +1787,12 @@
       "description": "Havana en Belgrado festival in Belgrade, Serbia. Listed in rueda.casino November 5-8, 2026.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\nLine-up (4) from https://www.havanaenbelgrado.com/ on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: facebook from the festival website (https://www.havanaenbelgrado.com/).\n2026-10-10: line-up (9) from the list sent by the owner; replaces 4 earlier names.\n2026-10-14 instagram watch: added Gilbert Datway from https://www.instagram.com/p/DebelBKsuP9/\n2026-10-22: DJs added from https://www.instagram.com/p/Ddlo3VGDNct/: DJ Leo D'Cuba, DJ Timbalero, DJ Jack El Calvo.",
+      "discount": {
+        "code": "KOUJIHEB13",
+        "amount": 10,
+        "currency": "EUR"
+      },
+      "notes": "User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue, priceText, priceFrom, currency); verify with the organizer.\nLine-up (4) from https://www.havanaenbelgrado.com/ on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: facebook from the festival website (https://www.havanaenbelgrado.com/).\n2026-10-10: line-up (9) from the list sent by the owner; replaces 4 earlier names.\n2026-10-14 instagram watch: added Gilbert Datway from https://www.instagram.com/p/DebelBKsuP9/\n2026-10-22: DJs added from https://www.instagram.com/p/Ddlo3VGDNct/: DJ Leo D'Cuba, DJ Timbalero, DJ Jack El Calvo.\n2026-10-27: €10 discount code KOUJIHEB13 from the organizer. Weezevent cannot prefill it from the link; buyers type it at checkout.",
       "styles": [
         "casino",
         "timba",
