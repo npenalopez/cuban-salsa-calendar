@@ -3851,9 +3851,14 @@
       "instagram": "https://www.instagram.com/unidanza.hamburg/",
       "artists": [],
       "description": "Afro-Cuban dance festival in Hamburg: a weekend of workshops, bootcamps and parties in the dance studios of Billie's Tanzstudio, in the Alte Dosenfabrik.",
-      "lastVerified": null,
+      "lastVerified": "2026-10-29",
       "featured": false,
-      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; organizer site (unidanza.de) still shows the 6-8 Feb 2026 edition, so 2027 is listed as February only. cubansalsafestivals.com says 12-14 Feb 2027 (not confirmed by the organizer). Their ticket link (bailacalabria.it) looked wrong; used the organizer tickets page.\n2026-10-13: dates set to 12-14 Feb 2027 from cubansalsafestivals.com at the owner's request (organizer site not updated yet; to be rechecked).",
+      "discount": {
+        "code": "UNDZ-CUBANSALSACALENDAR",
+        "amount": 10,
+        "currency": "EUR"
+      },
+      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; organizer site (unidanza.de) still shows the 6-8 Feb 2026 edition, so 2027 is listed as February only. cubansalsafestivals.com says 12-14 Feb 2027 (not confirmed by the organizer). Their ticket link (bailacalabria.it) looked wrong; used the organizer tickets page.\n2026-10-13: dates set to 12-14 Feb 2027 from cubansalsafestivals.com at the owner's request (organizer site not updated yet; to be rechecked).\n2026-10-29: unidanza.de now confirms 12-14 Feb 2027 in Hamburg; line-up and venues for 2027 not announced yet (venue kept from the 2026 edition).\n2026-10-29: €10 discount code UNDZ-CUBANSALSACALENDAR from the organizer, typed at checkout in the shop on unidanza.de/tickets.",
       "styles": [
         "afro-cuban",
         "rumba",
