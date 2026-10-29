@@ -1,5 +1,5 @@
 {
-  "version": "2026.10-166",
+  "version": "2026.10-171",
   "updated": "2026-10-29",
   "festivals": [
     {
@@ -8543,6 +8543,197 @@
         "mixed"
       ],
       "cubanFocused": false
+    },
+    {
+      "id": "rueda-exchange-festival-ede-2027",
+      "series": "rueda-exchange-festival-ede",
+      "name": "Rueda Exchange Festival",
+      "status": "scheduled",
+      "startDate": "2027-03-26",
+      "endDate": "2027-03-28",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Ede",
+      "country": "Netherlands",
+      "countryCode": "NL",
+      "region": "Europe",
+      "venue": "Akoesticum, Frisopark 4",
+      "coordinates": [
+        52.029,
+        5.668
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": null,
+      "website": "https://www.lafriquedancecompany.nl/rueda-exchange-festival/",
+      "instagram": "https://www.instagram.com/lafrique.dance/",
+      "facebook": "https://www.facebook.com/lafrique.dance/",
+      "artists": [
+        "DJ Peluche",
+        "DJ Rafi",
+        "Jochem & Katie",
+        "Mijael Bueno",
+        "Niels & Anna",
+        "Noe & Diego",
+        "Yorni & Kyra"
+      ],
+      "description": "7th Rueda Exchange Festival by Lafrique at the Akoesticum in Ede over Easter weekend: rueda de casino and Cuban salsa workshops for rueda groups, parties, and a 100% salsa cubana day party with live music on Sunday.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 (found on SalsaVida, verified on https://www.lafriquedancecompany.nl/rueda-exchange-festival/ and https://lafrique.nl/: 7th edition, 26-28 March 2027, Akoesticum Ede). Instructors as published (first names; Noe & Diego of High Five Salsa = Noe & Diego; Yorni & Kyra of Pasión Habana Rueda Austria; Mijael Bueno of Alaroye), 'more TBA'; live band TBA. Ticket sale starts 1 Nov 2026, no prices yet. Friday and Saturday nights include SBK areas.",
+      "styles": [
+        "rueda",
+        "casino"
+      ],
+      "cubanFocused": true
+    },
+    {
+      "id": "salazar-rueda-festival-winterthur-2027",
+      "series": "salazar-rueda-festival-winterthur",
+      "name": "Salazar Rueda Festival",
+      "status": "scheduled",
+      "startDate": "2027-05-07",
+      "endDate": "2027-05-09",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Winterthur",
+      "country": "Switzerland",
+      "countryCode": "CH",
+      "region": "Europe",
+      "venue": null,
+      "coordinates": [
+        47.503,
+        8.719
+      ],
+      "priceText": "Full pass CHF 140 until 31 Dec 2026, then CHF 180; Saturday CHF 100, Sunday CHF 80",
+      "priceFrom": 80,
+      "currency": "CHF",
+      "ticketUrl": "https://salazarruedafestival.com/ticket/",
+      "website": "https://salazarruedafestival.com/",
+      "instagram": "https://www.instagram.com/salazar.ruedafestival/",
+      "artists": [],
+      "description": "4th International Salazar Rueda Festival in Winterthur: a weekend of rueda de casino workshops, a bootcamp and parties.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 (found on SalsaVida, verified on https://salazarruedafestival.com/: '4. Internationales Ruedafestival 07.-09.05.2027'). Prices from /ticket/ (party-pass rows still dated 2026, not used). Venue not stated; organizer address Sabor Latino, Werkstrasse 16, Winterthur (probably the venue). Line-up not added: /artisten/ is headed 'Bestätigte Artisten 2026'. Coordinates approximate.",
+      "styles": [
+        "rueda",
+        "casino"
+      ],
+      "cubanFocused": true
+    },
+    {
+      "id": "cubasanga-biscarrosse-2027",
+      "series": "cubasanga-biscarrosse",
+      "name": "Cubasanga",
+      "status": "scheduled",
+      "startDate": "2027-06-18",
+      "endDate": "2027-06-21",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Biscarrosse",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "Europe",
+      "venue": "Camping Homair Mayotte Vacances",
+      "coordinates": [
+        44.433,
+        -1.169
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": null,
+      "website": "https://www.cubasanga.com/",
+      "instagram": "https://www.instagram.com/cubasanga_officiel/",
+      "facebook": "https://www.facebook.com/cubasanga.officiel",
+      "artists": [],
+      "description": "Cuban party weekend at a 5-star campsite in Biscarrosse, with mobile-home stays: no workshops but socials and activities to salsa, timba, son and rumba, plus bachata, kizomba and kompa, with rueda, conga and live Afro-Cuban percussion.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 (found on SalsaVida, verified on https://www.cubasanga.com/: 18-21 June 2027 at camping 5* Homair Mayotte Vacances, 'les infos arrivent bientôt'). Organizer Association BAILANIMA (Léognan). /concept says 'Pas de stages mais des animations' (no workshops). No 2027 prices or line-up yet (2026 team not reused). Coordinates approximate.",
+      "styles": [
+        "casino",
+        "timba",
+        "son",
+        "rumba",
+        "rueda",
+        "mixed"
+      ],
+      "cubanFocused": true
+    },
+    {
+      "id": "nordic-salsa-camp-jelling-2027",
+      "series": "nordic-salsa-camp-jelling",
+      "name": "Nordic Salsa Camp",
+      "status": "scheduled",
+      "startDate": "2027-07-11",
+      "endDate": "2027-07-17",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Jelling",
+      "country": "Denmark",
+      "countryCode": "DK",
+      "region": "Europe",
+      "venue": "Brandbjerg Højskole",
+      "coordinates": [
+        55.76,
+        9.405
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": null,
+      "website": "https://nordicsalsacamp.dk/",
+      "instagram": "https://www.instagram.com/brandbjerghoejskole/",
+      "artists": [],
+      "description": "A week-long Cuban dance camp at Brandbjerg folk high school near Jelling: Cuban salsa, son and Afro-Cuban rumba for beginners and experienced dancers, with a Cuban salsa band track and parties every night.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 (found on SalsaVida, verified on Brandbjerg Højskole's course listing https://www.hojskolerne.dk/hojskoler?kursus=nordic-salsa-camp-salsa-afro-rumba-og-son-en-festlig-danseuge-for-begyndere-og-oevede: 11.07.2027-17.07.2027, places available). nordicsalsacamp.dk still shows 2026; line-up and prices not added. Instagram is the school's. Coordinates approximate.",
+      "styles": [
+        "casino",
+        "son",
+        "rumba",
+        "afro-cuban"
+      ],
+      "cubanFocused": true
+    },
+    {
+      "id": "sing-cuban-summer-festival-cserkeszolo-2027",
+      "series": "sing-cuban-summer-festival-cserkeszolo",
+      "name": "SI!NG Cuban Summer Festival",
+      "status": "scheduled",
+      "startDate": "2027-07-21",
+      "endDate": "2027-07-25",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Cserkeszőlő",
+      "country": "Hungary",
+      "countryCode": "HU",
+      "region": "Europe",
+      "venue": "Aqua Spa & Wellness Hotel Cserkeszőlő",
+      "coordinates": [
+        46.863,
+        20.19
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://forms.gle/zqhfP3oU2v9Rng3G9",
+      "website": "https://www.singsalsafestival.hu/",
+      "instagram": null,
+      "artists": [],
+      "description": "Cuban summer festival at a spa hotel in Cserkeszőlő, by Cuba?Sí! (Szeged) and Next Generation Salsa (Budapest): Cuban salsa workshops with live Afro-Cuban and Orishas classes, and parties every night.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 (found on SalsaVida, verified on https://www.singsalsafestival.hu/: 'Következő fesztiválunk 2027 július 21-25'). Venue paragraph still dated 2026 (same hotel assumed). Prices and line-up are images on the site, not added; DJ Csedi named as nightly DJ in undated text. Registration via the organizer's Google Form. Coordinates approximate.",
+      "styles": [
+        "casino",
+        "afro-cuban"
+      ],
+      "cubanFocused": true
     }
   ]
 }
