@@ -1,5 +1,5 @@
 {
-  "version": "2026.10-153",
+  "version": "2026.10-154",
   "updated": "2026-10-29",
   "festivals": [
     {
@@ -7875,6 +7875,45 @@
       "styles": [
         "casino",
         "timba"
+      ],
+      "cubanFocused": true
+    },
+    {
+      "id": "la-familia-cubana-bordeaux-2026",
+      "series": "la-familia-cubana-bordeaux",
+      "name": "La Familia Cubana",
+      "status": "scheduled",
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-15",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Bordeaux",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "Europe",
+      "venue": null,
+      "coordinates": [
+        44.8378,
+        -0.5792
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": null,
+      "website": null,
+      "instagram": null,
+      "artists": [
+        "Claude Gomis",
+        "DJ Andrea Androger",
+        "Ernesto Garcia",
+        "Yusimi Moya Rodríguez"
+      ],
+      "description": "Cuban dance weekend in Bordeaux by Havana Style: workshops and a Cuban party night.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 from the Havana Style flyer sent by the owner: 'La Familia Cubana', 14-15 novembre 2026, 'Stages & soirée cubaine | Bordeaux'; Claude Gomis, Yusimi Moya Rodriguez, Ernesto Garcia, DJ Androger. No organizer website, Instagram, venue or tickets found. Havanastyle also co-organizes the Bal cubain at the Opéra National de Bordeaux on 15 Nov (OpenAgenda); the soirée may be that ball, unconfirmed. Coordinates: city centre.",
+      "styles": [
+        "casino"
       ],
       "cubanFocused": true
     }
