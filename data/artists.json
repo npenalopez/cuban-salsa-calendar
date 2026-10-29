@@ -306,55 +306,68 @@
   "profiles": {
     "Adonis Santiago": {
       "instagram": "adonis_santiago_official",
-      "art": "man-casino"
+      "art": "man-casino",
+      "photo": "/artists/photos/adonis-santiago.webp"
     },
     "Adrián & Anita": {
-      "instagram": "adrianyanitaoficial"
+      "instagram": "adrianyanitaoficial",
+      "photo": "/artists/photos/adrian-and-anita.webp"
     },
     "Alain & Katerina": {
-      "instagram": "alain_katerina"
+      "instagram": "alain_katerina",
+      "photo": "/artists/photos/alain-and-katerina.webp"
     },
     "Alberto Valdes": {
       "instagram": "albertovaldesofficial"
     },
     "Alejandro & Rosy": {
-      "instagram": "alejandroyrosy"
+      "instagram": "alejandroyrosy",
+      "photo": "/artists/photos/alejandro-and-rosy.webp"
     },
     "Alex & Susana": {
-      "instagram": "alexysusanamambo"
+      "instagram": "alexysusanamambo",
+      "photo": "/artists/photos/alex-and-susana.webp"
     },
     "Alex Morales": {
-      "instagram": "alexmoralesdancelab"
+      "instagram": "alexmoralesdancelab",
+      "photo": "/artists/photos/alex-morales.webp"
     },
     "Alex Toledo": {
-      "instagram": "byalextoledo"
+      "instagram": "byalextoledo",
+      "photo": "/artists/photos/alex-toledo.webp"
     },
     "Andrea Campagna": {
       "instagram": "andrea__campagna5"
     },
     "Barbara Jimenez": {
       "instagram": "barbara_jimenez_official",
-      "art": "woman-reparto"
+      "art": "woman-reparto",
+      "photo": "/artists/photos/barbara-jimenez.webp"
     },
     "Bryan Matienzo": {
-      "instagram": "bryanmatienzo"
+      "instagram": "bryanmatienzo",
+      "photo": "/artists/photos/bryan-matienzo.webp"
     },
     "Chiky Cuba": {
       "instagram": "chiky.cuba",
-      "art": "woman-afro"
+      "art": "woman-afro",
+      "photo": "/artists/photos/chiky-cuba.webp"
     },
     "Danger Rodriguez": {
-      "instagram": "danger_rodriguez_official"
+      "instagram": "danger_rodriguez_official",
+      "photo": "/artists/photos/danger-rodriguez.webp"
     },
     "Diana Rodriguez": {
       "instagram": "dianarodriguez.86",
-      "art": "woman-casino"
+      "art": "woman-casino",
+      "photo": "/artists/photos/diana-rodriguez.webp"
     },
     "DJ Amado": {
       "instagram": "danielleuk17"
     },
     "DJ Assane": {
-      "instagram": "assane_kane_dj"
+      "instagram": "assane_kane_dj",
+      "photo": "/artists/photos/dj-assane.webp"
     },
     "DJ Estefi": {
       "instagram": "djestefi"
@@ -372,26 +385,32 @@
       "instagram": "dj_pastaguero"
     },
     "DJ Tom Nka": {
-      "instagram": "tom_nka"
+      "instagram": "tom_nka",
+      "photo": "/artists/photos/dj-tom-nka.webp"
     },
     "DJ Yan El Diablito": {
       "instagram": "yaneldiablito"
     },
     "Edgar Rodríguez": {
-      "instagram": "edgar_rodriguezd"
+      "instagram": "edgar_rodriguezd",
+      "photo": "/artists/photos/edgar-rodriguez.webp"
     },
     "Falco & Leti": {
-      "instagram": "falcoyleti"
+      "instagram": "falcoyleti",
+      "photo": "/artists/photos/falco-and-leti.webp"
     },
     "FredyClan": {
       "instagram": "fredyclan_fclan",
-      "art": "man-reparto"
+      "art": "man-reparto",
+      "photo": "/artists/photos/fredyclan.webp"
     },
     "Gastón Carvallo": {
-      "instagram": "gastoncarvallo_littlehabana"
+      "instagram": "gastoncarvallo_littlehabana",
+      "photo": "/artists/photos/gaston-carvallo.webp"
     },
     "Geysa Martinez": {
-      "instagram": "geysa_martinez"
+      "instagram": "geysa_martinez",
+      "photo": "/artists/photos/geysa-martinez.webp"
     },
     "Greechen Mendez": {
       "instagram": "greechenmendezrodriguez"
@@ -400,36 +419,46 @@
       "art": "congas"
     },
     "Jorge & Indira": {
-      "instagram": "jorgeandindira"
+      "instagram": "jorgeandindira",
+      "photo": "/artists/photos/jorge-and-indira.webp"
     },
     "Jose & Tania": {
-      "instagram": "joseytaniaofficial"
+      "instagram": "joseytaniaofficial",
+      "photo": "/artists/photos/jose-and-tania.webp"
     },
     "Karen Lazo": {
-      "instagram": "karenlazodance"
+      "instagram": "karenlazodance",
+      "photo": "/artists/photos/karen-lazo.webp"
     },
     "Kevin Cano": {
-      "instagram": "kevincanodance"
+      "instagram": "kevincanodance",
+      "photo": "/artists/photos/kevin-cano.webp"
     },
     "Luis Duarte": {
-      "instagram": "luis_duarte87pt"
+      "instagram": "luis_duarte87pt",
+      "photo": "/artists/photos/luis-duarte.webp"
     },
     "Marielkis Hernandez": {
-      "instagram": "marielkishernandez"
+      "instagram": "marielkishernandez",
+      "photo": "/artists/photos/marielkis-hernandez.webp"
     },
     "Marjorie Ricse": {
-      "instagram": "marjoriericse"
+      "instagram": "marjoriericse",
+      "photo": "/artists/photos/marjorie-ricse.webp"
     },
     "Maykel Fonts": {
       "instagram": "maykel_fonts",
-      "art": "man-casino"
+      "art": "man-casino",
+      "photo": "/artists/photos/maykel-fonts.webp"
     },
     "Mercedes Sayut": {
       "instagram": "mercedessayut",
-      "art": "woman-casino"
+      "art": "woman-casino",
+      "photo": "/artists/photos/mercedes-sayut.webp"
     },
     "Mijael Bueno": {
-      "instagram": "mijaelbueno"
+      "instagram": "mijaelbueno",
+      "photo": "/artists/photos/mijael-bueno.webp"
     },
     "Nikola Medic": {
       "instagram": "besniatom"
@@ -445,7 +474,8 @@
       "art": "man-afro"
     },
     "Pedrito & Giusy": {
-      "instagram": "pedrito_y_giusy"
+      "instagram": "pedrito_y_giusy",
+      "photo": "/artists/photos/pedrito-and-giusy.webp"
     },
     "Raíces BCN": {
       "instagram": "raicesbcnoficial"
@@ -454,33 +484,41 @@
       "instagram": "seofernandez_official"
     },
     "Sergi Márquez": {
-      "instagram": "sergimarquez5"
+      "instagram": "sergimarquez5",
+      "photo": "/artists/photos/sergi-marquez.webp"
     },
     "Sergio Aragón": {
-      "instagram": "sergio.aragon02"
+      "instagram": "sergio.aragon02",
+      "photo": "/artists/photos/sergio-aragon.webp"
     },
     "Tania Cannarsa": {
-      "instagram": "taniacannarsa"
+      "instagram": "taniacannarsa",
+      "photo": "/artists/photos/tania-cannarsa.webp"
     },
     "Vanessa Lacedonia": {
-      "instagram": "vanessalacedonia"
+      "instagram": "vanessalacedonia",
+      "photo": "/artists/photos/vanessa-lacedonia.webp"
     },
     "Wilmer & María": {
-      "instagram": "wilmerymariaofficial"
+      "instagram": "wilmerymariaofficial",
+      "photo": "/artists/photos/wilmer-and-maria.webp"
     },
     "Yarisbel Kondeff": {
       "instagram": "yarisbel_kondeff"
     },
     "Yoyo Flow": {
       "instagram": "yoyoflowofficial",
-      "art": "man-reparto"
+      "art": "man-reparto",
+      "photo": "/artists/photos/yoyo-flow.webp"
     },
     "Yuniel Gual": {
-      "instagram": "yunielgualofficial"
+      "instagram": "yunielgualofficial",
+      "photo": "/artists/photos/yuniel-gual.webp"
     },
     "Yusimi Moya Rodríguez": {
       "instagram": "yusimi_moya_rodriguez",
-      "art": "woman-afro"
+      "art": "woman-afro",
+      "photo": "/artists/photos/yusimi-moya-rodriguez.webp"
     }
   }
 }

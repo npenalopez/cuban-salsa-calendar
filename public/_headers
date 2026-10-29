@@ -17,6 +17,10 @@
 /flags/*
   Cache-Control: public, max-age=2592000
 
+# Artist portraits can be replaced, so a week, not a year.
+/artists/photos/*
+  Cache-Control: public, max-age=604800
+
 /og/*
   Cache-Control: public, max-age=86400
 

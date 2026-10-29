@@ -53,7 +53,7 @@ if (a.memberOf.length) ld.memberOf = a.memberOf.map((m) => ({ '@type': 'Performi
   </div>
   <div class="page-head artist-head">
     {profile.photo
-      ? <img class="artist-photo" src={profile.photo} alt={a.name} width="96" height="96" loading="lazy" decoding="async" />
+      ? <img class="artist-photo" src={profile.photo} alt={a.name} width="96" height="96" decoding="async" />
       : <img class="artist-photo artist-photo--art" src={artFor(a.name, a.kind)} alt="" width="96" height="96" decoding="async" />}
     <div class="artist-head__text">
       <span class="kicker">{T(`artist.${a.kind}`)}</span>
