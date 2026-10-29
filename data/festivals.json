@@ -1,5 +1,5 @@
 {
-  "version": "2026.10-179",
+  "version": "2026.10-180",
   "updated": "2026-10-29",
   "festivals": [
     {
@@ -1632,15 +1632,16 @@
       "instagram": "https://www.instagram.com/dcubacongress/",
       "artists": [
         "Adonis & Royma",
+        "Adonis Santiago",
         "Alberto Valdes",
         "Andy & Yuliet",
         "Barbara Jimenez",
-        "Danger & Marielkis",
         "DJ Flecha",
         "DJ Jack El Calvo",
         "DJ Javier de la Rosa",
         "DJ Leo D'Cuba",
         "DJ Rumbero",
+        "Danger & Marielkis",
         "Emilito Herrera",
         "Jaison Rodríguez",
         "Jorge & Indira",
@@ -1657,7 +1658,7 @@
       "description": "Cuban congress on the Costa Brava. Hotel Don Ángel privatized for the event - 100% Cuban vibe. Direct from Cuba lineup.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (22) from https://www.dcubacongress.com/les-artistes (Page title 'Les artistes | D'Cuba Congress 2026'; homepage says 30 Oct - 1 Nov 2026). Added: Wilmer & Maria, Seo & Eneris, Danger & Marielkis, Adonis & Royma, Neilys & Michel, Jorge & Indira, Jaison Rodriguez, Andy & Juliet, DJ Flecha, DJ Jack El Calvo. Removed (not on the organizer page for this edition): Danger Rodriguez, DJ Chanchan, DJ Pelotero, DJ Yvan, Eneris Mulgado, Marielkis Hernandez, Maykel Fonts, Royma Roman, Seo Fernández, Yenifer Lavin, Yoyo Flow.",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (22) from https://www.dcubacongress.com/les-artistes (Page title 'Les artistes | D'Cuba Congress 2026'; homepage says 30 Oct - 1 Nov 2026). Added: Wilmer & Maria, Seo & Eneris, Danger & Marielkis, Adonis & Royma, Neilys & Michel, Jorge & Indira, Jaison Rodriguez, Andy & Juliet, DJ Flecha, DJ Jack El Calvo. Removed (not on the organizer page for this edition): Danger Rodriguez, DJ Chanchan, DJ Pelotero, DJ Yvan, Eneris Mulgado, Marielkis Hernandez, Maykel Fonts, Royma Roman, Seo Fernández, Yenifer Lavin, Yoyo Flow.\n2026-10-29: Adonis Santiago added from his own posts https://www.instagram.com/p/De4_fyFNHIZ/ ('Oct 30–Nov 2 — D'Cuba Congress — Barcelona') and https://www.instagram.com/reel/De_mKfYNjDQ/.",
       "styles": [
         "casino",
         "timba",
@@ -3442,13 +3443,15 @@
       "instagram": "https://www.instagram.com/eventopeople_roma/",
       "artists": [
         "Aqua Company",
+        "Ataca & La Alemana",
         "Luisa & Andrea",
-        "Wilmer & María"
+        "Wilmer & María",
+        "Yass & Ines"
       ],
       "description": "Three-day Caribbean dance weekend in Rome's EUR district with salsa, bachata and reggaeton workshops, parties and live artists.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Added 2026-10-17 by the daily sync: city, 3-day format and hotel venue from the organizer site https://www.eventopeopleroma.it/ (exact dates 2027-01-08..10, ticket link and coordinates only from https://cubansalsafestivals.com/festivals/eventopeople-roma-2027/; ticket promo parameters removed). Cuban content not confirmed by the organizer (salsa, bachata, reggaeton).\n2026-10-22 instagram watch: added Aqua Company, Luisa & Andrea, Wilmer & María from https://www.instagram.com/reel/DeukB7KNOv3/ , https://www.instagram.com/reel/Det82qVtWJ_/ , https://www.instagram.com/reel/DetliSVtCxG/",
+      "notes": "Added 2026-10-17 by the daily sync: city, 3-day format and hotel venue from the organizer site https://www.eventopeopleroma.it/ (exact dates 2027-01-08..10, ticket link and coordinates only from https://cubansalsafestivals.com/festivals/eventopeople-roma-2027/; ticket promo parameters removed). Cuban content not confirmed by the organizer (salsa, bachata, reggaeton).\n2026-10-22 instagram watch: added Aqua Company, Luisa & Andrea, Wilmer & María from https://www.instagram.com/reel/DeukB7KNOv3/ , https://www.instagram.com/reel/Det82qVtWJ_/ , https://www.instagram.com/reel/DetliSVtCxG/\n2026-10-29: Yass & Ines (https://www.instagram.com/reel/DeY4vfTt9Us/) and Ataca & La Alemana (https://www.instagram.com/reel/Dd8mQk8NsGw/) from the organizer's posts for 8-10 Jan.",
       "styles": [
         "mixed"
       ],
@@ -3757,11 +3760,13 @@
       "ticketUrl": "https://billetterie.festik.net/cubahoy/",
       "website": null,
       "instagram": "https://www.instagram.com/festivalcubahoy/",
-      "artists": [],
+      "artists": [
+        "Haila María Mompié"
+      ],
       "description": "Two-week festival of Cuban and Latin American culture across Toulouse, run by the Association Yemayá.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates and details from cubansalsafestivals.com only (organizer ticket page festik.net needs JavaScript and could not be read). It is a music/culture festival rather than a dance congress; to be reviewed.",
+      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates and details from cubansalsafestivals.com only (organizer ticket page festik.net needs JavaScript and could not be read). It is a music/culture festival rather than a dance congress; to be reviewed.\n2026-10-29: Haila Mompié added from the organizer's post https://www.instagram.com/p/DeHtuLwOPfw/ ('Haila MOMPIÉ le 04 Février 2027 au Théâtre des Mazades… concert des 30 ans du Festival CUBA HOY').",
       "styles": [
         "mixed"
       ],
@@ -3838,7 +3843,7 @@
       "country": "Germany",
       "countryCode": "DE",
       "region": "Europe",
-      "venue": "Billie's Tanzstudio (Alte Dosenfabrik)",
+      "venue": null,
       "coordinates": [
         53.550172,
         10.001316
@@ -3858,7 +3863,7 @@
         "amount": 10,
         "currency": "EUR"
       },
-      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; organizer site (unidanza.de) still shows the 6-8 Feb 2026 edition, so 2027 is listed as February only. cubansalsafestivals.com says 12-14 Feb 2027 (not confirmed by the organizer). Their ticket link (bailacalabria.it) looked wrong; used the organizer tickets page.\n2026-10-13: dates set to 12-14 Feb 2027 from cubansalsafestivals.com at the owner's request (organizer site not updated yet; to be rechecked).\n2026-10-29: unidanza.de now confirms 12-14 Feb 2027 in Hamburg; line-up and venues for 2027 not announced yet (venue kept from the 2026 edition).\n2026-10-29: €10 discount code UNDZ-CUBANSALSACALENDAR from the organizer, typed at checkout in the shop on unidanza.de/tickets.",
+      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; organizer site (unidanza.de) still shows the 6-8 Feb 2026 edition, so 2027 is listed as February only. cubansalsafestivals.com says 12-14 Feb 2027 (not confirmed by the organizer). Their ticket link (bailacalabria.it) looked wrong; used the organizer tickets page.\n2026-10-13: dates set to 12-14 Feb 2027 from cubansalsafestivals.com at the owner's request (organizer site not updated yet; to be rechecked).\n2026-10-29: unidanza.de now confirms 12-14 Feb 2027 in Hamburg; line-up and venues for 2027 not announced yet (venue kept from the 2026 edition).\n2026-10-29: €10 discount code UNDZ-CUBANSALSACALENDAR from the organizer, typed at checkout in the shop on unidanza.de/tickets.\n2026-10-29: venue cleared (was Billie's Tanzstudio (Alte Dosenfabrik)): the organizer says the festival moves to a new venue in 2027, not named yet (https://www.instagram.com/p/De_U_7Txi9k/).",
       "styles": [
         "afro-cuban",
         "rumba",
@@ -5369,6 +5374,7 @@
       "website": "https://www.festivalculturacubana.it/",
       "instagram": "https://www.instagram.com/fcc_festivalculturacubana/",
       "artists": [
+        "Alessandro & Rossella",
         "DJ Andrea Androger",
         "José Carlos Leguen",
         "Max Lupo",
@@ -5377,7 +5383,7 @@
       "description": "Festival Cultura Cubana FCC in Montesilvano.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027. User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, venue); verify with the organizer.\n2026-10-10: facebook from the festival website (https://www.festivalculturacubana.it/).\n2026-10-15 instagram watch: added Max Lupo, Mireisi Muchuli Morales, José Carlos Leguen from https://www.instagram.com/reel/DeeKpsWNijv/ , https://www.instagram.com/reel/DeYx9IqtvVb/\n2026-10-29: DJ Andrea Androger added from his own tour poster 'Andrea Androger Tour Date & Rome Residency 2027' (screenshot sent by the owner). Poster dates: 9-11/04.",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027. User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, venue); verify with the organizer.\n2026-10-10: facebook from the festival website (https://www.festivalculturacubana.it/).\n2026-10-15 instagram watch: added Max Lupo, Mireisi Muchuli Morales, José Carlos Leguen from https://www.instagram.com/reel/DeeKpsWNijv/ , https://www.instagram.com/reel/DeYx9IqtvVb/\n2026-10-29: DJ Andrea Androger added from his own tour poster 'Andrea Androger Tour Date & Rome Residency 2027' (screenshot sent by the owner). Poster dates: 9-11/04.\n2026-10-29: Alessandro & Rossella from the organizer's FCC10 announcement https://www.instagram.com/reel/DfAPrjrt7h_/ ('Novità FCC10! … 9-10-11 aprile 2027').",
       "styles": [
         "casino",
         "timba",
@@ -6528,6 +6534,7 @@
       "facebook": "https://www.facebook.com/Misolarfestival/",
       "artists": [
         "Karelia Despaigne",
+        "Luis Duarte",
         "Mahmoud Morsy",
         "Yorgenis Danger García",
         "Yoyo Flow"
@@ -6535,7 +6542,7 @@
       "description": "A week-long Cuban salsa beach holiday on the Peloponnese coast: seven nights in a four-star all-inclusive hotel at Kalogria, with daily workshops, bootcamps, pool, beach and night parties. Fifth edition.",
       "lastVerified": "2026-10-22",
       "featured": false,
-      "notes": "2026-10-22: added at the owner's request. Dates, location, room prices, registration form, Instagram and Facebook from https://misolarfestival.com/ ('MiSolar 5', 21-28 May 2027, Kalogria, Greece; check-in Friday, check-out the following Friday). Line-up from the 'Artists of 2027' flyers on that page (each flyer: '21-28 May, 2027 Kalogria'): Yoyo Flow, Karelia Despaigne, Yorgenis Danger Garcia (Afro bootcamp); one more flyer says 'Coming soon'. Hotel not named by the organizer (2026 edition listings say Kalogria Beach Resort); coordinates are Kalogria beach. Bootcamps (Yoyo Flow video, Yorgenis 'Danger' García Afro) are not included in the room price.\n2026-10-24 instagram watch: added Mahmoud Morsy from https://www.instagram.com/p/Deyev9ziCQT/",
+      "notes": "2026-10-22: added at the owner's request. Dates, location, room prices, registration form, Instagram and Facebook from https://misolarfestival.com/ ('MiSolar 5', 21-28 May 2027, Kalogria, Greece; check-in Friday, check-out the following Friday). Line-up from the 'Artists of 2027' flyers on that page (each flyer: '21-28 May, 2027 Kalogria'): Yoyo Flow, Karelia Despaigne, Yorgenis Danger Garcia (Afro bootcamp); one more flyer says 'Coming soon'. Hotel not named by the organizer (2026 edition listings say Kalogria Beach Resort); coordinates are Kalogria beach. Bootcamps (Yoyo Flow video, Yorgenis 'Danger' García Afro) are not included in the room price.\n2026-10-24 instagram watch: added Mahmoud Morsy from https://www.instagram.com/p/Deyev9ziCQT/\n2026-10-29: Luis Duarte from the organizer's 'Mi Solar 5 - teacher announcement' https://www.instagram.com/p/DfE1FiujCmq/ (handle luis_duarte87pt).",
       "styles": [
         "casino",
         "afro-cuban"
@@ -6839,12 +6846,15 @@
         "Adrian & Cristiana",
         "Cosmin & Andra",
         "Florin & Ana",
-        "Lokito & Adelina"
+        "Florin & Maria",
+        "Ilias & Sandra",
+        "Lokito & Adelina",
+        "Romy & Ada"
       ],
       "description": "Sunny Waves Dance Festival in Vama Veche: a mixed Latin festival with salsa, bachata and kizomba, and some Cuban salsa on the programme.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, venue); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: Sunny Waves Dance Festival in Vama Veche. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-22 instagram watch: added Adrian & Cristiana, Cosmin & Andra, Florin & Ana, Lokito & Adelina from https://www.instagram.com/reel/Dev4dIJoVLL/ , https://www.instagram.com/reel/Deul2TTI5Ix/ , https://www.instagram.com/reel/DetOGrgo7vW/ , https://www.instagram.com/reel/DerklisIvUx/",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, venue); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: Sunny Waves Dance Festival in Vama Veche. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-22 instagram watch: added Adrian & Cristiana, Cosmin & Andra, Florin & Ana, Lokito & Adelina from https://www.instagram.com/reel/Dev4dIJoVLL/ , https://www.instagram.com/reel/Deul2TTI5Ix/ , https://www.instagram.com/reel/DetOGrgo7vW/ , https://www.instagram.com/reel/DerklisIvUx/\n2026-10-29: Florin & Maria (https://www.instagram.com/reel/Dc2yoWzohrj/), Ilias & Sandra (https://www.instagram.com/reel/DcOJ4ztxIDT/), Romy & Ada (https://www.instagram.com/reel/DdvnEM6ocUJ/) from the organizer's posts '…will perform again at… 6th edition 1-5 July 2027'. Weaker 'see them again' posts not added.",
       "styles": [
         "casino",
         "mixed"
@@ -6984,7 +6994,7 @@
       "cubanFocused": false
     },
     {
-      "id": "caribe-salsa-bachata-congress-punta-cana-2027",
+      "id": "caribe-salsa-bachata-congress-puerto-plata-2027",
       "series": "caribe-salsa-bachata-congress-punta-cana",
       "name": "Caribe Salsa & Bachata Congress RD",
       "status": "scheduled",
@@ -6992,14 +7002,14 @@
       "endDate": "2027-07-19",
       "datePrecision": "day",
       "dateNote": null,
-      "city": "Punta Cana",
+      "city": "Puerto Plata",
       "country": "Dominican Republic",
       "countryCode": "DO",
       "region": "North America",
-      "venue": "Sunscape Coco Punta Cana",
+      "venue": "Cofresí Palm Beach & Spa Resort",
       "coordinates": [
-        18.5601,
-        -68.3725
+        19.8106,
+        -70.729
       ],
       "priceText": "From €120",
       "priceFrom": 120,
@@ -7007,11 +7017,21 @@
       "ticketUrl": null,
       "website": null,
       "instagram": "https://www.instagram.com/caribesalsabachatacongress/",
-      "artists": [],
+      "artists": [
+        "Cuban Flex",
+        "Jackson Cabezas & La Rubia",
+        "Jhon Casanova & Nilson Castro",
+        "Kiki Aguero",
+        "Los Violentos – Salsa All Star",
+        "Mary & Jorgito",
+        "Negro Dulce & Ninafrika",
+        "Rigoberto Iglesias & Adis Flores",
+        "Yoruba Andabo"
+      ],
       "description": "Caribe Salsa & Bachata Congress RD in Punta Cana: a mixed Latin festival with salsa, bachata and kizomba, and some Cuban salsa on the programme.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, venue, priceText, priceFrom, currency); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: Caribe Salsa & Bachata Congress RD in Punta Cana. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, venue, priceText, priceFrom, currency); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: Caribe Salsa & Bachata Congress RD in Punta Cana. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-29: city/venue changed from Punta Cana / Sunscape Coco Punta Cana to Puerto Plata, Cofresí Palm Beach & Spa Resort, per every 2027 post of the organizer, e.g. https://www.instagram.com/p/Db1OVAcKvc_/ ('Puerto Plata… Cofresí Palm Beach & Spa Resort, 15 al 19 de julio de 2027'); id renamed from caribe-salsa-bachata-congress-punta-cana-2027 (redirect added). Line-up (+9) from the organizer's 2027 artist posts: https://www.instagram.com/p/DeGMkU6RXpJ/ , https://www.instagram.com/p/DeBFuuvxp_T/ , https://www.instagram.com/p/DeBFDbVRpWn/ , https://www.instagram.com/p/Dc8rayGRE-G/ , https://www.instagram.com/p/Dc6KoGwRr9P/ , https://www.instagram.com/p/Dc6I6PxxeFv/ , https://www.instagram.com/p/DdC1EWvKMTV/ , https://www.instagram.com/p/DdC0nmdKGBg/ , https://www.instagram.com/p/Dc8tKg9RllB/ . Organizer Damián Wilson (also teaches) and Yonel Blanco (country representative?) not added.",
       "styles": [
         "casino",
         "son",
@@ -7117,7 +7137,7 @@
       "name": "Berlin Salsa Congress",
       "status": "scheduled",
       "startDate": "2027-08-26",
-      "endDate": "2027-08-30",
+      "endDate": "2027-08-29",
       "datePrecision": "day",
       "dateNote": null,
       "city": "Berlin",
@@ -7137,6 +7157,7 @@
       "instagram": "https://www.instagram.com/berlin_salsa_congress/",
       "artists": [
         "Andy & Yuliet",
+        "Eloy J Rojas",
         "Fuquan & Candace",
         "James & Peiwei",
         "Vicente & Valentina"
@@ -7144,7 +7165,7 @@
       "description": "Large salsa congress at the Tempodrom in Berlin, running since 2001. The 2027 \"Jungle Reloaded\" edition features mambo, salsa, Cali style, cha-cha-cha and Cuban salsa, with workshops, social trainings and parties until late.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; facts from the organizer Eventbrite page (26-30 Aug 2027, Tempodrom, styles incl. Cuban Salsa). The other site says 26-29 Aug. Eventbrite shows only the 2026 line-up, so no artists yet.\n2026-10-29 instagram watch: added James & Peiwei, Vicente & Valentina, Andy & Yuliet, Fuquan & Candace from https://www.instagram.com/p/De_VEtFCmDu/",
+      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; facts from the organizer Eventbrite page (26-30 Aug 2027, Tempodrom, styles incl. Cuban Salsa). The other site says 26-29 Aug. Eventbrite shows only the 2026 line-up, so no artists yet.\n2026-10-29 instagram watch: added James & Peiwei, Vicente & Valentina, Andy & Yuliet, Fuquan & Candace from https://www.instagram.com/p/De_VEtFCmDu/\n2026-10-29: Eloy Rojas from the organizer's post https://www.instagram.com/reel/DeWe1ZsNn7R/ ('both will be back with us at Berlin Salsacongress 2027'). End date changed from 2027-08-30 to 2027-08-29: every 2027 promo says 'Save the date: August 26–29, 2027' (e.g. https://www.instagram.com/reel/DfFNMSPtTx_/).",
       "styles": [
         "casino",
         "mixed"
@@ -7805,13 +7826,29 @@
       "instagram": "https://www.instagram.com/decubasardegna/",
       "facebook": "https://www.facebook.com/profile.php?id=100043399673785",
       "artists": [
-        "Yuniel Gual",
-        "Son de Akokan"
+        "Carlito Franco y su Imagen Latina",
+        "DJ Aldo Marsala",
+        "DJ El Diablo",
+        "DJ Manuel Tagliati",
+        "DJ Ray Garcia",
+        "Denise Torres",
+        "Gabriele & Melany",
+        "Ivancito Camaguey & Julio Cesar",
+        "Johnny Vazquez",
+        "José & Layla",
+        "Juan Racines & Mercedes Sayut",
+        "Maurizio Bollo & Serena",
+        "Mauro & Barbara",
+        "Maykel Fonts",
+        "Roberto & Giulia",
+        "Son de Akokan",
+        "Willy & Jessy",
+        "Yuniel Gual"
       ],
       "description": "20th edition of the Sardinian Latin festival, held as an all-inclusive weekend at a seaside resort in Orosei: salsa, bachata and kizomba workshops, socials until late, pool parties and Cuban live music.",
       "lastVerified": "2026-10-29",
       "featured": false,
-      "notes": "Added 2026-10-29 from the organizer's Instagram post (screenshot sent by the owner): 20th edition, 23-25 April 2027, Club Hotel Marina Beach, Orosei; line-up 'Yuniel Gual Sondeakokan'. Dates and venue confirmed on https://www.decubaparaelmundo.com/; prices from /tickets-2/ (image files named Pass-2027). Son de Akokan = Yuniel Gual's band ('Yuniel Cual y Su Grupo Son De Akokan' on the site). The site's longer line-up may be from earlier editions, not added. Coordinates approximate (Marina di Orosei).",
+      "notes": "Added 2026-10-29 from the organizer's Instagram post (screenshot sent by the owner): 20th edition, 23-25 April 2027, Club Hotel Marina Beach, Orosei; line-up 'Yuniel Gual Sondeakokan'. Dates and venue confirmed on https://www.decubaparaelmundo.com/; prices from /tickets-2/ (image files named Pass-2027). Son de Akokan = Yuniel Gual's band ('Yuniel Cual y Su Grupo Son De Akokan' on the site). The site's longer line-up may be from earlier editions, not added. Coordinates approximate (Marina di Orosei).\n2026-10-29: line-up (+16) from the organizer's own 'LINE UP ARTISTI' cards for the 20th edition on @decubasardegna, e.g. https://www.instagram.com/p/DZcxDvwsygV/ (Maykel Fonts), https://www.instagram.com/p/DZcxdKXMB1S/ (Juan Racines y Mercedes Sayut), https://www.instagram.com/p/DZhJ_Wrsnxy/ (Carlito Franco y su Imagen Latina), DJ cards https://www.instagram.com/p/DaGKIllOT7s/ , https://www.instagram.com/p/DZsQcCCMz9t/ , https://www.instagram.com/p/DZsQP9AMb1_/ , https://www.instagram.com/p/DZsPyKtM570/ . Couples by first name as published; organizers Michel Miranda and Antonella Fiori not added.",
       "styles": [
         "casino",
         "mixed"
@@ -7842,11 +7879,21 @@
       "ticketUrl": null,
       "website": null,
       "instagram": "https://www.instagram.com/vamoscubafestival/",
-      "artists": [],
+      "artists": [
+        "Alain & Katerina",
+        "Anita Jiménez",
+        "DJ Jack El Calvo",
+        "DJ Tom Nka",
+        "DJ Toscano",
+        "Jennyselt Galata",
+        "José Carlos Leguen",
+        "Yenifer Lavin",
+        "Yoannis Tamayo"
+      ],
       "description": "First edition of a Cuban dance festival in Toulouse: more than 20 hours of workshops in salsa, rumba, Afro-Cuban, son and reparto, international artists, live musicians and two parties.",
       "lastVerified": "2026-10-29",
       "featured": false,
-      "notes": "Added 2026-10-29 from the festival flyer sent by the owner ('1ère édition', 5, 6, 7 février 2027, Toulouse; salsa, rumba, afro, son, reparto; artistes internationaux, +20h de workshops, musiciens live, 2 soirées). Organizer account @vamoscubafestival. No website, venue, tickets or named line-up found yet. Coordinates: city centre.",
+      "notes": "Added 2026-10-29 from the festival flyer sent by the owner ('1ère édition', 5, 6, 7 février 2027, Toulouse; salsa, rumba, afro, son, reparto; artistes internationaux, +20h de workshops, musiciens live, 2 soirées). Organizer account @vamoscubafestival. No website, venue, tickets or named line-up found yet. Coordinates: city centre.\n2026-10-29: line-up from the organizer's 'LINE-UP' post https://www.instagram.com/p/Dd9Uz70I0h3/ (handles: yoannistamayo.official, anitajimenez.official, josecarlosleguenofficial, alain_katerina, jennygalata, yeniferlavingonzal, deejay_toscano, jackelcalvo, tom_nka). Not added (handle only, name unclear): royma_sabordecuba, jaiisonn, mariocharon, seu_jade; live musicians post https://www.instagram.com/p/DePVJAvIlHh/ (machito_laclavedebarrio, titobelen_music, ramonsito_drums, davel31m, keilerbrunet, joselier_lopez).",
       "styles": [
         "casino",
         "son",
@@ -8402,7 +8449,7 @@
       "facebook": "https://www.facebook.com/havanasalsauk",
       "artists": [
         "Alain Morales",
-        "Anitaa Jimenez",
+        "Anita Jiménez",
         "Chiky Cuba",
         "DJ Canet",
         "DJ Flecha",
@@ -8426,7 +8473,7 @@
       "description": "New Year Cuban salsa festival in Birmingham: a New Year's Eve party, two days of workshops on 1 and 2 January, and parties with live music from Papucho y Manana Club.",
       "lastVerified": "2026-10-29",
       "featured": false,
-      "notes": "Added 2026-10-29 (found on SalsaVida, verified on the organizer pages https://havanasalsaevents.uk/havana-salsa-new-year-latin-festival-2026/ and /event/new-year-festival-2026-tickets/): 31 Dec 2026 - 2 Jan 2027, Birmingham Conference & Events Centre. Line-up as published; page spells 'Juan Carlos Pachec' (Pacheco), 'Neilys Y Michael', 'Wilmer and Maria', 'DJ Flecha Cuba'. Papucho y Manana Club on 2 Jan 23:30. Coordinates approximate.",
+      "notes": "Added 2026-10-29 (found on SalsaVida, verified on the organizer pages https://havanasalsaevents.uk/havana-salsa-new-year-latin-festival-2026/ and /event/new-year-festival-2026-tickets/): 31 Dec 2026 - 2 Jan 2027, Birmingham Conference & Events Centre. Line-up as published; page spells 'Juan Carlos Pachec' (Pacheco), 'Neilys Y Michael', 'Wilmer and Maria', 'DJ Flecha Cuba'. Papucho y Manana Club on 2 Jan 23:30. Coordinates approximate. 'Anitaa Jimenez' written as Anita Jiménez (handle anitajimenez.official).",
       "styles": [
         "casino",
         "timba",
@@ -9091,6 +9138,43 @@
         "mixed"
       ],
       "cubanFocused": false
+    },
+    {
+      "id": "siente-cuba-athens-2026",
+      "series": "siente-cuba-athens",
+      "name": "Siente Cuba – Salsa Cubana Weekend",
+      "status": "scheduled",
+      "startDate": "2026-11-26",
+      "endDate": "2026-11-30",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Athens",
+      "country": "Greece",
+      "countryCode": "GR",
+      "region": "Europe",
+      "venue": "La Yumba Dance House, Vouliagmenis Ave 583, Argyroupoli",
+      "coordinates": [
+        37.904,
+        23.747
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": null,
+      "website": "https://www.layumba.gr/",
+      "instagram": null,
+      "facebook": "https://www.facebook.com/layumbadancehouse/",
+      "artists": [
+        "Adonis Santiago"
+      ],
+      "description": "Cuban salsa weekend in Athens hosted by La Yumba Dance House, co-hosted by Konstantina Koutsokosta, with workshops and parties.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 from Adonis Santiago's own tour post https://www.instagram.com/p/De4_fyFNHIZ/ (also sent by the owner as a screenshot): 'Siente Cuba, Salsa Cubana Weekend, 26-30 Nov, Atenas, Grecia. Hosted by La Yumba Dance House, co-host Konstantina Koutsokosta'. Nothing on layumba.gr yet; venue = the host school's address (layumba.gr). Konstantina Koutsokosta is on La Yumba's team page. Coordinates approximate.",
+      "styles": [
+        "casino"
+      ],
+      "cubanFocused": true
     }
   ]
 }
