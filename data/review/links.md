@@ -1,6 +1,6 @@
 # Link check
 
-Run on 2026-10-29 with `node scripts/check-links.mjs`: 1 links, 0 broken, 0 to check, 1 ok.
+Run on 2026-10-29 with `node scripts/check-links.mjs`: 8 links, 0 broken, 0 to check, 8 ok.
 
 ## Broken (0)
 

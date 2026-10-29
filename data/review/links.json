@@ -1,10 +1,80 @@
 [
   {
-    "id": "sals-on-latin-show-tortoreto-2027",
-    "name": "Sals'On – The Latin Show",
-    "kind": "instagram",
-    "url": "https://www.instagram.com/sals_on_2026/",
-    "finalUrl": "https://www.instagram.com/sals_on_2026/",
+    "id": "abcd-festival-london-2027",
+    "name": "ABCD Festival London",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/10159/abcd-festival-2027-london-uk-the-uks-biggest-sbk-festival",
+    "finalUrl": "https://www.goandance.com/en/event/10159/abcd-festival-2027-london-uk-the-uk-s-biggest-sbk-festival",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "dubai-latin-festival-2026",
+    "name": "Dubai Latin Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/10110/dubai-latin-festival-2026-6th-edition",
+    "finalUrl": "https://www.goandance.com/en/event/10110/dubai-latin-festival-2026-6th-edition",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-clave-festival-lloret-2027",
+    "name": "La Clave Festival",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/10103/la-clave-festival-2027-premium-edition",
+    "finalUrl": "https://www.goandance.com/en/event/10103/la-clave-festival-2027-premium-edition",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "la-escapada-calpe-2027",
+    "name": "La Escapada Calpe",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/9359/la-escapada-calpe-2027-50-salsa-50-bachata-100-escapada",
+    "finalUrl": "https://www.goandance.com/en/event/9359/la-escapada-calpe-2027-50-salsa-50-bachata-100-escapada",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "mayimbe-cubano-goteborg-2026",
+    "name": "Mayimbe Cubano",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/10199/mayimbe-cubano-goteborg-dance-weekend-2026",
+    "finalUrl": "https://www.goandance.com/en/event/10199/mayimbe-cubano-goteborg-dance-weekend-2026",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "mayimbe-cubano-goteborg-2026",
+    "name": "Mayimbe Cubano",
+    "kind": "website",
+    "url": "https://dancevida.se/mayimbe-cubano-goteborg-2026/",
+    "finalUrl": "https://dancevida.se/mayimbe-cubano-goteborg-2026/",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsa-bachata-temptation-asia-bangkok-2027",
+    "name": "Salsa Bachata Temptation Asia",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/10058/salsa-bachata-temptation-asia-2027-sbta",
+    "finalUrl": "https://www.goandance.com/en/event/10058/salsa-bachata-temptation-asia-2027-sbta",
+    "status": 200,
+    "verdict": "ok",
+    "why": ""
+  },
+  {
+    "id": "salsaoco-weekend-lodz-2027",
+    "name": "SALSAOCO Weekend Łódź",
+    "kind": "ticketUrl",
+    "url": "https://www.goandance.com/en/event/10000/salsaoco-weekend-lodz-2027",
+    "finalUrl": "https://www.goandance.com/en/event/10000/salsaoco-weekend-lodz-2027",
     "status": 200,
     "verdict": "ok",
     "why": ""
