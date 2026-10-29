@@ -2417,9 +2417,9 @@
         46.9062,
         19.6913
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Full program pass 55,000 HUF (couple 90,000 HUF); day tickets 15,000-25,000 HUF at the venue",
+      "priceFrom": 15000,
+      "currency": "HUF",
       "ticketUrl": "https://forms.gle/HWsox6C1222DB97d9",
       "website": "https://www.facebook.com/events/1267777715159248/",
       "instagram": null,
@@ -2440,7 +2440,7 @@
       "description": "Salsa and bachata weekender at the Hotel Granada in Kecskemét, Hungary.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website.\n2026-10-01: moved from Tapolca to Kecskemét (Granada hotel). Directories give 13–15 Nov 2026; confirm on an official source before setting exact dates.\n2026-10-01: official Facebook event and registration form replace salsavida (gustocubano.hu no longer exists).\n2026-10-10: line-up (12) from the list sent by the owner (school names dropped); replaces 0 earlier names.",
+      "notes": "User to verify Instagram/website.\n2026-10-01: moved from Tapolca to Kecskemét (Granada hotel). Directories give 13–15 Nov 2026; confirm on an official source before setting exact dates.\n2026-10-01: official Facebook event and registration form replace salsavida (gustocubano.hu no longer exists).\n2026-10-10: line-up (12) from the list sent by the owner (school names dropped); replaces 0 earlier names.\n2026-10-29: prices from the organizer's registration form (forms.gle link, '13-15 NOV 2026').",
       "styles": [
         "mixed"
       ],
@@ -3754,7 +3754,7 @@
         43.604464,
         1.444243
       ],
-      "priceText": null,
+      "priceText": "No festival pass on sale yet; Haila Mompié concert (4 Feb 2027) €19.80-30.80",
       "priceFrom": null,
       "currency": null,
       "ticketUrl": "https://billetterie.festik.net/cubahoy/",
@@ -3766,7 +3766,7 @@
       "description": "Two-week festival of Cuban and Latin American culture across Toulouse, run by the Association Yemayá.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates and details from cubansalsafestivals.com only (organizer ticket page festik.net needs JavaScript and could not be read). It is a music/culture festival rather than a dance congress; to be reviewed.\n2026-10-29: Haila Mompié added from the organizer's post https://www.instagram.com/p/DeHtuLwOPfw/ ('Haila MOMPIÉ le 04 Février 2027 au Théâtre des Mazades… concert des 30 ans du Festival CUBA HOY').",
+      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates and details from cubansalsafestivals.com only (organizer ticket page festik.net needs JavaScript and could not be read). It is a music/culture festival rather than a dance congress; to be reviewed.\n2026-10-29: Haila Mompié added from the organizer's post https://www.instagram.com/p/DeHtuLwOPfw/ ('Haila MOMPIÉ le 04 Février 2027 au Théâtre des Mazades… concert des 30 ans du Festival CUBA HOY').\n2026-10-29: prices from https://billetterie.festik.net/cubahoy/ (only the concert is on sale).",
       "styles": [
         "mixed"
       ],
@@ -3848,9 +3848,9 @@
         53.550172,
         10.001316
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Full pass €159 (workshops and parties; early bird €139 sold out)",
+      "priceFrom": 159,
+      "currency": "EUR",
       "ticketUrl": "https://www.unidanza.de/tickets/",
       "website": "https://www.unidanza.de/",
       "instagram": "https://www.instagram.com/unidanza.hamburg/",
@@ -3863,7 +3863,7 @@
         "amount": 10,
         "currency": "EUR"
       },
-      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; organizer site (unidanza.de) still shows the 6-8 Feb 2026 edition, so 2027 is listed as February only. cubansalsafestivals.com says 12-14 Feb 2027 (not confirmed by the organizer). Their ticket link (bailacalabria.it) looked wrong; used the organizer tickets page.\n2026-10-13: dates set to 12-14 Feb 2027 from cubansalsafestivals.com at the owner's request (organizer site not updated yet; to be rechecked).\n2026-10-29: unidanza.de now confirms 12-14 Feb 2027 in Hamburg; line-up and venues for 2027 not announced yet (venue kept from the 2026 edition).\n2026-10-29: €10 discount code UNDZ-CUBANSALSACALENDAR from the organizer, typed at checkout in the shop on unidanza.de/tickets.\n2026-10-29: venue cleared (was Billie's Tanzstudio (Alte Dosenfabrik)): the organizer says the festival moves to a new venue in 2027, not named yet (https://www.instagram.com/p/De_U_7Txi9k/).",
+      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; organizer site (unidanza.de) still shows the 6-8 Feb 2026 edition, so 2027 is listed as February only. cubansalsafestivals.com says 12-14 Feb 2027 (not confirmed by the organizer). Their ticket link (bailacalabria.it) looked wrong; used the organizer tickets page.\n2026-10-13: dates set to 12-14 Feb 2027 from cubansalsafestivals.com at the owner's request (organizer site not updated yet; to be rechecked).\n2026-10-29: unidanza.de now confirms 12-14 Feb 2027 in Hamburg; line-up and venues for 2027 not announced yet (venue kept from the 2026 edition).\n2026-10-29: €10 discount code UNDZ-CUBANSALSACALENDAR from the organizer, typed at checkout in the shop on unidanza.de/tickets.\n2026-10-29: venue cleared (was Billie's Tanzstudio (Alte Dosenfabrik)): the organizer says the festival moves to a new venue in 2027, not named yet (https://www.instagram.com/p/De_U_7Txi9k/).\n2026-10-29: prices from the organizer's pretix shop https://pretix.eu/undz-calt/undz27/ ('UNiDANZA 2027, Feb. 12-14, 2027').",
       "styles": [
         "afro-cuban",
         "rumba",
@@ -3889,9 +3889,9 @@
         39.4699,
         -0.3763
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "General entrance €89 (workshops + parties, plus fees); €69 and €79 tiers sold out",
+      "priceFrom": 89,
+      "currency": "EUR",
       "ticketUrl": "https://damevalencia.com/eventos/dame-festival-2027",
       "website": "https://damefestival.es/?lang=en#inicio",
       "instagram": "https://www.instagram.com/damefestival/",
@@ -3914,7 +3914,7 @@
       "description": "Pure Cuban salsa, timba, son, rumba and guaguancó. 'El mejor festival de Valencia'. Bootcamp directed by Diana Rodriguez. Family atmosphere.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl); verify with the organizer.\n2026-10-10: line-up (14) from https://damefestival.es/?lang=en#artistas (Page says 'Dame Festival 2027', 4-7 February 2027). Added: Diana Rodríguez, Albert Molina, Jorge Camaguey, Bryan & Carla, Ale & Sofi, Alejandro, Andreas & Melina, Carina, Yago & Helen, Liderando la Rueda, Albita & Gore, Pedro Nowak, Mijael Bueno, Cristian Mauricio.\n2026-10-10: facebook from the festival website (https://damefestival.es/?lang=en#inicio).",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl); verify with the organizer.\n2026-10-10: line-up (14) from https://damefestival.es/?lang=en#artistas (Page says 'Dame Festival 2027', 4-7 February 2027). Added: Diana Rodríguez, Albert Molina, Jorge Camaguey, Bryan & Carla, Ale & Sofi, Alejandro, Andreas & Melina, Carina, Yago & Helen, Liderando la Rueda, Albita & Gore, Pedro Nowak, Mijael Bueno, Cristian Mauricio.\n2026-10-10: facebook from the festival website (https://damefestival.es/?lang=en#inicio).\n2026-10-29: prices from the organizer's ticket page https://damevalencia.com/eventos/dame-festival-2027 (event 79).",
       "styles": [
         "casino",
         "timba",
@@ -3943,9 +3943,9 @@
         37.789114,
         -122.407238
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Passes US$45-535 on Eventbrite",
+      "priceFrom": 45,
+      "currency": "USD",
       "ticketUrl": "https://www.eventbrite.com/e/the-16th-annual-salsa-rueda-festival-in-san-francisco-feb-11-feb-14-2027-registration-2000233871354",
       "website": "https://www.salsaruedafestival.com/",
       "instagram": "https://www.instagram.com/salsaruedafestival/",
@@ -3955,7 +3955,7 @@
       "description": "15th annual edition, presented by Salsa Vale Todo at the Grand Hyatt San Francisco (Union Square). Billed as the premier West Coast timba festival: four days of social dancing, performances and shows, live bands and DJs, workshops for all levels, a beginner bootcamp, educational lectures and late-night parties.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\nLine-up (1) from https://www.eventbrite.com/e/the-16th-annual-salsa-rueda-festival-in-san-francisco-feb-11-feb-14-2027-registration-2000233871354 on 2026-10-01 (high confidence); verify with the organizer.",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\nLine-up (1) from https://www.eventbrite.com/e/the-16th-annual-salsa-rueda-festival-in-san-francisco-feb-11-feb-14-2027-registration-2000233871354 on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-29: prices from the organizer's Eventbrite page data (range USD 44.52-535.38, tier names not visible, may include fees).",
       "styles": [
         "casino",
         "timba",
@@ -4206,9 +4206,9 @@
         33.5904,
         130.4017
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Full pass ¥20,000 early bird (from 1 Nov), ¥22,000 from 1 Dec; party pass ¥12,000; workshop pass ¥13,000; day tickets from ¥4,500",
+      "priceFrom": 4500,
+      "currency": "JPY",
       "ticketUrl": "https://first3.jp/reserve/tiempo/customer/entry",
       "website": "https://fusafes.tiempo.jp/",
       "instagram": "https://www.instagram.com/npotiempoiberoamericano/",
@@ -4232,7 +4232,7 @@
       "description": null,
       "lastVerified": null,
       "featured": false,
-      "notes": "Next edition found by web research on 2026-10-01. Source: https://fusafes.tiempo.jp/\n2026-10-10: line-up (13) from https://fusafes.tiempo.jp/en/dancers.html (Page heading 'FUSABAFES 2027 Featured Dancers'; festival 26-28 Feb 2027). Added: Fabrizio & Giulia, Andrea & Silvia, Mari Yogo, Andrés & Yuno, Roberto Moré, Alex Garcia, Hide & Peko, Rav & Yuko, Pablo & Kaku, Yukino, Mike Honda, Marcelo Stella, Yuka.\n2026-10-10: facebook from the festival website (https://fusafes.tiempo.jp/).\n2026-10-22: DJs added from https://fusafes.tiempo.jp/ja/musicians.html: DJ Ricky, DJ King.",
+      "notes": "Next edition found by web research on 2026-10-01. Source: https://fusafes.tiempo.jp/\n2026-10-10: line-up (13) from https://fusafes.tiempo.jp/en/dancers.html (Page heading 'FUSABAFES 2027 Featured Dancers'; festival 26-28 Feb 2027). Added: Fabrizio & Giulia, Andrea & Silvia, Mari Yogo, Andrés & Yuno, Roberto Moré, Alex Garcia, Hide & Peko, Rav & Yuko, Pablo & Kaku, Yukino, Mike Honda, Marcelo Stella, Yuka.\n2026-10-10: facebook from the festival website (https://fusafes.tiempo.jp/).\n2026-10-22: DJs added from https://fusafes.tiempo.jp/ja/musicians.html: DJ Ricky, DJ King.\n2026-10-29: prices from https://fusafes.tiempo.jp/ja/party.html and /ws.html.",
       "facebook": "https://www.facebook.com/fukuokasalsafestival"
     },
     {
@@ -4810,7 +4810,7 @@
       "description": "Three-day weekend at a holiday village on Noirmoutier island, organized by three Cuban salsa clubs, with workshops and evening parties.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Added 2026-10-23 by the daily sync: all facts (dates 2027-03-12..14, L'Épine, Domaine Les Quatre Vents, ticket link, coordinates, Instagram) came only from https://cubansalsafestivals.com/festivals/cubanile-2027/; organizer ticket page (helloasso) returned 403 and could not be checked (its URL says '5 mars'). Cuban content not confirmed by the organizer.",
+      "notes": "Added 2026-10-23 by the daily sync: all facts (dates 2027-03-12..14, L'Épine, Domaine Les Quatre Vents, ticket link, coordinates, Instagram) came only from https://cubansalsafestivals.com/festivals/cubanile-2027/; organizer ticket page (helloasso) returned 403 and could not be checked (its URL says '5 mars'). Cuban content not confirmed by the organizer.\n2026-10-29: the HelloAsso ticket URL slug says 'cuban-ile-5-mars-2027' while we list 12-14 Mar 2027; HelloAsso blocks automated checks, dates to confirm by hand.",
       "styles": [
         "mixed"
       ],
@@ -5021,9 +5021,9 @@
         43.5297,
         5.4474
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Full pass €135 (duo €260); beginners pass €90; parties pass €45",
+      "priceFrom": 45,
+      "currency": "EUR",
       "ticketUrl": "https://www.billetweb.fr/saoco-cuban-festival-du-19-au-21-mars-2027",
       "website": "https://saoco-cuban-festival.fr/",
       "instagram": "https://www.instagram.com/saococubanfestival/",
@@ -5055,7 +5055,7 @@
       "description": "Saoco Cuban Festival in Aix-en-Provence, France. Listed in rueda.casino March 19-21, 2027.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (23) from https://saoco-cuban-festival.fr/artistes/ on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: line-up checked against https://saoco-cuban-festival.fr/artistes/: unchanged.\n2026-10-10: facebook from the festival website (https://saoco-cuban-festival.fr/).",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (23) from https://saoco-cuban-festival.fr/artistes/ on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: line-up checked against https://saoco-cuban-festival.fr/artistes/: unchanged.\n2026-10-10: facebook from the festival website (https://saoco-cuban-festival.fr/).\n2026-10-29: prices from the organizer's Billetweb shop (event 1452578, current tier 19 Oct - 18 Dec).",
       "styles": [
         "casino",
         "timba",
@@ -5166,7 +5166,7 @@
       "name": "Berlin Salsa Festival 'Fiesta Elegante'",
       "status": "scheduled",
       "startDate": "2027-04-02",
-      "endDate": "2027-04-04",
+      "endDate": "2027-04-05",
       "datePrecision": "day",
       "dateNote": null,
       "city": "Berlin",
@@ -5178,9 +5178,9 @@
         52.52,
         13.405
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Cuban full pass €169 until 14 Nov, then €179; VIP full pass €189; Saturday mambo pass €89; pass + hotel from €285 per person",
+      "priceFrom": 89,
+      "currency": "EUR",
       "ticketUrl": "https://www.berlinsalsafestival.com/tickets",
       "website": "https://www.berlinsalsafestival.com/",
       "instagram": "https://www.instagram.com/fiesta_elegante/",
@@ -5206,7 +5206,7 @@
       "description": "One of Europe's most exciting Cuban salsa festivals - son, Afro-Cuban, salsa, timba, reggaeton with dancers from 30+ countries. Live concert by Maykel Blanco y su Salsa Mayor. Limited to 480 tickets.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (16) from https://www.berlinsalsafestival.com/artists (The menu folder 'Berlin Salsa Festival 2027' opens this artists page (the 2026 October event has its own 'Artists October 2026' page). Program 2027 page says 02.-05. April 2027. The page itself has no year.). Added: Jorge & Indira, Yoyo Flow, Adonis Santiago, Yusimi Moya Rodriguez, Bersy Cortez, Eloy J Rojas, Edwar Ramos, Seo Fernandez, Diana Rodriguez, Victor Gonzalez, Alfredo Garcia, Danger & Marielkis, Oliwia Szewczak, Royma Roman, Luis Duarte, Jennifer Fernandez. Page partly unreadable (images); earlier names kept.\n2026-10-10: facebook from the festival website (https://www.berlinsalsafestival.com/).\n2026-10-29: DJ Andrea Androger added from his own tour poster 'Andrea Androger Tour Date & Rome Residency 2027' (screenshot sent by the owner). Poster dates: 02-04/04.",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (16) from https://www.berlinsalsafestival.com/artists (The menu folder 'Berlin Salsa Festival 2027' opens this artists page (the 2026 October event has its own 'Artists October 2026' page). Program 2027 page says 02.-05. April 2027. The page itself has no year.). Added: Jorge & Indira, Yoyo Flow, Adonis Santiago, Yusimi Moya Rodriguez, Bersy Cortez, Eloy J Rojas, Edwar Ramos, Seo Fernandez, Diana Rodriguez, Victor Gonzalez, Alfredo Garcia, Danger & Marielkis, Oliwia Szewczak, Royma Roman, Luis Duarte, Jennifer Fernandez. Page partly unreadable (images); earlier names kept.\n2026-10-10: facebook from the festival website (https://www.berlinsalsafestival.com/).\n2026-10-29: DJ Andrea Androger added from his own tour poster 'Andrea Androger Tour Date & Rome Residency 2027' (screenshot sent by the owner). Poster dates: 02-04/04.\n2026-10-29: prices from the organizer's Tickettailor shop https://www.tickettailor.com/checkout/view-event/id/7933670/chk/a37b/ (event '02-05.04.2027'; fees +€7.80). End date changed from 2027-04-04 to 2027-04-05: the ticket shop, go&dance (event 10174) and the organizer's program page all say 2-5 April 2027.",
       "styles": [
         "casino",
         "timba",
@@ -5236,9 +5236,9 @@
         43.5686,
         1.2925
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Full pass €109 (men), €119 (women)",
+      "priceFrom": 109,
+      "currency": "EUR",
       "ticketUrl": "https://www.billetweb.fr/festival-de-son-cubano-2-3-4-avril-2027-toulouse-francia",
       "website": "https://www.facebook.com/p/Soneate-Festival-Toulouse-61571480413761/",
       "instagram": null,
@@ -5246,7 +5246,7 @@
       "description": "3rd edition. A festival 100% dedicated to Cuban son, rather than son as one room among many. Three days at the Mas Tolosa in Plaisance-du-Touch, just west of Toulouse. Line-up, final venue details and booking link to be announced.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (2) removed: the ticket page names no artists. Removed: Alain Rueda, Katerina Mik.",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (ticketUrl, venue); verify with the organizer.\n2026-10-10: line-up (2) removed: the ticket page names no artists. Removed: Alain Rueda, Katerina Mik.\n2026-10-29: prices from the organizer's Billetweb shop (event 1405742, 2-4 Apr 2027).",
       "styles": [
         "son"
       ],
@@ -5270,8 +5270,8 @@
         59.3293,
         18.0686
       ],
-      "priceText": null,
-      "priceFrom": null,
+      "priceText": "Full pass 1,000 SEK until 30 Nov, then 1,400 SEK",
+      "priceFrom": 1000,
       "currency": "SEK",
       "ticketUrl": "https://app.coursely.se/register/6f1aex9s8q9oyc5c?lang=en",
       "website": "https://bachataandcubanweekend.com/",
@@ -5287,7 +5287,7 @@
       "description": "Stockholm Bachata Cuban Marathon.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website.\n2026-10-10: line-up checked against https://bachataandcubanweekend.com/: unchanged.\n2026-10-10: instagram @bachataandcubanweekend (owner; profile checked).",
+      "notes": "User to verify Instagram/website.\n2026-10-10: line-up checked against https://bachataandcubanweekend.com/: unchanged.\n2026-10-10: instagram @bachataandcubanweekend (owner; profile checked).\n2026-10-29: prices from https://bachataandcubanweekend.com/ ('Bachata & Cuban Weekend 2027, 2-4 April 2027'; day/party prices marked as last edition's, not used).",
       "styles": [
         "mixed"
       ]
@@ -5310,9 +5310,9 @@
         38.5411,
         -0.1226
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Full pass €129, then €139; party pass €55, rising to €72",
+      "priceFrom": 55,
+      "currency": "EUR",
       "ticketUrl": "https://alocubano.se/#buy-ticket",
       "website": "https://alocubano.se/benidorm/",
       "instagram": "https://www.instagram.com/alocubano_festival/",
@@ -5336,7 +5336,7 @@
       "description": "AloCubano Benidorm 2026 ★ MAYKEL BLANCO LIVE! 'The Cuban Festival in the Miami of Europe'. Set at the legendary Gran Hotel Bali - all-in-one resort experience. 4 unforgettable days of workshops, pool parties, night fiestas. 2 dance floors by night - 1000m² Pure Cuban + 500m² Bachata. 26+ workshops in Cuban styles: Salsa Cubana, Rumba, Afro, Timba, Reparto. Dazzling shows, competitions, animations. Parties until sunrise with DJs from Cuba's finest scene. Established by Julio Espinal from Santiago de Cuba.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (15) from https://alocubano.se/benidorm/artists on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: line-up checked against https://alocubano.se/benidorm/artists: unchanged.\n2026-10-10: facebook from the festival website (https://alocubano.se/benidorm/).",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (15) from https://alocubano.se/benidorm/artists on 2026-10-01 (high confidence); verify with the organizer.\n2026-10-10: line-up checked against https://alocubano.se/benidorm/artists: unchanged.\n2026-10-10: facebook from the festival website (https://alocubano.se/benidorm/).\n2026-10-29: prices from the organizer's TicketTailor shop https://tickets.alocubano.se/checkout/view-event/id/8109237/chk/ac09/ (the €99 early bird on the website is gone).",
       "styles": [
         "casino",
         "timba",
@@ -5453,9 +5453,9 @@
         51.5074,
         -0.1278
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Full pass £199 (£99 deposit); pass + hotel packages £335-590",
+      "priceFrom": 199,
+      "currency": "GBP",
       "ticketUrl": "https://ruedalibre.co.uk/la-dosis/",
       "website": "https://ruedalibre.co.uk/la-dosis/",
       "instagram": "https://www.instagram.com/rueda.libre.ldn/",
@@ -5485,7 +5485,7 @@
       "description": "Workshops | Parties | Live Music | Rumba Abierta | Casino Boot Camp | Rueda Olympics. 19+ world-class artists + DJs. 3 full days of workshops with live music across all levels. Casino Boot Camp by Ramses and Sandra. 2 epic parties at Saw Swee Hock Student Centre, central London. Friendly, inclusive community by Rueda Libre. Quality Cuban dance with great artists in welcoming and safe space.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (website, venue); verify with the organizer.\nLine-up (20) from https://ruedalibre.co.uk/la-dosis-artists/ on 2026-10-01 (medium confidence); verify with the organizer.\nFilled from cubansalsafestivals.com on 2026-10-05 (ticketUrl); verify with the organizer.\n2026-10-10: line-up (1) from https://ruedalibre.co.uk/la-dosis/ (Page says 9–11 April 2027 and 'Concert by Elito Reve y su Charangon'). Added: Elito Revé y su Charangón. Removed (not on the organizer page for this edition): Adonis Santiago, Andy & Yuliet, Cristian, Damarys Farres, Danger & Marielkis, DJ Kasanoba, DJ Ricafed, DJ Richard Fallon, DJ Tom Nka, FredyClan, High Five Salsa, Kamila, Kevin y Geysa, Luanda Pau, Luis Duarte, Moe Flex, Osmani Segura, Ramses y Sandra, Yanet Fuentes, Yenifer Lavin.\n2026-10-10: facebook from the festival website (https://ruedalibre.co.uk/la-dosis/).\n2026-10-10: line-up (17) from https://ruedalibre.co.uk/la-dosis-artists/ (owner confirmed it is the 2027 line-up; 'High Five Salsa' = Noe & Diego, 'Damarys' = Damarys Farres) plus the Elito Revé y su Charangón concert. Instagram @rueda.libre.ldn (owner; profile checked).\n2026-10-22: DJs added from https://ruedalibre.co.uk/la-dosis/djs/: DJ Tom Nka, DJ Kasanoba, DJ Richard Fallon, DJ Ricafed.",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (website, venue); verify with the organizer.\nLine-up (20) from https://ruedalibre.co.uk/la-dosis-artists/ on 2026-10-01 (medium confidence); verify with the organizer.\nFilled from cubansalsafestivals.com on 2026-10-05 (ticketUrl); verify with the organizer.\n2026-10-10: line-up (1) from https://ruedalibre.co.uk/la-dosis/ (Page says 9–11 April 2027 and 'Concert by Elito Reve y su Charangon'). Added: Elito Revé y su Charangón. Removed (not on the organizer page for this edition): Adonis Santiago, Andy & Yuliet, Cristian, Damarys Farres, Danger & Marielkis, DJ Kasanoba, DJ Ricafed, DJ Richard Fallon, DJ Tom Nka, FredyClan, High Five Salsa, Kamila, Kevin y Geysa, Luanda Pau, Luis Duarte, Moe Flex, Osmani Segura, Ramses y Sandra, Yanet Fuentes, Yenifer Lavin.\n2026-10-10: facebook from the festival website (https://ruedalibre.co.uk/la-dosis/).\n2026-10-10: line-up (17) from https://ruedalibre.co.uk/la-dosis-artists/ (owner confirmed it is the 2027 line-up; 'High Five Salsa' = Noe & Diego, 'Damarys' = Damarys Farres) plus the Elito Revé y su Charangón concert. Instagram @rueda.libre.ldn (owner; profile checked).\n2026-10-22: DJs added from https://ruedalibre.co.uk/la-dosis/djs/: DJ Tom Nka, DJ Kasanoba, DJ Richard Fallon, DJ Ricafed.\n2026-10-29: prices from https://ruedalibre.co.uk/la-dosis/.",
       "styles": [
         "casino",
         "timba",
@@ -5893,7 +5893,7 @@
       "description": "World Stars Salsa Festival, founded in Varna in 2012, moves to Istanbul in 2027: a mixed Latin festival with salsa, bachata and kizomba at one five-star hotel, the Elite World Grand İstanbul Küçükyalı, with some Cuban salsa on the programme.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-10: moved to Istanbul: varnasalsafestival.com says 'the festival comes to Istanbul in 2027 at Elite World Grand İstanbul Küçükyalı' (22–26 April 2027). Was Varna / Albena Resort.\n2026-10-10: public description cleaned of editor notes. Was: World Stars Salsa Festival in Varna. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-10: facebook from the festival website (https://varnasalsafestival.com/).\n2026-10-10: line-up (43) from https://varnasalsafestival.com/artists/ (concerts, salsa, bachata, kizomba and DJs; MC and local dance schools left out) (owner); replaces 0 earlier names.\n2026-10-16 instagram watch: added Mateo & Johanna, Jermmy Largacha from https://www.instagram.com/p/DehcZUIRwLL/ and https://www.instagram.com/p/Deeymd-Mx6J/\n2026-10-17 instagram watch: added Argenis & Cristina from https://www.instagram.com/p/Dej_ZtpM1s-/\n2026-10-20 instagram watch: added Yenifer Lavin from https://www.instagram.com/p/Der8Xdaxf9V/\n2026-10-20 instagram watch: added Albir Rojas from https://www.instagram.com/p/Depb-xRxk5f/\n2026-10-22 instagram watch: added Leonardo Pafumi, Elwin & Gaby from https://www.instagram.com/p/Dew4t9usGD2/ , https://www.instagram.com/p/DeuYC0qxT86/\n2026-10-23 instagram watch: added Angelo Rito from https://www.instagram.com/p/DezakiTMT1E/\n2026-10-25 instagram watch: added Jimmy Bosch, Cuba Libre Son Band from https://www.instagram.com/p/De2Rl-kEYjk/\n2026-10-26 instagram watch: added Marta Tarraxo, Willie Colón Tribute from https://www.instagram.com/p/De7RLlLRemw/ and https://www.instagram.com/p/De2Rl-kEYjk/\n2026-10-28 instagram watch: added Damyss from https://www.instagram.com/p/De9wnV2Rs80/",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-10: moved to Istanbul: varnasalsafestival.com says 'the festival comes to Istanbul in 2027 at Elite World Grand İstanbul Küçükyalı' (22–26 April 2027). Was Varna / Albena Resort.\n2026-10-10: public description cleaned of editor notes. Was: World Stars Salsa Festival in Varna. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-10: facebook from the festival website (https://varnasalsafestival.com/).\n2026-10-10: line-up (43) from https://varnasalsafestival.com/artists/ (concerts, salsa, bachata, kizomba and DJs; MC and local dance schools left out) (owner); replaces 0 earlier names.\n2026-10-16 instagram watch: added Mateo & Johanna, Jermmy Largacha from https://www.instagram.com/p/DehcZUIRwLL/ and https://www.instagram.com/p/Deeymd-Mx6J/\n2026-10-17 instagram watch: added Argenis & Cristina from https://www.instagram.com/p/Dej_ZtpM1s-/\n2026-10-20 instagram watch: added Yenifer Lavin from https://www.instagram.com/p/Der8Xdaxf9V/\n2026-10-20 instagram watch: added Albir Rojas from https://www.instagram.com/p/Depb-xRxk5f/\n2026-10-22 instagram watch: added Leonardo Pafumi, Elwin & Gaby from https://www.instagram.com/p/Dew4t9usGD2/ , https://www.instagram.com/p/DeuYC0qxT86/\n2026-10-23 instagram watch: added Angelo Rito from https://www.instagram.com/p/DezakiTMT1E/\n2026-10-25 instagram watch: added Jimmy Bosch, Cuba Libre Son Band from https://www.instagram.com/p/De2Rl-kEYjk/\n2026-10-26 instagram watch: added Marta Tarraxo, Willie Colón Tribute from https://www.instagram.com/p/De7RLlLRemw/ and https://www.instagram.com/p/De2Rl-kEYjk/\n2026-10-28 instagram watch: added Damyss from https://www.instagram.com/p/De9wnV2Rs80/\n2026-10-29: the ticket site's main page still says '24-28 April 2025, Albena' (stale); prices load from a private backend, none published.",
       "styles": [
         "casino",
         "timba",
@@ -6037,9 +6037,9 @@
         44.2617,
         12.3484
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Full pass €160, weekend pass €130, day passes €30-70, party tickets €15-40; full-board hotel packages from €329 per person",
+      "priceFrom": 15,
+      "currency": "EUR",
       "ticketUrl": "https://www.salseandobeach.it/prodotto/full-passes/",
       "website": "https://www.salseandobeach.it/",
       "instagram": "https://www.instagram.com/salseando_beach/",
@@ -6082,7 +6082,7 @@
       "description": "Salseando Beach in Cervia: a mixed Latin festival with salsa, bachata and kizomba, and some Cuban salsa on the programme.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: Salseando Beach in Cervia. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-10: line-up (34) from https://www.salseandobeach.it/artisti/ (artists and companies; the local schools at the end of the list left out) (owner); replaces 0 earlier names.",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: Salseando Beach in Cervia. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-10: line-up (34) from https://www.salseandobeach.it/artisti/ (artists and companies; the local schools at the end of the list left out) (owner); replaces 0 earlier names.\n2026-10-29: prices from https://www.salseandobeach.it/prodotto/full-passes/ and the homepage (packages labelled 29 Apr - 2 May 2027; the full-pass product text still shows 2026 dates).",
       "styles": [
         "casino",
         "timba",
@@ -6113,7 +6113,7 @@
       "priceText": null,
       "priceFrom": null,
       "currency": null,
-      "ticketUrl": "https://docs.google.com/forms/d/e/1FAIpQLSdFKtGxLY1oG7Qf7fGM4JYP1GNY_icG0YJzAhIBVM54k4OECQ/viewform",
+      "ticketUrl": null,
       "website": "https://zagrebsalsamarathon.com/",
       "instagram": "https://www.instagram.com/zagrebsalsamarathon/",
       "artists": [
@@ -6128,7 +6128,7 @@
       "description": "Zagreb Salsa Marathon in Zagreb: a mixed Latin festival with salsa, bachata and kizomba, and some Cuban salsa on the programme.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: Zagreb Salsa Marathon in Zagreb. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-10: facebook from the festival website (https://zagrebsalsamarathon.com/).\n2026-10-10: line-up (7) from https://zagrebsalsamarathon.com/index.php/djs/ (owner); replaces 0 earlier names.",
+      "notes": "Filled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-10: public description cleaned of editor notes. Was: Zagreb Salsa Marathon in Zagreb. Mixed-styles Latin event (salsa/bachata/kizomba) with some Cuban content; listed on cubansalsafestivals.com as mixed styles. Details not yet verified: check venue, programme and Cuban share before publishing.\n2026-10-10: facebook from the festival website (https://zagrebsalsamarathon.com/).\n2026-10-10: line-up (7) from https://zagrebsalsamarathon.com/index.php/djs/ (owner); replaces 0 earlier names.\n2026-10-29: ticketUrl removed (was https://docs.google.com/forms/d/e/1FAIpQLSdFKtGxLY1oG7Qf7fGM4JYP1GNY_icG0YJzAhIBVM54k4OECQ/viewform): it is the 'Single party registration form - ZSM 2026', last edition; the registration page says 'More info coming soon!' for 2027.",
       "styles": [
         "casino",
         "timba",
@@ -6567,9 +6567,9 @@
         35.778,
         10.8262
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Festival pass €369 (sold out); all-inclusive packages with 7 hotel nights from €629 per person, with flights from €829",
+      "priceFrom": 369,
+      "currency": "EUR",
       "ticketUrl": "https://cit-festival.com/tickets",
       "website": "https://cit-festival.com/",
       "instagram": "https://www.instagram.com/cubaintunisia/",
@@ -6577,7 +6577,7 @@
       "description": "Cuba in Tunisia festival in Monastir. Listed in rueda.casino May 28 - June 4, 2026.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027. User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-10: facebook from the festival website (https://cit-festival.com/).",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027. User to verify Instagram/website.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\n2026-10-10: facebook from the festival website (https://cit-festival.com/).\n2026-10-29: prices from https://cit-festival.com/tickets (CIT27).",
       "styles": [
         "casino",
         "timba",
@@ -6702,9 +6702,9 @@
         45.081,
         13.6388
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Kick-start pass €130; weekend pass €205; full pass €435; party-only passes from €160 (prices rise monthly, no accommodation)",
+      "priceFrom": 130,
+      "currency": "EUR",
       "ticketUrl": "https://www.crosalsafestival.com/tickets",
       "website": "https://www.crosalsafestival.com/2027",
       "instagram": "https://www.instagram.com/seasunsalsa/",
@@ -6712,7 +6712,7 @@
       "description": "20+ year running mixed-style Adriatic salsa festival with strong Cuban room. Featured Cuban artists.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl); verify with the organizer.\n2026-10-10 link check: website changed (pointed to the 2026 page; the 2027 page exists). Was: https://www.crosalsafestival.com/2026\n2026-10-10: facebook from the festival website (https://www.crosalsafestival.com/2027).",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl); verify with the organizer.\n2026-10-10 link check: website changed (pointed to the 2026 page; the 2027 page exists). Was: https://www.crosalsafestival.com/2026\n2026-10-10: facebook from the festival website (https://www.crosalsafestival.com/2027).\n2026-10-29: prices from the organizer's shop on https://www.crosalsafestival.com/tickets (event 'Croatian Summer Salsa Festival 2027').",
       "styles": [
         "casino",
         "mixed"
@@ -7058,9 +7058,9 @@
         25.7617,
         -80.1918
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Full pass US$179 until 31 Oct, then US$199 (plus fees)",
+      "priceFrom": 179,
+      "currency": "USD",
       "ticketUrl": "https://themiamisalsacongress.ticketspice.com/miami-salsa-congress-2027",
       "website": "https://www.miamisalsacongress.com/",
       "instagram": "https://www.instagram.com/miamisalsacongress/",
@@ -7122,7 +7122,7 @@
       "description": "Multi-style salsa congress with Cuban room and live Cuban music.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (25) from https://www.miamisalsacongress.com/artists on 2026-10-01 (medium confidence); verify with the organizer.\n2026-10-10: line-up (54) from https://www.miamisalsacongress.com/artists (Page heading 'Miami Salsa Congress 2027 Lineup'). Added: Jewel, Marielena Martinez, Jorge Marino, Mike Dame Salsa, Rico Paris, Randy Santos, Alejandra Fontao, Michelle & Julian, Jose & Anastasia, Alfonso & Jessica, Brenda Rodriguez, Casino D' Primera, Salsa Fina, Timba Casino, Carlos Saoco, Pedro Timba Casino, Alondra Torres, DJ Emerzive, Jorge Charun, DJ Alex El Maestro, DJ Ivan el Samurai, DJ Mini, DJ Kemo, DJ Gagou, DJ Fredo, DJ Mambo Castillo, DJ Joey Tracks, DJ Selector Maxx, DJ Dania La Clave.\n2026-10-10: facebook from the festival website (https://www.miamisalsacongress.com/).",
+      "notes": "Details carried over from the 2026 entry; verify line-up and venue for 2027.\nFilled from cubansalsafestivals.com on 2026-10-01 (instagram, website, ticketUrl, venue); verify with the organizer.\nLine-up (25) from https://www.miamisalsacongress.com/artists on 2026-10-01 (medium confidence); verify with the organizer.\n2026-10-10: line-up (54) from https://www.miamisalsacongress.com/artists (Page heading 'Miami Salsa Congress 2027 Lineup'). Added: Jewel, Marielena Martinez, Jorge Marino, Mike Dame Salsa, Rico Paris, Randy Santos, Alejandra Fontao, Michelle & Julian, Jose & Anastasia, Alfonso & Jessica, Brenda Rodriguez, Casino D' Primera, Salsa Fina, Timba Casino, Carlos Saoco, Pedro Timba Casino, Alondra Torres, DJ Emerzive, Jorge Charun, DJ Alex El Maestro, DJ Ivan el Samurai, DJ Mini, DJ Kemo, DJ Gagou, DJ Fredo, DJ Mambo Castillo, DJ Joey Tracks, DJ Selector Maxx, DJ Dania La Clave.\n2026-10-10: facebook from the festival website (https://www.miamisalsacongress.com/).\n2026-10-29: prices from the organizer's Ticketspice page.",
       "styles": [
         "casino",
         "timba",
@@ -7137,7 +7137,7 @@
       "name": "Berlin Salsa Congress",
       "status": "scheduled",
       "startDate": "2027-08-26",
-      "endDate": "2027-08-29",
+      "endDate": "2027-08-30",
       "datePrecision": "day",
       "dateNote": null,
       "city": "Berlin",
@@ -7149,9 +7149,9 @@
         52.501606,
         13.381191
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Passes €104-167 on Eventbrite",
+      "priceFrom": 104,
+      "currency": "EUR",
       "ticketUrl": "https://www.eventbrite.de/e/berlin-salsacongress-2027-the-jungle-reloaded-tickets-1993694802824",
       "website": null,
       "instagram": "https://www.instagram.com/berlin_salsa_congress/",
@@ -7165,7 +7165,7 @@
       "description": "Large salsa congress at the Tempodrom in Berlin, running since 2001. The 2027 \"Jungle Reloaded\" edition features mambo, salsa, Cali style, cha-cha-cha and Cuban salsa, with workshops, social trainings and parties until late.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; facts from the organizer Eventbrite page (26-30 Aug 2027, Tempodrom, styles incl. Cuban Salsa). The other site says 26-29 Aug. Eventbrite shows only the 2026 line-up, so no artists yet.\n2026-10-29 instagram watch: added James & Peiwei, Vicente & Valentina, Andy & Yuliet, Fuquan & Candace from https://www.instagram.com/p/De_VEtFCmDu/\n2026-10-29: Eloy Rojas from the organizer's post https://www.instagram.com/reel/DeWe1ZsNn7R/ ('both will be back with us at Berlin Salsacongress 2027'). End date changed from 2027-08-30 to 2027-08-29: every 2027 promo says 'Save the date: August 26–29, 2027' (e.g. https://www.instagram.com/reel/DfFNMSPtTx_/).",
+      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; facts from the organizer Eventbrite page (26-30 Aug 2027, Tempodrom, styles incl. Cuban Salsa). The other site says 26-29 Aug. Eventbrite shows only the 2026 line-up, so no artists yet.\n2026-10-29 instagram watch: added James & Peiwei, Vicente & Valentina, Andy & Yuliet, Fuquan & Candace from https://www.instagram.com/p/De_VEtFCmDu/\n2026-10-29: Eloy Rojas from the organizer's post https://www.instagram.com/reel/DeWe1ZsNn7R/ ('both will be back with us at Berlin Salsacongress 2027'). End date changed from 2027-08-30 to 2027-08-29: every 2027 promo says 'Save the date: August 26–29, 2027' (e.g. https://www.instagram.com/reel/DfFNMSPtTx_/).\n2026-10-29: prices from the organizer's Eventbrite page data (range €104.45-167.15, tier names not visible). End date set back to 2027-08-30: the organizer's Eventbrite ticket lists 26-30 Aug 2027 (Thu-Mon), while its Instagram says 'August 26–29'; the ticketed Monday is kept.",
       "styles": [
         "casino",
         "mixed"
@@ -7190,9 +7190,9 @@
         38.531473,
         -0.163494
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Full pass €60 early bird, then €90",
+      "priceFrom": 60,
+      "currency": "EUR",
       "ticketUrl": "https://worldtickets.es/es/events/benidorm-beach-festival-2027",
       "website": null,
       "instagram": "https://www.instagram.com/benidormbeachfestival/",
@@ -7218,7 +7218,7 @@
       "description": "Four-day summer festival at the Gran Hotel Bali in Benidorm, with salsa, bachata and kizomba workshops and parties.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates, venue and styles from the official Worldtickets page (26-30 Aug 2027, Gran Hotel Bali; Bachata Kizomba Salsa). Cuban content not stated by the organizer; cubansalsafestivals.com mentions a Cuban thread in the salsa room in 2026.\n2026-10-18 instagram watch: added Alfredo & Andrea, Andrea & Silvia, Antoni & Belen, Dario & Sara, Maykel Fonts, Simon & Lolahontas, Tony Pirata from https://www.instagram.com/p/Dej67cqoqrF/\n2026-10-19 instagram watch: added Ataca & La Alemana, Carlito & Victoria, Edwin & Mariana, Frank Santos, Johnny Vazquez, José & Elena, Marco Ferrigno, Seo & Eneris, Valeria Bartolini, Willy & Noura from https://www.instagram.com/p/Dej67cqoqrF/",
+      "notes": "Added 2026-10-13 at the owner's request (add all festivals listed on cubansalsafestivals.com; the owner reviews Cuban content later). Dates, venue and styles from the official Worldtickets page (26-30 Aug 2027, Gran Hotel Bali; Bachata Kizomba Salsa). Cuban content not stated by the organizer; cubansalsafestivals.com mentions a Cuban thread in the salsa room in 2026.\n2026-10-18 instagram watch: added Alfredo & Andrea, Andrea & Silvia, Antoni & Belen, Dario & Sara, Maykel Fonts, Simon & Lolahontas, Tony Pirata from https://www.instagram.com/p/Dej67cqoqrF/\n2026-10-19 instagram watch: added Ataca & La Alemana, Carlito & Victoria, Edwin & Mariana, Frank Santos, Johnny Vazquez, José & Elena, Marco Ferrigno, Seo & Eneris, Valeria Bartolini, Willy & Noura from https://www.instagram.com/p/Dej67cqoqrF/\n2026-10-29: prices from the organizer's worldtickets.es page.",
       "styles": [
         "mixed"
       ],
@@ -7242,17 +7242,17 @@
         43.81006,
         15.629529
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
-      "ticketUrl": "https://tisnodancecity.com/tickets/?lang=en",
+      "priceText": "Early bird full pass €89 (10 passes only); other passes not priced yet",
+      "priceFrom": 89,
+      "currency": "EUR",
+      "ticketUrl": "https://elsoltisno.com/tickets/?lang=en",
       "website": "https://tisnodancecity.com/",
       "instagram": "https://www.instagram.com/elsoltisno/",
       "artists": [],
       "description": "Dance holiday on the Dalmatian coast in Tisno, Croatia: workshops by day and parties until dawn, with salsa, Cuban, bachata, kizomba and urban kiz.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; dates and styles from the organizer site tisnodancecity.com (15-20.09.2027; salsa, cuban, bachata, kizomba & urban kiz). Venue not stated by the organizer; coordinates are Jazine beach from the other site.",
+      "notes": "Added 2026-10-12: found missing in a comparison with cubansalsafestivals.com; dates and styles from the organizer site tisnodancecity.com (15-20.09.2027; salsa, cuban, bachata, kizomba & urban kiz). Venue not stated by the organizer; coordinates are Jazine beach from the other site.\n2026-10-29: prices from https://elsoltisno.com/tickets/?lang=en (tisnodancecity.com now redirects there).",
       "styles": [
         "casino",
         "mixed"
@@ -8786,9 +8786,9 @@
         46.863,
         20.19
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "All passes include hotel, breakfast and dinner: Light (Fri-Sun) 131,000 HUF, Full (Thu-Sun) 149,000 HUF, Hero (Wed-Sun) 172,000 HUF early bird until 31 Dec 2026",
+      "priceFrom": 131000,
+      "currency": "HUF",
       "ticketUrl": "https://forms.gle/zqhfP3oU2v9Rng3G9",
       "website": "https://www.singsalsafestival.hu/",
       "instagram": null,
@@ -8796,7 +8796,7 @@
       "description": "Cuban summer festival at a spa hotel in Cserkeszőlő, by Cuba?Sí! (Szeged) and Next Generation Salsa (Budapest): Cuban salsa workshops with live Afro-Cuban and Orishas classes, and parties every night.",
       "lastVerified": "2026-10-29",
       "featured": false,
-      "notes": "Added 2026-10-29 (found on SalsaVida, verified on https://www.singsalsafestival.hu/: 'Következő fesztiválunk 2027 július 21-25'). Venue paragraph still dated 2026 (same hotel assumed). Prices and line-up are images on the site, not added; DJ Csedi named as nightly DJ in undated text. Registration via the organizer's Google Form. Coordinates approximate.",
+      "notes": "Added 2026-10-29 (found on SalsaVida, verified on https://www.singsalsafestival.hu/: 'Következő fesztiválunk 2027 július 21-25'). Venue paragraph still dated 2026 (same hotel assumed). Prices and line-up are images on the site, not added; DJ Csedi named as nightly DJ in undated text. Registration via the organizer's Google Form. Coordinates approximate.\n2026-10-29: prices from the organizer's registration form 'SI!NG 2027 REGISZTRÁCIÓ' (forms.gle link).",
       "styles": [
         "casino",
         "afro-cuban"
@@ -9122,9 +9122,9 @@
         39.53,
         -119.815
       ],
-      "priceText": null,
-      "priceFrom": null,
-      "currency": null,
+      "priceText": "Full festival pass US$325 until 3 Dec, then $350 and $370; VIP from $435; all-evening pass $190; day passes $53-240 (plus tax and fees)",
+      "priceFrom": 53,
+      "currency": "USD",
       "ticketUrl": "https://www.eventbrite.com/e/2027-reno-latin-dance-fest-registration-1977769830804",
       "website": "https://renolatindancefest.com/",
       "instagram": "https://www.instagram.com/renolatindancefest/",
@@ -9133,7 +9133,7 @@
       "description": "19th Reno Latin Dance Fest at the Silver Legacy Resort: five days of workshops and parties in salsa, mambo, Cuban, bachata, cumbia and more.",
       "lastVerified": "2026-10-29",
       "featured": false,
-      "notes": "Added 2026-10-29 (found on SalsaVida, verified on the organizer's Eventbrite page (BB and Kiki): 7-11 Jan 2027, Silver Legacy Resort Casino). Eventbrite price range USD 32.49-453.17, pass names not visible, not added. Instructors page ('2027 instructors so far') shows names in images only, styles not stated: not added. Cuban content: 'Cuban' among the styles on Eventbrite. Coordinates approximate.",
+      "notes": "Added 2026-10-29 (found on SalsaVida, verified on the organizer's Eventbrite page (BB and Kiki): 7-11 Jan 2027, Silver Legacy Resort Casino). Eventbrite price range USD 32.49-453.17, pass names not visible, not added. Instructors page ('2027 instructors so far') shows names in images only, styles not stated: not added. Cuban content: 'Cuban' among the styles on Eventbrite. Coordinates approximate.\n2026-10-29: prices from https://renolatindancefest.com/all-pass-options (tiers after the $299 tier that ends 29 Oct).",
       "styles": [
         "mixed"
       ],
