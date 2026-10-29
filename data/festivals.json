@@ -1,5 +1,5 @@
 {
-  "version": "2026.10-171",
+  "version": "2026.10-175",
   "updated": "2026-10-29",
   "festivals": [
     {
@@ -8734,6 +8734,171 @@
         "afro-cuban"
       ],
       "cubanFocused": true
+    },
+    {
+      "id": "newcastle-salsa-congress-2027",
+      "series": "newcastle-salsa-congress",
+      "name": "Newcastle Salsa Congress",
+      "status": "scheduled",
+      "startDate": "2027-01-08",
+      "endDate": "2027-01-10",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Newcastle upon Tyne",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "region": "Europe",
+      "venue": "Holiday Inn Newcastle Gosforth Park, Great North Road, Seaton Burn",
+      "coordinates": [
+        55.064,
+        -1.629
+      ],
+      "priceText": "Gold pass £169 (£129 early bird); Friday party £35; Saturday night £29",
+      "priceFrom": 29,
+      "currency": "GBP",
+      "ticketUrl": "https://www.northernevents.app/newcastle-salsa-congress/tickets",
+      "website": "https://www.northernevents.app/newcastle-salsa-congress",
+      "instagram": null,
+      "artists": [
+        "Aaron Bradley-Bevan",
+        "Andreas Ru",
+        "Basil Pinnock & Heidi Turner",
+        "Ben Mills",
+        "DJ John Seddon",
+        "DJ Mark Hobbs",
+        "DJ Martinez",
+        "DJ Muzu",
+        "DJ Puma",
+        "DJ Rohan Brown",
+        "DJ Sally",
+        "DJ Xris",
+        "Esref Parranda Ulas",
+        "Mark Hobbs",
+        "Martin Martinez & Teddy Ivanova",
+        "Rasa Pauzaite",
+        "Rohan Brown",
+        "Sally Green",
+        "Xris Pentland"
+      ],
+      "description": "Weekend salsa congress at the Holiday Inn Gosforth Park near Newcastle: workshops, shows and parties in salsa, bachata and kizomba.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 (found on SalsaVida, verified on https://www.northernevents.app/newcastle-salsa-congress and its /tickets and /artists-2027 pages: 8-10 Jan 2027, Gold Pass pre-party Thu 7 Jan). Line-up = the salsa and unlabelled artists and DJs on 'Artists 2027' (kizomba artists such as DJ Jeydikson left out; page lists more). Cuban content thin: a CUBAtone class by Sarah Leigh; the dance-styles glossary mentions casino and rueda. Coordinates approximate.",
+      "styles": [
+        "mixed"
+      ],
+      "cubanFocused": false
+    },
+    {
+      "id": "afrekete-townsville-2027",
+      "series": "afrekete-townsville",
+      "name": "Afrekete",
+      "status": "scheduled",
+      "startDate": "2027-04-30",
+      "endDate": "2027-05-02",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Townsville",
+      "country": "Australia",
+      "countryCode": "AU",
+      "region": "Oceania",
+      "venue": "Various venues in Townsville and on Magnetic Island",
+      "coordinates": [
+        -19.259,
+        146.8169
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": null,
+      "website": "https://afrekete.com/",
+      "instagram": "https://www.instagram.com/afreketeaustralia/",
+      "facebook": "https://www.facebook.com/AfreketeAustralia",
+      "artists": [],
+      "description": "Afro-Cuban dance and drumming weekend in Townsville and on Magnetic Island: rumba, Orishas dances and percussion workshops, a 'Ready to Rumba' night and a Tropicana social.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 (found on SalsaVida, verified on https://afrekete.com/: homepage 30 Apr - 2 May 2027; the full-weekend product page says 1-2 May 2027, with a Thursday 'Ready to Rumba' night at $50 and a Saturday Tropicana Social at $45; weekend pass 'available soon'). Artist list on the site is undated (Adrian Hearn, Adrian Medina, Aloy Junco, El Moro, El Panga, Israel Ortiz, Mariesly Paradelo, Michel Concepción, Kekoson Cuban Sounds...), not added. No salsa/casino named: Afro-Cuban and rumba only. Coordinates: Townsville centre.",
+      "styles": [
+        "rumba",
+        "afro-cuban"
+      ],
+      "cubanFocused": true
+    },
+    {
+      "id": "riviera-latin-fest-mandelieu-2027",
+      "series": "riviera-latin-fest-mandelieu",
+      "name": "Riviera Latin Fest",
+      "status": "scheduled",
+      "startDate": "2027-07-12",
+      "endDate": "2027-07-19",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Mandelieu-la-Napoule",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "Europe",
+      "venue": "Centre Expo Congrès",
+      "coordinates": [
+        43.547,
+        6.948
+      ],
+      "priceText": "Premium full pass €285",
+      "priceFrom": 285,
+      "currency": "EUR",
+      "ticketUrl": "https://www.billetweb.fr/riviera-latin-fest-2027",
+      "website": "https://www.rivieralatinfest.com/",
+      "instagram": "https://www.instagram.com/riviera.latin.fest/",
+      "facebook": "https://www.facebook.com/riviera.latin.fest",
+      "artists": [],
+      "description": "Week-long Latin festival on the Côte d'Azur next to Cannes, by La Onda (Nice): salsa including Cuban and timba, bachata and more, with bootcamps, concerts and nightly parties.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 (found on SalsaVida, verified on the organizer's Billetweb page https://www.billetweb.fr/riviera-latin-fest-2027 (12-19 July 2027; site header says 12-18 juillet) and https://www.rivieralatinfest.com/). Line-up not added: the site still shows 2026 (Havana D'Primera concert, Cuban bootcamp with Harold, mambo bootcamp with Alicia Velasco). Cuban content: 'Cuban timba' and Cuban bootcamp. Coordinates approximate.",
+      "styles": [
+        "timba",
+        "casino",
+        "mixed"
+      ],
+      "cubanFocused": false
+    },
+    {
+      "id": "flama-salsa-festival-naantali-2027",
+      "series": "flama-salsa-festival-naantali",
+      "name": "Flama Salsa Festival",
+      "status": "scheduled",
+      "startDate": "2027-09-17",
+      "endDate": "2027-09-19",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Naantali",
+      "country": "Finland",
+      "countryCode": "FI",
+      "region": "Europe",
+      "venue": "Naantali Spa Hotel & Resort",
+      "coordinates": [
+        60.4625,
+        22.0125
+      ],
+      "priceText": "Full pass €199 early bird until 31 Dec 2026, €220 until 15 Jul 2027, then €240",
+      "priceFrom": 199,
+      "currency": "EUR",
+      "ticketUrl": "https://flama.fi/tuote/flama-salsa-festival-2027-full-pass/",
+      "website": "https://flamasalsafestival.fi/",
+      "instagram": "https://www.instagram.com/flamasalsafestival/",
+      "facebook": "https://www.facebook.com/tanssistudioflama",
+      "artists": [],
+      "description": "Salsa weekend at the Naantali Spa by Tanssistudio Flama of Turku: workshops in salsa, Cuban dances (rumba, timba, Afro) and bachata, with parties at the spa hotel.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 (found on SalsaVida, verified on https://flamasalsafestival.fi/ and https://flama.fi/workshopit/flama-salsa-festival-2027/: 17-19 Sep 2027 at Naantalin kylpylä). Prices from the flama.fi event page (super early bird €179 sold out). Line-up not added: 'first teachers announced soon'; teachers on the site are 2026 (Alain & Katerina, Yunaisy Farray, Alain Morales, José Mesa, Yasser Sarría). Coordinates approximate.",
+      "styles": [
+        "rumba",
+        "timba",
+        "afro-cuban",
+        "mixed"
+      ],
+      "cubanFocused": false
     }
   ]
 }
