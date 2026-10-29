@@ -2203,7 +2203,7 @@
       "priceText": "Full pass (workshops + parties) €170; hotel packages from €260 per person",
       "priceFrom": 170,
       "currency": "EUR",
-      "ticketUrl": "https://www.goandance.com/en/event/9646/a-toda-cuba-festival-2026",
+      "ticketUrl": "https://www.goandance.com/en/event/9646/a-toda-cuba-festival-2026?promoter=CUBANCALENDAR",
       "website": "https://www.atodacubafestival.it/",
       "instagram": "https://www.instagram.com/atodacuba/",
       "artists": [
@@ -2241,7 +2241,12 @@
       "description": "A Toda Cuba Festival in Calenzano, Italy.",
       "lastVerified": null,
       "featured": false,
-      "notes": "User to verify Instagram/website.\nWeb research on 2026-10-01: dates 2026-11-13 – 2026-11-15, website, instagram, ticketUrl, venue. Source: https://www.atodacubafestival.it/program-a.htm\n2026-10-10: facebook from the festival website (https://www.atodacubafestival.it/).\n2026-10-10: line-up (24) from the A Toda Cuba 2026 poster (sent by the owner); replaces 0 earlier names.\n2026-10-24 instagram watch: added Tullia D'Ascoli from https://www.instagram.com/p/De3jBoyiFVM/\n2026-10-27 instagram watch: added Lucia & Daniele, Daniele & Carlotta from https://www.instagram.com/p/De8zZElCA9u/ and https://www.instagram.com/p/De6OrUFiOx0/\n2026-10-29 instagram watch: added Veronica Campanella, Alessio Lanzano, La Mision Timbera from https://www.instagram.com/p/DfB9F6-iL9f/ , https://www.instagram.com/p/DfAN69KiHA2/ , https://www.instagram.com/p/De_YMCViHsK/\n2026-10-29: prices from the organizer's go&dance ticket page https://www.goandance.com/en/event/9646/a-toda-cuba-festival-2026 (same dates as ours).",
+      "discount": {
+        "code": "CUBANCALENDAR",
+        "amount": 10,
+        "currency": "EUR"
+      },
+      "notes": "User to verify Instagram/website.\nWeb research on 2026-10-01: dates 2026-11-13 – 2026-11-15, website, instagram, ticketUrl, venue. Source: https://www.atodacubafestival.it/program-a.htm\n2026-10-10: facebook from the festival website (https://www.atodacubafestival.it/).\n2026-10-10: line-up (24) from the A Toda Cuba 2026 poster (sent by the owner); replaces 0 earlier names.\n2026-10-24 instagram watch: added Tullia D'Ascoli from https://www.instagram.com/p/De3jBoyiFVM/\n2026-10-27 instagram watch: added Lucia & Daniele, Daniele & Carlotta from https://www.instagram.com/p/De8zZElCA9u/ and https://www.instagram.com/p/De6OrUFiOx0/\n2026-10-29 instagram watch: added Veronica Campanella, Alessio Lanzano, La Mision Timbera from https://www.instagram.com/p/DfB9F6-iL9f/ , https://www.instagram.com/p/DfAN69KiHA2/ , https://www.instagram.com/p/De_YMCViHsK/\n2026-10-29: prices from the organizer's go&dance ticket page https://www.goandance.com/en/event/9646/a-toda-cuba-festival-2026 (same dates as ours).\n2026-10-29: €10 discount from the organizer: promoter link ?promoter=CUBANCALENDAR (sent by the owner), now the ticketUrl. Checked on go&dance: every pass €10 less (full pass €370 -> €360); ?discount=CUBANCALENDAR gives the same and does not stack.",
       "cubanFocused": true,
       "facebook": "https://www.facebook.com/atodacubafestival/"
     },
