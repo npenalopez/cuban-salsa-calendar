@@ -1,5 +1,5 @@
 {
-  "version": "2026.10-145",
+  "version": "2026.10-152",
   "updated": "2026-10-29",
   "festivals": [
     {
@@ -7559,6 +7559,274 @@
         "rumba",
         "afro-cuban",
         "timba"
+      ],
+      "cubanFocused": true
+    },
+    {
+      "id": "musicality-dance-festival-freiburg-2027",
+      "series": "musicality-dance-festival-freiburg",
+      "name": "Salsa & Bachata Musicality Dance Festival",
+      "status": "scheduled",
+      "startDate": "2027-02-12",
+      "endDate": "2027-02-14",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Freiburg im Breisgau",
+      "country": "Germany",
+      "countryCode": "DE",
+      "region": "Europe",
+      "venue": "Kaiser-Joseph-Str. 268",
+      "coordinates": [
+        47.991997,
+        7.8482976
+      ],
+      "priceText": "Full pass €190; Friday pass €70, Saturday pass €120",
+      "priceFrom": 70,
+      "currency": "EUR",
+      "ticketUrl": "https://www.goandance.com/es/evento/10132/salsa-bachata-musicality-dance-festival",
+      "website": "https://aya-dance.de/events",
+      "instagram": "https://www.instagram.com/aya_latin_dance_academy/",
+      "facebook": "https://www.facebook.com/ayalatindanceacademy",
+      "artists": [
+        "Alex Toledo",
+        "Anichi Pérez",
+        "Victor Ortega",
+        "Anne Böhm",
+        "Pablo & Luisa",
+        "Ranses",
+        "Anita Kosravi"
+      ],
+      "description": "Salsa and bachata festival in Freiburg by AYA Latin Dance Academy, built around musicality: classes with live music, a percussion bootcamp, socials and shows.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 from an Instagram video sent by the owner. Dates, address, line-up and prices from https://aya-dance.de/events and the go&dance page https://www.goandance.com/es/evento/10132/salsa-bachata-musicality-dance-festival (Fri 17:00 – Sun 22:00). go&dance spells 'Anichi Bauer', 'Pablo Bauer' and omits Anita Kosravi; organizer site spelling used. Venue name not given for this edition (same address is M.A.K. Studios on other AYA events). Salsa style not stated; same organizer's dance week teaches Cuban styles (son, rumba) plus Mambo on 2. go&dance range €15-190 includes hidden options.",
+      "styles": [
+        "casino",
+        "son",
+        "rumba",
+        "mixed"
+      ],
+      "cubanFocused": false
+    },
+    {
+      "id": "salsa-spring-festival-loutraki-2027",
+      "series": "salsa-spring-festival-loutraki",
+      "name": "Salsa Spring Festival",
+      "status": "scheduled",
+      "startDate": "2027-05-20",
+      "endDate": "2027-05-23",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Loutraki",
+      "country": "Greece",
+      "countryCode": "GR",
+      "region": "Europe",
+      "venue": "Club Hotel Casino Loutraki",
+      "coordinates": [
+        37.96097,
+        22.96954
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": null,
+      "website": "https://salsaspring.gr",
+      "instagram": null,
+      "facebook": "https://www.facebook.com/salsa.spring.festival",
+      "artists": [],
+      "description": "Long-running salsa festival at the Club Hotel Casino Loutraki, on the coast near Corinth: workshops and parties with salsa, bachata, pachanga and kizomba, with hotel packages.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 from a flyer sent by the owner ('20 - 23 May, Greece 2027'). Venue and dates from https://salsaspring.gr (header '20–23 May · Club Hotel Casino Loutraki', no year; uses #SalsaSpring2027; 16th edition). Line-up not added: the site's artist list is still titled 2026. Prices (full pass €110, hotel packages from €85 pp) not added, may be 2026 prices. Mainly linear salsa (Fernando Sosa, Marco Ferrigno), some Cuban content (Alex Toledo).\n2026-10-29 link check: @salsa.spring.festival (linked on salsaspring.gr) does not exist and eventum.gr/salsa-spring says 'Sales ended' (2026 edition); both removed. SalsaVida gives @salsa.spring.festival_greece, unverified.",
+      "styles": [
+        "mixed"
+      ],
+      "cubanFocused": false
+    },
+    {
+      "id": "rumbachata-canarias-2027",
+      "series": "rumbachata-canarias",
+      "name": "Rumbachata Canarias",
+      "status": "scheduled",
+      "startDate": "2027-09-17",
+      "endDate": "2027-09-19",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Las Palmas de Gran Canaria",
+      "country": "Spain",
+      "countryCode": "ES",
+      "region": "Europe",
+      "venue": null,
+      "coordinates": [
+        28.1235,
+        -15.4363
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": null,
+      "website": null,
+      "instagram": "https://www.instagram.com/rumbachata.canarias/",
+      "artists": [],
+      "description": "International salsa and bachata festival in Las Palmas de Gran Canaria: workshops, shows and social dancing in two rooms.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29: dates from the organizer's Instagram bio (screenshot sent by the owner: '17-18-19 de septiembre 2027'). Venue, tickets, prices and line-up for 2027 not published yet; 2026 was at Hotel Cristina by Tigotan (go&dance event 9114). Coordinates: city centre.",
+      "styles": [
+        "mixed"
+      ],
+      "cubanFocused": false
+    },
+    {
+      "id": "guatemala-salsa-congress-2026",
+      "series": "guatemala-salsa-congress",
+      "name": "Guatemala Salsa Congress",
+      "status": "scheduled",
+      "startDate": "2026-11-04",
+      "endDate": "2026-11-08",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Guatemala City",
+      "country": "Guatemala",
+      "countryCode": "GT",
+      "region": "North America",
+      "venue": "Ciudad Cayalá",
+      "coordinates": [
+        14.611,
+        -90.487
+      ],
+      "priceText": "Full pass Q1,365; social pass Q700; day passes from Q600",
+      "priceFrom": 600,
+      "currency": "GTQ",
+      "ticketUrl": "https://salsatickets.com/evento/guatemala-salsa-congress-2026",
+      "website": "https://guatesalsa.com/",
+      "instagram": "https://www.instagram.com/guatesalsa/",
+      "artists": [
+        "Yasbek Cervantes",
+        "Kristell Vásquez",
+        "Billy Fajardo"
+      ],
+      "description": "Salsa congress in Ciudad Cayalá, Guatemala City, themed 'Alquimia' this year: five days of workshops, bootcamps, competitions, shows and socials.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 from a flyer sent by the owner. Dates, passes, bootcamps and links from https://guatesalsa.com (GTSC26 'ALQUIMIA', 4-8 Nov 2026, Wednesday 'Alquimia Night'). Exact venue not given (Ciudad Cayalá; official hotel AC Marriott Cayalá). Line-up = the three bootcamp teachers named on the site. No Cuban content evident; linear congress format.\n2026-10-29 link check: salsatickets.com page renders by script (checker can't read it); it is the ticket link given on guatesalsa.com.",
+      "styles": [
+        "mixed"
+      ],
+      "cubanFocused": false
+    },
+    {
+      "id": "cubanissimo-rennes-2026",
+      "series": "cubanissimo-rennes",
+      "name": "Week-end Cubanissimo & Más",
+      "status": "scheduled",
+      "startDate": "2026-11-13",
+      "endDate": "2026-11-15",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Rennes",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "Europe",
+      "venue": null,
+      "coordinates": [
+        48.1173,
+        -1.6778
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://www.helloasso.com/associations/cubanizate/evenements/weekend-cubanissimo-y-mas-13-14-15-nov-2026",
+      "website": null,
+      "instagram": "https://www.instagram.com/cubanizate_rennes/",
+      "artists": [
+        "Yuniel Gual",
+        "Rubén & Marina"
+      ],
+      "description": "Cuban dance weekend in Rennes by the Cubanizate association, with the City of Rennes: workshops, parties and surprises.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 from the organizer's Instagram post (screenshot sent by the owner): 'Week-end Cubanissimo & Más', 13, 14 et 15 Nov 2026, stages, soirées. Flyer tags artists by first name only (@Lenuam, @Ruben @Marina, @Anne, @Jo, @Yuniel, @Kevin, @Estelle, @Anita). Added only Yuniel Gual and Rubén & Marina (their own accounts yunielgualofficial and rubenymarina_ comment on the post). SalsaVida (aggregator, not used) lists Estelle Ramos & Kevin Cocoloco, Anne Snc & Djozul, Vane No Mah, Ana Maria Macho, DJ Estefi, Flo Sensacion, Deejay My.Co, venue CPB Ginguené: confirm from the organizer before adding. Coordinates: city centre.",
+      "styles": [
+        "casino",
+        "timba"
+      ],
+      "cubanFocused": true
+    },
+    {
+      "id": "de-cuba-para-el-mundo-orosei-2027",
+      "series": "de-cuba-para-el-mundo",
+      "name": "De Cuba para el Mundo",
+      "status": "scheduled",
+      "startDate": "2027-04-23",
+      "endDate": "2027-04-25",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Orosei",
+      "country": "Italy",
+      "countryCode": "IT",
+      "region": "Europe",
+      "venue": "Hotel Resort Marina Beach, Via del Mare",
+      "coordinates": [
+        40.379,
+        9.717
+      ],
+      "priceText": "3-day full-board hotel packages from €225 to €425 per person",
+      "priceFrom": 225,
+      "currency": "EUR",
+      "ticketUrl": "https://www.decubaparaelmundo.com/tickets-2/",
+      "website": "https://www.decubaparaelmundo.com/",
+      "instagram": "https://www.instagram.com/decubasardegna/",
+      "facebook": "https://www.facebook.com/profile.php?id=100043399673785",
+      "artists": [
+        "Yuniel Gual",
+        "Son de Akokan"
+      ],
+      "description": "20th edition of the Sardinian Latin festival, held as an all-inclusive weekend at a seaside resort in Orosei: salsa, bachata and kizomba workshops, socials until late, pool parties and Cuban live music.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 from the organizer's Instagram post (screenshot sent by the owner): 20th edition, 23-25 April 2027, Club Hotel Marina Beach, Orosei; line-up 'Yuniel Gual Sondeakokan'. Dates and venue confirmed on https://www.decubaparaelmundo.com/; prices from /tickets-2/ (image files named Pass-2027). Son de Akokan = Yuniel Gual's band ('Yuniel Cual y Su Grupo Son De Akokan' on the site). The site's longer line-up may be from earlier editions, not added. Coordinates approximate (Marina di Orosei).",
+      "styles": [
+        "casino",
+        "mixed"
+      ],
+      "cubanFocused": false
+    },
+    {
+      "id": "vamos-cuba-festival-toulouse-2027",
+      "series": "vamos-cuba-festival-toulouse",
+      "name": "Vamos Cuba Festival",
+      "status": "scheduled",
+      "startDate": "2027-02-05",
+      "endDate": "2027-02-07",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Toulouse",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "Europe",
+      "venue": null,
+      "coordinates": [
+        43.6047,
+        1.4442
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": null,
+      "website": null,
+      "instagram": "https://www.instagram.com/vamoscubafestival/",
+      "artists": [],
+      "description": "First edition of a Cuban dance festival in Toulouse: more than 20 hours of workshops in salsa, rumba, Afro-Cuban, son and reparto, international artists, live musicians and two parties.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 from the festival flyer sent by the owner ('1ère édition', 5, 6, 7 février 2027, Toulouse; salsa, rumba, afro, son, reparto; artistes internationaux, +20h de workshops, musiciens live, 2 soirées). Organizer account @vamoscubafestival. No website, venue, tickets or named line-up found yet. Coordinates: city centre.",
+      "styles": [
+        "casino",
+        "son",
+        "rumba",
+        "afro-cuban",
+        "reggaeton"
       ],
       "cubanFocused": true
     }
