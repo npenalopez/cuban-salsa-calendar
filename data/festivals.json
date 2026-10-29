@@ -1,6 +1,6 @@
 {
-  "version": "2026.10-144",
-  "updated": "2026-10-23",
+  "version": "2026.10-145",
+  "updated": "2026-10-29",
   "festivals": [
     {
       "id": "salsa-stras-festival-strasbourg-2026",
@@ -7514,6 +7514,52 @@
       "lastVerified": null,
       "featured": false,
       "notes": "Added 2026-10-10: damecuba.com/festivals announces DameCuba Festival Frankfurt am Main 10.09.2027–12.09.2027 ('Save the Date'). Venue assumed the same as 2026; check.\n2026-10-10: public description rewritten. Was: None",
+      "cubanFocused": true
+    },
+    {
+      "id": "kreol-afrocuban-festival-reunion-2026",
+      "series": "kreol-afrocuban-festival-reunion",
+      "name": "KAF Kreol Afrocuban Festival",
+      "status": "scheduled",
+      "startDate": "2026-11-13",
+      "endDate": "2026-11-15",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Saint-Gilles-les-Bains",
+      "country": "Réunion",
+      "countryCode": "RE",
+      "region": "Africa",
+      "venue": "Stand Up Fitness & Victoria Green, 77 Av. de Bourbon",
+      "coordinates": [
+        -21.0545,
+        55.2265
+      ],
+      "priceText": "Full pass €140 (€130 until 1 Nov), duo €250; day pass €80; party passes from €12",
+      "priceFrom": 12,
+      "currency": "EUR",
+      "ticketUrl": "https://www.helloasso.com/associations/sa-mem-cuba/evenements/kaf-2-kreol-afrocuban-festival-cours-soirees-conference-salsa-cubaine",
+      "website": "https://lekaf.re/",
+      "instagram": "https://www.instagram.com/lekaf.re/",
+      "facebook": "https://www.facebook.com/samemcuba",
+      "artists": [
+        "Melissa Jova",
+        "Julio Nápoles",
+        "Julie Timbera",
+        "Alix & Nelcy",
+        "DJ Jack El Calvo",
+        "Tumbao"
+      ],
+      "description": "Cuban and Afro-Cuban dance festival on Réunion island, run by the Sa Mèm Cuba association: three days of classes for all levels with live music (casino, son, rumba, Orishas, despelote, chachacha, reparto), a music talk and 100% Cuban salsa parties.",
+      "lastVerified": "2026-10-29",
+      "featured": false,
+      "notes": "Added 2026-10-29 (owner tip: 'KAF in La Réunion'). 2nd edition, first ran 8-9 Nov 2025. Dates, venues, address, line-up and prices from https://lekaf.re/ and @lekaf.re on Instagram (organizer @samemcuba). Site says Saint-Gilles-les-Bains, address line says Saint-Paul 97434 (Saint-Gilles is part of Saint-Paul). Coordinates approximate (Saint-Gilles centre). Programme also lists a maloya class by Nifaah (not on the artists list, not added). Tumbao = local Cuban traditional band, live in classes and at the concert. Alix & Nelcy are the Sa Mèm Cuba founders; surnames not given.",
+      "styles": [
+        "casino",
+        "son",
+        "rumba",
+        "afro-cuban",
+        "timba"
+      ],
       "cubanFocused": true
     }
   ]
