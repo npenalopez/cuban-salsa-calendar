@@ -2215,6 +2215,7 @@
         "Clayton TheReal",
         "Daniele & Carlotta",
         "Edwar Ramos",
+        "Ego Latino",
         "Foutanke",
         "Giorgia Bruschi",
         "Giuseppe & Jaqueline",
@@ -2257,7 +2258,7 @@
         "amount": 10,
         "currency": "EUR"
       },
-      "notes": "User to verify Instagram/website.\nWeb research on 2026-10-01: dates 2026-11-13 – 2026-11-15, website, instagram, ticketUrl, venue. Source: https://www.atodacubafestival.it/program-a.htm\n2026-10-10: facebook from the festival website (https://www.atodacubafestival.it/).\n2026-10-10: line-up (24) from the A Toda Cuba 2026 poster (sent by the owner); replaces 0 earlier names.\n2026-10-24 instagram watch: added Tullia D'Ascoli from https://www.instagram.com/p/De3jBoyiFVM/\n2026-10-27 instagram watch: added Lucia & Daniele, Daniele & Carlotta from https://www.instagram.com/p/De8zZElCA9u/ and https://www.instagram.com/p/De6OrUFiOx0/\n2026-10-29 instagram watch: added Veronica Campanella, Alessio Lanzano, La Mision Timbera from https://www.instagram.com/p/DfB9F6-iL9f/ , https://www.instagram.com/p/DfAN69KiHA2/ , https://www.instagram.com/p/De_YMCViHsK/\n2026-10-29: prices from the organizer's go&dance ticket page https://www.goandance.com/en/event/9646/a-toda-cuba-festival-2026 (same dates as ours).\n2026-10-29: €10 discount from the organizer: promoter link ?promoter=CUBANCALENDAR (sent by the owner), now the ticketUrl. Checked on go&dance: every pass €10 less (full pass €370 -> €360); ?discount=CUBANCALENDAR gives the same and does not stack.\n2026-10-30 instagram watch: added Andrea & Matteo, Graziano & Laura Aguanilebbe, Leysis Smith, Clayton TheReal, Giorgia Bruschi, Samir Diaz, Lady Cun Faya, Martina Shiva, Mary Tallei, Niccolò Petrucci, Luca Cilluffo from https://www.instagram.com/p/DfEh2kUiHhA/, https://www.instagram.com/p/DfE3l76o9yM/",
+      "notes": "User to verify Instagram/website.\nWeb research on 2026-10-01: dates 2026-11-13 – 2026-11-15, website, instagram, ticketUrl, venue. Source: https://www.atodacubafestival.it/program-a.htm\n2026-10-10: facebook from the festival website (https://www.atodacubafestival.it/).\n2026-10-10: line-up (24) from the A Toda Cuba 2026 poster (sent by the owner); replaces 0 earlier names.\n2026-10-24 instagram watch: added Tullia D'Ascoli from https://www.instagram.com/p/De3jBoyiFVM/\n2026-10-27 instagram watch: added Lucia & Daniele, Daniele & Carlotta from https://www.instagram.com/p/De8zZElCA9u/ and https://www.instagram.com/p/De6OrUFiOx0/\n2026-10-29 instagram watch: added Veronica Campanella, Alessio Lanzano, La Mision Timbera from https://www.instagram.com/p/DfB9F6-iL9f/ , https://www.instagram.com/p/DfAN69KiHA2/ , https://www.instagram.com/p/De_YMCViHsK/\n2026-10-29: prices from the organizer's go&dance ticket page https://www.goandance.com/en/event/9646/a-toda-cuba-festival-2026 (same dates as ours).\n2026-10-29: €10 discount from the organizer: promoter link ?promoter=CUBANCALENDAR (sent by the owner), now the ticketUrl. Checked on go&dance: every pass €10 less (full pass €370 -> €360); ?discount=CUBANCALENDAR gives the same and does not stack.\n2026-10-30 instagram watch: added Andrea & Matteo, Graziano & Laura Aguanilebbe, Leysis Smith, Clayton TheReal, Giorgia Bruschi, Samir Diaz, Lady Cun Faya, Martina Shiva, Mary Tallei, Niccolò Petrucci, Luca Cilluffo from https://www.instagram.com/p/DfEh2kUiHhA/, https://www.instagram.com/p/DfE3l76o9yM/\n2026-11-01 instagram watch: added Ego Latino from https://www.instagram.com/p/DfHGlfgiG8F/",
       "cubanFocused": true,
       "facebook": "https://www.facebook.com/atodacubafestival/"
     },
@@ -6904,11 +6905,13 @@
       "ticketUrl": null,
       "website": null,
       "instagram": "https://www.instagram.com/guapeafest/",
-      "artists": [],
+      "artists": [
+        "Mel Calvet"
+      ],
       "description": "Beach dance festival at a hotel in Mazatlán on the Mexican Pacific coast, organized by a casino dance school.",
       "lastVerified": null,
       "featured": false,
-      "notes": "Added 2026-11-01 by the daily sync: organizer site unreachable; all facts came only from cubansalsafestivals.com. Other facts: https://cubansalsafestivals.com/festivals/guapeafest-2027/.",
+      "notes": "Added 2026-11-01 by the daily sync: organizer site unreachable; all facts came only from cubansalsafestivals.com. Other facts: https://cubansalsafestivals.com/festivals/guapeafest-2027/.\n2026-11-01 instagram watch: added Mel Calvet from https://www.instagram.com/p/DfIgL95vQfD/",
       "cubanFocused": false,
       "styles": [
         "mixed"
