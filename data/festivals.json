@@ -1,6 +1,6 @@
 {
-  "version": "2026.10-180",
-  "updated": "2026-10-29",
+  "version": "2026.11-193",
+  "updated": "2026-11-01",
   "festivals": [
     {
       "id": "salsa-stras-festival-strasbourg-2026",
@@ -3853,6 +3853,40 @@
       "cubanFocused": false
     },
     {
+      "id": "festival-ballagan-eilat-2027",
+      "series": "festival-ballagan-eilat",
+      "name": "Festival Ballagan",
+      "status": "scheduled",
+      "startDate": "2027-02-11",
+      "endDate": "2027-02-13",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Eilat",
+      "country": "Israel",
+      "countryCode": "IL",
+      "region": "Asia",
+      "venue": "Royal Resort Eilat",
+      "coordinates": [
+        29.555286,
+        34.960468
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://ballaganeilat.co.il/registration.html",
+      "website": "https://ballaganeilat.co.il/",
+      "instagram": "https://www.instagram.com/ballagan_festival/",
+      "artists": [],
+      "description": "An all-inclusive hotel festival in Eilat on the Red Sea with workshops and parties in several Latin styles.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-11-01 by the daily sync: registration page https://ballaganeilat.co.il/registration.html loaded but shows no 2027 dates, so dates, venue, city came only from cubansalsafestivals.com. Other facts: https://cubansalsafestivals.com/festivals/ballagan-2027/.",
+      "cubanFocused": false,
+      "styles": [
+        "mixed"
+      ]
+    },
+    {
       "id": "unidanza-hamburg-2027",
       "series": "unidanza-hamburg",
       "name": "UNiDANZA Afro-Cuban Dance Festival",
@@ -5314,6 +5348,40 @@
       "lastVerified": null,
       "featured": false,
       "notes": "User to verify Instagram/website.\n2026-10-10: line-up checked against https://bachataandcubanweekend.com/: unchanged.\n2026-10-10: instagram @bachataandcubanweekend (owner; profile checked).\n2026-10-29: prices from https://bachataandcubanweekend.com/ ('Bachata & Cuban Weekend 2027, 2-4 April 2027'; day/party prices marked as last edition's, not used).",
+      "styles": [
+        "mixed"
+      ]
+    },
+    {
+      "id": "moscow-cuban-festival-2027",
+      "series": "moscow-cuban-festival",
+      "name": "Moscow Salsa Festival",
+      "status": "scheduled",
+      "startDate": "2027-04-02",
+      "endDate": "2027-04-04",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Moscow",
+      "country": "Russia",
+      "countryCode": "RU",
+      "region": "Europe",
+      "venue": "Bossa Nova Club",
+      "coordinates": [
+        55.731152,
+        37.62854
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://salsafest.ru/",
+      "website": "https://salsafest.ru/",
+      "instagram": "https://www.instagram.com/moscowsalsafestival/",
+      "artists": [],
+      "description": "Three-day salsa and bachata festival in Moscow with workshops, show programme and evening parties.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-11-01 by the daily sync: organizer site https://salsafest.ru/ loaded but shows the 2026 edition, so 2027 dates, city, venue came only from cubansalsafestivals.com. Other facts: https://cubansalsafestivals.com/festivals/moscowsalsafestival-2027/.",
+      "cubanFocused": false,
       "styles": [
         "mixed"
       ]
@@ -6813,6 +6881,40 @@
       ]
     },
     {
+      "id": "guapea-fest-mazatlan-2027",
+      "series": "guapea-fest-mazatlan",
+      "name": "Guapea Fest",
+      "status": "scheduled",
+      "startDate": "2027-06-17",
+      "endDate": "2027-06-20",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Mazatlán",
+      "country": "Mexico",
+      "countryCode": "MX",
+      "region": "North America",
+      "venue": "Luna Palace Hotel",
+      "coordinates": [
+        23.2626,
+        -106.465722
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": null,
+      "website": null,
+      "instagram": "https://www.instagram.com/guapeafest/",
+      "artists": [],
+      "description": "Beach dance festival at a hotel in Mazatlán on the Mexican Pacific coast, organized by a casino dance school.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-11-01 by the daily sync: organizer site unreachable; all facts came only from cubansalsafestivals.com. Other facts: https://cubansalsafestivals.com/festivals/guapeafest-2027/.",
+      "cubanFocused": false,
+      "styles": [
+        "mixed"
+      ]
+    },
+    {
       "id": "baila-new-york-2027",
       "series": "baila-new-york",
       "name": "Baila New York Dance Festival",
@@ -7171,6 +7273,76 @@
       ],
       "cubanFocused": false,
       "facebook": "https://www.facebook.com/miamisalsacongress"
+    },
+    {
+      "id": "cuban-camp-denmark-praesto-2027",
+      "series": "cuban-camp-denmark-praesto",
+      "name": "Cuban Camp Denmark",
+      "status": "scheduled",
+      "startDate": "2027-07-25",
+      "endDate": "2027-07-31",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Præstø",
+      "country": "Denmark",
+      "countryCode": "DK",
+      "region": "Europe",
+      "venue": "Idrætshøjskolen Bosei",
+      "coordinates": [
+        55.1321,
+        12.008726
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://www.cubancamp.dk/pricesandbooking",
+      "website": "https://www.cubancamp.dk/",
+      "instagram": "https://www.instagram.com/cubancamp.dk/",
+      "artists": [],
+      "description": "Residential week of Cuban dance camps at a Danish folk high school, with Cuban salsa and Afro-Cuban dance and rumba.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-11-01 by the daily sync: organizer site https://www.cubancamp.dk/ loaded but still shows July 2026, so 2027 dates and venue came only from cubansalsafestivals.com. Other facts: https://cubansalsafestivals.com/festivals/cubancamp-dk-2027/.",
+      "cubanFocused": true,
+      "styles": [
+        "casino",
+        "rumba",
+        "afro-cuban"
+      ]
+    },
+    {
+      "id": "istanbul-world-dance-congress-summer-2027",
+      "series": "istanbul-world-dance-congress-summer",
+      "name": "Istanbul World Dance Congress Summer Edition",
+      "status": "scheduled",
+      "startDate": "2027-08-18",
+      "endDate": "2027-08-24",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Istanbul",
+      "country": "Turkey",
+      "countryCode": "TR",
+      "region": "Europe",
+      "venue": "The Green Park Hotels & Resorts Pendik",
+      "coordinates": [
+        41.006381,
+        28.975872
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://summer.istanbulworlddancecongress.com/tickets",
+      "website": "https://summer.istanbulworlddancecongress.com/",
+      "instagram": "https://www.instagram.com/worlddancecongress_summer/",
+      "artists": [],
+      "description": "Week-long summer dance congress at a resort hotel in Istanbul with workshops, pool parties and competitions.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-11-01 by the daily sync: organizer site https://summer.istanbulworlddancecongress.com/ confirms 18-24 August 2027; venue and city from cubansalsafestivals.com. Other facts: https://cubansalsafestivals.com/festivals/istanbulworlddancecongress-summer-2027/.",
+      "cubanFocused": false,
+      "styles": [
+        "mixed"
+      ]
     },
     {
       "id": "berlin-salsa-congress-2027",
@@ -8024,6 +8196,243 @@
       "styles": [
         "casino"
       ],
+      "cubanFocused": true
+    },
+    {
+      "id": "last-summer-dance-festival-sagone-2027",
+      "series": "last-summer-dance-festival-sagone",
+      "name": "Last Summer Dance Festival",
+      "status": "scheduled",
+      "startDate": "2027-09-24",
+      "endDate": "2027-09-26",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Sagone",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "Europe",
+      "venue": "Camping Le Sagone",
+      "coordinates": [
+        42.115915,
+        8.689699
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": null,
+      "website": null,
+      "instagram": "https://www.instagram.com/lastsummerdancefestival/",
+      "artists": [],
+      "description": "Weekend dance festival at a campsite on the Corsican coast in Sagone.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-11-01 by the daily sync: organizer site unreachable; all facts came only from cubansalsafestivals.com. Other facts: https://cubansalsafestivals.com/festivals/lastsummerdancefestival-2027/.",
+      "cubanFocused": false,
+      "styles": [
+        "mixed"
+      ]
+    },
+    {
+      "id": "canada-salsa-and-bachata-congress-toronto-2027",
+      "series": "canada-salsa-and-bachata-congress-toronto",
+      "name": "Canada Salsa and Bachata Congress",
+      "status": "scheduled",
+      "startDate": "2027-10-06",
+      "endDate": "2027-10-11",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Toronto",
+      "country": "Canada",
+      "countryCode": "CA",
+      "region": "North America",
+      "venue": "Fairmont Royal York Hotel",
+      "coordinates": [
+        43.645909,
+        -79.381364
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://www.showclix.com/tickets/csbc27",
+      "website": "https://www.canadasalsacongress.com/",
+      "instagram": "https://www.instagram.com/canadasalsaandbachatacongress/",
+      "artists": [],
+      "description": "Large salsa and bachata congress held in a downtown Toronto hotel, with workshops, parties and competitions.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-11-01 by the daily sync: organizer site https://www.canadasalsacongress.com/ still shows the 2026 edition, so 2027 dates and venue came only from cubansalsafestivals.com. Other facts: https://cubansalsafestivals.com/festivals/canadasalsaandbachatacongress-2027/.",
+      "cubanFocused": false,
+      "styles": [
+        "mixed"
+      ]
+    },
+    {
+      "id": "crazy-4-la-timba-lisbon-2027",
+      "series": "crazy-4-la-timba-lisbon",
+      "name": "Crazy 4 La Timba",
+      "status": "scheduled",
+      "startDate": "2027-10-14",
+      "endDate": "2027-10-17",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Lisbon",
+      "country": "Portugal",
+      "countryCode": "PT",
+      "region": "Europe",
+      "venue": "Lisbon",
+      "coordinates": [
+        38.707751,
+        -9.136592
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": null,
+      "website": "https://crazy4latimba.com/",
+      "instagram": "https://www.instagram.com/crazy4latimba/",
+      "artists": [],
+      "description": "Four-day Cuban dance festival in central Lisbon with timba and rumba workshops, live percussion and evening parties.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-11-01 by the daily sync: organizer site https://crazy4latimba.com/ describes itself as a Cuban dance festival but still shows the 2026 edition, so 2027 dates came only from cubansalsafestivals.com. Other facts: https://cubansalsafestivals.com/festivals/crazy4latimba-2027/. Ticket link https://crazy4latimba.com/tickets/ reported \"no longer available\" by link check, set to null.",
+      "cubanFocused": true,
+      "styles": [
+        "timba",
+        "rumba"
+      ]
+    },
+    {
+      "id": "champagne-dance-festival-reims-2027",
+      "series": "champagne-dance-festival-reims",
+      "name": "Champagne Dance Festival",
+      "status": "scheduled",
+      "startDate": "2027-10-15",
+      "endDate": "2027-10-18",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Reims",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "Europe",
+      "venue": "Champagne Dance",
+      "coordinates": [
+        49.217633,
+        4.023415
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://my.weezevent.com/champagne-dance-festival-2027",
+      "website": null,
+      "instagram": "https://www.instagram.com/champagne_dance_festival/",
+      "artists": [],
+      "description": "Four-night dance festival in Reims, France.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-11-01 by the daily sync: ticket page https://my.weezevent.com/champagne-dance-festival-2027 confirms 15-18 October 2027; venue and city from cubansalsafestivals.com. Other facts: https://cubansalsafestivals.com/festivals/champagnedancefestival-2027/.",
+      "cubanFocused": false,
+      "styles": [
+        "mixed"
+      ]
+    },
+    {
+      "id": "festival-de-cuba-stuttgart-2027",
+      "series": "festival-de-cuba-stuttgart",
+      "name": "Festival de Cuba Stuttgart",
+      "status": "scheduled",
+      "startDate": "2027-10-22",
+      "endDate": "2027-10-25",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Stuttgart",
+      "country": "Germany",
+      "countryCode": "DE",
+      "region": "Europe",
+      "venue": "Sängerhalle",
+      "coordinates": [
+        48.776733,
+        9.24988
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://shop.ticketpay.de/N5F337SX",
+      "website": "https://cubafestival-stuttgart.de/",
+      "instagram": "https://www.instagram.com/festivaldecuba/",
+      "artists": [],
+      "description": "Annual Cuban dance festival in Stuttgart with workshops, concerts and parties.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-11-01 by the daily sync: organizer site https://cubafestival-stuttgart.de/ says 22-25 October 2027 (cubansalsafestivals.com says 21-25, organizer value used); venue from cubansalsafestivals.com. Other facts: https://cubansalsafestivals.com/festivals/festivaldecuba-2027/.",
+      "cubanFocused": true,
+      "styles": [
+        "casino",
+        "rueda"
+      ]
+    },
+    {
+      "id": "son-na-ma-platja-d-aro-2027",
+      "series": "son-na-ma-platja-d-aro",
+      "name": "Son Na' Ma",
+      "status": "scheduled",
+      "startDate": "2027-10-22",
+      "endDate": "2027-10-24",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Platja d'Aro i S'Agaró",
+      "country": "Spain",
+      "countryCode": "ES",
+      "region": "Europe",
+      "venue": "Hotel Nautic Park",
+      "coordinates": [
+        41.805169,
+        3.053859
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://www.goandance.com/en/event/10204/son-na-ma-festival-6th-edition-2027",
+      "website": "https://www.goandance.com/en/event/10204/son-na-ma-festival-6th-edition-2027",
+      "instagram": "https://www.instagram.com/son_na_ma_festival_de_son/",
+      "artists": [],
+      "description": "Son cubano festival on the Costa Brava with workshops, live music and parties.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-11-01 by the daily sync: organizer ticket page on goandance confirms 22-24 October 2027 and Platja d'Aro; venue from cubansalsafestivals.com. Other facts: https://cubansalsafestivals.com/festivals/son-na-ma-festival-de-son-2027/.",
+      "cubanFocused": true,
+      "styles": [
+        "son"
+      ]
+    },
+    {
+      "id": "fic-orange-2027",
+      "series": "fic-orange",
+      "name": "Festival International Cubano (FIC)",
+      "status": "scheduled",
+      "startDate": "2027-10-29",
+      "endDate": "2027-11-02",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Orange",
+      "country": "France",
+      "countryCode": "FR",
+      "region": "Europe",
+      "venue": "Espace Daudet",
+      "coordinates": [
+        44.134802,
+        4.799134
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": "https://my.weezevent.com/fic-2027",
+      "website": null,
+      "instagram": "https://www.instagram.com/fic_festival_cubano/",
+      "artists": [],
+      "description": "Fifteenth edition of a Cuban culture festival in Orange, with workshops, concerts and evening parties.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-11-01 by the daily sync: organizer ticket page https://my.weezevent.com/fic-2027 confirms 29 Oct-2 Nov 2027 at Espace Daudet, Orange. Other facts: https://cubansalsafestivals.com/festivals/fic-festival-cubano-2027/.",
       "cubanFocused": true
     },
     {
@@ -9216,6 +9625,40 @@
         "casino"
       ],
       "cubanFocused": true
+    },
+    {
+      "id": "latin-garden-festival-helsinki-2028",
+      "series": "latin-garden-festival-helsinki",
+      "name": "Latin Garden Festival",
+      "status": "scheduled",
+      "startDate": "2028-01-28",
+      "endDate": "2028-01-30",
+      "datePrecision": "day",
+      "dateNote": null,
+      "city": "Helsinki",
+      "country": "Finland",
+      "countryCode": "FI",
+      "region": "Europe",
+      "venue": "Kulttuuritehdas Korjaamo",
+      "coordinates": [
+        60.184207,
+        24.919796
+      ],
+      "priceText": null,
+      "priceFrom": null,
+      "currency": null,
+      "ticketUrl": null,
+      "website": null,
+      "instagram": "https://www.instagram.com/latingardenfestival/",
+      "artists": [],
+      "description": "Weekend Latin dance festival in Helsinki with workshops and evening parties.",
+      "lastVerified": null,
+      "featured": false,
+      "notes": "Added 2026-11-01 by the daily sync: organizer site unreachable; all facts came only from cubansalsafestivals.com (which describes Cuban styles teaching, not confirmed by organizer). Other facts: https://cubansalsafestivals.com/festivals/latingardenhelsinki-2028/.",
+      "cubanFocused": false,
+      "styles": [
+        "mixed"
+      ]
     }
   ]
 }
